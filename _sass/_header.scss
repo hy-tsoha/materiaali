@@ -1,0 +1,16 @@
+.header {
+    text-align: center;
+    padding: 2em 1em 0.5em 1em;
+    font-size: 2rem;
+    color: black;
+    max-width: 45rem;
+    margin: auto;
+    background: linear-gradient(#ffffff00,#ffffffd8, #ffffffdc, #ffffffe7, #ffffff);
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        height: 30%;
+        font-size: 1.2em;
+    }
+}

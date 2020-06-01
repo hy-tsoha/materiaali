@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap");
+html { font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 1.5; color: #000000; width: 100%; overflow-x: hidden; background-color: #ffffff; background-image: url(../img/taustakuva.svg); background-position: center; background-attachment: fixed; background-size: cover; }
+
+@media screen and (max-width: 500px) { .header { height: 30%; } .page-content { margin-left: 4em; } }
+
+.side-nav { position: fixed; width: 13em; overflow-y: scroll; top: 0; bottom: 0; left: 0; overflow-x: hidden; background-color: white; }
+
+.side-nav h2 { text-align: center; padding: 1em 0em 1em 0em; }
+
+.side-nav ol { list-style-type: none; padding-left: 0; color: black; }
+
+nav a { color: black; }
+
+nav a:hover { color: maroon; }
+
+.side-nav-obj { display: block; color: #000; padding: 0 0 0.5em 1em; }
+
+.side-nav-obj hr { border: thick dashed #475096ff; }
+
+.side-nav-sub-obj { display: block; color: #000; padding: 0 0 0.5em 2em; }
+
+.side-nav button { box-shadow: none; border: none; font-size: larger; background-color: transparent; margin: 1em 0 0 8em; }
+
+.side-nav #show { display: none; }
+
+.side-nav-hidden { position: fixed; width: 4em; overflow-y: hidden; background-color: transparent; overflow-x: hidden; margin-top: 0; padding-top: 0; }
+
+.side-nav-hidden button { text-align: center; background-color: transparent; border: none; margin-top: 0; overflow-x: hidden; background-image: url(../img/drawing.svg); background-position: left; background-repeat: no-repeat; background-size: contain; height: 4em; width: 4em; }
+
+.side-nav-hidden h2 { display: none; }
+
+.side-nav-hidden ol { display: none; }
+
+.side-nav-hidden #hide { display: none; }
+
+@media screen and (max-width: 500px) { .side-nav-hidden button { text-align: center; background-color: transparent; border: none; font-size: 3em; font-weight: bolder; margin-top: 0; height: 1em; width: 1em; } }
+
+.footer { text-align: center; bottom: 0; font-size: 2rem; color: black; background-color: #c0c0c0; padding: 2em 1em 0em 1em; max-width: 45rem; margin: auto; background: linear-gradient(#ffffff, #d6d6d6, #c0c0c0, #c0c0c0, #c0c0c0); }
+
+.footer img { width: 250px; }
+
+.header { text-align: center; padding: 2em 1em 0.5em 1em; font-size: 2rem; color: black; max-width: 45rem; margin: auto; background: linear-gradient(#ffffff00, #ffffffd8, #ffffffdc, #ffffffe7, #ffffff); }
+
+@media screen and (max-width: 500px) { .header { height: 30%; font-size: 1.2em; } }
+
+.page-content { margin-left: 13em; }
+
+.content { color: black; background-color: #ffffff; padding: 1em 2em 1em 2em; max-width: 45rem; margin: auto; }
+
+@media screen and (max-width: 500px) { .page-content { margin-left: 3em; } }
+
+/*# sourceMappingURL=main.css.map */
