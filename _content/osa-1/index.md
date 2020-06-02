@@ -10,8 +10,9 @@ sub-sections:
 ---
 # Osa 1: Johdanto
 
-* [Sivupohjat](#sivupohjat)
-* [Lomakkeet](#lomakkeet)
+{% for s in page.sub-sections%}
+* [{{ s.sub-section-title }}](#{{s.link-url}})
+{% endfor %}
 
 {% include_relative sivupohjat.md %}
 {% include_relative lomakkeet.md %}

@@ -1,58 +1,11 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width; user-scalable=yes">
-    <title>Tietokantasovellus</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href=/tikaso/assets/css/main.css>
-    <script src=/tikaso/assets/js/main.js ></script>
-</head>
-
-<body>
-    <nav class="side-nav" id="side-nav">
-    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
-    <button id="show" onclick="showSideNav()"> </button>
-    <h2>Tietokantasovellus</h2>
-    <ol>
-        <li class="side-nav-obj"><a href=/tikaso/index>Etusivu</a></li>
-        
-        <li class="side-nav-obj"><a href="/tikaso/pages/aikataulu.html">Aikataulu</a></li>
-        
-        <li class="side-nav-obj"><a href="/tikaso/pages/todo.html">TODO</a></li>
-        
-        <img src="">
-        <li class="side-nav-obj"><hr></li>
-        
-        
-        <li class="side-nav-obj"><a href="/tikaso/content/osa-1/index.html">Osa 1</a></li>
-        
-        
-        
-            
-            <li class="side-nav-sub-obj"><a href="/tikaso/content/osa-1/index.html#sivupohjat">Sivupohjat</a></li>
-        
-            
-            <li class="side-nav-sub-obj"><a href="/tikaso/content/osa-1/index.html#lomakkeet">Lomakkeet</a></li>
-        
-            
-        
-        
-        
-    </ol>
-</nav>
-
-    <div class="page-content">
-        <div class="content">
-    <h1 id="osa-1-johdanto">Osa 1: Johdanto</h1>
+I"5 <h1 id="osa-1-johdanto">Osa 1: Johdanto</h1>
 
 <ul>
   <li>
-    <p><a href="#sivupohjat">Sivupohjat</a></p>
+    <p>[Sivupohjat(#s.link-url)]</p>
   </li>
   <li>
-    <p><a href="#lomakkeet">Lomakkeet</a></p>
+    <p>[Lomakkeet(#s.link-url)]</p>
   </li>
 </ul>
 
@@ -80,13 +33,4 @@
 
 <p>Aliquam elementum ex ut cursus feugiat. Proin eu eros ut metus laoreet bibendum et ac tortor. Phasellus a consequat neque. Aliquam suscipit placerat est, eu ornare lectus fermentum sed. Proin massa justo, feugiat ac neque quis, molestie molestie lectus. Aliquam eleifend, ex sed rutrum tristique, dui orci interdum dui, ac efficitur ex libero non tortor. Phasellus ornare maximus velit suscipit gravida. Aliquam vulputate faucibus dui non pellentesque. Vivamus accumsan sagittis massa. Integer risus turpis, tempus non orci ut, pellentesque egestas est. Aenean consequat lectus nibh, in auctor nunc tempus eget. Nullam egestas arcu sed sem iaculis, eget lobortis lorem ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum sollicitudin porta nisi nec blandit. Maecenas ac dolor a sem vulputate mattis in eu erat.</p>
 
-
-</div>
-
-        <div class="footer">
-<img src=/tikaso/assets/img/HY_logo.png>
-</div>
-    </div>
-</body>
-
-</html>
+:ET
