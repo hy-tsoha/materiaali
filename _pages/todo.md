@@ -48,6 +48,7 @@ $ rm apina.txt
 
 TODO:
 * tyyli joka näyttää konsolissa olevat komennot
+    - konsoli tyyli näytetään, kun koodiympäristölle annetaan nimi "bash".
 
 ## LaTeX-merkinnät
 
