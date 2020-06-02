@@ -39,7 +39,7 @@ TODO:
 
 ## Konsolin näyttäminen
 
-```
+```bash
 $ cp apina.txt banaani.txt
 $ ./testi
 Hello world
@@ -56,5 +56,4 @@ Tulos saadaan kaavalla $$a+\log b$$.
 TODO:
 * Jos $-merkkien välissä on LaTeX-koodia niin se muotoillaan
   (MathJax-kirjasto ainakin osaa tämän, saa ehkä suoremmin jotenkin)
-  - MathJax kirjasto on lisätty. Pitää käyttää tupladollarimerkkejä $$, jotta se muotoillaan.
-
+  - MathJax kirjasto on lisätty. Pitää käyttää tupladollarimerkkejä $$, jotta matematiikka muotoillaan.
