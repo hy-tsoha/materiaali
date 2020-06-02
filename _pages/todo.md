@@ -6,7 +6,6 @@ title: TODO
 # TODO
 
 ## Sivupohjasta
-
 TODO:
 * Osan alussa md-tiedostossa joutuu antamaan kahdesti samoja tietoja
   (aliluvun otsikko ja tunnus), pitäisi riittää antaa ne vain kerran
@@ -34,7 +33,9 @@ TODO:
 * syntaksiväritys annetun kielen mukaan
   - implementoitu, jos haluaa jonkun eri highligtin niin niitä voi selata [täältä](https://spsarolkar.github.io/rouge-theme-preview/)
 * koodi laatikkoon
+  - on laatikossa. muotoilen laatikon vielä kivemmaksi
 * fontti pienemmäksi
+  - vaihdettu
 
 ## Konsolin näyttäminen
 
@@ -50,9 +51,10 @@ TODO:
 
 ## LaTeX-merkinnät
 
-Tulos saadaan kaavalla $a+\log b$.
+Tulos saadaan kaavalla $$a+\log b$$.
 
 TODO:
 * Jos $-merkkien välissä on LaTeX-koodia niin se muotoillaan
   (MathJax-kirjasto ainakin osaa tämän, saa ehkä suoremmin jotenkin)
+  - MathJax kirjasto on lisätty. Pitää käyttää tupladollarimerkkejä $$, jotta se muotoillaan.
 
