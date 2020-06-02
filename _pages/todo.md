@@ -32,7 +32,7 @@ SELECT * FROM Tuotteet WHERE nimi='lanttu';
 
 TODO:
 * syntaksiväritys annetun kielen mukaan
-  - implementoitu, jos haluaa jonkun eri highligtin niin niitä voi selata (täältä)[https://spsarolkar.github.io/rouge-theme-preview/]
+  - implementoitu, jos haluaa jonkun eri highligtin niin niitä voi selata [täältä](https://spsarolkar.github.io/rouge-theme-preview/)
 * koodi laatikkoon
 * fontti pienemmäksi
 
