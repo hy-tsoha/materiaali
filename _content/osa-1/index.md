@@ -3,10 +3,8 @@ layout: chapter
 title: Osa 1
 nav-title: Osa 1
 sub-sections:
-    - link-url: sivupohjat
-      sub-section-title: Sivupohjat
-    - link-url: lomakkeet
-      sub-section-title: Lomakkeet
+    - link-url: ensimmainen
+      sub-section-title: Ensimmäinen web-sovellus
 ---
 # Osa 1: Johdanto
 
@@ -14,5 +12,6 @@ sub-sections:
 * [{{ s.sub-section-title }}](#{{s.link-url}})
 {% endfor %}
 
-{% include_relative sivupohjat.md %}
-{% include_relative lomakkeet.md %}
+Käytämme kurssilla web-sovelluksen tekemiseen Pythonin Flask-kirjastoa. Flask on kevyt ja suosittu kirjasto, joka soveltuu sekä web-ohjelmoinnin opetteluun että todellisten sovellusten alustaksi. Tässä osassa tutustumme kirjaston perusominaisuuksiin.
+
+{% include_relative ensimmainen.md %}
