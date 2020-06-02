@@ -10,8 +10,12 @@ title: TODO
 TODO:
 * Osan alussa md-tiedostossa joutuu antamaan kahdesti samoja tietoja
   (aliluvun otsikko ja tunnus), pitäisi riittää antaa ne vain kerran
+    - Korjattu niin, että sivuhakemisto generoidaan automaattisesti osion alkuun.
 * Sivupalkki vähän leveämmäksi jotta siihen mahtuu sisältöä paremmin
   (myös kurssin otsikko pienemmällä fontilla?)
+    - Sivupalkki on nyt leveämpi. En muuttanut kurssin otsikon kokoa, mutta muutin _config.yml-tiedostossa otsikon muotoon `title: Tietokanta&shy;sovellus`, jossa merkki `&shy;` muuttuu tavuviivaksi, kun teksti rivittyy pienessä tilassa ja muuten se ei näy ollenkaan. Otin samalla pois jakajan sivupalkissa ja korvasin sen tyhjällä rivillä.
+
+
 * Sivupalkin raksi ei tunnu tarpeelliselta, kurssin otsikko voisi
   olla heti ylhäällä
 

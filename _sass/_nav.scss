@@ -1,6 +1,7 @@
+
 .side-nav {
     position: fixed;
-    width: 13em;
+    width: 15em;
     overflow-y: scroll;
     top: 0;
     bottom: 0;
@@ -11,7 +12,7 @@
 
 .side-nav h2 {
     text-align: center;
-    padding: 1em 0em 1em 0em;
+    padding: 1em 1em 1em 1em;
 }
 
 .side-nav ol {
@@ -35,7 +36,7 @@ nav a:hover {
 }
 
 .side-nav-obj hr {
-    border: thick dashed #475096ff;
+    border: none;
 }
 
 .side-nav-sub-obj {
