@@ -46,11 +46,7 @@ nav a:hover {
 }
 
 .side-nav button {
-    box-shadow: none;
-    border: none;
-    font-size: larger;
-    background-color: transparent;
-    margin: 1em 0 0 8em;
+    display: none;
 }
 
 .side-nav #show {
@@ -69,10 +65,8 @@ nav a:hover {
 
 .side-nav-hidden button {
     text-align: center;
-    //background-color: rgba(71, 80, 150, 0.795);
     background-color: transparent;
     border: none;
-    //font-size: 4em;
     margin-top: 0;
     overflow-x: hidden;
     background-image: url(../img/drawing.svg);
@@ -96,9 +90,18 @@ nav a:hover {
 }
 
 @media screen and (max-width: 500px) {
+
+    .side-nav button {
+        display: grid;
+        box-shadow: none;
+        border: none;
+        font-size: larger;
+        background-color: transparent;
+        margin: 1em 0 0 8em;
+    }
+
     .side-nav-hidden button {
         text-align: center;
-        //background-color: rgba(71, 80, 150, 0.795);
         background-color: transparent;
         border: none;
         font-size: 3em;
@@ -106,5 +109,9 @@ nav a:hover {
         margin-top: 0;
         height: 1em;
         width: 1em;
+    }
+
+    .side-nav {
+        width: 13em;
     }
 }

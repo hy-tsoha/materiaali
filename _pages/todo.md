@@ -18,6 +18,7 @@ TODO:
 
 * Sivupalkin raksi ei tunnu tarpeelliselta, kurssin otsikko voisi
   olla heti ylhäällä
+  - Raksi on nyt piilotettu ja se tulee näkyviin vain pienillä näytöillä.
 
 ## Koodin näyttäminen
 
