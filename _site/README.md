@@ -1,2 +1,0 @@
-# tikaso
-Tietokantasovellus-kurssin materiaali
