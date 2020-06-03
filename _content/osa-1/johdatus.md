@@ -2,13 +2,13 @@
 
 ### Selain ja palvelin
 
-Web-sovellusten toiminta perustuu HTTP-protokollaan, jossa selain lähettää palvelimelle pyyntöjä ja palvelin vastaa pyyntöihin. Tyypillinen tilanne on, että selain pyytää palvelimella olevaa HTML-tiedostoa, jossa on nettisivun sisältö.
+Nettisivustojen toiminta perustuu HTTP-protokollaan, jossa selain lähettää palvelimelle pyyntöjä ja palvelin vastaa pyyntöihin. Tyypillinen tilanne on, että selain pyytää palvelimella olevaa HTML-tiedostoa, jossa on nettisivun sisältö.
 
-Esimerkiksi seuraavassa kuvassa selain pyytää tiedostoa `index.html`. Palvelin lähettää tiedoston sisällön koodilla 200, mikä tarkoittaa, että pyyntö onnistui.
+Esimerkiksi seuraavassa kuvassa selain pyytää tiedostoa `index.html`. Palvelin lähettää tiedoston sisällön HTTP-koodilla 200, mikä tarkoittaa, että pyyntö onnistui.
 
 TODO: Kuva tähän
 
-Perinteinen tapa toteuttaa nettisivusto on luoda HTML-tiedostot käsin ja sijoittaa ne palvelimella olevaan hakemistoon. Tämän rajoituksena on kuitenkin, että palvelimella olevan sivu on staattinen eli samanlainen aina, kun käyttäjä lataa sen.
+Perinteinen tapa toteuttaa nettisivusto on luoda HTML-tiedostot käsin ja sijoittaa ne palvelimella olevaan hakemistoon. Tämän rajoituksena on kuitenkin, että palvelimella oleva sivu on staattinen eli samanlainen aina, kun käyttäjä lataa sen.
 
 Tällä kurssilla opimme toteuttamaan web-sovelluksia, jotka luovat dynaamisia nettisivuja tietokannan sisällön perusteella ja tallentavat käyttäjien antamaa tietoa tietokantaan. Tämä antaa valtavasti lisää mahdollisuuksia verrattuna staattisiin nettisivuihin.
 
