@@ -18,8 +18,7 @@ Tässä osassa tutustumme kurssilla käytettäviin työkaluihin:
   Flask soveltuu sekä web-ohjelmoinnin opetteluun että todellisten sovellusten alustaksi.
 * PostgreSQL on avoimen lähdekoodin tietokantajärjestelmä, joka on tavallinen
   valinta web-sovelluksen taustalla olevaksi tietokannaksi.
-* Heroku on pilvipalvelu, jonka avulla pystymme harjoittelemaan ilmaiseksi
-  web-sovelluksen siirtämistä julkisesti nettiin kaikkien käytettäväksi.
+* Heroku on pilvipalvelu, jonka avulla voimme julkaista web-sovelluksen kaikkien käytettäväksi. Tätä kurssia varten ilmainen tunnus on rajoituksistaan huolimatta riittävä.
 
 Kurssin materiaali olettaa, että osaat perusasiat Python-ohjelmointikielestä.
 Jos et tunne kieltä ennestään, sinun kannattaa ensin käydä pikakurssi [tästä](TODO).
