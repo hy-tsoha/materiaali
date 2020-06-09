@@ -2,9 +2,9 @@
 
 ### PostgreSQL:n asennus
 
-Laitoksen koneilla voit asentaa ilman lisäoikeuksia PostgreSQL:n tunnuksesi käyttöön tällä asennusskriptillä. Skripti saattaa toimia myös joillain muilla Linux-jakeluilla.
+Laitoksen koneilla voit asentaa ilman lisäoikeuksia PostgreSQL:n tunnuksesi käyttöön tällä [asennusskriptillä](linkki). Skripti saattaa toimia myös joillain muilla Linux-jakeluilla.
 
-Muut käyttöjärjestelmät: Etsi PostgreSQL:n asennusohje käyttöjärjestelmällesi ja asenna se. Asennus saattaa vaatia ylläpito-oikeudet.
+Jos sinulla on ylläpitooikeudet, voit todennäköisesti asentaa PostgreSQL:n käyttöjärjestelmäsi pakettienhallinnan kautta (Linux, BSD, yms), mahdollisesti konttiin (esim Docker) tai ladata asennuspaketin sille. Erilaisia vaihtoehtoja on liian monia tässä läpi käytäväksi. Perehdy käyttöjärjestelmäsi tarjomaan dokumentaatioon ja/tai katso mitä [PostgreSQL verkkosivulla](https://www.postgresql.org/download/) sanotaan.
 
 
 ### PostgreSQL-tulkki
