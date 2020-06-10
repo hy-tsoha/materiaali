@@ -1,12 +1,15 @@
 ---
-layout: chapter
+layout: default
 title: TODO
 ---
 
 # TODO
 
-Sekalaista:
+## Sekalaista:
+
 * Koodilaatikossa saisi olla vähän vähemmän paddingia
+    - vähennetty. pitäisikö koodi laatikon olla oikeasta reunasta kapeampi? tarkoitettiinko tässä koodilaatikon ulkopuolella olevaa tilaa. pienensin nyt laatikon sisällä olevaa tilaa :D
+
 * Jos peräkkäin on kaksi koodilaatikkoa, niin niiden välissä tulisi olla rivi tyhjää niin,
   että ne eivät ole kiinni toisissaan
 * LaTeX-fontin tulisi olla vähän pienempi
@@ -14,8 +17,22 @@ Sekalaista:
 * Olisiko etusivulla toimiva niin että läpinäkyvyyden sijasta otsikko olisi erillisessä
   valkoisessa laatikossa ja taustaa näkyy sen eri puolilla kuitenkin?
 * Sivun otsikon (title-tagi) tulisi tulla automaattisesti sivun perusteella
+    - sivun otsikon saa automaattisesti title tägin perusteella käyttämällä {{ page.title }}, mutta titleä ei saa automaattisesti sivun perusteella. titleä ei tällä hetkellä käytetä mihinkään, joten otin sen pois.
 
-Taulukot:
+Tiivistin sivuhakemiston niin, että siihen ei tarvita muuta kuin alaosioiden otsikot
+
+```
+---
+...
+sub-sections:
+      - sub-section-title: Johdatus web-sovelluksiin
+      - sub-section-title: Tietokannan käyttäminen
+      - sub-section-title: Sovellus tuotantoon
+---
+```
+
+## Taulukot:
+
 * Mikä olisi tyylikäs muotoilu taulukoille? Miten otsikkorivi merkitään?
 * Entä miten tietokantataulut muotoillaan?
 * Jos taulukkoja on peräkkäin, niin niiden välissä tulisi olla tyhjä rivi

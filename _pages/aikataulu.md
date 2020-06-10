@@ -1,5 +1,5 @@
 ---
-layout: chapter
+layout: default
 title: Aikataulu
 ---
 

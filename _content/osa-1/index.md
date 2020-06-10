@@ -1,19 +1,15 @@
 ---
 layout: chapter
-title: Osa 1
 nav-title: Osa 1
 sub-sections:
-    - link-url: johdatus
-      sub-section-title: Johdatus web-sovelluksiin
-    - link-url: tietokanta
-      sub-section-title: Tietokannan käyttäminen
-    - link-url: tuotantoon
-      sub-section-title: Sovellus tuotantoon
+      - sub-section-title: Johdatus web-sovelluksiin
+      - sub-section-title: Tietokannan käyttäminen
+      - sub-section-title: Sovellus tuotantoon
 ---
 # Osa 1
 
 {% for s in page.sub-sections%}
-* [{{ s.sub-section-title }}](#{{s.link-url}}){% endfor %}
+* [{{ s.sub-section-title }}](#{{ s.sub-section-title | downcase | replace: ' ', '-'}}){% endfor %}
 
 Tässä osassa tutustumme kurssilla käytettäviin työkaluihin:
 
@@ -25,7 +21,6 @@ Tässä osassa tutustumme kurssilla käytettäviin työkaluihin:
 
 Kurssin materiaali olettaa, että osaat perusasiat Python-ohjelmointikielestä.
 Jos et tunne kieltä ennestään, sinun kannattaa ensin käydä pikakurssi [tästä](TODO).
-
 
 {% include_relative johdatus.md %}
 {% include_relative tietokanta.md %}
