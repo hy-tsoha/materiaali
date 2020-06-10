@@ -5,37 +5,50 @@ title: TODO
 
 # TODO
 
-## Sivupohjasta
-TODO:
-* Osan alussa md-tiedostossa joutuu antamaan kahdesti samoja tietoja
-  (aliluvun otsikko ja tunnus), pitäisi riittää antaa ne vain kerran
-    - Korjattu niin, että sivuhakemisto generoidaan automaattisesti osion alkuun.
-* Sivupalkki vähän leveämmäksi jotta siihen mahtuu sisältöä paremmin
-  (myös kurssin otsikko pienemmällä fontilla?)
-    - Sivupalkki on nyt leveämpi. En muuttanut kurssin otsikon kokoa, mutta muutin _config.yml-tiedostossa otsikon muotoon `title: Tietokanta&shy;sovellus`, jossa merkki `&shy;` muuttuu tavuviivaksi, kun teksti rivittyy pienessä tilassa ja muuten se ei näy ollenkaan. Otin samalla pois jakajan sivupalkissa ja korvasin sen tyhjällä rivillä.
+Sekalaista:
+* Koodilaatikossa saisi olla vähän vähemmän paddingia
+* Jos peräkkäin on kaksi koodilaatikkoa, niin niiden välissä tulisi olla rivi tyhjää niin,
+  että ne eivät ole kiinni toisissaan
+* LaTeX-fontin tulisi olla vähän pienempi
+* Tekstin sisällä oleva `koodi` tulisi olla vähän pienemmällä fontilla
+* Olisiko etusivulla toimiva niin että läpinäkyvyyden sijasta otsikko olisi erillisessä
+  valkoisessa laatikossa ja taustaa näkyy sen eri puolilla kuitenkin?
+* Sivun otsikon (title-tagi) tulisi tulla automaattisesti sivun perusteella
 
+Taulukot:
+* Mikä olisi tyylikäs muotoilu taulukoille? Miten otsikkorivi merkitään?
+* Entä miten tietokantataulut muotoillaan?
+* Jos taulukkoja on peräkkäin, niin niiden välissä tulisi olla tyhjä rivi
 
-* Sivupalkin raksi ei tunnu tarpeelliselta, kurssin otsikko voisi
-  olla heti ylhäällä
-  - Raksi on nyt piilotettu ja se tulee näkyviin vain pienillä näytöillä.
+## Taulukko
+
+| syötteen koko _n_ | suoritusaika |
+|-|-|
+| 10<sup>3</sup> | 0.12 s |
+| 10<sup>4</sup> | 0.33 s |
+| 10<sup>5</sup> | 0.79 s |
+| 10<sup>6</sup> | 2.12 s |
+| 10<sup>7</sup> | 5.91 s |
+
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
 
 ## Koodin näyttäminen
 
 ```python
 for i in range(10):
-	print("lol")
+    print("lol")
 ```
+
 ```sql
 SELECT * FROM Tuotteet WHERE nimi='lanttu';
 ```
 
-TODO:
-* syntaksiväritys annetun kielen mukaan
-  - implementoitu, jos haluaa jonkun eri highligtin niin niitä voi selata [täältä](https://spsarolkar.github.io/rouge-theme-preview/), nyt käytössä 'github'
-* koodi laatikkoon
-  - laatikoitu
-* fontti pienemmäksi
-  - vaihdettu
+Syntaksiväritykset [täältä](https://spsarolkar.github.io/rouge-theme-preview/), nyt käytössä 'github'
 
 ## Konsolin näyttäminen
 
@@ -46,15 +59,8 @@ Hello world
 $ rm apina.txt
 ```
 
-TODO:
-* tyyli joka näyttää konsolissa olevat komennot
-    - konsoli tyyli näytetään, kun koodiympäristölle annetaan nimi "bash".
-
 ## LaTeX-merkinnät
 
 Tulos saadaan kaavalla $$a+\log b$$.
 
-TODO:
-* Jos $-merkkien välissä on LaTeX-koodia niin se muotoillaan
-  (MathJax-kirjasto ainakin osaa tämän, saa ehkä suoremmin jotenkin)
-  - MathJax kirjasto on lisätty. Pitää käyttää tupladollarimerkkejä $$, jotta matematiikka muotoillaan.
+\\[ 1 + 2 + \dots + n = \frac{n(n+1)}{2} \\]
