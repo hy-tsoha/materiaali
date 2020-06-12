@@ -12,6 +12,11 @@ html {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    margin-bottom: 0;
+}
+
+body {
+    margin:0;
 }
 
 .highlight .syntax {

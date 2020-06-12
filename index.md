@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Tietokantasovellus
+title: Tieto&shy;kanta&shy;sovellus
 ---
-
-
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum erat, pellentesque at dapibus eget, dignissim id mi. Etiam hendrerit, tortor ut scelerisque consectetur, enim lectus dictum dui, a imperdiet enim neque sed libero. Nullam tincidunt sagittis efficitur. Donec erat lorem, porttitor euismod nisl sit amet, condimentum luctus orci. Aliquam convallis condimentum eros ac ornare. Donec sed ornare lacus. Aenean et turpis eros. Phasellus blandit, ligula a mollis facilisis, velit enim lacinia nulla, eget dapibus quam mi vitae ante. Aenean at augue ligula. Vestibulum lobortis ex at velit mollis dapibus. Morbi mattis, eros vel ultrices posuere, libero purus scelerisque dolor, sit amet suscipit velit lacus sit amet leo.
 

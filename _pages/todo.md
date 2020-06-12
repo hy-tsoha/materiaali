@@ -12,10 +12,15 @@ title: TODO
 
 * Jos peräkkäin on kaksi koodilaatikkoa, niin niiden välissä tulisi olla rivi tyhjää niin,
   että ne eivät ole kiinni toisissaan
+    - 
 * LaTeX-fontin tulisi olla vähän pienempi
+    - muutettu pienemmäksi
 * Tekstin sisällä oleva `koodi` tulisi olla vähän pienemmällä fontilla
+    - koodi on nyt kokoa `16px` ja itse teksti kokoa `18px`.
 * Olisiko etusivulla toimiva niin että läpinäkyvyyden sijasta otsikko olisi erillisessä
   valkoisessa laatikossa ja taustaa näkyy sen eri puolilla kuitenkin?
+    - Laitoin otsikon omaan laatikkoon. Muokkaisn myös footer osiota.
+
 * Sivun otsikon (title-tagi) tulisi tulla automaattisesti sivun perusteella
     - sivun otsikon saa automaattisesti title tägin perusteella käyttämällä {{ page.title }}, mutta titleä ei saa automaattisesti sivun perusteella. titleä ei tällä hetkellä käytetä mihinkään, joten otin sen pois.
 
