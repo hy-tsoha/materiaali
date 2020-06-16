@@ -11,6 +11,8 @@ title: TODO
   että ne eivät ole kiinni toisissaan
     - Vähän enemmän tilaa voisi olla vielä
 * Konsolin väritys ei toimi vielä hyvin, osassa 1 testiaineistoa
+* Jos koodilaatikossa oleva rivi on pitkä, tulisi ilmestyä vaakasuuntainen vierityspalkki
+  (esimerkki tällaisesta tilanteesta osan 2 alussa)
 
 ## Taulukot:
 
