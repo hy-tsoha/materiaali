@@ -6,7 +6,4 @@ sub-sections:
 ---
 # Osa 2
 
-{% for s in page.sub-sections%}
-* [{{ s.sub-section-title }}](#{{ s.sub-section-title | downcase | replace: ' ', '-'}}){% endfor %}
-
 {% include_relative kirjautuminen.md %}

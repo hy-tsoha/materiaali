@@ -8,9 +8,6 @@ sub-sections:
 ---
 # Osa 1
 
-{% for s in page.sub-sections%}
-* [{{ s.sub-section-title }}](#{{ s.sub-section-title | downcase | replace: ' ', '-'}}){% endfor %}
-
 Tässä osassa tutustumme kurssilla käytettäviin työkaluihin:
 
 * Flask on suosittu Python-kirjasto, jonka avulla voimme luoda web-sovelluksia.
