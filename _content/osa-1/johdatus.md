@@ -2,23 +2,23 @@
 
 ### Selain ja palvelin
 
-Nettisivustojen toiminta perustuu HTTP-protokollaan, jossa selain lähettää palvelimelle pyyntöjä ja palvelin vastaa pyyntöihin. Tyypillinen tilanne on, että selain pyytää palvelimella olevaa HTML-tiedostoa, jossa on nettisivun sisältö.
+Web-sovellusten toiminta perustuu HTTP-protokollaan, jossa selain lähettää palvelimelle pyyntöjä ja palvelin vastaa pyyntöihin. Selain voi pyytää palvelimelta esimerkiksi HTML-tiedoston, joka kuvaa nettisivun sisällön, ja näyttää sivun sitten käyttäjälle.
 
-Esimerkiksi seuraavassa kuvassa selain pyytää tiedostoa `index.html`. Palvelin lähettää tiedoston sisällön HTTP-koodilla 200, mikä tarkoittaa, että pyyntö onnistui.
+Esimerkiksi seuraavassa kuvassa selain pyytää HTML-tiedostoa `index.html`. Palvelin lähettää tiedoston sisällön HTTP-koodilla 200, mikä tarkoittaa, että pyyntö onnistui.
 
 TODO: Kuva tähän
 
-Perinteinen tapa toteuttaa nettisivusto on luoda HTML-tiedostot käsin ja sijoittaa ne palvelimella olevaan hakemistoon. Tämän rajoituksena on kuitenkin, että palvelimella oleva sivu on staattinen eli samanlainen aina, kun käyttäjä lataa sen.
+Perinteinen tapa toteuttaa nettisivusto on luoda HTML-tiedostot käsin ja sijoittaa ne palvelimella olevaan hakemistoon. Tämän rajoituksena on kuitenkin, että palvelimella olevat sivut ovat _staattisia_ eli aina kun käyttäjä lataa tietyn sivun, se näyttää samalta.
 
-Tällä kurssilla opimme toteuttamaan web-sovelluksia, jotka luovat dynaamisia nettisivuja tietokannan sisällön perusteella ja tallentavat käyttäjien antamaa tietoa tietokantaan. Tämä antaa valtavasti lisää mahdollisuuksia verrattuna staattisiin nettisivuihin.
+Tällä kurssilla opimme toteuttamaan web-sovelluksia, jotka luovat _dynaamisia_ sivuja tietokannan sisällön perusteella ja tallentavat käyttäjien antamaa tietoa tietokantaan. Tämä antaa valtavasti lisää mahdollisuuksia verrattuna staattisiin sivuihin.
 
 ### Ensimmäinen web-sovellus
 
-Aloitamme ensimmäisen web-sovelluksen tekemisen luomalla sovellusta varten hakemiston `ekasovellus` ja siirtymällä sinne:
+Aloitamme ensimmäisen web-sovelluksen tekemisen luomalla sovellusta varten hakemiston `sovellus` ja siirtymällä sinne:
 
 ```bash
-$ mkdir ekasovellus
-$ cd ekasovellus
+$ mkdir sovellus
+$ cd sovellus
 ```
 
 Jotta voimme kätevästi hallinnoida sovelluksen tarvitsemia kirjastoja, luomme hakemistoon Pythonin virtuaaliympäristön seuraavalla komennolla:
@@ -33,7 +33,8 @@ Tämä komento luo hakemiston `venv`, jonka sisällä on Pythonin suoritusympär
 $ source venv/bin/activate
 ```
 
-Tämän seurauksena komentorivin alkuun ilmestyy tunnus `(venv)` merkkinä siitä, että olemme virtuaaliympäristössä. Asennamme ensin `flask`-kirjaston:
+Tämän seurauksena komentorivin alkuun ilmestyy tunnus `(venv)` merkkinä siitä, että olemme virtuaaliympäristössä. 
+Kun olemme virtuaaliympäristössä, voimme asentaa Python-kirjastoja paikallisesti niin, että ne ovat käytettävissä vain kyseisessä virtuaaliympäristössä emmekä tarvitse asennukseen pääkäyttäjän oikeuksia. Asennamme ensin `flask`-kirjaston:
 
 ```bash
 (venv) $ pip install flask
@@ -65,11 +66,16 @@ Viimeisellä rivillä näkyy osoite, jonka kautta voimme käyttää sovellusta n
 
 TODO: Kuva tähän
 
-Sovellus sulkeutuu painamalla Control+C komentorivillä. Lopuksi voimme poistua virtuaaliympäristöstä näin:
+Sovellus sulkeutuu painamalla Control+C komentorivillä, jolloin voimme tehdä jotain muuta komentorivillä tai käynnistää sovelluksen uudestaan.
+
+Komento `deactivate` lopettaa virtuaaliympäristön käyttämisen ja palauttaa komentorivin takaisin tavalliseen tilaan:
 
 ```bash
 (venv) $ deactivate
+$ 
 ```
+
+Huomaa, että tämän jälkeen emme voi enää käynnistää sovellusta, koska Flask-kirjasto on asennettu vain virtuaaliympäristöön.
 
 ### Sivujen reititys
 
@@ -95,19 +101,9 @@ Tässä sovelluksessa on etusivu, kuten ennenkin, sekä kaksi muuta sivua, joide
 
 TODO: Kuva tähän
 
-Voimme myös määritellä sivun osoitteen niin, että siinä on parametri. Esimerkiksi seuraava funktio käsittelee sivuja, joiden osoitteessa on `int`-tyyppinen parametri `id`:
+Huomaa, että sivun osoite ja funktion nimi ovat kaksi eri asiaa. Sivun osoite annetaan dekoraattorissa, jonka jälkeen tulee sivupyynnön käsittelevä funktio, jolla voi olla muu nimi. Kuitenkin usein toimiva käytäntö on, että sivun osoite ja funktion nimi ovat samat, kuten yllä olevassa koodissa `page1` ja `page2`.
 
-```python
-@app.route("/page/<int:id>")
-def page(id):
-    return "Tämä on sivu "+str(id)
-```
-
-Esimerkiksi osoitteessa `page/123` oleva sivu näyttää tältä:
-
-TODO: Kuva tähän
-
-Koska sivun sisältö luodaan Pythonilla, voimme käyttää tässä mitä tahansa ohjelmoinnin keinoja. Esimerkiksi seuraava funktio tuottaa sivun, jossa on luvut 1–100:
+Koska sivun sisältö luodaan Pythonilla, voimme käyttää sivun luomisessa mitä tahansa ohjelmoinnin keinoja. Esimerkiksi seuraava funktio tuottaa sivun, jossa on luvut 1–100:
 
 ```python
 @app.route("/test")
@@ -122,12 +118,24 @@ Funktion tuloksena on seuraava sivu:
 
 TODO: Kuva tähän
 
-### Sivupohjat
+Voimme myös määritellä sivun osoitteen niin, että siinä on _parametri_. Esimerkiksi seuraava funktio käsittelee sivuja, joiden osoitteessa on `int`-tyyppinen parametri `id`:
+
+```python
+@app.route("/page/<int:id>")
+def page(id):
+    return "Tämä on sivu "+str(id)
+```
+
+Sivun osoitteessa annettu parametri välittyy funktiolle, joka voi käyttää sitä haluamallaan tavalla sivun luomisessa. Tässä tapauksessa funktio näyttää sivulla viestin "Tämä on sivu _id_", eli esimerkiksi osoitteessa `page/123` oleva sivu näyttää tältä:
+
+TODO: Kuva tähän
+
+### HTML ja sivupohjat
 
 Tähän mennessä olemme tuottaneet sivuja, joissa on pelkkää tekstiä,
 mutta tarkemmin ottaen voimme käyttää sivuilla HTML-koodia. HTML on kieli, jolla määritellään nettisivun sisältö. Jos HTML ei ole sinulle ennestään tuttu, voit tutustua siihen [tästä](TODO).
 
-Esimerkiksi seuraava funktio käyttää HTML-komentoja:
+Esimerkiksi seuraava sivu käyttää HTML-komentoja:
 
 ```python
 @app.route("/")
@@ -144,15 +152,9 @@ Periaatteessa voisimme luoda sovelluksen sivujen HTML:n suoraan funktioissa, mut
 Luodaan testiksi sivupohja `index.html`:
 
 ```html
-<html>
-<head>
 <title>Etusivu</title>
-</head>
-<body>
 <h1>Etusivu</h1>
 <p><b>Tervetuloa</b> <i>sovellukseen</i>!</p>
-</body>
-</html>
 ```
 
 Jotta voimme käyttää sivupohjia, meidän täytyy ottaa mukaan sovellukseen funktio `render_template`:
@@ -173,14 +175,10 @@ Tämä tuottaa seuraavan sivun:
 
 TODO: Kuva tähän
 
-Flask käyttää sivupohjissa Jinja-skriptikieltä, jonka ansiosta sivupohjaan voi välittää tietoa Python-koodista. Seuraava sivupohja antaa näytteen asiasta:
+Flask käyttää sivupohjissa Jinja-skriptikieltä, jonka avulla sivupohjaan voi välittää tietoa Python-koodista. Seuraava sivupohja antaa näytteen asiasta:
 
 ```html
-<html>
-<head>
 <title>Etusivu</title>
-</head>
-<body>
 <h1>Etusivu</h1>
 {% raw %}<p>{{ message }}</p>
 <ul>
@@ -188,11 +186,9 @@ Flask käyttää sivupohjissa Jinja-skriptikieltä, jonka ansiosta sivupohjaan v
 <li> {{ item }}
 {% endfor %}
 </ul>{% endraw %}
-</body>
-</html>
 ```
 
-Tässä sivun osaksi tulee parametrin `message` arvo sekä listana listalla `list` olevat alkiot. Voimme kutsua sivupohjaa vaikkapa näin:
+Tässä sivun osaksi tulee parametrin `message` arvo sekä listan `list` alkiot HTML-listana. Voimme kutsua sivupohjaa vaikkapa näin:
 
 ```python
 @app.route("/")
@@ -205,113 +201,14 @@ Tämän seurauksena sivu näyttää tältä:
 
 TODO: Kuva tähän
 
+Näemme lisää esimerkkejä sivupohjien mahdollisuuksista myöhemmin materiaalissa.
+
 ### Staattiset tiedostot
 
-Staattiset tiedostot ovat sivun osana olevia tiedostoja, joita ei luoda ohjelmallisesti. Esimerkiksi tavallisia staattisia tiedostoja ovat sivulla olevat kuvat.
+Staattiset tiedostot ovat sivuston osana olevia tiedostoja, joita ei luoda ohjelmallisesti. Esimerkiksi tavallisia staattisia tiedostoja ovat sivulla olevat kuvat.
 
-Flaskissa suositeltu paikka sijoitta staattiset tiedostot on hakemisto `static`. Esimerkiksi seuraava HTML-koodi näyttää hakemistossa olevan kuvan `kuva.png`:
+Flaskissa suositeltu paikka sijoittaa staattiset tiedostot on hakemisto `static`. Esimerkiksi seuraava HTML-koodi näyttää hakemistossa olevan kuvan `kuva.png`:
 
 ```html
 <img src="/static/kuva.png">
 ```
-
-### Lomakkeet
-
-Nettisivun käyttäjä pystyy lähettämään tietoa sovellukselle lomakkeiden kautta. Esimerkiksi seuraavalla sivulla `form.html` on lomake, joka kysyy käyttäjän nimeä:
-
-```html
-<form action="/result" method="get">
-Anna nimesi:
-<input type="text" name="name">
-<br>
-<input type="submit" value="Lähetä">
-</form>
-```
-
-Tämä lomake lähettää tietoa sivulle `result` metodilla `get`. Lomakkeessa on tekstikenttä, jonka nimi on `name`, sekä lähetysnappi.
-
-Sivu `result.html` puolestaan näyttää tervehdyksen lomakkeen perusteella:
-
-```html
-{% raw %}<p>Moikka, {{ name }}!</p>{% endraw %}
-```
-
-Jotta pääsemme käsiksi lomakkeen tietoihin, tarvitsemme `request`-olion:
-
-```python
-from flask import Flask, render_template, request
-```
-
-Tämän jälkeen saamme lomakkeen toimimaan näin:
-
-```python
-@app.route("/form")
-def form():
-    return render_template("form.html")
-
-@app.route("/result")
-def result():
-    return render_template("result.html",name=request.args["name"])
-```
-
-Kun käytetään metodia `get`, lomakkeeseen annettu tieto välitetään sivun osoitteen mukana ja se on saatavilla `request.args`-rakenteessa. Lomake toimii käytännössä näin:
-
-TODO: Kuva tähän
-
-Huomaa, että jälkimmäisen sivun osoite on `result?name=Maija`, jossa näkyy parametrina lomakkeeseen annettu tieto.
-
-Toinen tapa välittää tietoa lomakkeella on käyttää `post`-metodia, jolloin lomakkeen alkurivi näyttää tältä:
-
-```html
-<form action="/test" method="post">
-```
-
-Kun metodina on `post`, tietoa ei välitetä sivun osoitteessa vaan piilossa sivupyynnön mukana. Pystymme käsittelemään `post`-metodilla lähetetyn lomakkeen näin:
-
-```python
-@app.route("/result", methods=["post"])
-def result():
-    return render_template("result.html",name=request.form["name"])
-```
-
-Erona on, että lomakkeen metodi pitää ilmoittaa (oletuksena metodi on `get`) ja rakenteen `request.args` sijasta tiedot haetaan rakenteesta `request.form`.
-
-Sivu toimii muuten samalla tavalla kuin ennenkin, mutta tietoa ei näy osoitteessa:
-
-TODO: Kuva tähän
-
-### HTTP-koodit
-
-Jos sivupyyntö onnistuu, palvelin lähettää vastauksen HTTP-koodilla 200. Muita koodeja käytetään esimerkiksi virhetilanteista ilmoittamiseen.
-
-Voimme keskeyttää sivun muodostamisen ja lähettää virhekoodin `abort`-funktiolla. Esimerkiksi seuraava koodi lähettää koodin 404, joka tarkoittaa puuttuvaa tiedostoa:
-
-```python
-from flask import Flask, abort
-```
-
-```python
-@app.route("/test")
-def test():
-    abort(404)
-```
-
-Sivu voi näyttää selaimessa tältä:
-
-TODO: Kuva tähän
-
-Seuraava koodi puolestaan käsittelee lomakkeen niin, että jos nimi on Maija, käyttäjä näkee sivun `result`, mutta muuten sivun muodostaminen keskeytyy koodilla 403 (pääsy kielletty):
-
-```python
-@app.route("/result",methods=["post"])
-def result():
-    name = request.form["name"]
-    if name == "Maija":
-        return render_template("result.html",name=name)
-    else:
-        abort(403)
-```
-
-Sivu voi näyttää selaimessa tältä:
-
-TODO: Kuva tähän
