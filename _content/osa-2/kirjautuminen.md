@@ -1,16 +1,16 @@
-## Kirjautuminen ja istunnot
+## Istunnot ja kirjautuminen
 
-Tavallinen web-sovelluksen toiminto on _kirjautuminen_: käyttäjä antaa tunnuksen ja salasanan ja pääsee tekemään jotain erityistä sovelluksessa. Kirjautuminen vaatii, että tietoa säilyy sovelluksessa sivulta toiselle, ja tämä onnistuu _istunnon_ (_session_) avulla.
+Useimmissa web-sovelluksissa on mahdollista kirjautua sisään antamalla tunnus ja salasana, minkä jälkeen pääsee tekemään jotain erityistä. Kirjautuminen vaatii, että tietoa säilyy sovelluksessa sivulta toiselle, ja tämä onnistuu _istunnon_ (_session_) avulla.
 
-Ideana on, että voimme tallentaa `session`-rakenteeseen avain-arvo-pareja, jotka säilyvät muistissa sivulta toiselle. Flask toteuttaa istunnon lähettämällä selaimelle _evästeen_ (_cookie_), joka sisältää istuntoon liittyvät tiedot.
+Ideana on, että voimme tallentaa istuntoon avain-arvo-pareja, jotka säilyvät muistissa sivulta toiselle. Flask toteuttaa istunnon `session`-oliona, jonka tiedot tallennetaan selaimeelle lähetettävään _evästeeseen_ (_cookie_).
 
-Jotta istunto on turvallinen, lisäämme `.env`-tiedostoon ensin salaisen avaimen:
+Istunnon käyttäminen vaatii, että sovelluksessa on käytössä salainen avain. Lisäämme satunnaisesti muodostetun salaisen avaimen `.env`-tiedostoon:
 
 ```bash
-SECRET_KEY=4245910803282847842
+SECRET_KEY=WMyHhYFPTpQ9geoDboUXDUZ9f6wMOrjO
 ```
 
-Tämä avain allekirjoittaa evästeessä olevan tiedon niin, että käyttäjä ei pysty muuttamaan istunnon sisältöä selaimessa. On tärkeää, että avain on salainen, eli älä missään tapauksessa käytä yllä olevaa avainta vaan luo oma salainen avain!
+Tämä avain allekirjoittaa evästeessä olevan tiedon niin, että käyttäjä ei pysty muuttamaan istunnon sisältöä selaimessa. **On tärkeää, että avain on salainen, eli älä missään tapauksessa käytä yllä olevaa avainta vaan luo oma salainen avain!**
 
 Jos haluat tietää tarkemmin, miten istunto on toteutettu, voit lukea lisää [tästä](TODO).
 
@@ -139,7 +139,7 @@ if hash_value == None:
     # TODO: invalid username
 else:
     if werkzeug.security.check_password_hash(hash_value[0],password):
-        # TODO correct username and password
+        # TODO: correct username and password
     else:
         # TODO: invalid password
 ```

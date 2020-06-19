@@ -1,13 +1,11 @@
-## Esimerkkejä
+## Esimerkkisovellus
 
-Teemme seuraavaksi kolme pientä tietokantaa käyttävää sovellusta, jotka esittelevät tietokannan käyttämistä web-sovelluksessa.
+Teemme seuraavaksi pienen tietokantaa käyttävän sovelluksen, joka esittelee tarkemmin tietokannan käyttämistä. Sovellus on _vieraskirja_, joka näyttää käyttäjien lähettämiä viestejä ja sallii uusien viestien lähettämisen.
 
-### Vieraskirja
+Seuraava komento luo tietokantaan taulun viestejä varten:
 
-Vieraskirja näyttää käyttäjien lähettämiä viestejä ja antaa mahdollisuuden lähettää uusi viesti. Seuraava komento luo tietokantaan taulun viestejä varten:
-
-```bash
-pllk=# CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT, time TIMESTAMP);
+```sql
+CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT, time TIMESTAMP);
 ```
 
 Sovelluksen etusivu näyttää viestit. Tässä on sivupohja `index.html`, joka olettaa, että viestit tulevat listassa `messages`:
@@ -52,10 +50,10 @@ db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
-    query = "SELECT content, time FROM messages ORDER BY id DESC"
-    result = db.session.execute(query)
+    sql = "SELECT content, time FROM messages ORDER BY id DESC"
+    result = db.session.execute(sql)
     messages = result.fetchall()
-    return render_template("index.html",messages=messages)
+    return render_template("index.html", messages=messages)
 
 @app.route("/new")
 def new():
@@ -63,9 +61,8 @@ def new():
 
 @app.route("/send",methods=["post"])
 def send():
-    db.session.execute("INSERT INTO messages (content, time)"
-                       "VALUES (:content, NOW())",
-                       {"content":request.form["content"]})
+    sql = "INSERT INTO messages (content, time) VALUES (:content, NOW())"
+    db.session.execute(sql, {"content":request.form["content"]})
     db.session.commit()
     return redirect("/")
 ```
@@ -76,6 +73,7 @@ Käyttäjän lähettämän lomakkeen käsittelee sivu `send`, joka lisää uuden
 
 Lisäyksen jälkeen tulee kutsua metodia `commit`, jotta transaktio viedään loppuun. Tämän jälkeen käyttäjä ohjataan metodilla `redirect` takaisin etusivulle.
 
-Sovelluksen käyttäminen voi näyttää seuraavalta:
+Sovellus näyttää tässä vaiheessa seuraavalta:
 
 TODO: Kuva tähän
+
