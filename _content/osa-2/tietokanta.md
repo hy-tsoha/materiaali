@@ -2,14 +2,13 @@
 
 ### PostgreSQL:n asennus
 
-Laitoksen koneilla voit asentaa ilman lisäoikeuksia PostgreSQL:n tunnuksesi käyttöön tällä [asennusskriptillä](linkki). Skripti saattaa toimia myös joillain muilla Linux-jakeluilla.
+Olemme tehneet kurssia varten [asennusskriptin](linkki), joka asentaa PostgreSQL:n Linux-ympäristöön. Skripti asentaa tietokannan käyttäjän kotihakemistoon niin, että asennus ei vaadi pääkäyttäjän oikeuksia. Skripti on tarkoitettu ertyisesti käytettäväksi tietojenkäsittelytieteen osaston fuksiläppäreissä ja mikroluokissa.
 
-Jos sinulla on ylläpitooikeudet, voit todennäköisesti asentaa PostgreSQL:n käyttöjärjestelmäsi pakettienhallinnan kautta (Linux, BSD, yms), mahdollisesti konttiin (esim Docker) tai ladata asennuspaketin sille. Erilaisia vaihtoehtoja on liian monia tässä läpi käytäväksi. Perehdy käyttöjärjestelmäsi tarjomaan dokumentaatioon ja/tai katso mitä [PostgreSQL verkkosivulla](https://www.postgresql.org/download/) sanotaan.
-
+Voit myös asentaa PostgreSQL:n pääkäyttäjänä käyttöjärjestelmäsi pakettienhallinnan kautta, käyttää Dockeria tai vastaavaa alustaa tai ladata asennuspaketin itse. Ohjeita asennukseen eri järjestelmiin on [PostgreSQL:n verkkosivulla](https://www.postgresql.org/download/).
 
 ### PostgreSQL-tulkki
 
-Komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun `users`, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
+Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun `users`, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
 
 ```bash
 $ psql
@@ -52,24 +51,26 @@ Indexes:
     "users_pkey" PRIMARY KEY, btree (id)
 ```
 
-Kokeilun päätteeksi tuhoamme taulun `users` ja poistumme sitten PostgreSQL-tulkista `\q`-komennolla.
+Komento `\q` poistuu PostgreSQL-tulkista:
 
 ```bash
-pllk=# DROP TABLE users;
-DROP TABLE
 pllk=# \q
+$ 
 ```
 
 ### Tietokantayhteys sovelluksesta
 
-Jotta voimme käyttää PostgreSQL-tietokantaa Flask-sovelluksessa, asennamme pari kirjastoa lisää. Käytämme SQLAlchemy-kirjaston versiota, joka on tarkoitettu Flaskin kanssa käytettäväksi.
+
+Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjastoa lisää:
 
 ```bash
 (venv) $ pip install flask-sqlalchemy
 (venv) $ pip install psycopg2
 ```
 
-Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä:
+Ensimmäinen kirjasto `flask-sqlalchemy` on SQLAlchemy-rajapinta, jonka kautta käytämme tietokantaa Flaskissa. Toinen kirjasto `psycopg2` puolestaan mahdollistaa yhteyden muodostamisen PostgreSQL-tietokantaan.
+
+Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellus olettaa, että tietokannassa on äsken luomamme `users`-taulu.
 
 ```python
 from flask import Flask
@@ -81,84 +82,51 @@ db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
-    result = db.session.execute("SELECT VERSION()")
-    return result.fetchone()[0]
+    result = db.session.execute("SELECT COUNT(*) FROM users")
+    count = result.fetchone()[0]
+    return f"Taulussa on {count} riviä"
 ```
 
-Sovelluksen etusivu suorittaa SQL-kyselyn `SELECT VERSION()`, joka hakee tietokannan version. Komennon tulos voi näyttää tältä:
+Sovellus suorittaa SQL-kyselyn `SELECT COUNT(*) FROM users`, joka hakee taulun rivien määrän. Metodi `fetchone` hakee yhden tulosrivin tuplena, jonka alkiot vastaavat rivin sarakkeita, ja `[0]` viittaa ensimmäiseen sarakkeeseen. Tuloksena on seuraava sivu:
 
 TODO: Kuva tähän
 
-Jos saat tämän testisovelluksen toimimaan, niin tilanne on hyvä, koska nyt sinulla on toimiva ympäristö sovelluksen kehittämiseen kurssilla.
-
-TODO: Lisää metodeista `fetchone` ja `fetchall`, transaktiot?
-
-### Esimerkki: Vieraskirja
-
-Tehdään seuraavaksi todellinen pieni tietokantaa käyttävä sovellus. Ideana on tehdä vieraskirja, jossa käyttäjät voivat lähettää sivulle anonyymeja viestejä. Seuraava komento luo tietokantaan taulun viestejä varten:
-
-```bash
-pllk=# CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT, time TIMESTAMP);
-```
-
-Sovelluksen etusivu `index.html` näyttää viestit. Tässä on sivun pohja, joka olettaa, että viestit tulevat listassa `messages`:
-
-```html
-<h1>Messages</h1>
-<a href="/new">New message</a>
-<hr>
-{% raw %}{% for entry in messages %}
-{{ entry[0] }}
-<hr>
-{% endfor %}{% endraw %}
-```
-
-Toinen sivu `new.html` näyttää lomakkeen, jonka kautta voi lähettää viestin:
-
-```html
-<form action="/send" method="post">
-<p>
-Message:<br>
-<textarea name="content">
-</textarea>
-</p>
-<input type="submit" value="Lähetä">
-</form>
-```
-
-Sovelluksen varsinainen koodi on tässä:
+Tässä on vielä toinen esimerkki, joka hakee käyttäjien nimet:
 
 ```python
-from flask import Flask, render_template, request, redirect
-from flask_sqlalchemy import SQLAlchemy
-
-app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///pllk"
-db = SQLAlchemy(app)
-
 @app.route("/")
 def index():
-    result = db.session.execute("SELECT content FROM messages")
-    messages = result.fetchall()
-    return render_template("index.html",messages=messages)
-
-@app.route("/new")
-def new():
-    return render_template("new.html")
-
-@app.route("/send",methods=["post"])
-def send():
-    db.session.execute("INSERT INTO messages (content,time)"
-                       "VALUES (:content,NOW())",
-                       {"content":request.form["content"]})
-    db.session.commit()
-    return redirect("/")
+    result = db.session.execute("SELECT name FROM users")
+    users = result.fetchall()
+    names = [row[0] for row in users]
+    return ", ".join(names)
 ```
 
-Etusivu suorittaa kyselyn `SELECT content FROM messages` ja metodi `fetchall` hakee kaikki kyselyn tuottamat rivit, jotka ohjataan sivupohjalle. Sivupohjassa `entry[0]` viittaa rivin ensimmäiseen sarakkeeseen, joka on `content` (tässä tapauksessa haetaan vain yksi sarake).
-
-Kun käyttäjä lähettää lomakkeen, tämän käsittelee sivu `send`, joka lisää käyttäjän lähettämän viestin tietokantaan. Huomaa, että lisäyksen jälkeen tulee kutsua metodia `commit`, jotta transaktio viedään loppuun. Tämän jälkeen käyttäjä ohjataan metodilla `redirect` takaisin etusivulle.
-
-Sovelluksen käyttäminen voi näyttää seuraavalta:
+Nyt käytössä on metodi `fetchall`, joka hakee koko tulostaulun sisällön. Metodi palauttaa listan, jonka jokainen alkio on tulosriviä vastaava tuple. Tuloksena on seuraava sivu:
 
 TODO: Kuva tähän
+
+### Ympäristömuuttujat
+
+Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen koodiin, vaan parempi tapa on välittää tämä tieto _ympäristömuuttujan_ kautta. Voimme tehdä tämän mukavasti asentamalla kirjaston `python-dotenv`.
+
+```bash
+$ pip install python-dotenv
+```
+
+Tämän jälkeen voimme luoda tiedoston `.env`, jossa on tietokannan osoitteen ilmoittava ympäristömuuttuja:
+
+```
+DATABASE_URL=postgresql:///pllk
+```
+
+Nyt voimme hakea tiedostossa `.env` annetun muuttujan arvon sovellukseen näin:
+
+```python
+from dotenv import load_dotenv
+import os
+
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+```
+
+Tästä lähtien oletamme, että ympäristömuuttuja `DATABASE_URL` kertoo tietokannan osoitteen. Tämä tieto voi olla ympäristöstä riippuen tiedostossa `.env` tai määritetty muulla tavalla.

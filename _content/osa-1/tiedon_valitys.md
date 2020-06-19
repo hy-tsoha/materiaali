@@ -76,7 +76,7 @@ Elementtien `radio` ja `checkbox` erona on, että samannimisistä elementeistä 
 Sivupohja `result.html` näyttää tilauksen tiedot lähetyksen jälkeen:
 
 ```html
-Valitsit pizzan {{ pizza }}
+{% raw %}Valitsit pizzan {{ pizza }}
 <p>
 Seuraavat lisät:
 <ul>
@@ -85,7 +85,7 @@ Seuraavat lisät:
 {% endfor %}
 </ul>
 Erikoistoiveet: <br>
-{{ message }}
+{{ message }}{% endraw %}
 ```
 
 Seuraava sovellus käsittelee lomakkeen kautta lähetetyt tiedot:
@@ -147,6 +147,8 @@ TODO: Kuva tähän
 Kirjautuminen on kuitenkin vielä varsin alkeellinen: oikea tunnus ja salasana on kovakoodattu sovellukseen ja käyttäjä voi ohittaa kirjautumisen, jos hän tietää salaisen sivun osoitteen. Osassa 2 toteutamme kirjautumisen paremmin tietokannan avulla.
 
 ### Virhekoodit
+
+TODO: Tämä kannattaa varmaan siirtää johonkin toiseen paikkaan myöhemmäksi
 
 Jos sivupyyntö onnistuu, palvelin lähettää vastauksen HTTP-koodilla 200. Muita koodeja käytetään esimerkiksi virhetilanteista ilmoittamiseen.
 
