@@ -13,6 +13,7 @@ title: TODO
 * Konsolin väritys ei toimi vielä hyvin, osassa 1 testiaineistoa
 * Jos koodilaatikossa oleva rivi on pitkä, tulisi ilmestyä vaakasuuntainen vierityspalkki
   (esimerkki tällaisesta tilanteesta osan 2 alussa)
+* Koodilaatikossa pitäisi pystyä antamaan tiedoston nimi, joka näkyy jollain sopivalla tavalla laatikon oikeassa ylänurkassa
 
 ## Taulukot:
 

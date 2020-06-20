@@ -1,6 +1,6 @@
 ## Esimerkkisovellus
 
-Teemme seuraavaksi pienen tietokantaa käyttävän sovelluksen, joka esittelee tarkemmin tietokannan käyttämistä. Sovelluksessa käyttäjät voivat luoda kyselyitä sekä vastata muiden luomiin kyselyihin. Sovelluksen käyttäminen näyttää tältä:
+Teemme seuraavaksi pienen esimerkkisovelluksen, joka esittelee tietokannan käyttämiseen liittyviä tekniikoita. Sovelluksessa käyttäjät voivat luoda kyselyitä sekä vastata muiden luomiin kyselyihin. Sovelluksen käyttäminen näyttää tältä:
 
 TODO: Lisää kuvat
 
