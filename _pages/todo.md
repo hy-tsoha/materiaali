@@ -35,12 +35,54 @@ title: TODO
 | 10<sup>6</sup> | 2.12 s |
 | 10<sup>7</sup> | 5.91 s |
 
+|kasvit|
 | id | nimi | hinta |
 |-|-|-|
 | 1 | lanttu | 7 |
 | 2 | selleri | 4 |
 | 3 | nauris | 8 |
 | 4 | retiisi | 5 |
+
+|kasvit|
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+
+|kasvit|
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+
+|kasvit|
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+
+|kasvit|
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+
+{% include db-table.html otsikko='Vihannekset' table='
+ id | nimi | hinta |
+-|-|-|
+ 1 | lanttu | 7 |
+ 2 | selleri | 4 |
+ 3 | nauris | 8 |
+ 4 | retiisi | 5 |'
+%}
 
 ## Koodin näyttäminen
 
