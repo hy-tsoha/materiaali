@@ -44,30 +44,8 @@ title: TODO
 | 3 | nauris | 8 |
 | 4 | retiisi | 5 |
 
-|kasvit|
-| id | nimi | hinta |
-|-|-|-|
-| 1 | lanttu | 7 |
-| 2 | selleri | 4 |
-| 3 | nauris | 8 |
-| 4 | retiisi | 5 |
 
-|kasvit|
-| id | nimi | hinta |
-|-|-|-|
-| 1 | lanttu | 7 |
-| 2 | selleri | 4 |
-| 3 | nauris | 8 |
-| 4 | retiisi | 5 |
-
-|kasvit|
-| id | nimi | hinta |
-|-|-|-|
-| 1 | lanttu | 7 |
-| 2 | selleri | 4 |
-| 3 | nauris | 8 |
-| 4 | retiisi | 5 |
-
+{:.db-table}
 |kasvit|
 | id | nimi | hinta |
 |-|-|-|
@@ -78,12 +56,44 @@ title: TODO
 
 {% include db-table.html otsikko='Vihannekset' table='
  id | nimi | hinta |
--|-|-|
  1 | lanttu | 7 |
  2 | selleri | 4 |
  3 | nauris | 8 |
  4 | retiisi | 5 |'
 %}
+
+<table class='db-table'>
+<thead>
+  <tr><th>Vihannekset</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>nimi</td>
+<td>hinta</td>
+</tr>
+<tr>
+<td>1</td>
+<td>lanttu</td>
+<td>7</td>
+</tr>
+<tr>
+<td>2</td>
+<td>selleri</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>nauris</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>retiisi</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
 
 ## Koodin näyttäminen
 
