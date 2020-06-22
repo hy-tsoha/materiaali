@@ -31,3 +31,12 @@ body {
     color: #D3D7CF;
     border-radius: 8px;
 }
+
+tbody tr:nth-child(odd) {
+    background-color: #ff33cc;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #e495e4;
+  }
+  

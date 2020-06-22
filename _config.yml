@@ -35,7 +35,6 @@ kramdown:
     default_lang: html
     css_class   : 'syntax'
 
-
 collections:
   pages:
     output: true

@@ -52,6 +52,7 @@ sub-sections:
 | 10<sup>6</sup> | 2.12 s |
 | 10<sup>7</sup> | 5.91 s |
 
+|kasvikset|
 | id | nimi | hinta |
 |-|-|-|
 | 1 | lanttu | 7 |
