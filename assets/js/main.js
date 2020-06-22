@@ -17,3 +17,11 @@ function reportWindowSize() {
 
 window.onresize = reportWindowSize;
 window.onload = reportWindowSize;
+
+function generateTOC(){
+  tof = document.getElementById("tof")
+  tof.parentNode.insertBefore(document.getElementsByTagName("h1")[0], tof)
+  tof.style.removeProperty("display")
+}
+
+

@@ -7,40 +7,24 @@ title: TODO
 
 ## Sekalaista:
 
-* Koodilaatikossa saisi olla vähän vähemmän paddingia
-    - vähennetty. pitäisikö koodi laatikon olla oikeasta reunasta kapeampi? tarkoitettiinko tässä koodilaatikon ulkopuolella olevaa tilaa. pienensin nyt laatikon sisällä olevaa tilaa :D
-
 * Jos peräkkäin on kaksi koodilaatikkoa, niin niiden välissä tulisi olla rivi tyhjää niin,
   että ne eivät ole kiinni toisissaan
-    - 
-* LaTeX-fontin tulisi olla vähän pienempi
-    - muutettu pienemmäksi
-* Tekstin sisällä oleva `koodi` tulisi olla vähän pienemmällä fontilla
-    - koodi on nyt kokoa `16px` ja itse teksti kokoa `18px`.
-* Olisiko etusivulla toimiva niin että läpinäkyvyyden sijasta otsikko olisi erillisessä
-  valkoisessa laatikossa ja taustaa näkyy sen eri puolilla kuitenkin?
-    - Laitoin otsikon omaan laatikkoon. Muokkaisn myös footer osiota.
-
-* Sivun otsikon (title-tagi) tulisi tulla automaattisesti sivun perusteella
-    - sivun otsikon saa automaattisesti title tägin perusteella käyttämällä {{ page.title }}, mutta titleä ei saa automaattisesti sivun perusteella. titleä ei tällä hetkellä käytetä mihinkään, joten otin sen pois.
-
-Tiivistin sivuhakemiston niin, että siihen ei tarvita muuta kuin alaosioiden otsikot
-
-```
----
-...
-sub-sections:
-      - sub-section-title: Johdatus web-sovelluksiin
-      - sub-section-title: Tietokannan käyttäminen
-      - sub-section-title: Sovellus tuotantoon
----
-```
+    - Vähän enemmän tilaa voisi olla vielä
+* Konsolin väritys ei toimi vielä hyvin, osassa 1 testiaineistoa
+* Jos koodilaatikossa oleva rivi on pitkä, tulisi ilmestyä vaakasuuntainen vierityspalkki
+  (esimerkki tällaisesta tilanteesta osan 2 alussa)
+* Koodilaatikossa pitäisi pystyä antamaan tiedoston nimi, joka näkyy jollain sopivalla tavalla laatikon oikeassa ylänurkassa
 
 ## Taulukot:
 
 * Mikä olisi tyylikäs muotoilu taulukoille? Miten otsikkorivi merkitään?
-* Entä miten tietokantataulut muotoillaan?
 * Jos taulukkoja on peräkkäin, niin niiden välissä tulisi olla tyhjä rivi
+* Entä miten tietokantataulut muotoillaan?
+  - Riittää keskittyä tapaukseen, jossa esitetään taulussa olevat rivit
+    (eli otsikkorivillä ovat taulun sarakkeiden nimet)
+  - Tauluja tulisi pystyä olemaan vierekkäin ja tulisi pystyä asettamaan
+    (tarvittaessa) itse sarakkeen leveys, jotta ne saa yhdenmukaisesti
+  - Esimerkki asettelusta: https://tikape-ke20.mooc.fi/luku-1/3
 
 ## Taulukko
 
@@ -52,13 +36,64 @@ sub-sections:
 | 10<sup>6</sup> | 2.12 s |
 | 10<sup>7</sup> | 5.91 s |
 
-|kasvikset|
+|kasvit|
 | id | nimi | hinta |
 |-|-|-|
 | 1 | lanttu | 7 |
 | 2 | selleri | 4 |
 | 3 | nauris | 8 |
 | 4 | retiisi | 5 |
+
+
+{:.db-table}
+|kasvit|
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+
+{% include db-table.html otsikko='Vihannekset' table='
+ id | nimi | hinta |
+ 1 | lanttu | 7 |
+ 2 | selleri | 4 |
+ 3 | nauris | 8 |
+ 4 | retiisi | 5 |'
+%}
+
+<table class='db-table'>
+<thead>
+  <tr><th>Vihannekset</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>nimi</td>
+<td>hinta</td>
+</tr>
+<tr>
+<td>1</td>
+<td>lanttu</td>
+<td>7</td>
+</tr>
+<tr>
+<td>2</td>
+<td>selleri</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>nauris</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>retiisi</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
 
 ## Koodin näyttäminen
 

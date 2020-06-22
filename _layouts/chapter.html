@@ -1,4 +1,14 @@
----
-layout: "chapter-wrapper"
----
-{{ content }}
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body  onload="generateTOC()">
+    {%include side-nav.html%}
+    <div class="page-content">
+        {%include content.html%}
+        {%include footer.html%}
+    </div>
+</body>
+
+</html>

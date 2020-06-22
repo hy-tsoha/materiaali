@@ -1,4 +1,17 @@
----
-layout: "wrapper"
----
-{{ content }}
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+<body>
+
+    {%include side-nav.html%}
+    <div>
+        {%include header.html%}
+
+        {%include content.html%}
+        {%include footer.html%}
+    </div>
+
+</body>
+
+</html>

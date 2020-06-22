@@ -3,25 +3,14 @@ layout: chapter
 nav-title: Osa 1
 sub-sections:
       - sub-section-title: Johdatus web-sovelluksiin
-      - sub-section-title: Tietokannan käyttäminen
-      - sub-section-title: Sovellus tuotantoon
+      - sub-section-title: Tiedon välittäminen
 ---
 # Osa 1
 
-{% for s in page.sub-sections%}
-* [{{ s.sub-section-title }}](#{{ s.sub-section-title | downcase | replace: ' ', '-'}}){% endfor %}
+Tämä osa esittelee kurssilla käytettävän Flask-kirjaston, jonka avulla teemme web-sovelluksen Python-kielellä. Flask on suosittu kevyt kirjasto, joka soveltuu sekä web-ohjelmoinnin opetteluun että todellisten sovellusten alustaksi.
 
-Tässä osassa tutustumme kurssilla käytettäviin työkaluihin:
-
-* Flask on suosittu Python-kirjasto, jonka avulla voimme luoda web-sovelluksia.
-  Flask soveltuu sekä web-ohjelmoinnin opetteluun että todellisten sovellusten alustaksi.
-* PostgreSQL on avoimen lähdekoodin tietokantajärjestelmä, joka on tavallinen
-  valinta web-sovelluksen taustalla olevaksi tietokannaksi.
-* Heroku on pilvipalvelu, jonka avulla voimme julkaista web-sovelluksen kaikkien käytettäväksi. Tätä kurssia varten ilmainen tunnus on rajoituksistaan huolimatta riittävä.
-
-Kurssin materiaali olettaa, että osaat perusasiat Python-ohjelmointikielestä.
+Kurssin materiaali olettaa, että osaat perusasiat Python-kielestä.
 Jos et tunne kieltä ennestään, sinun kannattaa ensin käydä pikakurssi [tästä](TODO).
 
 {% include_relative johdatus.md %}
-{% include_relative tietokanta.md %}
-{% include_relative tuotantoon.md %}
+{% include_relative tiedon_valitys.md %}
