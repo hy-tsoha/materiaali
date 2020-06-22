@@ -8,7 +8,7 @@ Voit myös asentaa PostgreSQL:n pääkäyttäjänä käyttöjärjestelmäsi pake
 
 ### PostgreSQL-tulkki
 
-Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun `users`, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
+Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun `users` (huomioi että sana user yksikkömuodossa on [varattu sana](https://www.postgresql.org/docs/12/sql-keywords-appendix.html), joten sitä ei voi käyttää), lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
 
 ```bash
 $ psql
