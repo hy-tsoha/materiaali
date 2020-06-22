@@ -36,17 +36,15 @@ title: TODO
 | 10<sup>6</sup> | 2.12 s |
 | 10<sup>7</sup> | 5.91 s |
 
-|kasvit|
+|vihannekset|
 | id | nimi | hinta |
 |-|-|-|
 | 1 | lanttu | 7 |
 | 2 | selleri | 4 |
 | 3 | nauris | 8 |
 | 4 | retiisi | 5 |
-
 
 {:.db-table}
-|kasvit|
 | id | nimi | hinta |
 |-|-|-|
 | 1 | lanttu | 7 |
@@ -54,44 +52,81 @@ title: TODO
 | 3 | nauris | 8 |
 | 4 | retiisi | 5 |
 
-{% include db-table.html otsikko='Vihannekset' table='
- id | nimi | hinta |
- 1 | lanttu | 7 |
- 2 | selleri | 4 |
- 3 | nauris | 8 |
- 4 | retiisi | 5 |'
-%}
+{:.db-table}
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
 
-<table class='db-table'>
+{:.db-table}
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+
+Jos väliin kirjoitetaan tekstiä
+
+{:.db-table}
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+
+{:.db-table}
+| id | nimi | hinta | testi |
+|-|-|-| -|
+| 1 | lanttu | 7 | ok |
+| 2 | selleri | 4 | ok |
+| 3 | nauris | 8 | ok |
+| 4 | retiisi | 5 |ok |
+
+{:.db-table}
+|vihannekset |
+| id | nimi | hinta | testi |
+|-|-|-| -|
+| 1 | lanttu | 7 | ok |
+| 2 | selleri | 4 | ok |
+| 3 | nauris | 8 | ok |
+| 4 | retiisi | 5 |ok |
+
+<table class="db-table">
 <thead>
-  <tr><th>Vihannekset</th></tr>
+  <tr>
+    <th colspan="3">vihannekset</th>
+  </tr>
+  <tr>
+    <th>id</th>
+    <th>nimi</th>
+    <th>hinta</th>
+  </tr>
 </thead>
 <tbody>
-<tr>
-<td>id</td>
-<td>nimi</td>
-<td>hinta</td>
-</tr>
-<tr>
-<td>1</td>
-<td>lanttu</td>
-<td>7</td>
-</tr>
-<tr>
-<td>2</td>
-<td>selleri</td>
-<td>4</td>
-</tr>
-<tr>
-<td>3</td>
-<td>nauris</td>
-<td>8</td>
-</tr>
-<tr>
-<td>4</td>
-<td>retiisi</td>
-<td>5</td>
-</tr>
+  <tr>
+    <td>1</td>
+    <td>lanttu</td>
+    <td> 7</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>selleri</td>
+    <td> 4</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>nauris</td>
+    <td> 8</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>retiisi</td>
+    <td>5</td>
+    </tr>
 </tbody>
 </table>
 

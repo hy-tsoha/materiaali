@@ -18,12 +18,35 @@ code {
     border: 1px solid black;
 }
 
+.db-table tr:first-child th {
+    border: none;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+}
 .db-table td{
     border: 1px solid black;
+    padding: 3px;
 }
 .db-table th{
     font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+    padding: 3px
 }
+
+.db-table tr:nth-child(odd){
+    background-color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #b4b4b4;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
 
 @media screen and (max-width: 100rem) {
     .page-content {
