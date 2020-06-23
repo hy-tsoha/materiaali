@@ -204,6 +204,12 @@ Yhden solun leveyden muuttamimnen vaikuttaa koko sarakkeen leveyteen.
 
 ## Koodin näyttäminen
 
+<p class="code-title">index.py</p>
+```python
+for i in range(10):
+    print("lol")
+```
+<p class="code-title">index.py</p>
 ```python
 for i in range(10):
     print("lol")
@@ -216,7 +222,7 @@ SELECT * FROM Tuotteet WHERE nimi='lanttu';
 Syntaksiväritykset [täältä](https://spsarolkar.github.io/rouge-theme-preview/), nyt käytössä 'github'
 
 ## Konsolin näyttäminen
-
+<p class="code-title-bash">index.py</p>
 ```bash
 $ cp apina.txt banaani.txt
 $ ./testi

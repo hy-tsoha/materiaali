@@ -24,11 +24,32 @@ body {
     border-radius: 8px;
     font-size: 16px;
     padding: 0.5em;
+    margin: 2em 0;
+    overflow-x: auto;
 }
 
+.highlight::before{
+    content: var(--title);
+}
 .language-bash {
     background-color: #2E3436;
     color: #D3D7CF;
     border-radius: 8px;
 }
 
+.code-title {
+    position: relative;
+    text-align: right;
+    top: 3.5em;
+    right: 1em;
+    margin-top: -3.5em;
+}
+
+.code-title-bash {
+    color: white;
+    position: relative;
+    text-align: right;
+    top: 3.5em;
+    right: 1em;
+    margin-top: -3.5em;
+}
