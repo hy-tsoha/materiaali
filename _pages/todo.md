@@ -26,6 +26,55 @@ title: TODO
     (tarvittaessa) itse sarakkeen leveys, jotta ne saa yhdenmukaisesti
   - Esimerkki asettelusta: https://tikape-ke20.mooc.fi/luku-1/3
 
+## Taulukoista 
+
+Tavallinen taulukko ja tietokantataulu on erinäköisiä. Tietokanta taulua merkitään luokalla `db-table`. Markdownilla voi hyvin kirjoittaa tavallisia taulukoita ja tietokantatauluja, joilla ei ole otsikkoa. Jos tekee tietokantataulun markdownilla, niin taululle annetaan luokka `db-table` merkitsemällä se aaltosulkeisiin ennen taulukkoa.
+
+```markdown
+{:.db-table}
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+```
+Tietokantataulu, jolla on otsikko tehdään käyttämällä HTML-taulukkoa. Tällöin otsikko solulle annetaan `colspan`-arvoksi sarakkeiden määrä ja otsikko solun id:ksi asetetaan `table-title`.
+
+```html
+<table class="db-table">
+<thead>
+  <tr>
+    <th colspan="3" id="table-title">vihannekset</th>
+  </tr>
+  <tr>
+    <th>id</th>
+    <th>nimi</th>
+    <th>hinta</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    ...
+</tbody>
+</table>
+```
+
+Sarakkeen leveytta ja taulukon muuta ulkonäköa voi muotoilla HTML-taulukossa antamalla `style`-attribuutille arvoja.
+
+```html
+<table class="db-table">
+<thead>
+  <tr>
+    <th style="width: 100px;">id</th>
+    <th>nimi</th>
+    ...
+</tbody>
+</table>
+```
+
+Yhden solun leveyden muuttamimnen vaikuttaa koko sarakkeen leveyteen.
 ## Taulukko
 
 | syötteen koko _n_ | suoritusaika |
@@ -89,9 +138,9 @@ title: TODO
 <table class="db-table">
 <thead>
   <tr>
-    <th>id</th>
-    <th>nimi</th>
-    <th>hinta</th>
+    <th style="border: none;">id</th>
+    <th style="border: none;">nimi</th>
+    <th style="border: none;">hinta</th>
   </tr>
 </thead>
 <tbody>
@@ -114,9 +163,44 @@ title: TODO
     <td>4</td>
     <td>retiisi</td>
     <td>5</td>
-    </tr>
+  </tr>
+  <tr>
+  <td colspan='3'>Tässä taulussa on &shy; testattu erilaista muotoilua.</td>
+  </tr>
 </tbody>
 </table>
+
+{:.db-table}
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+
+{:.db-table}
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+
+{:.db-table}
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
+
+{:.db-table}
+| id | nimi | hinta |
+|-|-|-|
+| 1 | lanttu | 7 |
+| 2 | selleri | 4 |
+| 3 | nauris | 8 |
+| 4 | retiisi | 5 |
 
 ## Koodin näyttäminen
 
