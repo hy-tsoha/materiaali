@@ -157,4 +157,4 @@ Vaikka hyökkääjistä ei olisi huolta, ei silti olisi hyvä idea tallentaa sal
 
 Web-sovelluksissa on usein muutakin salaista tietoa, kuten tietokannan salasana, Flaskissa istuntojen salainen avain jne. Näiden tietojen tulee olla turvallisessa paikassa palvelimella niin, että ulkopuoliset eivät pääse niihin käsiksi. Yksi turvallinen tapa on käyttää ympäristömuuttujia kurssin materiaalissa esitetyllä tavalla.
 
-Huomaa, että salaista tietoa ei erityisesti saa laittaa GitHubiin tai muualle julkisesti. Tutkimalla GitHubin käyttäjien projekteja voi löytää paljon salaista tietoa, jonka ei kuuluisi olla siellä. Pidä huoli, että oma projektisi ei ole yksi niistä.
+Huomaa, että salaista tietoa ei erityisesti saa laittaa GitHubiin tai muualle julkisesti. Tutkimalla GitHubin käyttäjien projekteja voi löytää paljon salaista tietoa, jonka ei kuuluisi olla siellä. Pidä huoli, että oma projektisi ei ole yksi niistä. Jos kuitenkin vahingossa laitat Githubiin tietoa jonka ei pitäisi päätyä sinne, niin huomioi että pelkkä tiedon poistaminen repositoriosta ei riitä, katso selitys esimerkiksi [https://blog.gitguardian.com/leaking-secrets-on-github-what-to-do/](täältä).
