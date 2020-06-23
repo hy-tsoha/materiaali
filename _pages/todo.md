@@ -36,7 +36,6 @@ title: TODO
 | 10<sup>6</sup> | 2.12 s |
 | 10<sup>7</sup> | 5.91 s |
 
-|vihannekset|
 | id | nimi | hinta |
 |-|-|-|
 | 1 | lanttu | 7 |
@@ -51,55 +50,44 @@ title: TODO
 | 2 | selleri | 4 |
 | 3 | nauris | 8 |
 | 4 | retiisi | 5 |
-
-{:.db-table}
-| id | nimi | hinta |
-|-|-|-|
-| 1 | lanttu | 7 |
-| 2 | selleri | 4 |
-| 3 | nauris | 8 |
-| 4 | retiisi | 5 |
-
-{:.db-table}
-| id | nimi | hinta |
-|-|-|-|
-| 1 | lanttu | 7 |
-| 2 | selleri | 4 |
-| 3 | nauris | 8 |
-| 4 | retiisi | 5 |
-
-Jos väliin kirjoitetaan tekstiä
-
-{:.db-table}
-| id | nimi | hinta |
-|-|-|-|
-| 1 | lanttu | 7 |
-| 2 | selleri | 4 |
-| 3 | nauris | 8 |
-| 4 | retiisi | 5 |
-
-{:.db-table}
-| id | nimi | hinta | testi |
-|-|-|-| -|
-| 1 | lanttu | 7 | ok |
-| 2 | selleri | 4 | ok |
-| 3 | nauris | 8 | ok |
-| 4 | retiisi | 5 |ok |
-
-{:.db-table}
-|vihannekset |
-| id | nimi | hinta | testi |
-|-|-|-| -|
-| 1 | lanttu | 7 | ok |
-| 2 | selleri | 4 | ok |
-| 3 | nauris | 8 | ok |
-| 4 | retiisi | 5 |ok |
 
 <table class="db-table">
 <thead>
   <tr>
-    <th colspan="3">vihannekset</th>
+    <th colspan="3" id="table-title">vihannekset</th>
   </tr>
+  <tr>
+    <th style="width: 100px;">id</th>
+    <th>nimi</th>
+    <th>hinta</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>lanttu</td>
+    <td> 7</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>selleri</td>
+    <td> 4</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>nauris</td>
+    <td> 8</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>retiisi</td>
+    <td>5</td>
+    </tr>
+</tbody>
+</table>
+
+<table class="db-table">
+<thead>
   <tr>
     <th>id</th>
     <th>nimi</th>

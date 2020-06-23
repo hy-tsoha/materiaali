@@ -18,7 +18,7 @@ code {
     border: 1px solid black;
 }
 
-.db-table tr:first-child th {
+.db-table #table-title {
     border: none;
     padding: 0;
     text-align: center;
@@ -26,13 +26,13 @@ code {
 }
 .db-table td{
     border: 1px solid black;
-    padding: 3px;
+    padding: 1px 5px;
 }
 .db-table th{
     font-weight: bold;
     text-align: center;
     border: 1px solid black;
-    padding: 3px
+    padding: 1px 5px;
 }
 
 .db-table tr:nth-child(odd){
@@ -47,6 +47,9 @@ tbody tr:nth-child(odd) {
     background-color: #ffffff;
   }
   
+table {
+    margin: 1.5em 0.3em;
+}
 
 @media screen and (max-width: 100rem) {
     .page-content {

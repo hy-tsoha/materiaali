@@ -23,8 +23,3 @@ function generateTOC() {
   tof.parentNode.insertBefore(document.getElementsByTagName("h1")[0], tof)
   tof.style.removeProperty("display")
 }
-
-function generateTables() {
-  //tables = document.getElementsByClassName('db-table')
- // for (t of tables) { t.rows[0].cells[0].colSpan = t.rows[0].cells.length }
-  }
