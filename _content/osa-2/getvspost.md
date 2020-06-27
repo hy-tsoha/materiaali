@@ -1,6 +1,6 @@
 ## Tietokannan tila
 
-Perinteinen periaate web-sovelluksissa on, että `get`-metodia käyttävä sivupyyntö _hakee_ tietokannasta tietoa (`SELECT`-komennoilla), kun taas `post`-metodia käyttävä sivupyyntö voi myös _muuttaa_ tietoa (`INSERT`-, `UPDATE`- ja `DELETE`-komennoilla). Toisin sanoen `get`-metodi ei muuta tietokannan _tilaa_, kun taas `post`-metodi voi muuttaa sitä.
+Perinteinen periaate web-sovelluksissa on, että `get`-metodia käyttävä sivupyyntö _hakee_ tietokannasta tietoa (`SELECT`-komennoilla), kun taas `post`-metodia käyttävä sivupyyntö voi myös _muuttaa_ tietoa (`INSERT`-, `UPDATE`- ja `DELETE`-komennoilla). Toisin sanoen `get`-metodi ei muuta tietokannan _tilaa_, kun taas `post`-metodi voi muuttaa sitä. HTTP-standardin mukaan selain voi säilyttää GET-pyyntöjen vastaukset välimuistissaan, mutta POST-pyyntöjen vastauksia ei oletusarvoisesti säilytetä (eivätkä kaikki selaimet välttämättä tue POST-pyyntöjen vastauksien tallettamista välimuistiin).
 
 Olemme tähän mennessä toteuttaneet kaikki lomakkeet `post`-metodilla, mikä on luontevaa, koska yleensä lomakkeen lähetys voi aiheuttaa muutoksia tietokannassa. Kuitenkin joskus on paikallaan `get`-metodia käyttävä lomake, joka ei muuta tietokantaa.
 
@@ -44,3 +44,5 @@ def result():
 ```
 
 Metodi `get` sopii siis käytettäväksi silloin, kun lomake ei muuta tietoa ja tiedon voi välittää luontevasti sivun osoitteessa. Huomaa kuitenkin, että tämä on vain käytäntö: sivupyynnön käsittelijä voi tehdä mitä vain ja on täysin mahdollista tehdä muutoksia tietokantaan `get`-metodissa, vaikka tämä ei olekaan tapana.
+
+Kun harkitaan GET-metodin käyttöä lomakkeissa on hyvä huomioida että tällöin tehtävistä pyynnöistä jää todennäköisesti paljon enemmän tietoa välittäville palvelimille ja palvelinten lokitiedostoihin, ks esimerkiksi [rfc 7231, kohta 9.4](https://tools.ietf.org/html/rfc7231#section-9.4). 
