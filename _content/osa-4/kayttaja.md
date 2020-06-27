@@ -90,7 +90,7 @@ function check(form) {
 </script>
 ```
 
-Tässä funktio `check` tarkastaa ennen lomakkeen lähettämistä, että sen sisältö on kunnossa. Funktion paluuarvo ilmaisee, lähetetäänkö lomake vai ei. Jos lomakkeen kentissä liikaa tekstiä, käyttäjä saa tästä ilmoituksen eikä lomaketta lähetetä. Esimerkiksi jos otsikko on liian pitkä, käyttäjä saa seuraavan ilmoituksen:
+Tässä funktio `check` tarkastaa ennen lomakkeen lähettämistä, että sen sisältö on kunnossa. Funktion paluuarvo ilmaisee, lähetetäänkö lomake vai ei. Jos lomakkeen kentissä on liikaa tekstiä, käyttäjä saa tästä ilmoituksen eikä lomaketta lähetetä. Esimerkiksi jos otsikko on liian pitkä, käyttäjä saa seuraavan ilmoituksen:
 
 TODO: Kuva tähän
 
