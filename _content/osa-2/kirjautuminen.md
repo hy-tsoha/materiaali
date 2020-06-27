@@ -112,7 +112,7 @@ Kirjautuminen on järkevää toteuttaa niin, että tiedot käyttäjistä ovat ti
 CREATE TABLE users (id SERIAL PRIMARY KEY, username TEXT, password TEXT);
 ```
 
-Tässä tapauksessa käyttäjästä tallennetaan käyttäjätunnus ja salasana. Tämän lisäksi taulussa voisi olla monenlaista muutakin tietoa, kuten onko käyttäjä peruskäyttäjä vai admin-käyttäjä.
+Tässä tapauksessa käyttäjästä tallennetaan käyttäjätunnus ja salasana. Tämän lisäksi taulussa voisi olla muutakin tietoa, kuten onko käyttäjä peruskäyttäjä vai admin-käyttäjä.
 
 Turvallinen tapa tallentaa salasana tietokantaan on tallentaa selkokielisen salasanan sijasta salasanan _hajautusarvo_ (_hash value_), jonka avulla voidaan tarkastaa, onko salasana oikea. Voimme käyttää tähän Flaskin mukana tulevaa Werkzeug-kirjastoa:
 

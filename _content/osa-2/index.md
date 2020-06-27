@@ -5,6 +5,7 @@ sub-sections:
       - sub-section-title: Tietokannan käyttäminen
       - sub-section-title: Esimerkkisovellus
       - sub-section-title: Istunnot ja kirjautuminen
+      - sub-section-title: Tietokannan tila
 ---
 # Osa 2
 
@@ -15,3 +16,4 @@ Jos olet käyttänyt aiemmin SQLite-tietokantaa mutta PostgreSQL ei ole tuttu, v
 {% include_relative tietokanta.md %}
 {% include_relative esimerkki.md %}
 {% include_relative kirjautuminen.md %}
+{% include_relative getvspost.md %}
