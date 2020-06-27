@@ -39,7 +39,7 @@ Lomakkeen käsittelyssä `get`-metodilla lähetetty tieto on saatavilla `request
 Koska kyseessä on `get`-metodi, lomakkeen käsittelijän alussa ei tarvitse ilmoittaa metodia, koska Flaskissa oletusmetodi on `get`. Silti voisimme halutessamme merkitä selkeyden vuoksi myös `get`-metodin samaan tapaan kuin ennen:
 
 ```python
-@app.route("/result",methods=["get"])
+@app.route("/result", methods=["get"])
 def result():
 ```
 
