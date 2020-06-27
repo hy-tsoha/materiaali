@@ -1,11 +1,114 @@
-## Lomakkeet
+## Lomakkeiden käsittely
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ipsum erat, pellentesque at dapibus eget, dignissim id mi. Etiam hendrerit, tortor ut scelerisque consectetur, enim lectus dictum dui, a imperdiet enim neque sed libero. Nullam tincidunt sagittis efficitur. Donec erat lorem, porttitor euismod nisl sit amet, condimentum luctus orci. Aliquam convallis condimentum eros ac ornare. Donec sed ornare lacus. Aenean et turpis eros. Phasellus blandit, ligula a mollis facilisis, velit enim lacinia nulla, eget dapibus quam mi vitae ante. Aenean at augue ligula. Vestibulum lobortis ex at velit mollis dapibus. Morbi mattis, eros vel ultrices posuere, libero purus scelerisque dolor, sit amet suscipit velit lacus sit amet leo.
+Sivuston käyttäjä pystyy lähettämään tietoa sovellukselle lomakkeiden kautta. Tehdään ensimmäisenä esimerkkinä lomake, joka kysyy käyttäjältä nimeä. Lomake määritellään HTML-koodina sivupohjassa `form.html`:
 
-Nunc eleifend risus eu lectus suscipit volutpat. Aliquam metus lectus, mollis vitae rutrum nec, viverra in purus. In dui erat, bibendum in consectetur pharetra, mattis sit amet lacus. Sed sed lorem tellus. Praesent ut leo id orci porta tincidunt. Sed eleifend lacinia tellus quis tristique. Aenean id metus consectetur, lacinia purus et, lobortis erat. Vivamus ultricies ex vel velit dignissim molestie. Donec in orci sit amet nisl semper aliquet. Morbi vehicula mattis facilisis. Praesent iaculis elit non ligula hendrerit dictum. Sed vel odio quis lacus cursus placerat vel et massa. Sed feugiat arcu nisi, sed malesuada sem molestie quis. Suspendisse vel nulla lacus. Sed aliquam lacus eget sem vulputate, at sagittis libero vestibulum. Vivamus neque nunc, pharetra in risus vel, semper varius nunc.
+```html
+<form action="/result" method="post">
+Anna nimesi:
+<input type="text" name="name">
+<br>
+<input type="submit" value="Lähetä">
+</form>
+```
 
-Nam faucibus leo vel velit lobortis, placerat ullamcorper leo imperdiet. Nam ut scelerisque purus. Praesent vel sodales magna. Sed lacus nulla, finibus vitae maximus id, porttitor blandit augue. Nullam neque mi, ultrices in hendrerit eget, pellentesque ut dui. Duis orci purus, convallis ac molestie in, auctor sit amet ante. Vestibulum pulvinar sagittis augue mattis bibendum. Sed neque nisi, feugiat sit amet luctus eu, tempor ac purus. Phasellus a commodo ante. Nunc malesuada consectetur mattis. Phasellus ipsum eros, sollicitudin quis cursus sit amet, rutrum et mi. Fusce posuere quam augue, ac ornare nibh elementum eget. Nunc molestie mi a sapien vestibulum, in porttitor orci facilisis.
+Tämä lomake lähettää tietoa sivulle `result` metodilla `post`. Lomakkeessa on tekstikenttä, jonka nimi on `name`, sekä lähetysnappi.
 
-Praesent feugiat pharetra tortor in blandit. Nam sollicitudin odio cursus, lacinia ipsum non, tristique odio. Phasellus tristique auctor justo, in porttitor ex blandit quis. Praesent ac massa semper, ornare ex in, ullamcorper tellus. Donec interdum sodales ante, et facilisis enim congue ut. Vestibulum nisl turpis, bibendum quis mattis vel, condimentum in ante. Aliquam rutrum dolor ligula, non viverra magna iaculis vitae. Vivamus ullamcorper dictum molestie. Cras fermentum pulvinar euismod. Etiam id scelerisque magna, sed pellentesque sapien. Quisque hendrerit consequat commodo. Nunc auctor mauris id nulla interdum pellentesque. Praesent sed egestas sapien. Sed blandit, orci eget tincidunt rhoncus, velit tellus dignissim lacus, eget luctus erat nibh id leo. Praesent finibus nisi quis dolor varius lacinia in non nibh. Maecenas at sollicitudin mauris.
+Tarkoituksena on, että kun käyttäjä lähettää lomakkeen, hän siirtyy toiselle sivulle, joka näyttää viestin nimen perusteella. Tässä on sivupohja `result.html` tätä sivua varten:
 
-Aliquam elementum ex ut cursus feugiat. Proin eu eros ut metus laoreet bibendum et ac tortor. Phasellus a consequat neque. Aliquam suscipit placerat est, eu ornare lectus fermentum sed. Proin massa justo, feugiat ac neque quis, molestie molestie lectus. Aliquam eleifend, ex sed rutrum tristique, dui orci interdum dui, ac efficitur ex libero non tortor. Phasellus ornare maximus velit suscipit gravida. Aliquam vulputate faucibus dui non pellentesque. Vivamus accumsan sagittis massa. Integer risus turpis, tempus non orci ut, pellentesque egestas est. Aenean consequat lectus nibh, in auctor nunc tempus eget. Nullam egestas arcu sed sem iaculis, eget lobortis lorem ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum sollicitudin porta nisi nec blandit. Maecenas ac dolor a sem vulputate mattis in eu erat. 
+```html
+{% raw %}<p>Moikka, {{ name }}!</p>{% endraw %}
+```
+
+Seuraava sovellus toteuttaa sivupohjien avulla sivut `form` ja `result`:
+
+```python
+from flask import Flask, render_template, request
+app = Flask(__name__)
+
+@app.route("/form")
+def form():
+    return render_template("form.html")
+
+@app.route("/result", methods=["post"])
+def result():
+    return render_template("result.html",name=request.form["name"])
+```
+
+Sivu `result` ottaa vastaan `post`-metodilla lähetetyn lomakkeen, mikä näkyy dekoraattorin parametrissa `methods`. Lomakkeen kautta lähetetty tieto on saatavilla olion `request` kautta, joka täytyy ottaa mukaan `import`-osassa.
+
+Lomakkeen käyttäminen voi näyttää tältä:
+
+TODO: Kuva tähän
+
+Metodi `post` on yleisin tapa lomakkeen lähettämiseen, ja se soveltuu useimpiin tilanteisiin. Toinen metodi on `get`, johon palaamme myöhemmin.
+
+### Lomakkeen elementit
+
+Tavallisia lomakkeen elementtejä ovat tekstikentät ja valintaruudut. Jokainen elementti määritellään tietyllä tavalla HTML-koodissa ja sen kautta lähetettyyn tietoon pääsee käsiksi tietyllä tavalla `request`-olion kautta.
+
+Tehdään seuraavaksi esimerkki, jossa käyttäjä voi tilata pizzan. Sivupohja `order.html` näyttää tilaukseen liittyvät valinnat:
+
+```html
+<form action="/result" method="post">
+Valitse pizza:
+<p>
+<input type="radio" name="pizza" value="1"> Frutti di Mare <br>
+<input type="radio" name="pizza" value="2"> Margherita <br>
+<input type="radio" name="pizza" value="3"> Quattro Formaggi <br>
+<input type="radio" name="pizza" value="4"> Quattro Stagioni <br>
+<p>
+Valitse lisät:
+<p>
+<input type="checkbox" name="extra" value="A"> oregano <br>
+<input type="checkbox" name="extra" value="B"> valkosipuli <br>
+<p>
+Erikoistoiveet: <br>
+<textarea name="message" rows="5" cols="50"></textarea>
+<p>
+<input type="submit" value="Lähetä">
+</form>
+```
+
+Elementtien `radio` ja `checkbox` erona on, että samannimisistä elementeistä vain yksi `radio` voi olla valittuna mutta yksi tai useampi `checkbox` voi olla valittuna.
+
+Sivupohja `result.html` näyttää tilauksen tiedot lähetyksen jälkeen:
+
+```html
+{% raw %}Valitsit pizzan {{ pizza }}
+<p>
+Seuraavat lisät:
+<ul>
+{% for extra in extras %}
+<li> {{ extra }}
+{% endfor %}
+</ul>
+Erikoistoiveet: <br>
+{{ message }}{% endraw %}
+```
+
+Seuraava sovellus käsittelee lomakkeen kautta lähetetyt tiedot:
+
+```python
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/order")
+def order():
+    return render_template("order.html")
+
+@app.route("/result", methods=["post"])
+def result():
+    pizza = request.form["pizza"]
+    extras = request.form.getlist("extra")
+    message = request.form["message"]
+    return render_template("result.html", pizza=pizza,
+                                          extras=extras,
+                                          message=message)
+```
+
+Koska `extra`-nimen alla voi olla useita valintoja, ne haetaan listana `getlist`-metodilla.
+
+Lomakkeen käyttäminen voi näyttää tältä:
+
+TODO: Kuva tähän
