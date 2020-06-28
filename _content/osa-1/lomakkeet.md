@@ -1,6 +1,8 @@
 ## Lomakkeiden käsittely
 
-Sivuston käyttäjä pystyy lähettämään tietoa sovellukselle lomakkeiden kautta. Tehdään ensimmäisenä esimerkkinä lomake, joka kysyy käyttäjältä nimeä. Lomake määritellään HTML-koodina sivupohjassa `form.html`:
+_Lomake_ on HTML-sivun osa, jonka kautta käyttäjä pystyy lähettämään tietoa sovellukselle.
+
+Tehdään ensimmäisenä esimerkkinä lomake, joka kysyy käyttäjältä nimeä. Määrittelemme lomakkeen seuraavasti sivupohjassa `form.html`:
 
 ```html
 <form action="/result" method="post">
@@ -34,7 +36,7 @@ def result():
     return render_template("result.html",name=request.form["name"])
 ```
 
-Sivu `result` ottaa vastaan `post`-metodilla lähetetyn lomakkeen, mikä näkyy dekoraattorin parametrissa `methods`. Lomakkeen kautta lähetetty tieto on saatavilla olion `request` kautta, joka täytyy ottaa mukaan `import`-osassa.
+Sivu `result` ottaa vastaan `post`-metodilla lähetetyn lomakkeen, mikä näkyy dekoraattorin parametrissa `methods`. Lomakkeen kautta lähetetty tieto on saatavilla olion `request` kautta.
 
 Lomakkeen käyttäminen voi näyttää tältä:
 

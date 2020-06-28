@@ -26,7 +26,7 @@ def profile(id):
         if result.fetchone() != None:
             allow = True
     if not allow:
-        # don't show the profile
+        return render_templace("error.html",error="Ei oikeutta nähdä sivua")
     ...
 ```
 
@@ -34,29 +34,13 @@ Ideana on, että muuttuja `allow` ilmaisee, saako käyttäjä nähdä sivua. Fun
 
 Huomaa koodissa käytetty näppärä tapa tarkastaa SQL-kyselyllä, onko taulussa tiettyä riviä. Jos taulussa on rivi, kyselyn tulostaulussa on yksi rivi, jossa on arvo 1. Jos taas taulussa ei ole riviä, kyselyn tulostaulu on tyhjä.
 
-Jos käyttäjällä ei ole oikeutta nähdä sivua, käyttäjän voi ohjata virhesivulle tähän tapaan:
-
-```python
-    if not allow:
-        return redirect("/error")
-```
-
-Toinen mahdollisuus on keskeyttää sivun muodostaminen ja antaa sopiva HTTP-virhekoodi. Esimerkiksi koodi 403 tarkoittaa "Forbidden":
-
-```python
-    if not allow:
-        abort(403) # Forbidden
-```
-
-Tässä tapauksessa ylempi tapa on parempi, koska tässä kyseessä ei ole välttämättä murtautumisyritys vaan käyttäjä voi olla väärällä sivulla myös sen vuoksi, että hänen kirjautumisensa on vanhentunut. On parempi näyttää käyttäjälle virhesivu, jossa voi myös tarjota mahdollisuutta kirjautua sisään uudestaan.
+Jos käyttäjällä ei ole oikeutta nähdä sivua, käyttäjälle näytetään virhesivu sopivalla viestillä. Tällä sivulla käyttäjälle voi myös tarjota mahdollisuuden kirjautua sisään, koska virhe voi johtua siitä, että käyttäjällä olisi oikeus nähdä sivu mutta hän ei ole kirjautunut sisään.
 
 ### Syöte lomakkeesta
 
-Käyttäjä voi koettaa antaa lomakkeen kautta mitä tahansa tietoa, joten sovelluksen tulee tarkastaa ennen toiminnon toteuttamista, että tieto on kelvollista. Tyypillinen tarkastettava asia on syötteen pituus: ei ole esimerkiksi hyvä, jos käyttäjä pystyy lähettämään keskustelualueelle viestin, jonka otsikossa on miljoona merkkiä.
+Käyttäjä voi koettaa antaa lomakkeen kautta mitä tahansa tietoa, joten sovelluksen tulee tarkastaa ennen toiminnon toteuttamista, että tieto on kelvollista.
 
-Hyvä tapa on tarkastaa tiedot kahdesti: ensin selaimessa JavaScriptin avulla ja sitten vielä uudestaan palvelimella. Selaimessa käyttäjälle voidaan antaa virheilmoitus ennen lomakkeen lähettämistä palvelimelle, jolloin käyttäjä voi korjata tietoja. Toinen tarkastus palvelimella on tarpeen sen vuoksi, että JavaScriptillä tehty tarkastus ei ole luotettava, koska käyttäjä voi kiertää sen esimerkiksi kytkemällä JavaScriptin pois käytöstä selaimen asetuksista.
-
-Tarkastellaan esimerkkinä seuraavaa lomaketta, jonka kautta käyttäjä pystyy lähettämään viestin keskustelualueelle:
+Tarkastellaan esimerkkinä seuraavaa lomaketta, jonka kautta käyttäjä pystyy lähettämään uuden viestin keskustelualueelle:
 
 ```html
 <form action="/send" method="post">
@@ -66,7 +50,22 @@ Viesti: <textarea name="message"></textarea>
 </form>
 ```
 
-Tässä tapauksessa voisi olla järkevää rajoittaa viestin lähetystä niin, että otsikossa saa olla enintään 100 merkkiä ja viestissä saa olla enintään 5000 merkkiä. Nämä tarkastukset voidaan toteuttaa selaimessa JavaScriptin avulla näin:
+Tässä riskinä on, että käyttäjä syöttää lomakkeen kautta hyvin paljon tietoa. Esimerkiksi käyttäjä voi antaa viestille otsikon, jossa on miljoona merkkiä, mikä veisi paljon tilaa tietokannassa ja sotkisi sivuston ulkoasun. Niinpä lomakkeen käsittelijän tulee tarkastaa, että syötteet ovat järkevän pituisia. Voimme toteuttaa tämän tähän tapaan:
+
+```python
+@app.route("/send", methods=["post"])
+def send():
+    title = request.form["title"]
+    message = request.form["message"]
+    if len(title) > 100:
+        return render_template("error.html", error="Otsikko on liian pitkä")
+    if len(message) > 5000:
+        return render_template("error.html", error="Viesti on liian pitkä")
+```
+
+Tässä viestin otsikko saa olla enintään 100 merkkiä ja sisältö saa olla enintään 5000 merkkiä. Jos nämä rajat ylittyvät, viestiä ei tallenneta vaan käyttäjä ohjataan virhesivulle.
+
+Voimme vielä parantaa käyttökokemusta lisäämällä viestin lähetyssivulle JavaScript-koodin, joka tarkastaa lomakkeen sisällön selaimen puolella ennen lomakkeen lähettämistä:
 
 ```html
 <form action="/send" method="post" onsubmit="return check(this)">
@@ -78,11 +77,11 @@ Viesti: <textarea name="message"></textarea>
 <script>
 function check(form) {
     if (form.title.value.length > 100) {
-        alert("Otsikko on liian pitkä!");
+        alert("Otsikko on liian pitkä");
         return false;
     }
     if (form.message.value.length > 5000) {
-        alert("Viestin sisältö on liian pitkä!");
+        alert("Viesti on liian pitkä");
         return false;
     }
     return true;
@@ -90,22 +89,10 @@ function check(form) {
 </script>
 ```
 
-Tässä funktio `check` tarkastaa ennen lomakkeen lähettämistä, että sen sisältö on kunnossa. Funktion paluuarvo ilmaisee, lähetetäänkö lomake vai ei. Jos lomakkeen kentissä on liikaa tekstiä, käyttäjä saa tästä ilmoituksen eikä lomaketta lähetetä. Esimerkiksi jos otsikko on liian pitkä, käyttäjä saa seuraavan ilmoituksen:
+Nyt ilmoitus pituuden ylittymisestä tulee jo selaimen puolella:
 
 TODO: Kuva tähän
 
-Tämän lisäksi tarvitaan vielä tarkastus palvelimelle funktioon, joka käsittelee lomakkeen. Tarkastus voisi näyttää tältä:
+Tarkastus JavaScriptillä ei ole kuitenkaan luotettava, koska käyttäjä saattaa esimerkiksi kytkeä JavaScriptin pois selaimen asetuksista. Niinpä joka tapauksessa tarkastus täytyy olla palvelimella lomakkeen käsittelijässä.
 
-```python
-@app.route("/send", methods=["post"])
-def send():
-    title = request.form["title"]
-    message = request.form["message"]
-    if len(title) > 100 or len(message) > 5000:
-        abort(400) # Bad Request
-    ...
-```
-
-Tässä tapauksessa suorituksen keskeyttäminen ja HTTP-virhekoodin palauttaminen on perusteltu ratkaisu, koska jos tässä vaiheessa kentässä on liikaa tekstiä, käyttäjä selkeästi yrittää kiertää tarkastusta eikä kysymys voi olla vahingosta.
-
-Huomaa, että käyttäjän syötteen muotoa ei yleensä kannata yrittää tarkastaa kovin tarkasti, koska tämä menee helposti pieleen. Esimerkiksi verkko on täynnä virheellisiä sähköpostiosoitteen muodon tarkastajia, jotka hylkäävät toimivia osoitteita. Toisaalta käyttäjä voi aina halutessaan antaa keksittyä tietoa, kuten sähköpostiosoitteen `lol@mikkihiiri.fi`, joka menee läpi kaikista tarkastuksista.
+Huomaa, että käyttäjän syötteen muotoa ei yleensä kannata yrittää tarkastaa muilta osin kovin tarkasti, koska tämä menee helposti pieleen. Esimerkiksi verkko on täynnä virheellisiä sähköpostiosoitteen muodon tarkastajia, jotka hylkäävät toimivia osoitteita. Toisaalta käyttäjä voi aina halutessaan antaa keksittyä tietoa, kuten sähköpostiosoitteen `lol@mikkihiiri.fi`, joka menee läpi kaikista tarkastuksista.

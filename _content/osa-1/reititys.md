@@ -1,6 +1,6 @@
 ## Sivupyynnöt
 
-Flask-kirjaston ideana on, että määrittelemme ohjelmassa funktioita, jotka käsittelevät sivupyyntöjä. Ennen funktion määrittelyä oleva dekoraattori `@app.route` ilmaisee, mikä on sivun osoite, ja funktio palauttaa merkkijonona sivun sisällön.
+Flask-kirjaston ideana on, että määrittelemme ohjelmassa funktioita, jotka käsittelevät sivupyyntöjä. Ennen funktion määrittelyä oleva _dekoraattori_ `@app.route` ilmaisee, mikä on sivun osoite, ja funktio palauttaa merkkijonona sivun sisällön.
 
 Esimerkiksi voisimme laajentaa sovellusta niin, että siinä on kolme sivua:
 
@@ -51,30 +51,6 @@ Sivun osoitteessa annettu parametri välittyy funktiolle, joka voi käyttää si
 
 TODO: Kuva tähän
 
-Funktio `redirect` ohjaa käyttäjän sivulta toiselle sivulle. Esimerkiksi seuraavassa koodissa sivu `first` ohjaa käyttäjän sivulle `second`, joka puolestaan näyttää viestin käyttäjälle.
-
-```python
-@app.route("/first")
-def first():
-    return redirect("/second")
-
-@app.route("/second")
-def second():
-    return "Nyt ollaan täällä"
-```
-
-Funktio `abort` puolestaan keskeyttää sivun käsittelyn ja palauttaa HTTP-virhekoodin. Esimerkiksi seuraava sivu `secret` antaa virhekoodin 403, jonka merkityksenä on "Forbidden":
-
-```python
-@app.route("/secret")
-def secret():
-    abort(403) # Forbidden
-```
-
-Selain voi näyttää sivun näin:
-
-TODO: Kuva tähän
-
 ### HTML ja sivupohjat
 
 Tähän mennessä olemme tuottaneet sivuja, joissa on pelkkää tekstiä,
@@ -93,6 +69,12 @@ Tässä tapauksessa sana "Tervetuloa" näkyy lihavoituna ja sana "sovellukseen" 
 TODO: Kuva tähän
 
 Periaatteessa voisimme luoda sovelluksen sivujen HTML:n suoraan funktioissa, mutta  tämä olisi vaivalloista, kun sivulla on enemmän sisältöä. Parempi tapa on määritellä _sivupohjia_, joita funktiot käyttävät. Sivupohjat tallennetaan `templates`-hakemistoon.
+
+Sivupohja yhdistetään sivupyyntöön funktiolla `render_template`. Jotta voimme käyttää funktiota, se täytyy ottaa mukaan `import`-osassa vaikkapa näin:
+
+```python
+from flask import Flask, render_template
+```
 
 Luodaan testiksi sivupohja `index.html`:
 
@@ -139,8 +121,6 @@ def index():
 Tämän seurauksena sivu näyttää tältä:
 
 TODO: Kuva tähän
-
-Näemme lisää esimerkkejä sivupohjien mahdollisuuksista myöhemmin.
 
 ### Staattiset tiedostot
 

@@ -1,6 +1,6 @@
 ## Esimerkkisovellus
 
-Teemme seuraavaksi pienen esimerkkisovelluksen, joka esittelee tietokannan käyttämiseen liittyviä tekniikoita. Sovelluksessa käyttäjät voivat luoda kyselyitä sekä vastata muiden luomiin kyselyihin. Sovelluksen käyttäminen näyttää tältä:
+Teemme seuraavaksi hieman laajemman esimerkkisovelluksen, joka esittelee tietokannan käyttämiseen liittyviä tekniikoita. Sovelluksessa käyttäjät voivat luoda kyselyitä sekä vastata muiden luomiin kyselyihin. Sovelluksen käyttäminen näyttää tältä:
 
 TODO: Lisää kuvat
 
@@ -55,7 +55,7 @@ Luotu: {{ poll[2].strftime("%Y-%m-%d %H:%M:%S") }} <br>
 {% endfor %}{% endraw %}
 ```
 
-Jokaiselle kyselylle luodaan linkit, joiden kautta voi osallistua kyselyyn
+Jokaisen kyselyn kohdalla näytetään linkit, joiden kautta voi osallistua kyselyyn
 (`poll/id`) sekä katsoa kyselyn tulokset (`result/id`),
 missä `id` on kyselyn id-numero tietokannassa.
 
@@ -91,10 +91,10 @@ Kun käyttäjä lähettää lomakkeen, sen käsittelee funktio `create`:
 @app.route("/create", methods=["post"])
 def create():
     topic = request.form["topic"]
-    choices = request.form.getlist("choice")
     sql = "INSERT INTO polls (topic, created_at) VALUES (:topic, NOW()) RETURNING id"
     result = db.session.execute(sql, {"topic":topic})
     poll_id = result.fetchone()[0]
+    choices = request.form.getlist("choice")
     for choice in choices:
         if choice != "":
             sql = "INSERT INTO choices (poll_id, choice) VALUES (:poll_id, :choice)"
