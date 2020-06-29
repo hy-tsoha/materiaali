@@ -9,11 +9,12 @@ title: TODO
 
 * Jos peräkkäin on kaksi koodilaatikkoa, niin niiden välissä tulisi olla rivi tyhjää niin,
   että ne eivät ole kiinni toisissaan
-    - Vähän enemmän tilaa voisi olla vielä
-* Konsolin väritys ei toimi vielä hyvin, osassa 1 testiaineistoa
-* Jos koodilaatikossa oleva rivi on pitkä, tulisi ilmestyä vaakasuuntainen vierityspalkki
+    - Vähän enemmän tilaa voisi olla vielä ☑️
+* Konsolin väritys ei toimi vielä hyvin, osassa 1 testiaineistoa 
+* Jos koodilaatikossa oleva rivi on pitkä, tulisi ilmestyä vaakasuuntainen vierityspalkki ☑️
   (esimerkki tällaisesta tilanteesta osan 2 alussa)
-* Koodilaatikossa pitäisi pystyä antamaan tiedoston nimi, joka näkyy jollain sopivalla tavalla laatikon oikeassa ylänurkassa
+* Koodilaatikossa pitäisi pystyä antamaan tiedoston nimi, joka näkyy jollain sopivalla tavalla laatikon oikeassa ylänurkassa 
+  ☑️ onnistuu kun antaa ennen koodia tekstin, jolle antaa luokaksi code-title esim. `<p class="code-title">index.py</p>`.
 
 ## Taulukot:
 
