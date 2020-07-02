@@ -214,40 +214,54 @@ Nyt jos toinen henkilö hakee sovelluksen GitHubista, hän voi asentaa virtuaali
 
 ### Tietokannan rakenne
 
-Repositoriosta puuttuu vielä tieto siitä, mikä on sovelluksen käyttämän tietokannan rakenne. Voimme hakea tietokannan rakenteen komennolla `pg_dump` seuraavasti:
-
-```bash
-(venv) $ pg_dump -s -t visitors
-```
-
-Komennossa lippu `-s` tarkoittaa, että komento näyttää _skeeman_  eli taulujen rakenteen, ja lippu `-t` määrittää, että haluamamme taulu on `visitors`. Komento tuottaa melko pitkän tulostuksen SQL-komennoista, joiden suorittaminen luo tietokannan:
+Repositoriosta puuttuu vielä tieto siitä, mikä on sovelluksen käyttämän tietokannan rakenne. Tätä varten voimme luoda tiedoston `schema.sql`, joka sisältää tietokannan skeeman. Tässä sovelluksessa tietokannassa on vain yksi taulu ja tiedoston sisältö on seuraava:
 
 ```
---
--- PostgreSQL database dump
---
-
-(rivejä välissä...)
-
-CREATE TABLE public.visitors (
-    id integer NOT NULL,
-    "time" timestamp without time zone
-);
-
-(lisää rivejä...)
+CREATE TABLE visitors (id SERIAL PRIMARY KEY, time TIMESTAMP);
 ```
 
-Lisäämme komennon tuottaman skeeman repositorioon tiedostona `schema.sql`:
+Lisäämme uuden tiedoston repositorioon:
 
-```bash
-(venv) $ pg_dump -s -t visitors > schema.sql
+```
 (venv) $ git add schema.sql 
 (venv) $ git commit -m "Add SQL schema"
 (venv) $ git push
 ```
 
-Tämän jälkeen sovelluksen tarvitseman tietokannan saa luotua toisessa ympäristössä `psql`-komennolla ohjaamalla sinne tiedoston `schema.sql` sisällön:
+Tästä lähtien sovelluksen tarvitsemat taulut voi luoda tietokantaan seuraavasti ohjaamalla tiedostossa `schema.sql` olevat komennot PostgreSQL-tulkille:
 
 ```bash
 (venv) $ psql < schema.sql
 ```
+
+Tarvittaessa voimme hakea myös tietokannan skeeman komennolla `pg_dump` seuraavasti:
+
+```bash
+(venv) $ pg_dump -s
+```
+
+Komennossa lippu `-s` tarkoittaa, että haluamme hakea vain skeeman eikä taulujen sisältöä. Komento tuottaa melko pitkän tulostuksen, jonka osana on taulujen määrittely:
+
+```
+CREATE TABLE public.visitors (
+    id integer NOT NULL,
+    "time" timestamp without time zone
+);
+
+CREATE SEQUENCE public.visitors_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+ALTER SEQUENCE public.visitors_id_seq OWNED BY public.visitors.id;    
+
+ALTER TABLE ONLY public.visitors ALTER COLUMN id SET DEFAULT nextval('public.visitors_id_seq'::regclass);
+
+ALTER TABLE ONLY public.visitors
+    ADD CONSTRAINT visitors_pkey PRIMARY KEY (id);
+```
+
+Huomaa, että tämä määrittely on paljon pidempi kuin käyttämämme tapa: automaattisesti kasvava id-numero asetetaan erikseen ja samoin pääavain asetetaan erikseen.
