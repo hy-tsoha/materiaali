@@ -1,8 +1,8 @@
 ## Versionhallinta
 
-Käytämme kurssilla versionhallintaan GitHubia. Seuraava esimerkki näyttää kaikki vaiheet, kun aloitamme sovelluksen kehityksen GitHubissa.
+Käytämme kurssilla versionhallintaan GitHubia. Seuraavaksi käymme läpi esimerkin, jossa aloitamme sovelluksen kehityksen GitHubissa.
 
-Teemme pienen sovelluksen, joka tallentaa tietokantaan sivuston kävijöiden määrän ja näyttää tämän tiedon etusivulla. Esimerkki olettaa, että GitHubiin on luotu uusi repositorio `tsoha-visitors`, jossa on automaattisesti luotu tiedosto `README.md`.
+Teemme pienen sovelluksen, joka tallentaa tietokantaan sivuston kävijöiden määrän ja näyttää tämän tiedon etusivulla. Esimerkki olettaa, että GitHubiin on luotu uusi repositorio `tsoha-visitors`, jossa on tiedosto `README.md` mutta ei vielä muuta.
 
 Seuraavat komennot kloonaavat repositorion omalle koneelle, luovat sovellusta varten virtuaaliympäristön sekä asentavat tarvittavat kirjastot:
 
@@ -22,7 +22,7 @@ $ source venv/bin/activate
 (venv) $ pip install python-dotenv
 ```
 
-Tietokannassa on yksi taulu, johon tallennetaan jokaisen kävijän vierailuaika:
+Luomme tietokantaan yhden taulun, johon tallennetaan jokaisen kävijän vierailuaika:
 
 ```sql
 CREATE TABLE visitors (id SERIAL PRIMARY KEY, time TIMESTAMP);
@@ -61,6 +61,7 @@ Olet sivuston {{ counter }}. käyttäjä{% endraw %}
 ```
 DATABASE_URL=postgresql:///pllk
 ```
+Ideana on, että aina kun käyttäjä lataa etusivun, tauluun `visitors` lisätään uusi rivi. Tämän jälkeen haetaan taulun rivien määrä, joka kertoo kävijöiden yhteismäärän.
 
 Nyt voimme kokeilla suorittaa sovelluksen:
 
@@ -77,7 +78,7 @@ TODO: Kuva tähän
 Koska sovelluksen ensimmäinen versio toimii, nyt on hyvä hetki lisätä sovelluksen tiedostot repositorioon. Hyödyllinen komento on `git status`, joka näyttää repositorion tilanteen. Komento antaa nyt seuraavan tuloksen:
 
 ```bash
-$ git status
+(venv) $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -93,7 +94,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Tässä on lista tiedostoista ja hakemistoista, joita _ei_ ole repositoriossa:
+Komento antaa listan tiedostoista ja hakemistoista, joita _ei_ ole repositoriossa:
 
 * `.env` on luomamme tiedosto, jossa on ympäristömuuttujia
 * `__pycache__` on sovelluksen suorituksen aikana syntynyt hakemisto, jossa on tavukoodiksi käännetty sovellus
@@ -101,17 +102,17 @@ Tässä on lista tiedostoista ja hakemistoista, joita _ei_ ole repositoriossa:
 * `templates` on hakemisto, jossa on sivupohja `index.html`
 * `venv` on hakemisto, joka sisältää virtuaaliympäristön tarvitsemat tiedostot
 
-Näistä repositorioon kuuluvat `app.py` ja `templates`, jotka muodostavat sovelluksen toteutuksen. Komento `git add` laittaa ne lisättäväksi:
+Tärkeä asia versionhallinnassa on päättää, mitkä tiedostot laitetaan repositorioon kaikkien saataville. Tässä tapauksessa repositorioon kuuluvat `app.py` ja `templates`, jotka muodostavat sovelluksen toteutuksen. Komento `git add` laittaa ne lisättäväksi:
 
 ```bash
-$ git add app.py
-$ git add templates
+(venv) $ git add app.py
+(venv) $ git add templates
 ```
 
 Nyt `git status` näyttää muuttuneen tilanteen näin:
 
 ```bash
-$ git status
+(venv) $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -132,8 +133,8 @@ Untracked files:
 Tämä näyttää hyvältä, koska oikeat tiedostot ovat menossa repositorioon, joten voimme suorittaa komennot `git commit` ja `git push`:
 
 ```bash
-$ git commit -m "Create first version"
-$ git push
+(venv) $ git commit -m "Create first version"
+(venv) $ git push
 ```
 
 Tämän seurauksena sovelluksen nykyinen versio on tallessa GitHubissa.
@@ -142,7 +143,7 @@ Tämän seurauksena sovelluksen nykyinen versio on tallessa GitHubissa.
 
 Tiedosto `.env` ja hakemistot `__pycache__` ja `venv` eivät kuulu repositorioon, koska ne liittyvät käyttäjän ympäristöön eikä sovelluksen toteutukseen. Nämä kuitenkin näkyvät häiritsevästi listassa aina, kun suoritamme komennon `git status`.
 
-Hyödyllinen tiedoston on `.gitignore`, joka määrittää, mitä tiedostoja ja hakemistoja _emme_ halua viedä repositorioon. Tässä tapauksessa tiedoston sisältö voisi olla:
+Hyödyllinen tiedosto on `.gitignore`, joka määrittää, mitä tiedostoja ja hakemistoja _emme_ halua viedä repositorioon. Tässä tapauksessa tiedoston sisältö voisi olla:
 
 ```
 .env
@@ -168,12 +169,12 @@ nothing added to commit but untracked files present (use "git add" to track)
 Tiedosto `.gitignore` kuitenkin lisätään repositorioon:
 
 ```bash
-$ git add .gitignore 
-$ git commit -m "Add .gitignore"
-$ git push
+(venv) $ git add .gitignore 
+(venv) $ git commit -m "Add .gitignore"
+(venv) $ git push
 ```
 
-Nyt meidän ei tarvitse enää varoa sitä, että repositorioon joutuu vääriä tiedostoja, koska `.gitignore` pitää huolen tästä. Projektin kehityksen aikana tiedostoon voi lisätä tarvittaessa lisää tiedostoja ja hakemistoja.
+Tästä lähtien tiedostossa `.gitignore` mainitut tiedostot ja hakemistot eivät ole ehdolla repositorioon lisättäväksi. Projektin kehityksen aikana tiedostoon `.gitignore` voi lisätä tarvittaessa lisää sisältöä.
 
 ### Sovelluksen riippuvuudet
 
@@ -200,15 +201,15 @@ Sovelluksen riippuvuuksista on tapana tehdä tiedosto `requirements.txt`. Tämä
 
 ```bash
 (venv) $ pip freeze > requirements.txt
-$ git add requirements.txt 
-$ git commit -m "Add requirements"
-$ git push
+(venv) $ git add requirements.txt 
+(venv) $ git commit -m "Add requirements"
+(venv) $ git push
 ```
 
 Nyt jos toinen henkilö hakee sovelluksen GitHubista, hän voi asentaa virtuaaliympäristöönsä tarvittavat kirjastot seuraavalla komennolla:
 
 ```bash
-$ pip install -r requirements.txt
+(venv) $ pip install -r requirements.txt
 ```
 
 ### Tietokannan rakenne
@@ -216,7 +217,7 @@ $ pip install -r requirements.txt
 Repositoriosta puuttuu vielä tieto siitä, mikä on sovelluksen käyttämän tietokannan rakenne. Voimme hakea tietokannan rakenteen komennolla `pg_dump` seuraavasti:
 
 ```bash
-$ pg_dump -s -t visitors
+(venv) $ pg_dump -s -t visitors
 ```
 
 Komennossa lippu `-s` tarkoittaa, että komento näyttää _skeeman_  eli taulujen rakenteen, ja lippu `-t` määrittää, että haluamamme taulu on `visitors`. Komento tuottaa melko pitkän tulostuksen SQL-komennoista, joiden suorittaminen luo tietokannan:
@@ -236,17 +237,17 @@ CREATE TABLE public.visitors (
 (lisää rivejä...)
 ```
 
-Lisäämme komennon tulostuksen repositorioon tiedostona `schema.sql`:
+Lisäämme komennon tuottaman skeeman repositorioon tiedostona `schema.sql`:
 
 ```bash
-$ pg_dump -s -t visitors > schema.sql
-$ git add schema.sql 
-$ git commit -m "Add SQL schema"
-$ git push
+(venv) $ pg_dump -s -t visitors > schema.sql
+(venv) $ git add schema.sql 
+(venv) $ git commit -m "Add SQL schema"
+(venv) $ git push
 ```
 
-Tämän jälkeen sovelluksen tarvitseman tietokannan saa luotua `psql`-komennolla ohjaamalla sinne tiedoston `schema.sql` sisällön:
+Tämän jälkeen sovelluksen tarvitseman tietokannan saa luotua toisessa ympäristössä `psql`-komennolla ohjaamalla sinne tiedoston `schema.sql` sisällön:
 
 ```bash
-$ psql < schema.sql
+(venv) $ psql < schema.sql
 ```
