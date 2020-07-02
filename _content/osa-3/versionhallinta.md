@@ -150,7 +150,7 @@ __pycache__
 venv
 ```
 
-Tämän tiedoston luomisen jälkeen ympäristöön `git status` alkaa näyttää siistimmältä:
+Tämän tiedoston luomisen jälkeen `git status` alkaa näyttää siistimmältä:
 
 ```bash
 (venv) $ git status
