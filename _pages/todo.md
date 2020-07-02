@@ -7,14 +7,7 @@ title: TODO
 
 ## Sekalaista:
 
-* Jos peräkkäin on kaksi koodilaatikkoa, niin niiden välissä tulisi olla rivi tyhjää niin,
-  että ne eivät ole kiinni toisissaan
-    - Vähän enemmän tilaa voisi olla vielä ☑️
-* Konsolin väritys ei toimi vielä hyvin, osassa 1 testiaineistoa 
-* Jos koodilaatikossa oleva rivi on pitkä, tulisi ilmestyä vaakasuuntainen vierityspalkki ☑️
-  (esimerkki tällaisesta tilanteesta osan 2 alussa)
-* Koodilaatikossa pitäisi pystyä antamaan tiedoston nimi, joka näkyy jollain sopivalla tavalla laatikon oikeassa ylänurkassa 
-  ☑️ onnistuu kun antaa ennen koodia tekstin, jolle antaa luokaksi code-title esim. `<p class="code-title">index.py</p>`.
+* Konsolin väritys ei toimi vielä hyvin, osassa 1 testiaineistoa. Edit: nyt toimii paljon paremmin, mutta vielä jotkin sanat ovat häiritsevästi lihavoituina. Lisäksi $ olisi ehkä hyvä olla väritettynä.
 * Otsikon ja tekstin välissä olevasta raosta näkyvä taustakuva on lievästi häiritsevä (otsikon ja tekstin laatikko ovat myös eri levyiset). Vastaava rako on myös tekstin ja alalaidan hy-laatikon välissä. Voisiko nämä kaikki yhdistää niin että ne ovat yhtenäisenä alueena? (Ja tuo harmaa on myös aika rumasti yleisestä väriskaalasta poikkeava)
 * Pages-sivuilla (etusivu, aikataulu) sivupalkki peittää tekstin jos käyttäjä kasvattaa fonttikokoa riittävästi. Varsinkin vanhempien opiskelijoiden joukossa osa opiskelijoista tekee tätä.
 
@@ -225,6 +218,7 @@ SELECT * FROM Tuotteet WHERE nimi='lanttu';
 Syntaksiväritykset [täältä](https://spsarolkar.github.io/rouge-theme-preview/), nyt käytössä 'github'
 
 ## Konsolin näyttäminen
+
 <p class="code-title-bash">index.py</p>
 ```bash
 $ cp apina.txt banaani.txt
