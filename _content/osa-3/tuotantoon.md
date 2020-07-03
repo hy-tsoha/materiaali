@@ -1,12 +1,12 @@
 ## Sovellus tuotantoon
 
-Sovelluksen laittaminen _tuotantoon_ tarkoittaa, että sovellus julkaistaan käyttäjille. Tällä kurssilla harjoittelemme tuotantoon laittamista [Heroku](https://heroku.com/)-palvelun avulla. Heroku tarjoaa ilmaiseksi palvelintilaa, jonne voi sijoittaa Flaskilla toteutetun web-sovelluksen.
+Sovelluksen laittaminen _tuotantoon_ tarkoittaa, että sovellus julkaistaan käyttäjille. Tällä kurssilla harjoittelemme tuotantoon laittamista [Heroku](https://heroku.com/)-palvelun avulla. Heroku tarjoaa ilmaiseksi palvelintilaa, jonne voi sijoittaa muun muassa Flaskilla toteutetun web-sovelluksen.
 
 Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsovelluksen Herokuun. Jotta voit käyttää Herokua, sinun täytyy luoda ensin tunnus palveluun. Tunnuksen luominen on ilmaista, mutta huomaa, että Heroku tarjoaa myös maksullisia palveluja.
 
-Herokun ilmaisversiossa on joitakin merkittäviä rajoituksia: sovellus saa käyttää rajoitetun määrän palvelimen aikaa kuukaudessa ja tietokanta ei saa olla suuri. Tämän vuoksi Herokun ilmaisversio ei sovellu todellisten sovellusten alustaksi, mutta sen avulla voi harjoitella web-sovelluksen julkaisemista.
+Herokun ilmaisversiossa on joitakin merkittäviä rajoituksia: sovellus saa käyttää rajoitetun määrän palvelimen aikaa kuukaudessa, tietokanta ei saa olla suuri ja sovelluksen käynnistämisessä on odotusvaihe. Tämän vuoksi Herokun ilmaisversio ei sovellu todellisten sovellusten alustaksi, mutta sen avulla voi harjoitella web-sovelluksen julkaisemista.
 
-Herokussa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Herokun sivuston dashboardin kautta tai komentorivityökalulla (Heroku CLI). Käytämme tässä ohjeessa komentorivityökalua, jonka asentamiseen löydät ohjeet [tästä](https://devcenter.heroku.com/articles/heroku-cli).
+Herokussa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Herokun sivuston [hallintapaneelin](https://dashboard.heroku.com/) kautta tai komentorivityökalulla (Heroku CLI). Käytämme tässä ohjeessa komentorivityökalua, jonka asentamiseen löydät ohjeet [tästä](https://devcenter.heroku.com/articles/heroku-cli).
 
 ### Sovelluksen luonti
 
@@ -27,9 +27,11 @@ Creating ⬢ tsoha-visitors... done
 https://tsoha-visitors.herokuapp.com/ | https://git.heroku.com/tsoha-visitors.git
 ```
 
-Jokaisella Herokussa olevalla sovelluksella tulee olla eri nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Komento kertoo myös nettiosoitteen, jonne sovellus tulee ilmestymään.
+Jokaisella Herokussa olevalla sovelluksella tulee olla eri nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Komento kertoo myös nettiosoitteen, jonne sovellus tulee ilmestymään. Jos et anna sovellukselle nimeä, Heroku määrittää sovellukselle automaattisesti nimen. Jos aiot käyttää sovellustasi vain lyhyttä kokeilua tai tätä kurssia varten, Herokun määrittämä nimi on aivan riittävä, eikä varaa turhaan yksilöllisempää nimeä.
 
-Tavallinen tapa käyttää Herokua on kytkeä paikallinen Git-repositorio Herokuun. Tämä tapahtuu seuraavalla komennolla, kun olemme sovelluksen hakemistossa:
+Tavallinen tapa käyttää Herokua on kytkeä paikallinen Git-repositorio Herokuun, tai vaihtoehtoisesti voit kytkeä [Herokun Github-integraation](https://devcenter.heroku.com/articles/github-integration) sovellukseesi.
+
+Paikallisen Git-repositorion kautta käyttäminen tapahtuu seuraavalla komennolla, kun olemme sovelluksen hakemistossa:
 
 ```bash
 $ heroku git:remote -a tsoha-visitors
