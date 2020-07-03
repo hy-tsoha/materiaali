@@ -66,7 +66,7 @@ The above exception was the direct cause of the following exception:
 
 Tästä näkee, että virheen syynä on `syntax error at or near "SELEC"` ja virhe ilmenee rivillä 15 tiedostossa `app.py`. Tällaisen tiedon avulla virhe on helppoa korjata.
 
-Jos sovellus aiheuttaa virheen Herokussa, lokin saa näkyviin seuraavasti:
+Jos sovellus aiheuttaa virheen Herokussa, lokin saa Herokun komentorivityökalun avulla näkyviin seuraavasti:
 
 ```bash
 $ heroku logs --tail
@@ -76,7 +76,7 @@ Vaikein asia lokin lukemisessa on, että virheen sattuessa lokissa on yleensä p
 
 ### Debug-tulostukset
 
-Sovelluksen toimintaa voi tutkia myös debug-tulostuksilla, joiden tekemiseen sopii vanha kunnon `print`-komento. Voimme esimerkiksi tulostaa sovelluksen eri vaiheissa muuttujien arvoja ja tarkastaa, että ne ovat kunnossa.
+Sovelluksen toimintaa voi tutkia myös debug-tulostuksilla, joiden tekemiseen sopii vanha kunnon `print`-komento. Voimme esimerkiksi tulostaa sovelluksen eri vaiheissa ongelmaan mahdollisesti liittyvien muuttujien arvoja ja tarkastaa, että ne ovat kunnossa.
 
 Esimerkiksi voimme tehdä seuraavan debug-tulostuksen, joka tulostaa muuttujan `counter` arvon:
 
@@ -100,3 +100,5 @@ counter is now 79
 ```
 
 Lokista katsomalla näemme siis, että sovellus suoritti kyseisen rivin ja sillä hetkellä muuttujan `counter` arvo oli 79.
+
+Kun ongelma on saatu korjattua ja debug-tulosteita ei enää tarvita, ne on hyvä siivota pois koodista.
