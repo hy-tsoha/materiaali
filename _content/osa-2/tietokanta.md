@@ -168,19 +168,29 @@ Funktio `redirect` aiheuttaa uudelleenohjauksen toiselle sivulle. Tässä tapauk
 
 ### Ympäristömuuttujat
 
-Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen koodiin, vaan parempi tapa on välittää tämä tieto _ympäristömuuttujan_ kautta. Voimme tehdä tämän mukavasti asentamalla kirjaston `python-dotenv`.
+Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen koodiin, vaan parempi tapa on välittää tämä tieto _ympäristömuuttujan_ kautta. Tässä tapauksessa voimme päättää, että ympäristömuuttuja `DATABASE_URL` ilmaisee tietokannan osoitteen.
+
+Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa `export` seuraavasti ennen sovelluksen käynnistämistä:
+
+```bash
+$ export DATABASE_URL=postgresql:///pllk
+```
+
+Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
 
 ```bash
 $ pip install python-dotenv
 ```
 
-Tämän jälkeen voimme luoda tiedoston `.env`, jossa on tietokannan osoitteen ilmoittava ympäristömuuttuja:
+Tämän jälkeen voimme luoda tiedoston `.env`, jossa on määritelty ympäristömuuttujat:
 
 ```
 DATABASE_URL=postgresql:///pllk
 ```
 
-Nyt voimme hakea tiedostossa `.env` annetun muuttujan arvon sovellukseen näin:
+Tämän etuna on, että meidän ei tarvitse suorittaa `export`-komentoa ennen sovelluksen käynnistämistä vaan ympäristömuuttujat ovat aina tallessa tiedostossa.
+
+Nyt voimme hakea ympäristömuuttujan arvon sovellukseen näin:
 
 ```python
 from dotenv import load_dotenv

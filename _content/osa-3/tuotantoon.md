@@ -75,14 +75,7 @@ Lisäksi luomme sovelluksen päähakemistoon uuden tiedoston `Procfile`, joka ke
 web: gunicorn app:app
 ```
 
-Tämä tarkoittaa, että sovellus käynnistetään komennolla `gunicorn app:app`. Voimme testata tätä myös paikallisesti näin:
-
-```bash
-$ export DATABASE_URL=postgresql:///pllk
-$ gunicorn app:app
-```
-
-Huomaa, että Gunicornia käytettäessä tiedostossa `.env` olevat ympäristömuuttujat eivät toimi, minkä vuoksi määritämme tietokannan osoitteen antavan ympäristömuuttujan `export`-komennolla ennen palvelimen käynnistämistä.
+Tämä kertoo Herokulle, että tyyppiä "web" oleva sovellus käynnistetään komennolla `gunicorn app:app`. Tässä ensimmäinen `app` viittaa moduulin nimeen `app.py` ja toinen `app` viittaa koodissa luotavan Flask-olion nimeen.
 
 ### Tietokanta Herokussa
 
@@ -106,7 +99,17 @@ Olisimme myös voineet luoda taulun näin ohjaamalla sinne tiedoston `schema.sql
 $ heroku psql < schema.sql
 ```
 
-Huomaa, että Herokun ilmaisversion tietokanta on tarkoitettu harjoitteluun ja siinä on merkittävä rajoitus: tietokannan tauluissa saa olla yhteensä enintään 10000 riviä. Niinpä Herokussa ei voi pitää ilmaiseksi sovellusta, jossa on suuri tietokanta.
+Kun Herokuun luodaan tietokanta, samalla asetetaan ympäristömuuttuja `DATABASE_URL`, minkä ansiosta sovellus toimii suoraan myös Herokussa, jos se käyttää tätä ympäristömuuttujaa. Voimme tarkastaa sovelluksen ympäristömuuttujat näin:
+
+```bash
+$ heroku config
+=== tsoha-visitors Config Vars
+DATABASE_URL: postgres://(tietokannan osoite näkyy tässä)
+```
+
+Huomaa, että tietämällä Herokun tietokannan osoitteen siihen pääsee yhdistämään myös sovelluksen ulkopuolelta, joten tietokannan osoite on salassa pidettävää tietoa.
+
+Herokun ilmaisversion tietokanta on tarkoitettu harjoitteluun ja siinä on merkittävä rajoitus: tietokannan tauluissa saa olla yhteensä enintään 10000 riviä. Niinpä Herokussa ei voi pitää ilmaiseksi sovellusta, jossa on suuri tietokanta.
 
 ### Sovelluksen lähetys
 
