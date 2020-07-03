@@ -146,6 +146,6 @@ remote:        Released v8
 remote:        https://tsoha-visitors.herokuapp.com/ deployed to Heroku
 ```
 
-Tällä kertaa prosessi saatiin vietyä loppuun ja voimme mennä katsomaan sovellusta osoitteessa `https://tsoha-visitors.herokuapp.com/`. Jos kaikki meni hyvin, tuloksena on:
+Tällä kertaa prosessi saatiin vietyä loppuun ja voimme mennä katsomaan sovellusta osoitteessa [https://tsoha-visitors.herokuapp.com/](https://tsoha-visitors.herokuapp.com/). Jos kaikki meni hyvin, tuloksena on:
 
 TODO: Kuva tähän
