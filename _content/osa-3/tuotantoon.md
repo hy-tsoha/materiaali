@@ -4,7 +4,7 @@ Sovelluksen laittaminen _tuotantoon_ tarkoittaa, että sovellus julkaistaan käy
 
 Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsovelluksen Herokuun. Jotta voit käyttää Herokua, sinun täytyy luoda ensin tunnus palveluun. Tunnuksen luominen on ilmaista, mutta huomaa, että Heroku tarjoaa myös maksullisia palveluja.
 
-Herokun ilmaisversiossa on joitakin merkittäviä rajoituksia: sovellus saa käyttää rajoitetun määrän palvelimen aikaa kuukaudessa, tietokanta ei saa olla suuri ja sovelluksen käynnistämisessä on odotusvaihe. Tämän vuoksi Herokun ilmaisversio ei sovellu todellisten sovellusten alustaksi, mutta sen avulla voi harjoitella web-sovelluksen julkaisemista.
+Herokun ilmaisversiossa on joitakin merkittäviä rajoituksia. Sovellus saa käyttää rajoitetun määrän palvelimen aikaa kuukaudessa, ja jos sovellusta ei käytetä hetkeen, se sulkeutuu ja seuraavan käyttäjän saapuessa vie jonkin verran aikaa, ennen kuin sovellus käynnistyy uudestaan. Lisäksi tietokannan kokoa on rajoitettu niin, että tauluissa saa olla yhteensä enintään 10000 riviä. Näiden rajoitusten vuoksi Herokun ilmaisversio ei sovellu todellisten sovellusten alustaksi, mutta sen avulla voi harjoitella web-sovelluksen julkaisemista.
 
 Herokussa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Herokun sivuston [hallintapaneelin](https://dashboard.heroku.com/) kautta tai komentorivityökalulla (Heroku CLI). Käytämme tässä ohjeessa komentorivityökalua, jonka asentamiseen löydät ohjeet [tästä](https://devcenter.heroku.com/articles/heroku-cli).
 
@@ -27,17 +27,17 @@ Creating ⬢ tsoha-visitors... done
 https://tsoha-visitors.herokuapp.com/ | https://git.heroku.com/tsoha-visitors.git
 ```
 
-Jokaisella Herokussa olevalla sovelluksella tulee olla eri nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Komento kertoo myös nettiosoitteen, jonne sovellus tulee ilmestymään. Jos et anna sovellukselle nimeä, Heroku määrittää sovellukselle automaattisesti nimen. Jos aiot käyttää sovellustasi vain lyhyttä kokeilua tai tätä kurssia varten, Herokun määrittämä nimi on aivan riittävä, eikä varaa turhaan yksilöllisempää nimeä.
+Jokaisella Herokussa olevalla sovelluksella tulee olla eri nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Jos et anna sovellukselle nimeä, Heroku määrittää sille automaattisesti satunnaisen nimen. Jos teet sovelluksen vain kokeilua tai tätä kurssia varten, Herokun määrittämä nimi riittää hyvin.
 
-Tavallinen tapa käyttää Herokua on kytkeä paikallinen Git-repositorio Herokuun, tai vaihtoehtoisesti voit kytkeä [Herokun Github-integraation](https://devcenter.heroku.com/articles/github-integration) sovellukseesi.
+Sovellus julkaistaan Herokussa lähettämällä haluttu sovelluksen versio Herokun git-repositorioon. Tämän voi tehdä kytkemällä paikallisen repositorion Herokuun, kuten teemme tässä ohjeessa, tai vaihtoehtoisesti Herokun GitHub-integraation kautta.
 
-Paikallisen Git-repositorion kautta käyttäminen tapahtuu seuraavalla komennolla, kun olemme sovelluksen hakemistossa:
+Voimme kytkeä paikallisen repositorion Herokuun näin:
 
 ```bash
 $ heroku git:remote -a tsoha-visitors
 ```
 
-Tämä komento lisää uuden kohteen, jonne voimme lähettää repositorion sisällön. Voimme tarkastella tilannetta komennolla `git remote`:
+Tämä komento määrittää, että tässä hakemistossa olevan sovelluksen repositorio kytketään Herokun sovelluksen `tsoha-visitors` repositorioon. Voimme tarkastella komennon vaikutusta seuraavasti:
 
 ```bash
 $ git remote -v
@@ -57,7 +57,7 @@ Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteen
 
 ### Sovelluksen valmistelu
 
-Tähän asti olemme käynnistäneet sovelluksen komennolla `flask run`, mutta tämä tapa ei sovellu tuotantokäyttöön. Asennamme Herokua varten Gunicorn-palvelimen:
+Tähän asti olemme käynnistäneet sovelluksen komennolla `flask run`, mutta tätä tapaa ei suositella tuotantokäyttöön. Tämän vuoksi asennamme Herokua varten Gunicorn-palvelimen:
 
 ```bash
 $ pip install gunicorn
@@ -108,8 +108,6 @@ DATABASE_URL: postgres://(tietokannan osoite näkyy tässä)
 ```
 
 Huomaa, että tietämällä Herokun tietokannan osoitteen siihen pääsee yhdistämään myös sovelluksen ulkopuolelta, joten tietokannan osoite on salassa pidettävää tietoa.
-
-Herokun ilmaisversion tietokanta on tarkoitettu harjoitteluun ja siinä on merkittävä rajoitus: tietokannan tauluissa saa olla yhteensä enintään 10000 riviä. Niinpä Herokussa ei voi pitää ilmaiseksi sovellusta, jossa on suuri tietokanta.
 
 ### Sovelluksen lähetys
 
