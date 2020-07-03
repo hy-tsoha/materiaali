@@ -1,8 +1,8 @@
-## Tietokannan tila
+## Hakutoiminto
 
 Perinteinen periaate web-sovelluksissa on, että `get`-metodia käyttävä sivupyyntö _hakee_ tietokannasta tietoa (`SELECT`-komennoilla), kun taas `post`-metodia käyttävä sivupyyntö voi myös _muuttaa_ tietoa (`INSERT`-, `UPDATE`- ja `DELETE`-komennoilla). Toisin sanoen `get`-metodi ei muuta tietokannan _tilaa_, kun taas `post`-metodi voi muuttaa sitä.
 
-Olemme tähän mennessä toteuttaneet kaikki lomakkeet `post`-metodilla, mikä on luontevaa, koska yleensä lomakkeen lähetys voi aiheuttaa muutoksia tietokannassa. Kuitenkin joskus on paikallaan `get`-metodia käyttävä lomake, joka ei muuta tietokantaa.
+Olemme tähän mennessä toteuttaneet kaikki lomakkeet `post`-metodilla, mikä on luontevaa, koska yleensä lomakkeen lähetys aiheuttaa muutoksia tietokannassa. Kuitenkin joskus on paikallaan `get`-metodia käyttävä lomake, joka ei muuta tietokantaa.
 
 Tarkastellaan seuraavaksi tilannetta, jossa haluamme toteuttaa sovellukseen _hakutoiminnon_. Ideana on, että käyttäjä voi antaa lomakkeella hakusanan, minkä jälkeen sovellus etsii tietokannasta kaikki tähän täsmäävät rivit. Oletamme, että sovelluksessa on taulu `messages`:
 
@@ -44,4 +44,4 @@ def result():
     ...
 ```
 
-Huomaa, että koska `get`-metodia käyttäessä lomakkeen tiedot välitetään sivun osoitteen kautta, näistä tiedoista jää usein kopio välittäville palvelimille ja palvelinten lokitiedostoihin (ks. [RFC 7231, kohta 9.4](https://tools.ietf.org/html/rfc7231#section-9.4)). Lisäksi selain voi säilyttää `get`-pyyntöjen vastaukset välimuistissaan, mutta `post`-pyyntöjen vastauksia ei oletusarvoisesti säilytetä.
+Huomaa, että koska `get`-metodia käyttäessä lomakkeen tiedot välitetään sivun osoitteen kautta, tiedoista jää usein kopio välittäville palvelimille ja palvelinten lokitiedostoihin (ks. [RFC 7231, kohta 9.4](https://tools.ietf.org/html/rfc7231#section-9.4)). Lisäksi selain voi säilyttää `get`-pyyntöjen vastaukset välimuistissaan, mutta `post`-pyyntöjen vastauksia ei oletusarvoisesti säilytetä.

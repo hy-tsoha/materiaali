@@ -5,7 +5,7 @@ sub-sections:
       - sub-section-title: Tietokannan käyttäminen
       - sub-section-title: Esimerkkisovellus
       - sub-section-title: Istunnot ja kirjautuminen
-      - sub-section-title: Tietokannan tila
+      - sub-section-title: Hakutoiminto
 ---
 # Osa 2
 
