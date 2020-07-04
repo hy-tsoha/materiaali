@@ -5,7 +5,7 @@ sub-sections:
       - sub-section-title: Versionhallinta
       - sub-section-title: Sovellus tuotantoon
       - sub-section-title: Virheiden etsiminen
-      
+      - sub-section-title: Sovelluksen rakenne            
 
 ---
 # Osa 3
@@ -13,4 +13,5 @@ sub-sections:
 {% include_relative versionhallinta.md %}
 {% include_relative tuotantoon.md %}
 {% include_relative virheet.md %}
+{% include_relative rakenne.md %}
 
