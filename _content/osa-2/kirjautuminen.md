@@ -20,11 +20,10 @@ Seuraava sovellus antaa näytteen kirjautumisen toteuttamisesta:
 
 ```python
 from flask import Flask, render_template, request, redirect, session
-from dotenv import load_dotenv
-import os
+from os import getenv
 
 app = Flask(__name__)
-app.secret_key = os.getenv("SECRET_KEY")
+app.secret_key = getenv("SECRET_KEY")
 
 @app.route("/")
 def index():
@@ -69,7 +68,7 @@ TODO: Kuva tähän
 Katsotaan nyt tarkemmin sovelluksen osia: 
 
 ```python
-app.secret_key = os.getenv("SECRET_KEY")
+app.secret_key = getenv("SECRET_KEY")
 ```
 
 Tällä rivillä sovellus hakee salaisen avaimen ympäristömuuttujasta `SECRET_KEY`. Istuntoa ei ole mahdollista käyttää ilman salaista avainta.

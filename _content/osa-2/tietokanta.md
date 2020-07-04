@@ -182,7 +182,7 @@ Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
 $ pip install python-dotenv
 ```
 
-Tämän jälkeen voimme luoda tiedoston `.env`, jossa on määritelty ympäristömuuttujat:
+Kun kirjasto on asennettu, Flask osaa käyttää sitä automaattisesti. Tämän ansiosta voimme luoda tiedoston `.env`, jossa on määritelty ympäristömuuttujat:
 
 ```
 DATABASE_URL=postgresql:///pllk
@@ -190,13 +190,12 @@ DATABASE_URL=postgresql:///pllk
 
 Tämän etuna on, että meidän ei tarvitse suorittaa `export`-komentoa ennen sovelluksen käynnistämistä vaan ympäristömuuttujat ovat aina tallessa tiedostossa.
 
-Nyt voimme hakea ympäristömuuttujan arvon sovellukseen näin:
+Voimme hakea ympäristömuuttujan arvon sovellukseen näin:
 
 ```python
-from dotenv import load_dotenv
-import os
+from os import getenv
 
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL")
 ```
 
 Tästä lähtien oletamme, että ympäristömuuttuja `DATABASE_URL` kertoo tietokannan osoitteen. Tämä tieto voi olla ympäristöstä riippuen tiedostossa `.env` tai määritetty muulla tavalla.
