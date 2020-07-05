@@ -6,7 +6,7 @@ Ideana on, että voimme tallentaa istuntoon avain-arvo-pareja, jotka säilyvät 
 
 Istunnon käyttäminen vaatii, että sovelluksessa on käytössä salainen avain. Lisäämme satunnaisesti muodostetun salaisen avaimen `.env`-tiedostoon:
 
-```bash
+```
 SECRET_KEY=WMyHhYFPTpQ9geoDboUXDUZ9f6wMOrjO
 ```
 
@@ -27,8 +27,7 @@ app.secret_key = getenv("SECRET_KEY")
 
 @app.route("/")
 def index():
-    username = session.get("username","")
-    return render_template("index.html",username=username)
+    return render_template("index.html")
 
 @app.route("/login",methods=["POST"])
 def login():
@@ -47,7 +46,10 @@ def logout():
 Sovellus käyttää seuraavaa sivupohjaa `index.html`, joka joko näyttää kirjautumislomakkeen tai kertoo, että käyttäjä on sisällä:
 
 ```html
-{% raw %}{% if username == "" %}
+{% raw %}{% if session.username %}
+<p>Olet kirjautunut nimellä {{ session.username }}</p>
+<a href="/logout">Kirjaudu ulos</a>
+{% else %}
 <form action="/login" method="POST">
 <p>Tunnus:<br>
 <input type="text" name="username"></p>
@@ -55,9 +57,6 @@ Sovellus käyttää seuraavaa sivupohjaa `index.html`, joka joko näyttää kirj
 <input type="password" name="password"></p>
 <input type="submit" value="Kirjaudu">
 </form>
-{% else %}
-<p>Olet kirjautunut nimellä {{ username }}</p>
-<a href="/logout">Kirjaudu ulos</a>
 {% endif %}{% endraw %}
 ```
 
@@ -73,14 +72,15 @@ app.secret_key = getenv("SECRET_KEY")
 
 Tällä rivillä sovellus hakee salaisen avaimen ympäristömuuttujasta `SECRET_KEY`. Istuntoa ei ole mahdollista käyttää ilman salaista avainta.
 
-```python
-@app.route("/")
-def index():
-    username = session.get("username","")
-    return render_template("index.html",username=username)
+```html
+{% raw %}{% if session.username %}
+<p>Olet kirjautunut nimellä {{ session.username }}</p>
+<a href="/logout">Kirjaudu ulos</a>
+{% else %}{% endraw %}
 ```
 
-Etusivulla sovellus hakee `session`-rakenteesta käyttäjän tunnuksen avaimesta `username`. Jos avainta ei ole (eli käyttäjä ei ole kirjautuneena), `get`-metodi palauttaa oletusarvona tyhjän merkkijonon. Sivupohja päättelee muuttujasta `username`, onko käyttäjä kirjautunut vai ei.
+Sivupohjassa `session`-olioon pääsee käsiksi yllä olevalla syntaksilla. Jos `username` on asetettu, käyttäjä näkee tunnuksensa ja linkin,josta painamalla voi kirjautua ulos. Muuten käyttäjä näkee lomakkeen, jonka avulla voi kirjautua sisään.
+
 
 ```python
 @app.route("/login",methods=["POST"])
