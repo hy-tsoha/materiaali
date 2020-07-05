@@ -44,6 +44,7 @@ Nyt meillä on pystyssä ympäristö, jossa voimme suorittaa web-sovelluksen. Te
 
 ```python
 from flask import Flask
+
 app = Flask(__name__)
 
 @app.route("/")
