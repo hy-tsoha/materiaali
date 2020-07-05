@@ -20,7 +20,8 @@ Sovelluksen koodin alussa on tuttuun tapaan `import`-rivejä,
 sovelluksen konfigurointia ja tietokantayhteyden luominen:
 
 ```python
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask
+from flask import redirect, render_template, request, session
 from flask_sqlalchemy import SQLAlchemy
 from os import getenv
 

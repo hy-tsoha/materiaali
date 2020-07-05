@@ -70,12 +70,6 @@ TODO: Kuva tähän
 
 Periaatteessa voisimme luoda sovelluksen sivujen HTML:n suoraan funktioissa, mutta  tämä olisi vaivalloista, kun sivulla on enemmän sisältöä. Parempi tapa on määritellä _sivupohjia_, joita funktiot käyttävät. Sivupohjat tallennetaan `templates`-hakemistoon.
 
-Sivupohja yhdistetään sivupyyntöön funktiolla `render_template`. Jotta voimme käyttää funktiota, se täytyy ottaa mukaan `import`-osassa vaikkapa näin:
-
-```python
-from flask import Flask, render_template
-```
-
 Luodaan testiksi sivupohja `index.html`:
 
 ```html
@@ -87,12 +81,19 @@ Luodaan testiksi sivupohja `index.html`:
 Tämän jälkeen saamme näytettyä sivupohjan sisällön etusivulla näin:
 
 ```python
+from flask import Flask
+from flask import render_template
+
+app = Flask(__name__)
+
 @app.route("/")
 def index():
     return render_template("index.html")
 ```
 
-Tämä tuottaa seuraavan sivun:
+Tässä funktio `render_template` käsittelee sivupohjan sisällön. Tämä on yksi Flask-kirjaston funktioista, ja lisää tulee vastaan myöhemmin materiaalissa. Jotta tiettyä funktiota voi käyttää, se tulee ottaa mukaan `import`-rivillä.
+
+Yllä oleva esimerkki tuottaa seuraavan sivun:
 
 TODO: Kuva tähän
 

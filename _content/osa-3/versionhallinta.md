@@ -32,7 +32,8 @@ Sovellus muodostuu seuraavista tiedostoista:
 
 <p class="code-title">app.py</p>
 ```python
-from flask import Flask, render_template, redirect
+from flask import Flask
+from flask import redirect, render_template
 from flask_sqlalchemy import SQLAlchemy
 from os import getenv
 

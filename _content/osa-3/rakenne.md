@@ -117,7 +117,7 @@ Moduuli `db` huolehtii tietokantaolion luomisesta kuten edellisess√§ esimerkiss√
 <p class="code-title">routes.py</p>
 ```python
 from app import app
-from flask import render_template, request, redirect
+from flask import redirect, render_template, request
 import messages, users
 
 @app.route("/")

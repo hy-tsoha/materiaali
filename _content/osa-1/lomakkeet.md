@@ -24,7 +24,8 @@ Tarkoituksena on, että kun käyttäjä lähettää lomakkeen, hän siirtyy tois
 Seuraava sovellus toteuttaa sivupohjien avulla sivut `form` ja `result`:
 
 ```python
-from flask import Flask, render_template, request
+from flask import Flask
+from flask import render_template, request
 app = Flask(__name__)
 
 @app.route("/form")
@@ -91,7 +92,8 @@ Erikoistoiveet: <br>
 Seuraava sovellus käsittelee lomakkeen kautta lähetetyt tiedot:
 
 ```python
-from flask import Flask, render_template, request
+from flask import Flask
+from flask import render_template, request
 
 app = Flask(__name__)
 

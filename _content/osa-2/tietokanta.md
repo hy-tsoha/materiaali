@@ -62,7 +62,6 @@ $
 
 ### Tietokantayhteys sovelluksesta
 
-
 Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjastoa lisää:
 
 ```bash
@@ -76,7 +75,8 @@ Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellu
 
 <p class="code-title">app.py</p>
 ```python
-from flask import Flask, render_template, redirect
+from flask import Flask
+from flask import redirect, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)

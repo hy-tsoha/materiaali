@@ -19,7 +19,8 @@ Jos haluat tietää tarkemmin, miten istunto on toteutettu, voit lukea lisää [
 Seuraava sovellus antaa näytteen kirjautumisen toteuttamisesta:
 
 ```python
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask
+from flask import redirect, render_template, request, session
 from os import getenv
 
 app = Flask(__name__)
