@@ -43,7 +43,7 @@ Käyttäjä voi koettaa antaa lomakkeen kautta mitä tahansa tietoa, joten sovel
 Tarkastellaan esimerkkinä seuraavaa lomaketta, jonka kautta käyttäjä pystyy lähettämään uuden viestin keskustelualueelle:
 
 ```html
-<form action="/send" method="post">
+<form action="/send" method="POST">
 Otsikko: <input type="text" name="title">
 Viesti: <textarea name="message"></textarea>
 <input type="submit" value="Lähetä">
@@ -53,7 +53,7 @@ Viesti: <textarea name="message"></textarea>
 Tässä riskinä on, että käyttäjä syöttää lomakkeen kautta hyvin paljon tietoa. Esimerkiksi käyttäjä voi antaa viestille otsikon, jossa on miljoona merkkiä, mikä veisi paljon tilaa tietokannassa ja sotkisi sivuston ulkoasun. Niinpä lomakkeen käsittelijän tulee tarkastaa, että syötteet ovat järkevän pituisia. Voimme toteuttaa tämän tähän tapaan:
 
 ```python
-@app.route("/send", methods=["post"])
+@app.route("/send", methods=["POST"])
 def send():
     title = request.form["title"]
     message = request.form["message"]
@@ -68,7 +68,7 @@ Tässä viestin otsikko saa olla enintään 100 merkkiä ja sisältö saa olla e
 Voimme vielä parantaa käyttökokemusta lisäämällä viestin lähetyssivulle JavaScript-koodin, joka tarkastaa lomakkeen sisällön selaimen puolella ennen lomakkeen lähettämistä:
 
 ```html
-<form action="/send" method="post" onsubmit="return check(this)">
+<form action="/send" method="POST" onsubmit="return check(this)">
 Otsikko: <input type="text" name="title">
 Viesti: <textarea name="message"></textarea>
 <input type="submit" value="Lähetä">

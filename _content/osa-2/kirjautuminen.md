@@ -30,7 +30,7 @@ def index():
     username = session.get("username","")
     return render_template("index.html",username=username)
 
-@app.route("/login",methods=["post"])
+@app.route("/login",methods=["POST"])
 def login():
     username = request.form["username"]
     password = request.form["password"]
@@ -48,7 +48,7 @@ Sovellus käyttää seuraavaa sivupohjaa `index.html`, joka joko näyttää kirj
 
 ```html
 {% raw %}{% if username == "" %}
-<form action="/login" method="post">
+<form action="/login" method="POST">
 <p>Tunnus:<br>
 <input type="text" name="username"></p>
 <p>Salasana:<br>
@@ -83,7 +83,7 @@ def index():
 Etusivulla sovellus hakee `session`-rakenteesta käyttäjän tunnuksen avaimesta `username`. Jos avainta ei ole (eli käyttäjä ei ole kirjautuneena), `get`-metodi palauttaa oletusarvona tyhjän merkkijonon. Sivupohja päättelee muuttujasta `username`, onko käyttäjä kirjautunut vai ei.
 
 ```python
-@app.route("/login",methods=["post"])
+@app.route("/login",methods=["POST"])
 def login():
     username = request.form["username"]
     password = request.form["password"]

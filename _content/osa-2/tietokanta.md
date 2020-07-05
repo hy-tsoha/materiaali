@@ -95,7 +95,7 @@ def index():
 def new():
     return render_template("new.html")
 
-@app.route("/send", methods=["post"])
+@app.route("/send", methods=["POST"])
 def send():
     content = request.form["content"]
     sql = "INSERT INTO messages (content) VALUES (:content)"
@@ -117,7 +117,7 @@ def send():
 
 <p class="code-title">templates/new.html</p>
 ```html
-<form action="/send" method="post">
+<form action="/send" method="POST">
 Viesti: <br>
 <textarea name="content"></textarea>
 <input type="submit" value="Lähetä">

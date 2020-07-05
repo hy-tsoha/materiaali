@@ -5,7 +5,7 @@
 SQL-injektio on tietoturvaongelma, joka syntyy siitä, että SQL-komennon osaksi laitetaan käyttäjän syöte yhdistämällä merkkijonoja. Tarkastellaan esimerkkinä seuraavaa koodia, jonka tarkoituksena on päivittää käyttäjän sähköpostiosoite:
 
 ```python
-@app.route("/update", methods=["post"])
+@app.route("/update", methods=["POST"])
 def update():
     check_user()
     user_id = session["user_id"]
@@ -26,7 +26,7 @@ Tämä komento muuttaa käyttäjän sähköpostiosoitteen tyhjäksi ja antaa hä
 Tehokas tapa estää SQL-injektio on yhdistää syötteet SQL-komentoihin parametrien avulla, kuten olemme tehneet kaikissa kurssin esimerkeissä. Voimme poistaa SQL-injektion yllä olevasta koodista muuttamalla koodia näin:
 
 ```python
-@app.route("/update", methods=["post"])
+@app.route("/update", methods=["POST"])
 def update():
     check_user()
     user_id = session["user_id"]
@@ -51,7 +51,7 @@ XSS-haavoittuvuus perustuu siihen, että käyttäjän antama syöte yhdistetää
 Seuraavassa on esimerkki koodista, jossa on XSS-haavoittuvuus:
 
 ```python
-@app.route("/result", methods=["post"])
+@app.route("/result", methods=["POST"])
 def result():
     name = request.form["name"]
     return "Moikka, "+name
@@ -74,7 +74,7 @@ Tässä tapauksessa XSS-haavoittuvuus ei ole vielä vaarallinen, koska käyttäj
 XSS-haavoittuvuuden pystyy estämään pitämällä huolta siitä, että käyttäjän antamia syötteitä ei näytetä koskaan sivulla sellaisenaan. Kun käytämme Flaskissa sivupohjia, tämä tapahtuu automaattisesti. Esimerkiksi seuraavassa koodissa ei ole XSS-haavoittuvuutta:
 
 ```python
-@app.route("/result", methods=["post"])
+@app.route("/result", methods=["POST"])
 def result():
     name = request.form["name"]
     return render_template("result.html",name=name)
@@ -93,7 +93,7 @@ Jos emme käyttäisi sivupohjia, meidän tulisi muuttaa merkit jollain toisella 
 CSRF-haavoittuvuus syntyy, kun web-sovellus ei varmista, että kirjautuneen käyttäjän tekemä sivupyyntö todella tulee käyttäjältä. Tarkastellaan esimerkkinä seuraavaa lomaketta, jonka kautta käyttäjä voi lähettää uuden viestin, ja sen käsittelijää:
 
 ```html
-<form action="/send" method="post">
+<form action="/send" method="POST">
 Uusi viesti:
 <textarea name="message"></textarea>
 <input type="submit" value="Lähetä">
@@ -101,7 +101,7 @@ Uusi viesti:
 ```
 
 ```python
-@app.route("/send", methods=["post"])
+@app.route("/send", methods=["POST"])
 def send():
     check_user()
     user_id = session["user_id"]
@@ -124,7 +124,7 @@ CSRF-haavoittuvuuden pystyy estämään muuttamalla lomaketta niin, että sen os
 Tämän kentän sisältö laitetaan piilokentäksi lomakkeeseen:
 
 ```html
-{% raw %}<form action="/send" method="post">
+{% raw %}<form action="/send" method="POST">
 Uusi viesti:
 <textarea name="message"></textarea>
 <input type="submit" value="Lähetä">

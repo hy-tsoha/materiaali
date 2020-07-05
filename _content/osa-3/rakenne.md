@@ -129,7 +129,7 @@ def index():
 def new():
     return render_template("new.html")
 
-@app.route("/send", methods=["post"])
+@app.route("/send", methods=["POST"])
 def send():
     content = request.form["content"]
     if messages.send(content):
@@ -137,7 +137,7 @@ def send():
     else:
         return render_template("error.html",message="Viestin lähetys ei onnistunut")
 
-@app.route("/login", methods=["get","post"])
+@app.route("/login", methods=["GET","POST"])
 def login():
     if request.method == "GET":
         return render_template("login.html")
@@ -154,7 +154,7 @@ def logout():
     users.logout()
     return redirect("/")
 
-@app.route("/register", methods=["get","post"])
+@app.route("/register", methods=["GET","POST"])
 def register():
     if request.method == "GET":
         return render_template("register.html")
@@ -194,7 +194,7 @@ Olet kirjautunut sisään.
 
 <p class="code-title">login.html</p>
 ```html
-<form action="/login" method="post">
+<form action="/login" method="POST">
 Tunnus: <input type="text" name="username">
 <p>
 Salasana: <input type="password" name="password">
@@ -206,7 +206,7 @@ Jos sinulla ei ole tunnusta, voit luoda uuden tunnuksen <a href="/register">täs
 
 <p class="code-title">new.html</p>
 ```html
-<form action="/send" method="post">
+<form action="/send" method="POST">
 Viesti: <br>
 <textarea name="content"></textarea>
 <input type="submit" value="Lähetä">
@@ -215,7 +215,7 @@ Viesti: <br>
 
 <p class="code-title">register.html</p>
 ```html
-<form action="/register" method="post">
+<form action="/register" method="POST">
 Tunnus: <input type="text" name="username">
 <p>
 Salasana: <input type="password" name="password">

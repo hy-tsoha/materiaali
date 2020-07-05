@@ -68,7 +68,7 @@ def new():
 ```
 
 ```html
-<form action="/create" method="post">
+<form action="/create" method="POST">
 <p>Aihe:<br>
 <input type="text" name="topic"></p>
 <p>Vaihtoehto 1:<br>
@@ -86,7 +86,7 @@ def new():
 Kun käyttäjä lähettää lomakkeen, sen käsittelee funktio `create`:
 
 ```python
-@app.route("/create", methods=["post"])
+@app.route("/create", methods=["POST"])
 def create():
     topic = request.form["topic"]
     sql = "INSERT INTO polls (topic, created_at) VALUES (:topic, NOW()) RETURNING id"
@@ -120,7 +120,7 @@ def poll(id):
 ```html
 {% raw %}{{ topic }}
 <hr>
-<form action="/answer" method="post">
+<form action="/answer" method="POST">
 {% for choice in choices %}
 <input type="radio" name="answer" value="{{ choice[0] }}"> {{ choice[1] }} <br>
 {% endfor %}
@@ -135,7 +135,7 @@ def poll(id):
 Tässä lomakkeessa on käytössä piilokenttä (`<input type="hidden">`), johon on tallennettu kyselyn id-numero. Tämän kenttä kertoo, mihin kyselyyn lomakkeen kautta lähetetty vastaus liittyy. Seuraava funktio käsittelee vastauksen:
 
 ```python
-@app.route("/answer", methods=["post"])
+@app.route("/answer", methods=["POST"])
 def answer():
     poll_id = request.form["id"]
     if "answer" in request.form:

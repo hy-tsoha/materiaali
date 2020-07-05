@@ -5,7 +5,7 @@ _Lomake_ on HTML-sivun osa, jonka kautta käyttäjä pystyy lähettämään tiet
 Tehdään ensimmäisenä esimerkkinä lomake, joka kysyy käyttäjältä nimeä. Määrittelemme lomakkeen seuraavasti sivupohjassa `form.html`:
 
 ```html
-<form action="/result" method="post">
+<form action="/result" method="POST">
 Anna nimesi:
 <input type="text" name="name">
 <br>
@@ -13,7 +13,7 @@ Anna nimesi:
 </form>
 ```
 
-Tämä lomake lähettää tietoa sivulle `result` metodilla `post`. Lomakkeessa on tekstikenttä, jonka nimi on `name`, sekä lähetysnappi.
+Tämä lomake lähettää tietoa sivulle `result` metodilla `POST`. Lomakkeessa on tekstikenttä, jonka nimi on `name`, sekä lähetysnappi.
 
 Tarkoituksena on, että kun käyttäjä lähettää lomakkeen, hän siirtyy toiselle sivulle, joka näyttää viestin nimen perusteella. Tässä on sivupohja `result.html` tätä sivua varten:
 
@@ -31,18 +31,18 @@ app = Flask(__name__)
 def form():
     return render_template("form.html")
 
-@app.route("/result", methods=["post"])
+@app.route("/result", methods=["POST"])
 def result():
     return render_template("result.html",name=request.form["name"])
 ```
 
-Sivu `result` ottaa vastaan `post`-metodilla lähetetyn lomakkeen, mikä näkyy dekoraattorin parametrissa `methods`. Lomakkeen kautta lähetetty tieto on saatavilla olion `request` kautta.
+Sivu `result` ottaa vastaan `POST`-metodilla lähetetyn lomakkeen, mikä näkyy dekoraattorin parametrissa `methods`. Lomakkeen kautta lähetetty tieto on saatavilla olion `request` kautta.
 
 Lomakkeen käyttäminen voi näyttää tältä:
 
 TODO: Kuva tähän
 
-Metodi `post` on yleisin tapa lomakkeen lähettämiseen, ja se soveltuu useimpiin tilanteisiin. Toinen metodi on `get`, johon palaamme myöhemmin.
+Metodi `POST` on yleisin tapa lomakkeen lähettämiseen, ja se soveltuu useimpiin tilanteisiin. Toinen metodi on `GET`, johon palaamme myöhemmin.
 
 ### Lomakkeen elementit
 
@@ -51,7 +51,7 @@ Tavallisia lomakkeen elementtejä ovat tekstikentät ja valintaruudut. Jokainen 
 Tehdään seuraavaksi esimerkki, jossa käyttäjä voi tilata pizzan. Sivupohja `order.html` näyttää tilaukseen liittyvät valinnat:
 
 ```html
-<form action="/result" method="post">
+<form action="/result" method="POST">
 Valitse pizza:
 <p>
 <input type="radio" name="pizza" value="1"> Frutti di Mare <br>
@@ -99,7 +99,7 @@ app = Flask(__name__)
 def order():
     return render_template("order.html")
 
-@app.route("/result", methods=["post"])
+@app.route("/result", methods=["POST"])
 def result():
     pizza = request.form["pizza"]
     extras = request.form.getlist("extra")
