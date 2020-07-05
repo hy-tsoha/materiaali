@@ -8,9 +8,9 @@ Herokun ilmaisversiossa on joitakin merkittäviä rajoituksia. Sovellus saa käy
 
 Herokussa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Herokun sivuston [hallintapaneelin](https://dashboard.heroku.com/) kautta tai komentorivityökalulla (Heroku CLI). Käytämme tässä ohjeessa komentorivityökalua, jonka asentamiseen löydät ohjeet [tästä](https://devcenter.heroku.com/articles/heroku-cli).
 
-### Sovelluksen luonti
+### Komentorivityökalu
 
-Komentorivityökalun käyttäminen alkaa kirjautumalla sisään:
+Komentorivityökalun käyttö alkaa kirjautumalla sisään:
 
 ```bash
 $ heroku login
@@ -18,6 +18,10 @@ heroku: Press any key to open up the browser to login or q to exit:
 ```
 
 Komento avaa nettiselaimen, jonka kautta pystyy kirjautumaan Herokuun. Kirjautumisen jälkeen komentorivityökalu on käyttökunnossa.
+
+Komento `heroku help` (tai pelkkä `heroku`) näyttää listan komentorivityökalun komennoista. Vastaavasti voi myös pyytää neuvoa tietyn komennon käyttämisestä: esimerkiksi `heroku apps help` kertoo, miten komentoa `heroku apps` käytetään.
+
+### Sovelluksen luonti
 
 Seuraava komento luo uuden sovelluksen nimellä `tsoha-visitors`:
 
