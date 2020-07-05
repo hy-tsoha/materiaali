@@ -4,35 +4,35 @@ Teemme seuraavaksi hieman laajemman esimerkkisovelluksen, joka esittelee tietoka
 
 TODO: Lisää kuvat
 
+Sovelluksen koko lähdekoodi on GitHubissa osoitteessa [https://github.com/hy-tsoha/tsoha-polls](https://github.com/hy-tsoha/tsoha-polls), ja käymme tässä tarkemmin läpi sovelluksen toimintaa.
+
 Sovellusta varten luomme tietokantaan kolme taulua:
 
 ```sql
-CREATE TABLE polls (id SERIAL PRIMARY KEY, topic TEXT, created_at TIMESTAMP);
-CREATE TABLE choices (id SERIAL PRIMARY KEY, poll_id INTEGER REFERENCES polls, choice TEXT);
-CREATE TABLE answers (id SERIAL PRIMARY KEY, choice_id INTEGER REFERENCES choices, sent_at TIMESTAMP);
+CREATE TABLE polls (
+    id SERIAL PRIMARY KEY,
+    topic TEXT,
+    created_at TIMESTAMP
+);
+CREATE TABLE choices (
+    id SERIAL PRIMARY KEY,
+    poll_id INTEGER REFERENCES polls,
+    choice TEXT
+);
+CREATE TABLE answers (
+    id SERIAL PRIMARY KEY,
+    choice_id INTEGER REFERENCES choices,
+    sent_at TIMESTAMP
+);
 ```
 
-Taulu `polls` sisältää jokaisen kyselyn aiheen ja luontiajan,
-ja tauluun `choices` tallennetaan kyselyjen vastausvaihtoehdot.
-Taulussa `answers` on puolestaan kyselyihin annetut vastaukset.
+Taulu `polls` sisältää jokaisen kyselyn aiheen ja luontiajan, ja tauluun `choices` tallennetaan kyselyjen vastausvaihtoehdot. Taulussa `answers` on puolestaan kyselyihin annetut vastaukset.
 
-Sovelluksen koodin alussa on tuttuun tapaan `import`-rivejä,
-sovelluksen konfigurointia ja tietokantayhteyden luominen:
+TODO: Selvennä mitä tauluissa on?
 
-```python
-from flask import Flask
-from flask import redirect, render_template, request, session
-from flask_sqlalchemy import SQLAlchemy
-from os import getenv
+Sovelluksen etusivu näyttää kyselyt käänteisessä aikajärjestyksessä:
 
-app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL")
-db = SQLAlchemy(app)
-```
-
-Sovelluksen etusivu hakee tietokannasta kyselyt käänteisessä aikajärjestyksessä
-ja näyttää ne sivupohjan `index.html` avulla:
-
+<p class="code-title">app.py</p>
 ```python
 @app.route("/")
 def index():
@@ -42,6 +42,7 @@ def index():
     return render_template("index.html", polls=polls)
 ```
 
+<p class="code-title">index.html</p>
 ```html
 {% raw %}<a href="/new">Uusi kysely</a>
 <hr>
@@ -54,20 +55,20 @@ Luotu: {{ poll[2].strftime("%Y-%m-%d %H:%M:%S") }} <br>
 {% endfor %}{% endraw %}
 ```
 
-Jokaisen kyselyn kohdalla näytetään linkit, joiden kautta voi osallistua kyselyyn
-(`poll/id`) sekä katsoa kyselyn tulokset (`result/id`),
-missä `id` on kyselyn id-numero tietokannassa.
+Tässä tietokannasta haetaan jokaisen kyselyn id-numero, aihe ja luontiaika. Sivupohjassa id-numeron perusteella luodaan kaksi linkkiä: sivu `poll/[id]` antaa käyttäjän vastata kyselyyn ja sivu `result/[id]` puolestaan näyttää kyselyn tulokset.
 
 Sivu `new` näyttää lomakkeen, jonka kautta voi lähettää uuden kyselyn.
 Käyttäjä antaa lomakkeeseen kyselyn aiheen sekä enintään neljä
 vastausvaihtoehtoa:
 
+<p class="code-title">app.py</p>
 ```python
 @app.route("/new")
 def new():
     return render_template("new.html")
 ```
 
+<p class="code-title">new.html</p>
 ```html
 <form action="/create" method="POST">
 <p>Aihe:<br>
@@ -86,6 +87,7 @@ def new():
 
 Kun käyttäjä lähettää lomakkeen, sen käsittelee funktio `create`:
 
+<p class="code-title">app.py</p>
 ```python
 @app.route("/create", methods=["POST"])
 def create():
@@ -102,10 +104,13 @@ def create():
     return redirect("/")
 ```
 
-Tämä funktio lisää ensin kyselyä vastaavan rivin tauluun `polls`. Komennon `INSERT` lopussa on `RETURNING id`, minkä ansiosta komento palauttaa lisätyn rivin id-numeron. Tämän jälkeen funktio käy läpi käyttäjän antamat vastausvaihtoehdot ja luo jokaisesta epätyhjästä vaihtoehdosta rivin tauluun `choices`. Lopuksi käyttäjä ohjataan sovelluksen etusivulle.
+Tämä funktio lisää ensin kyselyä vastaavan rivin tauluun `polls`. Kyselyn aihe tulee käyttäjältä ja SQL-funktio `NOW()` antaa nykyisen ajanhetken. Komennon `INSERT` lopussa on `RETURNING id`, minkä ansiosta komento palauttaa lisätyn rivin id-numeron.
 
-Sivu `poll/id` näyttää kyselyn, jonka id-numero on `id`. Sivulla on lomake, jonka kautta käyttäjä voi vastata kyselyyn:
+Tämän jälkeen käydään läpi käyttäjän antamat vastausvaihtoehdot. Koska lomakkeessa on useita `choice`-kenttiä, niiden sisältö haetaan listana metodilla `getlist`. Jokaisesta epätyhjästä vaihtoehdosta luodaan rivi tauluun `choices` ja lopuksi käyttäjä ohjataan etusivulle.
 
+Sivu `poll/[id]` näyttää kyselyn sen id-numeron perusteella. Sivulla on lomake, jonka kautta käyttäjä voi vastata kyselyyn:
+
+<p class="code-title">app.py</p>
 ```python
 @app.route("/poll/<int:id>")
 def poll(id):
@@ -118,6 +123,7 @@ def poll(id):
     return render_template("poll.html", id=id, topic=topic, choices=choices)
 ```
 
+<p class="code-title">poll.html</p>
 ```html
 {% raw %}{{ topic }}
 <hr>
@@ -133,8 +139,11 @@ def poll(id):
 <a href="/">Takaisin</a>{% endraw %}
 ```
 
-Tässä lomakkeessa on käytössä piilokenttä (`<input type="hidden">`), johon on tallennettu kyselyn id-numero. Tämän kenttä kertoo, mihin kyselyyn lomakkeen kautta lähetetty vastaus liittyy. Seuraava funktio käsittelee vastauksen:
+Lomake antaa käyttäjän valita yhden vaihtoehdoista, ja lisäksi lomakkeessa on käyttäjälle näkymätön _piilokenttä_, jossa on kyselyn id-numero. Tämän kentän avulla lomakkeen käsittelijä tietää, mihin kyselyyn käyttäjän antama vastaus liittyy.
 
+Funktio `answer` käsittelee käyttäjän antaman vastauksen:
+
+<p class="code-title">app.py</p>
 ```python
 @app.route("/answer", methods=["POST"])
 def answer():
@@ -149,8 +158,9 @@ def answer():
 
 Funktio hakee kyselyn id-numeron piilokentästä ja tarkastaa sitten, onko käyttäjä valinnut jonkin vastauksen. Jos käyttäjä on valinnut vastauksen, tämä vastaus lisätään `answers`-tauluun. Lopuksi käyttäjä ohjataan kyselyn tuloksiin.
 
-Sivu `result/id` näyttää kyselyn tulokset:
+Sivu `result/[id]` näyttää kyselyn tulokset:
 
+<p class="code-title">app.py</p>
 ```python
 @app.route("/result/<int:id>")
 def result(id):
@@ -164,6 +174,7 @@ def result(id):
     return render_template("result.html", topic=topic, choices=choices)
 ```
 
+<p class="code-title">result.html</p>
 ```html
 {% raw %}{{ topic }}
 <hr>
@@ -176,4 +187,4 @@ def result(id):
 <a href="/">Takaisin</a>{% endraw %}
 ```
 
-Tämän sivun perustana on tauluista `choices` ja `answers` tietoa hakeva kysely, joka hakee jokaisesta kyselyn vastausvaihtoehdosta vastausten määrän. Kyselyssä on käytössä `LEFT JOIN`, jotta mukaan tulevat myös vaihtoehdot, joissa ei ole yhtään vastausta.
+Tämän sivun perustana on tauluista `choices` ja `answers` tietoa hakeva kysely, joka hakee jokaisesta kyselyn vastausvaihtoehdosta vastausten määrän. Kyselyssä on käytössä `LEFT JOIN`, jotta mukaan tulevat myös vaihtoehdot, joissa ei ole yhtään vastausta. Koska kysely on pitkä, se on jaettu kahdelle riville merkin `\` avulla.
