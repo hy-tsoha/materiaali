@@ -59,7 +59,7 @@ $ git push heroku master
 
 Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteensopiva, vaan sovellukseen täytyy tehdä ensin joitakin muutoksia.
 
-### Sovelluksen valmistelu
+### Palvelimen määrittely
 
 Tähän asti olemme käynnistäneet sovelluksen komennolla `flask run`, mutta tätä tapaa ei suositella tuotantokäyttöön. Tämän vuoksi asennamme Herokua varten Gunicorn-palvelimen:
 
@@ -81,7 +81,7 @@ web: gunicorn app:app
 
 Tämä kertoo Herokulle, että tyyppiä "web" oleva sovellus käynnistetään komennolla `gunicorn app:app`. Tässä ensimmäinen `app` viittaa moduulin nimeen `app.py` ja toinen `app` viittaa koodissa luotavan Flask-olion nimeen.
 
-### Tietokanta Herokussa
+### Tietokanta ja ympäristömuuttujat
 
 Seuraava komento luo Heroku-sovellukselle tietokannan:
 
@@ -112,6 +112,12 @@ DATABASE_URL: postgres://(tietokannan osoite näkyy tässä)
 ```
 
 Huomaa, että tietämällä Herokun tietokannan osoitteen siihen pääsee yhdistämään myös sovelluksen ulkopuolelta, joten tietokannan osoite on salassa pidettävää tietoa.
+
+Voimme myös asettaa ympäristömuuttujia tarvittaessa itse. Esimerkiksi seuraava komento asettaisi salaisen avaimen istuntoja varten:
+
+```bash
+$ heroku config:set SECRET_KEY=(avain tähän)
+```
 
 ### Sovelluksen lähetys
 
