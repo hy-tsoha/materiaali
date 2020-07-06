@@ -12,6 +12,13 @@ title: TODO
 * Pages-sivuilla (etusivu, aikataulu) sivupalkki peittää tekstin jos käyttäjä kasvattaa fonttikokoa riittävästi. Varsinkin vanhempien opiskelijoiden joukossa osa opiskelijoista tekee tätä. (Näin käy myös silloin kun selainikkuna on kapea.)
 * Jos koodilaatikossa on tiedoston nimi, koodin kopiointi on hankalaa
 * Sivuvalikon toiminta kun vaihtaa osaa, olisiko väritys joka näyttää missä ollaan?
+* Jos sivuvalikon alueella käyttää hiiren rullaa, toiminta ei ole säännönmukaista:
+  - yleensä siirtyminen koskee sivuvalikkoa, jos mahdollista
+  - jos sivuvalikkoa ei voi liikuttaa, ja hiiri on sivuvalikossa linkin päällä, pääikkunaa siirretään
+  - jos sivuvalikossa ei olla linkin päällä, pääikkunaa ei siirretä
+  - paitsi jos sivuvalikosta on hieman aiemmin siirretty pääikkunaa, jolloin ei ole väliä missä kohtaa sivuikkunassa ollaan
+  - edellisessä tapauksessa sivuvalikkoa ei välillä siirretä vaikka rullauksen suuntaa vaihtaisi niin että sivuvalikkoa voisi siirtää
+  - yllämainitut esimerkit eivät välttämättä ole kattavia tai täysin tarkkoja, mutta ongelmana on että rullaus ei toimi ennalta-arvattavasti. On esimerkiksi mahdollista saada tilanne jossa epätoivoisesta hiirellä alaspäin rullaamisesta huolimatta sivuvalikon osa 4 ei tule lainkaan näkyviin.
 
 ## Taulukot:
 
