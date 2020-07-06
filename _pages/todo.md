@@ -11,6 +11,7 @@ title: TODO
 * Otsikon ja tekstin välissä olevasta raosta näkyvä taustakuva on lievästi häiritsevä (otsikon ja tekstin laatikko ovat myös eri levyiset). Vastaava rako on myös tekstin ja alalaidan hy-laatikon välissä. Voisiko nämä kaikki yhdistää niin että ne ovat yhtenäisenä alueena? (Ja tuo harmaa on myös aika rumasti yleisestä väriskaalasta poikkeava)
 * Pages-sivuilla (etusivu, aikataulu) sivupalkki peittää tekstin jos käyttäjä kasvattaa fonttikokoa riittävästi. Varsinkin vanhempien opiskelijoiden joukossa osa opiskelijoista tekee tätä. (Näin käy myös silloin kun selainikkuna on kapea.)
 * Jos koodilaatikossa on tiedoston nimi, koodin kopiointi on hankalaa
+* Sivuvalikon toiminta kun vaihtaa osaa, olisiko väritys joka näyttää missä ollaan?
 
 ## Taulukot:
 
