@@ -5,6 +5,7 @@ sub-sections:
       - sub-section-title: Johdatus web-sovelluksiin
       - sub-section-title: Sivupyynnöt
       - sub-section-title: Lomakkeiden käsittely
+      - sub-section-title: Sovelluksen toiminta
 ---
 # Osa 1
 
@@ -16,3 +17,4 @@ Jos et tunne kieltä ennestään, sinun kannattaa ensin käydä pikakurssi [täs
 {% include_relative johdatus.md %}
 {% include_relative reititys.md %}
 {% include_relative lomakkeet.md %}
+{% include_relative selain.md %}
