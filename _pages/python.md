@@ -439,15 +439,132 @@ s[(1,2)] = "aybabtu"
 
 ## Funktiot
 
+Oma funktio määritellään avainsanan `def` avulla. Esimerkiksi seuraava koodi määrittelee funktion `hello`, joka tervehtii parametrina annettua nimeä:
+
+```bash
+>>> def hello(name):
+...     print("Moikka,",name)
+... 
+>>> hello("Liisa")
+Moikka, Liisa
+>>> hello("Kaaleppi")
+Moikka, Kaaleppi
+```
+
+Seuraava funktio `check` puolestaan tarkastaa, että nimen pituus on enintään maksimipituus:
+
+```bash
+>>> def check(name,max_length):
+...     return len(name) <= max_length
+... 
+>>> check("Liisa",6)
+True
+>>> check("Kaaleppi",6)
+False
+```
+
+### Muuttujien näkyvyys
+
+Funktioiden ulkopuolella määritelty muuttuja on globaali ja se näkyy kaikissa funktioissa:
+
+```bash
+>>> def test():
+...     print(x)
+... 
+>>> x = 5
+>>> test()
+5
+```
+
+Kuitenkin jos muuttuja saa arvon funktiossa, siitä tulee funktion paikallinen muuttuja eikä sillä ole vaikutusta funktion ulkopuolelle:
+
+```bash
+>>> def test():
+...     x = 2
+...     print(x)
+... 
+>>> x = 5
+>>> test()
+2
+>>> x
+5
+```
+
 ## Poikkeukset
 
 ## Moduulit
+
+### Valmiit moduulit
+
+Pythonin standardikirjasto muodostuu moduuleista, joita voi ottaa mukaan `import`-komennolla. Esimerkiksi seuraava koodi käyttää moduulin `random` funktiota `randint`:
+
+```bash
+>>> import random
+>>> random.randint(1,100)
+37
+```
+
+Toinen tapa on ottaa mukaan moduulista tietty funktio näin:
+
+```bash
+>>> from random import randint
+>>> randint(1,100)
+18
+```
+
+Käytämme kurssilla myös standardikirjaston ulkopuolisia moduuleja kuten Flask-kirjaston moduulia `flask`.
+
+### Omat moduulit
+
+Kun tiedostossa on Python-koodia, tiedostoa voidaan käyttää moduulina. Esimerkiksi seuraava tiedosto `test.py` määrittelee moduulin `test`:
+
+<p class="code-title">test.py</p>
+```python
+def hello(name):
+    print("Moikka,",name)
+
+def check(name,max_length):
+    return len(name) <= max_length
+```
+
+Voimme käyttää moduulia näin:
+
+```bash
+>>> import test
+>>> test.hello("Maija")
+Moikka, Maija
+>>> test.check("Kaaleppi",6)
+False
+```
 
 ## Lisäaiheita
 
 ### Merkkijonon formatointi
 
-### Listakoosteet
+Melko uusi Pythonin ominaisuus on _f-string_, jossa merkkijonon alussa on merkki `f`. Tämän avulla merkkijonon sisällä voi käyttää muuttujia ja muita lausekkeita aaltosuluissa.
+
+```bash
+>>> name = "Kotivalo"
+>>> age = 5
+>>> f"{name} on {age}-vuotias"
+'Kotivalo on 5-vuotias'
+```
+
+### Listakooste
+
+_Listakoosteen_ (_list comprehension_) avulla voi koostaa uuden listan vanhan listan perusteella ja muokata alkioita jollakin tavalla samalla.
+
+Seuraavassa esimerkissä pohjana on lista `a`, listaan `b` tulee jokainen luku kaksinkertaisena ja listaan `c` tulee jokainen luku merkkijonona.
+
+```bash
+>>> a = [1,2,3]
+>>> b = [2*x for x in a]
+>>> c = [str(x) for x in a]
+>>> b
+[2, 4, 6]
+>>> c
+['1', '2', '3']
+```
 
 ### Säännölliset lausekkeet
 
