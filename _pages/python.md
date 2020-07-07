@@ -231,7 +231,21 @@ Pythonissa sisennys ilmaisee, mikä koodi kuuluu lohkon sisään esimerkiksi eht
 
 ### For-silmukka
 
-For-silmukalla ja `range`-funktiolla voi käydä läpi lukuvälin. Esimerkiksi seuraava koodi tulostaa sata riviä tekstiä:
+For-silmukka käy läpi listan sisällön. Esimerkiksi seuraava silmukka tulostaa jokaisen listalla olevan sanan:
+
+```python
+words = ["apina", "banaani", "cembalo"]
+for x in words:
+    print(x)
+```
+
+```
+apina
+banaani
+cembalo
+```
+
+Funktion `range` avulla for-silmukalla voi käydä läpi lukuvälin. Esimerkiksi seuraava koodi tulostaa sata riviä:
 
 ```python
 for i in range(1,101):
@@ -273,9 +287,155 @@ Komennot `break` ja `continue` toimivat samalla tavalla kuin muissakin kielissä
 
 ### Lista
 
+Lista on Pythonin perustietorakenne, joka sisältää joukon alkioita tietyssä järjestyksessä. Tässä on kaksi tapaa määritellä lista:
+
+```bash
+>>> x = [1,2,3]
+```
+
+```bash
+>>> x = []
+>>> x.append(1)
+>>> x.append(2)
+>>> x.append(3)
+```
+
+Listaa voi käyttää melko samalla tavalla kuin merkkijonoa:
+
+```bash
+>>> x
+[1, 2, 3]
+>>> len(x)
+3
+>>> x[0]
+1
+>>> y = [0]*10
+>>> y
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+```
+
+Operaattori `in` kertoo, onko listalla tiettyä alkiota:
+
+```bash
+>>> x = [1,2,3]
+>>> 2 in x
+True
+>>> 5 in x
+False
+```
+
+Listan alkiot voivat olla erityyppisiä ja myös toisia listoja:
+
+```bash
+>>> a = [5,"abc",True]
+>>> b = [1,2,[3,4,5]]
+```
+
+Yksi listan ja merkkijonon ero on, että listan sisältöä voi muuttaa, kun taas merkijonossa tämä ei ole mahdollista:
+
+```bash
+>>> a = [1,2,3]
+>>> a[0] = 5
+>>> a
+[5, 2, 3]
+>>> b = "abc"
+>>> b[0] = "x"
+TypeError: 'str' object does not support item assignment
+```
+
+Pythonin muuttujat sisältävät viittauksia. Seuraavassa koodissa `a` ja `b` viittaavat samaan listaan, joten listan `a` muuttaminen heijastuu myös listaan `b`:
+
+```bash
+>>> a = [1,2,3]
+>>> b = a
+>>> a[0] = 5
+>>> a
+[5, 2, 3]
+>>> b
+[5, 2, 3]
+```
+
+Listasta voi kuitenkin tehdä aidon kopion `[:]`-syntaksilla näin:
+
+```bash
+>>> a = [1,2,3]
+>>> b = a[:]
+>>> a[0] = 5
+>>> a
+[5, 2, 3]
+>>> b
+[1, 2, 3]
+```
+
 ### Sanakirja
 
+Sanakirja muodostuu avain-arvo-pareista. Tässä on kaksi tapaa määritellä sanakirja:
+
+```bash
+>>> s = {"apina":"monkey", "banaani":"banana", "cembalo":"harpsichord"}
+```
+
+```bash
+>>> s = {}
+>>> s["apina"] = "monkey"
+>>> s["banaani"] = "banana"
+>>> s["cembalo"] = "harpsichord"
+```
+
+Sanakirjasta voi hakea tietoa avaimen perusteella. Operaattori `in` kertoo, onko sanakirjassa tiettyä avainta.
+
+```bash
+>>> s["apina"]
+'monkey'
+>>> "banaani" in s
+True
+>>> "faarao" in s
+False
+```
+
+Sanakirjan avain ei saa muuttua. Niinpä merkkijono kelpaa avaimeksi mutta lista ei kelpaa:
+
+```bash
+>>> s[[1,2,3]] = "testi"
+TypeError: unhashable type: 'list'
+```
+
 ### Tuple
+
+Tuple on kokoelma arvoja sulkujen sisällä. Se toimii melko samalla tavalla kuin lista:
+
+```bash
+>>> x = (5,123,"apina")
+>>> x[1]
+123
+>>> len(x)
+3
+```
+
+Kuitenkaan tuplen sisältöä ei voi muokata:
+
+```bash
+>>> x[0] = 2
+TypeError: 'tuple' object does not support item assignment
+```
+
+Tuplen avulla voidaan tallentaa toisiinsa liittyviä arvoja, joita on kiinteä määrä. Esimerkiksi seuraavalla listalla jokainen alkio sisältää koodarin nimen ja lempikielen:
+
+```bash
+>>> x = []
+>>> x.append(("Maija","C++"))
+>>> x.append(("Kotivalo","Python"))
+>>> x.append(("Justiina","Forth"))
+>>> x
+[('Maija', 'C++'), ('Kotivalo', 'Python'), ('Justiina', 'Forth')]
+```
+
+Koska tuplen sisältö ei muutu, sitä voidaan käyttää sanakirjan avaimena:
+
+```bash
+s = {}
+s[(1,2)] = "aybabtu"
+```
 
 ## Funktiot
 
@@ -284,6 +444,8 @@ Komennot `break` ja `continue` toimivat samalla tavalla kuin muissakin kielissä
 ## Moduulit
 
 ## Lisäaiheita
+
+### Merkkijonon formatointi
 
 ### Listakoosteet
 
