@@ -7,12 +7,19 @@ Ideana on, että voimme tallentaa istuntoon avain-arvo-pareja, jotka säilyvät 
 Istunnon käyttäminen vaatii, että sovelluksessa on käytössä salainen avain. Lisäämme satunnaisesti muodostetun salaisen avaimen `.env`-tiedostoon:
 
 ```
-SECRET_KEY=WMyHhYFPTpQ9geoDboUXDUZ9f6wMOrjO
+SECRET_KEY=95d3763bb55e744e77dd181a47b4e1c6
 ```
 
 Tämä avain allekirjoittaa evästeessä olevan tiedon niin, että käyttäjä ei pysty muuttamaan istunnon sisältöä selaimessa. **On tärkeää, että avain on salainen, eli älä missään tapauksessa käytä yllä olevaa avainta vaan luo oma salainen avain!**
 
-Jos haluat tietää tarkemmin, miten istunto on toteutettu, voit lukea lisää [tästä](TODO).
+Oman salaisen avaimen voi luoda vaikkapa Python-tulkin avulla. Esimerkiksi moduulin `os` funktio `urandom` antaa halutun määrän satunnaisia tavuja.
+
+```bash
+$ python3
+>>> from os import urandom
+>>> urandom(16).hex()
+'18fd24bf6a2ad4dac04a33963db1c42f'
+```
 
 ### Kirjautumisen toteutus
 
