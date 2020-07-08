@@ -11,6 +11,8 @@ title: TODO
   
   ✔️ Lihavointi on otettu pois kaikista `bash`-koodilaatikoista. `$`-merkki on väritetty siniseksi.
 
+  - Konsolin väritys käyttää nyt käsin kirjoitettua syntaksia nimeltä prompt (koodi _plugins-hakemistossa)
+
 * Otsikon ja tekstin välissä olevasta raosta näkyvä taustakuva on lievästi häiritsevä (otsikon ja tekstin laatikko ovat myös eri levyiset). Vastaava rako on myös tekstin ja alalaidan hy-laatikon välissä. Voisiko nämä kaikki yhdistää niin että ne ovat yhtenäisenä alueena? (Ja tuo harmaa on myös aika rumasti yleisestä väriskaalasta poikkeava)
   
   ✔️ Ulkoasua on yhdenmukaistettu. Footer on nyt enemmän vesileiman tyyppinen jatke materiaalille sivun lopussa. Otsikkolaatikko on saman kokoinen kuin materiaali ja suoraan siinä kiinni. Lisäsin tilaa ylhäälle ja alhaalle tuomaan ilmavuutta ulkoasuun. Lisäksi sivu näyttää ehkä enemmän Single Page Applicationilta, koska chapter sivut ja page sivut latautuu samaan kohtaan.
@@ -243,7 +245,7 @@ Syntaksiväritykset [täältä](https://spsarolkar.github.io/rouge-theme-preview
 
 ## Konsolin näyttäminen
 
-```bash
+```prompt
 $ cp apina.txt banaani.txt
 $ ./testi
 Hello world
