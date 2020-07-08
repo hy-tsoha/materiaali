@@ -12,7 +12,7 @@ Voit myös asentaa PostgreSQL:n pääkäyttäjänä käyttöjärjestelmäsi pake
 
 Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun `messages`, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
 
-```bash
+```prompt
 $ psql
 pllk=# CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT);
 CREATE TABLE
@@ -35,7 +35,7 @@ PostgreSQL:ssä tyyppi `SERIAL` tarkoittaa taulun avaimena käytettävää kokon
 
 Hyödyllisiä PostgreSQL-tulkin komentoja ovat `\dt`, joka näyttää listan tauluista, sekä `\d [taulu]`, joka näyttää taulun sarakkeet ja muuta tietoa siitä.
 
-```bash
+```prompt
 pllk=# \dt
          List of relations
  Schema |   Name   | Type  | Owner 
@@ -55,7 +55,7 @@ Indexes:
 
 Komento `\q` poistuu PostgreSQL-tulkista:
 
-```bash
+```prompt
 pllk=# \q
 $ 
 ```
