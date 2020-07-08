@@ -7,9 +7,11 @@ title: Python-opas
 
 Tämä opas käsittelee Python-kielen perusasioita tämän kurssin näkökulmasta. Oletuksena on, että osaat ohjelmoida ennestään jollakin ohjelmointikielellä.
 
+Perusteiden oppimisen jälkeen hyvä lähde on Pythonin [dokumentaatio](https://docs.python.org/3/).
+
 ## Pythonin asennus
 
-TODO
+Python on valmiiksi asennettuna useissa järjestelmissä. Tarvittaessa löydät ohjeita asentamiseen Pythonin [lataussivulta](https://www.python.org/downloads/).
 
 ## Pythonin käyttäminen
 
@@ -34,7 +36,7 @@ Seuraavassa tiedostossa on Python-koodi, joka kysyy käyttäjän nimeä ja näyt
 ```python
 # kommentti merkitään näin
 name = input("Anna nimi: ")
-print("Moikka,", nimi)
+print("Moikka,", name)
 ```
 
 Koodi suoritetaan näin komentoriviltä:
@@ -90,17 +92,17 @@ Vastaavasti funktiot `int` ja `float` muuttavat tyypin kokonais- ja liukuluvuksi
 
 ## Lohkot
 
-Pythonissa sisennys ilmaisee, mikä koodi kuuluu lohkon sisään esimerkiksi ehto- ja toistorakenteissa. Tavallinen tapa on sisentää neljällä välilyönnillä.
+Pythonissa sisennys ilmaisee, mikä koodi kuuluu lohkon sisään esimerkiksi ehto- ja toistorakenteissa.
 
 Esimerkiksi seuraavassa koodissa on `if`-rakenne:
 
 ```python
-if name == "Kotivalo":
-    print("Moikka!")
-elif name == "Justiina":
-    print("Heippa!")
+if status == 1:
+    role = "user"
+elif status == 2:
+    role = "admin"
 else:
-    print("Olet tuntematon")
+    role = "guest"
 ```
 
 Seuraavassa koodissa puolestaan on `while`-rakenne:
@@ -135,6 +137,8 @@ Listan pituus saadaa funktiolla `len` ja listan alkoihin pääsee käsiksi `[]`-
 print(len(words)) # 3
 print(words[0]) # apina
 print(words[1]) # banaani
+words[0] = "apila"
+print(words[0]) # apila
 ```
 
 Pythonissa voi myös indeksoida negatiivisilla luvuilla, jolloin alkio haetaan listan lopusta laskien:
@@ -149,6 +153,8 @@ Operaattori `in` kertoo, onko tietty alkio listalla:
 print("cembalo" in words) # True
 print("tuuba" in words) # False
 ```
+
+Lista ja merkkijono muistuttava Pythonissa toisiaan, ja merkkijonon merkkejä pystyy käsittelemään samaan tapaan kuin listan alkioita. Erona on kuitenkin, että merkkijonon sisältöä ei voi muuttaa eli merkkijonossa ei ole esimerkiksi metodia `append`.
 
 ## For-silmukka
 
@@ -222,7 +228,7 @@ for name in ages:
     print(name,"on",ages[name],"vuotta")
 ```
 
-```python
+```
 Maija on 25 vuotta
 Anna on 20 vuotta
 Kaaleppi on 42 vuotta
@@ -424,21 +430,19 @@ Moikka, Anna
 Moikka, Uolevi
 ```
 
-## Nimien valinta
+## Pythonin tyyliohje
 
-Pythonissa muuttujien, funktioiden ja moduulien nimet on tapana kirjoittaa kokonaan pienillä kirjaimilla. Jos muuttujan tai funktion nimessä on useita sanoja, väliin tulee alaviiva `_`, mutta moduuleissa sanat kirjoitetaan yhteen.
+Pythonin tyyliohje [PEP 8](https://www.python.org/dev/peps/pep-0008/) antaa neuvoja Python-ohjelmoinnin tyyliasioihin. Ohjeeseen on hyvä tutustua ja seurata sitä harkinnan mukaan.
 
-Tässä on esimerkkejä nimistä:
+Tyyliohje ottaa kantaa esimerkiksi seuraaviin asioihin:
 
-* `name`
-* `results`
-* `check`
-* `first_name`
-* `check_status`
+* Sisennyksen leveys on neljä välilyöntiä.
+* Muuttujan asetuksen ja vertailujen kummallakin puolella on välilyönti (esimerkiksi asetus `x = 5` ja vertailu `a < b`).
+* Muuttujien, funktioiden ja moduulien nimet kirjoitetaan pienillä kirjaimilla. Jos nimi muodostuu useasta sanasta, niiden välissä voi olla alaviiva `_`.
 
 ## Lisäaiheita
 
-### Merkkijonon formatointi
+### Merkkijonon muotoilu
 
 Melko uusi Pythonin ominaisuus on _f-string_, jossa merkkijonon alussa on merkki `f`. Tämän avulla merkkijonon sisällä voi käyttää muuttujia ja muita lausekkeita aaltosuluissa.
 
@@ -460,4 +464,53 @@ print(lengths) # [5, 6, 6]
 
 ### Säännölliset lausekkeet
 
+Säännöllinen lauseke (_regex_) määrittelee merkkijonon halutun sisällön. Voimme käsitellä säännöllisiä lausekkeita moduulin `re` avulla.
+
+Esimerkiksi seuraava koodi varmistaa, että merkkijono `word` muodostuu kirjaimista `a`–`z`:
+
+```python
+import re
+
+if re.match(r"^[a-z]+$", word):
+    ok = True
+```
+
+Tässä tapauksessa säännöllinen lauseke on `^[a-z]+$`. Se muodostuu seuraavista osista:
+
+* `^` tarkoittaa merkkijonon alkua
+* `[a-z]` tarkoittaa mitä tahansa merkkiä väliltä `a`–`z`
+* `+` toistaa edeltävää osaa yhden tai useamman kerran
+* `$` tarkoittaa merkkijonon loppua
+
 ### Dekoraattorit
+
+Dekoraattori luo funktion ympärille kuoren, jonka avulla funktion kutsuminen aiheuttaa automaattisesti jonkin lisätoiminnon.
+
+Esimerkiksi seuraavassa koodissa dekoraattori `debug` tulostaa rivin tietoa aina, kun funktiota kutsutaan, ja näyttää funktion nimen ja parametrit.
+
+```python
+import functools
+
+def debug(f):
+    @functools.wraps(f)
+    def wrapper(*args):
+        print(f"kutsu {f.__name__} parametreilla {args}")
+        f(*args)
+    return wrapper
+
+@debug
+def hello(name):
+    print("Moikka,", name)
+
+hello("Maija")
+hello("Kaaleppi")
+```
+
+```
+kutsu hello parametreilla ('Maija',)
+Moikka, Maija
+kutsu hello parametreilla ('Kaaleppi',)
+Moikka, Kaaleppi
+```
+
+Flask-kirjastossa dekoraattorit ovat keskeisessä roolissa, koska niiden avulla määritetään, mitä sivupyyntöjä mikäkin funktio käsittelee.
