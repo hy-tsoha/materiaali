@@ -12,7 +12,7 @@ Herokussa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimell
 
 Komentorivityökalun käyttö alkaa kirjautumalla sisään:
 
-```bash
+```prompt
 $ heroku login
 heroku: Press any key to open up the browser to login or q to exit:
 ```
@@ -25,7 +25,7 @@ Komento `heroku help` (tai pelkkä `heroku`) näyttää listan komentorivityöka
 
 Seuraava komento luo uuden sovelluksen nimellä `tsoha-visitors`:
 
-```bash
+```prompt
 $ heroku apps:create tsoha-visitors
 Creating ⬢ tsoha-visitors... done
 https://tsoha-visitors.herokuapp.com/ | https://git.heroku.com/tsoha-visitors.git
@@ -37,13 +37,13 @@ Sovellus julkaistaan Herokussa lähettämällä haluttu sovelluksen versio Herok
 
 Voimme kytkeä paikallisen repositorion Herokuun näin:
 
-```bash
+```prompt
 $ heroku git:remote -a tsoha-visitors
 ```
 
 Tämä komento määrittää, että tässä hakemistossa olevan sovelluksen repositorio kytketään Herokun sovelluksen `tsoha-visitors` repositorioon. Voimme tarkastella komennon vaikutusta seuraavasti:
 
-```bash
+```prompt
 $ git remote -v
 heroku	https://git.heroku.com/tsoha-visitors.git (fetch)
 heroku	https://git.heroku.com/tsoha-visitors.git (push)
@@ -53,7 +53,7 @@ origin	https://github.com/pllk/tsoha-visitors.git (push)
 
 Tästä näkee, että oletuskohde `origin` osoittaa edelleen GitHubiin, mutta uutena on kohde `heroku`, joka lähettää sovelluksen Herokuun. Lähetys tapahtuisi näin:
 
-```bash
+```prompt
 $ git push heroku master
 ```
 
@@ -63,13 +63,13 @@ Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteen
 
 Tähän asti olemme käynnistäneet sovelluksen komennolla `flask run`, mutta tätä tapaa ei suositella tuotantokäyttöön. Tämän vuoksi asennamme Herokua varten Gunicorn-palvelimen:
 
-```bash
+```prompt
 $ pip install gunicorn
 ```
 
 Tämän jälkeen tiedosto `requirements.txt` tulee saattaa ajan tasalle:
 
-```bash
+```prompt
 $ pip freeze > requirements.txt
 ```
 
@@ -85,13 +85,13 @@ Tämä kertoo Herokulle, että tyyppiä "web" oleva sovellus käynnistetään ko
 
 Seuraava komento luo Heroku-sovellukselle tietokannan:
 
-```bash
+```prompt
 $ heroku addons:create heroku-postgresql
 ```
 
 Tämän jälkeen voimme yhdistää tietokantaan näin ja luoda sinne taulun `visitors`:
 
-```bash
+```prompt
 $ heroku psql
 tsoha-visitors::DATABASE=> CREATE TABLE visitors (id SERIAL PRIMARY KEY, time TIMESTAMP);
 tsoha-visitors::DATABASE=> \q
@@ -99,13 +99,13 @@ tsoha-visitors::DATABASE=> \q
 
 Olisimme myös voineet luoda taulun näin ohjaamalla sinne tiedoston `schema.sql` komennot:
 
-```bash
+```prompt
 $ heroku psql < schema.sql
 ```
 
 Kun Herokuun luodaan tietokanta, samalla asetetaan ympäristömuuttuja `DATABASE_URL`, minkä ansiosta sovellus toimii suoraan myös Herokussa, jos se käyttää tätä ympäristömuuttujaa. Voimme tarkastaa sovelluksen ympäristömuuttujat näin:
 
-```bash
+```prompt
 $ heroku config
 === tsoha-visitors Config Vars
 DATABASE_URL: postgres://(tietokannan osoite näkyy tässä)
@@ -115,7 +115,7 @@ Huomaa, että tietämällä Herokun tietokannan osoitteen siihen pääsee yhdist
 
 Voimme myös asettaa ympäristömuuttujia tarvittaessa itse. Esimerkiksi seuraava komento asettaisi salaisen avaimen istuntoja varten:
 
-```bash
+```prompt
 $ heroku config:set SECRET_KEY=(avain tähän)
 ```
 
@@ -123,7 +123,7 @@ $ heroku config:set SECRET_KEY=(avain tähän)
 
 Nyt kaikki alkaa olla valmista ja voimme koettaa lähettää sovelluksen Herokuun:
 
-```bash
+```prompt
 $ git push heroku master
 remote: Compressing source files... done.
 remote: Building source:
@@ -139,7 +139,7 @@ remote:        ERROR: Invalid requirement: 'pkg-resources=0.0.0' (from line 8 of
 
 Jotain meni kuitenkin pieleen: tiedostossa `requirements.txt` oleva riippuvuus `pkg-resources` ei kelpaa Herokulle. Tässä tapauksessa toimiva korjaus on poistaa kyseinen rivi tiedostosta ja yrittää uudestaan:
 
-```bash
+```prompt
 remote: Compressing source files... done.
 remote: Building source:
 remote: 

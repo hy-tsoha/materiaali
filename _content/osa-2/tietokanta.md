@@ -64,7 +64,7 @@ $
 
 Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjastoa lisää:
 
-```bash
+```prompt
 (venv) $ pip install flask-sqlalchemy
 (venv) $ pip install psycopg2
 ```
@@ -178,7 +178,7 @@ $ export DATABASE_URL=postgresql:///pllk
 
 Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
 
-```bash
+```prompt
 $ pip install python-dotenv
 ```
 

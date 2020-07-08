@@ -17,7 +17,7 @@ TODO
 
 Pythonin komentotulkki on kätevä tapa kielen opetteluun. Komentotulkki käynnistyy komennolla `python3`, minkä jälkeen voi kirjoittaa suoritettavia komentoja.
 
-```bash
+```prompt
 $ python3
 >>> 1+2
 3
@@ -38,7 +38,7 @@ print("Moikka,", nimi)
 
 Koodi suoritetaan näin komentoriviltä:
 
-```bash
+```prompt
 $ python3 test.py
 Anna nimi: Kotivalo
 Moikka, Kotivalo
@@ -50,7 +50,7 @@ Moikka, Kotivalo
 
 Pythonin lukutyypit ovat `int` (kokonaisluku) ja `float` (liukuluku). Lukujen käsittely toimii suunnilleen samalla tavalla kuin muissakin kielissä:
 
-```bash
+```prompt
 >>> 1+2
 3
 >>> 3*(5+7)
@@ -59,7 +59,7 @@ Pythonin lukutyypit ovat `int` (kokonaisluku) ja `float` (liukuluku). Lukujen k�
 
 Operaattori `/` tuottaa liukuluvun myös silloin, kun molemmat luvut ovat kokonaislukuja. Sen sijaan operaattori `//` tuottaa kokonaisluvun:
 
-```bash
+```prompt
 >>> 5/2
 2.5
 >>> 5//2
@@ -68,14 +68,14 @@ Operaattori `/` tuottaa liukuluvun myös silloin, kun molemmat luvut ovat kokona
 
 Operaattori `**` laskee potenssilaskun:
 
-```bash
+```prompt
 >>> 3**4
 81
 ```
 
 Python tukee automaattisesti mielivaltaisen suuria kokonaislukuja:
 
-```bash
+```prompt
 >>> 2**200
 1606938044258990275541962092341162602522202993782792835301376
 ```
@@ -84,7 +84,7 @@ Python tukee automaattisesti mielivaltaisen suuria kokonaislukuja:
 
 Merkkijonon voi merkitä joko lainaus- tai heittomerkeillä:
 
-```bash
+```prompt
 >>> "testi"
 'testi'
 >>> 'testi'
@@ -93,7 +93,7 @@ Merkkijonon voi merkitä joko lainaus- tai heittomerkeillä:
 
 Merkkijonoja voi yhdistää toisiinsa `+`-merkillä, kuten muissakin kielissä. Lisäksi merkkijonoa voi monistaa `*`-merkillä.
 
-```bash
+```prompt
 >>> "esi"+"merkki"
 'esimerkki'
 >>> "abc"*5
@@ -102,14 +102,14 @@ Merkkijonoja voi yhdistää toisiinsa `+`-merkillä, kuten muissakin kielissä. 
 
 Funktio `len` antaa merkkijonon pituuden:
 
-```bash
+```prompt
 >>> len("testi")
 5
 ```
 
 Merkkijonoa voi indeksoida hakasuluilla. Huomaa, että indeksoida voi myös merkkijonon lopusta alkaen negatiivisilla indekseillä.
 
-```bash
+```prompt
 >>> "testi"[0]
 't'
 >>> "testi"[1]
@@ -120,7 +120,7 @@ Merkkijonoa voi indeksoida hakasuluilla. Huomaa, että indeksoida voi myös merk
 
 Syntaksi `[a:b]` antaa osajonon, joka alkaa kohdasta `a` ja päättyy juuri ennen kohtaa `b`:
 
-```bash
+```prompt
 >>> "esimerkki"[3:6]
 'mer'
 ```
@@ -129,7 +129,7 @@ Syntaksi `[a:b]` antaa osajonon, joka alkaa kohdasta `a` ja päättyy juuri enne
 
 Totuusarvot toimivat samalla tavalla kuin muissakin kielissä. Huomaa, että `True` ja `False` kirjoitetaan isolla.
 
-```bash
+```prompt
 >>> 3 < 8
 True
 >>> len("testi") == 5
@@ -140,7 +140,7 @@ False
 
 Ehtoja voi yhdistää sanojan `and` ja `or` avulla. Sana `not` muuttaa ehdon käänteiseksi.
 
-```bash
+```prompt
 >>> 3 < 8 or 3 > 8
 True
 >>> not 3 > 8
@@ -149,7 +149,7 @@ True
 
 Pythonin erikoisuutena totuusarvoja voi myös ketjuttaa. Seuraavat vertailut tarkoittavat samaa
 
-```bash
+```prompt
 >>> 3 < 7 < 8
 True
 >>> 3 < 7 and 7 < 8
@@ -160,7 +160,7 @@ True
 
 Funktio `str` muuttaa annetun arvon merkkijonoksi. Vastaavasti funktiot `int` ja `float` muuttavat arvon luvuksi.
 
-```bash
+```prompt
 >>> str(1+2)
 '3'
 >>> int(3)*5
@@ -169,7 +169,7 @@ Funktio `str` muuttaa annetun arvon merkkijonoksi. Vastaavasti funktiot `int` ja
 
 Huomaa, että Python on tarkka tyypeistä. Esimerkiksi ei ole mahdollista yhdistää merkkijonoa ja lukua ilman tyyppimuunnosta:
 
-```bash
+```prompt
 >>> "testi"+5
 TypeError: must be str, not int
 >>> "testi"+str(5)
@@ -180,7 +180,7 @@ TypeError: must be str, not int
 
 Muuttujia voi käyttää samaan tapaan kuin muissakin kielissä:
 
-```bash
+```prompt
 >>> a = 3
 >>> b = 5
 >>> a+b
@@ -189,7 +189,7 @@ Muuttujia voi käyttää samaan tapaan kuin muissakin kielissä:
 
 Muuttujaa ei määritellä ennen käyttämistä eikä muuttujalla ole kiinteää tyyppiä:
 
-```bash
+```prompt
 >>> x = 5
 >>> x
 5
@@ -200,7 +200,7 @@ Muuttujaa ei määritellä ennen käyttämistä eikä muuttujalla ole kiinteää
 
 Funktio `type` antaa muuttujan senhetkisen tyypin:
 
-```bash
+```prompt
 >>> x = 5
 >>> type(x)
 <class 'int'>
@@ -289,11 +289,11 @@ Komennot `break` ja `continue` toimivat samalla tavalla kuin muissakin kielissä
 
 Lista on Pythonin perustietorakenne, joka sisältää joukon alkioita tietyssä järjestyksessä. Tässä on kaksi tapaa määritellä lista:
 
-```bash
+```prompt
 >>> x = [1,2,3]
 ```
 
-```bash
+```prompt
 >>> x = []
 >>> x.append(1)
 >>> x.append(2)
@@ -302,7 +302,7 @@ Lista on Pythonin perustietorakenne, joka sisältää joukon alkioita tietyssä 
 
 Listaa voi käyttää melko samalla tavalla kuin merkkijonoa:
 
-```bash
+```prompt
 >>> x
 [1, 2, 3]
 >>> len(x)
@@ -316,7 +316,7 @@ Listaa voi käyttää melko samalla tavalla kuin merkkijonoa:
 
 Operaattori `in` kertoo, onko listalla tiettyä alkiota:
 
-```bash
+```prompt
 >>> x = [1,2,3]
 >>> 2 in x
 True
@@ -326,14 +326,14 @@ False
 
 Listan alkiot voivat olla erityyppisiä ja myös toisia listoja:
 
-```bash
+```prompt
 >>> a = [5,"abc",True]
 >>> b = [1,2,[3,4,5]]
 ```
 
 Yksi listan ja merkkijonon ero on, että listan sisältöä voi muuttaa, kun taas merkijonossa tämä ei ole mahdollista:
 
-```bash
+```prompt
 >>> a = [1,2,3]
 >>> a[0] = 5
 >>> a
@@ -345,7 +345,7 @@ TypeError: 'str' object does not support item assignment
 
 Pythonin muuttujat sisältävät viittauksia. Seuraavassa koodissa `a` ja `b` viittaavat samaan listaan, joten listan `a` muuttaminen heijastuu myös listaan `b`:
 
-```bash
+```prompt
 >>> a = [1,2,3]
 >>> b = a
 >>> a[0] = 5
@@ -357,7 +357,7 @@ Pythonin muuttujat sisältävät viittauksia. Seuraavassa koodissa `a` ja `b` vi
 
 Listasta voi kuitenkin tehdä aidon kopion `[:]`-syntaksilla näin:
 
-```bash
+```prompt
 >>> a = [1,2,3]
 >>> b = a[:]
 >>> a[0] = 5
@@ -371,11 +371,11 @@ Listasta voi kuitenkin tehdä aidon kopion `[:]`-syntaksilla näin:
 
 Sanakirja muodostuu avain-arvo-pareista. Tässä on kaksi tapaa määritellä sanakirja:
 
-```bash
+```prompt
 >>> s = {"apina":"monkey", "banaani":"banana", "cembalo":"harpsichord"}
 ```
 
-```bash
+```prompt
 >>> s = {}
 >>> s["apina"] = "monkey"
 >>> s["banaani"] = "banana"
@@ -384,7 +384,7 @@ Sanakirja muodostuu avain-arvo-pareista. Tässä on kaksi tapaa määritellä sa
 
 Sanakirjasta voi hakea tietoa avaimen perusteella. Operaattori `in` kertoo, onko sanakirjassa tiettyä avainta.
 
-```bash
+```prompt
 >>> s["apina"]
 'monkey'
 >>> "banaani" in s
@@ -395,7 +395,7 @@ False
 
 Sanakirjan avain ei saa muuttua. Niinpä merkkijono kelpaa avaimeksi mutta lista ei kelpaa:
 
-```bash
+```prompt
 >>> s[[1,2,3]] = "testi"
 TypeError: unhashable type: 'list'
 ```
@@ -404,7 +404,7 @@ TypeError: unhashable type: 'list'
 
 Tuple on kokoelma arvoja sulkujen sisällä. Se toimii melko samalla tavalla kuin lista:
 
-```bash
+```prompt
 >>> x = (5,123,"apina")
 >>> x[1]
 123
@@ -414,14 +414,14 @@ Tuple on kokoelma arvoja sulkujen sisällä. Se toimii melko samalla tavalla kui
 
 Kuitenkaan tuplen sisältöä ei voi muokata:
 
-```bash
+```prompt
 >>> x[0] = 2
 TypeError: 'tuple' object does not support item assignment
 ```
 
 Tuplen avulla voidaan tallentaa toisiinsa liittyviä arvoja, joita on kiinteä määrä. Esimerkiksi seuraavalla listalla jokainen alkio sisältää koodarin nimen ja lempikielen:
 
-```bash
+```prompt
 >>> x = []
 >>> x.append(("Maija","C++"))
 >>> x.append(("Kotivalo","Python"))
@@ -432,7 +432,7 @@ Tuplen avulla voidaan tallentaa toisiinsa liittyviä arvoja, joita on kiinteä m
 
 Koska tuplen sisältö ei muutu, sitä voidaan käyttää sanakirjan avaimena:
 
-```bash
+```prompt
 s = {}
 s[(1,2)] = "aybabtu"
 ```
@@ -441,7 +441,7 @@ s[(1,2)] = "aybabtu"
 
 Oma funktio määritellään avainsanan `def` avulla. Esimerkiksi seuraava koodi määrittelee funktion `hello`, joka tervehtii parametrina annettua nimeä:
 
-```bash
+```prompt
 >>> def hello(name):
 ...     print("Moikka,",name)
 ... 
@@ -453,7 +453,7 @@ Moikka, Kaaleppi
 
 Seuraava funktio `check` puolestaan tarkastaa, että nimen pituus on enintään maksimipituus:
 
-```bash
+```prompt
 >>> def check(name,max_length):
 ...     return len(name) <= max_length
 ... 
@@ -467,7 +467,7 @@ False
 
 Funktioiden ulkopuolella määritelty muuttuja on globaali ja se näkyy kaikissa funktioissa:
 
-```bash
+```prompt
 >>> def test():
 ...     print(x)
 ... 
@@ -478,7 +478,7 @@ Funktioiden ulkopuolella määritelty muuttuja on globaali ja se näkyy kaikissa
 
 Kuitenkin jos muuttuja saa arvon funktiossa, siitä tulee funktion paikallinen muuttuja eikä sillä ole vaikutusta funktion ulkopuolelle:
 
-```bash
+```prompt
 >>> def test():
 ...     x = 2
 ...     print(x)
@@ -498,7 +498,7 @@ Kuitenkin jos muuttuja saa arvon funktiossa, siitä tulee funktion paikallinen m
 
 Pythonin standardikirjasto muodostuu moduuleista, joita voi ottaa mukaan `import`-komennolla. Esimerkiksi seuraava koodi käyttää moduulin `random` funktiota `randint`:
 
-```bash
+```prompt
 >>> import random
 >>> random.randint(1,100)
 37
@@ -506,7 +506,7 @@ Pythonin standardikirjasto muodostuu moduuleista, joita voi ottaa mukaan `import
 
 Toinen tapa on ottaa mukaan moduulista tietty funktio näin:
 
-```bash
+```prompt
 >>> from random import randint
 >>> randint(1,100)
 18
@@ -529,7 +529,7 @@ def check(name,max_length):
 
 Voimme käyttää moduulia näin:
 
-```bash
+```prompt
 >>> import test
 >>> test.hello("Maija")
 Moikka, Maija
@@ -543,7 +543,7 @@ False
 
 Melko uusi Pythonin ominaisuus on _f-string_, jossa merkkijonon alussa on merkki `f`. Tämän avulla merkkijonon sisällä voi käyttää muuttujia ja muita lausekkeita aaltosuluissa.
 
-```bash
+```prompt
 >>> name = "Kotivalo"
 >>> age = 5
 >>> f"{name} on {age}-vuotias"
@@ -556,7 +556,7 @@ _Listakoosteen_ (_list comprehension_) avulla voi koostaa uuden listan vanhan li
 
 Seuraavassa esimerkissä pohjana on lista `a`, listaan `b` tulee jokainen luku kaksinkertaisena ja listaan `c` tulee jokainen luku merkkijonona.
 
-```bash
+```prompt
 >>> a = [1,2,3]
 >>> b = [2*x for x in a]
 >>> c = [str(x) for x in a]
