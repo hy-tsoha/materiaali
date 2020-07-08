@@ -6,7 +6,7 @@ sub-sections:
       - sub-section-title: Sovellus tuotantoon
       - sub-section-title: Virheiden etsiminen
       - sub-section-title: Sovelluksen rakenne
-      - sub-section-title: Esimerkkisovellus
+      - sub-section-title: "Esimerkki: Keskustelu"
 
 ---
 # Osa 3

@@ -1,4 +1,4 @@
-## Esimerkkisovellus
+## Esimerkki: Kyselyt
 
 Teemme seuraavaksi hieman laajemman esimerkkisovelluksen, joka esittelee tietokannan käyttämiseen liittyviä tekniikoita. Sovelluksessa käyttäjät voivat luoda kyselyitä sekä vastata muiden luomiin kyselyihin. Sovelluksen käyttäminen näyttää tältä:
 

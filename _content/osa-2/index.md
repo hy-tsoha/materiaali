@@ -3,7 +3,7 @@ layout: chapter
 nav-title: Osa 2
 sub-sections:
       - sub-section-title: Tietokannan käyttäminen
-      - sub-section-title: Esimerkkisovellus
+      - sub-section-title: "Esimerkki: Kyselyt"
       - sub-section-title: Istunnot ja kirjautuminen
       - sub-section-title: Hakutoiminto
 ---
