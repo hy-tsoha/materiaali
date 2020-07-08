@@ -172,7 +172,7 @@ Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen 
 
 Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa `export` seuraavasti ennen sovelluksen käynnistämistä:
 
-```bash
+```prompt
 $ export DATABASE_URL=postgresql:///pllk
 ```
 

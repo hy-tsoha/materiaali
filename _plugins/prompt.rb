@@ -13,6 +13,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
     state :root do
       rule %r/\$\s+/, Name::Variable
       rule %r/.+/, Text
+      rule %r/\n/, Text
     end
   end
 end
