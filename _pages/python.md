@@ -181,6 +181,8 @@ rivi 3
 rivi 4
 ```
 
+Tässä `range(n)` tarkoittaa, että lukuväli alkaa 0:sta ja päättyy juuri ennen lukua `n`. Vastaavasti `range(a,b)` tarkoittaa, että lukuväli alkaa `a`:sta ja päättyy juuri ennen lukua `b`.
+
 ## Lisää tietorakenteita
 
 ### Sanakirja
@@ -238,6 +240,30 @@ print(person[2]) # Finland
 ```
 
 Tuple eroaa kuitenkin listasta siinä, että sen sisältöä ei voi muuttaa. Tuplea käytetään toisiinsa liittyvän tiedon kokoamiseen yhteen yllä olevan esimerkin kaltaisesti.
+
+## Viittaus ja kopiointi
+
+Pythonissa muuttujassa on aina viittaus varsinaiseen sisältöön. Seuraava koodi havainnollistaa asiaa:
+
+```python
+lista1 = [1,2,3]
+lista2 = lista1
+lista1[0] = 5
+print(lista1[0]) # 5
+print(lista2[0]) # 5
+```
+
+Koodissa muuttujat `lista1` ja `lista2` viittaavat samaan listaan, joten kun listaa muutetaan muuttujan `lista1` kautta, niin muutos heijastuu myös muuttujaan `lista2`.
+
+Voimme kuitenkin tarvittaessa luoda listasta kopion `[:]`-syntaksilla, jolloin listat ovat erillisiä:
+
+```python
+lista1 = [1,2,3]
+lista2 = lista1[:]
+lista1[0] = 5
+print(lista1[0]) # 5
+print(lista2[0]) # 1
+```
 
 ## Funktiot
 
@@ -304,7 +330,6 @@ test()
 print(x) # 1
 ```
 
-
 ## Virheenkäsittely
 
 Koodissa mahdollisesti tapahtuvan virheen voi käsitellä `try`/`except`-rakenteella.
@@ -368,7 +393,7 @@ Moikka, Anna
 Moikka, Uolevi
 ```
 
-### Moduulien viittaukset
+### Moduulin suoritus
 
 Kun moduuli otetaan mukaan `import`-komennolla, siellä oleva koodi suoritetaan. Kuitenkin jos moduuli otetaan mukaan useita kertoja, koodi suoritetaan vain ensimmäisellä kerralla.
 
@@ -398,6 +423,18 @@ Moikka, Maija
 Moikka, Anna
 Moikka, Uolevi
 ```
+
+## Nimien valinta
+
+Pythonissa muuttujien, funktioiden ja moduulien nimet on tapana kirjoittaa kokonaan pienillä kirjaimilla. Jos muuttujan tai funktion nimessä on useita sanoja, väliin tulee alaviiva `_`, mutta moduuleissa sanat kirjoitetaan yhteen.
+
+Tässä on esimerkkejä nimistä:
+
+* `name`
+* `results`
+* `check`
+* `first_name`
+* `check_status`
 
 ## Lisäaiheita
 
