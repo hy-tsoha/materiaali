@@ -23,3 +23,10 @@ function generateTOC() {
   tof.parentNode.insertBefore(document.getElementsByTagName("h1")[0], tof)
   tof.style.removeProperty("display")
 }
+
+function test () {
+  console.log("joud")
+  document.getElementById("side-nav").onmouseover = () => {
+    console.log("HEI")
+  }
+}

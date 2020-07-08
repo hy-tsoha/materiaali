@@ -6,7 +6,6 @@ html {
     line-height: 1.5;
     color: #000000;
     width: 100%;
-    overflow-x: hidden;
     background-color: #ffffff;
     background-image: url(../img/taustakuva.svg);
     background-position: center;
@@ -66,14 +65,3 @@ p:not(.code-title) + .highlighter-rouge{
     margin-bottom: 0;
     user-select: none;
 }
-
-/*.code-title-bash {
-    color: white;
-    position: relative;
-    text-align: right;
-    top: 3.5em;
-    right: 1em;
-    margin-top: -3.5em;
-    margin-bottom: 0;
-    user-select: none;
-}*/

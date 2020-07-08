@@ -28,6 +28,8 @@ title: TODO
   - edellisessä tapauksessa sivuvalikkoa ei välillä siirretä vaikka rullauksen suuntaa vaihtaisi niin että sivuvalikkoa voisi siirtää
   - yllämainitut esimerkit eivät välttämättä ole kattavia tai täysin tarkkoja, mutta ongelmana on että rullaus ei toimi ennalta-arvattavasti. On esimerkiksi mahdollista saada tilanne jossa epätoivoisesta hiirellä alaspäin rullaamisesta huolimatta sivuvalikon osa 4 ei tule lainkaan näkyviin.
 
+  - Scrollaus toimii myös sivuvalikossa nyt paremmin eli sivun sisällön ei pitäisi enää liikkua, kun sivuvalikkoa scrollaillaan.
+
 ## Taulukot:
 
 * Mikä olisi tyylikäs muotoilu taulukoille? Miten otsikkorivi merkitään?
