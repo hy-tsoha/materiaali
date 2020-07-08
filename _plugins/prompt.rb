@@ -12,6 +12,9 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
     state :root do
       rule %r/\$\s+/, Name::Variable
+      rule %r/\(venv\)\s+\$\s+/, Name::Variable
+      rule %r/>>>\s+/, Name::Variable
+      rule %r/[a-z]+=#\s+/, Name::Variable
       rule %r/.+/, Text
       rule %r/\n/, Text
     end
