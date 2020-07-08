@@ -5,7 +5,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
   class Prompt < Rouge::RegexLexer
     title "prompt"
-    desc "Minimal terminal prompt"
+    desc "Minimal prompt for various interactive sessions (shell, python, venv, psql)"
 
     tag 'prompt'
     aliases 'prompt'
