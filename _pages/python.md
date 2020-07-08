@@ -15,7 +15,7 @@ TODO
 
 ### Komentotulkki
 
-Pythonin komentotulkki on kätevä tapa kielen opetteluun. Komentotulkki käynnistyy komennolla `python3`, minkä jälkeen voi kirjoittaa suoritettavia komentoja.
+Pythonin komentotulkki on kätevä tapa kielen ominaisuuksien testaamiseen. Komentotulkki käynnistyy komennolla `python3`, minkä jälkeen voi kirjoittaa suoritettavia komentoja.
 
 ```prompt
 $ python3
@@ -32,6 +32,7 @@ Seuraavassa tiedostossa on Python-koodi, joka kysyy käyttäjän nimeä ja näyt
 
 <p class="code-title">test.py</p>
 ```python
+# kommentti merkitään näin
 name = input("Anna nimi: ")
 print("Moikka,", nimi)
 ```
@@ -44,174 +45,56 @@ Anna nimi: Kotivalo
 Moikka, Kotivalo
 ```
 
-## Perustyypit
+## Tyypit ja muuttujat
 
-### Luvut
-
-Pythonin lukutyypit ovat `int` (kokonaisluku) ja `float` (liukuluku). Lukujen käsittely toimii suunnilleen samalla tavalla kuin muissakin kielissä:
-
-```prompt
->>> 1+2
-3
->>> 3*(5+7)
-36
-```
-
-Operaattori `/` tuottaa liukuluvun myös silloin, kun molemmat luvut ovat kokonaislukuja. Sen sijaan operaattori `//` tuottaa kokonaisluvun:
-
-```prompt
->>> 5/2
-2.5
->>> 5//2
-2
-```
-
-Operaattori `**` laskee potenssilaskun:
-
-```prompt
->>> 3**4
-81
-```
-
-Python tukee automaattisesti mielivaltaisen suuria kokonaislukuja:
-
-```prompt
->>> 2**200
-1606938044258990275541962092341162602522202993782792835301376
-```
-
-### Merkkijonot
-
-Merkkijonon voi merkitä joko lainaus- tai heittomerkeillä:
-
-```prompt
->>> "testi"
-'testi'
->>> 'testi'
-'testi'
-```
-
-Merkkijonoja voi yhdistää toisiinsa `+`-merkillä, kuten muissakin kielissä. Lisäksi merkkijonoa voi monistaa `*`-merkillä.
-
-```prompt
->>> "esi"+"merkki"
-'esimerkki'
->>> "abc"*5
-'abcabcabcabcabc'
-```
-
-Funktio `len` antaa merkkijonon pituuden:
-
-```prompt
->>> len("testi")
-5
-```
-
-Merkkijonoa voi indeksoida hakasuluilla. Huomaa, että indeksoida voi myös merkkijonon lopusta alkaen negatiivisilla indekseillä.
-
-```prompt
->>> "testi"[0]
-'t'
->>> "testi"[1]
-'e'
->>> "testi"[-1]
-'i'
-```
-
-Syntaksi `[a:b]` antaa osajonon, joka alkaa kohdasta `a` ja päättyy juuri ennen kohtaa `b`:
-
-```prompt
->>> "esimerkki"[3:6]
-'mer'
-```
-
-### Totuusarvot
-
-Totuusarvot toimivat samalla tavalla kuin muissakin kielissä. Huomaa, että `True` ja `False` kirjoitetaan isolla.
-
-```prompt
->>> 3 < 8
-True
->>> len("testi") == 5
-True
->>> 5 > 5
-False
-```
-
-Ehtoja voi yhdistää sanojan `and` ja `or` avulla. Sana `not` muuttaa ehdon käänteiseksi.
-
-```prompt
->>> 3 < 8 or 3 > 8
-True
->>> not 3 > 8
-True
-```
-
-Pythonin erikoisuutena totuusarvoja voi myös ketjuttaa. Seuraavat vertailut tarkoittavat samaa
-
-```prompt
->>> 3 < 7 < 8
-True
->>> 3 < 7 and 7 < 8
-True
-```
-
-### Tyyppimuunnokset
-
-Funktio `str` muuttaa annetun arvon merkkijonoksi. Vastaavasti funktiot `int` ja `float` muuttavat arvon luvuksi.
-
-```prompt
->>> str(1+2)
-'3'
->>> int(3)*5
-15
-```
-
-Huomaa, että Python on tarkka tyypeistä. Esimerkiksi ei ole mahdollista yhdistää merkkijonoa ja lukua ilman tyyppimuunnosta:
-
-```prompt
->>> "testi"+5
-TypeError: must be str, not int
->>> "testi"+str(5)
-'testi5'
-```
-
-## Muuttujat
-
-Muuttujia voi käyttää samaan tapaan kuin muissakin kielissä:
-
-```prompt
->>> a = 3
->>> b = 5
->>> a+b
-8
-```
-
-Muuttujaa ei määritellä ennen käyttämistä eikä muuttujalla ole kiinteää tyyppiä:
-
-```prompt
->>> x = 5
->>> x
-5
->>> x = "abc"
->>> x
-'abc'
-```
-
-Funktio `type` antaa muuttujan senhetkisen tyypin:
-
-```prompt
->>> x = 5
->>> type(x)
-<class 'int'>
-```
-
-## Ehtorakenne
-
-Pythonin `if`-rakenne toimii seuraavasti:
+Pythonin tavallisimmat tietotyypit ovat `int` (kokonaisluku), `float` (liukuluku), `str` (merkkijono) ja `bool` (totuusarvo). Esimerkkejä operaatioista:
 
 ```python
-name = input("Anna nimesi: ")
+print(5*(2+3)) # 30
+print(5/2) # 2.5
+print(5//2) # 2
+print(3**4) # 81
+print(2**100) # 1267650600228229401496703205376
+print("esi"+"merkki") # esimerkki
+print("abc"*4) # abcabcabcabc
+print(1+2 == 3) # True
+print(3 > 7) # False
+```
+
+Pythonissa uusi muuttuja syntyy automaattisesti, kun muuttujalle annetaan arvo:
+
+```python
+name = "Maija"
+age = 25
+```
+
+Muuttujalla ei ole kiinteää tyyppiä vaan tyyppi määräytyy sen mukaan, millainen arvo muuttujaan sijoitetaan.
+
+Python on tarkka tyypeistä, eikä esimerkiksi seuraava koodi toimi, koska merkkijonoa ja lukua ei voi suoraan yhdistää keskenään:
+
+```python
+a = "testi"
+b = 123
+c = a+b
+```
+
+Ratkaisu on käyttää funktiota `str`, joka muuttaa tyypin merkkijonoksi:
+
+```python
+a = "testi"
+b = 123
+c = a+str(b)
+```
+
+Vastaavasti funktiot `int` ja `float` muuttavat tyypin kokonais- ja liukuluvuksi.
+
+## Lohkot
+
+Pythonissa sisennys ilmaisee, mikä koodi kuuluu lohkon sisään esimerkiksi ehto- ja toistorakenteissa. Tavallinen tapa on sisentää neljällä välilyönnillä.
+
+Esimerkiksi seuraavassa koodissa on `if`-rakenne:
+
+```python
 if name == "Kotivalo":
     print("Moikka!")
 elif name == "Justiina":
@@ -220,23 +103,61 @@ else:
     print("Olet tuntematon")
 ```
 
+Seuraavassa koodissa puolestaan on `while`-rakenne:
+
+```python
+counter = 10
+while counter >= 1:
+    print(counter)
+    counter -= 1
 ```
-Anna nimesi: Justiina
-Heippa!
-```
 
-Pythonissa sisennys ilmaisee, mikä koodi kuuluu lohkon sisään esimerkiksi ehtorakenteessa. Tavallinen tapa on käyttää sisennyksenä neljää välilyöntiä.
+## Listat
 
-## Silmukat
-
-### For-silmukka
-
-For-silmukka käy läpi listan sisällön. Esimerkiksi seuraava silmukka tulostaa jokaisen listalla olevan sanan:
+Pythonin perustietorakenne on lista, jonka alkiot merkitään hakasulkujen `[` ja `]` sisään. Esimerkiksi seuraava koodi luo listan, jossa on kolme sanaa:
 
 ```python
 words = ["apina", "banaani", "cembalo"]
-for x in words:
-    print(x)
+```
+
+Toinen tapa luoda lista on aloittaa tyhjästä listasta ja lisätä alkiot `append`-metodilla:
+
+```python
+words = []
+words.append("apina")
+words.append("banaani")
+words.append("cembalo")
+```
+
+Listan pituus saadaa funktiolla `len` ja listan alkoihin pääsee käsiksi `[]`-syntaksilla:
+
+```python
+print(len(words)) # 3
+print(words[0]) # apina
+print(words[1]) # banaani
+```
+
+Pythonissa voi myös indeksoida negatiivisilla luvuilla, jolloin alkio haetaan listan lopusta laskien:
+
+```python
+print(words[-1]) # cembalo
+```
+
+Operaattori `in` kertoo, onko tietty alkio listalla:
+
+```python
+print("cembalo" in words) # True
+print("tuuba" in words) # False
+```
+
+## For-silmukka
+
+Pythonin `for`-silmukka käy läpi listan alkiot:
+
+```python
+words = ["apina","banaani","cembalo"]
+for word in words:
+    print(word)
 ```
 
 ```
@@ -245,274 +166,182 @@ banaani
 cembalo
 ```
 
-Funktion `range` avulla for-silmukalla voi käydä läpi lukuvälin. Esimerkiksi seuraava koodi tulostaa sata riviä:
+Funktio `range` tuottaa lukuvälin, joka voidaan käydä läpi `for`-silmukalla:
 
 ```python
-for i in range(1,101):
-    print("rivi", i)
+for i in range(5):
+    print("rivi",i)
 ```
 
 ```
+rivi 0
 rivi 1
 rivi 2
 rivi 3
-...
-rivi 100
+rivi 4
 ```
 
-Tässä `range(a,b)` tarkoittaa, että aloitetaan luvusta `a` ja lopetetaan juuri ennen lukua `b`.
-
-### While-silmukka
-
-While-silmukka toistaa koodia niin kauan kuin ehto on voimassa. Esimerkiksi näin:
-
-```python
-while True:
-    password = input("Anna salasana: ")
-    if password == "kissa":
-        break
-print("Tervetuloa!")
-```
-
-```
-Anna salasana: testi
-Anna salasana: aybabtu
-Anna salasana: kissa
-Tervetuloa!
-```
-
-Komennot `break` ja `continue` toimivat samalla tavalla kuin muissakin kielissä.
-
-## Tietorakenteet
-
-### Lista
-
-Lista on Pythonin perustietorakenne, joka sisältää joukon alkioita tietyssä järjestyksessä. Tässä on kaksi tapaa määritellä lista:
-
-```prompt
->>> x = [1,2,3]
-```
-
-```prompt
->>> x = []
->>> x.append(1)
->>> x.append(2)
->>> x.append(3)
-```
-
-Listaa voi käyttää melko samalla tavalla kuin merkkijonoa:
-
-```prompt
->>> x
-[1, 2, 3]
->>> len(x)
-3
->>> x[0]
-1
->>> y = [0]*10
->>> y
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-```
-
-Operaattori `in` kertoo, onko listalla tiettyä alkiota:
-
-```prompt
->>> x = [1,2,3]
->>> 2 in x
-True
->>> 5 in x
-False
-```
-
-Listan alkiot voivat olla erityyppisiä ja myös toisia listoja:
-
-```prompt
->>> a = [5,"abc",True]
->>> b = [1,2,[3,4,5]]
-```
-
-Yksi listan ja merkkijonon ero on, että listan sisältöä voi muuttaa, kun taas merkijonossa tämä ei ole mahdollista:
-
-```prompt
->>> a = [1,2,3]
->>> a[0] = 5
->>> a
-[5, 2, 3]
->>> b = "abc"
->>> b[0] = "x"
-TypeError: 'str' object does not support item assignment
-```
-
-Pythonin muuttujat sisältävät viittauksia. Seuraavassa koodissa `a` ja `b` viittaavat samaan listaan, joten listan `a` muuttaminen heijastuu myös listaan `b`:
-
-```prompt
->>> a = [1,2,3]
->>> b = a
->>> a[0] = 5
->>> a
-[5, 2, 3]
->>> b
-[5, 2, 3]
-```
-
-Listasta voi kuitenkin tehdä aidon kopion `[:]`-syntaksilla näin:
-
-```prompt
->>> a = [1,2,3]
->>> b = a[:]
->>> a[0] = 5
->>> a
-[5, 2, 3]
->>> b
-[1, 2, 3]
-```
+## Lisää tietorakenteita
 
 ### Sanakirja
 
-Sanakirja muodostuu avain-arvo-pareista. Tässä on kaksi tapaa määritellä sanakirja:
+Sanakirja (dict) muodostuu avain-arvo-pareista. Esimerkiksi seuraava koodi luo sanakirjan, jossa on kolme paria:
 
-```prompt
->>> s = {"apina":"monkey", "banaani":"banana", "cembalo":"harpsichord"}
+```python
+ages = {"Maija":25, "Anna":20, "Kaaleppi":42}
 ```
 
-```prompt
->>> s = {}
->>> s["apina"] = "monkey"
->>> s["banaani"] = "banana"
->>> s["cembalo"] = "harpsichord"
+Voimme myös luoda vastaavan sanakirjan näin:
+
+```python
+ages = {}
+ages["Maija"] = 25
+ages["Anna"] = 20
+ages["Kaaleppi"] = 42
 ```
 
-Sanakirjasta voi hakea tietoa avaimen perusteella. Operaattori `in` kertoo, onko sanakirjassa tiettyä avainta.
+Sanakirjasta voi hakea tietoa avaimen perusteella:
 
-```prompt
->>> s["apina"]
-'monkey'
->>> "banaani" in s
-True
->>> "faarao" in s
-False
+```python
+print(ages["Anna"]) # 20
 ```
 
-Sanakirjan avain ei saa muuttua. Niinpä merkkijono kelpaa avaimeksi mutta lista ei kelpaa:
+Operaattori `in` kertoo, onko sanakirjassa tiettyä avainta:
 
-```prompt
->>> s[[1,2,3]] = "testi"
-TypeError: unhashable type: 'list'
+```python
+print("Maija" in ages) # True
+print("Uolevi" in ages) # False
+```
+
+Voimme käydä sanakirjan avaimet läpi `for`-silmukalla:
+
+```python
+for name in ages:
+    print(name,"on",ages[name],"vuotta")
+```
+
+```python
+Maija on 25 vuotta
+Anna on 20 vuotta
+Kaaleppi on 42 vuotta
 ```
 
 ### Tuple
 
-Tuple on kokoelma arvoja sulkujen sisällä. Se toimii melko samalla tavalla kuin lista:
+Tuple on kokoelma arvoja sulkujen sisällä. Se näyttää melko samalta kuin lista:
 
-```prompt
->>> x = (5,123,"apina")
->>> x[1]
-123
->>> len(x)
-3
+```python
+person = ("Maija", 25, "Finland")
+print(person[0]) # Maija
+print(person[1]) # 25
+print(person[2]) # Finland
 ```
 
-Kuitenkaan tuplen sisältöä ei voi muokata:
-
-```prompt
->>> x[0] = 2
-TypeError: 'tuple' object does not support item assignment
-```
-
-Tuplen avulla voidaan tallentaa toisiinsa liittyviä arvoja, joita on kiinteä määrä. Esimerkiksi seuraavalla listalla jokainen alkio sisältää koodarin nimen ja lempikielen:
-
-```prompt
->>> x = []
->>> x.append(("Maija","C++"))
->>> x.append(("Kotivalo","Python"))
->>> x.append(("Justiina","Forth"))
->>> x
-[('Maija', 'C++'), ('Kotivalo', 'Python'), ('Justiina', 'Forth')]
-```
-
-Koska tuplen sisältö ei muutu, sitä voidaan käyttää sanakirjan avaimena:
-
-```prompt
-s = {}
-s[(1,2)] = "aybabtu"
-```
+Tuple eroaa kuitenkin listasta siinä, että sen sisältöä ei voi muuttaa. Tuplea käytetään toisiinsa liittyvän tiedon kokoamiseen yhteen yllä olevan esimerkin kaltaisesti.
 
 ## Funktiot
 
+### Funktion määrittely
+
 Oma funktio määritellään avainsanan `def` avulla. Esimerkiksi seuraava koodi määrittelee funktion `hello`, joka tervehtii parametrina annettua nimeä:
 
-```prompt
->>> def hello(name):
-...     print("Moikka,",name)
-... 
->>> hello("Liisa")
+```python
+def hello(name):
+    print("Moikka,",name)
+
+hello("Liisa")
+hello("Kaaleppi")
+```
+
+```
 Moikka, Liisa
->>> hello("Kaaleppi")
 Moikka, Kaaleppi
 ```
 
 Seuraava funktio `check` puolestaan tarkastaa, että nimen pituus on enintään maksimipituus:
 
-```prompt
->>> def check(name,max_length):
-...     return len(name) <= max_length
-... 
->>> check("Liisa",6)
-True
->>> check("Kaaleppi",6)
-False
+```python
+def check(name, max_length):
+    return len(name) <= max_length
+
+print(check("Liisa",6)) # True
+print(check("Kaaleppi",3)) # False
 ```
 
 ### Muuttujien näkyvyys
 
-Funktioiden ulkopuolella määritelty muuttuja on globaali ja se näkyy kaikissa funktioissa:
+Päätasolla luotu muuttuja näkyy kaikissa funktioissa:
 
-```prompt
->>> def test():
-...     print(x)
-... 
->>> x = 5
->>> test()
-5
+```python
+def test():
+    print(x) # 5
+
+x = 5
+test()
+print(x) # 5
 ```
 
-Kuitenkin jos muuttuja saa arvon funktiossa, siitä tulee funktion paikallinen muuttuja eikä sillä ole vaikutusta funktion ulkopuolelle:
+Jos taas muuttuja luodaan funktion sisällä, se näkyy vain kyseisessä funktiossa:
 
-```prompt
->>> def test():
-...     x = 2
-...     print(x)
-... 
->>> x = 5
->>> test()
-2
->>> x
-5
+```python
+def test():
+    x = 5
+    print(x) # 5
+
+test()
+print(x) # ei toimi
 ```
 
-## Poikkeukset
+Jos muuttuja saa arvon sekä päätasolla että funktiossa, syntyy kaksi erillistä muuttujaa:
+
+```python
+def test():
+    x = 2
+    print(x) # 2
+
+x = 1
+test()
+print(x) # 1
+```
+
+
+## Virheenkäsittely
+
+Koodissa mahdollisesti tapahtuvan virheen voi käsitellä `try`/`except`-rakenteella.
+
+Esimerkiksi seuraava funktio pyrkii lukemaan käyttäjältä kokonaisluvun. Jos käyttäjä antaa jotain muuta, funktion `int`-kutsuminen aiheuttaa virheen, jolloin virheen käsittelyn seurauksena funktio palauttaa arvon 0.
+
+```python
+def read_int():
+    value = input("Anna luku: ")
+    try:
+        result = int(value)
+    except:
+        result = 0
+    return result
+```
 
 ## Moduulit
 
 ### Valmiit moduulit
 
-Pythonin standardikirjasto muodostuu moduuleista, joita voi ottaa mukaan `import`-komennolla. Esimerkiksi seuraava koodi käyttää moduulin `random` funktiota `randint`:
+Komento `import` ottaa käyttöön moduulin. Esimerkiksi Pythonin standardikirjastossa on suuri määrä moduuleita eri tarkoituksiin.
 
-```prompt
->>> import random
->>> random.randint(1,100)
-37
+Seuraava koodi käyttää Pythonin standardikirjaston moduulia `random`, jossa on satunnaisuuteen liittyviä toimintoja. Koodi arpoo satunnaisen luvun funktiolla `randint`.
+
+```python
+import random
+print(random.randint(1,10))
 ```
 
-Toinen tapa on ottaa mukaan moduulista tietty funktio näin:
+Toinen tapa on hakea moduulista funktio, jolloin sitä voi käyttää suoraan:
 
-```prompt
->>> from random import randint
->>> randint(1,100)
-18
+```python
+from random import randint
+print(randint(1,10))
 ```
 
-Käytämme kurssilla myös standardikirjaston ulkopuolisia moduuleja kuten Flask-kirjaston moduulia `flask`.
+Käytämme kurssilla myös Pythonin standardikirjaston ulkopuolisia moduuleja kuten Flask-kirjaston moduulia `flask`.
 
 ### Omat moduulit
 
@@ -522,19 +351,52 @@ Kun tiedostossa on Python-koodia, tiedostoa voidaan käyttää moduulina. Esimer
 ```python
 def hello(name):
     print("Moikka,",name)
-
-def check(name,max_length):
-    return len(name) <= max_length
 ```
 
-Voimme käyttää moduulia näin:
+Tämän jälkeen voimme käyttää moduulia näin:
 
-```prompt
->>> import test
->>> test.hello("Maija")
+```python
+import test
+test.hello("Maija")
+test.hello("Anna")
+test.hello("Uolevi")
+```
+
+```
 Moikka, Maija
->>> test.check("Kaaleppi",6)
-False
+Moikka, Anna
+Moikka, Uolevi
+```
+
+### Moduulien viittaukset
+
+Kun moduuli otetaan mukaan `import`-komennolla, siellä oleva koodi suoritetaan. Kuitenkin jos moduuli otetaan mukaan useita kertoja, koodi suoritetaan vain ensimmäisellä kerralla.
+
+Seuraava moduuli havainnollistaa asiaa:
+
+<p class="code-title">test.py</p>
+```python
+def hello(name):
+    print("Moikka,",name)
+
+print("Täällä ollaan")
+```
+
+Seuraava koodi ottaa moduulin mukaan kahdesti, mutta vain ensimmäisellä kerralla suoritetaan moduulissa oleva `print`-komento:
+
+```python
+import test
+test.hello("Maija")
+test.hello("Anna")
+import test
+test.hello("Uolevi")
+```
+
+```
+Täällä ollaan
+Moikka, Maija
+Moikka, Anna
+Moikka, Uolevi
 ```
 
 ## Lisäaiheita
@@ -543,27 +405,20 @@ False
 
 Melko uusi Pythonin ominaisuus on _f-string_, jossa merkkijonon alussa on merkki `f`. Tämän avulla merkkijonon sisällä voi käyttää muuttujia ja muita lausekkeita aaltosuluissa.
 
-```prompt
->>> name = "Kotivalo"
->>> age = 5
->>> f"{name} on {age}-vuotias"
-'Kotivalo on 5-vuotias'
+```python
+name = "Maija"
+age = 25
+print(f"{name} on {age}-vuotias") # Maija on 25-vuotias
 ```
 
 ### Listakooste
 
-_Listakoosteen_ (_list comprehension_) avulla voi koostaa uuden listan vanhan listan perusteella ja muokata alkioita jollakin tavalla samalla.
+Listakooste luo uuden listan vanhan listan perusteella ja voi samalla muokata alkioita jollakin tavalla. Esimerkiksi seuraava koodi luo uuden listan, jossa on jokaisen sanan pituus:
 
-Seuraavassa esimerkissä pohjana on lista `a`, listaan `b` tulee jokainen luku kaksinkertaisena ja listaan `c` tulee jokainen luku merkkijonona.
-
-```prompt
->>> a = [1,2,3]
->>> b = [2*x for x in a]
->>> c = [str(x) for x in a]
->>> b
-[2, 4, 6]
->>> c
-['1', '2', '3']
+```python
+words = ["apina", "banaani", "cembalo"]
+lengths = [len(x) for x in words]
+print(lengths) # [5, 6, 6]
 ```
 
 ### Säännölliset lausekkeet
