@@ -8,17 +8,21 @@ title: TODO
 ## Sekalaista:
 
 * Konsolin väritys ei toimi vielä hyvin, osassa 1 testiaineistoa. Edit: nyt toimii paljon paremmin, mutta vielä jotkin sanat ovat häiritsevästi lihavoituina. Lisäksi $ olisi ehkä hyvä olla väritettynä.
+  
   ✔️ Lihavointi on otettu pois kaikista `bash`-koodilaatikoista. `$`-merkki on väritetty siniseksi.
 
 * Otsikon ja tekstin välissä olevasta raosta näkyvä taustakuva on lievästi häiritsevä (otsikon ja tekstin laatikko ovat myös eri levyiset). Vastaava rako on myös tekstin ja alalaidan hy-laatikon välissä. Voisiko nämä kaikki yhdistää niin että ne ovat yhtenäisenä alueena? (Ja tuo harmaa on myös aika rumasti yleisestä väriskaalasta poikkeava)
+  
   ✔️ Ulkoasua on yhdenmukaistettu. Footer on nyt enemmän vesileiman tyyppinen jatke materiaalille sivun lopussa. Otsikkolaatikko on saman kokoinen kuin materiaali ja suoraan siinä kiinni. Lisäsin tilaa ylhäälle ja alhaalle tuomaan ilmavuutta ulkoasuun. Lisäksi sivu näyttää ehkä enemmän Single Page Applicationilta, koska chapter sivut ja page sivut latautuu samaan kohtaan.
 
 * Pages-sivuilla (etusivu, aikataulu) sivupalkki peittää tekstin jos käyttäjä kasvattaa fonttikokoa riittävästi. Varsinkin vanhempien opiskelijoiden joukossa osa opiskelijoista tekee tätä. (Näin käy myös silloin kun selainikkuna on kapea.)
+  
   ✔️ Sivun skaalaaminen toimii nyt, eikä sivupalkki tule enää eteen.
 
 * Jos koodilaatikossa on tiedoston nimi, koodin kopiointi on hankalaa
-  ✔️ Tiedoston nimi ei enää kopioidu.
   
+  ✔️ Tiedoston nimi ei enää kopioidu.
+ 
 * Sivuvalikon toiminta kun vaihtaa osaa, olisiko väritys joka näyttää missä ollaan?
 
 * Jos sivuvalikon alueella käyttää hiiren rullaa, toiminta ei ole säännönmukaista:
@@ -29,7 +33,7 @@ title: TODO
   - edellisessä tapauksessa sivuvalikkoa ei välillä siirretä vaikka rullauksen suuntaa vaihtaisi niin että sivuvalikkoa voisi siirtää
   - yllämainitut esimerkit eivät välttämättä ole kattavia tai täysin tarkkoja, mutta ongelmana on että rullaus ei toimi ennalta-arvattavasti. On esimerkiksi mahdollista saada tilanne jossa epätoivoisesta hiirellä alaspäin rullaamisesta huolimatta sivuvalikon osa 4 ei tule lainkaan näkyviin.
 
- ✔️ Scrollaus toimii myös sivuvalikossa nyt paremmin eli sivun sisällön ei pitäisi enää liikkua, kun sivuvalikkoa scrollaillaan.
+  ✔️ Scrollaus toimii sivuvalikossa nyt paremmin eli sivun sisällön ei pitäisi enää liikkua, kun sivuvalikkoa scrollaillaan.
 
 ## Taulukot:
 
