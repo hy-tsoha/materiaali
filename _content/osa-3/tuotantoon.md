@@ -64,13 +64,13 @@ Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteen
 Tähän asti olemme käynnistäneet sovelluksen komennolla `flask run`, mutta tätä tapaa ei suositella tuotantokäyttöön. Tämän vuoksi asennamme Herokua varten Gunicorn-palvelimen:
 
 ```prompt
-$ pip install gunicorn
+(venv) $ pip install gunicorn
 ```
 
 Tämän jälkeen tiedosto `requirements.txt` tulee saattaa ajan tasalle:
 
 ```prompt
-$ pip freeze > requirements.txt
+(venv) $ pip freeze > requirements.txt
 ```
 
 Lisäksi luomme sovelluksen päähakemistoon uuden tiedoston `Procfile`, joka kertoo Herokulle, miten sovellus käynnistetään:
