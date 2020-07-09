@@ -11,10 +11,10 @@ Jekyll::Hooks.register :site, :pre_render do |site|
     aliases 'prompt'
 
     state :root do
-      rule %r/^\$\s+/, Name::Variable
-      rule %r/^\(venv\)\s+\$\s+/, Name::Variable
-      rule %r/^>>>\s+/, Name::Variable
-      rule %r/^[a-z]+=#\s+/, Name::Variable
+      rule %r/^\$\s+/, Punctuation
+      rule %r/^\(venv\)\s+\$\s+/, Punctuation
+      rule %r/^>>>\s+/, Punctuation
+      rule %r/^[a-z]+=#\s+/, Punctuation
       rule %r/.+/, Text
       rule %r/\n/, Text
     end
