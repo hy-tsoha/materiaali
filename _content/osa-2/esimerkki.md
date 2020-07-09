@@ -43,7 +43,7 @@ def index():
 ```
 
 <p class="code-title">index.html</p>
-```html
+```jinja
 {% raw %}<a href="/new">Uusi kysely</a>
 <hr>
 {% for poll in polls %}
@@ -124,7 +124,7 @@ def poll(id):
 ```
 
 <p class="code-title">poll.html</p>
-```html
+```jinja
 {% raw %}{{ topic }}
 <hr>
 <form action="/answer" method="POST">
@@ -175,7 +175,7 @@ def result(id):
 ```
 
 <p class="code-title">result.html</p>
-```html
+```jinja
 {% raw %}{{ topic }}
 <hr>
 <ul>

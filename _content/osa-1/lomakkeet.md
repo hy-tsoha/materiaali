@@ -17,7 +17,7 @@ Tämä lomake lähettää tietoa sivulle `result` metodilla `POST`. Lomakkeessa 
 
 Tarkoituksena on, että kun käyttäjä lähettää lomakkeen, hän siirtyy toiselle sivulle, joka näyttää viestin nimen perusteella. Tässä on sivupohja `result.html` tätä sivua varten:
 
-```html
+```jinja
 {% raw %}<p>Moikka, {{ name }}!</p>{% endraw %}
 ```
 
@@ -76,7 +76,7 @@ Elementtien `radio` ja `checkbox` erona on, että samannimisistä elementeistä 
 
 Sivupohja `result.html` näyttää tilauksen tiedot lähetyksen jälkeen:
 
-```html
+```jinja
 {% raw %}Valitsit pizzan {{ pizza }}
 <p>
 Seuraavat lisät:

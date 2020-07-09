@@ -51,7 +51,7 @@ def index():
 ```
 
 <p class="code-title">templates/index.html</p>
-```html
+```jinja
 {% raw %}Tervetuloa!
 <p>
 Olet sivuston {{ counter }}. käyttäjä{% endraw %}

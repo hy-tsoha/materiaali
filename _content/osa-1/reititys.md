@@ -99,7 +99,7 @@ TODO: Kuva tähän
 
 Flask käyttää sivupohjissa Jinja-skriptikieltä, jonka avulla sivupohjaan voi välittää tietoa Python-koodista. Seuraava sivupohja antaa näytteen asiasta:
 
-```html
+```jinja
 <title>Etusivu</title>
 <h1>Etusivu</h1>
 {% raw %}<p>{{ message }}</p>
