@@ -1,2 +1,2 @@
-# tikaso
-Tietokantasovellus-kurssin materiaali
+# Tietokantasovellus
+Helsingin yliopiston Tietokantasovellus-kurssin materiaali
