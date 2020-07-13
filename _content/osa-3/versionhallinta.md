@@ -102,7 +102,9 @@ Komento antaa listan tiedostoista ja hakemistoista, joita _ei_ ole repositorioss
 * `templates` on hakemisto, jossa on sivupohja `index.html`
 * `venv` on hakemisto, joka sisältää virtuaaliympäristön tarvitsemat tiedostot
 
-Tärkeä asia versionhallinnassa on päättää, mitkä tiedostot laitetaan repositorioon kaikkien saataville. Tässä tapauksessa repositorioon kuuluvat `app.py` ja `templates`, jotka muodostavat sovelluksen toteutuksen. Komento `git add` laittaa ne lisättäväksi:
+Tärkeä asia versionhallinnassa on päättää, mitkä tiedostot laitetaan repositorioon kaikkien saataville. Tässä tapauksessa repositorioon kuuluvat `app.py` ja `templates`, jotka muodostavat sovelluksen toteutuksen. Sen sijaan `.env`, `__pycache__` ja `venv` eivät kuulu repositorioon, koska ne liittyvät käyttäjän ympäristöön eivätkä sovelluksen toteutukseen.
+
+Komento `git add` laittaa ne lisättäväksi:
 
 ```prompt
 (venv) $ git add app.py
@@ -141,7 +143,7 @@ Tämän seurauksena sovelluksen nykyinen versio on tallessa GitHubissa.
 
 ### Tiedosto .gitignore
 
-Tiedosto `.env` ja hakemistot `__pycache__` ja `venv` eivät kuulu repositorioon, koska ne liittyvät käyttäjän ympäristöön eikä sovelluksen toteutukseen. Nämä kuitenkin näkyvät häiritsevästi listassa aina, kun suoritamme komennon `git status`.
+Tiedosto `.env` ja hakemistot `__pycache__` ja `venv` eivät siis kuulu repositorioon, mutta ne näkyvät häiritsevästi listassa aina, kun suoritamme komennon `git status`.
 
 Hyödyllinen tiedosto on `.gitignore`, joka määrittää, mitä tiedostoja ja hakemistoja _emme_ halua viedä repositorioon. Tässä tapauksessa tiedoston sisältö voisi olla:
 
@@ -234,34 +236,4 @@ Tästä lähtien sovelluksen tarvitsemat taulut voi luoda tietokantaan seuraavas
 (venv) $ psql < schema.sql
 ```
 
-Tarvittaessa voimme hakea myös tietokannan skeeman komennolla `pg_dump` seuraavasti:
-
-```prompt
-(venv) $ pg_dump -s
-```
-
-Komennossa lippu `-s` tarkoittaa, että haluamme hakea vain skeeman eikä taulujen sisältöä. Komento tuottaa melko pitkän tulostuksen, jonka osana on taulujen määrittely:
-
-```
-CREATE TABLE public.visitors (
-    id integer NOT NULL,
-    "time" timestamp without time zone
-);
-
-CREATE SEQUENCE public.visitors_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-ALTER SEQUENCE public.visitors_id_seq OWNED BY public.visitors.id;    
-
-ALTER TABLE ONLY public.visitors ALTER COLUMN id SET DEFAULT nextval('public.visitors_id_seq'::regclass);
-
-ALTER TABLE ONLY public.visitors
-    ADD CONSTRAINT visitors_pkey PRIMARY KEY (id);
-```
-
-Huomaa, että tämä määrittely on paljon pidempi kuin käyttämämme tapa: automaattisesti kasvava id-numero asetetaan erikseen ja samoin pääavain asetetaan erikseen.
+Huomaa, että aina kun sovelluksen tietokannan rakenne muuttuu, myös tiedostosta `schema.sql` täytyy tehdä uusi versio ja lähettää se repositorioon. Tämän avulla repositoriossa on aina tieto siitä, millainen on sovelluksen senhetkinen tietokanta.
