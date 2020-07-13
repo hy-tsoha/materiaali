@@ -8,6 +8,8 @@ title: TODO
 ## Sekalaista:
 
 * Sivuvalikon toiminta kun vaihtaa osaa, olisiko väritys joka näyttää missä ollaan?
+* Sivun pystyy piilottamaan valikosta
+* Etusivun otsikon näyttötapa tyylikkäämmäksi
 
 ## Taulukoista 
 
