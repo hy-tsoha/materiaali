@@ -234,8 +234,119 @@ Piilokenttä on lomakkeen osana oleva kenttä, joka ei näy sivun käyttäjälle
 
 Huomaa, että vaikka käyttäjä ei näe piilokenttää sivulla, kenttä kuitenkin näkyy sivun lähdekoodissa eli piilokentässä ei voi olla salaista tietoa.
 
-
-
 ## CSS
+
+Ihanteena on, että HTML määrittelee sivun _rakenteen_: mitä tekstiä, kuvia, listoja, taulukoita, jne. sivulla on. Kuitenkaan HTML:n tehtävänä ei ole määritellä tarkemmin sivun _ulkoasua_: mikä on tekstin fontti, paljonko tekstiä on rivillä, mikä on sivun taustaväri, jne.
+
+Usein kuitenkin sivun ulkoasu halutaan määritellä tarkemmin, ja tämä onnistuu lisäämällä sivulle CSS-koodia. Tämän avulla voidaan määritellä tyylejä, jotka vaikuttavat siihen, miten sivun HTML-elementit näkyvät selaimessa.
+
+### Tyylien kokeilua
+
+Yksinkertainen tapa määritellä HTML-elementin tyyli on käyttää `style`-attribuuttia. Esimerkiksi seuraava tyyli `color:red` määrittelee, että tekstin väri on punainen:
+
+```html
+Korissa on paljon <span style="color:red">mansikoita</span>.
+```
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Korissa on paljon <span style="color:red">mansikoita</span>.
+</div>
+
+Tässä käytetty `span`-elementti ei itsessään tee mitään erityistä, mutta siihen voidaan kohdistaa tyylejä, jotka esimerkiksi muuttavat tekstin ulkoasua.
+
+Tässä on monimutkaisempi esimerkki tyyleistä:
+
+```html
+<div style="background:blue;color:white;padding:10px;width:200px;height:50px">
+Heipparallaa!
+</div>
+```
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+<div style="background:blue;color:white;padding:10px;width:200px;height:50px">
+Heipparallaa!
+</div>
+</div>
+
+Nyt käytössä on `div`-elementti, joka määrittelee alueen, jota voidaan tyylitellä. Tässä tapauksessa tyylit ovat seuraavat:
+
+* `background:blue`: alueen tausta on sininen
+* `color:white`: tekstin väri on valkoinen
+* `padding:10px`: alueen sisällä reuna-alue on 10 pikseliä
+* `width:200px`: alueen leveys on 200 pikseliä
+* `height:50px`: alueen korkeus on 50 pikseliä
+
+### Yhteinen tyyli
+
+Attribuuttia `style` on helppo käyttää CSS:n määrittelyyn, mutta se ei ole yleensä kovin hyvä ratkaisu. Ongelmana on, että jos usealla elementillä on tarkoitus olla sama tyyli, samanlaista CSS-koodia joutuu kopioimaan moneen paikkaan.
+
+Parempi tapa on määritellä sivun alussa tyyliluokka, joka määrittelee yhteisen tyylin, ja viitata tähän halutuissa elementeissä. Esimerkiksi seuraava `style`-tagien sisällä oleva CSS-koodi määrittelee tyyliluokan `laatikko` sinistä laatikkoa varten:
+
+```html
+<style>
+.laatikko {
+    background: blue;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+}
+</style>
+```
+
+Tämän jälkeen voimme määritellä laatikkoja näin `class`-attribuutin avulla:
+
+```html
+<div class="laatikko">apina</div> <br>
+<div class="laatikko">banaani</div> <br>
+<div class="laatikko">cembalo</div>
+```
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+<div style="background:blue;color:white;padding:10px;width:200px;height:50px" class="laatikko">apina</div> <br>
+<div style="background:blue;color:white;padding:10px;width:200px;height:50px" class="laatikko">banaani</div> <br>
+<div style="background:blue;color:white;padding:10px;width:200px;height:50px" class="laatikko">cembalo</div>
+</div>
+
+Vastaavasti voimme myös asettaa kaikille sivun HTML-elementeille tietyn tyylin. Esimerkiksi seuraava tyyli määrittelee, että sivun linkit ovat vihreitä eikä niissä ole alleviivausta:
+
+```html
+<style>
+a {
+    color: green;
+    text-decoration: none;
+}
+</style>
+```
+
+Tämä tyyli vaikuttaa automaattisesti kaikkiin `a`-elementteihin:
+
+```html
+Tästä voit mennä <a href="https://cs.helsinki.fi/">toiseen paikkaan</a>.
+```
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Tästä voit mennä <a style="color:green;text-decoration:none" href="https://cs.helsinki.fi/">toiseen paikkaan</a>.
+</div>
+
+### Tyylitiedosto
+
+Usein monilla sivuilla on samanlainen tyyli, jolloin on kätevää luoda yhteinen tyylitiedosto, johon viitataan sivuilla. Esimerkiksi seuraava tiedosto `tyyli.css` määrittelee tyylin laatikkoa varten:
+
+```css
+.laatikko {
+    background: blue;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+}
+```
+
+Tämän jälkeen tyylitiedoston voi ottaa mukaan näin HTML-tiedostossa:
+
+```html
+<link rel="stylesheet" href="tyyli.css">
+```
 
 ## JavaScript
