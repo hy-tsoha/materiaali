@@ -1,23 +1,25 @@
-<div class="nav-wrapper">
+
 <nav class="side-nav" id="side-nav" >
     <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
     <button id="show" onclick="showSideNav()"> </button>
     <h2>{{ site.title}}</h2>
     <ol>
-        <li class="side-nav-obj"><a href={{ 'index'  | relative_url }}>Etusivu</a></li>
+       
+        <li class="side-nav-obj" id="indexnav"><a href={{ 'index'  | relative_url }}>Etusivu </a></li>
+
         {% for page in site.pages %}
-        <li class="side-nav-obj"><a href="{{ page.url | relative_url  }}">{{ page.title }}</a></li>
+
+        <li class="side-nav-obj" id="{{ page.title }}nav"><a href="{{ page.url | relative_url  }}">{{ page.title }}</a></li>
         {% endfor %}
-        <img src="{{ /assets/img/divider.png | relative_ur }}">
         <li class="side-nav-obj"></li>
         {% for page in site.content %}
         {% if page.nav-title%}
-        <li class="side-nav-obj"><a href="{{ page.url | relative_url }}">{{ page.nav-title }}</a></li>
+        <li class="side-nav-obj" id="{{ page.nav-title }}nav"><a href="{{ page.url | relative_url }}">{{ page.nav-title }}</a></li>
         {% endif%}
         
         {% if page.sub-sections %}
             {% for s in page.sub-sections %}
-            <li class="side-nav-sub-obj"><a href="{{ page.url | relative_url }}#{{ s.sub-section-title | downcase | replace: ' ', '-'}}">{{ s.sub-section-title }}</a></li>
+            <li class="side-nav-sub-obj" id="{{ s.sub-section-title  }}nav"><a href="{{ page.url | relative_url }}#{{ s.sub-section-title | downcase | replace: ' ', '-' | remove: ':' }}">{{ s.sub-section-title }}</a></li>
         
             {% endfor %}
         {% endif %}
@@ -25,4 +27,3 @@
         {% endfor %}
     </ol>
 </nav>
-</div>

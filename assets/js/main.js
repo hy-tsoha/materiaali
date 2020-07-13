@@ -1,11 +1,10 @@
-function hideSideNav() {
+const hideSideNav = () => {
   document.getElementById("side-nav").className = "side-nav-hidden";
 }
 
 function showSideNav() {
   document.getElementById("side-nav").className = "side-nav";
 }
-
 
 function reportWindowSize() {
   if (window.innerWidth < 500) {
@@ -16,17 +15,56 @@ function reportWindowSize() {
 }
 
 window.onresize = reportWindowSize;
-window.onload = reportWindowSize;
+
+window.onload = () => {
+  reportWindowSize();
+  setActiveMenu()
+  generateTOC()
+};
+
+window.onscroll = () => {
+  setActiveMenu()
+}
 
 function generateTOC() {
   tof = document.getElementById("tof")
-  tof.parentNode.insertBefore(document.getElementsByTagName("h1")[0], tof)
-  tof.style.removeProperty("display")
+  if (tof && document.body.id === "chapter") {
+    tof.parentNode.insertBefore(document.getElementsByTagName("h1")[0], tof)
+    tof.style.removeProperty("display")
+  }
+
 }
 
-function test () {
-  console.log("joud")
-  document.getElementById("side-nav").onmouseover = () => {
-    console.log("HEI")
+function handleActiveMenu(headers) {
+  for (h in headers) {
+    if (headers[h].tagName === "H1") {
+      if (document.getElementById(headers[h].innerText + "nav")) {
+        document.getElementById(headers[h].innerText + "nav").classList.add("current")
+        document.getElementById(headers[h].innerText + "nav").scrollIntoView({ block: "center" })
+      }
+    } else if (headers[h].offsetTop <= window.scrollY + window.screenTop) {
+      if (document.getElementById(headers[h].innerText + "nav")) {
+        document.getElementById(headers[h].innerText + "nav").classList.add("current")
+
+      }
+    } else if (headers[h].offsetTop > window.scrollY + window.screenTop) {
+      if (document.getElementById(headers[h].innerText + "nav")) {
+        document.getElementById(headers[h].innerText + "nav").classList.remove("current")
+
+      }
+    }
   }
 }
+
+function setActiveMenu() {
+  if (location.href.split("/").length <= 5) {
+    document.getElementById("indexnav").classList.add("current")
+
+  }
+
+  titles = document.getElementsByTagName("h1")
+  subtitles = document.getElementsByTagName("h2")
+  handleActiveMenu(titles)
+  handleActiveMenu(subtitles)
+}
+
