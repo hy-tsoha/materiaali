@@ -350,3 +350,67 @@ Tämän jälkeen tyylitiedoston voi ottaa mukaan näin HTML-tiedostossa:
 ```
 
 ## JavaScript
+
+JavaScript on ohjelmointikieli, jonka avulla HTML-sivulle voidaan lisätä selaimessa tapahtuvia toimintoja. Esimerkiksi käyttäjälle voidaan näyttää viestejä eri tilanteissa ja sivun sisältöä voidaan muuttaa käyttäjän toimien perusteella.
+
+JavaScriptin historia on poikkeuksellinen. Vuosituhannen vaihteessa kieli oli lähinnä vitsi ja monet käyttäjät estivät sen suorittamisen selaimessa. JavaScript on kuitenkin kehittynyt paljon niistä ajoista, ja nykyään kielellä on vahva asema web-sovellusten toteutuksessa.
+
+### Esimerkkejä
+
+Seuraavassa on JavaScript-funktio `hello`, joka näyttää viesti-ikkunan funktiolla `alert`. Funktio aktivoituu `onclick`-tapahtumasta, kun käyttäjä painaa sivulla olevaa nappia.
+
+```html
+<script>
+function hello() {
+    alert("Heipparallaa!");
+}
+</script>
+<button onclick="hello()">Paina tästä</button>
+```
+
+Voit kokeilla koodin toimintaa tästä:
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+<script>
+function hello() {
+    alert("Heipparallaa!");
+}
+</script>
+<button onclick="hello()">Paina tästä</button>
+</div>
+
+Seuraavassa koodissa laskurin arvo kasvaa, kun käyttäjä painaa napista. Laskurin arvo on tallessa JavaScriptin puolella muuttujassa `value`. Funktion `getElementById` avulla pääsee käsiksi HTML-elementtiin, kun sille on annettu `id`-attribuutti.
+
+```html
+<script>
+var value = 0;
+
+function increase() {
+    value++;
+    document.getElementById("counter").innerText = value;
+}
+</script>
+Laskuri: <span id="counter">0</span> <br>
+<button onclick="increase()">Kasvata</button>
+```
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+<script>
+var counter = 0;
+
+function increase() {
+    counter++;
+    document.getElementById("counter").innerText = counter;
+}
+</script>
+Laskuri: <span id="counter">0</span> <br>
+<button onclick="increase()">Paina tästä</button>
+</div>
+
+### Milloin käyttää JavaScriptiä?
+
+JavaScript on nykyään todella monipuolinen kieli, ja sen avulla voi toteuttaa lähes mitä tahansa selaimessa suoritettavaa. Mutta kannattaako sitä käyttää?
+
+Ennen vanhaan tärkeä periaate web-sovelluksen toteuttamisessa oli, että sovelluksen täytyy toimia täysin ilman JavaScriptiä. Tähän vaikutti se, että moni ei sallinut JavaScriptin käyttämistä ja lisäksi eri selainten välillä oli merkittäviä eroja JavaScriptin toiminnassa. Ajat ovat kuitenkin muuttuneet, ja nykyään JavaScript toimii luotettavasti lähes kaikilla käyttäjillä.
+
+Siitä huolimatta edelleen on hyvä tavoite toteuttaa sovelluksen oleelliset toiminnot ilman JavaScriptia eikä käyttää sitä turhaan. JavaScript on kuitenkin kätevä esimerkiksi lomakkeen tietojen tarkastamisessa: jos tiedot eivät ole kelvollisia, tämä voidaan ilmoittaa käyttäjälle selaimessa ennen lomakkeen lähetystä. Tässä JavaScript parantaa sovelluksen käytettävyyttä mutta se ei kuitenkaan ole välttämätön.
