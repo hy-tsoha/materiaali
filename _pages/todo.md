@@ -10,6 +10,7 @@ title: TODO
 * Sivuvalikon toiminta kun vaihtaa osaa, olisiko väritys joka näyttää missä ollaan?
 * Sivun pystyy piilottamaan valikosta
 * Etusivun otsikon näyttötapa tyylikkäämmäksi
+* Voiko sivuvalikossa selventää että kyseessä linkkejä (taustaväri vaihtuu kun hiiri päällä?)
 
 ## Taulukoista 
 
