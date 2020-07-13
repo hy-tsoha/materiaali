@@ -2,7 +2,17 @@
 
 Useimmissa web-sovelluksissa on mahdollista kirjautua sisään antamalla tunnus ja salasana, minkä jälkeen pääsee tekemään jotain erityistä. Kirjautuminen vaatii, että tietoa säilyy sovelluksessa sivulta toiselle, ja tämä onnistuu _istunnon_ (_session_) avulla.
 
-Ideana on, että voimme tallentaa istuntoon avain-arvo-pareja, jotka säilyvät muistissa sivulta toiselle. Flask toteuttaa istunnon `session`-oliona, jonka tiedot tallennetaan selaimeelle lähetettävään _evästeeseen_ (_cookie_).
+Ideana on, että voimme tallentaa istuntoon avain-arvo-pareja, jotka säilyvät muistissa sivulta toiselle. Flask toteuttaa istunnon `session`-oliona, jonka tiedot tallennetaan selaimelle lähetettävään _evästeeseen_ (_cookie_). Esimerkiksi seuraava koodi tallentaa istuntoon tiedon, että avaimen `test` arvo on `aybabtu`.
+
+```python
+session["test"] = "aybabtu"
+```
+
+Tämän jälkeen voimme hakea avaimen arvon toisessa sivupyynnössä näin:
+
+```python
+value = session["test"] # aybabtu
+```
 
 Istunnon käyttäminen vaatii, että sovelluksessa on käytössä salainen avain. Lisäämme satunnaisesti muodostetun salaisen avaimen `.env`-tiedostoon:
 
@@ -20,6 +30,8 @@ $ python3
 >>> urandom(16).hex()
 '18fd24bf6a2ad4dac04a33963db1c42f'
 ```
+
+Huomaa, että evästeen allekirjoittaminen salaisella avaimella estää käyttäjää muuttamasta istunnon sisältöä mutta ei estä tallennetun tiedon _katsomista_ selaimessa.Tämän vuoksi istuntoon ei saa tallentaa mitään salaista tietoa. Jos haluat tietää lisää Flaskin istuntojen turvallisuudesta, löydät lisää asiasta [Miguel Grinbergin blogista](https://blog.miguelgrinberg.com/post/how-secure-is-the-flask-user-session).
 
 ### Kirjautumisen toteutus
 
