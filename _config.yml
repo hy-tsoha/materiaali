@@ -20,8 +20,8 @@
 
 title: Tietokanta&shy;sovellus
 description: ""
-baseurl: "/tikaso" # the subpath of your site, e.g. /blog
-url: "https://pllk.github.io/tikaso/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/materiaali" # the subpath of your site, e.g. /blog
+url: "https://hy-tsoha.github.io/materiaali/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 plugins:
