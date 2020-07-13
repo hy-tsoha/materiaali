@@ -1,5 +1,4 @@
 ---
-layout: default
 title: TODO
 ---
 
@@ -8,9 +7,20 @@ title: TODO
 ## Sekalaista:
 
 * Sivuvalikon toiminta kun vaihtaa osaa, olisiko väritys joka näyttää missä ollaan?
+
+✔️ Väristys on lisätty sivuvalikkoon.
+
 * Sivun pystyy piilottamaan valikosta
+
+✔️ `_pages`-hekemistossa sivun voi piilottaa attribuutilla `hidden: true`.
+`_content`-hakemistossa riittää, että jättää sivun `nav-title`-kentän pois.
+
 * Etusivun otsikon näyttötapa tyylikkäämmäksi
 * Voiko sivuvalikossa selventää että kyseessä linkkejä (taustaväri vaihtuu kun hiiri päällä?)
+
+✔️ Sivuvalikon taustaväri vaihtuu.
+
+✔️ Jokaisen sivun layout on automaattisesti chapter eli layout-attribuuttia ei tarvita.
 
 ## Taulukoista 
 

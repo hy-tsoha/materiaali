@@ -1,5 +1,4 @@
 ---
-layout: chapter
 nav-title: Osa 4
 sub-sections:
       - sub-section-title: Oikeudet ja syötteet

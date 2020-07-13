@@ -28,6 +28,10 @@ nav a {
     outline: none;
 }
 
+nav li:hover {
+    background-color: rgb(201, 201, 201);
+}
+
 .current {
     background-color: rgb(221, 221, 221);
   }
