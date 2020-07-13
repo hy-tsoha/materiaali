@@ -141,18 +141,6 @@ Sitten lomakkeen käsittelijä tarkastaa, että `csrf_token` on oikea:
 
 Tässä tapauksessa jos `csrf_token` on väärä, sivun käsittely katkeaa ja tuloksena on HTTP-virhekoodi 403 (Forbidden). Koska hyökkääjä ei tiedä, mikä `csrf_token` liittyy käyttäjän istuntoon, tämä estää tehokkaasti CSRF-haavoittuvuuden.
 
-### Salasanat tietokannassa
-
-Kun sovelluksessa on käyttäjiä ja salasanoja, salasanoja ei tule tallentaa tietokantaan sellaisenaan. Osassa 2 on esitetty turvallinen tapa tallentaa salasanat käyttäen Werkzeug-kirjaston työkaluja. Mutta miksi olisi ongelma tallentaa salasanat sellaisenaan?
-
-Tässä on kyse siitä, että jos jostain syystä hyökkääjä pääsee käsiksi tietokannan sisältöön ja salasanat olisi tallennettu sellaisenaan, hyökkääjä saisi selville suoraan käyttäjien salasanat. Moni käyttää samoja tai samantapaisia salasanoja eri palveluissa, joten tästä voisi olla huomattava hyöty pahantahtoiselle hyökkääjälle.
-
-Werkzeug-kirjasto käyttää `sha256`-hajautusfunktiota, joka laskee salasanan perusteella hajautusarvon. Tämän tavoitteena on _hidastaa_ hyökkääjän työtä: jos hyökkääjä haluaa selvittää alkuperäisen salasanan, hänen täytyy käytännössä kokeilla läpi suuri määrä mahdollisia salasanoja ja tarkastaa, antaako jokin niistä saman hajautusarvon. Jotta hyökkääjän työ olisi vaikeampaa, Werkzeug-kirjasto lisää salasanaan satunnaisen merkkijonon (_suolan_) ja suorittaa hajautusfunktiota suuren määrän kierroksia.
-
-Huomaa, että jos hyökkääjä saa käsiinsä tietokannan sisällön, tilanne on jo erittäin paha eikä näin saisi päästä tapahtumaan. Kuitenkin tilanne olisi vielä pahempi, jos salasanat olisi tallennettu tietokantaan sellaisenaan. Toisaalta salasanan tallentaminen hajautusarvona ei auta asiaa, jos salasana on _huono_ eli helposti arvattava tai lyhyt. Tällöin hyökkääjä saa sen joka tapauksessa selville käymällä läpi raa'alla voimalla mahdollisia salasanoja. Käyttäjä on siis aina osittain vastuussa omasta tietoturvastaan.
-
-Vaikka hyökkääjistä ei olisi huolta, ei silti olisi hyvä idea tallentaa salasanoja sellaisenaan, koska tietokannan ylläpitäjä voisi tahattomasti nähdä käyttäjien salasanoja.
-
 ### Muut salaiset tiedot
 
 Web-sovelluksissa on usein muutakin salaista tietoa, kuten tietokannan salasana, Flaskissa istuntojen salainen avain jne. Näiden tietojen tulee olla turvallisessa paikassa palvelimella niin, että ulkopuoliset eivät pääse niihin käsiksi. Yksi turvallinen tapa on käyttää ympäristömuuttujia kurssin materiaalissa esitetyllä tavalla.

@@ -151,7 +151,7 @@ else:
         # TODO: invalid password
 ```
 
-Koodi hakee tietokannasta käyttäjän antamaa tunnusta vastaavan salasanan. Jos tietokannasta ei tule riviä (tulos on `None`), tämä tarkoittaa, että tietokannassa ei ole käyttäjätunnusta. Muuten tarkastetaan Werkzeug-kirjaston funktiolla `check_password_hash`, onko salasana oikea.
+Koodi hakee tietokannasta käyttäjän antamaa tunnusta vastaavan salasanan. Jos tietokannasta ei tule riviä (tulos on `None`), tämä tarkoittaa, että käyttäjää ei ole tietokannassa. Muuten koodi tarkastaa funktiolla `check_password_hash`, onko salasana oikea.
 
 Salasana näyttää tietokannassa seuraavalta:
 
@@ -164,3 +164,9 @@ pllk=# SELECT password FROM users WHERE username='maija';
 ```
 
 Tässä tapauksessa käyttäjän "maija" salasana on "kissa". Salasanasta on tallennettu tietokantaan merkkijono, jonka osana on käytetty hajautusfunktio (tässä `sha256`), muuta tietoa hajautustavasta ja varsinainen hajautusarvo. Tämän avulla voidaan tarkastaa myöhemmin, onko käyttäjän antama salasana oikea.
+
+Mitä hyötyä on tallentaa salasana hajautusarvona? Tässä on kyse siitä, että jos jostain syystä hyökkääjä pääsee käsiksi tietokannan sisältöön ja salasanat olisi tallennettu sellaisenaan, hyökkääjä saisi selville suoraan käyttäjien salasanat. Moni käyttää samoja tai samantapaisia salasanoja eri palveluissa, joten tästä voisi olla huomattava hyöty pahantahtoiselle hyökkääjälle. Salasanan tallentaminen hajautusarvona _hidastaa_ hyökkääjän työtä: jos hyökkääjä haluaa selvittää alkuperäisen salasanan, hänen täytyy käytännössä kokeilla läpi suuri määrä mahdollisia salasanoja ja tarkastaa, antaako jokin niistä saman hajautusarvon.
+
+Huomaa, että jos hyökkääjä saa käsiinsä tietokannan sisällön, tilanne on jo erittäin paha eikä näin saisi päästä tapahtumaan. Kuitenkin tilanne olisi vielä pahempi, jos salasanat olisi tallennettu tietokantaan sellaisenaan. Toisaalta salasanan tallentaminen hajautusarvona ei auta asiaa, jos salasana on _huono_ eli helposti arvattava tai lyhyt. Tällöin hyökkääjä saa sen joka tapauksessa selville käymällä läpi raa'alla voimalla mahdollisia salasanoja. Käyttäjä on siis aina osittain vastuussa omasta tietoturvastaan.
+
+Vaikka hyökkääjistä ei olisi huolta, ei silti olisi hyvä idea tallentaa salasanoja sellaisenaan, koska tietokannan ylläpitäjä voisi tahattomasti nähdä käyttäjien salasanoja.
