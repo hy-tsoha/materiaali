@@ -5,9 +5,13 @@ title: HTML-opas
 
 # HTML-opas
 
+Tämä opas antaa perustiedot HTML-kielestä, jolla määritellään nettisivun rakenne. Lisäksi tutustumme lyhyesti CSS- ja JavaScript-kieliin.
+
+Lisää tietoa aiheista löydät esimerkiksi [Mozillan ohjesivustolta](https://developer.mozilla.org/en-US/docs/Learn/HTML).
+
 ## HTML:n perusteet
 
-HTML-sivu muodostuu tageista, jotka määrittelevät sivun sisällön. Esimerkiksi sivun otsikko tulee tagien `<title>` ja `</title>` sisään ja tagi `<img>` näyttää kuvan.
+HTML-sivu muodostuu elementeistä, jotka määrittelevät sivun sisällön. Esimerkiksi sivun otsikko tulee elementin `<title>` sisään ja elementti `<img>` näyttää kuvan.
 
 Tässä on esimerkkisivu `testi.html`, joka esittelee tavallisia HTML:n ominaisuuksia:
 
@@ -74,11 +78,11 @@ apina
 cembalo
 ```
 
-Tekstiin saa uuden kappaleen tagilla `<p>` ja rivinvaihdon tagilla `<br>`.
+Elementti `<p>` määrittää kappaleen ja elementti `<br>` tuottaa rivinvaihdon.
 
 ### Kuvien näyttäminen
 
-Tagissa `img` attribuutti `src` antaa osoitteen kuvatiedostoon ja tagi `alt` määrittää tekstin, joka voidaan näyttää kuvan sijasta:
+Elementin `img` attribuutti `src` antaa osoitteen kuvatiedostoon ja attribuutti `alt` määrittää tekstin, joka voidaan näyttää kuvan sijasta:
 
 ```html
 <img src="exactum.jpg" alt="Exactum-rakennus Kumpulassa">
@@ -142,7 +146,7 @@ Salasana: <input type="password" name="password" size="20">
 
 ### Tekstilaatikko
 
-Tekstilaatikon avulla käyttäjä voi syöttää pitkän tekstin, jossa voi olla useita rivejä. Attribuutit `rows` ja `cols` määrittävät laatikon koon. Laatikon oletussisältö kirjoitetaan tagien väliin.
+Tekstilaatikon avulla käyttäjä voi syöttää pitkän tekstin, jossa voi olla useita rivejä. Attribuutit `rows` ja `cols` määrittävät laatikon koon. Laatikon oletussisältö kirjoitetaan elementin sisään.
 
 ```html
 Viesti: <br>
@@ -280,7 +284,7 @@ Nyt käytössä on `div`-elementti, joka määrittelee alueen, jota voidaan tyyl
 
 Attribuuttia `style` on helppo käyttää CSS:n määrittelyyn, mutta se ei ole yleensä kovin hyvä ratkaisu. Ongelmana on, että jos usealla elementillä on tarkoitus olla sama tyyli, samanlaista CSS-koodia joutuu kopioimaan moneen paikkaan.
 
-Parempi tapa on määritellä sivun alussa tyyliluokka, joka määrittelee yhteisen tyylin, ja viitata tähän halutuissa elementeissä. Esimerkiksi seuraava `style`-tagien sisällä oleva CSS-koodi määrittelee tyyliluokan `laatikko` sinistä laatikkoa varten:
+Parempi tapa on määritellä sivun alussa tyyliluokka, joka määrittelee yhteisen tyylin, ja viitata tähän halutuissa elementeissä. Esimerkiksi seuraava CSS-koodi määrittelee tyyliluokan `laatikko` sinistä laatikkoa varten:
 
 ```html
 <style>
@@ -404,7 +408,7 @@ function increase() {
 }
 </script>
 Laskuri: <span id="counter">0</span> <br>
-<button onclick="increase()">Paina tästä</button>
+<button onclick="increase()">Kasvata</button>
 </div>
 
 ### Milloin käyttää JavaScriptiä?
