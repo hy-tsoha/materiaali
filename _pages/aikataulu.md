@@ -19,7 +19,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Palautuksissa riit
 ### Välipalautus 1
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten.
-* Valitse projektille aihe ja kirjoita README.md-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot.
+* Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?](aiheen_valinta.html)
 * Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta.
 
