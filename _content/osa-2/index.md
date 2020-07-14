@@ -14,5 +14,5 @@ Jos olet käyttänyt aiemmin SQLite-tietokantaa mutta PostgreSQL ei ole tuttu, v
 
 {% include_relative tietokanta.md %}
 {% include_relative esimerkki.md %}
-{% include_relative kirjautuminen.md %}
-{% include_relative getvspost.md %}
+{% include_relative istunnot.md %}
+{% include_relative hakutoiminto.md %}

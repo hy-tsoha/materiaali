@@ -9,7 +9,7 @@ sub-sections:
 ---
 # Osa 4
 
-{% include_relative kayttaja.md %}
+{% include_relative oikeudet.md %}
 {% include_relative tietoturva.md %}
 {% include_relative kaytettavyys.md %}
 {% include_relative ulkoasu.md %}

@@ -54,7 +54,7 @@ TODO: Kuva tähän
 ### HTML ja sivupohjat
 
 Tähän mennessä olemme tuottaneet sivuja, joissa on pelkkää tekstiä,
-mutta tarkemmin ottaen voimme käyttää sivuilla HTML-koodia. HTML on kieli, jolla määritellään nettisivun sisältö. Jos HTML ei ole sinulle ennestään tuttu, voit tutustua siihen [tästä](TODO).
+mutta tarkemmin ottaen voimme käyttää sivuilla HTML-koodia. HTML on kieli, jolla määritellään nettisivun sisältö. Jos HTML ei ole sinulle ennestään tuttu, voit tutustua siihen [tästä](../../pages/html_opas.html).
 
 Esimerkiksi seuraava sivu käyttää HTML-komentoja:
 
