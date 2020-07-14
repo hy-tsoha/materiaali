@@ -6,21 +6,11 @@ title: TODO
 
 ## Sekalaista:
 
-* Sivuvalikon toiminta kun vaihtaa osaa, olisiko väritys joka näyttää missä ollaan?
-
-✔️ Väristys on lisätty sivuvalikkoon.
-
-* Sivun pystyy piilottamaan valikosta
-
-✔️ `_pages`-hekemistossa sivun voi piilottaa attribuutilla `hidden: true`.
-`_content`-hakemistossa riittää, että jättää sivun `nav-title`-kentän pois.
-
-* Etusivun otsikon näyttötapa tyylikkäämmäksi
-* Voiko sivuvalikossa selventää että kyseessä linkkejä (taustaväri vaihtuu kun hiiri päällä?)
-
-✔️ Sivuvalikon taustaväri vaihtuu.
-
-✔️ Jokaisen sivun layout on automaattisesti chapter eli layout-attribuuttia ei tarvita.
+* Etusivun otsikko ei näytä hyvältä, liikaa valkoista taustaa
+* Sivuvalikossa on hyvä että hiiri värittää kohdan, mutta pitäisi pystyä painamaan hiirellä linkkiä koko väritetyltä alueelta eikä vain tekstin kohdalta
+* Ei näytä hyvältä, että osan sisällä kaikki kohdat aktiiviseen kohtaan asti värittyvät, vaan parempi olisi värittää vain aktiivinen kohta. Olisiko hyvä olla kaksi eri väriä (harmaan sävyä?): missä osassa ollaan ja mitä kohtaa hiiri osoittaa?
+* Kaikkien sivujen otsikko (title-tagi) on sama, otsikon pitäisi määräytyä sivun mukaan
+* Onko tapaa määrittää sivujen järjestys sivupalkin yläosiossa? Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
 
 ## Taulukoista 
 
