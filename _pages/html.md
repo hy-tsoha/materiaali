@@ -1,5 +1,6 @@
 ---
 title: HTML-opas
+hidden: true
 ---
 
 # HTML-opas

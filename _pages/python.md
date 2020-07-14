@@ -1,5 +1,6 @@
 ---
 title: Python-opas
+hidden: true
 ---
 
 # Python-opas
