@@ -54,6 +54,6 @@ Kurssiin kuuluu kaksi vertaisarviointia, joissa annetaan palautetta toisen opisk
 * Ennen varsinaisen sovelluksen toteuttamisen aloittamista sinun kannattaa tutustua huolellisesti kurssisivuston materiaaliin ja tehdä pieniä kokeiluja, jotta saat harjoiteltua kurssilla käytettyjä työkaluja.
 * Neuvoja tietokannan suunnitteluun löydät kurssin _Tietokantojen perusteet_ materiaalista. Erityisesti kurssin materiaalin [luku 5](https://tikape-ke20.mooc.fi/luku-5) on hyödyllinen.
 * Palautuksissa ohjaaja tutustuu projektiisi GitHubin ja Herokun kautta. Pidä huoli siitä, että sovelluksen ajantasainen versio on saatavilla näissä paikoissa.
-* Sovelluksen dokumentaatio luodaan tiedostoon `README.md`, joka näkyy GitHubissa projektin etusivulla. Kirjoita dokumentaatio sellaista henkilöä varten, joka haluaa saada käsityksen sovelluksesta ja mahdollisesti ottaa sen käyttöön itse.
+* Sovelluksen dokumentaatio luodaan tiedostoon `README.md`, joka näkyy GitHubissa projektin etusivulla. Kirjoita dokumentaatio sellaista henkilöä varten, joka haluaa saada käsityksen sovelluksesta ja mahdollisesti ottaa sen käyttöön itse, tai haluaa (jatko)kehittää sovellusta.
 * Oleellinen asia kurssilla on sovelluksen toimivuus: millainen käyttökokemus tulee testaajalle, joka menee Herokuun ja käyttää sovellusta. Jos sovellus ei toimi, muut osa-alueet eivät voi pelastaa sitä.
 * Jos jokin asia kurssilla on epäselvä, niin otathan yhteyttä ohjaajaan.
