@@ -14,6 +14,12 @@ Kurssin tavoitteena on saada yleistä osaamista web-sovelluksen kehityksestä ja
 
 Kuitenkin jos haluat käyttää ORMia tai tiettyä kirjastoa ja opettelet ne itsenäisesti, niin voit mainiosti tehdä näin.
 
+### Millä kielellä projektin voi tehdä?
+
+Voit tehdä projektin suomeksi, ruotsiksi tai englanniksi.
+
+Kielestä riippumatta suositeltava tapa on kirjoittaa koodi, commit-viestit jne. englanniksi.
+
 ### Mitä teen, kun löysin virheen kurssin materiaalista?
 
 Voit ilmoittaa virheestä Telegram-kanavalla, kurssin vastuuhenkilölle tai lähettää saman tien korjauksen [kurssin GitHub-repoon](https://github.com/hy-tsoha/materiaali/).
