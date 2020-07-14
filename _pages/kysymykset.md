@@ -34,7 +34,7 @@ Kurssimateriaali olettaa että käytössä on Linux, mutta voit mainiosti käytt
 
 ### Mitä käy, jos en saa sovellusta valmiiksi?
 
-Voit osallistua kurssille enintään kahdesti ohjatusti. Jos et saa sovellusta valmiiksi, sinun täytyy valita seuraavalla kerralla uusi aihe sovellukselle.
+Voit osallistua kurssille enintään kahdesti ohjatusti. Jos et saa sovellustasi valmiiksi kurssin aikana, sinun täytyy valita seuraavalla kerralla uusi aihe sovellukselle.
 
 ### Miten kurssin voi suorittaa itsenäisesti?
 
