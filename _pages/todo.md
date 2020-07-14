@@ -217,6 +217,15 @@ Hello world
 $ rm apina.txt
 ```
 
+Omat pluginit eivät toimi github-pagesin kanssa automaattisesti. Syntaksi 'plaintext' näyttää nyt konsolilta ilman mitään syntaksia.
+
+```plaintext
+$ cp apina.txt banaani.txt
+$ ./testi
+Hello world
+$ rm apina.txt
+```
+
 ## LaTeX-merkinnät
 
 Tulos saadaan kaavalla $$a+\log b$$.
