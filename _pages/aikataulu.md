@@ -1,5 +1,5 @@
 ---
-title: Aikataulu
+title: Aikataulu ja ohjeet
 ---
 
-# Aikataulu
+# Aikataulu ja ohjeet
