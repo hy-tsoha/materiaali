@@ -205,7 +205,7 @@ Date:   Tue Jul 14 17:36:10 2020 +0300
 Kuitenkin kun commit on tehty vasta paikallisesti, pystymme perumaan sen näin:
 
 ```prompt
-$ git reset --soft HEAD~1
+$ git reset HEAD~1
 ```
 
 Tämä komento siirtää repositorion tilan yhtä askelta aiemmaksi ja kaikki on taas hyvin:
