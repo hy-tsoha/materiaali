@@ -99,7 +99,7 @@ Yllä oleva esimerkki tuottaa seuraavan sivun:
 
 <img class="screenshot" src="template.png">
 
-Flask käyttää sivupohjissa Jinja-skriptikieltä, jonka avulla sivupohjaan voi välittää tietoa Python-koodista. Seuraava sivupohja antaa näytteen asiasta:
+Flask käyttää käyttäjälle lähetettävien sivujen luomisessa Jinja-sivupohjia, jonka avulla valmiiseen sivupohjaan voi välittää tietoa Python-koodista. Seuraava esimerkki antaa näytteen asiasta:
 
 ```jinja
 <title>Etusivu</title>
