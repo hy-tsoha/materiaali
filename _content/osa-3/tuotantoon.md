@@ -31,7 +31,7 @@ Creating ⬢ tsoha-visitors... done
 https://tsoha-visitors.herokuapp.com/ | https://git.heroku.com/tsoha-visitors.git
 ```
 
-Jokaisella Herokussa olevalla sovelluksella tulee olla eri nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Jos et anna sovellukselle nimeä, Heroku määrittää sille automaattisesti satunnaisen nimen. Jos teet sovelluksen vain kokeilua tai tätä kurssia varten, Herokun määrittämä nimi riittää hyvin.
+Jokaisella Herokussa olevalla sovelluksella tulee olla eri nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Kuitenkaan et voi itse luoda tämän nimistä sovellusta, koska se on jo olemassa. Jos et anna sovellukselle nimeä, sille tulee automaattisesti satunnainen nimi. Jos teet sovelluksen vain kokeilua tai tätä kurssia varten, satunnainen nimi riittää hyvin.
 
 Sovellus julkaistaan Herokussa lähettämällä haluttu sovelluksen versio Herokun git-repositorioon. Tämän voi tehdä kytkemällä paikallisen repositorion Herokuun, kuten teemme tässä ohjeessa, tai vaihtoehtoisesti Herokun GitHub-integraation kautta.
 
@@ -57,7 +57,7 @@ Tästä näkee, että oletuskohde `origin` osoittaa edelleen GitHubiin, mutta uu
 $ git push heroku master
 ```
 
-Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteensopiva, vaan sovellukseen täytyy tehdä ensin joitakin muutoksia.
+Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteensopiva vaan sovellukseen täytyy tehdä ensin joitakin muutoksia.
 
 ### Palvelimen määrittely
 
@@ -137,7 +137,7 @@ remote: -----> Installing requirements with pip
 remote:        ERROR: Invalid requirement: 'pkg-resources=0.0.0' (from line 8 of /tmp/build_b6f49f8f28a88afca0c79ce857e4849b/requirements.txt)
 ```
 
-Jotain meni kuitenkin pieleen: tiedostossa `requirements.txt` oleva riippuvuus `pkg-resources` ei kelpaa Herokulle. Tässä tapauksessa toimiva korjaus on poistaa kyseinen rivi tiedostosta ja yrittää uudestaan:
+Jotain meni kuitenkin pieleen: tiedostossa `requirements.txt` oleva riippuvuus `pkg-resources` ei kelpaa Herokulle. Tämä on tunnettu ongelma, ja tässä tapauksessa toimiva korjaus on poistaa kyseinen rivi tiedostosta ja yrittää uudestaan:
 
 ```plaintext
 remote: Compressing source files... done.

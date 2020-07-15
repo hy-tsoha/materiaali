@@ -218,13 +218,13 @@ Nyt jos toinen henkilö hakee sovelluksen GitHubista, hän voi asentaa virtuaali
 
 Repositoriosta puuttuu vielä tieto siitä, mikä on sovelluksen käyttämän tietokannan rakenne. Tätä varten voimme luoda tiedoston `schema.sql`, joka sisältää tietokannan skeeman. Tässä sovelluksessa tietokannassa on vain yksi taulu ja tiedoston sisältö on seuraava:
 
-```
+```sql
 CREATE TABLE visitors (id SERIAL PRIMARY KEY, time TIMESTAMP);
 ```
 
 Lisäämme uuden tiedoston repositorioon:
 
-```
+```plaintext
 (venv) $ git add schema.sql 
 (venv) $ git commit -m "Add SQL schema"
 (venv) $ git push
