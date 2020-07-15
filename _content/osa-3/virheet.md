@@ -8,7 +8,7 @@ Web-sovellus tulostaa toimintansa aikana lokitietoa, jonka avulla voi jäljittä
 
 Jos kaikki menee hyvin, komentoikkunaan voi tulla seuraavan tapaisia viestejä:
 
-```prompt
+```plaintext
 (venv) $ flask run
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -29,11 +29,11 @@ Tehdään nyt testimielessä sovellukseen tahallinen bugi muuttamalla SQL-kysely
 
 Tämän seurauksena sovellus antaa virhesivun, jonka viestinä on _Internal Server Error_:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/error.png">
 
 Tällainen virhesivu kertoo hyvin vähän siitä, mikä mahdollinen virhe on, mutta voimme mennä heti tutkimaan lokin sisältöä:
 
-```prompt
+```plaintext
 (venv) $ flask run
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -68,7 +68,7 @@ Tästä näkee, että virheen syynä on `syntax error at or near "SELEC"` ja vir
 
 Jos sovellus aiheuttaa virheen Herokussa, lokin saa Herokun komentorivityökalun avulla näkyviin seuraavasti:
 
-```prompt
+```plaintext
 $ heroku logs --tail
 ```
 
@@ -88,7 +88,7 @@ Esimerkiksi voimme tehdä seuraavan debug-tulostuksen, joka tulostaa muuttujan `
 
 Nyt kun suoritamme sovelluksen ja käymme sivulla, lokiin ilmestyy seuraavaa tietoa:
 
-```prompt
+```plaintext
 (venv) $ flask run
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.

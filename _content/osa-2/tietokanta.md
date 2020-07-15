@@ -12,7 +12,7 @@ Voit myös asentaa PostgreSQL:n pääkäyttäjänä käyttöjärjestelmäsi pake
 
 Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun `messages`, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
 
-```prompt
+```plaintext
 $ psql
 pllk=# CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT);
 CREATE TABLE
@@ -35,7 +35,7 @@ PostgreSQL:ssä tyyppi `SERIAL` tarkoittaa taulun avaimena käytettävää kokon
 
 Hyödyllisiä PostgreSQL-tulkin komentoja ovat `\dt`, joka näyttää listan tauluista, sekä `\d [taulu]`, joka näyttää taulun sarakkeet ja muuta tietoa siitä.
 
-```prompt
+```plaintext
 pllk=# \dt
          List of relations
  Schema |   Name   | Type  | Owner 
@@ -55,7 +55,7 @@ Indexes:
 
 Komento `\q` poistuu PostgreSQL-tulkista:
 
-```prompt
+```plaintext
 pllk=# \q
 $ 
 ```
@@ -64,7 +64,7 @@ $
 
 Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjastoa lisää:
 
-```prompt
+```plaintext
 (venv) $ pip install flask-sqlalchemy
 (venv) $ pip install psycopg2
 ```
@@ -76,7 +76,7 @@ Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellu
 <p class="code-title">app.py</p>
 ```python
 from flask import Flask
-from flask import redirect, render_template
+from flask import redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -104,7 +104,7 @@ def send():
     return redirect("/")
 ```
 
-<p class="code-title">templates/index.html</p>
+<p class="code-title">index.html</p>
 ```jinja
 {% raw %}Viestien määrä: {{ count }}
 <hr>
@@ -115,18 +115,23 @@ def send():
 <a href="/new">Lähetä viesti</a>{% endraw %}
 ```
 
-<p class="code-title">templates/new.html</p>
+<p class="code-title">new.html</p>
 ```html
 <form action="/send" method="POST">
 Viesti: <br>
-<textarea name="content"></textarea>
+<textarea name="content" rows="3" cols="40"></textarea>
+<br>
 <input type="submit" value="Lähetä">
 </form>
 ```
 
 Sovelluksen käyttäminen voi näyttää tältä:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/viestit1.png">
+
+<img class="screenshot" src="img/viestit2.png">
+
+<img class="screenshot" src="img/viestit3.png">
 
 Katsotaan vielä tarkemmin joitakin kohtia koodista:
 
@@ -172,13 +177,13 @@ Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen 
 
 Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa `export` seuraavasti ennen sovelluksen käynnistämistä:
 
-```prompt
+```plaintext
 $ export DATABASE_URL=postgresql:///pllk
 ```
 
 Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
 
-```prompt
+```plaintext
 $ pip install python-dotenv
 ```
 

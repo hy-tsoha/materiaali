@@ -20,7 +20,9 @@ def page2():
 
 Tässä sovelluksessa on etusivu, kuten ennenkin, sekä kaksi muuta sivua, joiden osoitteet ovat `page1` ja `page2`. Voimme katsoa sivuja näin:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/page1.png">
+
+<img class="screenshot" src="img/page2.png">
 
 Huomaa, että sivun osoite ja funktion nimi ovat kaksi eri asiaa. Sivun osoite annetaan dekoraattorissa, jonka jälkeen tulee sivupyynnön käsittelevä funktio, jolla voi olla muu nimi. Kuitenkin usein toimiva käytäntö on, että sivun osoite ja funktion nimi ovat samat, kuten yllä olevassa koodissa `page1` ja `page2`.
 
@@ -37,7 +39,7 @@ def test():
 
 Funktion tuloksena on seuraava sivu:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/test.png">
 
 Voimme myös määritellä sivun osoitteen niin, että siinä on _parametri_. Esimerkiksi seuraava funktio käsittelee sivuja, joiden osoitteessa on `int`-tyyppinen parametri `id`:
 
@@ -49,7 +51,7 @@ def page(id):
 
 Sivun osoitteessa annettu parametri välittyy funktiolle, joka voi käyttää sitä haluamallaan tavalla sivun luomisessa. Tässä tapauksessa funktio näyttää sivulla viestin "Tämä on sivu _id_", eli esimerkiksi osoitteessa `page/123` oleva sivu näyttää tältä:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/page123.png">
 
 ### HTML ja sivupohjat
 
@@ -66,7 +68,7 @@ def index():
 
 Tässä tapauksessa sana "Tervetuloa" näkyy lihavoituna ja sana "sovellukseen" näkyy kursivoituna:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/html.png">
 
 Periaatteessa voisimme luoda sovelluksen sivujen HTML:n suoraan funktioissa, mutta  tämä olisi vaivalloista, kun sivulla on enemmän sisältöä. Parempi tapa on määritellä _sivupohjia_, joita funktiot käyttävät. Sivupohjat tallennetaan `templates`-hakemistoon.
 
@@ -95,9 +97,9 @@ Tässä funktio `render_template` käsittelee sivupohjan sisällön. Tämä on y
 
 Yllä oleva esimerkki tuottaa seuraavan sivun:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/template.png">
 
-Flask käyttää sivupohjissa Jinja-skriptikieltä, jonka avulla sivupohjaan voi välittää tietoa Python-koodista. Seuraava sivupohja antaa näytteen asiasta:
+Flask käyttää käyttäjälle lähetettävien sivujen luomisessa Jinja-sivupohjia, jonka avulla valmiiseen sivupohjaan voi välittää tietoa Python-koodista. Seuraava esimerkki antaa näytteen asiasta:
 
 ```jinja
 <title>Etusivu</title>
@@ -121,7 +123,7 @@ def index():
 
 Tämän seurauksena sivu näyttää tältä:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/jinja.png">
 
 ### Staattiset tiedostot
 

@@ -24,7 +24,7 @@ Tämä avain allekirjoittaa evästeessä olevan tiedon niin, että käyttäjä e
 
 Oman salaisen avaimen voi luoda vaikkapa Python-tulkin avulla. Esimerkiksi moduulin `os` funktio `urandom` antaa halutun määrän satunnaisia tavuja.
 
-```prompt
+```plaintext
 $ python3
 >>> from os import urandom
 >>> urandom(16).hex()
@@ -82,7 +82,9 @@ Sovellus käyttää seuraavaa sivupohjaa `index.html`, joka joko näyttää kirj
 
 Sovelluksen käyttäminen voi näyttää tältä:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/login1.png">
+
+<img class="screenshot" src="img/login2.png">
 
 Katsotaan nyt tarkemmin sovelluksen osia: 
 
@@ -167,7 +169,7 @@ Koodi hakee tietokannasta käyttäjän antamaa tunnusta vastaavan salasanan. Jos
 
 Salasana näyttää tietokannassa seuraavalta:
 
-```prompt
+```plaintext
 pllk=# SELECT password FROM users WHERE username='maija';
                                             password                                            
 ------------------------------------------------------------------------------------------------

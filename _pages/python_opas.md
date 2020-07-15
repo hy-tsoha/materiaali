@@ -19,7 +19,7 @@ Python on valmiiksi asennettuna useissa järjestelmissä. Tarvittaessa löydät 
 
 Pythonin komentotulkki on kätevä tapa kielen ominaisuuksien testaamiseen. Komentotulkki käynnistyy komennolla `python3`, minkä jälkeen voi kirjoittaa suoritettavia komentoja.
 
-```prompt
+```plaintext
 $ python3
 >>> 1+2
 3
@@ -41,7 +41,7 @@ print("Moikka,", name)
 
 Koodi suoritetaan näin komentoriviltä:
 
-```prompt
+```plaintext
 $ python3 test.py
 Anna nimi: Kotivalo
 Moikka, Kotivalo

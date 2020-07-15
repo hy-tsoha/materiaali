@@ -41,7 +41,9 @@ Sivu `result` ottaa vastaan `POST`-metodilla lähetetyn lomakkeen, mikä näkyy 
 
 Lomakkeen käyttäminen voi näyttää tältä:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/form.png">
+
+<img class="screenshot" src="img/result.png">
 
 Metodi `POST` on yleisin tapa lomakkeen lähettämiseen, ja se soveltuu useimpiin tilanteisiin. Toinen metodi on `GET`, johon palaamme myöhemmin.
 
@@ -55,18 +57,18 @@ Tehdään seuraavaksi esimerkki, jossa käyttäjä voi tilata pizzan. Sivupohja 
 <form action="/result" method="POST">
 Valitse pizza:
 <p>
-<input type="radio" name="pizza" value="1"> Frutti di Mare <br>
-<input type="radio" name="pizza" value="2"> Margherita <br>
-<input type="radio" name="pizza" value="3"> Quattro Formaggi <br>
-<input type="radio" name="pizza" value="4"> Quattro Stagioni <br>
+<input type="radio" name="pizza" value="1"> Frutti di Mare
+<input type="radio" name="pizza" value="2"> Margherita
+<input type="radio" name="pizza" value="3"> Quattro Formaggi
+<input type="radio" name="pizza" value="4"> Quattro Stagioni
 <p>
 Valitse lisät:
 <p>
-<input type="checkbox" name="extra" value="A"> oregano <br>
-<input type="checkbox" name="extra" value="B"> valkosipuli <br>
+<input type="checkbox" name="extra" value="A"> oregano
+<input type="checkbox" name="extra" value="B"> valkosipuli
 <p>
 Erikoistoiveet: <br>
-<textarea name="message" rows="5" cols="50"></textarea>
+<textarea name="message" rows="3" cols="50"></textarea>
 <p>
 <input type="submit" value="Lähetä">
 </form>
@@ -115,4 +117,6 @@ Koska `extra`-nimen alla voi olla useita valintoja, ne haetaan listana `getlist`
 
 Lomakkeen käyttäminen voi näyttää tältä:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/pizza1.png">
+
+<img class="screenshot" src="img/pizza2.png">

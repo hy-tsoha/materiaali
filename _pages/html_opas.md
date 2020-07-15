@@ -24,7 +24,7 @@ Tekstin <b>muotoilu</b> toimii <i>näin</i>.
 Kohta mennään <br> uudelle riville.
 <!-- Tämä kommentti ei näy sivun käyttäjälle -->
 <p>
-<img src="exactum.jpg" alt="Exactum-rakennus Kumpulassa">
+<img src="hy.png" alt="Helsingin yliopiston logo">
 <p>
 Tästä voit mennä <a href="https://cs.helsinki.fi/">toiseen paikkaan</a>.
 <h2>Kaverilista</h2>
@@ -46,7 +46,7 @@ Sivu päättyy tähän.
 
 Sivu voi näyttää selaimessa seuraavalta:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/html.png">
 
 Katsotaan seuraavaksi tarkemmin joitakin HTML-koodin osia.
 
@@ -85,12 +85,12 @@ Elementti `<p>` määrittää kappaleen ja elementti `<br>` tuottaa rivinvaihdon
 Elementin `img` attribuutti `src` antaa osoitteen kuvatiedostoon ja attribuutti `alt` määrittää tekstin, joka voidaan näyttää kuvan sijasta:
 
 ```html
-<img src="exactum.jpg" alt="Exactum-rakennus Kumpulassa">
+<img src="hy.png" alt="Helsingin yliopiston logo">
 ```
 
 Esimerkiksi jos sivua katsoo Lynx-tekstiselaimella, kuvan sijasta näkyy teksti:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/lynx.png">
 
 Vaihtoehtoinen teksti on myös hyödyllinen näkövammaisille käyttäjille, koska se voidaan lukea ääneen kuvan näyttämisen sijasta.
 

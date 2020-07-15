@@ -4,7 +4,7 @@ Web-sovellusten toiminta perustuu HTTP-protokollaan, jossa selain lähettää pa
 
 Esimerkiksi seuraavassa kuvassa selain pyytää HTML-tiedostoa `index.html`. Palvelin lähettää tiedoston sisällön HTTP-koodilla 200, mikä tarkoittaa, että pyyntö onnistui.
 
-TODO: Kuva tähän
+<img src="img/http.png">
 
 Perinteinen tapa toteuttaa nettisivusto on luoda HTML-tiedostot käsin ja sijoittaa ne palvelimella olevaan hakemistoon. Tämän rajoituksena on kuitenkin, että palvelimella olevat sivut ovat _staattisia_ eli aina kun käyttäjä lataa tietyn sivun, se näyttää samalta.
 
@@ -14,27 +14,27 @@ Tällä kurssilla opimme toteuttamaan web-sovelluksia, jotka luovat _dynaamisia_
 
 Aloitamme ensimmäisen web-sovelluksen tekemisen luomalla sovellusta varten hakemiston `sovellus` ja siirtymällä sinne:
 
-```prompt
+```plaintext
 $ mkdir sovellus
 $ cd sovellus
 ```
 
 Jotta voimme kätevästi hallinnoida sovelluksen tarvitsemia kirjastoja, luomme hakemistoon Pythonin virtuaaliympäristön seuraavalla komennolla:
 
-```prompt
+```plaintext
 $ python3 -m venv venv
 ```
 
 Tämä komento luo hakemiston `venv`, jonka sisällä on Pythonin suoritusympäristö sovellusta varten. Saamme virtuaaliympäristön käyntiin suorittamalla aktivointikomennon näin:
 
-```prompt
+```plaintext
 $ source venv/bin/activate
 ```
 
 Tämän seurauksena komentorivin alkuun ilmestyy tunnus `(venv)` merkkinä siitä, että olemme virtuaaliympäristössä. 
 Kun olemme virtuaaliympäristössä, voimme asentaa Python-kirjastoja paikallisesti niin, että ne ovat käytettävissä vain kyseisessä virtuaaliympäristössä emmekä tarvitse asennukseen pääkäyttäjän oikeuksia. Asennamme ensin `flask`-kirjaston:
 
-```prompt
+```plaintext
 (venv) $ pip install flask
 ```
 
@@ -52,7 +52,7 @@ def index():
 
 Sovelluksen ideana on, että se näyttää tekstin `"Heipparallaa!"`, kun menemme sovelluksen etusivulle. Saamme sovelluksen käyntiin näin:
 
-```prompt
+```plaintext
 (venv) $ flask run
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -63,13 +63,13 @@ Sovelluksen ideana on, että se näyttää tekstin `"Heipparallaa!"`, kun menemm
 
 Viimeisellä rivillä näkyy osoite, jonka kautta voimme käyttää sovellusta nettiselaimella. Kun menemme sivulle `http://127.0.0.1:5000/`, näemme sovelluksen:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/sovellus.png">
 
 Sovellus sulkeutuu painamalla Control+C komentorivillä, jolloin voimme tehdä jotain muuta komentorivillä tai käynnistää sovelluksen uudestaan.
 
 Komento `deactivate` lopettaa virtuaaliympäristön käyttämisen ja palauttaa komentorivin takaisin tavalliseen tilaan:
 
-```prompt
+```plaintext
 (venv) $ deactivate
 $ 
 ```
