@@ -5,6 +5,7 @@ sub-sections:
       - sub-section-title: "Esimerkki: Kyselyt"
       - sub-section-title: Istunnot ja kirjautuminen
       - sub-section-title: Hakutoiminto
+      - sub-section-title: Tiedon poistaminen
 ---
 # Osa 2
 
@@ -16,3 +17,4 @@ Jos olet käyttänyt aiemmin SQLite-tietokantaa mutta PostgreSQL ei ole tuttu, v
 {% include_relative esimerkki.md %}
 {% include_relative istunnot.md %}
 {% include_relative hakutoiminto.md %}
+{% include_relative poistaminen.md %}
