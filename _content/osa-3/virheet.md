@@ -42,9 +42,9 @@ Tällainen virhesivu kertoo hyvin vähän siitä, mikä mahdollinen virhe on, mu
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 [2020-07-03 13:30:39,544] ERROR in app: Exception on / [GET]
 Traceback (most recent call last):
-  File "/home/pllk/tmp/tsoha-visitors/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
+  File "/tsoha-visitors/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
     cursor, statement, parameters, context
-  File "/home/pllk/tmp/tsoha-visitors/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+  File "/tsoha-visitors/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
     cursor.execute(statement, parameters)
 psycopg2.errors.SyntaxError: syntax error at or near "SELEC"
 LINE 1: SELEC COUNT(*) FROM visitors
@@ -53,7 +53,7 @@ The above exception was the direct cause of the following exception:
 
 (...)
 
-  File "/home/pllk/tmp/tsoha-visitors/app.py", line 15, in index
+  File "/tsoha-visitors/app.py", line 15, in index
     result = db.session.execute("SELEC COUNT(*) FROM visitors")
         ^
 

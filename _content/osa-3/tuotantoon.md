@@ -47,8 +47,8 @@ Tämä komento määrittää, että tässä hakemistossa olevan sovelluksen repo
 $ git remote -v
 heroku	https://git.heroku.com/tsoha-visitors.git (fetch)
 heroku	https://git.heroku.com/tsoha-visitors.git (push)
-origin	https://github.com/pllk/tsoha-visitors.git (fetch)
-origin	https://github.com/pllk/tsoha-visitors.git (push)
+origin	https://github.com/user/tsoha-visitors.git (fetch)
+origin	https://github.com/user/tsoha-visitors.git (push)
 ```
 
 Tästä näkee, että oletuskohde `origin` osoittaa edelleen GitHubiin, mutta uutena on kohde `heroku`, joka lähettää sovelluksen Herokuun. Lähetys tapahtuisi näin:

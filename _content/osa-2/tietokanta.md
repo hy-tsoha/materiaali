@@ -14,15 +14,15 @@ Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avu
 
 ```plaintext
 $ psql
-pllk=# CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT);
+# CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT);
 CREATE TABLE
-pllk=# INSERT INTO messages (content) VALUES ('moikka');
+# INSERT INTO messages (content) VALUES ('moikka');
 INSERT 0 1
-pllk=# INSERT INTO messages (content) VALUES ('apina banaani cembalo');
+# INSERT INTO messages (content) VALUES ('apina banaani cembalo');
 INSERT 0 1
-pllk=# INSERT INTO messages (content) VALUES ('kolmas viesti');
+# INSERT INTO messages (content) VALUES ('kolmas viesti');
 INSERT 0 1
-pllk=# SELECT * FROM messages;
+# SELECT * FROM messages;
  id |        content        
 ----+-----------------------
   1 | moikka
@@ -36,14 +36,14 @@ PostgreSQL:ssä tyyppi `SERIAL` tarkoittaa taulun avaimena käytettävää kokon
 Hyödyllisiä PostgreSQL-tulkin komentoja ovat `\dt`, joka näyttää listan tauluista, sekä `\d [taulu]`, joka näyttää taulun sarakkeet ja muuta tietoa siitä.
 
 ```plaintext
-pllk=# \dt
+# \dt
          List of relations
  Schema |   Name   | Type  | Owner 
 --------+----------+-------+-------
- public | messages | table | pllk
+ public | messages | table |
 (1 row)
 
-pllk=# \d messages
+# \d messages
                              Table "public.messages"
  Column  |  Type   | Collation | Nullable |               Default                
 ---------+---------+-----------+----------+--------------------------------------
@@ -56,7 +56,7 @@ Indexes:
 Komento `\q` poistuu PostgreSQL-tulkista:
 
 ```plaintext
-pllk=# \q
+# \q
 $ 
 ```
 
@@ -71,6 +71,8 @@ Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjasto
 
 Ensimmäinen kirjasto `flask-sqlalchemy` on SQLAlchemy-rajapinta, jonka kautta käytämme tietokantaa Flaskissa. Toinen kirjasto `psycopg2` puolestaan mahdollistaa yhteyden muodostamisen PostgreSQL-tietokantaan.
 
+Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan _osoite_. Tässä tapauksessa osoite on muotoa `postgresql:///user`, missä `user` on oma käyttäjätunnuksesi koneellasi (tämä näkyy myös PostgreSQL-tulkissa rivien alussa). Muuta siis tässä ja myöhemmissä vastaavissa kohdissa `user` vastaamaan omaa käyttäjätunnustasi.
+
 Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellus olettaa, että tietokannassa on äsken luomamme `messages`-taulu.
 
 <p class="code-title">app.py</p>
@@ -80,7 +82,7 @@ from flask import redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///pllk"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///user"
 db = SQLAlchemy(app)
 
 @app.route("/")
@@ -136,7 +138,7 @@ Sovelluksen käyttäminen voi näyttää tältä:
 Katsotaan vielä tarkemmin joitakin kohtia koodista:
 
 ```python
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///pllk"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///user"
 db = SQLAlchemy(app)
 ```
 
@@ -178,7 +180,7 @@ Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen 
 Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa `export` seuraavasti ennen sovelluksen käynnistämistä:
 
 ```plaintext
-$ export DATABASE_URL=postgresql:///pllk
+$ export DATABASE_URL=postgresql:///user
 ```
 
 Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
@@ -190,7 +192,7 @@ $ pip install python-dotenv
 Kun kirjasto on asennettu, Flask osaa käyttää sitä automaattisesti. Tämän ansiosta voimme luoda tiedoston `.env`, jossa on määritelty ympäristömuuttujat:
 
 ```
-DATABASE_URL=postgresql:///pllk
+DATABASE_URL=postgresql:///user
 ```
 
 Tämän etuna on, että meidän ei tarvitse suorittaa `export`-komentoa ennen sovelluksen käynnistämistä vaan ympäristömuuttujat ovat aina tallessa tiedostossa.
