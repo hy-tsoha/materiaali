@@ -71,7 +71,7 @@ Nyt voimme kokeilla suorittaa sovelluksen:
 
 Sovelluksen pitäisi näyttää tältä:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/visitors.png">
 
 ### Tiedostojen lisääminen repositorioon
 

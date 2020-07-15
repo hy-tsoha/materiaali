@@ -4,7 +4,12 @@ Seuraava esimerkkisovellus kokoaa yhteen materiaalissa käsiteltyjä asioita. So
 
 Sovelluksen käyttäminen näyttää tältä:
 
-TODO: Lisää kuva
+<img class="screenshot" src="img/chat1.png">
+
+<img class="screenshot" src="img/chat2.png">
+
+<img class="screenshot" src="img/chat3.png">
+
 
 Sovelluksen koko lähdekoodi on GitHubissa osoitteessa [https://github.com/hy-tsoha/tsoha-chat](https://github.com/hy-tsoha/tsoha-chat), ja käymme tässä tarkemmin läpi sovelluksen toimintaa.
 

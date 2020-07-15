@@ -29,7 +29,7 @@ Tehdään nyt testimielessä sovellukseen tahallinen bugi muuttamalla SQL-kysely
 
 Tämän seurauksena sovellus antaa virhesivun, jonka viestinä on _Internal Server Error_:
 
-TODO: Kuva tähän
+<img class="screenshot" src="img/error.png">
 
 Tällainen virhesivu kertoo hyvin vähän siitä, mikä mahdollinen virhe on, mutta voimme mennä heti tutkimaan lokin sisältöä:
 
