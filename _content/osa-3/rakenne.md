@@ -64,4 +64,6 @@ Moduuli `visits` sisältää funktiot `add_visit` ja `get_counter`, joiden avull
 
 Tässä moduulit viittaavat toisiinsa muutamilla eri tavoilla. Periaatteena on, että kun moduuli tarvitsee toisessa moduulissa määriteltyä funktiota tai oliota, toinen moduuli otetaan mukaan `import`-rivillä. Huomaa, että moduulissa oleva koodi (kuten olioiden `app` ja `db` luominen) suoritetaan vain kerran, vaikka moduuli otetaan mukaan useita kertoja.
 
-Tällainen rakenne sopii moneen sovellukseen: moduulit `app`, `db` ja `routes` muodostavat sovelluksen perustan ja tämän lisäksi on muita moduuleja, jotka toteuttavat sovelluksen toimintoja. Tässä esimerkissä moduuli `visits` toteuttaa käynteihin liittyvät toiminnot ja tämän moduulin funktioita on kätevä kutsua sivupyynnön käsittelijästä.
+Tällainen rakenne sopii moneen sovellukseen: moduulit `app`, `db` ja `routes` muodostavat sovelluksen perustan ja tämän lisäksi on muita moduuleja, jotka toteuttavat sovelluksen toimintoja. Tässä esimerkissä moduuli `visits` toteuttaa käynteihin liittyvät toiminnot ja tämän moduulin funktioita on kätevä kutsua sivupyynnön käsittelijästä. Jos sovelluksessa on paljon sivuja, voi olla myös paikallaan jakaa sivupyyntöjen käsittely useampaan moduuliin.
+
+Sovelluksen kehittyessä kuuluu asiaan _refaktoroida_ sen koodia eli muuttaa tarvittaessa sovelluksen rakennetta. On hyvä aloittaa yksinkertaisesta rakenteesta ja tarvittaessa jakaa myöhemmin koodia osiin sen sijaan, että tekee sovellukselle heti aluksi "varmuuden vuoksi" monimutkaisen rakenteen.
