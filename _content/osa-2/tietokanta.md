@@ -12,7 +12,7 @@ Voit myös asentaa PostgreSQL:n pääkäyttäjänä käyttöjärjestelmäsi pake
 
 Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun `messages`, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
 
-```prompt
+```plaintext
 $ psql
 pllk=# CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT);
 CREATE TABLE
@@ -35,7 +35,7 @@ PostgreSQL:ssä tyyppi `SERIAL` tarkoittaa taulun avaimena käytettävää kokon
 
 Hyödyllisiä PostgreSQL-tulkin komentoja ovat `\dt`, joka näyttää listan tauluista, sekä `\d [taulu]`, joka näyttää taulun sarakkeet ja muuta tietoa siitä.
 
-```prompt
+```plaintext
 pllk=# \dt
          List of relations
  Schema |   Name   | Type  | Owner 
@@ -55,7 +55,7 @@ Indexes:
 
 Komento `\q` poistuu PostgreSQL-tulkista:
 
-```prompt
+```plaintext
 pllk=# \q
 $ 
 ```
@@ -64,7 +64,7 @@ $
 
 Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjastoa lisää:
 
-```prompt
+```plaintext
 (venv) $ pip install flask-sqlalchemy
 (venv) $ pip install psycopg2
 ```
@@ -172,13 +172,13 @@ Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen 
 
 Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa `export` seuraavasti ennen sovelluksen käynnistämistä:
 
-```prompt
+```plaintext
 $ export DATABASE_URL=postgresql:///pllk
 ```
 
 Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
 
-```prompt
+```plaintext
 $ pip install python-dotenv
 ```
 
