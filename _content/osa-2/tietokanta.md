@@ -76,7 +76,7 @@ Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellu
 <p class="code-title">app.py</p>
 ```python
 from flask import Flask
-from flask import redirect, render_template
+from flask import redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -104,7 +104,7 @@ def send():
     return redirect("/")
 ```
 
-<p class="code-title">templates/index.html</p>
+<p class="code-title">index.html</p>
 ```jinja
 {% raw %}Viestien määrä: {{ count }}
 <hr>
@@ -115,18 +115,23 @@ def send():
 <a href="/new">Lähetä viesti</a>{% endraw %}
 ```
 
-<p class="code-title">templates/new.html</p>
+<p class="code-title">new.html</p>
 ```html
 <form action="/send" method="POST">
 Viesti: <br>
-<textarea name="content"></textarea>
+<textarea name="content" rows="3" cols="40"></textarea>
+<br>
 <input type="submit" value="Lähetä">
 </form>
 ```
 
 Sovelluksen käyttäminen voi näyttää tältä:
 
-TODO: Kuva tähän
+<img class="screenshot" src="viestit1.png">
+
+<img class="screenshot" src="viestit2.png">
+
+<img class="screenshot" src="viestit3.png">
 
 Katsotaan vielä tarkemmin joitakin kohtia koodista:
 
