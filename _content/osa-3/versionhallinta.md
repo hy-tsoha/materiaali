@@ -6,7 +6,7 @@ Teemme pienen sovelluksen, joka tallentaa tietokantaan sivuston kävijöiden mä
 
 Seuraavat komennot kloonaavat repositorion omalle koneelle, luovat sovellusta varten virtuaaliympäristön sekä asentavat tarvittavat kirjastot:
 
-```prompt
+```plaintext
 $ git clone https://github.com/pllk/tsoha-visitors.git
 Cloning into 'tsoha-visitors'...
 remote: Enumerating objects: 3, done.
@@ -65,7 +65,7 @@ Ideana on, että aina kun käyttäjä lataa etusivun, tauluun `visitors` lisät�
 
 Nyt voimme kokeilla suorittaa sovelluksen:
 
-```prompt
+```plaintext
 (venv) $ flask run
 ```
 
@@ -77,7 +77,7 @@ TODO: Kuva tähän
 
 Koska sovelluksen ensimmäinen versio toimii, nyt on hyvä hetki lisätä sovelluksen tiedostot repositorioon. Hyödyllinen komento on `git status`, joka näyttää repositorion tilanteen. Komento antaa nyt seuraavan tuloksen:
 
-```prompt
+```plaintext
 (venv) $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -106,14 +106,14 @@ Tärkeä asia versionhallinnassa on päättää, mitkä tiedostot laitetaan repo
 
 Komento `git add` laittaa ne lisättäväksi:
 
-```prompt
+```plaintext
 (venv) $ git add app.py
 (venv) $ git add templates
 ```
 
 Nyt `git status` näyttää muuttuneen tilanteen näin:
 
-```prompt
+```plaintext
 (venv) $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -134,7 +134,7 @@ Untracked files:
 
 Tämä näyttää hyvältä, koska oikeat tiedostot ovat menossa repositorioon, joten voimme suorittaa komennot `git commit` ja `git push`:
 
-```prompt
+```plaintext
 (venv) $ git commit -m "Create first version"
 (venv) $ git push
 ```
@@ -155,7 +155,7 @@ venv
 
 Tämän tiedoston luomisen jälkeen `git status` alkaa näyttää siistimmältä:
 
-```prompt
+```plaintext
 (venv) $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -170,7 +170,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 Tiedosto `.gitignore` kuitenkin lisätään repositorioon:
 
-```prompt
+```plaintext
 (venv) $ git add .gitignore 
 (venv) $ git commit -m "Add .gitignore"
 (venv) $ git push
@@ -182,7 +182,7 @@ Tästä lähtien tiedostossa `.gitignore` mainitut tiedostot ja hakemistot eivä
 
 Komento `pip freeze` kertoo, mitkä ovat sovelluksen _riippuvuudet_  eli mitä kirjastoja sovellus tarvitsee toimiakseen. Kun suoritamme komennon nyt, saamme seuraavan tuloksen:
 
-```prompt
+```plaintext
 (venv) $ pip freeze
 click==7.1.2
 Flask==1.1.2
@@ -201,7 +201,7 @@ Tämä lista kertoo jokaisesta kirjastosta, minkä kirjaston version sovellus va
 
 Sovelluksen riippuvuuksista on tapana tehdä tiedosto `requirements.txt`. Tämä tiedosto tallennetaan repositorioon:
 
-```prompt
+```plaintext
 (venv) $ pip freeze > requirements.txt
 (venv) $ git add requirements.txt 
 (venv) $ git commit -m "Add requirements"
@@ -210,7 +210,7 @@ Sovelluksen riippuvuuksista on tapana tehdä tiedosto `requirements.txt`. Tämä
 
 Nyt jos toinen henkilö hakee sovelluksen GitHubista, hän voi asentaa virtuaaliympäristöönsä tarvittavat kirjastot seuraavalla komennolla:
 
-```prompt
+```plaintext
 (venv) $ pip install -r requirements.txt
 ```
 
@@ -232,7 +232,7 @@ Lisäämme uuden tiedoston repositorioon:
 
 Tästä lähtien sovelluksen tarvitsemat taulut voi luoda tietokantaan seuraavasti ohjaamalla tiedostossa `schema.sql` olevat komennot PostgreSQL-tulkille:
 
-```prompt
+```plaintext
 (venv) $ psql < schema.sql
 ```
 
