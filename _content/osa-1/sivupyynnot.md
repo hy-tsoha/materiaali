@@ -20,9 +20,9 @@ def page2():
 
 Tässä sovelluksessa on etusivu, kuten ennenkin, sekä kaksi muuta sivua, joiden osoitteet ovat `page1` ja `page2`. Voimme katsoa sivuja näin:
 
-<img class="screenshot" src="page1.png">
+<img class="screenshot" src="img/page1.png">
 
-<img class="screenshot" src="page2.png">
+<img class="screenshot" src="img/page2.png">
 
 Huomaa, että sivun osoite ja funktion nimi ovat kaksi eri asiaa. Sivun osoite annetaan dekoraattorissa, jonka jälkeen tulee sivupyynnön käsittelevä funktio, jolla voi olla muu nimi. Kuitenkin usein toimiva käytäntö on, että sivun osoite ja funktion nimi ovat samat, kuten yllä olevassa koodissa `page1` ja `page2`.
 
@@ -39,7 +39,7 @@ def test():
 
 Funktion tuloksena on seuraava sivu:
 
-<img class="screenshot" src="test.png">
+<img class="screenshot" src="img/test.png">
 
 Voimme myös määritellä sivun osoitteen niin, että siinä on _parametri_. Esimerkiksi seuraava funktio käsittelee sivuja, joiden osoitteessa on `int`-tyyppinen parametri `id`:
 
@@ -51,7 +51,7 @@ def page(id):
 
 Sivun osoitteessa annettu parametri välittyy funktiolle, joka voi käyttää sitä haluamallaan tavalla sivun luomisessa. Tässä tapauksessa funktio näyttää sivulla viestin "Tämä on sivu _id_", eli esimerkiksi osoitteessa `page/123` oleva sivu näyttää tältä:
 
-<img class="screenshot" src="page123.png">
+<img class="screenshot" src="img/page123.png">
 
 ### HTML ja sivupohjat
 
@@ -68,7 +68,7 @@ def index():
 
 Tässä tapauksessa sana "Tervetuloa" näkyy lihavoituna ja sana "sovellukseen" näkyy kursivoituna:
 
-<img class="screenshot" src="html.png">
+<img class="screenshot" src="img/html.png">
 
 Periaatteessa voisimme luoda sovelluksen sivujen HTML:n suoraan funktioissa, mutta  tämä olisi vaivalloista, kun sivulla on enemmän sisältöä. Parempi tapa on määritellä _sivupohjia_, joita funktiot käyttävät. Sivupohjat tallennetaan `templates`-hakemistoon.
 
@@ -97,7 +97,7 @@ Tässä funktio `render_template` käsittelee sivupohjan sisällön. Tämä on y
 
 Yllä oleva esimerkki tuottaa seuraavan sivun:
 
-<img class="screenshot" src="template.png">
+<img class="screenshot" src="img/template.png">
 
 Flask käyttää käyttäjälle lähetettävien sivujen luomisessa Jinja-sivupohjia, jonka avulla valmiiseen sivupohjaan voi välittää tietoa Python-koodista. Seuraava esimerkki antaa näytteen asiasta:
 
@@ -123,7 +123,7 @@ def index():
 
 Tämän seurauksena sivu näyttää tältä:
 
-<img class="screenshot" src="jinja.png">
+<img class="screenshot" src="img/jinja.png">
 
 ### Staattiset tiedostot
 

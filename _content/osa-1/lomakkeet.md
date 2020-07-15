@@ -41,9 +41,9 @@ Sivu `result` ottaa vastaan `POST`-metodilla lähetetyn lomakkeen, mikä näkyy 
 
 Lomakkeen käyttäminen voi näyttää tältä:
 
-<img class="screenshot" src="form.png">
+<img class="screenshot" src="img/form.png">
 
-<img class="screenshot" src="result.png">
+<img class="screenshot" src="img/result.png">
 
 Metodi `POST` on yleisin tapa lomakkeen lähettämiseen, ja se soveltuu useimpiin tilanteisiin. Toinen metodi on `GET`, johon palaamme myöhemmin.
 
@@ -117,6 +117,6 @@ Koska `extra`-nimen alla voi olla useita valintoja, ne haetaan listana `getlist`
 
 Lomakkeen käyttäminen voi näyttää tältä:
 
-<img class="screenshot" src="pizza1.png">
+<img class="screenshot" src="img/pizza1.png">
 
-<img class="screenshot" src="pizza2.png">
+<img class="screenshot" src="img/pizza2.png">

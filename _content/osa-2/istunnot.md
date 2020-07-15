@@ -82,9 +82,9 @@ Sovellus käyttää seuraavaa sivupohjaa `index.html`, joka joko näyttää kirj
 
 Sovelluksen käyttäminen voi näyttää tältä:
 
-<img class="screenshot" src="login1.png">
+<img class="screenshot" src="img/login1.png">
 
-<img class="screenshot" src="login2.png">
+<img class="screenshot" src="img/login2.png">
 
 Katsotaan nyt tarkemmin sovelluksen osia: 
 

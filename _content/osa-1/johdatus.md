@@ -63,7 +63,7 @@ Sovelluksen ideana on, että se näyttää tekstin `"Heipparallaa!"`, kun menemm
 
 Viimeisellä rivillä näkyy osoite, jonka kautta voimme käyttää sovellusta nettiselaimella. Kun menemme sivulle `http://127.0.0.1:5000/`, näemme sovelluksen:
 
-<img class="screenshot" src="sovellus.png">
+<img class="screenshot" src="img/sovellus.png">
 
 Sovellus sulkeutuu painamalla Control+C komentorivillä, jolloin voimme tehdä jotain muuta komentorivillä tai käynnistää sovelluksen uudestaan.
 
