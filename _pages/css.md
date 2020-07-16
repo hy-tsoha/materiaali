@@ -249,10 +249,10 @@ nav {
 }
 ```
 
+Sivulla on nyt tunnistettava ulkoasu. 
 
+Ulkoasun lopullinen tyyli saavutettiin, kun haluttiin tuoda pehmeyttä sivulle pyöristämällä sisällön reunat. Siitä idea lähti laajentumaan ja oikeastaan kaikesta tuli pyöristettyä. Tämä ei ole ainoa mahdollinen lopputulos ulkoasulle ja myös värit tuovat sivulle tietyn ilmeen.
 
+Kokeileminen on usein paras tapa lähteä toteuttamaan ulkoasua. Voi myös miettiä, minkälaista tyyliä haluaa lähteä toteuttamaan. Sivun ulkonäöstä tuskin koskaan voi olla yksimielinen, esimerkiksi jo väri valinnat voivat aiheuttaa eriäviä mielipiteitä. Tärkeintä ulkoasua suunniteltaessa on se, että sivuston tärkeimmät asiat on helposti löydettävissä ja sivusto toimii itsessään.
 
-
-
-
-
+Useimmiten et voi myös verkkosivua tehdessäsi suunnitella mitään, mitä ei voisi toteuttaa. Toiset suunnitelman vaativat enemmän aikaa kuin toiset, joten kannattaa lähteä liikkeelle yksinkertaisesta ja laajentaa sitä. Ei ole ollut vielä ideaa, jota ei olisi voinut toteuttaa rohkealla googlaamisella.
