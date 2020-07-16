@@ -36,20 +36,30 @@ function generateTOC() {
 }
 
 function handleActiveMenu(headers) {
+
   for (h in headers) {
+    currentElement = document.getElementById(headers[h].innerText + "nav")
+    previousElement = null
+    if (currentElement) {
+      previousElement = document.getElementById(headers[h].innerText + "nav").previousElementSibling
+    }
+
+
     if (headers[h].tagName === "H1") {
-      if (document.getElementById(headers[h].innerText + "nav")) {
-        document.getElementById(headers[h].innerText + "nav").classList.add("current")
-        document.getElementById(headers[h].innerText + "nav").scrollIntoView({ block: "center" })
+      if (currentElement) {
+        currentElement.classList.add("current")
+        currentElement.scrollIntoView({ block: "center" })
       }
     } else if (headers[h].offsetTop <= window.scrollY + window.screenTop) {
-      if (document.getElementById(headers[h].innerText + "nav")) {
-        document.getElementById(headers[h].innerText + "nav").classList.add("current")
-
+      if (currentElement && previousElement) {
+        currentElement.classList.add("current")
+        if (previousElement.classList.contains("current")) {
+          previousElement.classList.remove("current")
+        }
       }
     } else if (headers[h].offsetTop > window.scrollY + window.screenTop) {
-      if (document.getElementById(headers[h].innerText + "nav")) {
-        document.getElementById(headers[h].innerText + "nav").classList.remove("current")
+      if (currentElement) {
+        currentElement.classList.remove("current")
 
       }
     }
