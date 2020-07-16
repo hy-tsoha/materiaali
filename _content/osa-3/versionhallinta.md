@@ -4,10 +4,10 @@ Käytämme kurssilla versionhallintaan GitHubia. Seuraavaksi käymme läpi esime
 
 Teemme pienen sovelluksen, joka tallentaa tietokantaan sivuston kävijöiden määrän ja näyttää tämän tiedon etusivulla. Esimerkki olettaa, että GitHubiin on luotu uusi repositorio `tsoha-visitors`, jossa on tiedosto `README.md` mutta ei vielä muuta.
 
-Seuraavat komennot kloonaavat repositorion omalle koneelle, luovat sovellusta varten virtuaaliympäristön sekä asentavat tarvittavat kirjastot:
+Seuraavat komennot kloonaavat repositorion omalle koneelle, luovat sovellusta varten virtuaaliympäristön sekä asentavat tarvittavat kirjastot. Tässä ja myöhemmin vastaavissa kohdissa `user` on käytetty GitHub-tunnus.
 
 ```plaintext
-$ git clone https://github.com/pllk/tsoha-visitors.git
+$ git clone https://github.com/user/tsoha-visitors.git
 Cloning into 'tsoha-visitors'...
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
@@ -59,7 +59,7 @@ Olet sivuston {{ counter }}. käyttäjä{% endraw %}
 
 <p class="code-title">.env</p>
 ```
-DATABASE_URL=postgresql:///pllk
+DATABASE_URL=postgresql:///user
 ```
 Ideana on, että aina kun käyttäjä lataa etusivun, tauluun `visitors` lisätään uusi rivi. Tämän jälkeen haetaan taulun rivien määrä, joka kertoo kävijöiden yhteismäärän.
 
@@ -218,13 +218,13 @@ Nyt jos toinen henkilö hakee sovelluksen GitHubista, hän voi asentaa virtuaali
 
 Repositoriosta puuttuu vielä tieto siitä, mikä on sovelluksen käyttämän tietokannan rakenne. Tätä varten voimme luoda tiedoston `schema.sql`, joka sisältää tietokannan skeeman. Tässä sovelluksessa tietokannassa on vain yksi taulu ja tiedoston sisältö on seuraava:
 
-```
+```sql
 CREATE TABLE visitors (id SERIAL PRIMARY KEY, time TIMESTAMP);
 ```
 
 Lisäämme uuden tiedoston repositorioon:
 
-```
+```plaintext
 (venv) $ git add schema.sql 
 (venv) $ git commit -m "Add SQL schema"
 (venv) $ git push

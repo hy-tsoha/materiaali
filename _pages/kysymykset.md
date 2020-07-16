@@ -26,7 +26,7 @@ Voit ilmoittaa virheestä Telegram-kanavalla, kurssin vastuuhenkilölle tai läh
 
 ### Millä kurssilla oppii lisää aihepiiristä?
 
-Suositeltava jatkokurssi on [Full Stack Open](https://fullstackopen.com/). Tämä kurssi keskittyy moderniin JavaScript-ohjelmointiin, ja vastaan tulee myös dokumenttitietokanta MongoDB.
+Suositeltava jatkokurssi on [Full Stack Open](https://fullstackopen.com/), joka keskittyy moderniin JavaScript-ohjelmointiin ja käsittelee myös mm. dokumenttitietokanta MongoDB:n käyttämistä.
 
 ### Voinko käyttää muuta kuin Linuxia sovelluksen kehityksessä?
 

@@ -154,7 +154,7 @@ print("cembalo" in words) # True
 print("tuuba" in words) # False
 ```
 
-Lista ja merkkijono muistuttava Pythonissa toisiaan, ja merkkijonon merkkejä pystyy käsittelemään samaan tapaan kuin listan alkioita. Erona on kuitenkin, että merkkijonon sisältöä ei voi muuttaa eli merkkijonossa ei ole esimerkiksi metodia `append`.
+Lista ja merkkijono muistuttavat Pythonissa toisiaan, ja merkkijonon merkkejä pystyy käsittelemään samaan tapaan kuin listan alkioita. Erona on kuitenkin, että merkkijonon sisältöä ei voi muuttaa eli merkkijonossa ei ole esimerkiksi metodia `append`.
 
 ## For-silmukka
 

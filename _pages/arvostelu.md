@@ -18,9 +18,9 @@ Projekti arvostellaan asteikolla 1–5. Arvostelussa kiinnitetään huomiota seu
 
 * Koodia on helppo lukea ja muuttujien, funktioiden, jne. nimet on valittu hyvin
 * Koodi on tiivistä ja suoraviivaista
-* Sovellus on jaettu järkevästi osiin tiedostoiksi
+* Koodi on jaettu järkevästi osiin tiedostoiksi ja funktioiksi
 * Koodin tyyli on yhdenmukainen kaikissa sovelluksen osissa
-* Versionhallinnassa commit-viestit ovat hyviä ja todenmukaisia
+* Versionhallinnassa commitit ja niiden viestit on tehty hyvin
 
 ### Tietokanta-asiat
 
