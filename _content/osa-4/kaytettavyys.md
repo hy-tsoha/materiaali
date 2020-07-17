@@ -4,7 +4,7 @@ Sovelluksen toimivuuden lisäksi on tärkeää, että sitä on mukavaa käyttä�
 
 * Sivut latautuvat nopeasti ja sovellus reagoi välittömästi, kun käyttäjä siirtyy sivulta toiselle tai lähettää lomakkeen.
 * Käyttäjälle on selvää, mitä sovelluksen toiminnot tekevät ja miten niitä on tarkoitus käyttää.
-* Kun käyttäjä suorittaa toiminnon, sovellus joko näyttää selkeästi, että toiminto onnistui, tai näyttää ymmärrettävän virheilmoituksen.
+* Kun käyttäjä suorittaa toiminnon, sovellus joko ilmaisee selkeästi, että toiminto onnistui, tai näyttää ymmärrettävän virheilmoituksen.
 * Sovellus toimii eri selaimilla ja eri laitteissa ja olettaa mahdollisimman vähän käyttäjän ympäristöstä.
 * Sovellusta pystyy käyttämään hyvin myös silloin, kun tietokannassa on paljon tietoa (usein sovellusta kehitettäessä tietoa on vain vähän).
 
