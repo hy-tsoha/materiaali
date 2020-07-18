@@ -182,14 +182,14 @@ Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen 
 Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa `export` seuraavasti ennen sovelluksen käynnistämistä:
 
 ```plaintext
-$ export DATABASE_URL=postgresql:///user
-$ flask run
+(venv) $ export DATABASE_URL=postgresql:///user
+(venv) $ flask run
 ```
 
 Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
 
 ```plaintext
-$ pip install python-dotenv
+(venv) $ pip install python-dotenv
 ```
 
 Kun kirjasto on asennettu, Flask osaa käyttää sitä automaattisesti. Tämän ansiosta voimme luoda tiedoston `.env`, jossa on määritelty ympäristömuuttujat:

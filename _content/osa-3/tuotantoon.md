@@ -84,10 +84,10 @@ Tämä kertoo Herokulle, että tyyppiä "web" oleva sovellus käynnistetään ko
 Tässä vaiheessa on hyvä laittaa muutokset talteen versionhallintaan:
 
 ```plaintext
-(venv) $ git add requirements.txt
-(venv) $ git add Procfile
-(venv) $ git commit -m "Add Heroku config"
-(venv) $ git push
+$ git add requirements.txt
+$ git add Procfile
+$ git commit -m "Add Heroku config"
+$ git push
 ```
 
 ### Tietokanta ja ympäristömuuttujat
