@@ -12,8 +12,10 @@ title: TODO
 * Ei näytä hyvältä, että osan sisällä kaikki kohdat aktiiviseen kohtaan asti värittyvät, vaan parempi olisi värittää vain aktiivinen kohta. Olisiko hyvä olla kaksi eri väriä (harmaan sävyä?): missä osassa ollaan ja mitä kohtaa hiiri osoittaa?
 * Kaikkien sivujen otsikko (title-tagi) on sama, otsikon pitäisi määräytyä sivun mukaan
 * Onko tapaa määrittää sivujen järjestys sivupalkin yläosiossa? Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
+* Sivusto ei toimi vielä kovin hyvin mobiililaitteella (valikon kanssa ongelmia ja miten kuvien leveys pitäisi merkitä?)
 
 Ulkoasun suunnitelua käsitteleva osa on [täällä](ulkoasun_suunnittelu.html)
+
 ## Taulukoista 
 
 Tavallinen taulukko ja tietokantataulu on erinäköisiä. Tietokanta taulua merkitään luokalla `db-table`. Markdownilla voi hyvin kirjoittaa tavallisia taulukoita ja tietokantatauluja, joilla ei ole otsikkoa. Jos tekee tietokantataulun markdownilla, niin taululle annetaan luokka `db-table` merkitsemällä se aaltosulkeisiin ennen taulukkoa.
