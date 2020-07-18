@@ -95,10 +95,10 @@ Nyt kun suoritamme sovelluksen ja käymme sivulla, lokiin ilmestyy seuraavaa tie
    Use a production WSGI server instead.
  * Debug mode: off
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-counter is now 79
+counter is now 12
 127.0.0.1 - - [03/Jul/2020 13:53:57] "GET / HTTP/1.1" 200 -
 ```
 
-Lokista katsomalla näemme siis, että sovellus suoritti kyseisen rivin ja sillä hetkellä muuttujan `counter` arvo oli 79.
+Lokista katsomalla näemme siis, että sovellus suoritti kyseisen rivin ja sillä hetkellä muuttujan `counter` arvo oli 12.
 
-Kun ongelma on saatu korjattua ja debug-tulosteita ei enää tarvita, ne on hyvä siivota pois koodista.
+Kun ongelma on saatu korjattua ja debug-tulosteita ei enää tarvita, ne on kuitenkin hyvä siivota pois koodista.

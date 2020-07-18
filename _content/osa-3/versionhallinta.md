@@ -1,6 +1,6 @@
 ## Versionhallinta
 
-Käytämme kurssilla versionhallintaan GitHubia. Seuraavaksi käymme läpi esimerkin, jossa aloitamme sovelluksen kehityksen GitHubissa.
+Käytämme kurssilla versionhallintaan [GitHubia](https://github.com/). Seuraavaksi käymme läpi esimerkin, jossa aloitamme sovelluksen kehityksen GitHubissa.
 
 Teemme pienen sovelluksen, joka tallentaa tietokantaan sivuston kävijöiden määrän ja näyttää tämän tiedon etusivulla. Esimerkki olettaa, että GitHubiin on luotu uusi repositorio `tsoha-visitors`, jossa on tiedosto `README.md` mutta ei vielä muuta.
 
@@ -50,7 +50,7 @@ def index():
     return render_template("index.html", counter=counter) 
 ```
 
-<p class="code-title">templates/index.html</p>
+<p class="code-title">index.html</p>
 ```jinja
 {% raw %}Tervetuloa!
 <p>
@@ -69,7 +69,7 @@ Nyt voimme kokeilla suorittaa sovelluksen:
 (venv) $ flask run
 ```
 
-Sovelluksen pitäisi näyttää tältä:
+Sovelluksen käyttäminen näyttää tältä:
 
 <img class="screenshot" src="img/visitors.png">
 
@@ -104,7 +104,7 @@ Komento antaa listan tiedostoista ja hakemistoista, joita _ei_ ole repositorioss
 
 Tärkeä asia versionhallinnassa on päättää, mitkä tiedostot laitetaan repositorioon kaikkien saataville. Tässä tapauksessa repositorioon kuuluvat `app.py` ja `templates`, jotka muodostavat sovelluksen toteutuksen. Sen sijaan `.env`, `__pycache__` ja `venv` eivät kuulu repositorioon, koska ne liittyvät käyttäjän ympäristöön eivätkä sovelluksen toteutukseen.
 
-Komento `git add` laittaa ne lisättäväksi:
+Komento `git add` laittaa tiedostoja lisättäväksi:
 
 ```plaintext
 (venv) $ git add app.py
@@ -216,7 +216,7 @@ Nyt jos toinen henkilö hakee sovelluksen GitHubista, hän voi asentaa virtuaali
 
 ### Tietokannan rakenne
 
-Repositoriosta puuttuu vielä tieto siitä, mikä on sovelluksen käyttämän tietokannan rakenne. Tätä varten voimme luoda tiedoston `schema.sql`, joka sisältää tietokannan skeeman. Tässä sovelluksessa tietokannassa on vain yksi taulu ja tiedoston sisältö on seuraava:
+Repositoriosta puuttuu vielä tieto siitä, mikä on sovelluksen käyttämän tietokannan rakenne. Tätä varten luomme tiedoston `schema.sql`, joka sisältää tietokannan skeeman. Tässä sovelluksessa tietokannassa on vain yksi taulu ja tiedoston sisältö on seuraava:
 
 ```sql
 CREATE TABLE visitors (id SERIAL PRIMARY KEY, time TIMESTAMP);

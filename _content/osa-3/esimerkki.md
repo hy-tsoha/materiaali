@@ -1,6 +1,6 @@
 ## Esimerkki: Keskustelu
 
-Seuraava esimerkkisovellus kokoaa yhteen materiaalissa käsiteltyjä asioita. Sovelluksen aiheena on keskustelupalsta, jossa käyttäjä voi luoda tunnuksen ja lähettää viestejä. Kaikki viestit ovat samassa ketjussa aikajärjestyksessä.
+Seuraava esimerkkisovellus kokoaa yhteen tähän asti käsiteltyjä asioita. Sovelluksen aiheena on keskustelupalsta, jossa käyttäjä voi luoda tunnuksen ja lähettää viestejä. Kaikki viestit ovat samassa ketjussa aikajärjestyksessä.
 
 Sovelluksen käyttäminen näyttää tältä:
 

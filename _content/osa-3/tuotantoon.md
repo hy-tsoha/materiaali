@@ -6,7 +6,7 @@ Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsove
 
 Herokun ilmaisversiossa on joitakin merkittäviä rajoituksia. Sovellus saa käyttää rajoitetun määrän palvelimen aikaa kuukaudessa, ja jos sovellusta ei käytetä hetkeen, se sulkeutuu ja seuraavan käyttäjän saapuessa vie jonkin verran aikaa, ennen kuin sovellus käynnistyy uudestaan. Lisäksi tietokannan kokoa on rajoitettu niin, että tauluissa saa olla yhteensä enintään 10000 riviä. Näiden rajoitusten vuoksi Herokun ilmaisversio ei sovellu todellisten sovellusten alustaksi, mutta sen avulla voi harjoitella web-sovelluksen julkaisemista.
 
-Herokussa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Herokun sivuston [hallintapaneelin](https://dashboard.heroku.com/) kautta tai komentorivityökalulla (Heroku CLI). Käytämme tässä ohjeessa komentorivityökalua, jonka asentamiseen löydät ohjeet [tästä](https://devcenter.heroku.com/articles/heroku-cli).
+Herokussa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Herokun sivuston [hallintapaneelin](https://dashboard.heroku.com/) kautta tai omalle koneelle asennettavan [komentorivityökalun](https://devcenter.heroku.com/articles/heroku-cli) avulla. Seuraava ohje näyttää, miten komentorivityökalu toimii.
 
 ### Komentorivityökalu
 
@@ -23,7 +23,7 @@ Komento `heroku help` (tai pelkkä `heroku`) näyttää listan komentorivityöka
 
 ### Sovelluksen luonti
 
-Seuraava komento luo uuden sovelluksen nimellä `tsoha-visitors`:
+Seuraava komento luo uuden Heroku-sovelluksen nimellä `tsoha-visitors`:
 
 ```plaintext
 $ heroku apps:create tsoha-visitors
@@ -61,7 +61,7 @@ Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteen
 
 ### Palvelimen määrittely
 
-Tähän asti olemme käynnistäneet sovelluksen komennolla `flask run`, mutta tätä tapaa ei suositella tuotantokäyttöön. Tämän vuoksi asennamme Herokua varten Gunicorn-palvelimen:
+Tähän asti olemme käynnistäneet sovelluksen komennolla `flask run`, mutta tätä tapaa ei suositella tuotantokäyttöön. Tämän vuoksi asennamme Herokua varten erillisen Gunicorn-palvelimen:
 
 ```plaintext
 (venv) $ pip install gunicorn
@@ -80,6 +80,15 @@ web: gunicorn app:app
 ```
 
 Tämä kertoo Herokulle, että tyyppiä "web" oleva sovellus käynnistetään komennolla `gunicorn app:app`. Tässä ensimmäinen `app` viittaa moduulin nimeen `app.py` ja toinen `app` viittaa koodissa luotavan Flask-olion nimeen.
+
+Tässä vaiheessa on hyvä laittaa muutokset talteen versionhallintaan:
+
+```plaintext
+(venv) $ git add requirements.txt
+(venv) $ git add Procfile
+(venv) $ git commit -m "Add Heroku config"
+(venv) $ git push
+```
 
 ### Tietokanta ja ympäristömuuttujat
 
@@ -137,9 +146,10 @@ remote: -----> Installing requirements with pip
 remote:        ERROR: Invalid requirement: 'pkg-resources=0.0.0' (from line 8 of /tmp/build_b6f49f8f28a88afca0c79ce857e4849b/requirements.txt)
 ```
 
-Jotain meni kuitenkin pieleen: tiedostossa `requirements.txt` oleva riippuvuus `pkg-resources` ei kelpaa Herokulle. Tämä on tunnettu ongelma, ja tässä tapauksessa toimiva korjaus on poistaa kyseinen rivi tiedostosta ja yrittää uudestaan:
+Jotain meni kuitenkin pieleen: tiedostossa `requirements.txt` oleva riippuvuus `pkg-resources` ei kelpaa Herokulle. Tämä on tunnettu ongelma, ja tässä tapauksessa toimiva korjaus on poistaa kyseinen rivi tiedostosta, päivittää muutos versionhallintaan ja yrittää uudestaan:
 
 ```plaintext
+$ git push heroku master
 remote: Compressing source files... done.
 remote: Building source:
 remote: 

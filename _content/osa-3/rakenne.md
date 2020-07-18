@@ -1,12 +1,14 @@
 ## Sovelluksen rakenne
 
-Pienen sovelluksen voi toteuttaa mainiosti yhtenä tiedostona `app.py`, joka käsittelee kaikki sivupyynnöt, mutta suuremmassa projektissa (kuten tällä kurssilla) koodi kannattaa jakaa sopivasti tiedostoihin ja funktioihin.
+Pienen sovelluksen voi toteuttaa mainiosti yhtenä tiedostona `app.py`, joka käsittelee kaikki sivupyynnöt, mutta suuremmassa projektissa (kuten tällä kurssilla) koodi kannattaa jakaa sopivasti tiedostoihin (eli moduuleihin) ja funktioihin.
 
-Flask mahdollistaa monia tapoja toteuttaa sovelluksen rakenne, ja tutustumme seuraavaksi yhteen tapaan kävijäsovelluksen yhteydessä. Huomaa, että todellisuudessa näin pientä sovellusta ei ehkä olisi järkeä jakaa osiin, vaan tämä on vain esimerkki.
+Flask mahdollistaa monia tapoja toteuttaa sovelluksen rakenne, ja tutustumme seuraavaksi yhteen tapaan kävijäsovelluksen yhteydessä. Huomaa, että todellisuudessa näin pientä sovellusta ei olisi järkeä jakaa osiin, vaan tämä on vain esimerkki.
 
 Tärkein periaate sovelluksen rakenteen suunnittelussa on, että tiedostot ja funktiot antavat sovellukselle selkeän rakenteen ja sovellusta on mukavaa kehittää. Jos nämä vaatimukset eivät täyty, sovelluksen rakenne ei ole hyvä.
 
 Seuraavassa on mahdollinen tapa jakaa kävijäsovellus tiedostoiksi:
+
+**Moduuli `app`**
 
 <p class="code-title">app.py</p>
 ```python
@@ -19,6 +21,8 @@ import routes
 
 Kuten ennenkin, sovelluksen päämoduuli on `app`, joka käynnistää sovelluksen. Koodi luo Flask-olion sekä ottaa lopuksi mukaan moduulin `routes`.
 
+**Moduuli `db`**
+
 <p class="code-title">db.py</p>
 ```python
 from app import app
@@ -30,6 +34,8 @@ db = SQLAlchemy(app)
 ```
 
 Moduuli `db` huolehtii tietokantaan liittyvistä asioista. Tässä sovelluksessa moduuli määrittää tietokannan osoitteen ja luo `db`-olion, jonka kautta tietokantaa voidaan käyttää.
+
+**Moduuli `routes`**
 
 <p class="code-title">routes.py</p>
 ```python
@@ -46,6 +52,8 @@ def index():
 
 Moduulin `routes` tehtävänä on käsitellä sivupyynnöt. Toisin kuin ennen, sivupyynnön käsittelijä ei suorita tietokantakomentoja vaan kutsuu moduulissa `visits` olevia funktioita.
 
+**Moduuli `visits`**
+
 <p class="code-title">visits.py</p>
 ```python
 from db import db
@@ -61,6 +69,8 @@ def get_counter():
 ```
 
 Moduuli `visits` sisältää funktiot `add_visit` ja `get_counter`, joiden avulla sovelluksessa pystyy lisäämään tiedon vierailusta sekä hakemaan vierailujen määrän.
+
+***
 
 Tässä moduulit viittaavat toisiinsa muutamilla eri tavoilla. Periaatteena on, että kun moduuli tarvitsee toisessa moduulissa määriteltyä funktiota tai oliota, toinen moduuli otetaan mukaan `import`-rivillä. Huomaa, että moduulissa oleva koodi (kuten olioiden `app` ja `db` luominen) suoritetaan vain kerran, vaikka moduuli otetaan mukaan useita kertoja.
 
