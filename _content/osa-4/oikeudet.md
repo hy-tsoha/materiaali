@@ -8,7 +8,7 @@ Vaikka sovelluksen linkit ja lomakkeet ohjaisivat käyttäjää toimimaan tietyl
 
 Tarkastellaan sovellusta, jossa käyttäjä voi luoda profiilin ja ystävystyä muiden kanssa. Käyttäjä voi katsoa oman profiilinsa ja lisäksi toisen käyttäjän profiilin, jos käyttäjät ovat ystäviä. Lisäksi admin-käyttäjä voi katsoa kenen tahansa profiilin.
 
-Oletetaan, että sivu `profile/id` näyttää käyttäjän profiilin. Esimerkiksi jos käyttäjän id-numero on 123, sivu `profile/123` näyttää profiilin. Koska käyttäjä voi kokeilla antaa sivulle minkä tahansa id-numeron, ennen profiilin näyttämistä täytyy tarkastaa huolellisesti, että käyttäjällä on todella oikeus nähdä profiili.
+Oletetaan, että sivu `profile/[id]` näyttää käyttäjän profiilin. Esimerkiksi jos käyttäjän id-numero on 123, sivu `profile/123` näyttää profiilin. Koska käyttäjä voi kokeilla antaa sivulle minkä tahansa id-numeron, ennen profiilin näyttämistä täytyy tarkastaa huolellisesti, että käyttäjällä on todella oikeus nähdä profiili.
 
 Seuraava koodi tarkastaa, että käyttäjä saa nähdä profiilin:
 
@@ -18,11 +18,11 @@ def profile(id):
     allow = False
     if is_admin():
         allow = True
-    elif is_user() and my_id() == id:
+    elif is_user() and user_id() == id:
         allow = True
     elif is_user():
         sql = "SELECT 1 FROM friends WHERE user1=:user1 AND user2=:user2"
-        result = db.session.execute(sql, {"user1":my_id(), "user2":id})
+        result = db.session.execute(sql, {"user1":user_id(), "user2":id})
         if result.fetchone() != None:
             allow = True
     if not allow:
@@ -30,7 +30,7 @@ def profile(id):
     ...
 ```
 
-Ideana on, että muuttuja `allow` ilmaisee, saako käyttäjä nähdä sivua. Funktiot `is_admin` ja `is_user` tarkastavat, onko käyttäjä admin-käyttäjä tai kirjautunut käyttäjä, ja funktio `my_id` antaa käyttäjän id-numeron. Käyttäjä saa nähdä profiilin, jos hän on admin-käyttäjä, katsoo omaa profiiliaan tai katsoo jonkun ystävänsä profiilia.
+Ideana on, että muuttuja `allow` ilmaisee, saako käyttäjä nähdä sivua. Funktiot `is_admin` ja `is_user` tarkastavat, onko käyttäjä admin-käyttäjä tai kirjautunut käyttäjä, ja funktio `user_id` antaa käyttäjän id-numeron. Käyttäjä saa nähdä profiilin, jos hän on admin-käyttäjä, katsoo omaa profiiliaan tai katsoo jonkun ystävänsä profiilia.
 
 Huomaa koodissa käytetty näppärä tapa tarkastaa SQL-kyselyllä, onko taulussa tiettyä riviä. Jos taulussa on rivi, kyselyn tulostaulussa on yksi rivi, jossa on arvo 1. Jos taas taulussa ei ole riviä, kyselyn tulostaulu on tyhjä.
 
@@ -61,6 +61,7 @@ def send():
         return render_template("error.html", error="Otsikko on liian pitkä")
     if len(message) > 5000:
         return render_template("error.html", error="Viesti on liian pitkä")
+    ...
 ```
 
 Tässä viestin otsikko saa olla enintään 100 merkkiä ja sisältö saa olla enintään 5000 merkkiä. Jos nämä rajat ylittyvät, viestiä ei tallenneta vaan käyttäjä ohjataan virhesivulle.
@@ -89,7 +90,7 @@ function check(form) {
 </script>
 ```
 
-Nyt ilmoitus pituuden ylittymisestä tulee jo selaimen puolella:
+Tässä tapauksessa lomake lähetetään palvelimelle vain, jos funktio `check` palauttaa arvon `true`. Nyt ilmoitus pituuden ylittymisestä tulee jo selaimen puolella:
 
 <img class="screenshot" src="img/alert.png">
 

@@ -15,7 +15,7 @@ def update():
     ...
 ```
 
-Yllä olevassa koodissa on SQL-injektio, koska käyttäjän antama syöte liitetään suoraan SQL-komennon osaksi ja käyttäjä voi muuttaa tämän avulla SQL-komennon rakennetta. Esimerkiksi käyttäjä voi antaa sähköpostiosoitteeksi `', status='admin`, jolloin komennosta tulee seuraavanlainen (olettaen, että käyttäjän id-numero on 123):
+Yllä oleva koodi sallii SQL-injektion, koska käyttäjän antama syöte liitetään suoraan SQL-komennon osaksi ja käyttäjä voi muuttaa tämän avulla SQL-komennon rakennetta. Esimerkiksi käyttäjä voi antaa sähköpostiosoitteeksi `', status='admin`, jolloin komennosta tulee seuraavanlainen (olettaen, että käyttäjän id-numero on 123):
 
 ```sql
 UPDATE users SET email='', status='admin' WHERE id=123
@@ -69,7 +69,7 @@ Lisäksi käyttäjä voi antaa JavaScript-koodia, joka myös suoritetaan selaime
 
 <img class="screenshot" src="img/xss3.png">
 
-Tässä tapauksessa XSS-haavoittuvuus ei ole vielä vaarallinen, koska käyttäjä voi muuttaa vain itselleen näkyvää sivua. Kuitenkin asiasta tulee ongelma, jos käyttäjän syöte tallennetaan tietokantaan ja se välittyy muille käyttäjille. Kiusanteon lisäksi JavaScriptin avulla voi tuottaa todellisia tietoturvaongelmia XSS-haavoittuvuuden kautta.
+Tässä tapauksessa XSS-haavoittuvuus ei ole vielä vaarallinen, koska käyttäjä voi muuttaa vain itselleen näkyvää sivua. Kuitenkin asiasta tulee ongelma, jos käyttäjän syöte tallennetaan palvelimelle ja se välittyy muille käyttäjille. Kiusanteon lisäksi JavaScriptin avulla voi tuottaa todellisia tietoturvaongelmia XSS-haavoittuvuuden kautta.
 
 XSS-haavoittuvuuden pystyy estämään pitämällä huolta siitä, että käyttäjän antamia syötteitä ei näytetä koskaan sivulla sellaisenaan. Kun käytämme Flaskissa sivupohjia, tämä tapahtuu automaattisesti. Esimerkiksi seuraavassa koodissa ei ole XSS-haavoittuvuutta:
 
@@ -86,7 +86,7 @@ Kun muuttuja `name` näytetään sivupohjassa, sen sisältöä muutetaan automaa
 
 Käytännössä esimerkiksi merkit `<` ja `>` muuttuvat muotoon `&lt;` ja `&gt;`, jolloin selain näyttää nämä merkit sellaisenaan eikä tulkitse niitä HTML-tagien osiksi.
 
-Jos emme käyttäisi sivupohjia, meidän tulisi muuttaa merkit jollain toisella tavalla. Esimerkiksi Werkzeug-kirjastossa on funktio `escape`, joka hoitaa tämän asian. Kuitenkin hyvä käytäntö on käyttää aina sivupohjia, jolloin XSS-haavoittuvuuden riski katoaa automaattisesti.
+Jos emme käyttäisi sivupohjia, merkit tulisi muuttaa jollain toisella tavalla. Esimerkiksi Werkzeug-kirjastossa on funktio `escape`, joka hoitaa tämän asian. Kuitenkin hyvä käytäntö on käyttää aina sivupohjia, jolloin XSS-haavoittuvuuden riski katoaa automaattisesti.
 
 ### CSRF-haavoittuvuus
 
@@ -145,4 +145,4 @@ Tässä tapauksessa jos `csrf_token` on väärä, sivun käsittely katkeaa ja tu
 
 Web-sovelluksissa on usein muutakin salaista tietoa, kuten tietokannan salasana, Flaskissa istuntojen salainen avain jne. Näiden tietojen tulee olla turvallisessa paikassa palvelimella niin, että ulkopuoliset eivät pääse niihin käsiksi. Yksi turvallinen tapa on käyttää ympäristömuuttujia kurssin materiaalissa esitetyllä tavalla.
 
-Huomaa, että salaista tietoa ei erityisesti saa laittaa GitHubiin. Tutkimalla GitHubin käyttäjien projekteja voi löytää paljon salaista tietoa, jonka ei kuuluisi olla siellä. Pidä huoli, että oma projektisi ei ole yksi niistä. Jos kuitenkin vahingossa laitat GitHubiin salaista tietoa, niin huomaa, että pelkkä tiedon poistaminen repositoriosta ei riitä, koska myös tiedostojen muutoshistoria on tallessa. Lisää tietoa asiasta löydät esimerkiksi [täältä](https://blog.gitguardian.com/leaking-secrets-on-github-what-to-do/).
+Salaista tietoa ei erityisesti saa laittaa GitHubiin. Tutkimalla GitHubin käyttäjien projekteja voi löytää paljon salaista tietoa, jonka ei kuuluisi olla siellä. Pidä huoli, että oma projektisi ei ole yksi niistä. Jos kuitenkin vahingossa laitat GitHubiin salaista tietoa, niin huomaa, että pelkkä tiedon poistaminen repositoriosta ei riitä, koska myös tiedostojen muutoshistoria on tallessa. Lisää tietoa asiasta löydät esimerkiksi [täältä](https://blog.gitguardian.com/leaking-secrets-on-github-what-to-do/).

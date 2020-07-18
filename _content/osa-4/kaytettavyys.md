@@ -1,6 +1,6 @@
 ## Käytettävyys
 
-Sovelluksen toimivuuden lisäksi on tärkeää, että sitä on mukavaa käyttää. Tähän kuuluu mm. seuraavia asioita:
+Sovelluksen toimivuuden ja turvallisuuden lisäksi on tärkeää, että sovellusta on mukavaa käyttää. Tähän kuuluu muun muassa seuraavia asioita:
 
 * Sivut latautuvat nopeasti ja sovellus reagoi välittömästi, kun käyttäjä siirtyy sivulta toiselle tai lähettää lomakkeen.
 * Käyttäjälle on selvää, mitä sovelluksen toiminnot tekevät ja miten niitä on tarkoitus käyttää.
@@ -8,7 +8,7 @@ Sovelluksen toimivuuden lisäksi on tärkeää, että sitä on mukavaa käyttä�
 * Sovellus toimii eri selaimilla ja eri laitteissa ja olettaa mahdollisimman vähän käyttäjän ympäristöstä.
 * Sovellusta pystyy käyttämään hyvin myös silloin, kun tietokannassa on paljon tietoa (usein sovellusta kehitettäessä tietoa on vain vähän).
 
-Verkossa on paljon sekä hyvin että huonosti toimivia sovelluksia. Hyvin toimivat sovellukset soveltuvat oman sovelluksen esikuviksi, kun taas huonosti toimivat sovellukset muistuttavat siitä, mitä virheitä kannattaa varoa omassa sovelluksessa.
+Verkossa on paljon sekä hyvin että huonosti toimivia sovelluksia. Hyvin toimivat sovellukset soveltuvat omien sovellusten esikuviksi, kun taas huonosti toimivat sovellukset muistuttavat siitä, mitä virheitä kannattaa varoa omissa sovelluksissa.
 
 Hyvä tulikoe sovellukselle on kokeilla jossain vaiheessa sen toimintaa tekstiselaimessa. Esimerkiksi osassa 3 tehty keskustelusovellus näyttää seuraavalta Lynx-selaimessa:
 
