@@ -155,11 +155,12 @@ Seuraava koodi puolestaan tarkastaa, onko käyttäjän antama tunnus ja salasana
 ```python
 sql = "SELECT password FROM users WHERE username=:username"
 result = db.session.execute(sql, {"username":username})
-hash_value = result.fetchone()    
-if hash_value == None:
+user = result.fetchone()    
+if user == None:
     # TODO: invalid username
 else:
-    if werkzeug.security.check_password_hash(hash_value[0],password):
+    hash_value = user[0]
+    if werkzeug.security.check_password_hash(hash_value,password):
         # TODO: correct username and password
     else:
         # TODO: invalid password
