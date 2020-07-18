@@ -18,7 +18,7 @@ Tämä lomake lähettää tietoa sivulle `result` metodilla `POST`. Lomakkeessa 
 Tarkoituksena on, että kun käyttäjä lähettää lomakkeen, hän siirtyy toiselle sivulle, joka näyttää viestin nimen perusteella. Tässä on sivupohja `result.html` tätä sivua varten:
 
 ```jinja
-{% raw %}<p>Moikka, {{ name }}!</p>{% endraw %}
+{% raw %}Moikka, {{ name }}!{% endraw %}
 ```
 
 Seuraava sovellus toteuttaa sivupohjien avulla sivut `form` ja `result`:
@@ -37,7 +37,7 @@ def result():
     return render_template("result.html",name=request.form["name"])
 ```
 
-Sivu `result` ottaa vastaan `POST`-metodilla lähetetyn lomakkeen, mikä näkyy dekoraattorin parametrissa `methods`. Lomakkeen kautta lähetetty tieto on saatavilla olion `request` kautta.
+Sivu `result` ottaa vastaan `POST`-metodilla lähetetyn lomakkeen, mikä näkyy dekoraattorin parametrissa `methods`. Lomakkeen kautta lähetetty tieto on saatavilla olion `request` kautta. Koska lomakkeen tekstikentän nimi on `name`, siihen viitataan `request.form["name"]`.
 
 Lomakkeen käyttäminen voi näyttää tältä:
 

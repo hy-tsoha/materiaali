@@ -21,7 +21,7 @@ Selaimissa on kehittäjän työkaluja, joiden avulla voi tarkastella selaimen ja
 Tässä selain lähetti palvelimelle HTTP-pyynnön, jonka osoite on `http://127.0.0.1:5000/` ja metodi on `GET`. Palvelin vastasi tähän koodilla 200, jonka merkitys on _OK_ eli pyyntö onnistui. Palvelin lähetti vastauksena 13 tavua tietoa eli tekstin "Heipparallaa!". Samaan aikaan sovellus tulosti komentoikkunaan rivin tietoa pyynnöstä:
 
 ```plaintext
-127.0.0.1 - - [07/Jul/2020 15:56:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jul/2020 13:23:13] "GET / HTTP/1.1" 200 -
 ```
 
 Tarkastellaan sitten toista tilannetta, jossa lomake lähettää tietoa sivulle `result`:
@@ -54,7 +54,7 @@ def index():
     return "Satunnainen luku: "+str(value)
 ```
 
-Seuraavassa koodissa puolestaan muuttuja `value` saakin arvon paikallisesti sivupyynnön yhteydessä ja etusivun latautuessa näkyy vaihtuva satunnainen luku:
+Seuraavassa koodissa puolestaan muuttuja `value` saa arvon paikallisesti sivupyynnön yhteydessä ja etusivun latautuessa näkyy vaihtuva satunnainen luku:
 
 ```python
 @app.route("/")

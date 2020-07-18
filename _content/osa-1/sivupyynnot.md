@@ -18,7 +18,7 @@ def page2():
     return "Tämä on sivu 2"
 ```
 
-Tässä sovelluksessa on etusivu, kuten ennenkin, sekä kaksi muuta sivua, joiden osoitteet ovat `page1` ja `page2`. Voimme katsoa sivuja näin:
+Tässä sovelluksessa on etusivu, kuten ennenkin, sekä kaksi muuta sivua, joiden osoitteet ovat `page1` ja `page2`. Uudet sivut näyttävät tältä:
 
 <img class="screenshot" src="img/page1.png">
 
@@ -77,7 +77,7 @@ Luodaan testiksi sivupohja `index.html`:
 ```html
 <title>Etusivu</title>
 <h1>Etusivu</h1>
-<p><b>Tervetuloa</b> <i>sovellukseen</i>!</p>
+<b>Tervetuloa</b> <i>sovellukseen</i>!
 ```
 
 Tämän jälkeen saamme näytettyä sivupohjan sisällön etusivulla näin:
@@ -93,13 +93,13 @@ def index():
     return render_template("index.html")
 ```
 
-Tässä funktio `render_template` käsittelee sivupohjan sisällön. Tämä on yksi Flask-kirjaston funktioista, ja lisää tulee vastaan myöhemmin materiaalissa. Jotta tiettyä funktiota voi käyttää, se tulee ottaa mukaan `import`-rivillä.
+Funktio `render_template` lukee sivupohjan annetusta tiedostosta ja palauttaa sen sivun sisältönä. Jotta funktiota voi käyttää, se tulee ottaa mukaan `import`-rivillä. Flask-kirjastossa on monia muitakin funktioita ja olioita, joihin tutustumme pikkuhiljaa materiaalissa.
 
 Yllä oleva esimerkki tuottaa seuraavan sivun:
 
 <img class="screenshot" src="img/template.png">
 
-Flask käyttää käyttäjälle lähetettävien sivujen luomisessa Jinja-sivupohjia, jonka avulla valmiiseen sivupohjaan voi välittää tietoa Python-koodista. Seuraava esimerkki antaa näytteen asiasta:
+Flask käyttää sivujen luomisessa Jinja-sivupohjia, minkä avulla sivun osaksi voi välittää tietoa Python-koodista. Seuraava esimerkki antaa näytteen asiasta:
 
 ```jinja
 <title>Etusivu</title>
@@ -112,7 +112,7 @@ Flask käyttää käyttäjälle lähetettävien sivujen luomisessa Jinja-sivupoh
 </ul>{% endraw %}
 ```
 
-Tässä sivun osaksi tulee parametrin `message` arvo sekä listan `list` alkiot HTML-listana. Voimme kutsua sivupohjaa vaikkapa näin:
+Tässä sivun osaksi tulee parametrin `message` määrittämä viesti sekä listan `items` alkiot HTML-listana. Voimme kutsua sivupohjaa vaikkapa näin:
 
 ```python
 @app.route("/")
