@@ -9,16 +9,18 @@ Kurssin tavoitteena on syventää taitoja tietokantojen käyttämisessä sekä m
 
 ## Suoritustavat
 
-Voit suorittaa kurssin joko ohjatusti viikkoaikataulun mukaan tai itsenäisesti omalla aikataululla ilman ohjausta. Tavallinen suoritustapa on suorittaa kurssi ohjatusti.
+Tavallinen tapa on suorittaa kurssi ohjatusti viikkoaikataulun mukaan. Kurssi järjestetään kuudesti vuodessa: periodeilla 1–4 ja lisäksi alku- ja loppukesällä.
 
-Kurssi järjestetään ohjatusti kuudesti vuodessa: periodeilla 1–4 ja lisäksi alku- ja loppukesällä. Voit ilmoittautua haluamaasi ryhmään ja suorittaa kurssin tämän sivuston ohjeiden mukaisesti. Jos haluat suorittaa kurssin itsenäisesti, ota yhteyttä kurssin vastuuhenkilöön.
+Voit suorittaa myös kurssin itsenäisesti ilman ohjausta omalla aikataululla. Jos haluat suorittaa kurssin itsenäisesti, ota yhteyttä kurssin vastuuhenkilöön.
 
 Huomaa, että voit osallistua kurssille ohjatusti enintään kahdesti.
 
 ## Yhteystiedot
 
-Kurssilla on Telegram-kanava, jolle pääset [tästä](https://t.me/tkt_tsoha).
+Kurssilla on Telegram-kanava, jossa voit keskustella kurssin opiskelijoiden ja henkilökunnan kanssa. Pääset kanavalle [tästä](https://t.me/tkt_tsoha).
 
 Kurssin vastuuhenkilö on Antti Laaksonen. Voit ottaa yhteyttä [sähköpostitse](mailto:ahslaaks@cs.helsinki.fi) tai Telegramissa.
+
+## Materiaalista
 
 Kurssimateriaalin tekijä on Antti Laaksonen. Materiaalin kehityksessä ovat auttaneet Milla Kortelainen ja Terho Uotila.

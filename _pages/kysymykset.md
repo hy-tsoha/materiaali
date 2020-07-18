@@ -4,25 +4,29 @@ title: Kysymyksiä ja vastauksia
 
 # Kysymyksiä ja vastauksia
 
+### Voiko kurssille osallistua Avoimen yliopiston kautta?
+
+Kurssille voi osallistua vain Helsingin yliopiston tutkinto-opiskelijana.
+
+### Millä kielellä projektin voi tehdä?
+
+Sovelluksen ja käyttöliittymän kieli voi olla suomi, ruotsi tai englanti.
+
+Kielestä riippumatta suositeltava tapa on kirjoittaa koodi, commit-viestit jne. englanniksi.
+
 ### Voiko sovelluksen tehdä muulla kuin Pythonilla/Flaskilla?
 
 Jos suoritat kurssin ohjatusti, tämä on ainoa vaihtoehto. Jos suoritat kurssin itsenäisesti, voit tehdä sovelluksen millä tahansa haluamallasi tekniikalla.
 
-### Voiko sovelluksessa käyttää ORMia tai tiettyä kirjastoa?
+### Voiko sovelluksessa käyttää ORMia tai lisäkirjastoja?
 
 Kurssin tavoitteena on saada yleistä osaamista web-sovelluksen kehityksestä ja tietokannan käyttämisestä, joka ei ole sidottu tiettyyn ympäristöön tai kirjastoon.
 
-Kuitenkin jos haluat käyttää ORMia tai tiettyä kirjastoa ja opettelet ne itsenäisesti, niin voit mainiosti tehdä näin.
-
-### Millä kielellä projektin voi tehdä?
-
-Voit tehdä projektin suomeksi, ruotsiksi tai englanniksi.
-
-Kielestä riippumatta suositeltava tapa on kirjoittaa koodi, commit-viestit jne. englanniksi.
+Kuitenkin jos haluat käyttää ORMia tai sopivia lisäkirjastoja ja opettelet ne itsenäisesti, niin voit mainiosti tehdä näin.
 
 ### Mitä teen, kun löysin virheen kurssin materiaalista?
 
-Voit ilmoittaa virheestä Telegram-kanavalla, kurssin vastuuhenkilölle tai lähettää saman tien korjauksen [kurssin GitHub-repoon](https://github.com/hy-tsoha/materiaali/).
+Voit ilmoittaa virheestä Telegram-kanavalla, kurssin vastuuhenkilölle tai lähettää saman tien korjauksen [kurssin GitHub-repositorioon](https://github.com/hy-tsoha/materiaali/).
 
 ### Millä kurssilla oppii lisää aihepiiristä?
 

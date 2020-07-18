@@ -4,11 +4,11 @@ title: Arvostelu
 
 # Arvostelu
 
-Projekti arvostellaan asteikolla 1–5. Arvostelussa kiinnitetään huomiota seuraaviin asioihin:
+Sovellus arvostellaan asteikolla 1–5. Arvostelussa kiinnitetään huomiota seuraaviin asioihin:
 
 ### Yleiskuva
 
-* Sovellus toimii käyttäjän näkökulmasta
+* Sovellus toimii, kun käyttäjä testaa sitä
 * Sovellusta on mukavaa käyttää ja on selvää, mitä toiminnot tekevät
 * Jos käyttäjä antaa väärää tietoa, tästä tulee selkeä ilmoitus
 * Sovelluksen käyttöliittymä ja ulkoasu ovat viimeisteltyjä
