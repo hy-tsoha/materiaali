@@ -9,7 +9,7 @@ sub-sections:
 ---
 # Osa 2
 
-Käytämme kurssilla PostgreSQL-tietokantaa, joka on suosittu avoimen lähdekoodin tietokantajärjestelmä. Tämä osa käsittelee tietokannan käyttöönottoa sekä SQL-komentojen suorittamista web-sovelluksessa.
+Käytämme kurssilla [PostgreSQL](https://www.postgresql.org/)-tietokantaa, joka on suosittu avoimen lähdekoodin tietokantajärjestelmä. Tämä osa käsittelee tietokannan käyttöönottoa sekä SQL-komentojen suorittamista web-sovelluksessa.
 
 Jos olet käyttänyt aiemmin SQLite-tietokantaa mutta PostgreSQL ei ole tuttu, voit katsoa [tästä](../../pages/sqlite_postgre.html) yhteenvedon näiden tietokantojen eroista.
 

@@ -30,9 +30,7 @@ CREATE TABLE answers (
 );
 ```
 
-Taulu `polls` sisältää jokaisen kyselyn aiheen ja luontiajan, ja tauluun `choices` tallennetaan kyselyjen vastausvaihtoehdot. Taulussa `answers` on puolestaan kyselyihin annetut vastaukset.
-
-TODO: Selvennä mitä tauluissa on?
+Taulu `polls` sisältää jokaisen kyselyn aiheen ja luontiajan, ja tauluun `choices` tallennetaan kunkin kyselyn vastausvaihtoehdot. Taulussa `answers` on puolestaan kyselyihin annetut vastaukset ja niiden lähetysajat.
 
 Sovelluksen etusivu näyttää kyselyt käänteisessä aikajärjestyksessä:
 

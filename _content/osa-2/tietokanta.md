@@ -14,15 +14,15 @@ Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avu
 
 ```plaintext
 $ psql
-# CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT);
+user=# CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT);
 CREATE TABLE
-# INSERT INTO messages (content) VALUES ('moikka');
+user=# INSERT INTO messages (content) VALUES ('moikka');
 INSERT 0 1
-# INSERT INTO messages (content) VALUES ('apina banaani cembalo');
+user=# INSERT INTO messages (content) VALUES ('apina banaani cembalo');
 INSERT 0 1
-# INSERT INTO messages (content) VALUES ('kolmas viesti');
+user=# INSERT INTO messages (content) VALUES ('kolmas viesti');
 INSERT 0 1
-# SELECT * FROM messages;
+user=# SELECT * FROM messages;
  id |        content        
 ----+-----------------------
   1 | moikka
@@ -31,19 +31,21 @@ INSERT 0 1
 (3 rows)
 ```
 
+Rivien alussa oleva `user` on tietokoneen käyttäjän tunnus, jonka kautta tietokantaa käytetään. Tässä materiaalissa käytetään esimerkkinä tunnusta `user`, mutta omalla koneellasi se on todennäköisesti jokin muu.
+
 PostgreSQL:ssä tyyppi `SERIAL` tarkoittaa taulun avaimena käytettävää kokonaislukua, joka kasvaa automaattisesti, kun tauluun lisätään uusia rivejä.
 
 Hyödyllisiä PostgreSQL-tulkin komentoja ovat `\dt`, joka näyttää listan tauluista, sekä `\d [taulu]`, joka näyttää taulun sarakkeet ja muuta tietoa siitä.
 
 ```plaintext
-# \dt
+user=# \dt
          List of relations
  Schema |   Name   | Type  | Owner 
 --------+----------+-------+-------
- public | messages | table |
+ public | messages | table | user
 (1 row)
 
-# \d messages
+user=# \d messages
                              Table "public.messages"
  Column  |  Type   | Collation | Nullable |               Default                
 ---------+---------+-----------+----------+--------------------------------------
@@ -56,7 +58,7 @@ Indexes:
 Komento `\q` poistuu PostgreSQL-tulkista:
 
 ```plaintext
-# \q
+user=# \q
 $ 
 ```
 
@@ -69,9 +71,9 @@ Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjasto
 (venv) $ pip install psycopg2
 ```
 
-Ensimmäinen kirjasto `flask-sqlalchemy` on SQLAlchemy-rajapinta, jonka kautta käytämme tietokantaa Flaskissa. Toinen kirjasto `psycopg2` puolestaan mahdollistaa yhteyden muodostamisen PostgreSQL-tietokantaan.
+Ensimmäinen kirjasto `flask-sqlalchemy` on SQLAlchemy-rajapinta, jonka kautta voi käyttää tietokantaa Flaskissa. Toinen kirjasto `psycopg2` puolestaan mahdollistaa yhteyden muodostamisen PostgreSQL-tietokantaan.
 
-Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan _osoite_. Tässä tapauksessa osoite on muotoa `postgresql:///user`, missä `user` on oma käyttäjätunnuksesi koneellasi (tämä näkyy myös PostgreSQL-tulkissa rivien alussa). Muuta siis tässä ja myöhemmissä vastaavissa kohdissa `user` vastaamaan omaa käyttäjätunnustasi.
+Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan _osoite_. Tässä tapauksessa osoite on muotoa `postgresql:///user`, missä `user` on jälleen tietokoneen käyttäjän tunnus, joka näkyy myös PostgreSQL-tulkissa rivien alussa.
 
 Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellus olettaa, että tietokannassa on äsken luomamme `messages`-taulu.
 
@@ -167,9 +169,9 @@ Tämä kysely hakee sisällön kaikista taulussa olevista viesteistä. Metodi `f
 
 Tämä koodi lisää tietokantaan uuden rivin, kun käyttäjä on lähettänyt viestin lomakkeella.
 
-Käyttäjän antama syöte yhdistetään SQL-komentoon parametrina, jolla on tietty nimi, tässä tapauksessa `content`. Huomaa kaksoispiste ennen parametrin nimeä SQL-komennossa.
+Käyttäjän antama syöte yhdistetään SQL-komentoon parametrina, jolla on tietty nimi, tässä tapauksessa `content`. SQL-komennossa ennen parametrin nimeä on kaksoispiste.
 
-Kun sovellus tekee muutoksia tietokantaan, muutosten jälkeen täytyy kutsua metodia `commit`, jotta transaktio päättyy ja muutokset menevät pysyvästi tietokantaan.
+Huomaa, että sovelluksen tekemät SQL-komennot suoritetaan automaattisesti transaktion sisällä. Kun sovellus tekee muutoksia tietokantaan, muutosten jälkeen täytyy kutsua metodia `commit`, jotta transaktio viedään loppuun ja muutokset menevät pysyvästi tietokantaan.
 
 Funktio `redirect` aiheuttaa uudelleenohjauksen toiselle sivulle. Tässä tapauksessa viestin lähetyksen jälkeen siirrytään takaisin etusivulle.
 
@@ -181,6 +183,7 @@ Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa `export` s
 
 ```plaintext
 $ export DATABASE_URL=postgresql:///user
+$ flask run
 ```
 
 Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
@@ -195,7 +198,7 @@ Kun kirjasto on asennettu, Flask osaa käyttää sitä automaattisesti. Tämän 
 DATABASE_URL=postgresql:///user
 ```
 
-Tämän etuna on, että meidän ei tarvitse suorittaa `export`-komentoa ennen sovelluksen käynnistämistä vaan ympäristömuuttujat ovat aina tallessa tiedostossa.
+Tämän etuna on, että ennen sovelluksen käynnistämistä ei tarvitse suorittaa `export`-komentoa vaan ympäristömuuttujat ovat aina tallessa tiedostossa.
 
 Voimme hakea ympäristömuuttujan arvon sovellukseen näin:
 

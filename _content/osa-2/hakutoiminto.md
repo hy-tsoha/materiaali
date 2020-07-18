@@ -44,4 +44,6 @@ def result():
     ...
 ```
 
-Huomaa, että koska `GET`-metodia käyttäessä lomakkeen tiedot välitetään sivun osoitteen kautta, tiedoista jää usein kopio välittäville palvelimille ja palvelinten lokitiedostoihin (ks. [RFC 7231, kohta 9.4](https://tools.ietf.org/html/rfc7231#section-9.4)). Lisäksi selain voi säilyttää `GET`-pyyntöjen vastaukset välimuistissaan, mutta `POST`-pyyntöjen vastauksia ei oletusarvoisesti säilytetä.
+Huomaa, että on vain käytäntö, että `GET`-metodi ei muuta tietokannan sisältöä. Metodista riippumatta sivupyynnön käsittelijä voi suorittaa mitä tahansa SQL-komentoja.
+
+Koska `GET`-metodia käyttäessä lomakkeen tiedot välitetään sivun osoitteen kautta, tiedoista jää kopioita palvelinten lokitiedostoihin. Lisäksi selain voi säilyttää `GET`-pyyntöjen vastaukset välimuistissaan, mutta `POST`-pyyntöjen vastauksia ei oletusarvoisesti säilytetä.

@@ -170,7 +170,7 @@ Koodi hakee tietokannasta käyttäjän antamaa tunnusta vastaavan salasanan. Jos
 Salasana näyttää tietokannassa seuraavalta:
 
 ```plaintext
-# SELECT password FROM users WHERE username='maija';
+user=# SELECT password FROM users WHERE username='maija';
                                             password                                            
 ------------------------------------------------------------------------------------------------
  pbkdf2:sha256:150000$98mnxMjT$cedf43db2f098831ab5f533d814cf094db01540e34251aee3d5afd7d5607fc5a
