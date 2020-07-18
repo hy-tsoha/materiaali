@@ -13,6 +13,8 @@ Perusteiden oppimisen jälkeen hyvä lähde on Pythonin [dokumentaatio](https://
 
 Python on valmiiksi asennettuna useissa järjestelmissä. Tarvittaessa löydät ohjeita asentamiseen Pythonin [lataussivulta](https://www.python.org/downloads/).
 
+Nykyään käytettävä Pythonin versio on Python 3. Kaikki kurssin esimerkit olettavat, että käytössäsi on tämä Pythonin versio.
+
 ## Pythonin käyttäminen
 
 ### Komentotulkki
@@ -30,7 +32,7 @@ $ python3
 
 ### Koodi tiedostossa
 
-Seuraavassa tiedostossa on Python-koodi, joka kysyy käyttäjän nimeä ja näyttää sitten tervehdyksen:
+Seuraavassa tiedostossa `test.py` on Python-koodi, joka kysyy käyttäjän nimeä ja näyttää sitten tervehdyksen:
 
 <p class="code-title">test.py</p>
 ```python
@@ -172,7 +174,7 @@ banaani
 cembalo
 ```
 
-Funktio `range` tuottaa lukuvälin, joka voidaan käydä läpi `for`-silmukalla:
+Perinteisempi `for`-silmukka saadaan aikaan funktion `range` avulla. Tämä funktio tuottaa lukuvälin, joka voidaan käydä läpi silmukalla.
 
 ```python
 for i in range(5):
@@ -193,7 +195,7 @@ Tässä `range(n)` tarkoittaa, että lukuväli alkaa 0:sta ja päättyy juuri en
 
 ### Sanakirja
 
-Sanakirja (dict) muodostuu avain-arvo-pareista. Esimerkiksi seuraava koodi luo sanakirjan, jossa on kolme paria:
+Sanakirja (`dict`) muodostuu avain-arvo-pareista. Esimerkiksi seuraava koodi luo sanakirjan, jossa on kolme paria:
 
 ```python
 ages = {"Maija":25, "Anna":20, "Kaaleppi":42}
@@ -293,7 +295,7 @@ Moikka, Kaaleppi
 Seuraava funktio `check` puolestaan tarkastaa, että nimen pituus on enintään maksimipituus:
 
 ```python
-def check(name, max_length):
+def check(name,max_length):
     return len(name) <= max_length
 
 print(check("Liisa",6)) # True
@@ -430,15 +432,13 @@ Moikka, Anna
 Moikka, Uolevi
 ```
 
-## Pythonin tyyliohje
+## Tyyliohjeet
 
-Pythonin tyyliohje [PEP 8](https://www.python.org/dev/peps/pep-0008/) antaa neuvoja Python-ohjelmoinnin tyyliasioihin. Ohjeeseen on hyvä tutustua ja seurata sitä harkinnan mukaan.
+[Pythonin tyyliohje](https://www.python.org/dev/peps/pep-0008/) (PEP 8) antaa neuvoja Python-ohjelmoinnin tyyliasioihin. Myös [Googlen tyyliohje](https://google.github.io/styleguide/pyguide.html) on tutustumisen arvoinen.
 
-Tyyliohje ottaa kantaa esimerkiksi seuraaviin asioihin:
+Tyyliohjeet antavat hyvän lähtökohdan koodin kirjoittamiselle. Esimerkiksi yleisiä käytäntöjä ovat, että sisennyksen leveys on neljä välilyöntiä ja nimissä kaikki kirjaimet ovat pieniä ja sanojen välissä on alaviivoja (esimerkiksi `max_length`).
 
-* Sisennyksen leveys on neljä välilyöntiä.
-* Muuttujan asetuksen ja vertailujen kummallakin puolella on välilyönti (esimerkiksi asetus `x = 5` ja vertailu `a < b`).
-* Muuttujien, funktioiden ja moduulien nimet kirjoitetaan pienillä kirjaimilla. Jos nimi muodostuu useasta sanasta, niiden välissä voi olla alaviiva `_`.
+Tärkein asia on kuitenkin, että koodin tyyli on _yhtenäinen_ sovelluksen sisällä.
 
 ## Lisäaiheita
 
@@ -464,13 +464,14 @@ print(lengths) # [5, 6, 6]
 
 ### Säännölliset lausekkeet
 
-Säännöllinen lauseke (_regex_) määrittelee merkkijonon halutun sisällön. Voimme käsitellä säännöllisiä lausekkeita moduulin `re` avulla.
+Säännöllinen lauseke (_regex_) kuvailee, mikä on haluttu merkkijonon muoto. Voimme käsitellä säännöllisiä lausekkeita moduulin `re` avulla.
 
 Esimerkiksi seuraava koodi varmistaa, että merkkijono `word` muodostuu kirjaimista `a`–`z`:
 
 ```python
 import re
 
+word = "apina"
 if re.match(r"^[a-z]+$", word):
     ok = True
 ```

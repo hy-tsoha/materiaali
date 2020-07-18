@@ -60,7 +60,7 @@ Sivun alussa oleva dokumenttityyppi ilmaisee, että kyseessä on HTML-sivu:
 
 Itse asiassa tämä rivi on turha: jos rivin poistaa, sivu näkyy yhtä hyvin kuin ennenkin. Rivi kuitenkin vaaditaan, jotta sivu on _validi_ eli HTML-kielen standardin mukainen.
 
-Toisin kuin ohjelmointikielissä, HTML:ää voi kirjoittaa huolettomasti ja selaimet koettavat näyttää sivun jotenkin järkevästi, vaikka koodissa olisi virheitä. Toisaalta on hyvä tavoite toimivuuden kannalta pyrkiä siihen, että sivu on ainakin lähellä validia.
+Toisin kuin ohjelmoinnissa, HTML:ää voi kirjoittaa huolettomasti ja selaimet koettavat näyttää sivun jotenkin järkevästi, vaikka koodissa olisi virheitä. Toisaalta on hyvä tavoite toimivuuden kannalta pyrkiä siihen, että sivu on ainakin lähellä validia.
 
 Helppo tapa selvittää sivun validius on käyttää [validaattoria](https://validator.w3.org/).
 
@@ -240,7 +240,7 @@ Huomaa, että vaikka käyttäjä ei näe piilokenttää sivulla, kenttä kuitenk
 
 ## CSS
 
-Ihanteena on, että HTML määrittelee sivun _rakenteen_: mitä tekstiä, kuvia, listoja, taulukoita, jne. sivulla on. Kuitenkaan HTML:n tehtävänä ei ole määritellä tarkemmin sivun _ulkoasua_: mikä on tekstin fontti, paljonko tekstiä on rivillä, mikä on sivun taustaväri, jne.
+Ihanteena on, että HTML määrittelee sivun _rakenteen_: mitä tekstiä, kuvia, listoja, taulukoita, jne. sivulla on. Kuitenkaan HTML:n tehtävänä ei ole määritellä tarkemmin sivun _ulkoasua_: mikä on tekstin fontti, kuinka leveitä rivit ovat, mikä on sivun taustaväri, jne.
 
 Usein kuitenkin sivun ulkoasu halutaan määritellä tarkemmin, ja tämä onnistuu lisäämällä sivulle CSS-koodia. Tämän avulla voidaan määritellä tyylejä, jotka vaikuttavat siihen, miten sivun HTML-elementit näkyvät selaimessa.
 
@@ -276,13 +276,13 @@ Nyt käytössä on `div`-elementti, joka määrittelee alueen, jota voidaan tyyl
 
 * `background:blue`: alueen tausta on sininen
 * `color:white`: tekstin väri on valkoinen
-* `padding:10px`: alueen sisällä reuna-alue on 10 pikseliä
+* `padding:10px`: alueen sisällä reunoilla on 10 pikseliä tyhjää
 * `width:200px`: alueen leveys on 200 pikseliä
 * `height:50px`: alueen korkeus on 50 pikseliä
 
 ### Yhteinen tyyli
 
-Attribuuttia `style` on helppo käyttää CSS:n määrittelyyn, mutta se ei ole yleensä kovin hyvä ratkaisu. Ongelmana on, että jos usealla elementillä on tarkoitus olla sama tyyli, samanlaista CSS-koodia joutuu kopioimaan moneen paikkaan.
+Attribuuttia `style` on helppo käyttää CSS:n määrittelyyn, mutta tämä ei ole yleensä kovin hyvä ratkaisu. Ongelmana on, että jos usealla elementillä on tarkoitus olla sama tyyli, samanlaista CSS-koodia joutuu kopioimaan moneen paikkaan.
 
 Parempi tapa on määritellä sivun alussa tyyliluokka, joka määrittelee yhteisen tyylin, ja viitata tähän halutuissa elementeissä. Esimerkiksi seuraava CSS-koodi määrittelee tyyliluokan `laatikko` sinistä laatikkoa varten:
 
@@ -357,7 +357,7 @@ Tämän jälkeen tyylitiedoston voi ottaa mukaan näin HTML-tiedostossa:
 
 JavaScript on ohjelmointikieli, jonka avulla HTML-sivulle voidaan lisätä selaimessa tapahtuvia toimintoja. Esimerkiksi käyttäjälle voidaan näyttää viestejä eri tilanteissa ja sivun sisältöä voidaan muuttaa käyttäjän toimien perusteella.
 
-JavaScriptin historia on poikkeuksellinen. Vuosituhannen vaihteessa kieli oli lähinnä vitsi ja monet käyttäjät estivät sen suorittamisen selaimessa. JavaScript on kuitenkin kehittynyt paljon niistä ajoista, ja nykyään kielellä on vahva asema web-sovellusten toteutuksessa.
+JavaScriptin historia on poikkeuksellinen ohjelmointikielten joukossa. Vuosituhannen vaihteessa kieli oli lähinnä vitsi ja sen maine oli kyseenalainen, minkä vuoksi monet käyttäjät estivät kokonaan sen käyttämisen. JavaScript on kuitenkin kehittynyt paljon niistä ajoista, ja nykyään kielellä on vahva asema web-sovellusten toteutuksessa.
 
 ### Esimerkkejä
 
@@ -415,6 +415,6 @@ Laskuri: <span id="counter">0</span> <br>
 
 JavaScript on nykyään todella monipuolinen kieli, ja sen avulla voi toteuttaa lähes mitä tahansa selaimessa suoritettavaa. Mutta kannattaako sitä käyttää?
 
-Ennen vanhaan tärkeä periaate web-sovelluksen toteuttamisessa oli, että sovelluksen täytyy toimia täysin ilman JavaScriptiä. Tähän vaikutti se, että moni ei sallinut JavaScriptin käyttämistä ja lisäksi eri selainten välillä oli merkittäviä eroja JavaScriptin toiminnassa. Ajat ovat kuitenkin muuttuneet, ja nykyään JavaScript toimii luotettavasti lähes kaikilla käyttäjillä.
+Ennen vanhaan yleinen periaate oli, että hyvän web-sovelluksen täytyy toimia täysin ilman JavaScriptiä. Tähän vaikutti se, että moni ei sallinut JavaScriptin käyttämistä ja lisäksi eri selainten välillä oli merkittäviä eroja JavaScriptin toiminnassa. Ajat ovat kuitenkin muuttuneet, ja nykyään JavaScript toimii luotettavasti lähes kaikilla käyttäjillä.
 
-Siitä huolimatta edelleen on hyvä tavoite toteuttaa sovelluksen oleelliset toiminnot ilman JavaScriptia eikä käyttää sitä turhaan. JavaScript on kuitenkin kätevä esimerkiksi lomakkeen tietojen tarkastamisessa: jos tiedot eivät ole kelvollisia, tämä voidaan ilmoittaa käyttäjälle selaimessa ennen lomakkeen lähetystä. Tässä JavaScript parantaa sovelluksen käytettävyyttä mutta se ei kuitenkaan ole välttämätön.
+Siitä huolimatta edelleen on hyvä tavoite toteuttaa sovelluksen oleelliset toiminnot ilman JavaScriptiä eikä käyttää sitä turhaan. JavaScript on kuitenkin kätevä esimerkiksi lomakkeen tietojen tarkastamisessa: jos tiedot eivät ole kelvollisia, tämä voidaan ilmoittaa käyttäjälle selaimessa ennen lomakkeen lähetystä. Tässä JavaScript parantaa sovelluksen käytettävyyttä mutta ei kuitenkaan ole välttämätön.

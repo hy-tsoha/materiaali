@@ -9,15 +9,15 @@ Tällä sivulla on vinkkejä Gitin käyttämiseen tämän kurssin projektissa. O
 
 ## Lähtökohta
 
-Kun projektia kehitetään, omalla koneella on paikallinen projektin hakemisto sekä siihen liittyvä repositorio. Kun projektiin tehdyt muutokset halutaan talteen, tiedostot valitaan ensin komennolla `git add` ja sitten suoritetaan komento `git commit`.
+Kun projektia kehitetään, omalla koneella on paikallinen projektin _työhakemisto_ sekä siihen liittyvä repositorio. Kun työhakemiston muutokset halutaan talteen repositorioon, tiedostot valitaan ensin komennolla `git add` ja sitten suoritetaan komento `git commit`.
 
 Tämän lisäksi GitHubissa on toinen repositorio, jonka sisällön on tarkoitus olla sama kuin oman koneen repositoriossa. Komento `git push` siirtää muutoksia omalta koneelta GitHubiin, ja komento `git pull` puolestaan siirtää muutoksia GitHubista omalle koneelle.
 
 ## Commitin tekeminen
 
-Commitin tekeminen tarkoittaa, että haluamme tallentaa projektin hakemistoon tehtyjä muutoksia repositorioon. Tässä on muutamia vaiheita, joiden merkitys kannattaa ymmärtää.
+Commitin tekeminen tarkoittaa, että haluamme tallentaa työhakemistoon tehtyjä muutoksia repositorioon. Tässä on muutamia vaiheita, joiden merkitys kannattaa ymmärtää.
 
-Komento `git status` kertoo repositorion tilanteen, ja sitä kannattaa käyttää usein. Komento kertoo, mitä muutoksia projektin hakemistoon on tehty. Komennon suoritus voi näyttää vaikkapa seuraavalta:
+Komento `git status` kertoo repositorion tilanteen, ja sitä kannattaa käyttää usein. Komento kertoo, mitä muutoksia työhakemistoon on tehty. Komennon suoritus voi näyttää vaikkapa seuraavalta:
 
 ```plaintext
 $ git status
@@ -37,7 +37,7 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Tämä tarkoittaa, että tiedostot `apina.txt` ja `banaani.txt` ovat repositoriossa, mutta niitä on muutettu hakemistossa. Lisäksi hakemistoon on luotu uusi tiedosto `cembalo.txt`, jota ei vielä ole lainkaan repositoriossa.
+Tämä tarkoittaa, että tiedostot `apina.txt` ja `banaani.txt` ovat repositoriossa, mutta niitä on muutettu työhakemistossa. Lisäksi työhakemistoon on luotu uusi tiedosto `cembalo.txt`, jota ei vielä ole lainkaan repositoriossa.
 
 Kun haluamme viedä muutokset repositorioon, teemme uuden commitin. Voimme valita komennolla `git add` tiedostot, jotka tulevat mukaan commitiin. Esimerkiksi voimme valita tiedostot `apina.txt` ja `cembalo.txt` näin:
 
@@ -66,7 +66,7 @@ Changes not staged for commit:
 
 Tässä tiedostot `apinat.txt` ja `cembalo.txt` on valittu commitiin. Näemme edelleen, että tiedostoa `banaani.txt` on muokattu, mutta se ei ole menossa commitiin.
 
-Seuraava vaihe on suorittaa komento `git commit`, joka suorittaa commitin. Tässä yhteydessä annetaan viesti, joka kertoo, mitä muutoksia kyseinen commit teki repositorioon.
+Seuraava vaihe on suorittaa komento `git commit`, joka suorittaa commitin. Tässä yhteydessä annetaan viesti, joka kertoo, mitä muutoksia kyseinen commit tekee repositorioon.
 
 ```plaintext
 $ git commit -m "Update apina and create cembalo"
@@ -131,7 +131,7 @@ Saattaa olla, että muutos oli erehdys ja haluaisimme perua sen. Voimme noudatta
 $ git checkout banaani.txt
 ```
 
-Tämä komento hakee tiedoston `banaani.txt` repositoriosta ja korvaa sillä muutetun tiedoston. Nyt tiedoston sisältö on taas sama kuin repositoriossa:
+Tämä komento hakee tiedoston `banaani.txt` repositoriosta ja korvaa sillä muutetun tiedoston. Nyt työhakemiston tiedoston sisältö on taas sama kuin repositoriossa:
 
 ```plaintext
 $ git status
