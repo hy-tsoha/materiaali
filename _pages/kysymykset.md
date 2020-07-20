@@ -24,6 +24,10 @@ Kurssin tavoitteena on saada yleistä osaamista web-sovelluksen kehityksestä ja
 
 Kuitenkin jos haluat käyttää ORMia tai sopivia lisäkirjastoja ja opettelet ne itsenäisesti, niin voit mainiosti tehdä näin.
 
+### Voiko sovelluksen toteuttaa parityönä/ryhmässä?
+
+Sovellus on yksilöprojekti, eli sinun tulee toteuttaa se itsenäisesti. Kuitenkin voit mainiosti opetella ja miettiä asioita muiden kanssa.
+
 ### Mitä teen, kun löysin virheen kurssin materiaalista?
 
 Voit ilmoittaa virheestä Telegram-kanavalla, kurssin vastuuhenkilölle tai lähettää saman tien korjauksen [kurssin GitHub-repositorioon](https://github.com/hy-tsoha/materiaali/).
