@@ -7,6 +7,7 @@ title: TODO
 
 ## Sekalaista:
 
+* Valikossa olevan linkin tulisi toimia koko väritetyltä alueelta eikä vain silloin kun hiiri on tekstin kohdalla
 * Kaikkien sivujen otsikko (title-tagi) on sama, otsikon pitäisi määräytyä sivun mukaan
 * Onko tapaa määrittää sivujen järjestys sivupalkin yläosiossa? Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
 * Sivusto ei toimi vielä kovin hyvin mobiililaitteella (valikon kanssa ongelmia ja miten kuvien leveys pitäisi merkitä?)
