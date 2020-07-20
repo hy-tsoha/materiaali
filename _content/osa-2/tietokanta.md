@@ -8,6 +8,8 @@ Olemme tehneet kurssia varten [asennusskriptin](https://github.com/hy-tsoha/loca
 
 Voit myös asentaa PostgreSQL:n pääkäyttäjänä käyttöjärjestelmäsi pakettienhallinnan kautta, käyttää Dockeria tai vastaavaa alustaa tai ladata asennuspaketin itse. Ohjeita asennukseen eri järjestelmiin on [PostgreSQL:n sivulla](https://www.postgresql.org/download/).
 
+Macilla helppo tapa saada PostgreSQL käyttöön on [Postgres.app](https://postgresapp.com/).
+
 ### PostgreSQL-tulkki
 
 Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun `messages`, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
