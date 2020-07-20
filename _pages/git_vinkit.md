@@ -101,7 +101,7 @@ $ git push
 
 Commitin tekijän on päätettävä kaksi asiaa: mitä tiedostoja commitiin tulee mukaan ja mikä on commitin viesti. Huonoin ratkaisu on laittaa mukaan sokkona kaikki muutetut tiedostot ja viestiksi "Some changes" tai vastaavaa.
 
-Commitissa tulisi olla muutoksia, jotka todella halutaan kaikkien näkyville repositorioon ja jotka liittyvät tiettyyn kokonaisuuteen. Tämän vuoksi on hyvä katsoa komennolla `git status`, mitä on tapahtunut, ja valita commitiin oikeat tiedostot. Jos muokkaat samaa tiedostoa, muista tehdä tallennus ja commit, ennen kuin siirryt koodaamaan seuraavaa toiminnallisuutta!
+Commitissa tulisi olla muutoksia, jotka todella halutaan kaikkien näkyville repositorioon ja jotka liittyvät tiettyyn kokonaisuuteen. Tämän vuoksi on hyvä katsoa komennolla `git status`, mitä on tapahtunut, ja valita commitiin oikeat tiedostot. Jos muokkaat samaa tiedostoa, muista tehdä tallennus ja commit, ennen kuin siirryt toteuttamaan seuraavaa toiminnallisuutta.
 
 Commit-viestien kirjoittaminen on oma taiteenlajinsa. Viestin tulisi kertoa selkeästi, mitä muutoksia kyseinen commit aiheuttaa ja miksi se tehdään. Esimerkiksi [Chris Beamsin ohje](https://chris.beams.io/posts/git-commit/) on hyvää luettavaa ihanteista, joihin voi pyrkiä.
 
