@@ -5,21 +5,17 @@ hidden: true
 
 ## Ulkoasu ja tyylit
 
-Kurssin taustamateriaalista löydät ohjeita ulkoasua varten, kannattaa perehtyä näihin ensin jos et ole vielä sitä tehnyt.
-
-Usein, jos aikaa tyylittelyyn on rajoitetusti, kannattaa harkita jonkin valmiin CSS-sovelluskehyksen käyttöä. Näistä varmaankin eniten käytetty on [Bootstrap](https://getbootstrap.com/), mutta hyviä vaihtoehtoja on useita. Voit etsiä vaihtoehtoja hakusanoilla "CSS framework".
+Usein, jos aikaa tyylittelyyn on rajoitetusti, kannattaa harkita jonkin valmiin CSS-sovelluskehyksen käyttöä. Näistä varmaankin eniten käytetty on [Bootstrap](https://getbootstrap.com/), mutta hyviä vaihtoehtoja on useita.
 
 Bootstrapin hyötyjä:
 
 - Bootstrap tarjoaa valmiina suuren joukon erilaisia komponentteja ulkoasun rakentamiseen.
 - Bootstrap pyrkii olemaan mahdollisimman konsistentti eri selainten ja näyttökokojen välillä
-- Bootstrapin dokumentaatiossa on usein mietitty myös jonkin verran saavutettavuutta (accessibility) ja [sen toteuttamista Bootstrapin yhteydessä](https://getbootstrap.com/docs/4.5/getting-started/accessibility/).
 - On hyvin todennäköistä että Bootstrapin yleinen CDN-versio on jo valmiina käyttäjän selaimen välimuistissa, tällöin käyttäjä saa tyylittelyt käyttöönsä hyvin nopeasti tullessaan sivulle.
 
 Bootstrapin haittoina on puolestaan mm:
 
 - Jos sovelluksen ulkoasua ei kustomoi, sovellus näyttää helposti kopiolta jostain toisesta vastaavasta sovelluksesta
-- Suuri koko (mutta katso huomio välimuistista yllä ja kohta koon minimoinnista alempana) verrattuna käsin kirjoitettuun tyylitiedostoon.
 
 
 ### Bootstrapin käyttö
@@ -58,32 +54,13 @@ Bootstrap käyttää myös paikoitellen javascriptiä. Tämän käyttö ei ole v
 
 #### Bootstrapin käyttö
 
-Bootstrapia opetellessa kannattaa ensin selata Bootstrapin dokumentaation kohdat Layout ja Content läpi. Näissä käsitellään käytön perusteita Bootstrapin kannalta, ja näiden kohtien sisältö lieneekin jo osittain tuttua taustamateriaalin html-oppaan perusteella.
+Bootstrapia opetellessa kannattaa ensin selata Bootstrapin dokumentaation kohdat Layout ja Content läpi jotta ymmärrät miten sivut rakentuvat.
 
 Bootstrap jakaa sivun ruudukkoon sisällön asettelua varten (katso selitys dokumentaation Layout-osassa). Jos tämä tuntuu vaikealta ymmärtää dokumentaation perusteella, voit tutustua myös muihin sivuihin, esimerkiksi [tähän](https://uxplanet.org/how-the-bootstrap-4-grid-works-a1b04703a3b7).
 
 Tehdään nyt esimerkiksi pieni sivu jossa käytetään jonkin verran Bootstrap-componentteja:
 
-Luomme ensin sivun pohjan johon otamme mukaan bootstrapcdn:n kautta tulevan Bootstrapin tyylitiedoston.
-
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <title>Bootstrap-esimerkki</title>
-  </head>
-  <body>
-
-  </body>
-</html>
-```
-
-
-Lisätään sivulle [navbar](https://getbootstrap.com/docs/4.5/components/navbar/) helpottamaan sivustolla liikkumista. Lisätään myös hieman tekstiä. Lopuksi lisätään vielä kaksi [nappia](https://getbootstrap.com/docs/4.5/components/buttons/).
+Luomme ensin sivun pohjan johon otamme mukaan bootstrapcdn:n kautta tulevan Bootstrapin tyylitiedoston. Lisäämme sivulle [navbar](https://getbootstrap.com/docs/4.5/components/navbar/)-komponentin helpottamaan sivustolla liikkumista. Lisätään myös hieman tekstiä, ja l opuksi lisätään vielä kaksi [nappia](https://getbootstrap.com/docs/4.5/components/buttons/).
 
 ```html
 <!doctype html>
@@ -107,9 +84,6 @@ Lisätään sivulle [navbar](https://getbootstrap.com/docs/4.5/components/navbar
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link B</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link C</a>
         </li>
       </ul>
     </nav>
@@ -178,13 +152,6 @@ body {
 }
 ```
 
-
-#### Bootstrapin lähdekoodin muokkaus
-
-Johtuen Bootstrapin monimutkaisuudesta, kaikki mahdolliset muutokset tyyleihin eivät välttämättä ole helppoja tai onnistu määrittelemällä ne omassa erillisessä tyylitiedostossa. Tällöin voi tulla tarpeelliseksi muokata Bootstrapin Sass-lähdekoodia ja luoda koko css itse sen pohjalta. Tällöin voit itse muokata Bootstrapia miten haluat ja valita mukaan otettavat osat. Tätä varten kuitenkin tarvitset ylimääräisiä työkaluja, joten tässä ei menne sen tarkemmin tähän tapaan.
-Jos asia tulee ajankohtaiseksi työllesi tai jos omien tyyliesi kanssa on ongelmia, voit lukea aiheesta esimerkiksi [tämän](https://uxplanet.org/how-to-customize-bootstrap-b8078a011203).
+Jos omien tyyliesi kanssa on ongelmia, voit lukea aiheesta esimerkiksi [tämän](https://uxplanet.org/how-to-customize-bootstrap-b8078a011203).
 
 
-### Valmiin css:n minimointi
-
-Jos sovelluksen ulkoasun tyylittelyyn käyttää valmista CSS-tiedostoa (kuten esim Bootstrapin perusversio), tyylittelyihin todennäköisesti sisältyy paljon asioita joita sovellus ei itseasiassa käytä. Käyttämättömien osien karsimiseen (ja siten ladattavan tyylitiedoston koon pienentämiseen) on olemassa työkaluja kuten esimerkiksi [purgecss](https://purgecss.com/) tai [minimalcss](https://github.com/peterbe/minimalcss/). Tämä karsittu css ei tietenkään vastaa yleisessä jaossa olevaa perusversiota, joten se pitää jakaa itse (esim static-hakemistosta sovelluksen mukana).
