@@ -42,4 +42,4 @@ Sovellus arvostellaan asteikolla 1–5. Arvostelussa kiinnitetään huomiota seu
 
 * Projekti eteni kurssin aikana tavoitteiden mukaisesti
 * Antamasi vertaispalaute oli kattavaa ja hyödyllistä muille opiskelijoille
-* Tätä ei arvostella, jos suoritat kurssin omalla aikataululla ilman ohjausta
+* Projektin kulku ei vaikuta arvosteluun, jos suoritat kurssin omalla aikataululla ilman ohjausta
