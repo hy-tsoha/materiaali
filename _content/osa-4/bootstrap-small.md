@@ -50,10 +50,7 @@ Luomme alla sivun johon otamme mukaan bootstrapcdn:n kautta tulevan Bootstrapin 
 blandit massa at augue fringilla, eget semper tellus sollicitudin. Nam 
 vestibulum felis vitae efficitur ultrices. Quisque mattis ligula nec 
 congue tristique. Vivamus luctus blandit mi, in fringilla odio laoreet 
-eleifend. Donec bibendum risus vel lorem rutrum, quis pellentesque nunc 
-sagittis. Pellentesque sollicitudin elit a faucibus finibus. Suspendisse 
-iaculis rutrum lacus id tempus. Praesent ornare vel sapien eget vulputate. 
-Aenean at purus quis nisl tristique laoreet.</p>
+eleifend.
 
       <input class="btn btn-primary" type="submit" value="Nappi A" />
       <a href="#" class="btn btn-secondary">Nappi B</a>
@@ -79,7 +76,7 @@ Jos omien tyyliesi kanssa on ongelmia, voit lukea aiheesta esimerkiksi [tämän]
 
 
 
-Bootstrap käyttää myös paikoitellen javascriptiä. Tämän käyttö ei ole välttämätöntä ja yllä ei sitä tarvita, jos tarvitset sitä, lisää html-koodiin:
+Jotkin Bootstrapin komponentit käyttävät javascriptiä. Esimerkissä yllä ei sitä tarvita. Jos tarvitset sitä, lisää html-koodiin:
 
 ```html
     ...
