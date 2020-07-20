@@ -9,6 +9,12 @@
     background-color: rgb(255, 255, 255);
 }
 
+.header h1 {
+    //border: 15px solid rgb(209, 209, 209);
+    border-radius: 8px;
+    background: rgb(209, 209, 209);
+}
+
 .header + .content {
     margin-top: 0;
 }
