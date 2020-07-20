@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Loppukesän 2020 kurssin aikataulu on seuraava:
 
-| ma 20.7.2020 | Kurssin aloitusluento |
+| ma 20.7.2020 | Kurssin aloitusluento ([nauhoite](https://www.helsinki.fi/unitube/video/079775c6-4425-462a-b735-744e7094c4b7)) |
 | su 26.7.2020 | Välipalautus 1 |
 | su 9.8.2020 | Välipalautus 2  |
 | ke 12.8.2020 | Vertaisarvioinnin deadline |
