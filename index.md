@@ -24,3 +24,5 @@ Kurssin vastuuhenkilö on Antti Laaksonen. Voit ottaa yhteyttä [sähköpostitse
 ## Materiaalista
 
 Kurssimateriaalin tekijä on Antti Laaksonen. Materiaalin kehityksessä ovat auttaneet Milla Kortelainen ja Terho Uotila.
+
+Materiaalin lähdekoodi on saatavilla [GitHubissa](https://github.com/hy-tsoha/materiaali/).
