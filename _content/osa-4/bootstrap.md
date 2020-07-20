@@ -83,53 +83,7 @@ Luomme ensin sivun pohjan johon otamme mukaan bootstrapcdn:n kautta tulevan Boot
 ```
 
 
-Lisätään sivulle [navbar](https://getbootstrap.com/docs/4.5/components/navbar/) helpottamaan sivustolla liikkumista. Lisätään myös hieman tekstiä.
-
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <title>Bootstrap-esimerkki</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">Esimerkkisivusto</a>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link A</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link B</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link C</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="container">
-      <h1>Esimerkki</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec 
-blandit massa at augue fringilla, eget semper tellus sollicitudin. Nam 
-vestibulum felis vitae efficitur ultrices. Quisque mattis ligula nec 
-congue tristique. Vivamus luctus blandit mi, in fringilla odio laoreet 
-eleifend. Donec bibendum risus vel lorem rutrum, quis pellentesque nunc 
-sagittis. Pellentesque sollicitudin elit a faucibus finibus. Suspendisse 
-iaculis rutrum lacus id tempus. Praesent ornare vel sapien eget vulputate. 
-Aenean at purus quis nisl tristique laoreet.</p>
-    </div>
-  </body>
-</html>
-```
-
-Lisätään kaksi [nappia](https://getbootstrap.com/docs/4.5/components/buttons/).
+Lisätään sivulle [navbar](https://getbootstrap.com/docs/4.5/components/navbar/) helpottamaan sivustolla liikkumista. Lisätään myös hieman tekstiä. Lopuksi lisätään vielä kaksi [nappia](https://getbootstrap.com/docs/4.5/components/buttons/).
 
 ```html
 <!doctype html>
