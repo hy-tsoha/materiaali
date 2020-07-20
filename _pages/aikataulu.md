@@ -27,29 +27,30 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?](aiheen_valinta.html)
 * Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/) ja ilmoita siellä projektisi GitHub-osoite.
-* Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta.
+* Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
 
 * Tässä vaiheessa tavoitteena on, että sovelluksella on toimiva pohja ja keskeiset toiminnot ovat hyvässä vaiheessa.
 * `README.md`-tiedoston tulee kuvata, mikä on sovelluksen nykyinen tilanne ja miten sitä pystyy testaamaan Herokussa.
-* Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta.
+* Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta Labtooliin.
 
 ### Välipalautus 3
 
 * Tässä vaiheessa tavoitteena on, että sovellus on viimeistelyä vaille valmis.
 * `README.md`-tiedoston tulee kuvata, mikä on sovelluksen nykyinen tilanne ja miten sitä pystyy testaamaan Herokussa.
-* Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta.
+* Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta Labtooliin.
 
 ### Vertaisarvioinnit
 
-Kurssiin kuuluu kaksi vertaisarviointia, joissa annetaan palautetta toisen opiskelijan työstä. Saat ohjeet vertaisarvointiin sähköpostitse välipalautusten 2 ja 3 jälkeen.
+Kurssiin kuuluu kaksi vertaisarviointia, joissa annetaan palautetta toisen opiskelijan työstä. Saat ohjeet vertaisarvointiin sähköpostitse välipalautusten 2 ja 3 jälkeen. 
+Linkin katselmoitavaan repositorioon löydät Labtoolista.
 
 ### Lopullinen palautus
 
 * Kurssi arvostellaan tämän sovelluksen version perusteella.
 * `README.md`-tiedoston tulee kuvata, millainen lopullinen sovellus on ja miten sitä pystyy testaamaan Herokussa.
-* Ohjaaja arvostelee työn ja ilmoittaa kurssin arvosanan kuukauden kuluessa.
+* Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.
 
 ## Ohjeita
 
