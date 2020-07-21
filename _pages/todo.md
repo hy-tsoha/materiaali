@@ -16,7 +16,7 @@ title: TODO
 * Onko tapaa määrittää sivujen järjestys sivupalkin yläosiossa? Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
 
 * Sivusto ei toimi vielä kovin hyvin mobiililaitteella (valikon kanssa ongelmia ja miten kuvien leveys pitäisi merkitä?)
-✔️ Valikko toimii paremmin mobiilissa. Kuvien leveys on asetettu pieneksi mobiilissa. Se on asetettu `_contetn.scss` tiedostossa ja sielä on määritelty, kun näytön leveys on alle 500px niin käytetään pienempiä kuvia
+✔️ Valikko toimii paremmin mobiilissa. Kuvien leveys on asetettu pieneksi mobiilissa. Se on asetettu `_content.scss` tiedostossa ja sielä on määritelty, kun näytön leveys on alle 500px niin käytetään pienempiä kuvia
 ```css
 @media screen and (max-width: 500px) {
     .page-content {
