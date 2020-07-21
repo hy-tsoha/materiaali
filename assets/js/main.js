@@ -19,7 +19,7 @@ window.onresize = reportWindowSize;
 window.onload = () => {
   reportWindowSize();
   setActiveMenu()
-  generateTOC()
+ // generateTOC()
 };
 
 window.onscroll = () => {
