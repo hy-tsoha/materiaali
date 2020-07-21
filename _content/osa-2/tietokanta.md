@@ -77,6 +77,8 @@ Ensimmäinen kirjasto `flask-sqlalchemy` on SQLAlchemy-rajapinta, jonka kautta v
 
 Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan _osoite_. Tässä tapauksessa osoite on muotoa `postgresql:///user`, missä `user` on jälleen tietokoneen käyttäjän tunnus, joka näkyy myös PostgreSQL-tulkissa rivien alussa.
 
+Huomaa, että jos käytät Windowsia, niin vaadittu tapa antaa tietokannan osoite voikin olla `postgresql://user` eli vain kaksi `/`-merkkiä kolmen sijasta.
+
 Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellus olettaa, että tietokannassa on äsken luomamme `messages`-taulu.
 
 <p class="code-title">app.py</p>
