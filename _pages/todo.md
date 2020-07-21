@@ -8,9 +8,26 @@ title: TODO
 ## Sekalaista:
 
 * Valikossa olevan linkin tulisi toimia koko väritetyltä alueelta eikä vain silloin kun hiiri on tekstin kohdalla (Antti yritti säätää jotain, meniköhän järkevästi?)
+✔️ Näyttää hyvältä
+
 * Kaikkien sivujen otsikko (title-tagi) on sama, otsikon pitäisi määräytyä sivun mukaan
+✔️ Title asetetaan nyt otsikon perusteella.
+
 * Onko tapaa määrittää sivujen järjestys sivupalkin yläosiossa? Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
+
 * Sivusto ei toimi vielä kovin hyvin mobiililaitteella (valikon kanssa ongelmia ja miten kuvien leveys pitäisi merkitä?)
+✔️ Valikko toimii paremmin mobiilissa. Kuvien leveys on asetettu pieneksi mobiilissa. Se on asetettu `_contetn.scss` tiedostossa ja sielä on määritelty, kun näytön leveys on alle 500px niin käytetään pienempiä kuvia
+```css
+@media screen and (max-width: 500px) {
+    .page-content {
+        margin-left: 3em;
+    }
+
+    img {
+        max-width: 300px;
+    }
+}
+```
 
 Ulkoasun suunnitelua käsitteleva osa on [täällä](ulkoasun_suunnittelu.html)
 

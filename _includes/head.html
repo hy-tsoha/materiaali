@@ -1,7 +1,13 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>{{site.title}}</title>
+    <title>
+      {% if page.nav-title%}
+      {{page.nav-title}}
+      {% else %}
+      {{page.title}}
+      {% endif %}
+    </title>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
           CommonHTML: {
