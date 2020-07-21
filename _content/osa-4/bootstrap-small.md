@@ -28,7 +28,7 @@ Tehdään seuraavaksi pieni esimerkiksi jossa käytetään jonkin verran Bootstr
 <link rel="stylesheet" href="custom.css">
 <title>Bootstrap-esimerkki</title>
 
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
   <a class="navbar-brand" href="/">Esimerkkisivusto</a>
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
