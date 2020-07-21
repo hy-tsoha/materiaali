@@ -11,11 +11,14 @@ Bootstrap tarjoaa valmiina suuren joukon erilaisia komponentteja ulkoasun rakent
 
 ### Esimerkki
 
-Helpoiten Bootstrapin saa käyttöön sisällyttämällä sivupohjaan sisällönjakeluverkon (CDN) kautta jaossa olevan Bootstrapin version. Tehdään nyt esimerkiksi pieni sivu jossa käytetään jonkin verran Bootstrap-componentteja.
+Helpoiten Bootstrapin saa käyttöön sisällyttämällä sivupohjaan sisällönjakeluverkon (CDN) kautta jaossa olevan Bootstrapin version. Tässä on myös hyvänä puolena että tällöin todennäköisesti Bootstrap on jo valmiina käyttäjän selaimen välimuistissa.
 
 Jos Bootstrapia käyttää sellaisenaan ilman mitään muokkausta, sivustosta tulee helposti saman näköinen muiden (muokkaamattomalla) Bootstrapilla tehtyjen sivustojen kanssa. Tästä voi tulla huono vaikutelma, joten on hyvä hieman muokata sovelluksen ulkoasua.
 
-Luomme alla sivun johon otamme mukaan bootstrapcdn:n kautta tulevan Bootstrapin tyylitiedoston, ja tämän jälkeen lisäämme omat määrittelyt. Lisäämme sivulle [navbar](https://getbootstrap.com/docs/4.5/components/navbar/)-komponentin helpottamaan sivustolla liikkumista. Lisätään myös hieman tekstiä, ja lopuksi lisätään vielä kaksi [nappia](https://getbootstrap.com/docs/4.5/components/buttons/). Huomaa että toinen lisätyistä napeista on itseasiassa lomakkeissa käytetty submit-nappi ja toinen on linkki.
+Tehdään seuraavaksi pieni esimerkiksi jossa käytetään jonkin verran Bootstrap-componentteja:
+- Luomme sivun johon otamme mukaan bootstrapcdn:n kautta tulevan Bootstrapin tyylitiedoston, ja tämän jälkeen lisäämme omat määrittelyt. 
+- Lisäämme sivulle [navbar](https://getbootstrap.com/docs/4.5/components/navbar/)-komponentin helpottamaan sivustolla liikkumista. 
+- Lisätään myös hieman tekstiä, ja lopuksi lisätään vielä kaksi [nappia](https://getbootstrap.com/docs/4.5/components/buttons/). Huomaa että toinen lisätyistä napeista on itseasiassa lomakkeissa käytetty submit-nappi ja toinen on linkki.
 
 ```html
 <!doctype html>
