@@ -23,22 +23,24 @@ Tässä on ongelmana, että taulusta `choices` on viittaus taulun `polls` riviin
 
 Yksi ratkaisu asiaan olisi määritellä taulun luonnissa tarkemmin `ON DELETE` -osassa, mitä tapahtuu, kun taulusta poistetaan rivi. Esimerkiksi `ON DELETE CASCADE` määrittää, että kun rivi poistetaan, niin myös siihen viittaavat rivit poistetaan. Lisätietoa tästä lähestymistavasta on kurssin _Tietokantojen perusteet_ [luvussa 6.1](https://tikape-ke20.mooc.fi/luku-6/1).
 
-Kuitenkin usein käytännössä parempi ratkaisu voi olla toteuttaa poistaminen niin, että tietokannasta ei todellisuudessa poisteta mitään, vaan rivi vain _merkitään_ poistetuksi. Tämä onnistuu lisäämällä tauluun sarake, joka ilmaisee rivin tilan:
+Kuitenkin usein käytännössä parempi ratkaisu voi olla toteuttaa poistaminen niin, että tietokannasta ei todellisuudessa poisteta mitään, vaan rivi vain _piilotetaan_. Tämä onnistuu lisäämällä tauluun sarake, joka ilmaisee rivin tilan:
 
 ```plaintext
 user=# SELECT * FROM polls;
- id |          topic           |         created_at         | status 
-----+--------------------------+----------------------------+--------
- 12 | Mikä meno?               | 2020-07-05 12:39:23.456712 |      1
- 13 | Kuuluuko ananas pizzaan? | 2020-07-05 12:39:54.02045  |      1
+ id |          topic           |         created_at         | visible 
+----+--------------------------+----------------------------+---------
+ 12 | Mikä meno?               | 2020-07-05 12:39:23.456712 |       1
+ 13 | Kuuluuko ananas pizzaan? | 2020-07-05 12:39:54.02045  |       1
 (2 rows)
 ```
 
-Tässä tapauksessa sarake `status` sisältää rivin tilan: tila 1 tarkoittaa, että rivi on näkyvä, ja tila 0 tarkoittaa, että rivi on poistettu. Kun sovellus hakee rivejä, se ottaa mukaan vain ne rivit, joiden tilana on 1. Tämän jälkeen rivi on helppoa merkitä poistetuksi `UPDATE`-komennolla, koska tilan vaihtaminen ei vaikuta viittauksiin:
+Tässä tapauksessa sarake `visible` ilmaisee, onko rivi näkyvissä. Oletuksena arvo on 1, mikä tarkoittaa, että rivi on näkyvissä. Sitten kun rivi halutaan poistaa, arvoksi muutetaan 0:
 
 ```plaintext
-user=# UPDATE polls SET status=0 WHERE id=13;
+user=# UPDATE polls SET visible=0 WHERE id=13;
 UPDATE 1
 ```
 
-Tämän lähestymistavan etuna on myös, että poiston _peruminen_ on helppoa. Jos sovelluksessa poistettiin vahingossa jotain, poiston voi aina perua muuttamalla rivin tilaksi 1.
+Tämän lisäksi sovellusta täytyy muuttaa niin, että se näyttää käyttäjälle tietoa vain riveistä, joissa sarakkeen `visible` arvo on 1.
+
+Tämän lähestymistavan etuna on, että `UPDATE`-komennolla tehtävä näkyvyyden muutos ei vaikuta viittauksiin, minkä ansiosta se onnistuu aina. Lisäksi koska tietokannasta ei poisteta tietoa, piilotettu rivi on helppoa palauttaa muuttamalla saraketta `visible`.
