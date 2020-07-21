@@ -6,6 +6,8 @@ Jotta voit kehittää sovellusta, sinun täytyy asentaa koneellesi PostgreSQL-ti
 
 Olemme tehneet kurssia varten [asennusskriptin](https://github.com/hy-tsoha/local-pg), joka asentaa PostgreSQL:n Linux-ympäristöön. Skripti asentaa tietokannan käyttäjän kotihakemistoon niin, että asennus ei vaadi pääkäyttäjän oikeuksia eikä tietokanta ole muiden käyttäjien käytettävissä. Skripti on tarkoitettu erityisesti käytettäväksi tietojenkäsittelytieteen osaston fuksiläppäreissä ja mikroluokissa.
 
+Jos sinulla on ongelmia asennusskriptin kanssa, voit katsoa [videon](https://www.helsinki.fi/fi/unitube/video/617d690b-b1ce-44f0-997a-dca01bf7eff0), joka näyttää asennuksen vaiheet sekä sen jälkeen esimerkin tietokannan käyttämisestä.
+
 Voit myös asentaa PostgreSQL:n pääkäyttäjänä käyttöjärjestelmäsi pakettienhallinnan kautta, käyttää Dockeria tai vastaavaa alustaa tai ladata asennuspaketin itse. Ohjeita asennukseen eri järjestelmiin on [PostgreSQL:n sivulla](https://www.postgresql.org/download/).
 
 Macilla helppo tapa saada PostgreSQL käyttöön on [Postgres.app](https://postgresapp.com/).
