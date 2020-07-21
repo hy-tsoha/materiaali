@@ -12,6 +12,7 @@ title: TODO
 
 * Kaikkien sivujen otsikko (title-tagi) on sama, otsikon pitäisi määräytyä sivun mukaan
 ✔️ Title asetetaan nyt otsikon perusteella.
+- Ikkunan otsikossa olisi ehkä kuitenkin hyvä näkyä mihin sivustoon sivu liittyy (eli siellä olisi hyvä aina näkyä tietokantasovellus, tsoha, tikaso tai jotain muuta tunnistettavaa). Nyt siellä näkyy materiaalia lukiessa vain esim "Osa 2" tai jotain muuta vastaavaa, tämän perusteella voi olla turhan vaikeaa tunnistaa mikä ikkuna/tab on oikea. Onko titleen mahdollista saada joku vakio-osa alkuun? Antti voinee kommentoida mikä olisi hyvä nimi (tai halutaanko sitä ylipäätään).
 
 * Onko tapaa määrittää sivujen järjestys sivupalkin yläosiossa? Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
 
