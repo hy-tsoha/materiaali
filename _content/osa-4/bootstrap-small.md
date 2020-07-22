@@ -20,6 +20,7 @@ Tehdään seuraavaksi pieni esimerkiksi jossa käytetään jonkin verran Bootstr
 - Lisäämme sivulle [navbar](https://getbootstrap.com/docs/4.5/components/navbar/)-komponentin helpottamaan sivustolla liikkumista. 
 - Lisätään myös hieman tekstiä [kahteen sarakkeeseen](https://uxplanet.org/how-the-bootstrap-4-grid-works-a1b04703a3b7), ja lopuksi lisätään vielä kaksi [nappia](https://getbootstrap.com/docs/4.5/components/buttons/). Huomaa että toinen lisätyistä napeista on itseasiassa lomakkeissa käytetty submit-nappi ja toinen on linkki.
 
+<p class="code-title">index.html</p>
 ```html
 <!doctype html>
 <meta charset="utf-8">
@@ -57,8 +58,10 @@ Tehdään seuraavaksi pieni esimerkiksi jossa käytetään jonkin verran Bootstr
 </div>
 ```
 
+
 Tämän lisäksi tarvitsemme tietysti tiedoston johon viittaamme (custom.css). Tässä esimerkkinä määritämme taustavärin, teemme nappien kulmista suoria ja määritämme container-elementin maksimileveyden hieman kapeammaksi.
 
+<p class="code-title">custom.css</p>
 ```css
 body {
   background-color: lightblue;
