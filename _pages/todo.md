@@ -10,6 +10,8 @@ title: TODO
 * Valikossa olevan linkin tulisi toimia koko väritetyltä alueelta eikä vain silloin kun hiiri on tekstin kohdalla (Antti yritti säätää jotain, meniköhän järkevästi?)
 ✔️ Näyttää hyvältä
 
+* Copypaste ei toimi koodilaatikon ensimmäisellä rivillä jos koodille on määritelty tiedostonimi. Tässä olisi toivottavaa että ainostaan tiedostonimi ei tule kopioituun tekstiin, mutta että koodin ensimmäinen rivi tulee.
+
 * Kaikkien sivujen otsikko (title-tagi) on sama, otsikon pitäisi määräytyä sivun mukaan
 ✔️ Title asetetaan nyt otsikon perusteella.
 - Ikkunan otsikossa olisi ehkä kuitenkin hyvä näkyä mihin sivustoon sivu liittyy (eli siellä olisi hyvä aina näkyä tietokantasovellus, tsoha, tikaso tai jotain muuta tunnistettavaa). Nyt siellä näkyy materiaalia lukiessa vain esim "Osa 2" tai jotain muuta vastaavaa, tämän perusteella voi olla turhan vaikeaa tunnistaa mikä ikkuna/tab on oikea. Onko titleen mahdollista saada joku vakio-osa alkuun? Antti voinee kommentoida mikä olisi hyvä nimi (tai halutaanko sitä ylipäätään).
