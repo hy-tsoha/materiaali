@@ -65,6 +65,8 @@ print(1+2 == 3) # True
 print(3 > 7) # False
 ```
 
+Arvo `None` tarkoittaa puuttuvaa tietoa.
+
 Pythonissa uusi muuttuja syntyy automaattisesti, kun muuttujalle annetaan arvo:
 
 ```python
@@ -248,6 +250,28 @@ print(person[2]) # Finland
 ```
 
 Tuple eroaa kuitenkin listasta siinä, että sen sisältöä ei voi muuttaa. Tuplea käytetään toisiinsa liittyvän tiedon kokoamiseen yhteen yllä olevan esimerkin kaltaisesti.
+
+## Tosi vs. epätosi
+
+Pythonissa mitä tahansa arvoa voidaan käyttää vertailussa totuusarvon tapaan. Epätosia arvoja ovat arvon `False` lisäksi erilaiset tyhjät ja olemattomat arvot, kuten `None`, `0`, `[]` (tyhjä lista), `{}` (tyhjä sanakirja) ja `()` (tyhjä tuple).
+
+Tätä ominaisuutta voi hyödyntää usein vertailuissa. Tarkastellaan esimerkkinä seuraavaa koodia:
+
+```python
+if len(words) > 0:
+    print("There are", len(words), "words")
+else:
+    print("There are no words")
+```
+
+Koska tyhjä lista vastaa arvoa `False` ja mikä tahansa muu lista vastaa arvoa `True`, voimme kirjoittaa ehdon lyhemmin näin:
+
+```python
+if words:
+    print("There are", len(words), "words")
+else:
+    print("There are no words")
+```
 
 ## Viittaus ja kopiointi
 
