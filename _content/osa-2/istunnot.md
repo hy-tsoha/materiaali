@@ -138,13 +138,13 @@ Tässä tapauksessa käyttäjästä tallennetaan käyttäjätunnus ja salasana. 
 Turvallinen tapa tallentaa salasana tietokantaan on tallentaa selkokielisen salasanan sijasta salasanan _hajautusarvo_ (_hash value_), jonka avulla voidaan tarkastaa, onko salasana oikea. Voimme käyttää tähän Flaskin mukana tulevaa Werkzeug-kirjastoa:
 
 ```python
-import werkzeug.security
+from werkzeug.security import check_password_hash, generate_password_hash
 ```
 
 Esimerkiksi seuraava koodi lisää tietokantaan uuden käyttäjän, jonka tunnus on `username` ja salasana on `password`. Koodi laskee salasanan hajautusarvon Werkzeug-kirjaston funktiolla `generate_password_hash`.
 
 ```python
-hash_value = werkzeug.security.generate_password_hash(password)
+hash_value = generate_password_hash(password)
 sql = "INSERT INTO users (username,password) VALUES (:username,:password)"
 db.session.execute(sql, {"username":username,"password":hash_value})
 db.session.commit()
@@ -160,7 +160,7 @@ if user == None:
     # TODO: invalid username
 else:
     hash_value = user[0]
-    if werkzeug.security.check_password_hash(hash_value,password):
+    if check_password_hash(hash_value,password):
         # TODO: correct username and password
     else:
         # TODO: invalid password

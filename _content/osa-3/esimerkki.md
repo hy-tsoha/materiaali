@@ -109,7 +109,7 @@ def login(username,password):
     if user == None:
         return False
     else:
-        if werkzeug.security.check_password_hash(user[0],password):
+        if check_password_hash(user[0],password):
             session["user_id"] = user[1]
             return True
         else:
@@ -158,7 +158,7 @@ def register():
 <p class="code-title">users.py</p>
 ```python
 def register(username,password):
-    hash_value = werkzeug.security.generate_password_hash(password)
+    hash_value = generate_password_hash(password)
     try:
         sql = "INSERT INTO users (username,password) VALUES (:username,:password)"
         db.session.execute(sql, {"username":username,"password":hash_value})
