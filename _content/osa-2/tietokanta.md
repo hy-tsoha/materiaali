@@ -215,3 +215,19 @@ app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL")
 ```
 
 Tästä lähtien oletamme, että ympäristömuuttuja `DATABASE_URL` kertoo tietokannan osoitteen. Tämä tieto voi olla ympäristöstä riippuen tiedostossa `.env` tai määritetty muulla tavalla.
+
+### SQLAlchemyn varoitus
+
+Kun sovelluksessa käytetään tietokantaa SQLAlchemyn kautta, sovelluksen käynnistäminen saattaa antaa seuraavan varoituksen:
+
+```plaintext
+FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+```
+
+Tässä projektissa tämä ei haittaa sinänsä, mutta jos haluat päästä varoituksesta eroon, voit lisätä koodiin seuraavan rivin:
+
+```python
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+```
+
+Lisää tietoa varoituksen syystä löydät [Stack Overflow'n keskustelusta](https://stackoverflow.com/questions/33738467/how-do-i-know-if-i-can-disable-sqlalchemy-track-modifications).
