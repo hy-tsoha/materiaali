@@ -67,11 +67,17 @@ p:not(.code-title) + .highlighter-rouge{
 }
 
 .code-title {
+    float: right;
     position: relative;
-    text-align: right;
     top: 3.5em;
     right: 1em;
-    margin-top: -3.5em;
+    margin-top: -2.5em;
     margin-bottom: 0;
     user-select: none;
+}
+
+@media screen and (max-width: 500px) {
+    .code-title{
+        display: none;
+    }
 }

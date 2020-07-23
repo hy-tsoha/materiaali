@@ -11,6 +11,7 @@ title: TODO
 ✔️ Näyttää hyvältä
 
 * Copypaste ei toimi koodilaatikon ensimmäisellä rivillä jos koodille on määritelty tiedostonimi. Tässä olisi toivottavaa että ainostaan tiedostonimi ei tule kopioituun tekstiin, mutta että koodin ensimmäinen rivi tulee.
+✔️
 
 * Kaikkien sivujen otsikko (title-tagi) on sama, otsikon pitäisi määräytyä sivun mukaan
 ✔️ Title asetetaan nyt otsikon perusteella.
