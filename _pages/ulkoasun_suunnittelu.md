@@ -16,11 +16,7 @@ Jotta sivun voi muotoilla sopivasti, täytyy ensin miettiä sivun rakennetta.
 
 Tehdään yksinkertainen verkkosivu, jossa on neljä komponenttia. Navigaatio eli valikko on `<nav>`-elementin sisällä, sivun otsikko on `<h1>`-elementin sisällä, kirautumislomake `<form>`-elementissä ja sivun sisältö on kirjoitettu otsikon alle `<div>`-elementin sisälle. Huomion arvoinen on myös dokumentin alusta löytyvä `<meta name='viewport' content='width=device-width, initial-scale=1'>` rivi, joka tekee sivusta responsiivisen erikokoisille näytöille. Tällöin sivun sisältö skaalauttuu käyttäjän näytön koon perusteella. 
 
-_Mitä nav-elementti tekee?_ 💭 Elementti ei tee mitään itsessään. Se on konventio merkitä navigaatiota. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
-
-_Mitä tarkoittaa responsiivisuus?_ 💭 Lisätty  tekstiin responsiivisuudesta
-
-_Mitä tuo meta-tagi tekee siis? Miten se vaikuttaa sivun näkymiseen? Voisiko sen esitellä myöhemmin niin, että ensin näkee miten sivu toimii ilman sitä huonosti ja sen lisäämisen jälkeen toimii hyvin?_ 💭 Meta tägi siis vaikuttaa sivun näkymiseen mobiililaitteessa. En näe syytä miksi se pitäisi esitellä myöhimmin, sillä todennäköisesti lukijalla ei ole tarvetta testata sivua mobiililaitteella, jolloin hän ei huomaa sivun huonosti toimivuutta. Tämä on enemmän rivi, jonka olen tottunut laittamaan sivulle, jotta se toimii varmasti myös mobiilissa.
+_Mitä tuo meta-tagi tekee siis? Miten se vaikuttaa sivun näkymiseen? Voisiko sen esitellä myöhemmin niin, että ensin näkee miten sivu toimii ilman sitä huonosti ja sen lisäämisen jälkeen toimii hyvin?_ 💭 Meta tägi siis vaikuttaa sivun näkymiseen mobiililaitteessa. En näe syytä miksi se pitäisi esitellä myöhimmin, sillä todennäköisesti lukijalla ei ole tarvetta testata sivua mobiililaitteella, jolloin hän ei huomaa sivun huonosti toimivuutta. Tämä on enemmän rivi, jonka olen tottunut laittamaan sivulle, jotta se toimii varmasti myös mobiilissa. 👽 Se sopii tähän, kun siitä mainitaan. Olisi kuitenkin parempi olla lainausmerkit sen attribuuteissa kuten muissakin tageissa.
 
 ```html
 <!DOCTYPE html>
@@ -48,9 +44,9 @@ _Mitä tuo meta-tagi tekee siis? Miten se vaikuttaa sivun näkymiseen? Voisiko s
 </body>
 ```
 
-_Googlen tyyliohje (https://google.github.io/styleguide/htmlcssguide.html) suosittelee, että turhat tagit (kuten html ja head) jätetään pois ja sisennyksen leveys on 2 merkkiä._ 💭 Kiitos hyödyllisesta linkistä, en tiennytkään että tällainen on olemassa.
+_Googlen tyyliohje (https://google.github.io/styleguide/htmlcssguide.html) suosittelee, että turhat tagit (kuten html ja head) jätetään pois ja sisennyksen leveys on 2 merkkiä._ 💭 Kiitos hyödyllisesta linkistä, en tiennytkään että tällainen on olemassa. 👽 Myös body-tagit voi poistaa ja li-lopputagit?
 
-_Miksi linkit tehdään listan avulla (voisi luulla että listan on allekkain)? Miksi ol eikä ul?_ 💭 Tässä ei ole väliä kumpaa käyttää. Itse käytän ol-listaa sillä valikon linkit ovat järjestyksessa, joten ordered list (ol) tuntuu luonnollisemmalta valinnalta kuin unordered list (ul)
+_Miksi linkit tehdään listan avulla (voisi luulla että listan on allekkain)? Miksi ol eikä ul?_ 💭 Tässä ei ole väliä kumpaa käyttää. Itse käytän ol-listaa sillä valikon linkit ovat järjestyksessa, joten ordered list (ol) tuntuu luonnollisemmalta valinnalta kuin unordered list (ul) 👽 Hmm, toisaalta myös ul-listan kohdilla on tietty sivun tekijän määrittämä järjestys, erona vain on että ei näy numerointia.
 
 Kun miettii miten nämä neljä komponenttia halutaan esittää sivulla on otettava huomioon, miten käyttäjä käyttää sivua. Mitä käyttäjä näkee kun hän avaa sivun ensimmäisen kerran? Onko valikko helppo löytää? Tunnistaako käyttäjä millä sivulla on? 
 
@@ -73,7 +69,7 @@ nav {
 }
 ```
 
-_Mitä margin tekee tässä? (ok tulee myöhemmin, voisi kuitenkin lyhyesti mainita mikä on margin ja mikä on padding, vai tulisiko tämä HTML-oppaaseen?)_ 💭 Paddingista ja mariginsta on jo lapiossa, niin en kertonut tässä siitä. Sen voisi lisätä oppaaseen tai sitten linkata lapion sivulle.
+_Mitä margin tekee tässä? (ok tulee myöhemmin, voisi kuitenkin lyhyesti mainita mikä on margin ja mikä on padding, vai tulisiko tämä HTML-oppaaseen?)_ 💭 Paddingista ja mariginsta on jo lapiossa, niin en kertonut tässä siitä. Sen voisi lisätä oppaaseen tai sitten linkata lapion sivulle. 👽 Tämä tosiaan sopii paremmin oppaaseen (ja siellä on jo jotain mutta pitää täydentää).
 
 Järjestetään vielä valikon linkit riviin käyttämällä `display: inline-block` määrettä. `padding`-attribuutille annettaan kaksi parametria, joista ensimmäinen kertoo pystysuoran tilan ja toinen kertoo vaakasuoran tilan elementin sisällä. Parametrien määrällä kerrotaan, mihin tilaa lisätään. Esimerkiksi edellisessä `nav`-elementin muotoilussa yksi parametri `margin`-attribuutille kertoi, että muotoilu lisättiin jokaiseen reunaan.
 
@@ -84,8 +80,6 @@ nav li{
     padding: 0 .5em;
 }
 ```
-
-_Tässä siis inline-block muuttaa merkittävästi listan näyttämistapaa?_ 💭 Lisätty tekstiin, että määreellä asetetaan valikon linkin riviin
 
 Muotoilun jälkeen voidaan havaita katsomalla sivua selaimessa, että navigaation alle piirretty viiva ei mene sivun päästä päähän, vaan reunoihin jää pieni rako. Avaamalla selaimen konsoli painamalla `F12` näppäintä ja tutkimalla `Inspector`-välilehdessä sivun rakennetta kohdasta `Box Model`, nähdään että `body`-elementille tulee automaattisesti marginaalia jokaiseen reunaan 8 pikseliä.
 
@@ -108,11 +102,9 @@ Käyttäjän huomio halutaan kiinnittää sivun otsikkoon, jotta käyttäjä tun
 </div>
 ```
 
-_Miksi ei voi muotoilla suoraan h1-elementtiä? Miksi luokka vaikka on vain yksi otsikko?_ 💭 Konventiona layouteissa on eriyttää kuvaavat kokonaisuudet omiksi luokikseen. ID:tä käytetään yleensä vain jos on jotain todella erityista. Headeriin voi laittaa myös muutakin kuin vain värin. Siihen voisi laittaa myös kuvan taustalle tai lisää tekstiä esimerkiksi h2-tason otsikkoon tai ihan vain tekstielementiin. Ei kannata muotoilla suoraa h1-elementtiä, sillä h1-tason otsikkoa voidaan käyttää myös tekstin seassa, jos sisällön tuottaja tai seuraava devaaja ole tietoinen, että h1 tason otsikko on vain header otiskko, jolloin layout, menee rikki.
+_Miksi ei voi muotoilla suoraan h1-elementtiä? Miksi luokka vaikka on vain yksi otsikko?_ 💭 Konventiona layouteissa on eriyttää kuvaavat kokonaisuudet omiksi luokikseen. ID:tä käytetään yleensä vain jos on jotain todella erityista. Headeriin voi laittaa myös muutakin kuin vain värin. Siihen voisi laittaa myös kuvan taustalle tai lisää tekstiä esimerkiksi h2-tason otsikkoon tai ihan vain tekstielementiin. Ei kannata muotoilla suoraa h1-elementtiä, sillä h1-tason otsikkoa voidaan käyttää myös tekstin seassa, jos sisällön tuottaja tai seuraava devaaja ole tietoinen, että h1 tason otsikko on vain header otiskko, jolloin layout, menee rikki. 👽 OK, hyviä perusteluja. Mikä on jotain todella erityistä?
 
 Kiinnitetään käyttäjän huomio otsikkoon laittamalla sille värikäs taustaväri, kasvattamalla sille varattua aluetta ja määrittelemällä otsikon fontti suuremmaksi.
-
-_Näkyväksi?_ 💭 Muutettu selkeämmäksi.
 
 ```css
 .header {
@@ -147,7 +139,7 @@ Muotoillaan `div`-elementti siten, että se on keskellä sivua.
 }
 ```
 
-_Miksi nyt on rem, kun äsken oli em? Mitä margin:auto tekee? Sisältö menee maagisesti keskelle sen seurauksena?_ 💭 em ja rem on suhteellisia kokoja, jotka määräytyy sivun fontin koon perusteella. rem ottaa kokonsa juuri elementtinsä fonttikoosta ja em ottaa kokonsa parent elementtinsä koosta. Tässä tapauksessa ei ole väliä kumpaa käyttää. margin: auto tekee juuri tämän. Se keskittää elementin.
+_Miksi nyt on rem, kun äsken oli em? Mitä margin:auto tekee? Sisältö menee maagisesti keskelle sen seurauksena?_ 💭 em ja rem on suhteellisia kokoja, jotka määräytyy sivun fontin koon perusteella. rem ottaa kokonsa juuri elementtinsä fonttikoosta ja em ottaa kokonsa parent elementtinsä koosta. Tässä tapauksessa ei ole väliä kumpaa käyttää. margin: auto tekee juuri tämän. Se keskittää elementin. 👽 Jos ei ole väliä kumpaa käyttää, niin olisiko hyvä käyttää yhdenmukaisesti em kaikkialla?
 
 Nyt sivusto näyttää suurin piirtein siltä, mitä suunniteltiinkin. Teksti on kuitenkin epämiellyttävän lähellä otsikkoa, joten annetaan sille luokka `content` ja muotoillaan se kauemmas otsikosta.
 
@@ -162,8 +154,6 @@ Nyt sivusto näyttää suurin piirtein siltä, mitä suunniteltiinkin. Teksti on
             </div>
 ...
 ```
-
-_Myös tässä: miksi tehdään luokka kun kyse on yksittäisen elementin muotoilusta?_ 💭 Sama vastaus kun edellä, layoutissa paketoidaan loogiset kokonaisuudet luokkiin. Content-luokassa vielä korostuu se, että niitä voi olla tarve laittaa sivulle useita.
 
 Asetetaan sisällölle tilaa ylhäälle.
 
@@ -185,11 +175,9 @@ html {
 }
 ```
 
-_Miksi html-elementissä? Pitäisikö olla body-elementissä? Miksi background-color eikä background?_ 💭 vaihdettu background:ksi. html on aina koko sivu, joten sen voi ajatella koko sivun taustaväriksi
+_Miksi html-elementissä? Pitäisikö olla body-elementissä? Miksi background-color eikä background?_ 💭 vaihdettu background:ksi. html on aina koko sivu, joten sen voi ajatella koko sivun taustaväriksi 👽 Googlailun perusteella body on suositellumpi paikka laittaa yleisiä tyylejä (esim. https://css-tricks.com/html-vs-body-in-css/), jotenkin voi ajatella että html:ssä on muutakin kuin se sivun piirrettävä osa (kuten title-tagi).
 
 Taustaväri tulee myös sisällölle ja valikolle, joten vaihdetaan niiden taustaväri valkoiseksi lisäämällä `nav` ja `.content` kentille attribuutit `background: white;`.
-
-_Mistä tämä 226 taiottiin? Eikö valkoinen ole 255?_ 💭 vaihdettu valkoiseksi
 
 Tämä aiheuttaa sen, että valikon yläreunaan jää harmaa viiva. Tutkimalla valikkoa selaimen konsolilla nähdään, että `ol`-tägi on aiheuttanut automaattista marginaalia sivun yläreunaan. Asetetaan valikon `ol` elementin marginaaliksi 0, mutta lisätään siihen paddingia sisäpuolelle, jotta valikko ei kapene liikaa.
 
@@ -235,8 +223,6 @@ Nyt näyttää oudolta, että vain sisällön reunat on pyöristetyjä, joten py
 }
 ```
 
-_Mistä sandybrown keksittiin?_ 💭 Header väri asetettiin jo ensimmäisessä osassa. Se on väri joka näytti hyvältä ja kiinnittää huomion.
-
 Otsikko ja sisältö ovat liian lähellä toisiaan, joten lisätään marginaalia sisällölle.
 
 ```css
@@ -249,8 +235,6 @@ Otsikko ja sisältö ovat liian lähellä toisiaan, joten lisätään marginaali
 ```
 
 Valikko ei sovi enää ollenkaan sivun tyyliin, joten muokataan sitä. Visioidaan, että navigaatioonkin halutaan lisätä pehmeyttä. Aloitetaan poistamalla valikon laatikkomaisuutta ottamalla alaviiva ja taustaväri pois.
-
-_Miten tässä poistuu laatikkomaisuus?_ 💭 tekstiä muokattu
 
 ```css
 nav {
@@ -283,8 +267,6 @@ nav li a {
 
 Lisätään ominaisuus valikon linkin taustaväri tummenee, kun hiiri viedään päälle, niin käyttäjälle tulee vaikutelma painikkeesta.
 
-_Mikä on valikon objekti?_ 💭 muutettu tekstiä
-
 ```css
 nav li:hover {
     background-color: rgb(226, 226, 226);
@@ -312,10 +294,8 @@ nav ol {
 
 Sivulla on nyt tunnistettava ulkoasu. Sivun lopullinen ilme näyttää [tältä](https://millakortelainen.github.io/tsoha-app/) ja sen koodi on nähtävissä [github repossa](https://github.com/millakortelainen/tsoha-app).
 
-_Valikko ei ole nyt ihan keskellä, siellä on jotain outoa marginaalia (?) vasemmalla. Tsoha App -alue tuntuu selkeästi liian korkealta näytölläni._ 💭 Marginaali on otettu pois. Header alue, josta puhut on tarkoituksella korkea, jotta se kiinnittää huomion. Tällainen tyyliseikka on suunnittelijan ratkaisu tehdä sivusta näyttävämpi.
-
 Lopulliseen ulkoasuun päädyttiin, kun haluttiin tuoda pehmeyttä sivulle. Keksittiin siis juoni, jota haluttiin lähteä toteuttamaan. Keskittymällä johonkin toiseen ominaisuuteen tai vaihtamalla komponenttien sijoittelua olisi ulkoasu voinut päätyä erilaiseksi.
 
-_Ehkä tuolla sivulla voisi olla vielä yksinkertainen lomake (sisäänkirjautuminen)? Tulisi houkuttelevan ja aidon näköinen esimerkki, kun on palvelu odottamassa kirjautujaa._ 💭 Lisätty kirjautumislomake
+_Ehkä tuolla sivulla voisi olla vielä yksinkertainen lomake (sisäänkirjautuminen)? Tulisi houkuttelevan ja aidon näköinen esimerkki, kun on palvelu odottamassa kirjautujaa._ 💭 Lisätty kirjautumislomake 👽 Hyvä idea nuo label-elementit, pitäisi ehkä mainita muuallakin materiaalissa.
 
 Tällä sivulla ei ollut tarvetta taulukolle, lomakkeelle tai kuvalle, mutta niiden lisääminen sivulle aiheuttaa lisää tarvetta ulkoasun suunnittelulle ja muokkaamiselle. Kun tarve muiden komponenttien suunnitelulle ilmenee apuna on [Mozillan dokumentaatio CSS:stä](https://developer.mozilla.org/fi/docs/Web/CSS). On myös kätevää hakea suoraan Googlesta tiettyä elementtiä tai CSS-ominaisuutta ja lisätä haun loppuun kirjaimet `mdn`, jolloin hakutuloksista löytyy Mozillan dokumentaatio.
