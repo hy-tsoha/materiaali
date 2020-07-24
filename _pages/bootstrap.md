@@ -63,8 +63,8 @@ Lisätään seuraavaksi sivulle valikko Bootstrapin [nav-komponentin](https://ge
   <nav class="navbar navbar-expand-sm">
     <a class="navbar-brand" href="#">Tsoha App</a>
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Page 1</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Page 1</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Page 2</a>
@@ -108,8 +108,8 @@ Lisätään sivulle vielä kirjautumislomake [form-komponentin](https://getboots
   <nav class="navbar navbar-expand-sm">
     <a class="navbar-brand" href="#">Tsoha App</a>
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Page 1</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Page 1</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Page 2</a>
