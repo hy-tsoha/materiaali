@@ -52,7 +52,7 @@ Tuloksena oleva sivu näyttää seuraavalta:
 
 ## Vaihe 2: valikon lisääminen
 
-Lisätään seuraavaksi sivulle valikko Bootstrapin [navbar-komponentin](https://getbootstrap.com/docs/4.0/components/navbar/) avulla. Valikko tulee omalle rivilleen ennen sivun muuta sisältöä. Valikossa on ensin linkki sovelluksen etusivulle ja sitten kolme muuta linkkiä.
+Lisätään seuraavaksi sivulle valikko Bootstrapin [navbar-komponentin](https://getbootstrap.com/docs/4.5/components/navbar/) avulla. Valikko tulee omalle rivilleen ennen sivun muuta sisältöä. Valikossa on ensin linkki sovelluksen etusivulle ja sitten kolme muuta linkkiä.
 
 ```html
 <!doctype html>
