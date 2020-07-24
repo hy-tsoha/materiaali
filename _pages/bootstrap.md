@@ -60,17 +60,19 @@ Lisätään seuraavaksi sivulle valikko Bootstrapin [nav-komponentin](https://ge
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <title>Tsoha App</title>
 <div class="container">
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Page 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Page 2</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Page 3</a>
-    </li>
-  </ul>
+  <nav class="navbar navbar-expand-sm">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Page 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Page 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Page 3</a>
+      </li>
+    </ul>
+  </nav>
   <div class="row">
     <div class="col-8">
       <h1>Welcome!</h1>
@@ -102,17 +104,19 @@ Lisätään sivulle vielä kirjautumislomake [form-komponentin](https://getboots
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <title>Tsoha App</title>
 <div class="container">
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Page 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Page 2</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Page 3</a>
-    </li>
-  </ul>
+  <nav class="navbar navbar-expand-sm">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Page 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Page 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Page 3</a>
+      </li>
+    </ul>
+  </nav>
   <div class="row">
     <div class="col-8">
       <h1>Welcome!</h1>
