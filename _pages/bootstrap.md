@@ -153,6 +153,6 @@ Lopullinen sivu näyttää tältä:
 
 ## Lopuksi
 
-Jos Bootstrapia käyttää sellaisenaan, sovelluksesta tulee helposti saman näköinen muiden Bootstrapia käyttävien sovellusten kanssa, mistä voi tulla käyttäjälle epäammattimainen vaikutelma. Kuitenkin ulkoasua voi koettaa muokata omantyyliseksi CSS:n avulla, vaikka taustalla onkin käytössä Bootstrap.
+Jos Bootstrapia käyttää sellaisenaan, sovelluksesta tulee helposti saman näköinen muiden Bootstrapia käyttävien sovellusten kanssa, mistä voi tulla käyttäjälle epäammattimainen vaikutelma. Kuitenkin ulkoasua voi koettaa [muokata omantyyliseksi CSS:n avulla](https://uxplanet.org/how-to-customize-bootstrap-b8078a011203), vaikka taustalla onkin käytössä Bootstrap.
 
 Huomaa, että jotkin Bootstrapin komponentit käyttävät JavaScriptiä. Yllä olevassa esimerkissä ei tarvita JavaScriptiä, mutta lisätietoa asiasta löytyy Bootstrapin dokumentaatiosta.
