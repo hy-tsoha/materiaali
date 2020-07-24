@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Tietokanta&shy;sovellus
+title: Tieto&shy;kanta&shy;sovellus
 description: ""
 baseurl: "/materiaali" # the subpath of your site, e.g. /blog
 url: "https://hy-tsoha.github.io/materiaali/" # the base hostname & protocol for your site, e.g. http://example.com

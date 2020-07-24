@@ -8,9 +8,6 @@ title: TODO
 ## Sekalaista:
 
 * Jos koodilaatikkoja on useita peräkkäin ja niihin on asetettu tiedoston nimi, jälkimmäisessä tiedoston nimi näkyy oudossa paikassa.
-* Kaikkien sivujen otsikko (title-tagi) on sama, otsikon pitäisi määräytyä sivun mukaan
-✔️ Title asetetaan nyt otsikon perusteella.
-  - Ikkunan otsikossa olisi ehkä kuitenkin hyvä näkyä mihin sivustoon sivu liittyy (eli siellä olisi hyvä aina näkyä tietokantasovellus, tsoha, tikaso tai jotain muuta tunnistettavaa). Nyt siellä näkyy materiaalia lukiessa vain esim "Osa 2" tai jotain muuta vastaavaa, tämän perusteella voi olla turhan vaikeaa tunnistaa mikä ikkuna/tab on oikea. Onko titleen mahdollista saada joku vakio-osa alkuun? Antti voinee kommentoida mikä olisi hyvä nimi (tai halutaanko sitä ylipäätään). (Antti miettii ja koettaa hoitaa tämän)
 * Onko tapaa määrittää sivujen järjestys sivupalkin yläosiossa? Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
 * Sivusto ei toimi vielä kovin hyvin mobiililaitteella (valikon kanssa ongelmia ja miten kuvien leveys pitäisi merkitä?)
 ✔️ Valikko toimii paremmin mobiilissa. Kuvien leveys on asetettu pieneksi mobiilissa. Se on asetettu `_content.scss` tiedostossa ja sielä on määritelty, kun näytön leveys on alle 500px niin käytetään pienempiä kuvia
