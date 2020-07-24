@@ -7,18 +7,11 @@ title: TODO
 
 ## Sekalaista:
 
-* Valikossa olevan linkin tulisi toimia koko väritetyltä alueelta eikä vain silloin kun hiiri on tekstin kohdalla (Antti yritti säätää jotain, meniköhän järkevästi?)
-✔️ Näyttää hyvältä
-
-* Copypaste ei toimi koodilaatikon ensimmäisellä rivillä jos koodille on määritelty tiedostonimi. Tässä olisi toivottavaa että ainostaan tiedostonimi ei tule kopioituun tekstiin, mutta että koodin ensimmäinen rivi tulee.
-✔️
-
+* Jos koodilaatikkoja on useita peräkkäin ja niihin on asetettu tiedoston nimi, jälkimmäisessä tiedoston nimi näkyy oudossa paikassa.
 * Kaikkien sivujen otsikko (title-tagi) on sama, otsikon pitäisi määräytyä sivun mukaan
 ✔️ Title asetetaan nyt otsikon perusteella.
-- Ikkunan otsikossa olisi ehkä kuitenkin hyvä näkyä mihin sivustoon sivu liittyy (eli siellä olisi hyvä aina näkyä tietokantasovellus, tsoha, tikaso tai jotain muuta tunnistettavaa). Nyt siellä näkyy materiaalia lukiessa vain esim "Osa 2" tai jotain muuta vastaavaa, tämän perusteella voi olla turhan vaikeaa tunnistaa mikä ikkuna/tab on oikea. Onko titleen mahdollista saada joku vakio-osa alkuun? Antti voinee kommentoida mikä olisi hyvä nimi (tai halutaanko sitä ylipäätään).
-
+  - Ikkunan otsikossa olisi ehkä kuitenkin hyvä näkyä mihin sivustoon sivu liittyy (eli siellä olisi hyvä aina näkyä tietokantasovellus, tsoha, tikaso tai jotain muuta tunnistettavaa). Nyt siellä näkyy materiaalia lukiessa vain esim "Osa 2" tai jotain muuta vastaavaa, tämän perusteella voi olla turhan vaikeaa tunnistaa mikä ikkuna/tab on oikea. Onko titleen mahdollista saada joku vakio-osa alkuun? Antti voinee kommentoida mikä olisi hyvä nimi (tai halutaanko sitä ylipäätään). (Antti miettii ja koettaa hoitaa tämän)
 * Onko tapaa määrittää sivujen järjestys sivupalkin yläosiossa? Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
-
 * Sivusto ei toimi vielä kovin hyvin mobiililaitteella (valikon kanssa ongelmia ja miten kuvien leveys pitäisi merkitä?)
 ✔️ Valikko toimii paremmin mobiilissa. Kuvien leveys on asetettu pieneksi mobiilissa. Se on asetettu `_content.scss` tiedostossa ja sielä on määritelty, kun näytön leveys on alle 500px niin käytetään pienempiä kuvia
 ```css
@@ -34,6 +27,12 @@ title: TODO
 ```
 
 Ulkoasun suunnitelua käsitteleva osa on [täällä](ulkoasun_suunnittelu.html)
+
+## Materiaaliin liittyvää
+
+* Koodiesimerkkien tyyliin tulisi kiinnittää huomiota: miten toteuttaa asioita tyylikkäästi Pythonilla? Esim. vertailut kun on `None` tai jotain tyhjää. Mitä Pythonin tyyliohjetta seurataan ja miten tarkasti?
+
+* Esimerkeissä haetaan nyt tietoa tietokannasta tupleina mutta voisi käyttää myös pistenotaatiota ja se olisi parempi suunta.
 
 ## Taulukoista 
 

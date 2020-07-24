@@ -46,7 +46,7 @@ _Mitä tuo meta-tagi tekee siis? Miten se vaikuttaa sivun näkymiseen? Voisiko s
 
 _Googlen tyyliohje (https://google.github.io/styleguide/htmlcssguide.html) suosittelee, että turhat tagit (kuten html ja head) jätetään pois ja sisennyksen leveys on 2 merkkiä._ 💭 Kiitos hyödyllisesta linkistä, en tiennytkään että tällainen on olemassa. 👽 Myös body-tagit voi poistaa ja li-lopputagit?
 
-_Miksi linkit tehdään listan avulla (voisi luulla että listan on allekkain)? Miksi ol eikä ul?_ 💭 Tässä ei ole väliä kumpaa käyttää. Itse käytän ol-listaa sillä valikon linkit ovat järjestyksessa, joten ordered list (ol) tuntuu luonnollisemmalta valinnalta kuin unordered list (ul) 👽 Hmm, toisaalta myös ul-listan kohdilla on tietty sivun tekijän määrittämä järjestys, erona vain on että ei näy numerointia.
+_Miksi linkit tehdään listan avulla (voisi luulla että listan on allekkain)? Miksi ol eikä ul?_ 💭 Tässä ei ole väliä kumpaa käyttää. Itse käytän ol-listaa sillä valikon linkit ovat järjestyksessa, joten ordered list (ol) tuntuu luonnollisemmalta valinnalta kuin unordered list (ul) 👽 Hmm, toisaalta myös ul-listan kohdilla on tietty sivun tekijän määrittämä järjestys, erona vain on että ei näy numerointia. Lisäys: Googlailun perusteella ul on parempi tapa, myös saavutettavuuden kannalta.
 
 Kun miettii miten nämä neljä komponenttia halutaan esittää sivulla on otettava huomioon, miten käyttäjä käyttää sivua. Mitä käyttäjä näkee kun hän avaa sivun ensimmäisen kerran? Onko valikko helppo löytää? Tunnistaako käyttäjä millä sivulla on? 
 
