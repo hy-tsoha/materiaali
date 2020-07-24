@@ -22,6 +22,7 @@ title: TODO
     }
 }
 ```
+Nyt toimii mobiilissa, voisi vielä harkita että taustakuvaa ei näytetä mobiilissa (ei näy kovin hyvin ja voi kestää aikaa ladata se).
 
 Ulkoasun suunnitelua käsitteleva osa on [täällä](ulkoasun_suunnittelu.html)
 
