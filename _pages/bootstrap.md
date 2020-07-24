@@ -52,7 +52,7 @@ Tuloksena oleva sivu näyttää seuraavalta:
 
 ## Vaihe 2: valikon lisääminen
 
-Lisätään seuraavaksi sivulle valikko Bootstrapin [nav-komponentin](https://getbootstrap.com/docs/4.5/components/navs/) avulla. Valikko tulee omalle rivilleen ennen sivun muuta sisältöä. Valikossa on kolme linkkiä, joista ensimmäinen on merkitty aktiiviseksi, jolloin sen tyyli on vähän erilainen.
+Lisätään seuraavaksi sivulle valikko Bootstrapin [navbar-komponentin](https://getbootstrap.com/docs/4.0/components/navbar/) avulla. Valikko tulee omalle rivilleen ennen sivun muuta sisältöä. Valikossa on ensin linkki sovelluksen etusivulle ja sitten kolme muuta linkkiä.
 
 ```html
 <!doctype html>
@@ -63,8 +63,8 @@ Lisätään seuraavaksi sivulle valikko Bootstrapin [nav-komponentin](https://ge
   <nav class="navbar navbar-expand-sm navbar-light">
     <a class="navbar-brand" href="#">Tsoha App</a>
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Page 1 <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Page 1</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Page 2</a>
@@ -108,8 +108,8 @@ Lisätään sivulle vielä kirjautumislomake [form-komponentin](https://getboots
   <nav class="navbar navbar-expand-sm navbar-light">
     <a class="navbar-brand" href="#">Tsoha App</a>
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Page 1 <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Page 1</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Page 2</a>
