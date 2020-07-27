@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    margin:0;
+    margin: 0;
 }
 
 .highlight .syntax {
@@ -26,6 +26,7 @@ body {
     margin: 2em 0;
     overflow-x: auto;
 }
+
 
 .language-bash {
     background-color: #2E3436;
@@ -66,10 +67,20 @@ p:not(.code-title) + .highlighter-rouge{
     margin-top: -1em;
 }
 
-.code-title {
+p + .code-title{
     float: right;
     position: relative;
     top: 3.5em;
+    right: 1em;
+    margin-top: -2.5em;
+    margin-bottom: 0;
+    user-select: none;
+}
+
+.code-title {
+    float: right;
+    position: relative;
+    top: 2.5em;
     right: 1em;
     margin-top: -2.5em;
     margin-bottom: 0;
