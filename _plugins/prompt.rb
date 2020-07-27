@@ -14,6 +14,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r/^\$\s+/, Punctuation
       rule %r/^\(venv\)\s+\$\s+/, Punctuation
       rule %r/^>>>\s+/, Punctuation
+      rule %r/^sqlite>\s+/, Punctuation
       rule %r/^[a-z]+=#\s+/, Punctuation
       rule %r/.+/, Text
       rule %r/\n/, Text
