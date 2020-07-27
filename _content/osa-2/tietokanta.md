@@ -16,7 +16,7 @@ Macilla helppo tapa saada PostgreSQL käyttöön on [Postgres.app](https://postg
 
 Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun `messages`, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
 
-```plaintext
+```prompt
 $ psql
 user=# CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT);
 CREATE TABLE
@@ -41,7 +41,7 @@ PostgreSQL:ssä tyyppi `SERIAL` tarkoittaa taulun avaimena käytettävää kokon
 
 Hyödyllisiä PostgreSQL-tulkin komentoja ovat `\dt`, joka näyttää listan tauluista, sekä `\d [taulu]`, joka näyttää taulun sarakkeet ja muuta tietoa siitä.
 
-```plaintext
+```prompt
 user=# \dt
          List of relations
  Schema |   Name   | Type  | Owner 
@@ -61,7 +61,7 @@ Indexes:
 
 Komento `\q` poistuu PostgreSQL-tulkista:
 
-```plaintext
+```prompt
 user=# \q
 $ 
 ```
@@ -70,7 +70,7 @@ $
 
 Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjastoa lisää:
 
-```plaintext
+```prompt
 (venv) $ pip install flask-sqlalchemy
 (venv) $ pip install psycopg2
 ```
@@ -187,14 +187,14 @@ Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen 
 
 Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa `export` seuraavasti ennen sovelluksen käynnistämistä:
 
-```plaintext
+```prompt
 (venv) $ export DATABASE_URL=postgresql:///user
 (venv) $ flask run
 ```
 
 Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
 
-```plaintext
+```prompt
 (venv) $ pip install python-dotenv
 ```
 
@@ -220,7 +220,7 @@ Tästä lähtien oletamme, että ympäristömuuttuja `DATABASE_URL` kertoo tieto
 
 Kun sovelluksessa käytetään tietokantaa SQLAlchemyn kautta, sovelluksen käynnistäminen saattaa antaa seuraavan varoituksen:
 
-```plaintext
+```prompt
 FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
 ```
 

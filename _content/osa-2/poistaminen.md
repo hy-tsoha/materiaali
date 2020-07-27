@@ -2,7 +2,7 @@
 
 Tiedon poistaminen tietokannasta ei ole välttämättä niin helppoa kuin voisi ajatella. Tarkastellaan esimerkkisovelluksen taulua `polls`, jossa on tiedot kyselyistä:
 
-```plaintext
+```prompt
 user=# SELECT * FROM polls;
  id |          topic           |         created_at         
 ----+--------------------------+----------------------------
@@ -13,7 +13,7 @@ user=# SELECT * FROM polls;
 
 Yritys poistaa rivi `DELETE`-komennolla epäonnistuu:
 
-```plaintext
+```prompt
 user=# DELETE FROM polls WHERE id=13;
 ERROR:  update or delete on table "polls" violates foreign key constraint "choices_poll_id_fkey" on table "choices"
 DETAIL:  Key (id)=(13) is still referenced from table "choices".
@@ -25,7 +25,7 @@ Yksi ratkaisu asiaan olisi määritellä taulun luonnissa tarkemmin `ON DELETE` 
 
 Kuitenkin usein käytännössä parempi ratkaisu voi olla toteuttaa poistaminen niin, että tietokannasta ei todellisuudessa poisteta mitään, vaan rivi vain _piilotetaan_. Tämä onnistuu lisäämällä tauluun sarake, joka ilmaisee rivin tilan:
 
-```plaintext
+```prompt
 user=# SELECT * FROM polls;
  id |          topic           |         created_at         | visible 
 ----+--------------------------+----------------------------+---------
@@ -36,7 +36,7 @@ user=# SELECT * FROM polls;
 
 Tässä tapauksessa sarake `visible` ilmaisee, onko rivi näkyvissä. Oletuksena arvo on 1, mikä tarkoittaa, että rivi on näkyvissä. Sitten kun rivi halutaan poistaa, arvoksi muutetaan 0:
 
-```plaintext
+```prompt
 user=# UPDATE polls SET visible=0 WHERE id=13;
 UPDATE 1
 ```

@@ -12,7 +12,7 @@ Herokussa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimell
 
 Komentorivityökalun käyttö alkaa kirjautumalla sisään:
 
-```plaintext
+```prompt
 $ heroku login
 heroku: Press any key to open up the browser to login or q to exit:
 ```
@@ -25,7 +25,7 @@ Komento `heroku help` (tai pelkkä `heroku`) näyttää listan komentorivityöka
 
 Seuraava komento luo uuden Heroku-sovelluksen nimellä `tsoha-visitors`:
 
-```plaintext
+```prompt
 $ heroku apps:create tsoha-visitors
 Creating ⬢ tsoha-visitors... done
 https://tsoha-visitors.herokuapp.com/ | https://git.heroku.com/tsoha-visitors.git
@@ -37,13 +37,13 @@ Sovellus julkaistaan Herokussa lähettämällä haluttu sovelluksen versio Herok
 
 Voimme kytkeä paikallisen repositorion Herokuun näin:
 
-```plaintext
+```prompt
 $ heroku git:remote -a tsoha-visitors
 ```
 
 Tämä komento määrittää, että tässä hakemistossa olevan sovelluksen repositorio kytketään Herokun sovelluksen `tsoha-visitors` repositorioon. Voimme tarkastella komennon vaikutusta seuraavasti:
 
-```plaintext
+```prompt
 $ git remote -v
 heroku	https://git.heroku.com/tsoha-visitors.git (fetch)
 heroku	https://git.heroku.com/tsoha-visitors.git (push)
@@ -53,7 +53,7 @@ origin	https://github.com/user/tsoha-visitors.git (push)
 
 Tästä näkee, että oletuskohde `origin` osoittaa edelleen GitHubiin, mutta uutena on kohde `heroku`, joka lähettää sovelluksen Herokuun. Lähetys tapahtuisi näin:
 
-```plaintext
+```prompt
 $ git push heroku master
 ```
 
@@ -63,13 +63,13 @@ Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteen
 
 Tähän asti olemme käynnistäneet sovelluksen komennolla `flask run`, mutta tätä tapaa ei suositella tuotantokäyttöön. Tämän vuoksi asennamme Herokua varten erillisen Gunicorn-palvelimen:
 
-```plaintext
+```prompt
 (venv) $ pip install gunicorn
 ```
 
 Tämän jälkeen tiedosto `requirements.txt` tulee saattaa ajan tasalle:
 
-```plaintext
+```prompt
 (venv) $ pip freeze > requirements.txt
 ```
 
@@ -83,7 +83,7 @@ Tämä kertoo Herokulle, että tyyppiä "web" oleva sovellus käynnistetään ko
 
 Tässä vaiheessa on hyvä laittaa muutokset talteen versionhallintaan:
 
-```plaintext
+```prompt
 $ git add requirements.txt
 $ git add Procfile
 $ git commit -m "Add Heroku config"
@@ -94,13 +94,13 @@ $ git push
 
 Seuraava komento luo Heroku-sovellukselle tietokannan:
 
-```plaintext
+```prompt
 $ heroku addons:create heroku-postgresql
 ```
 
 Tämän jälkeen voimme yhdistää tietokantaan näin ja luoda sinne taulun `visitors`:
 
-```plaintext
+```prompt
 $ heroku psql
 tsoha-visitors::DATABASE=> CREATE TABLE visitors (id SERIAL PRIMARY KEY, time TIMESTAMP);
 tsoha-visitors::DATABASE=> \q
@@ -108,13 +108,13 @@ tsoha-visitors::DATABASE=> \q
 
 Olisimme myös voineet luoda taulun näin ohjaamalla sinne tiedoston `schema.sql` komennot:
 
-```plaintext
+```prompt
 $ heroku psql < schema.sql
 ```
 
 Kun Herokuun luodaan tietokanta, samalla asetetaan ympäristömuuttuja `DATABASE_URL`, minkä ansiosta sovellus toimii suoraan myös Herokussa, jos se käyttää tätä ympäristömuuttujaa. Voimme tarkastaa sovelluksen ympäristömuuttujat näin:
 
-```plaintext
+```prompt
 $ heroku config
 === tsoha-visitors Config Vars
 DATABASE_URL: postgres://(tietokannan osoite näkyy tässä)
@@ -124,7 +124,7 @@ Huomaa, että tietämällä Herokun tietokannan osoitteen siihen pääsee yhdist
 
 Voimme myös asettaa ympäristömuuttujia tarvittaessa itse. Esimerkiksi seuraava komento asettaisi salaisen avaimen istuntoja varten:
 
-```plaintext
+```prompt
 $ heroku config:set SECRET_KEY=(avain tähän)
 ```
 
@@ -132,7 +132,7 @@ $ heroku config:set SECRET_KEY=(avain tähän)
 
 Nyt kaikki alkaa olla valmista ja voimme koettaa lähettää sovelluksen Herokuun:
 
-```plaintext
+```prompt
 $ git push heroku master
 remote: Compressing source files... done.
 remote: Building source:
@@ -148,7 +148,7 @@ remote:        ERROR: Invalid requirement: 'pkg-resources=0.0.0' (from line 8 of
 
 Jotain meni kuitenkin pieleen: tiedostossa `requirements.txt` oleva riippuvuus `pkg-resources` ei kelpaa Herokulle. Tämä on tunnettu ongelma, ja tässä tapauksessa toimiva korjaus on poistaa kyseinen rivi tiedostosta, päivittää muutos versionhallintaan ja yrittää uudestaan:
 
-```plaintext
+```prompt
 $ git push heroku master
 remote: Compressing source files... done.
 remote: Building source:
