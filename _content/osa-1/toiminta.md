@@ -20,7 +20,7 @@ Selaimissa on kehittäjän työkaluja, joiden avulla voi tarkastella selaimen ja
 
 Tässä selain lähetti palvelimelle HTTP-pyynnön, jonka osoite on `http://127.0.0.1:5000/` ja metodi on `GET`. Palvelin vastasi tähän koodilla 200, jonka merkitys on _OK_ eli pyyntö onnistui. Palvelin lähetti vastauksena 13 tavua tietoa eli tekstin "Heipparallaa!". Samaan aikaan sovellus tulosti komentoikkunaan rivin tietoa pyynnöstä:
 
-```plaintext
+```prompt
 127.0.0.1 - - [15/Jul/2020 13:23:13] "GET / HTTP/1.1" 200 -
 ```
 

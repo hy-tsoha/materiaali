@@ -14,27 +14,27 @@ Tällä kurssilla opimme toteuttamaan web-sovelluksia, jotka luovat _dynaamisia_
 
 Aloitamme ensimmäisen web-sovelluksen tekemisen luomalla sovellusta varten hakemiston `sovellus` ja siirtymällä sinne:
 
-```plaintext
+```prompt
 $ mkdir sovellus
 $ cd sovellus
 ```
 
 Jotta voimme kätevästi hallinnoida sovelluksen tarvitsemia kirjastoja, luomme hakemistoon Pythonin virtuaaliympäristön seuraavalla komennolla:
 
-```plaintext
+```prompt
 $ python3 -m venv venv
 ```
 
 Tämä komento luo hakemiston `venv`, jonka sisällä on Pythonin suoritusympäristö sovellusta varten. Saamme virtuaaliympäristön käyntiin suorittamalla aktivointikomennon näin:
 
-```plaintext
+```prompt
 $ source venv/bin/activate
 ```
 
 Tämän seurauksena komentorivin alkuun ilmestyy tunnus `(venv)` merkkinä siitä, että olemme virtuaaliympäristössä. 
 Kun olemme virtuaaliympäristössä, voimme asentaa Python-kirjastoja paikallisesti niin, että ne ovat käytettävissä vain kyseisessä virtuaaliympäristössä emmekä tarvitse asennukseen pääkäyttäjän oikeuksia. Asennamme ensin `flask`-kirjaston:
 
-```plaintext
+```prompt
 (venv) $ pip install flask
 ```
 
@@ -69,7 +69,7 @@ Sovellus sulkeutuu painamalla Control+C komentorivillä, jolloin voimme tehdä j
 
 Komento `deactivate` lopettaa virtuaaliympäristön käyttämisen ja palauttaa komentorivin takaisin tavalliseen tilaan:
 
-```plaintext
+```prompt
 (venv) $ deactivate
 $ 
 ```
