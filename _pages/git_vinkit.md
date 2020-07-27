@@ -19,7 +19,7 @@ Commitin tekeminen tarkoittaa, että haluamme tallentaa työhakemistoon tehtyjä
 
 Komento `git status` kertoo repositorion tilanteen, ja sitä kannattaa käyttää usein. Komento kertoo, mitä muutoksia työhakemistoon on tehty. Komennon suoritus voi näyttää vaikkapa seuraavalta:
 
-```plaintext
+```prompt
 $ git status
 On branch master
 Changes not staged for commit:
@@ -41,14 +41,14 @@ Tämä tarkoittaa, että tiedostot `apina.txt` ja `banaani.txt` ovat repositorio
 
 Kun haluamme viedä muutokset repositorioon, teemme uuden commitin. Voimme valita komennolla `git add` tiedostot, jotka tulevat mukaan commitiin. Esimerkiksi voimme valita tiedostot `apina.txt` ja `cembalo.txt` näin:
 
-```plaintext
+```prompt
 $ git add apina.txt
 $ git add cembalo.txt
 ```
 
 Tämän jälkeen `git status` näyttää muuttuneen tilanteen:
 
-```plaintext
+```prompt
 $ git status
 On branch master
 Changes to be committed:
@@ -68,7 +68,7 @@ Tässä tiedostot `apinat.txt` ja `cembalo.txt` on valittu commitiin. Näemme ed
 
 Seuraava vaihe on suorittaa komento `git commit`, joka suorittaa commitin. Tässä yhteydessä annetaan viesti, joka kertoo, mitä muutoksia kyseinen commit tekee repositorioon.
 
-```plaintext
+```prompt
 $ git commit -m "Update apina and create cembalo"
 [master 7cfdfab] Update apina and create cembalo
  2 files changed, 1 insertion(+)
@@ -77,7 +77,7 @@ $ git commit -m "Update apina and create cembalo"
 
 Tämän jälkeen repositorion tilanne näyttää tältä:
 
-```plaintext
+```prompt
 $ git status
 On branch master
 Changes not staged for commit:
@@ -93,7 +93,7 @@ Muutettu tiedosto `banaani.txt` näkyy edelleen tässä, mutta listalla ei ole e
 
 Tässä vaiheessa muutokset on jo tehty repositorioon, mutta vasta paikallisesti. Prosessin viimeistelee komento `git push`, joka siirtää muutokset GitHubiin:
 
-```plaintext
+```prompt
 $ git push
 ```
 
@@ -113,7 +113,7 @@ Kun commitit on tehty hyvin, projektia on mukava katsella myöhemmin GitHubissa.
 
 Tarkastellaan vielä tilannetta, jossa tiedostoa `banaani.txt` on muutettu:
 
-```plaintext
+```prompt
 $ git status
 On branch master
 Changes not staged for commit:
@@ -127,13 +127,13 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Saattaa olla, että muutos oli erehdys ja haluaisimme perua sen. Voimme noudattaa yllä olevaa neuvoa ja perua muutoksen näin:
 
-```plaintext
+```prompt
 $ git checkout banaani.txt
 ```
 
 Tämä komento hakee tiedoston `banaani.txt` repositoriosta ja korvaa sillä muutetun tiedoston. Nyt työhakemiston tiedoston sisältö on taas sama kuin repositoriossa:
 
-```plaintext
+```prompt
 $ git status
 On branch master
 nothing to commit, working tree clean
@@ -143,7 +143,7 @@ nothing to commit, working tree clean
 
 Entä jos laitamme muokatun tiedoston vahingossa mukaan commitiin, mutta emme haluakaan tehdä commitia? Silloin tilanne näyttää seuraavalta:
 
-```plaintext
+```prompt
 $ git add banaani.txt
 $ git status
 On branch master
@@ -155,13 +155,13 @@ Changes to be committed:
 
 Tässäkin tapauksessa voimme seurata komennon antamaa neuvoa:
 
-```plaintext
+```prompt
 $ git reset HEAD banaani.txt
 ```
 
 Tämän seurauksena tiedosto `banaani.txt` poistetaan commitista ja se näkyy taas muokattuna:
 
-```plaintext
+```prompt
 $ git status
 On branch master
 Changes to be committed:
@@ -176,7 +176,7 @@ Vastaavasti komento `git reset HEAD` ilman tiedostoa poistaa kaikki commitiin li
 
 Seuraavassa tilanteessa olemme vieneet commitin loppuun ja tajuamme vasta sitten, että commit oli virhe:
 
-```plaintext
+```prompt
 $ git add banaani.txt
 $ git commit -m "Change banaani"
 [master eff67d3] Change banaani
@@ -185,7 +185,7 @@ $ git commit -m "Change banaani"
 
 Tässä vaiheessa commit näkyy jo tehtyjen commitien listalla:
 
-```plaintext
+```prompt
 $ git log
 commit eff67d3743e37837e99b278c3843b30280e86925 (HEAD -> master)
 Author: Antti Laaksonen <ahslaaks@cs.helsinki.fi>
@@ -204,13 +204,13 @@ Date:   Tue Jul 14 17:36:10 2020 +0300
 
 Kuitenkin kun commit on tehty vasta paikallisesti, pystymme perumaan sen näin:
 
-```plaintext
+```prompt
 $ git reset HEAD~1
 ```
 
 Tämä komento siirtää repositorion tilan yhtä askelta aiemmaksi ja kaikki on taas hyvin:
 
-```plaintext
+```prompt
 $ git log
 commit 7cfdfabca6b021bbe314d77b1ff0718cc415b9d5 (HEAD -> master)
 Author: Antti Laaksonen <ahslaaks@cs.helsinki.fi>

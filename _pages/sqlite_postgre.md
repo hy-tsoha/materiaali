@@ -11,13 +11,13 @@ Kurssilla _Tietokantojen perusteet_ käytettiin SQLite-tietokantaa, mutta täll�
 
 SQLitessä tietokanta on tietyssä yksittäisessä tiedostossa. Esimerkiksi seuraava komento avaa tiedostossa `testi.db` olevan tietokannan SQLite-tulkissa:
 
-```plaintext
+```prompt
 $ sqlite3 testi.db
 ```
 
 PostgreSQL:ssä on kiinteä tietokanta, jota hallinnoi taustalla suoritettava palvelinohjelma. Tietokantaan saa yhteyden esimerkiksi avaamalla PostgreSQL-tulkin:
 
-```plaintext
+```prompt
 $ psql
 ```
 
@@ -29,7 +29,7 @@ SQLite ja PostgreSQL käyttävät SQL-kieltä samaan tapaan, mutta niissä on mo
 
 SQLite on tietyissä asioissa hyvin vapaamielinen verrattuna muihin tietokantoihin. Esimerkiksi SQLite antaa luoda sarakkeen tyyppiä `INTEGER`, johon tallennetaan kuitenkin merkkijono:
 
-```plaintext
+```prompt
 sqlite> CREATE TABLE test (x INTEGER);
 sqlite> INSERT INTO test (x) VALUES ('aybabtu');
 sqlite> SELECT * FROM test;
@@ -38,7 +38,7 @@ aybabtu
 
 Sama temppu ei onnistu PostgreSQL:ssä, vaan tulee ilmoitus väärästä tyypistä:
 
-```plaintext
+```prompt
 user=# CREATE TABLE test (x INTEGER);
 CREATE TABLE
 user=# INSERT INTO test (x) VALUES ('aybabtu');

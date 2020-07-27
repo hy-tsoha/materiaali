@@ -21,7 +21,7 @@ Nykyään käytettävä Pythonin versio on Python 3. Kaikki kurssin esimerkit ol
 
 Pythonin komentotulkki on kätevä tapa kielen ominaisuuksien testaamiseen. Komentotulkki käynnistyy komennolla `python3`, minkä jälkeen voi kirjoittaa suoritettavia komentoja.
 
-```plaintext
+```prompt
 $ python3
 >>> 1+2
 3
@@ -43,7 +43,7 @@ print("Moikka,", name)
 
 Koodi suoritetaan näin komentoriviltä:
 
-```plaintext
+```prompt
 $ python3 test.py
 Anna nimi: Kotivalo
 Moikka, Kotivalo
