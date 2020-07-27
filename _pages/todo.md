@@ -8,6 +8,8 @@ title: TODO
 ## Sekalaista:
 
 * Jos koodilaatikkoja on useita peräkkäin ja niihin on asetettu tiedoston nimi, jälkimmäisessä tiedoston nimi näkyy oudossa paikassa.
+✔️ Tiedoston nimi on korjattu oikeaan paikkaan.
+
 * Onko tapaa määrittää sivujen järjestys sivupalkin yläosiossa? Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
 * Sivusto ei toimi vielä kovin hyvin mobiililaitteella (valikon kanssa ongelmia ja miten kuvien leveys pitäisi merkitä?)
 ✔️ Valikko toimii paremmin mobiilissa. Kuvien leveys on asetettu pieneksi mobiilissa. Se on asetettu `_content.scss` tiedostossa ja sielä on määritelty, kun näytön leveys on alle 500px niin käytetään pienempiä kuvia

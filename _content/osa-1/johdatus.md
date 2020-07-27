@@ -52,7 +52,7 @@ def index():
 
 Sovelluksen ideana on, että se näyttää tekstin `"Heipparallaa!"`, kun käyttäjä menee sovelluksen etusivulle. Saamme sovelluksen käyntiin näin:
 
-```plaintext
+```prompt
 (venv) $ flask run
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
