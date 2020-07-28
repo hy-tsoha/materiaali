@@ -5,8 +5,6 @@ hidden: true
 
 # Sivun ulkoasun suunnittelu ja toteutus
 
-<!--- TODO mieti miten form muotoillaan sivulla. --->
-
 Tässä osiossa käydään läpi verkkosivun ulkoasun suunnittelun vaiheita. Materiaalin ei ole tarkoitus olla valmiiksi käytettävä pohja, vaan se kertoo ulkoasun suunnittelun vaiheista ja siitä, kuinka ulkoasu rekentuu pala kerrallaan.
 
 Verkkosivun ulkoasua muokataan käyttämällä CSS-koodia ja oletuksena on, että se on lukijalle tuttua.
@@ -15,42 +13,50 @@ Verkkosivun ulkoasua muokataan käyttämällä CSS-koodia ja oletuksena on, ett�
 
 Jotta sivun voi muotoilla sopivasti, täytyy ensin miettiä sivun rakennetta.
 
-Tehdään yksinkertainen verkkosivu, jossa on neljä komponenttia. Navigaatio eli valikko on `<nav>`-elementin sisällä, sivun otsikko on `<h1>`-elementin sisällä, kirautumislomake `<form>`-elementissä ja sivun sisältö on kirjoitettu otsikon alle `<div>`-elementin sisälle. Huomion arvoinen on myös dokumentin alusta löytyvä `<meta name='viewport' content='width=device-width, initial-scale=1'>` rivi, joka tekee sivusta responsiivisen erikokoisille näytöille. Tällöin sivun sisältö skaalauttuu käyttäjän näytön koon perusteella. 
+Tehdään yksinkertainen verkkosivu, jossa on viisi komponenttia. Sivun otsikko on `<h1>`-elementin sisällä, navigaatio eli valikko on `<nav>`-elementissä, kirjautumislomake `<form>`-elementissä ja sivun sisältö rakentuu toisen tason otsikosta `<h2>`-elementin sisällä, sekä tekstistä `<p>`-elementissä. Huomion arvoinen on myös dokumentin alusta löytyvä `<meta name='viewport' content='width=device-width, initial-scale=1'>` rivi, joka tekee sivusta responsiivisen erikokoisille näytöille. Tällöin sivun sisältö skaalauttuu käyttäjän näytön koon perusteella. 
 
 <!--_Mitä tuo meta-tagi tekee siis? Miten se vaikuttaa sivun näkymiseen? Voisiko sen esitellä myöhemmin niin, että ensin näkee miten sivu toimii ilman sitä huonosti ja sen lisäämisen jälkeen toimii hyvin?_ 💭 Meta tägi siis vaikuttaa sivun näkymiseen mobiililaitteessa. En näe syytä miksi se pitäisi esitellä myöhimmin, sillä todennäköisesti lukijalla ei ole tarvetta testata sivua mobiililaitteella, jolloin hän ei huomaa sivun huonosti toimivuutta. Tämä on enemmän rivi, jonka olen tottunut laittamaan sivulle, jotta se toimii varmasti myös mobiilissa. 👽 Se sopii tähän, kun siitä mainitaan. Olisi kuitenkin parempi olla lainausmerkit sen attribuuteissa kuten muissakin tageissa.-->
 
 ```html
 <!DOCTYPE html>
 <link rel="stylesheet" href="assets/main.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
 <body>
+  <h1>Tsoha App</h1>
   <nav>
-    <ol>
+    <ul>
       <li><a href="#">Sivu 1</a></li>
       <li><a href="#">Sivu 2</a></li>
       <li><a href="#">Sivu 3</a></li>
-	</ol>
+    </ul>
   </nav>
-  <h1>Tsoha App</h1>
+
   <form action="" method="POST">
     <label for="username">Tunnus:</label>
-    <input type="text" name="username">
-	<label for="password">Salasana:</label>
-	<input type="password" name="password">
-	<input type="submit" value="Kirjaudu">
+    <input type="text" name="username"><br>
+    <label for="password">Salasana:</label>
+    <input type="password" name="password"><br>
+    <input type="submit" value="Kirjaudu">
   </form>
-  <div>
-    Tsoha App on esimerkkisivusto siitä, miten yksinkertainen verkkosivu on muotoiltu.
-  </div>
-</body>
+
+  <h2>Tsoha App on esimerkkisivusto siitä, miten yksinkertainen verkkosivu on muotoiltu.</h2>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit libero non urna facilisis, quis
+	eleifend enim ullamcorper. Vivamus bibendum ex dolor. Maecenas a felis non odio pellentesque aliquet.
+	Curabitur nibh velit, vehicula et semper in, ultricies et ipsum. Morbi efficitur, purus eget fringilla
+	mollis, lacus arcu dignissim ante, ut mollis arcu ex eget tortor. Donec non massa sit amet arcu varius
+	elementum eu id lorem. Morbi varius nulla at dui suscipit porta. Maecenas volutpat euismod leo, sit amet
+	venenatis sapien rutrum sit amet.
+
 ```
 <!-- Kommentti materiialista: -->
-<!--_Googlen tyyliohje (https://google.github.io/styleguide/htmlcssguide.html) suosittelee, että turhat tagit (kuten html ja head) jätetään pois ja sisennyksen leveys on 2 merkkiä._ 💭 Kiitos hyödyllisesta linkistä, en tiennytkään että tällainen on olemassa. 👽 Myös body-tagit voi poistaa ja li-lopputagit?-->
+<!--_Googlen tyyliohje (https://google.github.io/styleguide/htmlcssguide.html) suosittelee, että turhat tagit (kuten html ja head) jätetään pois ja sisennyksen leveys on 2 merkkiä._ 💭 Kiitos hyödyllisesta linkistä, en tiennytkään että tällainen on olemassa. 👽 Myös body-tagit voi poistaa ja li-lopputagit? 💭 li loppu tägiä ei voi poistaa. Jos li-elementissä on paddingia tai marginaalia niin se ei toimi reunoissa muuten (testasin tätä).-->
 
 <!-- Kommentti materiialista: -->
 <!--_Miksi linkit tehdään listan avulla (voisi luulla että listan on allekkain)? Miksi ol eikä ul?_ 💭 Tässä ei ole väliä kumpaa käyttää. Itse käytän ol-listaa sillä valikon linkit ovat järjestyksessa, joten ordered list (ol) tuntuu luonnollisemmalta valinnalta kuin unordered list (ul) 👽 Hmm, toisaalta myös ul-listan kohdilla on tietty sivun tekijän määrittämä järjestys, erona vain on että ei näy numerointia. Lisäys: Googlailun perusteella ul on parempi tapa, myös saavutettavuuden kannalta. -->
 
-Kun miettii miten nämä neljä komponenttia halutaan esittää sivulla on otettava huomioon, miten käyttäjä käyttää sivua. Mitä käyttäjä näkee kun hän avaa sivun ensimmäisen kerran? Onko valikko helppo löytää? Tunnistaako käyttäjä millä sivulla on? 
+Kun miettii miten nämä viisi komponenttia halutaan esittää sivulla on otettava huomioon, miten käyttäjä käyttää sivua. Mitä käyttäjä näkee kun hän avaa sivun ensimmäisen kerran? Onko valikko helppo löytää? Tunnistaako käyttäjä millä sivulla on? 
 
 Ulkoasun _layout:a_ eli yleisilmettä ja komponenttien sijoittamista kannattaa miettiä esimerkiksi piirtämällä paperille.
 
@@ -62,40 +68,25 @@ Piirtämällä paperille sivun rakenteen on helppoa lähteä sijoittamaan asioit
 <!-- Kommentti materiialista: -->
 <!--_On hyvä että on kuva suunnitelmasta, mutta siitä ei näe nyt kovin hyvin, missä on mitäkin (esim. missä on valikko)._ 💭 Tähän pitää tehdä parempi kuva, jossa näkyy myös kirjautumislomake.-->
 
-Kun suunnitelma on valmis, voidaan aloittaa sivun tyylin toteuttaminen. Muotoillaan ensin valikko. Valikko on jo valmiina `nav`-tagien sisällä, joten riittää, että muotoillaan tämä alue. Valikko sijoitetaan sivun yläosaan ja se on koko sivun levyinen.
+Kun suunnitelma on valmis, voidaan aloittaa sivun tyylin toteuttaminen. Suunnitelman perusteella halutaan sivun sisällön olevan keskellä sivua. Tehdään tämä selektorilla `body`, joka muokkaa sivun jokaista elementtiä. Asetetaan `body`:n marginaaliksi `auto`, joka keskittää sisällön. Marginaali tulee voimaan, kun sisällön _maksimi leveys_ määritetään. Kun sisältö on pienempää, kuin ikkunan leveys, niin marginaali keskittää sen. Aseteaan myös miellyttävämpi fontti sivulle.
 
 ```css
-nav {
-    border-bottom: 1px solid black;
-    margin: 0;
-    text-align: center;
-    width: 100%;
+body {
+    margin: auto;
+    max-width: 45em;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
-```
+``` 
 
 <!-- Kommentti materiialista: -->
 <!--_Mitä margin tekee tässä? (ok tulee myöhemmin, voisi kuitenkin lyhyesti mainita mikä on margin ja mikä on padding, vai tulisiko tämä HTML-oppaaseen?)_ 💭 Paddingista ja mariginsta on jo lapiossa, niin en kertonut tässä siitä. Sen voisi lisätä oppaaseen tai sitten linkata lapion sivulle. 👽 Tämä tosiaan sopii paremmin oppaaseen (ja siellä on jo jotain mutta pitää täydentää).-->
 
-Järjestetään vielä valikon linkit riviin käyttämällä `display: inline-block` määrettä. `padding`-attribuutille annettaan kaksi parametria, joista ensimmäinen kertoo pystysuoran tilan ja toinen kertoo vaakasuoran tilan elementin sisällä. Parametrien määrällä kerrotaan, mihin tilaa lisätään. Esimerkiksi edellisessä `nav`-elementin muotoilussa yksi parametri `margin`-attribuutille kertoi, että muotoilu lisättiin jokaiseen reunaan.
+Järjestetään seuraavaksi valikon linkit riviin käyttämällä `display: inline-block` määrettä. `padding`-attribuutille annettaan kaksi parametria, joista ensimmäinen kertoo pystysuoran tilan ja toinen kertoo vaakasuoran tilan elementin sisällä. Parametrien määrällä kerrotaan, mihin tilaa lisätään. Esimerkiksi edellisessä `body`-selektorin muotoilussa yksi parametri `margin`-attribuutille kertoi, että muotoilu lisättiin jokaiseen reunaan.
 
 ```css
-nav li{
+nav li {
     display: inline-block;
-    color: #000;
     padding: 0 .5em;
-}
-```
-
-Muotoilun jälkeen voidaan havaita katsomalla sivua selaimessa, että navigaation alle piirretty viiva ei mene sivun päästä päähän, vaan reunoihin jää pieni rako. Avaamalla selaimen konsoli painamalla `F12` näppäintä ja tutkimalla `Inspector`-välilehdessä sivun rakennetta kohdasta `Box Model`, nähdään että `body`-elementille tulee automaattisesti marginaalia jokaiseen reunaan 8 pikseliä.
-
-![tsoha-app]({{ '/assets/img/tsoha-app2.png' | relative_url }})
-
-Poistetaan `body`-elementin marginaali asettamalla sen arvoksi 0. Samalla voidaan asettaa miellyttävämpi fontti sivulle.
-
-```css
-body {
-    margin: 0;
-    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 ```
 
@@ -107,70 +98,68 @@ Käyttäjän huomio halutaan kiinnittää sivun otsikkoon, jotta käyttäjä tun
 </div>
 ```
 
-<!-- Kommentti materiialista: -->
+<!-- Kommentti materiaalista: -->
 <!--_Miksi ei voi muotoilla suoraan h1-elementtiä? Miksi luokka vaikka on vain yksi otsikko?_ 💭 Konventiona layouteissa on eriyttää kuvaavat kokonaisuudet omiksi luokikseen. ID:tä käytetään yleensä vain jos on jotain todella erityista. Headeriin voi laittaa myös muutakin kuin vain värin. Siihen voisi laittaa myös kuvan taustalle tai lisää tekstiä esimerkiksi h2-tason otsikkoon tai ihan vain tekstielementiin. Ei kannata muotoilla suoraa h1-elementtiä, sillä h1-tason otsikkoa voidaan käyttää myös tekstin seassa, jos sisällön tuottaja tai seuraava devaaja ole tietoinen, että h1 tason otsikko on vain header otiskko, jolloin layout, menee rikki. 👽 OK, hyviä perusteluja. Mikä on jotain todella erityistä?-->
 <!-- Erityistä voisi olla vaikka jokin kerran käytetty. Id:llä voidaan myös viitata jäsästä.-->
 
-Kiinnitetään käyttäjän huomio otsikkoon laittamalla sille värikäs taustaväri, kasvattamalla sille varattua aluetta ja määrittelemällä otsikon fontti suuremmaksi.
+Kiinnitetään käyttäjän huomio otsikkoon asettamalla taustaväri värikkääksi, kasvattamalla sille varattua aluetta ja määrittelemällä otsikon fontti suuremmaksi.
 
 ```css
 .header {
-    background-color: sandybrown;
+    background: sandybrown;
     font-weight: bold;
     padding: 2em 1em;
     font-size: 2em;
 }
 ```
 
-Suunnitelman perusteella haluamme keskittää sivun sisällön näytöllä. Tehdään siis `div`-elementti `page-wrapper`, jonka sisälle asetetaan otsikko, kirjautuminen ja sivun sisältö.
-
-```html
-...
-<div class="page-wrapper">
-<div class="header">
-<h1>Tsoha App</h1>
-</div>
-<div>
-Tsoha App on esimerkkisivusto siitä, miten yksinkertainen verkkosivu on muotoiltu.
-</div>
-</div>
-</body>
-```
-
-Muotoillaan `div`-elementti siten, että se on keskellä sivua.
+Siirretään kirjautumislomake sille suunniteltuun paikkaan sisällön vasempaan yläreunaan käyttämällä `float` attribuuttia. Koska sivulla ei ole tällä hetkellä muita lomakkeita kuin kirjautuminen, niin voidaan valita universaalilla selektorilla kaikki mahdolliset `form`-elementit. Jos sivulla olisi kuitenkin muitakin lomakkeita, olisi lomakkeelle hyvä asettaa luokka tai id-tunnus ja muotoilla se tällä perusteella. 
 
 ```css
-.page-wrapper {
-    max-width: 45em;
-    margin: auto;   
-}
-```
-<!-- Kommentti materiialista: -->
-<!--_Miksi nyt on rem, kun äsken oli em? Mitä margin:auto tekee? Sisältö menee maagisesti keskelle sen seurauksena?_ 💭 em ja rem on suhteellisia kokoja, jotka määräytyy sivun fontin koon perusteella. rem ottaa kokonsa juuri elementtinsä fonttikoosta ja em ottaa kokonsa parent elementtinsä koosta. Tässä tapauksessa ei ole väliä kumpaa käyttää. margin: auto tekee juuri tämän. Se keskittää elementin. 👽 Jos ei ole väliä kumpaa käyttää, niin olisiko hyvä käyttää yhdenmukaisesti em kaikkialla?-->
-
-Nyt sivusto näyttää suurin piirtein siltä, mitä suunniteltiinkin. Teksti on kuitenkin epämiellyttävän lähellä otsikkoa, joten annetaan sille luokka `content` ja muotoillaan se kauemmas otsikosta.
-
-```html
-<html>
-...
-            <div class="header">
-                <h1>Tsoha App</h1>
-            </div>
-            <div class="content">
-            Tsoha App on esimerkkisivusto siitä, miten yksinkertainen verkkosivu on muotoiltu.
-            </div>
-...
-```
-
-Asetetaan sisällölle tilaa ylhäälle.
-
-```css
-.content {
-    padding-top: 2em;
+form {
+    display: block;
+    float: right;
 }
 ```
 
-Nyt pohja on valmiina ja voi alkaa ideoimaan ulkoasua tunnistettavammaksi. Ensimmäisessä vaiheessa on hyvä eriyttää sivulta yhtenevät kokonaisuudet ja antaa niille omat kuvaavat luokat, joiden perusteella kokonaisuuksien ulkoasua lähdetään muokkaamaan.
+Nyt pohjan komponentin ovat niillä paikoilla, joihin ne haluttiinkin asettaa. Silti lopputuloksessa on muutamia asioita, jotka eivät näytä hyvältä. Ensinnäkin valikon vasen reuna ei ole samassa kohtaa kuin muut komponentit ja toisen tason `h2`-otsikko ei ole samassa tasossa kirjautumislomakkeen suhteen.
+
+Aloitetaan ensimmäisestä ongelmasta eli valikon sijainnista. Kun valikkoa klikkaa hiiren oikealla painikkeella ja valitsee avautuvasta valikosta vaihtoehdon 'Inspect Element', aukeaa automaattisesti selaimen konsoli ja sen 'Inspector' välilehti ja tutkittu elementti värjäytyy hetkeksi värikkääksi. 
+
+<!-- TODO: Tähän kuva selaimesta kun konsoli on auki.-->
+
+Selaimen konsolista voidaan huomata, että navigaation sisällä oleva `<ul>' listalle on tullut automaattisesti `padding`-arvoa. Otetaan tämä pois.
+
+```css
+nav ul {
+    padding: 0;
+}
+```
+
+<!--- Kommentti materiaalista-->
+<!--- Tämä on se mitä mitä olen tottunut tekemään. En ole varma toimiiko tämä jokaisella selaimella näin. Voisi myös selittää, miten avataan suoraa selaimen konsoli ja tarkastellan sieltä elementtejä (ilman siis tuota alun klikkausta, joka saattaa hämmnetää.) -->
+
+Valikko ei vieläkään ole aivan tasassa muiden komponenttien kanssa, mutta kuitenkin parempi. Jätetään se nyt tähän tilaan.
+
+Korjataan seuraavaksi materiaalin ja kirjautumislomakkeen välinen epätasaisuus. Tutkimalla sivua jälleen selaimen konsolilla nähdään, että `<h2>` otsikolla on marginaalia enemmän kuin kirjautumislomakkeella. Ratkaistaan ongelma poistamalla otsikon yläosan marginaali.
+
+```css
+h2 {
+    margin-top: 0;
+}
+```
+
+Lisätään kirjautumislomakkeen `padding` arvoa, jotta se ei ole aivan kiinni itse tekstissä.
+
+```css
+form {
+    display: block;
+    float: right;
+    padding: .5em;
+}
+```
+
+Nyt pohja on valmiina ja voi alkaa ideoimaan ulkoasua tunnistettavammaksi. Ensimmäisessä vaiheessa toteutettiin runko, jonka ulkoasua lähdetään seuraavaksi muokkaamaan.
 
 ## 2. vaihe
 
@@ -178,50 +167,82 @@ Sivu jäi hyvin yksinkertaiseksi. Lähdetään tekemään ulkoasusta tunnistetta
 
 ```css
 body {
-    margin: 0;
+    margin: auto;
+    max-width: 45em;
     font-family: 'Helvetica', 'Arial', sans-serif;
     background: gray;
 }
 ```
 
-<!-- Kommentti materiialista: -->
-<!--_Miksi html-elementissä? Pitäisikö olla body-elementissä? Miksi background-color eikä background?_ 💭 vaihdettu background:ksi. html on aina koko sivu, joten sen voi ajatella koko sivun taustaväriksi 👽 Googlailun perusteella body on suositellumpi paikka laittaa yleisiä tyylejä (esim. https://css-tricks.com/html-vs-body-in-css/), jotenkin voi ajatella että html:ssä on muutakin kuin se sivun piirrettävä osa (kuten title-tagi).-->
-
-Taustaväri tulee myös sisällölle ja valikolle, joten vaihdetaan niiden taustaväri valkoiseksi lisäämällä `nav` ja `.content` kentille attribuutit `background: white;`.
-
-Tämä aiheuttaa sen, että valikon yläreunaan jää harmaa viiva. Tutkimalla valikkoa selaimen konsolilla nähdään, että `ol`-tägi on aiheuttanut automaattista marginaalia sivun yläreunaan. Asetetaan valikon `ol` elementin marginaaliksi 0, mutta lisätään siihen paddingia sisäpuolelle, jotta valikko ei kapene liikaa.
+Vaihdetaan valikon ja sisällön väri valkoiseksi, jotta ne erottuvat taustasta. Aloitetaan valikosta. Muutetaan myös valikon `padding` yksi parametriseksi.
 
 ```css
-nav ol {
-    margin: 0;
-    padding: 1em 0;
+nav li {
+    display: inline-block;
+    padding: .5em;
+    background: white;
 }
 ```
 
-Sivun sisällön muotoilu näyttää myös ikävältä, sillä se on aivan kiinni alareunassa laatikkonsa alareunassa. Muutetaan `.content`-elementin `padding` arvoa niin, ettei teksti ole aivan taustan reunoissa kiinni. Kolme arvoa `padding`-kentässä määrittävät järjestyksessä yläreunan, vaakasuoran ja alareunan tilan.
+Seuraavaksi vaihdetaan sisällön taustan väri. Erotetaan sisältö muusta sivusta asettamalla se `div`-elementin sisään, jolle annetaan luokka `content`. Koska halutaan, että kirjautumislomake on sisällön sisällä vasemmassa yläreunassa laitetaan myös kirjautumislomake tämän `div`-elementin sisälle.
+
+```html
+...
+  </nav>
+  <div class="content">
+  <form action="" method="POST">
+    <label for="username">Tunnus:</label>
+    <input type="text" name="username"><br>
+    <label for="password">Salasana:</label>
+    <input type="password" name="password"><br>
+    <input type="submit" value="Kirjaudu">
+  </form>
+  <h2>Tsoha App on esimerkkisivusto siitä, miten yksinkertainen verkkosivu on muotoiltu.</h2>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit libero non urna facilisis, quis
+	eleifend enim ullamcorper. Vivamus bibendum ex dolor. Maecenas a felis non odio pellentesque aliquet.
+	Curabitur nibh velit, vehicula et semper in, ultricies et ipsum. Morbi efficitur, purus eget fringilla
+	mollis, lacus arcu dignissim ante, ut mollis arcu ex eget tortor. Donec non massa sit amet arcu varius
+	elementum eu id lorem. Morbi varius nulla at dui suscipit porta. Maecenas volutpat euismod leo, sit amet
+	venenatis sapien rutrum sit amet.
+</div>
+```
+
+Vaihdetaan `content` luokan taustaväri. Lisätään myös `padding` kentän arvoa, jottei sisältö oli aivan kiinni taustavärin reunoissa.
 
 ```css
 .content {
-    background: white;
-    padding: 2em 1em 2em;
+   background: white;
+   padding: 1.5em 2em;
 }
 ```
 
-Sivun värien lisääminen ja päättäminen on haastavaa, sillä värit jakavat mielipiteitä paljon. Hyvän väriskaalan voi saada esimerkiksi käyttämällä yhtä pääväriä ja sen erisävyjä. Valitsemalla päävärin lisäksi korostusvärin, joka kiinnittää käyttäjän huomion saadaan aikaiseksi miellyttävä kokonaisuus.
+Asetetaan kirjautumislomakkeelle oma taustaväri, jotta se erottuu tekstistä.
+
+```css
+form {
+    display: block;
+    float: right;
+    padding: .5em;
+    background: blanchedalmond;
+}
+```
+
+Sivun värien lisääminen ja päättäminen on haastavaa, sillä värit jakavat mielipiteitä. Hyvän väriskaalan voi saada esimerkiksi käyttämällä yhtä pääväriä ja sen erisävyjä. Valitsemalla päävärin lisäksi korostusvärin, joka kiinnittää käyttäjän huomion saadaan aikaiseksi miellyttävä kokonaisuus.
 
 ## 3. vaihe
 
-Väritetyn sivuston ilme on hieman kulmikas vielä. Lähdetään rakentamaan ilmettä hieman pehmeämmäksi. Aloitetaan pyöristämällä sisällön kulmat. 
+Väritetyn sivuston ilme on hieman kulmikas. Lähdetään rakentamaan ilmettä hieman pehmeämmäksi. Aloitetaan pyöristämällä sisällön kulmat. 
 
 ```css
 .content {
-    background: white;
-    padding: 2em 1em 2em;
-    border-radius: .5em;
+   background: white;
+   padding: 1em;
+   border-radius: .5em
 }
 ```
 
-Nyt näyttää oudolta, että vain sisällön reunat on pyöristetyjä, joten pyöristetään myös otsikon kulmat
+Nyt näyttää oudolta, että vain sisällön reunat on pyöristetyjä, joten pyöristetään myös otsikon kulmat ja otetaan sitä irti yläreunasta lisäämällä marginaalia.
 
 ```css
 .header {
@@ -230,43 +251,33 @@ Nyt näyttää oudolta, että vain sisällön reunat on pyöristetyjä, joten py
     padding: 2em 1em;
     font-size: 2em;
     border-radius: .5em;
+    margin-top: .5em;
 }
 ```
 
-Otsikko ja sisältö ovat liian lähellä toisiaan, joten lisätään marginaalia sisällölle.
+Parannetaan seuraavaksi valikon ulkoasua ja käyttökokemusta. Tehdään valikon painikkeista pyöristetyt sekä kasvatetaan niiden `padding` ja `margin` arvoja, jotta ne olisivat hieman kauempana toisistaan.
 
 ```css
-.content {
-    background: white;
-    padding: 2em 1em 2em;
-    border-radius: 0.5em;
-    margin: 2em 0 2em;
-}
-```
-
-Valikko ei sovi enää ollenkaan sivun tyyliin, joten muokataan sitä. Visioidaan, että navigaatioonkin halutaan lisätä pehmeyttä. Aloitetaan poistamalla valikon laatikkomaisuutta ottamalla alaviiva ja taustaväri pois.
-
-```css
-nav {
-    margin: 0;
-    text-align: center;
-    width: 100%;
-}
-```
-
-Ja tehdään linkeistä enemmän erillisten painikkeiden näköisiä.
-
-```css
-nav li{
+nav li {
     display: inline-block;
-    color: #000;
     padding: .5em 1em;
-    border-radius: .5em;
     background: white;
+    border-radius: .5em;
+    margin: .2em;
 }
 ```
 
-Otetaan valikon linkeistä alleviivaus pois ja määritetään linkin väri.
+Asetetaan valikon linkit keskelle sivua muokkaamalla itse listaa, jolla linkit ovat. Lisätään sille myös hieman marginaalia, jottei lista olisi aivan kiinni otsikossa ja sisällössä. Listan marginaalin lisääminen ei kasvata listan linkkejen etäisyyttä toisistaan.
+
+```css
+nav ul {
+    padding: 0;
+    margin: .5em;
+    text-align: center;
+}
+```
+
+Tehdään valikon linkeistä enemmän painikkeiden näköisiä. Otetaan valikon linkeistä alleviivaus pois ja määritetään linkin väri mustaksi.
 
 ```css
 nav li a {
@@ -275,7 +286,7 @@ nav li a {
 }
 ```
 
-Lisätään ominaisuus valikon linkin taustaväri tummenee, kun hiiri viedään päälle, niin käyttäjälle tulee vaikutelma painikkeesta.
+Lisätään ominaisuus, jossa valikon linkin taustaväri tummenee, kun hiiri viedään sen päälle. Tällöin käyttäjälle tulee vaikutelma painikkeesta.
 
 ```css
 nav li:hover {
@@ -283,22 +294,15 @@ nav li:hover {
 }
 ```
 
-Listan `padding` vaikuttaa nyt turhalta, sillä valikon sisällä ei ole enää mitään, mitä pitäisi suurentaa. Otetaan se siis pois. Lisätään kuitenkin tilaa valikkoon marginaalilla.
+Pyöristetaan vielä kirajutumislomakkeen kulmat.
 
 ```css
-nav {
-    margin: 0.5em 0 1em 0;
-    text-align: center;
-    width: 100%;
-}
-```
-
-Poistetaan myös itse listan `padding`, jotta valikko asettuu keskelle sivua.
-
-```css
-nav ol {
-    margin: 0;
-    padding: 0;
+form {
+    display: block;
+    float: right;
+    padding: .5em;
+    background: blanchedalmond;
+    border-radius: .5em;
 }
 ```
 
