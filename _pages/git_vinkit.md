@@ -164,10 +164,13 @@ Tämän seurauksena tiedosto `banaani.txt` poistetaan commitista ja se näkyy ta
 ```prompt
 $ git status
 On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   banaani.txt
+        modified:   banaani.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 Vastaavasti komento `git reset HEAD` ilman tiedostoa poistaa kaikki commitiin lisätyt tiedostot ja voimme aloittaa puhtaalta pöydältä commitin valmistelut.
