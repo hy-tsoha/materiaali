@@ -122,7 +122,7 @@ DATABASE_URL: postgres://(tietokannan osoite näkyy tässä)
 
 Huomaa, että tietämällä Herokun tietokannan osoitteen siihen pääsee yhdistämään myös sovelluksen ulkopuolelta, joten tietokannan osoite on salassa pidettävää tietoa.
 
-Voimme myös asettaa ympäristömuuttujia tarvittaessa itse. Esimerkiksi seuraava komento asettaisi salaisen avaimen istuntoja varten:
+Voimme myös asettaa ympäristömuuttujia tarvittaessa itse. Esimerkiksi istuntojen käyttäminen vaatii muuttujan `SECRET_KEY` asettamista, mikä onnistuu näin:
 
 ```prompt
 $ heroku config:set SECRET_KEY=(avain tähän)
