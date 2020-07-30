@@ -13,13 +13,11 @@ Materiaali olettaa, että lukija tuntee ennestään CSS-kielen perusteet.
 
 Tehdään yksinkertainen verkkosivu, jossa on viisi komponenttia: otsikko (`h1`-elementti), navigaatio eli valikko (`nav`-elementti), kirjautumislomake (`form`-elementti) sekä varsinainen sivun sisältö (`h2`-elementti ja `p`-elementti).
 
-Huomaa sivun alussa rivi `<meta name="viewport" content="width=device-width, initial-scale=1">`, joka tekee sivusta _responsiivisen_ erikokoisille näytöille eli sivun sisältö skaalauttuu käyttäjän näytön koon perusteella. 
-
-<!--_Mitä tuo meta-tagi tekee siis? Miten se vaikuttaa sivun näkymiseen? Voisiko sen esitellä myöhemmin niin, että ensin näkee miten sivu toimii ilman sitä huonosti ja sen lisäämisen jälkeen toimii hyvin?_ 💭 Meta tägi siis vaikuttaa sivun näkymiseen mobiililaitteessa. En näe syytä miksi se pitäisi esitellä myöhimmin, sillä todennäköisesti lukijalla ei ole tarvetta testata sivua mobiililaitteella, jolloin hän ei huomaa sivun huonosti toimivuutta. Tämä on enemmän rivi, jonka olen tottunut laittamaan sivulle, jotta se toimii varmasti myös mobiilissa. 👽 Se sopii tähän, kun siitä mainitaan. Olisi kuitenkin parempi olla lainausmerkit sen attribuuteissa kuten muissakin tageissa.-->
+Huomaa sivun alussa rivi `<meta name="viewport" content="width=device-width, initial-scale=1">`, joka tekee sivusta _responsiivisen_ erikokoisille näytöille eli sivun sisältö skaalautuu käyttäjän näytön koon perusteella. 
 
 ```html
 <!DOCTYPE html>
-<link rel="stylesheet" href="assets/main.css">
+<link rel="stylesheet" href="main.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <body>
@@ -40,16 +38,22 @@ Huomaa sivun alussa rivi `<meta name="viewport" content="width=device-width, ini
     <input type="submit" value="Kirjaudu">
   </form>
 
-  <h2>Tsoha App on esimerkkisivusto siitä, miten yksinkertainen verkkosivu on muotoiltu.</h2>
+  <h2>Tervetuloa sovellukseen</h2>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit libero non urna facilisis, quis
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit libero non urna facilisis, quis
 	eleifend enim ullamcorper. Vivamus bibendum ex dolor. Maecenas a felis non odio pellentesque aliquet.
 	Curabitur nibh velit, vehicula et semper in, ultricies et ipsum. Morbi efficitur, purus eget fringilla
 	mollis, lacus arcu dignissim ante, ut mollis arcu ex eget tortor. Donec non massa sit amet arcu varius
 	elementum eu id lorem. Morbi varius nulla at dui suscipit porta. Maecenas volutpat euismod leo, sit amet
 	venenatis sapien rutrum sit amet.
-
+  </p>
+</body>
 ```
+
+Tuloksena on seuraava sivu, jossa ei vielä ole muotoilua:
+
+<img class="screenshot-large" src="img/ulkoasu1.png">
 
 Kun miettii, miten nämä viisi komponenttia halutaan esittää sivulla, on otettava huomioon, miten käyttäjä käyttää sivua. Mitä käyttäjä näkee, kun hän avaa sivun ensimmäisen kerran? Onko valikko helppo löytää? Tunnistaako käyttäjä, millä sivulla on? 
 
@@ -59,7 +63,7 @@ Ulkoasun _layoutia_ eli yleisilmettä ja komponenttien sijoittamista kannattaa m
 Piirtämällä paperille sivun rakenteen on helppoa lähteä sijoittamaan asioita oikeisiin kohtiin. Tämän sivun layout-suunnitelma on kuvan mukainen.
 -->
 
-Kun suunnitelma on valmis, voidaan aloittaa sivun tyylin toteuttaminen. Suunnitelman perusteella halutaan sivun sisällön olevan keskellä sivua. Tämä onnistuu asettamalla `body`-elementin marginaaliksi `auto`, joka keskittää sisällön. Marginaali tulee voimaan, kun sisällön _maksimileveys_ määritetään. Kun sisältö on pienempää kuin ikkunan leveys, marginaali keskittää sen. Asetetaan myös miellyttävämpi fontti sivulle.
+Kun suunnitelma on valmis, voidaan aloittaa sivun tyylin toteuttaminen. Suunnitelman perusteella halutaan sivun sisällön olevan keskellä sivua. Tämä onnistuu asettamalla `body`-elementin marginaaliksi `auto`, joka keskittää sisällön. Marginaali tulee voimaan, kun sisällön maksimileveys määritetään. Kun sisältö on pienempää kuin ikkunan leveys, marginaali keskittää sen. Asetetaan myös miellyttävämpi fontti sivulle.
 
 ```css
 body {
@@ -67,9 +71,13 @@ body {
     max-width: 45em;
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
-``` 
+```
 
-Järjestetään seuraavaksi valikon linkit riviin käyttämällä `display: inline-block` -määrettä. Ominaisuudelle `padding` annetaan kaksi parametria, joista ensimmäinen kertoo pystysuoran tilan ja toinen kertoo vaakasuoran tilan elementin sisällä. Parametrien määrällä kerrotaan, mihin tilaa lisätään. Esimerkiksi edellisessä `body`-elementin muotoilussa yksi parametri `margin`-attribuutille kertoi, että muotoilu lisättiin jokaiseen reunaan.
+Tämän seurauksena sivu näyttää seuraavalta:
+
+<img class="screenshot-large" src="img/ulkoasu2.png">
+
+Järjestetään seuraavaksi valikon linkit riviin käyttämällä `display: inline-block` -määrettä. Lisäksi ominaisuudelle `padding` annetaan kaksi parametria, joista ensimmäinen kertoo pystysuoran tilan ja toinen kertoo vaakasuoran tilan elementin sisällä.
 
 ```css
 nav li {
@@ -77,6 +85,10 @@ nav li {
     padding: 0 .5em;
 }
 ```
+
+Nyt valikko näyttää tältä:
+
+<img class="screenshot-large" src="img/ulkoasu3.png">
 
 Käyttäjän huomio halutaan kiinnittää sivun otsikkoon, jotta käyttäjä tunnistaa helposti, millä sivulla hän on. Tehdään otsikolle oma `div`-elementti, joka helpottaa sen muotoilua.
 
@@ -86,7 +98,7 @@ Käyttäjän huomio halutaan kiinnittää sivun otsikkoon, jotta käyttäjä tun
 </div>
 ```
 
-Kiinnitetään käyttäjän huomio otsikkoon asettamalla taustaväri värikkääksi, kasvattamalla sille varattua aluetta ja määrittelemällä otsikon fontti suuremmaksi.
+Kiinnitetään käyttäjän huomio otsikkoon asettamalla taustaväriksi `sandybrown`, kasvattamalla otsikolle varattua aluetta ja määrittelemällä otsikon fontti suuremmaksi.
 
 ```css
 .header {
@@ -97,7 +109,11 @@ Kiinnitetään käyttäjän huomio otsikkoon asettamalla taustaväri värikkää
 }
 ```
 
-Siirretään kirjautumislomake sille suunniteltuun paikkaan sisällön vasempaan yläreunaan käyttämällä `float`-ominaisuutta. Koska sivulla ei ole tällä hetkellä muita lomakkeita kuin kirjautuminen, niin voidaan valita universaalilla selektorilla kaikki mahdolliset `form`-elementit. Jos sivulla olisi kuitenkin muitakin lomakkeita, olisi lomakkeelle hyvä asettaa luokka tai id-tunnus ja muotoilla se tällä perusteella. 
+Nyt otsikko näyttää tältä:
+
+<img class="screenshot-large" src="img/ulkoasu4.png">
+
+Siirretään seuraavaksi kirjautumislomake sille suunniteltuun paikkaan sisällön oikeaan yläreunaan käyttämällä `float`-ominaisuutta. Koska sivulla ei ole tällä hetkellä muita lomakkeita kuin kirjautuminen, niin voidaan valita universaalilla selektorilla kaikki mahdolliset `form`-elementit. Jos sivulla olisi kuitenkin muitakin lomakkeita, olisi lomakkeelle hyvä asettaa luokka tai id-tunnus ja muotoilla se tällä perusteella. 
 
 ```css
 form {
@@ -106,13 +122,17 @@ form {
 }
 ```
 
+Tämän jälkeen lomake on oikealla paikallaan:
+
+<img class="screenshot-large" src="img/ulkoasu5.png">
+
 Nyt pohjan komponentin ovat niillä paikoilla, joihin ne haluttiinkin asettaa. Silti lopputuloksessa on muutamia asioita, jotka eivät näytä hyvältä. Ensinnäkin valikon vasen reuna ei ole samassa kohdassa kuin muissa komponenteissa, ja lisäksi toisen tason `h2`-otsikko ei ole samassa tasossa kirjautumislomakkeen suhteen.
 
-Aloitetaan ensimmäisestä ongelmasta eli valikon sijainnista. Kun valikkoa klikkaa hiiren oikealla painikkeella ja valitsee avautuvasta valikosta vaihtoehdon _Inspect Element_, aukeaa selaimen konsoli ja sen _Inspector_-välilehti ja tutkittu elementti värittyy hetkeksi. 
+Aloitetaan ensimmäisestä ongelmasta eli valikon sijainnista. Kun valikkoa klikkaa hiiren oikealla painikkeella ja valitsee avautuvasta valikosta vaihtoehdon _Inspect Element_, aukeaa kehittäjän näkymä, josta voi katsella elementtien ominaisuuksia:
 
-<!-- TODO: Tähän kuva selaimesta kun konsoli on auki.-->
+<img class="screenshot-large" src="img/ulkoasu6.png">
 
-Selaimen konsolista voidaan huomata, että navigaation sisällä olevalle `ul`-listalle on tullut automaattisesti `padding`-arvoa. Otetaan tämä pois.
+Kehittäjän näkymästä huomataan, että navigaation sisällä olevalle `ul`-listalle on tullut automaattisesti `padding`-arvoa. Otetaan tämä pois.
 
 ```css
 nav ul {
@@ -137,23 +157,24 @@ Lisätään vielä kirjautumislomakkeen `padding`-arvoa, jotta se ei ole aivan k
 
 ```css
 form {
-    display: block;
-    float: right;
+    ...
     padding: .5em;
 }
 ```
 
+Näiden muutosten jälkeen sivu näyttää seuraavalta:
+
+<img class="screenshot-large" src="img/ulkoasu7.png">
+
 Nyt pohja on valmiina ja voi alkaa ideoimaan ulkoasua tunnistettavammaksi. Ensimmäisessä vaiheessa toteutettiin runko, jonka ulkoasua lähdetään seuraavaksi muokkaamaan.
 
-## Vaihe 2: tunnistettava ulkoasu
+## Vaihe 2: värien valinta
 
 Sivu jäi hyvin yksinkertaiseksi. Lähdetään tekemään ulkoasusta tunnistettavampaa. Aloitetaan lisäämällä taustaväri sivulle `body`-selektoriin.
 
 ```css
 body {
-    margin: auto;
-    max-width: 45em;
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    ...
     background: gray;
 }
 ```
@@ -162,7 +183,7 @@ Vaihdetaan valikon ja sisällön väri valkoiseksi, jotta ne erottuvat taustasta
 
 ```css
 nav li {
-    display: inline-block;
+    ...
     padding: .5em;
     background: white;
 }
@@ -174,22 +195,10 @@ Seuraavaksi vaihdetaan sisällön taustan väri. Erotetaan sisältö muusta sivu
 ...
   </nav>
   <div class="content">
-  <form action="" method="POST">
-    <label for="username">Tunnus:</label>
-    <input type="text" name="username"><br>
-    <label for="password">Salasana:</label>
-    <input type="password" name="password"><br>
-    <input type="submit" value="Kirjaudu">
-  </form>
-  <h2>Tsoha App on esimerkkisivusto siitä, miten yksinkertainen verkkosivu on muotoiltu.</h2>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit libero non urna facilisis, quis
-	eleifend enim ullamcorper. Vivamus bibendum ex dolor. Maecenas a felis non odio pellentesque aliquet.
-	Curabitur nibh velit, vehicula et semper in, ultricies et ipsum. Morbi efficitur, purus eget fringilla
-	mollis, lacus arcu dignissim ante, ut mollis arcu ex eget tortor. Donec non massa sit amet arcu varius
-	elementum eu id lorem. Morbi varius nulla at dui suscipit porta. Maecenas volutpat euismod leo, sit amet
-	venenatis sapien rutrum sit amet.
-</div>
+    <form action="/login" method="POST">
+...
+    </p>
+  </div>
 ```
 
 Vaihdetaan `content`-luokan taustaväri. Kasvatetaan myös `padding`-arvoa, jottei sisältö oli aivan kiinni taustavärin reunoissa.
@@ -201,16 +210,18 @@ Vaihdetaan `content`-luokan taustaväri. Kasvatetaan myös `padding`-arvoa, jott
 }
 ```
 
-Asetetaan kirjautumislomakkeelle oma taustaväri, jotta se erottuu tekstistä.
+Asetetaan vielä kirjautumislomakkeelle oma taustaväri, jotta se erottuu tekstistä.
 
 ```css
 form {
-    display: block;
-    float: right;
-    padding: .5em;
+    ...
     background: blanchedalmond;
 }
 ```
+
+Tämän vaiheen muutosten jälkeen sivu näyttää seuraavalta:
+
+<img class="screenshot-large" src="img/ulkoasu8.png">
 
 Sivun värien lisääminen ja päättäminen on haastavaa, sillä värit jakavat mielipiteitä. Hyvän väriskaalan voi saada esimerkiksi käyttämällä yhtä pääväriä ja sen eri sävyjä. Valitsemalla päävärin lisäksi korostusvärin, joka kiinnittää käyttäjän huomion, saadaan aikaiseksi miellyttävä kokonaisuus.
 
@@ -221,7 +232,6 @@ Väritetyn sivuston ilme on hieman kulmikas. Lähdetään rakentamaan ilmettä h
 ```css
 .content {
    background: white;
-   padding: 1em;
    border-radius: .5em
 }
 ```
@@ -230,22 +240,31 @@ Nyt näyttää oudolta, että vain sisällön reunat on pyöristetyjä, joten py
 
 ```css
 .header {
-    background: sandybrown;
-    font-weight: bold;
-    padding: 2em 1em;
-    font-size: 2em;
+    ...
     border-radius: .5em;
     margin-top: .5em;
 }
 ```
 
+Pyöristetään myös kirjautumislomakkeen kulmat.
+
+```css
+form {
+    ...
+    border-radius: .5em;
+}
+```
+
+Pyöristykset näyttävät tältä:
+
+<img class="screenshot-large" src="img/ulkoasu9.png">
+
 Parannetaan seuraavaksi valikon ulkoasua ja käyttökokemusta. Tehdään valikon painikkeista pyöristetyt sekä kasvatetaan niiden `padding`- ja `margin`-arvoja, jotta ne olisivat hieman kauempana toisistaan.
 
 ```css
 nav li {
-    display: inline-block;
+    ...
     padding: .5em 1em;
-    background: white;
     border-radius: .5em;
     margin: .2em;
 }
@@ -255,7 +274,7 @@ Asetetaan valikon linkit keskelle sivua muokkaamalla itse listaa, jolla linkit o
 
 ```css
 nav ul {
-    padding: 0;
+    ...
     margin: .5em;
     text-align: center;
 }
@@ -278,19 +297,11 @@ nav li:hover {
 }
 ```
 
-Pyöristetaan vielä kirjautumislomakkeen kulmat.
+Näiden muutosten jälkeen sivu näyttää tältä:
 
-```css
-form {
-    display: block;
-    float: right;
-    padding: .5em;
-    background: blanchedalmond;
-    border-radius: .5em;
-}
-```
+<img class="screenshot-large" src="img/ulkoasu10.png">
 
-Sivulla on nyt tunnistettava ulkoasu. Sivun lopullinen ilme näyttää [tältä](https://millakortelainen.github.io/tsoha-app/) ja sen koodi on nähtävissä [GitHub-repositoriossa](https://github.com/millakortelainen/tsoha-app).
+Sivulla on nyt tunnistettava ulkoasu. Sivun lopullinen ilme näyttää [tältä](https://millakortelainen.github.io/tsoha-app/) ja sen koko koodi on nähtävissä [GitHub-repositoriossa](https://github.com/millakortelainen/tsoha-app).
 
 Lopulliseen ulkoasuun päädyttiin, kun haluttiin tuoda pehmeyttä sivulle. Keksittiin siis juoni, jota haluttiin lähteä toteuttamaan. Keskittymällä johonkin toiseen ominaisuuteen tai vaihtamalla komponenttien sijoittelua olisi ulkoasu voinut päätyä erilaiseksi.
 
