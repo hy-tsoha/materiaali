@@ -4,7 +4,7 @@ sub-sections:
       - sub-section-title: Oikeudet ja syötteet
       - sub-section-title: Tietoturva
       - sub-section-title: Käytettävyys
-      - sub-section-title: Ulkoasu ja tyylit
+      - sub-section-title: Ulkoasun toteutus
 
 ---
 # Osa 4

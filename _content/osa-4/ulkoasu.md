@@ -1,4 +1,4 @@
-## Ulkoasu ja tyylit
+## Ulkoasun toteutus
 
 ### Yhteinen ulkoasu
 
@@ -50,3 +50,11 @@ Tässä tapauksessa sivut näyttävät seuraavilta:
 <img class="screenshot" src="img/pohja1.png">
 
 <img class="screenshot" src="img/pohja2.png">
+
+### Ulkoasun suunnittelu
+
+Nettisivujen ulkoasun toteuttamiseen käytetään CSS-kieltä, jonka avulla voi määrittää sivun asettelun, värit, fontit, jne. Ulkoasun suunnittelu vaatii toisaalta tietoa CSS:n ominaisuuksista ja toisaalta graafista silmää. Voit katsoa [tästä](../../pages/ulkoasun_suunnittelu.html) esimerkin prosessista, jossa suunnitellaan ulkoasu ja toteutetaan se vaihe vaiheelta.
+
+### Ulkoasu kirjaston avulla
+
+Toinen tapa toteuttaa ulkoasu on käyttää valmista ulkoasukirjastoa. Tämän tavan etuna on, että ulkoasua ei tarvitse suunnitella tyhjästä vaan voi käyttää valmiita komponentteja, mutta toisaalta lopputulos ei ole välttämättä yksilöllinen. Suosittu kirjasto ulkoasun toteuttamiseen on Bootstrap, jonka käyttämisestä voit lukea lisää [tästä](../../pages/bootstrap.html).
