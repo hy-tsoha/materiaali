@@ -301,7 +301,7 @@ Näiden muutosten jälkeen sivu näyttää tältä:
 
 <img class="screenshot-large" src="img/ulkoasu10.png">
 
-Muotoillaan kirjautumislomake käyttämällä [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) asettelua. Vaihdetaan `form`-selektorin `display`-attribuutin arvoksi `grid`.
+Muotoillaan vielä kirjautumislomaketta käyttämällä [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)-asettelua. Asetetaan `form`-elementin `display`-arvoksi `grid`:
 
 ```css
 form {
@@ -310,21 +310,19 @@ form {
 }
 ```
 
-`gird` asettelu asettaa HTML-koodin tagit omiin soluihinsa. Tämä aiheuttaa sen, että `<br>`-tagi lomakkeessa lisää tyhjän solun `grid` asetteluun. Otetaan `<br>` tagi pois HTML-koodista, sillä sitä ei enää tarvita.
+Tämän seurauksena HTML-elementit asetellaan omiin soluihinsa. Muutetaan lomaketta niin, että siinä ei ole `br`-elementtejä, koska nämä lisäisivät tyhjän solun asetteluun:
 
 ```html
-...
-<form action="" method="POST">
-  <label for="username">Tunnus:</label>
-  <input type="text" name="username">
-  <label for="password">Salasana:</label>
-  <input type="password" name="password">
-  <input type="submit" value="Kirjaudu">
-</form>
-...
+  <form action="/login" method="POST">
+    <label for="username">Tunnus:</label>
+    <input type="text" name="username">
+    <label for="password">Salasana:</label>
+    <input type="password" name="password">
+    <input type="submit" value="Kirjaudu">
+  </form>
 ```
 
-Määritetää lomakkeen maksimi leveydeksi `15em` ja `grid` asettelun sarakkeet siten, että kentän nimen leveys on `5em` ja syöte kentän leveys on `10em`.. Lisätään myös sarakkeiden väliin `.3em` tilaa `grid-row-gap` attribuutilla. 
+Määritetään lomakkeen maksimileveydeksi `15em` ja `grid`-asettelun sarakkeet siten, että kentän nimen leveys on `5em` ja kentän leveys on `10em`. Lisätään myös sarakkeiden väliin `.3em` tilaa `grid-row-gap`-ominaisuuden avulla.
 
 ```css
 form {
@@ -335,12 +333,10 @@ form {
 }
 ```
 
-Kirjaudu painike mahtuu huonosti ensimmäiseen sarakkeeseen, joten vaihdetaan sen paikkaa toiseen sarakkeeseen. Annetaan painikkeelle id-tunnus, jotta se erottuu muista `input`-elementeistä.
+Kirjautumispainike mahtuu huonosti ensimmäiseen sarakkeeseen, joten vaihdetaan sen paikkaa toiseen sarakkeeseen. Annetaan painikkeelle id-tunnus, jotta se erottuu muista `input`-elementeistä.
 
 ```html
-...
-	<input id="login-button" type="submit" value="Kirjaudu">
-...
+  <input id="login-button" type="submit" value="Kirjaudu">
 ```
 
 Siirretään painike alkamaan `grid` asettelun sarakkeesta 2.
@@ -351,13 +347,13 @@ form #login-button {
 }
 ```
 
-Selektorista olisi voinut jättää määreen `form` pois, sillä koodissa on vain yksi id-tunnus `login-button`. Koodin luettavuus kuitenkin paranee, kun määrittää `form` lisätään selektoriin. 
+Huomaa, että selektorista olisi voinut jättää määreen `form` pois, sillä koodissa on vain yksi id-tunnus `login-button`. Koodin luettavuus kuitenkin paranee, kun määre `form` lisätään selektoriin. 
 
-Muotoillaan painiketta hieman. Sijoitetaan se lomakkeen oikeaan alakulmaan muuttamalla painikkeen `margin-left` arvoa. Kun painikkeen leveydeksi asettaa `5em`, niin vasemman marginaalin leveydeksi voidaan asettaa `5em`. Tällöin se täyttää toisen sarakkeen leveyden, joka asetettiin alussa `10em` leveäksi. Muilla attribuuteilla muokataan painikkeen ulkonäköä.
+Muotoillaan painiketta hieman. Sijoitetaan se lomakkeen oikeaan alakulmaan muuttamalla painikkeen `margin-left`-arvoa. Kun painikkeen leveydeksi asetetaan `5em`, vasemman marginaalin leveydeksi voidaan asettaa `5em`. Tällöin se täyttää toisen sarakkeen leveyden, joka asetettiin alussa `10em` leveäksi. Muilla attribuuteilla muokataan painikkeen ulkonäköä.
 
 ```css
-fomr #login-button{
-...
+form #login-button{
+    ...
     padding:5px;
     border: none;
     text-align: center;
@@ -367,7 +363,7 @@ fomr #login-button{
 }
 ```
 
-Lisätään painkkeelle ominaisuus, jossa sen taustaväri tummenee, kun sen päälle vie hiiren. Tekstin väri vaihtuu myös valkoiseksi, sillä taustaväri on tumma, jolloin tumma teksti ei näy.  
+Lisätään vielä painikkeelle ominaisuus, jonka avulla sen taustaväri tummenee, kun sen päälle vie hiiren. Tekstin väri vaihtuu myös valkoiseksi, sillä taustaväri on tumma, jolloin tumma teksti ei näy.
 
 ```css
 form #login-button:hover {
@@ -379,7 +375,7 @@ form #login-button:hover {
 Muutetaan tekstien "Tunnus:" ja "Salasana:" sijaintia, sillä ne näyttävät olevan liian ylhäällä suhteessa syötekenttiin. Tehdään tämä asettamalla pystysuoraksi marginaaliksi `auto`, jolloin elementit keskittyvät automaattisesti tässä suhteessa. Marginaalia ei tarvitse lisätä vaakasuoraan, joten toiseksi parameteriksi marginaali saa arvon 0.
 
 ```css
-form label, input{
+form label, input {
     margin: auto 0;
 }
 ```
@@ -387,13 +383,17 @@ Kirjautumislomake on hieman ahtaasti kiinni tekstissä, joten lisätään sille 
 
 ```css
 form {
-...
+    ...
     margin-bottom: 2em;
     margin-left: 2em;
 }
 ```
 
-Sivulla on nyt tunnistettava ulkoasu. Sivun lopullinen ilme näyttää [tältä](https://millakortelainen.github.io/tsoha-app/) ja sen koko koodi on nähtävissä [GitHub-repositoriossa](https://github.com/millakortelainen/tsoha-app).
+Nyt lomakkeen muotoilu on valmis, ja lopullinen sivu näyttää tältä:
+
+<img class="screenshot-large" src="img/ulkoasu11.png">
+
+Sivulla on nyt tunnistettava ulkoasu. Voit testata lopullista sivua [täällä](https://millakortelainen.github.io/tsoha-app/) ja sivun koko koodi on saatavilla myös [GitHub-repositoriossa](https://github.com/millakortelainen/tsoha-app).
 
 Lopulliseen ulkoasuun päädyttiin, kun haluttiin tuoda pehmeyttä sivulle. Keksittiin siis juoni, jota haluttiin lähteä toteuttamaan. Keskittymällä johonkin toiseen ominaisuuteen tai vaihtamalla komponenttien sijoittelua olisi ulkoasu voinut päätyä erilaiseksi.
 
