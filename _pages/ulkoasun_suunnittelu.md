@@ -305,8 +305,8 @@ Muotoillaan vielä kirjautumislomaketta käyttämällä [grid](https://developer
 
 ```css
 form {
-    display: grid;
     ...
+    display: grid;
 }
 ```
 
