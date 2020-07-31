@@ -5,37 +5,21 @@ title: TODO
 
 # TODO
 
-## Sekalaista:
+* Sivujen järjestys sivupalkin yläosassa tulisi voida määrittää. Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
 
-✔️ Github Actions workflow on lisätty repoon. Aina kun pushaa masteriin, niin gh-pages branchiin buildataan uusi käännetty versio, joka julkaistaan. Vaihdoin kaikki palintext koodilaatikot prompt koodilaatikoiksi. 
-
-* Jos koodilaatikkoja on useita peräkkäin ja niihin on asetettu tiedoston nimi, jälkimmäisessä tiedoston nimi näkyy oudossa paikassa.
-✔️ Tiedoston nimi on korjattu oikeaan paikkaan.
-
-* Onko tapaa määrittää sivujen järjestys sivupalkin yläosiossa? Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
-
-* Sivusto ei toimi vielä kovin hyvin mobiililaitteella (valikon kanssa ongelmia ja miten kuvien leveys pitäisi merkitä?)
-✔️ Valikko toimii paremmin mobiilissa. Kuvien leveys on asetettu pieneksi mobiilissa. Se on asetettu `_content.scss` tiedostossa ja sielä on määritelty, kun näytön leveys on alle 500px niin käytetään pienempiä kuvia
-```css
-@media screen and (max-width: 500px) {
-    .page-content {
-        margin-left: 3em;
-    }
-
-    img {
-        max-width: 300px;
-    }
-}
-```
-Nyt toimii mobiilissa, voisi vielä harkita että taustakuvaa ei näytetä mobiilissa (ei näy kovin hyvin ja voi kestää aikaa ladata se).
-
-Ulkoasun suunnitelua käsitteleva osa on [täällä](ulkoasun_suunnittelu.html)
-
-## Materiaaliin liittyvää
+* Ulkoasun suunnittelun materiaali on julkaistu. Puuttuu vielä kuva käsin tehdystä suunnitelmasta sekä sen repositorion voisi siirtää hy-tsoha-organisaation alaisuuteen.
 
 * Koodiesimerkkien tyyliin tulisi kiinnittää huomiota: miten toteuttaa asioita tyylikkäästi Pythonilla? Esim. vertailut kun on `None` tai jotain tyhjää. Mitä Pythonin tyyliohjetta seurataan ja miten tarkasti?
 
-* Esimerkeissä haetaan nyt tietoa tietokannasta tupleina mutta voisi käyttää myös pistenotaatiota ja se olisi parempi suunta.
+* Esimerkeissä haetaan nyt tietoa tietokannasta tupleina, mutta voisi käyttää myös pistenotaatiota ja se olisi parempi suunta.
+
+* Ensimmäisessä tietokantaesimerkissä haetaan erikseen rivien määrä ja rivien sisältö. Tämä ei ole hyvä tapa.
+
+* Pitäisikö dokumentoinnista ohjeistaa enemmän?
+
+* Vertaisarvioinnin tekemisen ohjeet puuttuvat vielä.
+
+* Tulisi olla vielä sivu, jossa on ohjeita kurssin ohjaajalle.
 
 ## Taulukoista 
 
