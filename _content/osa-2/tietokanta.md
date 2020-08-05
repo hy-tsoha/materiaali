@@ -77,6 +77,8 @@ Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjasto
 
 Ensimmäinen kirjasto `flask-sqlalchemy` on SQLAlchemy-rajapinta, jonka kautta voi käyttää tietokantaa Flaskissa. Toinen kirjasto `psycopg2` puolestaan mahdollistaa yhteyden muodostamisen PostgreSQL-tietokantaan.
 
+Jos käytät Mac-järjestelmää eikä jälkimmäinen komento toimi, voit kokeilla korvata nimen `psycopg2` nimellä `psycopg2-binary`.
+
 Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan _osoite_. Tässä tapauksessa osoite on muotoa `postgresql:///user`, missä `user` on jälleen tietokoneen käyttäjän tunnus, joka näkyy myös PostgreSQL-tulkissa rivien alussa.
 
 Huomaa, että eri järjestelmissä vaadittu tapa antaa tietokannan osoite voi olla vähän erilainen ja tämä riippuu myös siitä, miten tietokanta on asennettu.
