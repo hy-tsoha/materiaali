@@ -15,6 +15,8 @@ title: TODO
 
 * Ensimmäisessä tietokantaesimerkissä haetaan erikseen rivien määrä ja rivien sisältö. Tämä ei ole hyvä tapa.
 
+* Tiedoston `requirements.txt` roolista pitäisi kertoa enemmän. Olisiko parempi muokata sitä käsin niin, että mukana on vain tarvittava?
+
 * Pitäisikö dokumentoinnista ohjeistaa enemmän?
 
 * Vertaisarvioinnin tekemisen ohjeet puuttuvat vielä.
