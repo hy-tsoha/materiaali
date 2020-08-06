@@ -17,6 +17,8 @@ title: TODO
 
 * Tiedoston `requirements.txt` roolista pitäisi kertoa enemmän. Olisiko parempi muokata sitä käsin niin, että mukana on vain tarvittava?
 
+* Materiaali voisi selventää, ovatko id-numerot 1, 2, 3, ... jne kelvollisia linkeissä vai pitäisikö käyttää satunnaisia? Todellisissa palveluissa (kuten YouTubessa) on satunnaiset.
+
 * Pitäisikö dokumentoinnista ohjeistaa enemmän?
 
 * Vertaisarvioinnin tekemisen ohjeet puuttuvat vielä.
