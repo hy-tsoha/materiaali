@@ -21,8 +21,6 @@ title: TODO
 
 * Pitäisikö dokumentoinnista ohjeistaa enemmän?
 
-* Vertaisarvioinnin tekemisen ohjeet puuttuvat vielä.
-
 * Tulisi olla vielä sivu, jossa on ohjeita kurssin ohjaajalle.
 
 ## Taulukoista 
