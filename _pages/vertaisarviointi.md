@@ -13,7 +13,7 @@ Vertaisarvioinnin ohje:
 2. Tutustu ensin sovellukseen käyttämällä sitä Herokussa. Kiinnitä huomiota siihen, miten sovellus toimii ja onko sitä mukava käyttää.
 3. Tämän jälkeen käy läpi sovelluksen koodi ja tietokannan rakenne. Mieti, mitä asioita sovelluksen toteutuksessa voisi parantaa.
 4. Lisää arvioitavan työn GitHub-sivulle issue, jossa raportoit kohdissa 2 ja 3 huomaamasi asiat. Koeta kirjoittaa raportti niin, että se auttaa työn tekijää.
-5. Lisää URL-osoite (linkki) kirjoittamaasi issueen Labtooliin. Huomaa, että URL alkaa protokollan määrittelyllä (https).
+5. Lisää URL-osoite (linkki) kirjoittamaasi issueen Labtooliin. Varmista linkkiä lisätessäsi, että URL alkaa protokollan määrittelyllä (https/http).
 
 Huomaa, että "Hyvältä näyttää" tms. ei ole riittävä raportti. Jos työ on jo hyvässä vaiheessa, voit huomauttaa myös pienemmistä asioista. Älä kuitenkaan kirjoita mitään raporttiin vain sen takia, että siihen tulisi enemmän pituutta.
 
