@@ -23,6 +23,28 @@ title: TODO
 
 * Tulisi olla vielä sivu, jossa on ohjeita kurssin ohjaajalle.
 
+## 2. deadlinessa ilmenneitä asioita
+
+* Materiaalissa olevassa esimerkissä uuden tunnuksen luonnissa kysytään salasana vain kerran, mikä on huono malli.
+
+* Lähes kaikissa Bootstrapia käyttävissä sovelluksissa sivu on liian leveä ja etenkin lomakkeet näyttävät huonoilta.
+
+* Materiaalin tulisi opastaa enemmän tyyliasioissa (muuttujien nimeäminen, merkkijonojen hipsut, jne.)
+
+* Materiaali ei kerro `flash`-funktiosta, se voisi olla hyödyllinen tietää
+
+* Ei ole selvää, milloin SQL-komento voi aiheuttaa virheen (ja tulee olla `try`-rakenne) ja milloin ei
+
+* Herokussa kellonaika on pielessä (ymmärrettävästi) Suomeen verrattuna, mitähän sille kannattaisi tehdä
+
+* HTML:n komponentit päivämäärän ja ajan kysymiseen ovat ongelmallisia (tätä ei ole käsitelty materiaalissa)
+
+* REFERENCES puuttuu tietokannasta melko monilta. Materiaali voisi myös opastaa enemmän käyttämään UNIQUE-määrettä yms.
+
+* Mikä on hyvä tapa jakaa pitkä SQL-komento usealle riville koodissa?
+
+* Kuinka tyhjentää istunnon avain, jos sitä ei ole välttämättä olemassa? Avaimen tarkastus tai `pop` ovat ratkaisuja.
+
 ## Taulukoista 
 
 Tavallinen taulukko ja tietokantataulu on erinäköisiä. Tietokanta taulua merkitään luokalla `db-table`. Markdownilla voi hyvin kirjoittaa tavallisia taulukoita ja tietokantatauluja, joilla ei ole otsikkoa. Jos tekee tietokantataulun markdownilla, niin taululle annetaan luokka `db-table` merkitsemällä se aaltosulkeisiin ennen taulukkoa.
