@@ -6,43 +6,26 @@ title: TODO
 # TODO
 
 * Sivujen järjestys sivupalkin yläosassa tulisi voida määrittää. Nyt meni sattumalta hyvin mutta aakkosten mukaan järjestäminen ei ole aina toimiva tapa.
-
 * Ulkoasun suunnittelun materiaali on julkaistu. Puuttuu vielä kuva käsin tehdystä suunnitelmasta sekä sen repositorion voisi siirtää hy-tsoha-organisaation alaisuuteen.
-
 * Koodiesimerkkien tyyliin tulisi kiinnittää huomiota: miten toteuttaa asioita tyylikkäästi Pythonilla? Esim. vertailut kun on `None` tai jotain tyhjää. Mitä Pythonin tyyliohjetta seurataan ja miten tarkasti?
-
 * Esimerkeissä haetaan nyt tietoa tietokannasta tupleina, mutta voisi käyttää myös pistenotaatiota ja se olisi parempi suunta.
-
 * Ensimmäisessä tietokantaesimerkissä haetaan erikseen rivien määrä ja rivien sisältö. Tämä ei ole hyvä tapa.
-
 * Tiedoston `requirements.txt` roolista pitäisi kertoa enemmän. Olisiko parempi muokata sitä käsin niin, että mukana on vain tarvittava?
-
 * Materiaali voisi selventää, ovatko id-numerot 1, 2, 3, ... jne kelvollisia linkeissä vai pitäisikö käyttää satunnaisia? Todellisissa palveluissa (kuten YouTubessa) on satunnaiset.
-
 * Pitäisikö dokumentoinnista ohjeistaa enemmän?
-
 * Tulisi olla vielä sivu, jossa on ohjeita kurssin ohjaajalle.
 
 ## 2. deadlinessa ilmenneitä asioita
 
 * Materiaalissa olevassa esimerkissä uuden tunnuksen luonnissa kysytään salasana vain kerran, mikä on huono malli.
-
 * Lähes kaikissa Bootstrapia käyttävissä sovelluksissa sivu on liian leveä ja etenkin lomakkeet näyttävät huonoilta.
-
 * Materiaalin tulisi opastaa enemmän tyyliasioissa (muuttujien nimeäminen, merkkijonojen hipsut, jne.)
-
 * Materiaali ei kerro `flash`-funktiosta, se voisi olla hyödyllinen tietää
-
 * Ei ole selvää, milloin SQL-komento voi aiheuttaa virheen (ja tulee olla `try`-rakenne) ja milloin ei
-
 * Herokussa kellonaika on pielessä (ymmärrettävästi) Suomeen verrattuna, mitähän sille kannattaisi tehdä
-
 * HTML:n komponentit päivämäärän ja ajan kysymiseen ovat ongelmallisia (tätä ei ole käsitelty materiaalissa)
-
 * REFERENCES puuttuu tietokannasta melko monilta. Materiaali voisi myös opastaa enemmän käyttämään UNIQUE-määrettä yms.
-
 * Mikä on hyvä tapa jakaa pitkä SQL-komento usealle riville koodissa?
-
 * Kuinka tyhjentää istunnon avain, jos sitä ei ole välttämättä olemassa? Avaimen tarkastus tai `pop` ovat ratkaisuja.
 
 ## Taulukoista 
