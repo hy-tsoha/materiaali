@@ -12,6 +12,9 @@ title: TODO
 * Ensimmäisessä tietokantaesimerkissä haetaan erikseen rivien määrä ja rivien sisältö. Tämä ei ole hyvä tapa.
 * Tiedoston `requirements.txt` roolista pitäisi kertoa enemmän. Olisiko parempi muokata sitä käsin niin, että mukana on vain tarvittava?
 * Materiaali voisi selventää, ovatko id-numerot 1, 2, 3, ... jne kelvollisia linkeissä vai pitäisikö käyttää satunnaisia? Todellisissa palveluissa (kuten YouTubessa) on satunnaiset.
+  * Kuten olikin jo hieman keskustelua, myös Youtube käyttää id:tä linkissä, mutta järjestelmän hajauttamisen johdosta niissä id:issä on hankala käyttää juoksevaa numerointia, joten Youtube generoi sen muulla tavoin. Youtube tarjoaa kanavien osoitteiksi vaihtoehtoisesti myös kustomoitua urlia (mutta ei kaikille kanaville) tai käyttäjätunnukseen perustuvaa osoitetta (riippuen kanavan luontiajasta, legacy)
+  * Myös videoiden urlit perustuvat videoiden id-tunnukseen vastaavasti kuin normaalit kanavien tunnukset (kuulemma Youtube käyttää hieman muunnettua base64:sta)
+  * Tässä voi tietysti puhua myös tietoturvasta ja tunnusten käymisestä läpi järjestyksessä, mutta mielestäni tsohassa olisi ensisijaista toteuttaa pääsynhallinta oikein, sen sijaan että luotetaan siihen että kun osoite on piilossa kukaan asiaton ei löydä sinne.
 * Pitäisikö dokumentoinnista ohjeistaa enemmän?
 * Tulisi olla vielä sivu, jossa on ohjeita kurssin ohjaajalle.
 
@@ -23,6 +26,7 @@ title: TODO
 * Materiaali ei kerro `flash`-funktiosta, se voisi olla hyödyllinen tietää
 * Ei ole selvää, milloin SQL-komento voi aiheuttaa virheen (ja tulee olla `try`-rakenne) ja milloin ei
 * Herokussa kellonaika on pielessä (ymmärrettävästi) Suomeen verrattuna, mitähän sille kannattaisi tehdä
+  * Herokun dynot, samoin kuin suurin osa maailman palvelimista, on UTC-ajassa. Oikea ratkaisu on tallettaa ero sovellukseen ja muuntaa ajat ennen kuin ne lähetetään käyttäjälle, mutta Heroku sallii myös aikavyöhykkeen vaihtamisen https://help.heroku.com/JZKJJ4NC/how-do-i-set-the-timezone-on-my-dyno
 * HTML:n komponentit päivämäärän ja ajan kysymiseen ovat ongelmallisia (tätä ei ole käsitelty materiaalissa)
 * REFERENCES puuttuu tietokannasta melko monilta. Materiaali voisi myös opastaa enemmän käyttämään UNIQUE-määrettä yms.
 * Mikä on hyvä tapa jakaa pitkä SQL-komento usealle riville koodissa?
