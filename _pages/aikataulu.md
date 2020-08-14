@@ -43,7 +43,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 ### Vertaisarvioinnit
 
-Kurssiin kuuluu kaksi vertaisarviointia, joissa annetaan palautetta toisen opiskelijan työstä. Saat ohjeet vertaisarvointiin sähköpostitse välipalautusten 2 ja 3 jälkeen. 
+Kurssiin kuuluu kaksi vertaisarviointia, joissa annetaan palautetta toisen opiskelijan työstä. Saat ohjeet vertaisarviointiin sähköpostitse välipalautusten 2 ja 3 jälkeen. 
 Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin ohje](vertaisarviointi.html)
 
 ### Lopullinen palautus
