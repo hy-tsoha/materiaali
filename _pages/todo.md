@@ -17,6 +17,7 @@ title: TODO
   * Tässä voi tietysti puhua myös tietoturvasta ja tunnusten käymisestä läpi järjestyksessä, mutta mielestäni tsohassa olisi ensisijaista toteuttaa pääsynhallinta oikein, sen sijaan että luotetaan siihen että kun osoite on piilossa kukaan asiaton ei löydä sinne.
 * Pitäisikö dokumentoinnista ohjeistaa enemmän?
 * Tulisi olla vielä sivu, jossa on ohjeita kurssin ohjaajalle.
+* Materiaalin linkit toimivat ilman .html, se olisi parempi tapa tehdä linkit
 
 ## 2. deadlinessa ilmenneitä asioita
 
