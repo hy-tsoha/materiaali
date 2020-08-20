@@ -18,6 +18,7 @@ title: TODO
 * Pitäisikö dokumentoinnista ohjeistaa enemmän?
 * Tulisi olla vielä sivu, jossa on ohjeita kurssin ohjaajalle.
 * Materiaalin linkit toimivat ilman .html, se olisi parempi tapa tehdä linkit
+* Jinjan rooli on epäselvä (missä se suoritetaan, mitä sillä kannattaa tehdä)
 
 ## 2. deadlinessa ilmenneitä asioita
 
