@@ -8,7 +8,10 @@ title: Dokumentaatio
 Dokumentaatio auttaa lukijoitaan ymmärtämään sovellusta paremmin. Lukija 
 voit olla sinä itse kun olet jo unohtanut sovelluksen yksityiskohdat, 
 tai se voi olla joku repositoriosi sattumalta löytänyt, joka harkitsee 
-sovelluksen kokeilemista, tai joku muu jolla on aivan eri tavoitteet.
+sovelluksen kokeilemista, tai joku muu jolla on aivan eri tavoitteet. 
+Harjoitustyön tapauksessa lukija on käytännössä usein toinen opiskelija 
+tai työn ohjaaja, mutta dokumentointi kannattaa kirjoittaa ajatuksella, 
+että dokumentaatio on suunnattu alla mainitulle käyttäjäryhmille.
 
 Kannattaa lukea aluksi [tämä johdatus](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/).
 
@@ -38,20 +41,26 @@ konfiguraatio)
 Loppukäyttäjiä varten:
 - Sovelluksen käyttöliittymän olisi syytä olla helposti ymmärrettävä, 
 mutta välillä voi olla tarpeen kirjoittaa dokumentaatiota myös 
-loppukäyttäjille. Dokumentaatio ei kuitenkaan ole oikeutus huonolle 
-käyttöliittymälle.
+loppukäyttäjille.
 
-Huolehdi aina että dokumentaatio on ajan tasalla ja että sitä on
-tarvittaessa helppo päivittää! Vanhentunut ja harhaanjohtava dokumentaatio
-voi olla pahimmillaan isompi ongelma kuin puuttuva dokumentaatio.
+## Ohjeita
 
-Huomioi dokumentaatiota kirjoittaessasi että itsellesi (tällä hetkellä)
-sovelluksen itsestään selvät asiat eivät välttämättä ole itsestään selviä
-dokumentaation lukijalle.
+- Huolehdi aina että dokumentaatio on ajan tasalla. Vanhentunut ja 
+harhaanjohtava dokumentaatio voi olla pahimmillaan isompi ongelma kuin 
+puuttuva dokumentaatio.
+- Edelliseen kohtaan liittyen, huolehdi että dokumentaatiota on 
+tarvittaessa helppo päivittää! Jos dokumentaation päivittäminen on 
+hankalaa tai erillään koodista, päivittäminen on helppo lykytä kunnes se 
+unohtuu.
+- Dokumentaatio ei ole oikeutus huonolle käyttöliittymälle.
+- Huomioi dokumentaatiota kirjoittaessasi että itsellesi (tällä 
+hetkellä) sovelluksen itsestään selvät asiat eivät välttämättä ole 
+itsestään selviä dokumentaation lukijalle.
+- Kirjoita harjoitustyön dokumentaatio 
+[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)-muodossa.
 
-Kirjoita harjoitustyön dokumentaatio [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)-muodossa.
+## Lisää dokumentoinnista yleisesti
 
-Hyödyllisiä linkkejä:
 - [Dokumentoinnin periaatteista](https://www.writethedocs.org/guide/writing/docs-principles/)
 - [Kirjoitus ensimmäisen ohjemiston dokumentoinnista](https://www.sitepoint.com/writing-software-documentation/)
 - [Dokumentaation jaottelu osa-alueisiin](https://documentation.divio.com/introduction/)
