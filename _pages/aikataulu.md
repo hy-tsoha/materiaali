@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Syksyn 2020 periodin 1 ryhmän aikataulu on seuraava:
 
-| ti 1.9.2020 | Kurssin aloitusluento |
+| ti 1.9.2020 | Kurssin aloitusluento ([Zoom-linkki](https://helsinki.zoom.us/j/65451431117?pwd=aFNxbVZjNk40d3kvcHppNWlxMXB4UT09)) |
 | su 6.9.2020 | Välipalautus 1 |
 | su 20.9.2020 | Välipalautus 2  |
 | ke 23.9.2020 | Vertaisarvioinnin deadline |
