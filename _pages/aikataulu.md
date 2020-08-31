@@ -4,19 +4,17 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Loppukesän 2020 kurssin aikataulu on seuraava:
+Syksyn 2020 periodin 1 ryhmän aikataulu on seuraava:
 
-| ma 20.7.2020 | Kurssin aloitusluento ([nauhoite](https://www.helsinki.fi/unitube/video/079775c6-4425-462a-b735-744e7094c4b7)) |
-| su 26.7.2020 | Välipalautus 1 |
-| su 9.8.2020 | Välipalautus 2  |
-| ke 12.8.2020 | Vertaisarvioinnin deadline |
-| su 23.8.2020 | Välipalautus 3 |
-| ke 26.8.2020 | Vertaisarvioinnin deadline |
-| su 30.8.2020 | Lopullinen palautus |
+| ti 1.9.2020 | Kurssin aloitusluento |
+| su 6.9.2020 | Välipalautus 1 |
+| su 20.9.2020 | Välipalautus 2  |
+| ke 23.9.2020 | Vertaisarvioinnin deadline |
+| su 4.10.2020 | Välipalautus 3 |
+| ke 7.10.2020 | Vertaisarvioinnin deadline |
+| su 18.10.2020 | Lopullinen palautus |
 
-Loppukesän ryhmän ohjaaja on Antti Laaksonen.
-
-Voit ottaa ohjaajaan yhteyttä [sähköpostitse](mailto:ahslaaks@cs.helsinki.fi) tai Telegramissa. Ohjausta voidaan järjestää Telegramissa tai Zoomissa.
+Ryhmän ohjaajat ovat Antti Laaksonen ja Terho Uotila.
 
 ## Kurssin eteneminen
 
@@ -26,7 +24,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?](aiheen_valinta.html)
-* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2020.V.A.2) ja ilmoita siellä projektisi GitHub-osoite.
+* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2020.S.A.1) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
