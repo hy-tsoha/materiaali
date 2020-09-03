@@ -24,7 +24,9 @@ Ohjaajan tehtävistä ja työmäärästä sovitaan tarkemmin kurssin vastuuhenki
 
 Ohjaajan tuntipalkka on 17 €. Ohjaajalle maksetaan 3 &middot; 17 € kurssin loppuun asti jatkaneesta opiskelijasta ja 0.5 &middot; 17 € keskeyttäneestä opiskelijasta. Tämä kannattaa ottaa huomioon siinä, paljonko aikaa käyttää palautteen antamiseen ja arviointiin.
 
-Lisäksi ohjauksesta maksetaan viikossa 2 &middot; 17 €, jos ohjattavana on alle 30 opiskelijaa, 4 &middot; 17 €, jos ohjattavana on 30–50 opiskelijaa, 6 &middot; 17 €, jos ohjattavana on 50–100 opiskelijaa, ja 8 &middot; 17 €, jos ohjattavana on yli 100 opiskelijaa.
+Lisäksi ohjauksesta maksetaan viikossa 17 € tunnilta. Tyypillisesti yhdellä ohjaajalla on 2 tuntia ohjausta viikossa, mutta tästä sovitaan tarkemmin ennen kurssin alkua.
+
+<!-- Lisäksi ohjauksesta maksetaan viikossa 2 &middot; 17 €, jos ohjattavana on alle 30 opiskelijaa, 4 &middot; 17 €, jos ohjattavana on 30–50 opiskelijaa, 6 &middot; 17 €, jos ohjattavana on 50–100 opiskelijaa, ja 8 &middot; 17 €, jos ohjattavana on yli 100 opiskelijaa. -->
 
 Kurssin lopussa ohjaaja toimittaa Reijo Sivenille raportin tunneista, jonka perusteella palkka maksetaan.
 
