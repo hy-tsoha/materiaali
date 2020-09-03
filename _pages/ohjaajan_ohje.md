@@ -28,7 +28,7 @@ Lisäksi ohjauksesta maksetaan viikossa 17 € tunnilta. Tyypillisesti yhdellä 
 
 <!-- Lisäksi ohjauksesta maksetaan viikossa 2 &middot; 17 €, jos ohjattavana on alle 30 opiskelijaa, 4 &middot; 17 €, jos ohjattavana on 30–50 opiskelijaa, 6 &middot; 17 €, jos ohjattavana on 50–100 opiskelijaa, ja 8 &middot; 17 €, jos ohjattavana on yli 100 opiskelijaa. -->
 
-Kurssin lopussa ohjaaja toimittaa Reijo Sivenille raportin tunneista, jonka perusteella palkka maksetaan.
+Kurssin lopussa ohjaaja toimittaa Reijo Sivenille raportin tunneista ja vastuullaan olleiden opiskelijoiden määristä, minkä perusteella palkka maksetaan.
 
 ## Miten ohjaajaksi?
 
