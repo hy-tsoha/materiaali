@@ -18,7 +18,7 @@ Tässä on kolme esimerkkiä mahdollisista aiheista, mutta voit mainiosti keksi�
 * Käyttäjä voi luoda tunnuksen, lähettää viestejä ja luoda uusia ketjuja
 * Käyttäjä pystyy muokkaamaan viestiä ja poistamaan sen myöhemmin
 * Viestejä voi etsiä hakutoiminnolla
-* Keskusteluun voi luoda salaisen alueen, jolle on pääsy vain tietyillä käyttäjillä
+* Sovellukseen voi luoda myös salaisia alueita, jolle on pääsy vain tietyillä käyttäjillä
 
 ### Opetussovellus
 
