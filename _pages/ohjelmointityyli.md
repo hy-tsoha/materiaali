@@ -110,19 +110,8 @@ def add_message(user_id, content):
 
 Tässä funktio palauttaa aina lopuksi `True` eikä voi koskaan palauttaa `False`. Koska palautusarvo on aina sama, siitä ei ole hyötyä.
 
-## 10. Virheenkäsittely
+## 10. Koodi funktioissa
 
-Rakennetta `try`-`except` ei kannata käyttää turhaan seuraavan kaltaisesti:
+Koodia voi olla hankala lukea, jos funktiot ovat pitkiä. Tällöin kannattaa miettiä, voisiko funktion jakaa useiksi funktioiksi.
 
-```python
-try:
-    sql = "INSERT INTO messages (user_id,content) VALUES (:user_id,:content)"
-    db.session.execute(sql,{"user_id":user_id,"content":content})
-    db.session.commit()
-except:
-    return False
-```
-
-Ei ole syytä, miksi komento `INSERT` ei onnistuisi tässä (koska rivin lisäämistä tauluun ei ole rajoitettu), joten ei ole tarpeen varautua virheeseen.
-
-Toki on mahdollista, että sovellus menettää jostain syystä yhteyden tietokantaan, mutta tällöin ei ole mitään tehtävissä muutenkaan.
+Jos useassa paikassa toistuu samanlainen koodi, siitä kannattaa pyrkiä tekemään funktio, jota voidaan kutsua.
