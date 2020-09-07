@@ -456,14 +456,6 @@ Moikka, Anna
 Moikka, Uolevi
 ```
 
-## Tyyliohjeet
-
-[Pythonin tyyliohje](https://www.python.org/dev/peps/pep-0008/) (PEP 8) antaa neuvoja Python-ohjelmoinnin tyyliasioihin. Myös [Googlen tyyliohje](https://google.github.io/styleguide/pyguide.html) on tutustumisen arvoinen.
-
-Tyyliohjeet antavat hyvän lähtökohdan koodin kirjoittamiselle. Esimerkiksi yleisiä käytäntöjä ovat, että sisennyksen leveys on neljä välilyöntiä ja nimissä kaikki kirjaimet ovat pieniä ja sanojen välissä on alaviivoja (esimerkiksi `max_length`).
-
-Tärkein asia on kuitenkin, että koodin tyyli on _yhtenäinen_ sovelluksen sisällä.
-
 ## Lisäaiheita
 
 ### Merkkijonon muotoilu
