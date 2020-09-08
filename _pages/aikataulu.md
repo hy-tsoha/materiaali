@@ -16,6 +16,8 @@ Syksyn 2020 periodin 1 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaajat ovat Antti Laaksonen ja Terho Uotila.
 
+Voit saada ohjausta harjoitustyön tekemiseen Telegramissa sekä keskiviikkoisin klo 16–19 [tietokantapajassa](https://tikape.mooc.fi/syksy-2020/pages/paja.html).
+
 ## Kurssin eteneminen
 
 Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautusten deadline on klo 23:59 sunnuntaina.
