@@ -18,6 +18,7 @@ title: TODO
 * Pitäisikö dokumentoinnista ohjeistaa enemmän?
 * Materiaalin linkit toimivat ilman .html, se olisi parempi tapa tehdä linkit
 * Jinjan rooli on epäselvä (missä se suoritetaan, mitä sillä kannattaa tehdä)
+* Kuvien tallentaminen tietokantaan ja näyttäminen Flaskilla
 
 ## 2. deadlinessa ilmenneitä asioita
 
