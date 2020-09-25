@@ -18,6 +18,8 @@ title: TODO
 * Pitäisikö dokumentoinnista ohjeistaa enemmän?
 * Materiaalin linkit toimivat ilman .html, se olisi parempi tapa tehdä linkit
 * Jinjan rooli on epäselvä (missä se suoritetaan, mitä sillä kannattaa tehdä)
+* Esimerkissä `visible`-sarake on `INTEGER`, parempi olisi `BOOLEAN`
+* Pitäisi kertoa tarkemmin, miten SQL-komentojen parametrit toimivat
 
 ## 2. deadlinessa ilmenneitä asioita
 
