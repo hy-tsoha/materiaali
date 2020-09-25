@@ -19,7 +19,7 @@ title: TODO
 * Materiaalin linkit toimivat ilman .html, se olisi parempi tapa tehdä linkit
 * Jinjan rooli on epäselvä (missä se suoritetaan, mitä sillä kannattaa tehdä)
 * Esimerkissä `visible`-sarake on `INTEGER`, parempi olisi `BOOLEAN`
-* Pitäisi kertoa tarkemmin, miten SQL-komentojen parametrit toimivat. Termi "parametrisoitu kysely" pitäisi mainita ja selittää.
+* Pitäisi kertoa tarkemmin, miten SQL-komentojen parametrit toimivat. Termin "parametrisoitu kysely" mainitsemista voi harkita.
 
 ## 2. deadlinessa ilmenneitä asioita
 
