@@ -35,6 +35,16 @@ title: TODO
 * Mikä on hyvä tapa jakaa pitkä SQL-komento usealle riville koodissa?
 * Kuinka tyhjentää istunnon avain, jos sitä ei ole välttämättä olemassa? Avaimen tarkastus tai `pop` ovat ratkaisuja.
 
+## 1. periodissa ilmennyttä lisättävää ohjeisiin
+
+* `SELECT *` ei ole hyvä kysely
+* `print`-komennot pois lopullisesta koodista
+* Ei turhaan `allow = True` jne. jos voi vain palauttaa `True` tai `False`
+* Epäselvää, milloin pitäisi olla `try`...`catch`
+* Git-viestit ja turhat tiedostot Gitissä
+* Muistutus CSRF-aukon estämisestä
+* `if (x)`: ei ole hyvä laittaa sulkuja tähän ja vastaaviin
+
 ## Taulukoista 
 
 Tavallinen taulukko ja tietokantataulu on erinäköisiä. Tietokanta taulua merkitään luokalla `db-table`. Markdownilla voi hyvin kirjoittaa tavallisia taulukoita ja tietokantatauluja, joilla ei ole otsikkoa. Jos tekee tietokantataulun markdownilla, niin taululle annetaan luokka `db-table` merkitsemällä se aaltosulkeisiin ennen taulukkoa.
