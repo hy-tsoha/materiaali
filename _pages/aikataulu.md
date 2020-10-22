@@ -4,19 +4,20 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Syksyn 2020 periodin 1 ryhmän aikataulu on seuraava:
+Syksyn 2020 periodin 2 ryhmän aikataulu on seuraava:
 
-| ti 1.9.2020 | Kurssin aloitusluento ([luentotallenne](https://www.helsinki.fi/fi/unitube/video/67849c26-7542-49fc-92dd-bf8c6f768e5a)) |
-| su 6.9.2020 | Välipalautus 1 |
-| su 20.9.2020 | Välipalautus 2  |
-| ke 23.9.2020 | Vertaisarvioinnin deadline |
-| su 4.10.2020 | Välipalautus 3 |
-| ke 7.10.2020 | Vertaisarvioinnin deadline |
-| su 18.10.2020 | Lopullinen palautus |
+| ti 27.10.2020 | Luento 1 klo 17–18 (Zoom) |
+| su 1.11.2020 | Välipalautus 1 |
+| su 15.11.2020 | Välipalautus 2  |
+| ti 17.11.2020 | Luento 2 klo 17–18 (Zoom) |
+| ke 18.11.2020 | Vertaisarvioinnin deadline |
+| su 29.11.2020 | Välipalautus 3 |
+| ke 2.12.2020 | Vertaisarvioinnin deadline |
+| su 13.12.2020 | Lopullinen palautus |
 
-Ryhmän ohjaajat ovat Antti Laaksonen ja Terho Uotila.
+Ryhmän ohjaajat ovat Otto Ahoniemi ja Olli-Pekka Mehtonen.
 
-Voit saada ohjausta harjoitustyön tekemiseen Telegramissa sekä keskiviikkoisin klo 16–19 [tietokantapajassa](https://tikape.mooc.fi/syksy-2020/pages/paja.html).
+Voit saada ohjausta harjoitustyön tekemiseen Telegramissa. Ohjaajat päivystävät erityisesti keskiviikkoisin ja torstaisin klo 13–15.
 
 ## Kurssin eteneminen
 
