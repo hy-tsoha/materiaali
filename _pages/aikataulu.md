@@ -17,7 +17,7 @@ Syksyn 2020 periodin 2 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaajat ovat Otto Ahoniemi ja Olli-Pekka Mehtonen.
 
-Voit saada ohjausta harjoitustyön tekemiseen Telegramissa. Ohjaajat päivystävät erityisesti keskiviikkoisin ja torstaisin klo 13–15.
+Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjaajat päivystävät erityisesti keskiviikkoisin ja torstaisin klo 13–15.
 
 ## Kurssin eteneminen
 
