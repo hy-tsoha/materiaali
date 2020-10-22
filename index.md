@@ -17,7 +17,7 @@ Huomaa, että voit osallistua kurssille ohjatusti enintään kahdesti.
 
 ## Yhteystiedot
 
-Kurssilla on Telegram-kanava, jossa voit keskustella kurssin opiskelijoiden ja henkilökunnan kanssa. Pääset kanavalle [tästä](https://t.me/tkt_tsoha).
+Kurssilla on [Telegram-kanava](https://t.me/tkt_tsoha), jossa voit keskustella kurssin opiskelijoiden ja henkilökunnan kanssa.
 
 Kurssin vastuuhenkilö on Antti Laaksonen. Voit ottaa yhteyttä [sähköpostitse](mailto:ahslaaks@cs.helsinki.fi) tai Telegramissa.
 
