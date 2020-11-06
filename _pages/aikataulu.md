@@ -19,7 +19,7 @@ Ryhmän ohjaajat ovat Otto Ahoniemi ja Olli-Pekka Mehtonen.
 
 Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjaajat päivystävät erityisesti keskiviikkoisin ja torstaisin klo 13–15.
 
-Jos kysyt kanavalta apua ohjelmasi toimintaan liittyen, on hyödyllistä laittaa mukaan linkki ohjelmasi lähdekoodin. Paras vaihtoehto on puskea virheellisesti toimiva sovellus Githubiin ja jakaa linkki Github-repositorioon kysymyksen ohessa. Commit-viestiksi voit laittaa esimerkiksi "Add not working code to Github for debugging". Vaihtoehtoisesti voit liittää toimimattoman sovelluskoodin esimerkiksi [Pastebin-palveluun](https://pastebin.com/).
+Jos kysyt kanavalta apua ohjelmasi toimintaan liittyen, on hyödyllistä laittaa mukaan linkki ohjelmasi lähdekoodin. Paras vaihtoehto on puskea virheellisesti toimiva sovellus GitHubiin ja jakaa linkki GitHub-repositorioon kysymyksen ohessa. Commit-viestiksi voit laittaa esimerkiksi "Add not working code to GitHub for debugging". Vaihtoehtoisesti voit liittää toimimattoman sovelluskoodin esimerkiksi [Pastebin-palveluun](https://pastebin.com/).
 
 ## Kurssin eteneminen
 
