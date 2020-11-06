@@ -81,7 +81,7 @@ Jos jälkimmäinen komento ei toimi, voit kokeilla korvata nimen `psycopg2` nime
 
 Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan _osoite_. Tässä tapauksessa osoite on muotoa `postgresql:///user`, missä `user` on jälleen tietokoneen käyttäjän tunnus, joka näkyy myös PostgreSQL-tulkissa rivien alussa.
 
-Huomaa, että eri järjestelmissä vaadittu tapa antaa tietokannan osoite voi olla vähän erilainen ja tämä riippuu myös siitä, miten tietokanta on asennettu.
+Huomaa, että [vaadittu tapa antaa tietokannan osoite](https://www.postgresql.org/docs/10/libpq-connect.html#LIBPQ-CONNSTRING) voi olla vähän erilainen riippuen siitä, miten tietokantaan otetaan yhteys.
 
 Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellus olettaa, että tietokannassa on äsken luomamme `messages`-taulu.
 
