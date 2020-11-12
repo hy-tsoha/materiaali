@@ -79,7 +79,7 @@ Ensimmäinen kirjasto `flask-sqlalchemy` on SQLAlchemy-rajapinta, jonka kautta v
 
 Jos jälkimmäinen komento ei toimi, voit kokeilla korvata nimen `psycopg2` nimellä `psycopg2-binary`. Tätä ennen kannattaa kuitenkin yrittää ratkaista mahdolliset ongelmat muuten, esimerkiksi Macin käyttäjille on neuvoja [tässä Stackoverflown kysymyksessä](https://stackoverflow.com/questions/33866695/install-psycopg2-on-mac-osx-10-9-5).
 
-Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan _osoite_. Tässä tapauksessa osoite on muotoa `postgresql:///user`, missä `user` on jälleen tietokoneen käyttäjän tunnus, joka näkyy myös PostgreSQL-tulkissa rivien alussa.
+Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan _osoite_. Tässä materiaalissa käytämme osoitetta muodossa `postgresql:///user`, missä `user` on käytettävän tietokannan nimi ja näkyy myös PostgreSQL-tulkissa rivien alussa. Tietokannan nimi on siis tässä sama kuin käyttäjän tunnus.
 
 Huomaa, että [vaadittu tapa antaa tietokannan osoite (URI)](https://www.postgresql.org/docs/12/libpq-connect.html#LIBPQ-CONNSTRING) voi olla vähän erilainen riippuen siitä, miten tietokantaan otetaan yhteys.
 
