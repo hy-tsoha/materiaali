@@ -9,7 +9,7 @@ Syksyn 2020 periodin 2 ryhmän aikataulu on seuraava:
 | ti 27.10.2020 | Luento 1 klo 17–18 ([Tallenne](https://www.helsinki.fi/fi/unitube/video/d5cc27c0-d919-4d77-9497-c51b71ac69bc)) |
 | su 1.11.2020 | Välipalautus 1 |
 | su 15.11.2020 | Välipalautus 2  |
-| ti 17.11.2020 | Luento 2 klo 17–18 ([Zoom](https://helsinki.zoom.us/j/66349228956?pwd=aFZuaVRQSWQrT0psN243Zngzbk1WQT09)) |
+| ti 17.11.2020 | Luento 2 klo 17–18 ([Tallenne](https://www.helsinki.fi/fi/unitube/video/d23e7bb5-ec0c-48c8-b6fa-59e798e964fd)) |
 | ke 18.11.2020 | Vertaisarvioinnin deadline |
 | su 29.11.2020 | Välipalautus 3 |
 | ke 2.12.2020 | Vertaisarvioinnin deadline |
