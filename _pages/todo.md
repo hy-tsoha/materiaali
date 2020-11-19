@@ -21,7 +21,7 @@ title: TODO
 * Esimerkissä `visible`-sarake on `INTEGER`, parempi olisi `BOOLEAN`
 * Pitäisi kertoa tarkemmin, miten SQL-komentojen parametrit toimivat. Termin "parametrisoitu kysely" mainitsemista voi harkita.
 
-## 2. deadlinessa ilmenneitä asioita
+## Loppukesän kurssilla ilmennyttä
 
 * Materiaalissa olevassa esimerkissä uuden tunnuksen luonnissa kysytään salasana vain kerran, mikä on huono malli.
 * Lähes kaikissa Bootstrapia käyttävissä sovelluksissa sivu on liian leveä ja etenkin lomakkeet näyttävät huonoilta.
@@ -35,7 +35,7 @@ title: TODO
 * Mikä on hyvä tapa jakaa pitkä SQL-komento usealle riville koodissa?
 * Kuinka tyhjentää istunnon avain, jos sitä ei ole välttämättä olemassa? Avaimen tarkastus tai `pop` ovat ratkaisuja.
 
-## 1. periodissa ilmennyttä lisättävää ohjeisiin
+## 1. periodissa ilmennyttä
 
 * `SELECT *` ei ole hyvä kysely
 * `print`-komennot pois lopullisesta koodista
@@ -44,6 +44,11 @@ title: TODO
 * Git-viestit ja turhat tiedostot Gitissä
 * Muistutus CSRF-aukon estämisestä
 * `if (x)`: ei ole hyvä laittaa sulkuja tähän ja vastaaviin
+
+## 2. periodissa ilmennyttä
+
+* PRG-mallin (Post/Redirect/Get) selitys puuttuu materiaalista
+* HTML:n moderneista ominaisuuksista lomakkeissa pitäisi kertoa (uusia kenttätyyppejä, required, pattern, yms.)
 
 ## Taulukoista 
 
