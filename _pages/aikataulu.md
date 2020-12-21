@@ -4,22 +4,21 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Syksyn 2020 periodin 2 ryhmän aikataulu on seuraava:
+Kevään 2021 periodin 3 ryhmän aikataulu on seuraava:
 
-| ti 27.10.2020 | Luento 1 klo 17–18 ([Tallenne](https://www.helsinki.fi/fi/unitube/video/d5cc27c0-d919-4d77-9497-c51b71ac69bc)) |
-| su 1.11.2020 | Välipalautus 1 |
-| su 15.11.2020 | Välipalautus 2  |
-| ti 17.11.2020 | Luento 2 klo 17–18 ([Tallenne](https://www.helsinki.fi/fi/unitube/video/d23e7bb5-ec0c-48c8-b6fa-59e798e964fd)) |
-| ke 18.11.2020 | Vertaisarvioinnin deadline |
-| su 29.11.2020 | Välipalautus 3 |
-| ke 2.12.2020 | Vertaisarvioinnin deadline |
-| su 13.12.2020 | Lopullinen palautus |
+| ma 18.1.2021 | Aloitusluento klo 16–18 |
+| su 24.1.2021 | Välipalautus 1 |
+| su 7.2.2021 | Välipalautus 2 |
+| ke 10.2.2021 | Vertaisarvioinnin deadline |
+| su 21.2.2021 | Välipalautus 3 |
+| ke 24.2.2021 | Vertaisarvioinnin deadline |
+| su 7.3.2021 | Lopullinen palautus |
 
 Ryhmän ohjaajat ovat Otto Ahoniemi ja Olli-Pekka Mehtonen.
 
-Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjaajat päivystävät erityisesti keskiviikkoisin ja torstaisin klo 13–15.
+Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausajat ilmoitetaan lähempänä kurssin alkua.
 
-Jos kysyt kanavalta apua ohjelmasi toimintaan liittyen, on hyödyllistä laittaa mukaan linkki ohjelmasi lähdekoodin. Paras vaihtoehto on puskea virheellisesti toimiva sovellus GitHubiin ja jakaa linkki GitHub-repositorioon kysymyksen ohessa. Commit-viestiksi voit laittaa esimerkiksi "Add not working code to GitHub for debugging". Vaihtoehtoisesti voit liittää toimimattoman sovelluskoodin esimerkiksi [Pastebin-palveluun](https://pastebin.com/).
+Kun kysyt apua sovelluksesi toimintaan liittyen, on hyödyllistä, että sovelluksen nykyinen tilanne näkyy GitHubissa. Jos lähetät GitHubiin toimimatonta koodia, voit laittaa commit-viestiksi esimerkiksi "Add not working code to GitHub for debugging".
 
 ## Kurssin eteneminen
 
