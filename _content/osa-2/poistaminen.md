@@ -21,7 +21,7 @@ DETAIL:  Key (id)=(13) is still referenced from table "choices".
 
 Tässä on ongelmana, että taulusta `choices` on viittaus taulun `polls` riviin 13, minkä vuoksi tietokanta ei anna poistaa riviä.
 
-Yksi ratkaisu asiaan olisi määritellä taulun luonnissa tarkemmin `ON DELETE` -osassa, mitä tapahtuu, kun taulusta poistetaan rivi. Esimerkiksi `ON DELETE CASCADE` määrittää, että kun rivi poistetaan, niin myös siihen viittaavat rivit poistetaan. Lisätietoa tästä lähestymistavasta on kurssin _Tietokantojen perusteet_ [luvussa 6.1](https://tikape-ke20.mooc.fi/luku-6/1).
+Yksi ratkaisu asiaan olisi määritellä taulun luonnissa tarkemmin `ON DELETE` -osassa, mitä tapahtuu, kun taulusta poistetaan rivi. Esimerkiksi `ON DELETE CASCADE` määrittää, että kun rivi poistetaan, niin myös siihen viittaavat rivit poistetaan. Lisätietoa tästä lähestymistavasta on kurssin _Tietokantojen perusteet_ [luvussa 7](https://tikape.mooc.fi/kevat-2021/content/osa-7/#viittaukset-ja-poistot).
 
 Kuitenkin usein käytännössä parempi ratkaisu voi olla toteuttaa poistaminen niin, että tietokannasta ei todellisuudessa poisteta mitään, vaan rivi vain _piilotetaan_. Tämä onnistuu lisäämällä tauluun sarake, joka ilmaisee rivin tilan:
 
