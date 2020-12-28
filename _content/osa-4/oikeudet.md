@@ -26,7 +26,7 @@ def profile(id):
         if result.fetchone() != None:
             allow = True
     if not allow:
-        return render_templace("error.html",error="Ei oikeutta nähdä sivua")
+        return render_template("error.html",error="Ei oikeutta nähdä sivua")
     ...
 ```
 
