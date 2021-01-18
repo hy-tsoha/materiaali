@@ -16,7 +16,7 @@ Kevään 2021 periodin 3 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaajat ovat Otto Ahoniemi ja Olli-Pekka Mehtonen.
 
-Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausajat ilmoitetaan lähempänä kurssin alkua.
+Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausta on tarjolla erityisesti ma 16:00–17:30, to 13:00–16:00 ja pe 12:00–13:30.
 
 Kun kysyt apua sovelluksesi toimintaan liittyen, on hyödyllistä, että sovelluksen nykyinen tilanne näkyy GitHubissa. Jos lähetät GitHubiin toimimatonta koodia, voit laittaa commit-viestiksi esimerkiksi "Add not working code to GitHub for debugging".
 
