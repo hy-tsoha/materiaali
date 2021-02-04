@@ -92,7 +92,7 @@ from flask import redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///user"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://user"
 db = SQLAlchemy(app)
 
 @app.route("/")
@@ -148,7 +148,7 @@ Sovelluksen käyttäminen voi näyttää tältä:
 Katsotaan vielä tarkemmin joitakin kohtia koodista:
 
 ```python
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///user"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://user"
 db = SQLAlchemy(app)
 ```
 
@@ -190,7 +190,7 @@ Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen 
 Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa `export` seuraavasti ennen sovelluksen käynnistämistä:
 
 ```prompt
-(venv) $ export DATABASE_URL=postgresql:///user
+(venv) $ export DATABASE_URL=postgresql://user
 (venv) $ flask run
 ```
 
@@ -203,7 +203,7 @@ Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
 Kun kirjasto on asennettu, Flask osaa käyttää sitä automaattisesti. Tämän ansiosta voimme luoda tiedoston `.env`, jossa on määritelty ympäristömuuttujat:
 
 ```
-DATABASE_URL=postgresql:///user
+DATABASE_URL=postgresql://user
 ```
 
 Tämän etuna on, että ennen sovelluksen käynnistämistä ei tarvitse suorittaa `export`-komentoa vaan ympäristömuuttujat ovat aina tallessa tiedostossa.
