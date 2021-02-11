@@ -58,7 +58,7 @@ Moduulin `messages` funktio `get_list` hakee jokaisen viestin sisällön, lähet
 
 Seuraava koodi käsittelee käyttäjän lähettämän viestin:
 
-<p class="code-title">app.py</p>
+<p class="code-title">routes.py</p>
 ```python
 @app.route("/send", methods=["POST"])
 def send():
