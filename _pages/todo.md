@@ -50,6 +50,10 @@ title: TODO
 * PRG-mallin (Post/Redirect/Get) selitys puuttuu materiaalista
 * HTML:n moderneista ominaisuuksista lomakkeissa pitäisi kertoa (uusia kenttätyyppejä, required, pattern, yms.)
 
+## 3. periodissa ilmennyttä
+
+* Olisi hyvä korostaa, että viittaus tyyliin "static/..." ei toimi kunnolla vaan pitäisi olla "/static/..."
+
 ## Taulukoista 
 
 Tavallinen taulukko ja tietokantataulu on erinäköisiä. Tietokanta taulua merkitään luokalla `db-table`. Markdownilla voi hyvin kirjoittaa tavallisia taulukoita ja tietokantatauluja, joilla ei ole otsikkoa. Jos tekee tietokantataulun markdownilla, niin taululle annetaan luokka `db-table` merkitsemällä se aaltosulkeisiin ennen taulukkoa.
