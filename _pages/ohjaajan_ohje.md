@@ -10,7 +10,6 @@ hidden: true
 Ohjaajan tehtävät kurssilla ovat:
 
 * palautteen antaminen opiskelijoiden välipalautuksista
-* vertaisarvioinnin hallinnointi
 * lopullisten palautusten arviointi
 * opiskelijoiden ohjaaminen (pajassa tai etänä)
 
