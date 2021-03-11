@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Kevään 2021 periodin 4 ryhmän aikataulu on seuraava:
 
-| ma 15.3.2021 | Aloitusluento klo 16–18 Zoomissa ([Linkki](https://helsinki.zoom.us/j/65922974448?pwd=MGlDTTZQN0VhTVFuTDZVNHV0VFhkQT09)) |
+| ma 15.3.2021 | Aloitusluento klo 16–18 Zoomissa ([linkki](https://helsinki.zoom.us/j/65922974448?pwd=MGlDTTZQN0VhTVFuTDZVNHV0VFhkQT09)) |
 | su 21.3.2021 | Välipalautus 1 |
 | su 4.4.2021 | Välipalautus 2 |
 | ke 7.4.2021 | Vertaisarvioinnin deadline |
