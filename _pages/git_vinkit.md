@@ -21,7 +21,7 @@ Komento `git status` kertoo repositorion tilanteen, ja sitä kannattaa käyttä�
 
 ```prompt
 $ git status
-On branch master
+On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
@@ -50,7 +50,7 @@ Tämän jälkeen `git status` näyttää muuttuneen tilanteen:
 
 ```prompt
 $ git status
-On branch master
+On branch main
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
@@ -70,7 +70,7 @@ Seuraava vaihe on suorittaa komento `git commit`, joka suorittaa commitin. Täss
 
 ```prompt
 $ git commit -m "Update apina and create cembalo"
-[master 7cfdfab] Update apina and create cembalo
+[main 7cfdfab] Update apina and create cembalo
  2 files changed, 1 insertion(+)
  create mode 100644 cembalo.txt
 ```
@@ -79,7 +79,7 @@ Tämän jälkeen repositorion tilanne näyttää tältä:
 
 ```prompt
 $ git status
-On branch master
+On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
@@ -115,7 +115,7 @@ Tarkastellaan vielä tilannetta, jossa tiedostoa `banaani.txt` on muutettu:
 
 ```prompt
 $ git status
-On branch master
+On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
@@ -135,7 +135,7 @@ Tämä komento hakee tiedoston `banaani.txt` repositoriosta ja korvaa sillä muu
 
 ```prompt
 $ git status
-On branch master
+On branch main
 nothing to commit, working tree clean
 ```
 
@@ -146,7 +146,7 @@ Entä jos laitamme muokatun tiedoston vahingossa mukaan commitiin, mutta emme ha
 ```prompt
 $ git add banaani.txt
 $ git status
-On branch master
+On branch main
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
@@ -163,7 +163,7 @@ Tämän seurauksena tiedosto `banaani.txt` poistetaan commitista ja se näkyy ta
 
 ```prompt
 $ git status
-On branch master
+On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
@@ -182,7 +182,7 @@ Seuraavassa tilanteessa olemme vieneet commitin loppuun ja tajuamme vasta sitten
 ```prompt
 $ git add banaani.txt
 $ git commit -m "Change banaani"
-[master eff67d3] Change banaani
+[main eff67d3] Change banaani
  1 file changed, 1 insertion(+)
 ```
 
@@ -190,7 +190,7 @@ Tässä vaiheessa commit näkyy jo tehtyjen commitien listalla:
 
 ```prompt
 $ git log
-commit eff67d3743e37837e99b278c3843b30280e86925 (HEAD -> master)
+commit eff67d3743e37837e99b278c3843b30280e86925 (HEAD -> main)
 Author: Antti Laaksonen <ahslaaks@cs.helsinki.fi>
 Date:   Tue Jul 14 19:18:55 2020 +0300
 
@@ -215,7 +215,7 @@ Tämä komento siirtää repositorion tilan yhtä askelta aiemmaksi ja kaikki on
 
 ```prompt
 $ git log
-commit 7cfdfabca6b021bbe314d77b1ff0718cc415b9d5 (HEAD -> master)
+commit 7cfdfabca6b021bbe314d77b1ff0718cc415b9d5 (HEAD -> main)
 Author: Antti Laaksonen <ahslaaks@cs.helsinki.fi>
 Date:   Tue Jul 14 17:36:10 2020 +0300
 

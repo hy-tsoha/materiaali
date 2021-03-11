@@ -79,8 +79,8 @@ Koska sovelluksen ensimmäinen versio toimii, nyt on hyvä hetki lisätä sovell
 
 ```prompt
 (venv) $ git status
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -115,8 +115,8 @@ Nyt `git status` näyttää muuttuneen tilanteen näin:
 
 ```prompt
 (venv) $ git status
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
@@ -157,8 +157,8 @@ Tämän tiedoston luomisen jälkeen `git status` alkaa näyttää siistimmältä
 
 ```prompt
 (venv) $ git status
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -186,14 +186,14 @@ Komento `pip freeze` kertoo, mitkä ovat sovelluksen _riippuvuudet_  eli mitä k
 (venv) $ pip freeze
 click==7.1.2
 Flask==1.1.2
-Flask-SQLAlchemy==2.4.3
+Flask-SQLAlchemy==2.4.4
 itsdangerous==1.1.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 MarkupSafe==1.1.1
 pkg-resources==0.0.0
-psycopg2==2.8.5
-python-dotenv==0.13.0
-SQLAlchemy==1.3.18
+psycopg2==2.8.6
+python-dotenv==0.15.0
+SQLAlchemy==1.3.23
 Werkzeug==1.0.1
 ```
 

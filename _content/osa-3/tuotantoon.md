@@ -54,7 +54,7 @@ origin	https://github.com/user/tsoha-visitors.git (push)
 Tästä näkee, että oletuskohde `origin` osoittaa edelleen GitHubiin, mutta uutena on kohde `heroku`, joka lähettää sovelluksen Herokuun. Lähetys tapahtuisi näin:
 
 ```prompt
-$ git push heroku master
+$ git push heroku main
 ```
 
 Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteensopiva vaan sovellukseen täytyy tehdä ensin joitakin muutoksia.
@@ -133,7 +133,7 @@ $ heroku config:set SECRET_KEY=(avain tähän)
 Nyt kaikki alkaa olla valmista ja voimme koettaa lähettää sovelluksen Herokuun:
 
 ```prompt
-$ git push heroku master
+$ git push heroku main
 remote: Compressing source files... done.
 remote: Building source:
 remote: 
@@ -149,7 +149,7 @@ remote:        ERROR: Invalid requirement: 'pkg-resources=0.0.0' (from line 8 of
 Jotain meni kuitenkin pieleen: tiedostossa `requirements.txt` oleva riippuvuus `pkg-resources` ei kelpaa Herokulle. Tämä on tunnettu ongelma, ja tässä tapauksessa toimiva korjaus on poistaa kyseinen rivi tiedostosta, päivittää muutos versionhallintaan ja yrittää uudestaan:
 
 ```prompt
-$ git push heroku master
+$ git push heroku main
 remote: Compressing source files... done.
 remote: Building source:
 remote: 
