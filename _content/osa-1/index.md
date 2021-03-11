@@ -12,6 +12,8 @@ Toteutamme kurssilla web-sovelluksen Python-kielellä [Flask](https://flask.pall
 
 Kurssin materiaali olettaa, että osaat perusasiat Linuxin komentorivistä ja Python-kielestä. Jos et ole käyttänyt aiemmin Pythonia, voit tutustua kieleen [tästä](../../pages/python_opas.html).
 
+Materiaali olettaa, että käyttöjärjestelmänä on Linux. Jos käytät Windowsia, kannattaa asentaa Windows Subsystem for Linux (WSL), jonka asentamiseen löytyy ohjeet [tästä](https://tkt-lapio.github.io/).
+
 {% include_relative johdatus.md %}
 {% include_relative sivupyynnot.md %}
 {% include_relative lomakkeet.md %}
