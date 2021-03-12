@@ -7,7 +7,7 @@ hidden: true
 
 Kurssilla toteutetaan tietokantaa käyttävä web-sovellus. Sovelluksessa tulisi olla noin 5–10 tietokantataulua, joita käsitellään monipuolisesti SQL-komentojen avulla.
 
-Esimerkkisovellus: [https://github.com/hy-tsoha/tsoha-words](Sanaharjoittelu)
+Esimerkkisovellus: [Sanaharjoittelu](https://github.com/hy-tsoha/tsoha-words)
 
 Hyvä aihe on sellainen, joka on itseäsi kiinnostava. Jos et ole varma aiheesta tai sen laajuudesta, voit aina neuvotella asiasta ohjaajan kanssa.
 
