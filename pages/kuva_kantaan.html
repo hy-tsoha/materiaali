@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Kuva tietokantaan - Tieto&shy;kanta&shy;sovellus
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tieto&shy;kanta&shy;sovellus</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/index>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/pages/aikataulu.html">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/pages/arvostelu.html">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/pages/kysymykset.html">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/pages/taustamateriaali.html">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/content/osa-1/index.html">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/content/osa-1/index.html#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/content/osa-1/index.html#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/content/osa-1/index.html#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/content/osa-1/index.html#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/content/osa-2/index.html">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/content/osa-2/index.html#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/content/osa-2/index.html#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/content/osa-2/index.html#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/content/osa-2/index.html#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/content/osa-2/index.html#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/content/osa-3/index.html">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/content/osa-3/index.html#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/content/osa-3/index.html#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/content/osa-3/index.html#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/content/osa-3/index.html#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/content/osa-3/index.html#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/content/osa-4/index.html">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/content/osa-4/index.html#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/content/osa-4/index.html#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/content/osa-4/index.html#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/content/osa-4/index.html#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</nav>
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="kuva-tietokantaan">Kuva tietokantaan</h1>
+
+<p>Tämä ohje näyttää, miten sovellukseen voidaan toteuttaa seuraavat toiminnot:</p>
+
+<ul>
+  <li>Käyttäjä lähettää sovellukseen kuvatiedoston lomakkeella</li>
+  <li>Kuva tallennetaan tietokantaan</li>
+  <li>Kuva näytetään käyttäjälle myöhemmin</li>
+</ul>
+
+<h2 id="tiedoston-lähetys">Tiedoston lähetys</h2>
+
+<p>Tiedoston lähettäminen toteutetaan lomakkeella, jossa on <code class="language-html highlighter-rouge">file</code>-tyyppinen <code class="language-html highlighter-rouge">input</code>-elementti. Tämän elementin kautta lomakkeen käyttäjä pystyy valitsemaan tiedoston tietokoneeltaan ja lähettämään sen palvelimelle.</p>
+
+<p>Lisäksi kun lomakkeen kautta lähetetään tiedosto, siinä täytyy olla lisäattribuutti <code class="language-html highlighter-rouge">enctype</code>, jonka arvona on <code class="language-html highlighter-rouge">multipart/form-data</code>.</p>
+
+<p>Tässä on esimerkkinä lomake, joka lähettää tiedoston käsittelijälle <code class="language-html highlighter-rouge">send</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/send"</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">enctype=</span><span class="s">"multipart/form-data"</span><span class="nt">&gt;</span>
+File: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"file"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Send"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>Python-koodissa käyttäjän lähettämään tiedostoon pääsee käsiksi <code class="language-html highlighter-rouge">request.files</code>-olion kautta.</p>
+
+<p>Tiedoston nimi on kentässä <code class="language-html highlighter-rouge">filename</code> ja tiedoston sisällön voi lukea metodilla <code class="language-html highlighter-rouge">read</code>. Esimerkiksi seuraava testikoodi näyttää lähetetyn tiedoston nimen ja koon tavuina.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/send"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">send</span><span class="p">():</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">files</span><span class="p">[</span><span class="s">"file"</span><span class="p">]</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"name"</span><span class="p">,</span><span class="nb">file</span><span class="p">.</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"length"</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="nb">file</span><span class="p">.</span><span class="n">read</span><span class="p">()),</span><span class="s">"bytes"</span><span class="p">)</span>
+    <span class="p">...</span>
+</code></pre></div></div>
+
+<h2 id="tallennus-tietokantaan">Tallennus tietokantaan</h2>
+
+<p>Tehdään seuraavaksi koodi, joka tallentaa lähetetyn kuvatiedoston nimen ja sisällön tietokantaan. Seuraava taulu soveltuu kuvan tallentamiseen:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">images</span> <span class="p">(</span><span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span> <span class="n">name</span> <span class="nb">TEXT</span><span class="p">,</span> <span class="k">data</span> <span class="n">BYTEA</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Tässä sarakkeen <code class="language-html highlighter-rouge">data</code> tyyppinä on <code class="language-html highlighter-rouge">BYTEA</code>, mikä tarkoittaa binääridataa.</p>
+
+<p>Seuraava koodi tallentaa lähetetyn kuvan tietokantaan:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/send"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">send</span><span class="p">():</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">files</span><span class="p">[</span><span class="s">"file"</span><span class="p">]</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">file</span><span class="p">.</span><span class="n">filename</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span><span class="p">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">".jpg"</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"Invalid filename"</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="nb">file</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="o">*</span><span class="mi">1024</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">"Too big file"</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO images (name,data) VALUES (:name,:data)"</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"name"</span><span class="p">:</span><span class="n">name</span><span class="p">,</span><span class="s">"data"</span><span class="p">:</span><span class="n">data</span><span class="p">})</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="s">"OK"</span>
+</code></pre></div></div>
+
+<p>Ennen tietokantaan tallentamista koodi tarkastaa, että tiedoston pääte on <code class="language-html highlighter-rouge">.jpg</code> ja tiedoston koko on enintään 100 kilotavua.</p>
+
+<p>Huomaa, että tiedoston nimi ei takaa, että tiedoston sisältö olisi halutunlainen. Esimerkiksi käyttäjä voi lähettää tiedoston <code class="language-html highlighter-rouge">kuva.jpg</code>, joka on kuitenkin tekstitiedosto.</p>
+
+<h2 id="kuvan-näyttäminen">Kuvan näyttäminen</h2>
+
+<p>Tietokannassa oleva kuva voidaan näyttää käyttäjälle antamalla kuvan sisältö sivupyynnön tuloksena. Seuraava koodi luo sivun <code class="language-html highlighter-rouge">show/[id]</code>, joka näyttää kuvan id-numeron perusteella:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/show/&lt;int:id&gt;"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT data FROM images WHERE id=:id"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"id"</span><span class="p">:</span><span class="nb">id</span><span class="p">})</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">make_response</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+    <span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="p">.</span><span class="nb">set</span><span class="p">(</span><span class="s">"Content-Type"</span><span class="p">,</span><span class="s">"image/jpeg"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span>
+</code></pre></div></div>
+
+<p>Tässä käytössä on Flaskin funktio <code class="language-html highlighter-rouge">make_response</code>, jolle annetaan kuvadata binäärimuodossa. Lisäksi asetetaan sisällön tyypiksi <code class="language-html highlighter-rouge">image/jpeg</code>, jotta selain osaa näyttää kuvan sopivalla tavalla.</p>
+
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

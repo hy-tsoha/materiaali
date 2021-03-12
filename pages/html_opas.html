@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      HTML-opas - Tieto&shy;kanta&shy;sovellus
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tieto&shy;kanta&shy;sovellus</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/index>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/pages/aikataulu.html">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/pages/arvostelu.html">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/pages/kysymykset.html">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/pages/taustamateriaali.html">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/content/osa-1/index.html">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/content/osa-1/index.html#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/content/osa-1/index.html#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/content/osa-1/index.html#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/content/osa-1/index.html#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/content/osa-2/index.html">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/content/osa-2/index.html#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/content/osa-2/index.html#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/content/osa-2/index.html#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/content/osa-2/index.html#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/content/osa-2/index.html#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/content/osa-3/index.html">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/content/osa-3/index.html#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/content/osa-3/index.html#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/content/osa-3/index.html#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/content/osa-3/index.html#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/content/osa-3/index.html#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/content/osa-4/index.html">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/content/osa-4/index.html#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/content/osa-4/index.html#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/content/osa-4/index.html#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/content/osa-4/index.html#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</nav>
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="html-opas">HTML-opas</h1>
+
+<p>Tämä opas antaa perustiedot HTML-kielestä, jolla määritellään nettisivun rakenne. Lisäksi tutustumme lyhyesti CSS- ja JavaScript-kieliin.</p>
+
+<p>Lisää tietoa aiheista löydät esimerkiksi <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">Mozillan ohjesivustolta</a>.</p>
+
+<h2 id="htmln-perusteet">HTML:n perusteet</h2>
+
+<p>HTML-sivu muodostuu elementeistä, jotka määrittelevät sivun sisällön. Esimerkiksi sivun otsikko tulee elementin <code class="language-html highlighter-rouge"><span class="nt">&lt;title&gt;</span></code> sisään ja elementti <code class="language-html highlighter-rouge"><span class="nt">&lt;img&gt;</span></code> näyttää kuvan.</p>
+
+<p>Tässä on esimerkkisivu <code class="language-html highlighter-rouge">testi.html</code>, joka esittelee tavallisia HTML:n ominaisuuksia:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;title&gt;</span>Testisivu<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Tervetuloa!<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+Tekstin <span class="nt">&lt;b&gt;</span>muotoilu<span class="nt">&lt;/b&gt;</span> toimii <span class="nt">&lt;i&gt;</span>näin<span class="nt">&lt;/i&gt;</span>.
+Kohta mennään <span class="nt">&lt;br&gt;</span> uudelle riville.
+<span class="c">&lt;!-- Tämä kommentti ei näy sivun käyttäjälle --&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"hy.png"</span> <span class="na">alt=</span><span class="s">"Helsingin yliopiston logo"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+Tästä voit mennä <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://cs.helsinki.fi/"</span><span class="nt">&gt;</span>toiseen paikkaan<span class="nt">&lt;/a&gt;</span>.
+<span class="nt">&lt;h2&gt;</span>Kaverilista<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span> Maija
+  <span class="nt">&lt;li&gt;</span> Liisa
+  <span class="nt">&lt;li&gt;</span> Kaaleppi
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Sanasto<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;tr&gt;&lt;th&gt;</span>suomi<span class="nt">&lt;/th&gt;&lt;th&gt;</span>englanti<span class="nt">&lt;/th&gt;&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;&lt;td&gt;</span>apina<span class="nt">&lt;/td&gt;&lt;td&gt;</span>monkey<span class="nt">&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;&lt;td&gt;</span>banaani<span class="nt">&lt;/td&gt;&lt;td&gt;</span>banana<span class="nt">&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;&lt;td&gt;</span>cembalo<span class="nt">&lt;/td&gt;&lt;td&gt;</span>harpsichord<span class="nt">&lt;/td&gt;&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;hr&gt;</span>
+Sivu päättyy tähän.
+</code></pre></div></div>
+
+<p>Sivu voi näyttää selaimessa seuraavalta:</p>
+
+<p><img class="screenshot" src="img/html.png" /></p>
+
+<p>Katsotaan seuraavaksi tarkemmin joitakin HTML-koodin osia.</p>
+
+<h3 id="dokumenttityyppi">Dokumenttityyppi</h3>
+
+<p>Sivun alussa oleva dokumenttityyppi ilmaisee, että kyseessä on HTML-sivu:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</code></pre></div></div>
+
+<p>Itse asiassa tämä rivi on turha: jos rivin poistaa, sivu näkyy yhtä hyvin kuin ennenkin. Rivi kuitenkin vaaditaan, jotta sivu on <em>validi</em> eli HTML-kielen standardin mukainen.</p>
+
+<p>Toisin kuin ohjelmoinnissa, HTML:ää voi kirjoittaa huolettomasti ja selaimet koettavat näyttää sivun jotenkin järkevästi, vaikka koodissa olisi virheitä. Toisaalta on hyvä tavoite toimivuuden kannalta pyrkiä siihen, että sivu on ainakin lähellä validia.</p>
+
+<p>Helppo tapa selvittää sivun validius on käyttää <a href="https://validator.w3.org/">validaattoria</a>.</p>
+
+<h3 id="tyhjä-tila-ja-rivitys">Tyhjä tila ja rivitys</h3>
+
+<p>HTML:ssä ylimääräinen tyhjä tila ja rivinvaihdot eivät vaikuta siihen, miten sivu näkyy selaimessa. Esimerkiksi seuraavat koodit tuottavat täysin saman tuloksen:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>apina banaani cembalo
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>apina
+    banaani
+cembalo
+</code></pre></div></div>
+
+<p>Elementti <code class="language-html highlighter-rouge"><span class="nt">&lt;p&gt;</span></code> määrittää kappaleen ja elementti <code class="language-html highlighter-rouge"><span class="nt">&lt;br&gt;</span></code> tuottaa rivinvaihdon.</p>
+
+<h3 id="kuvien-näyttäminen">Kuvien näyttäminen</h3>
+
+<p>Elementin <code class="language-html highlighter-rouge">img</code> attribuutti <code class="language-html highlighter-rouge">src</code> antaa osoitteen kuvatiedostoon ja attribuutti <code class="language-html highlighter-rouge">alt</code> määrittää tekstin, joka voidaan näyttää kuvan sijasta:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"hy.png"</span> <span class="na">alt=</span><span class="s">"Helsingin yliopiston logo"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>Esimerkiksi jos sivua katsoo Lynx-tekstiselaimella, kuvan sijasta näkyy teksti:</p>
+
+<p><img class="screenshot" src="img/lynx.png" /></p>
+
+<p>Vaihtoehtoinen teksti on myös hyödyllinen näkövammaisille käyttäjille, koska se voidaan lukea ääneen kuvan näyttämisen sijasta.</p>
+
+<h2 id="lomakkeet">Lomakkeet</h2>
+
+<p>Lomake on HTML-sivun osa, jonka avulla käyttäjä pystyy lähettämään tietoa web-sovellukselle. Esimerkiksi seuraava lomake sallii käyttäjän lähettää viestin:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/send"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+Otsikko: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"title"</span><span class="nt">&gt;</span> <span class="nt">&lt;br&gt;</span>
+Viesti: <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"40"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/textarea&gt;</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+<form action="/send" method="POST">
+Otsikko: <input type="text" name="title" /> <br />
+Viesti: <br />
+<textarea name="message" rows="5" cols="40">
+</textarea> <br />
+<input type="submit" value="Lähetä" />
+</form>
+</div>
+
+<p>Tutustumme seuraavaksi tavallisimpiin lomakkeen elementteihin.</p>
+
+<h3 id="tekstikenttä">Tekstikenttä</h3>
+
+<p>Tekstikentän avulla voi kysyä yhden rivin tietoa käyttäjältä. Attribuutti <code class="language-html highlighter-rouge">value</code> antaa kentän oletusarvon ja <code class="language-html highlighter-rouge">size</code> määrittää kentän leveyden.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Nimi: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">value=</span><span class="s">"Mikki Hiiri"</span> <span class="na">size=</span><span class="s">"20"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Nimi: <input type="text" name="name" value="Mikki Hiiri" size="20" />
+</div>
+
+<h3 id="salasanakenttä">Salasanakenttä</h3>
+
+<p>Salasanakenttä on tekstikenttä, joka on tarkoitettu salasanan kysymiseen. Kun käyttäjä kirjoittaa salasanan kenttään, se näkyy piilotettuna.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Salasana: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">size=</span><span class="s">"20"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Salasana: <input type="password" name="password" size="20" />
+</div>
+
+<h3 id="tekstilaatikko">Tekstilaatikko</h3>
+
+<p>Tekstilaatikon avulla käyttäjä voi syöttää pitkän tekstin, jossa voi olla useita rivejä. Attribuutit <code class="language-html highlighter-rouge">rows</code> ja <code class="language-html highlighter-rouge">cols</code> määrittävät laatikon koon. Laatikon oletussisältö kirjoitetaan elementin sisään.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Viesti: <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">rows=</span><span class="s">"5"</span> <span class="na">cols=</span><span class="s">"40"</span><span class="nt">&gt;</span>
+Ensimmäinen rivi
+Toinen rivi
+Kolmas rivi
+<span class="nt">&lt;/textarea&gt;</span>
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Viesti: <br />
+<textarea name="message" rows="5" cols="40">
+Ensimmäinen rivi
+Toinen rivi
+Kolmas rivi
+</textarea>
+</div>
+
+<h3 id="valintanappi">Valintanappi</h3>
+
+<p>Valintanapin avulla käyttäjä voi valita yhden vaihtoehdon useasta mahdollisesta. Attribuutti <code class="language-html highlighter-rouge">value</code> määrittää valintaa vastaavan arvon, joka välitetään lomakkeen käsittelijälle.</p>
+
+<p>Kun valintanapeilla on yhteinen nimi, niistä pystyy valitsemaan vain yhden. Attribuutti <code class="language-html highlighter-rouge">checked</code> ilmaisee, mikä valinta on tehty oletuksena.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Kieli: <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"lang"</span> <span class="na">value=</span><span class="s">"fi"</span> <span class="na">checked</span><span class="nt">&gt;</span> suomi
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"lang"</span> <span class="na">value=</span><span class="s">"sv"</span><span class="nt">&gt;</span> ruotsi
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"lang"</span> <span class="na">value=</span><span class="s">"en"</span><span class="nt">&gt;</span> englanti
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Kieli: <br />
+<input type="radio" name="lang" value="fi" checked="" /> suomi
+<input type="radio" name="lang" value="sv" /> ruotsi
+<input type="radio" name="lang" value="en" /> englanti
+</div>
+
+<h3 id="valintaruutu">Valintaruutu</h3>
+
+<p>Valintaruutu muistuttaa valintanappia, mutta käyttäjä voi tehdä minkä tahansa määrän valintoja (ja myös olla valitsematta mitään).</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Käyttöjärjestelmä: <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"os"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">checked</span><span class="nt">&gt;</span> Linux
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"os"</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span> Mac
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"os"</span> <span class="na">value=</span><span class="s">"3"</span> <span class="na">checked</span><span class="nt">&gt;</span> Windows
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Käyttöjärjestelmä: <br />
+<input type="checkbox" name="os" value="1" checked="" /> Linux
+<input type="checkbox" name="os" value="2" /> Mac
+<input type="checkbox" name="os" value="3" checked="" /> Windows
+</div>
+
+<h3 id="valintalista">Valintalista</h3>
+
+<p>Valintalista on toinen tapa antaa käyttäjän tehdä valinta. Valintalista on kätevä silloin, kun vaihtoehtoja on paljon, koska ne eivät vie tilaa sivulta.</p>
+
+<p>Valintalistassa attribuutti <code class="language-html highlighter-rouge">selected</code> ilmaisee oletuksena tehdyn valinnan.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Kieli:
+<span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"lang"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"fi"</span> <span class="na">selected</span><span class="nt">&gt;</span> suomi
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"sv"</span><span class="nt">&gt;</span> ruotsi
+<span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"en"</span><span class="nt">&gt;</span> englanti
+<span class="nt">&lt;/select&gt;</span>
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Kieli:
+<select name="lang">
+<option value="fi" selected=""> suomi</option>
+<option value="sv"> ruotsi</option>
+<option value="en"> englanti</option>
+</select>
+</div>
+
+<h3 id="piilokenttä">Piilokenttä</h3>
+
+<p>Piilokenttä on lomakkeen osana oleva kenttä, joka ei näy sivun käyttäjälle mutta jonka arvo välitetään lomakkeen käsittäjälle. Esimerkiksi seuraava kenttä lähettää lomakkeen käsittäjälle tiedon, että kentän <code class="language-html highlighter-rouge">id</code> arvona on <code class="language-html highlighter-rouge">123</code>.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"id"</span> <span class="na">value=</span><span class="s">"123"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>Huomaa, että vaikka käyttäjä ei näe piilokenttää sivulla, kenttä kuitenkin näkyy sivun lähdekoodissa eli piilokentässä ei voi olla salaista tietoa.</p>
+
+<h2 id="css">CSS</h2>
+
+<p>Ihanteena on, että HTML määrittelee sivun <em>rakenteen</em>: mitä tekstiä, kuvia, listoja, taulukoita, jne. sivulla on. Kuitenkaan HTML:n tehtävänä ei ole määritellä tarkemmin sivun <em>ulkoasua</em>: mikä on tekstin fontti, kuinka leveitä rivit ovat, mikä on sivun taustaväri, jne.</p>
+
+<p>Usein kuitenkin sivun ulkoasu halutaan määritellä tarkemmin, ja tämä onnistuu lisäämällä sivulle CSS-koodia. Tämän avulla voidaan määritellä tyylejä, jotka vaikuttavat siihen, miten sivun HTML-elementit näkyvät selaimessa.</p>
+
+<h3 id="tyylien-kokeilua">Tyylien kokeilua</h3>
+
+<p>Yksinkertainen tapa määritellä HTML-elementin tyyli on käyttää <code class="language-html highlighter-rouge">style</code>-attribuuttia. Esimerkiksi seuraava tyyli <code class="language-html highlighter-rouge">color:red</code> määrittelee, että tekstin väri on punainen:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Korissa on paljon <span class="nt">&lt;span</span> <span class="na">style=</span><span class="s">"color:red"</span><span class="nt">&gt;</span>mansikoita<span class="nt">&lt;/span&gt;</span>.
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Korissa on paljon <span style="color:red">mansikoita</span>.
+</div>
+
+<p>Tässä käytetty <code class="language-html highlighter-rouge">span</code>-elementti ei itsessään tee mitään erityistä, mutta siihen voidaan kohdistaa tyylejä, jotka esimerkiksi muuttavat tekstin ulkoasua.</p>
+
+<p>Tässä on monimutkaisempi esimerkki tyyleistä:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background:blue;color:white;padding:10px;width:200px;height:50px"</span><span class="nt">&gt;</span>
+Heipparallaa!
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+<div style="background:blue;color:white;padding:10px;width:200px;height:50px">
+Heipparallaa!
+</div>
+</div>
+
+<p>Nyt käytössä on <code class="language-html highlighter-rouge">div</code>-elementti, joka määrittelee alueen, jota voidaan tyylitellä. Tässä tapauksessa tyylit ovat seuraavat:</p>
+
+<ul>
+  <li><code class="language-html highlighter-rouge">background:blue</code>: alueen tausta on sininen</li>
+  <li><code class="language-html highlighter-rouge">color:white</code>: tekstin väri on valkoinen</li>
+  <li><code class="language-html highlighter-rouge">padding:10px</code>: alueen sisällä reunoilla on 10 pikseliä tyhjää</li>
+  <li><code class="language-html highlighter-rouge">width:200px</code>: alueen leveys on 200 pikseliä</li>
+  <li><code class="language-html highlighter-rouge">height:50px</code>: alueen korkeus on 50 pikseliä</li>
+</ul>
+
+<h3 id="yhteinen-tyyli">Yhteinen tyyli</h3>
+
+<p>Attribuuttia <code class="language-html highlighter-rouge">style</code> on helppo käyttää CSS:n määrittelyyn, mutta tämä ei ole yleensä kovin hyvä ratkaisu. Ongelmana on, että jos usealla elementillä on tarkoitus olla sama tyyli, samanlaista CSS-koodia joutuu kopioimaan moneen paikkaan.</p>
+
+<p>Parempi tapa on määritellä sivun alussa tyyliluokka, joka määrittelee yhteisen tyylin, ja viitata tähän halutuissa elementeissä. Esimerkiksi seuraava CSS-koodi määrittelee tyyliluokan <code class="language-html highlighter-rouge">laatikko</code> sinistä laatikkoa varten:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;style&gt;</span>
+<span class="nc">.laatikko</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+</code></pre></div></div>
+
+<p>Tämän jälkeen voimme määritellä laatikkoja näin <code class="language-html highlighter-rouge">class</code>-attribuutin avulla:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"laatikko"</span><span class="nt">&gt;</span>apina<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"laatikko"</span><span class="nt">&gt;</span>banaani<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"laatikko"</span><span class="nt">&gt;</span>cembalo<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+<div style="background:blue;color:white;padding:10px;width:200px;height:50px" class="laatikko">apina</div> <br />
+<div style="background:blue;color:white;padding:10px;width:200px;height:50px" class="laatikko">banaani</div> <br />
+<div style="background:blue;color:white;padding:10px;width:200px;height:50px" class="laatikko">cembalo</div>
+</div>
+
+<p>Vastaavasti voimme myös asettaa kaikille sivun HTML-elementeille tietyn tyylin. Esimerkiksi seuraava tyyli määrittelee, että sivun linkit ovat vihreitä eikä niissä ole alleviivausta:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;style&gt;</span>
+<span class="nt">a</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+    <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+</code></pre></div></div>
+
+<p>Tämä tyyli vaikuttaa automaattisesti kaikkiin <code class="language-html highlighter-rouge">a</code>-elementteihin:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Tästä voit mennä <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://cs.helsinki.fi/"</span><span class="nt">&gt;</span>toiseen paikkaan<span class="nt">&lt;/a&gt;</span>.
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Tästä voit mennä <a style="color:green;text-decoration:none" href="https://cs.helsinki.fi/">toiseen paikkaan</a>.
+</div>
+
+<h3 id="tyylitiedosto">Tyylitiedosto</h3>
+
+<p>Usein monilla sivuilla on samanlainen tyyli, jolloin on kätevää luoda yhteinen tyylitiedosto, johon viitataan sivuilla. Esimerkiksi seuraava tiedosto <code class="language-html highlighter-rouge">tyyli.css</code> määrittelee tyylin laatikkoa varten:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nc">.laatikko</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Tämän jälkeen tyylitiedoston voi ottaa mukaan näin HTML-tiedostossa:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"tyyli.css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h2 id="javascript">JavaScript</h2>
+
+<p>JavaScript on ohjelmointikieli, jonka avulla HTML-sivulle voidaan lisätä selaimessa tapahtuvia toimintoja. Esimerkiksi käyttäjälle voidaan näyttää viestejä eri tilanteissa ja sivun sisältöä voidaan muuttaa käyttäjän toimien perusteella.</p>
+
+<p>JavaScriptin historia on poikkeuksellinen ohjelmointikielten joukossa. Vuosituhannen vaihteessa kieli oli lähinnä vitsi ja sen maine oli kyseenalainen, minkä vuoksi monet käyttäjät estivät kokonaan sen käyttämisen. JavaScript on kuitenkin kehittynyt paljon niistä ajoista, ja nykyään kielellä on vahva asema web-sovellusten toteutuksessa.</p>
+
+<h3 id="esimerkkejä">Esimerkkejä</h3>
+
+<p>Seuraavassa on JavaScript-funktio <code class="language-html highlighter-rouge">hello</code>, joka näyttää viesti-ikkunan funktiolla <code class="language-html highlighter-rouge">alert</code>. Funktio aktivoituu <code class="language-html highlighter-rouge">onclick</code>-tapahtumasta, kun käyttäjä painaa sivulla olevaa nappia.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Heipparallaa!</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"hello()"</span><span class="nt">&gt;</span>Paina tästä<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<p>Voit kokeilla koodin toimintaa tästä:</p>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+<script>
+function hello() {
+    alert("Heipparallaa!");
+}
+</script>
+<button onclick="hello()">Paina tästä</button>
+</div>
+
+<p>Seuraavassa koodissa laskurin arvo kasvaa, kun käyttäjä painaa napista. Laskurin arvo on tallessa JavaScriptin puolella muuttujassa <code class="language-html highlighter-rouge">value</code>. Funktion <code class="language-html highlighter-rouge">getElementById</code> avulla pääsee käsiksi HTML-elementtiin, kun sille on annettu <code class="language-html highlighter-rouge">id</code>-attribuutti.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">increase</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">value</span><span class="o">++</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">counter</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+Laskuri: <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"counter"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"increase()"</span><span class="nt">&gt;</span>Kasvata<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+<script>
+var counter = 0;
+
+function increase() {
+    counter++;
+    document.getElementById("counter").innerText = counter;
+}
+</script>
+Laskuri: <span id="counter">0</span> <br />
+<button onclick="increase()">Kasvata</button>
+</div>
+
+<h3 id="milloin-käyttää-javascriptiä">Milloin käyttää JavaScriptiä?</h3>
+
+<p>JavaScript on nykyään todella monipuolinen kieli, ja sen avulla voi toteuttaa lähes mitä tahansa selaimessa suoritettavaa. Mutta kannattaako sitä käyttää?</p>
+
+<p>Ennen vanhaan yleinen periaate oli, että hyvän web-sovelluksen täytyy toimia täysin ilman JavaScriptiä. Tähän vaikutti se, että moni ei sallinut JavaScriptin käyttämistä ja lisäksi eri selainten välillä oli merkittäviä eroja JavaScriptin toiminnassa. Ajat ovat kuitenkin muuttuneet, ja nykyään JavaScript toimii luotettavasti lähes kaikilla käyttäjillä.</p>
+
+<p>Siitä huolimatta edelleen on hyvä tavoite toteuttaa sovelluksen oleelliset toiminnot ilman JavaScriptiä eikä käyttää sitä turhaan. JavaScript on kuitenkin kätevä esimerkiksi lomakkeen tietojen tarkastamisessa: jos tiedot eivät ole kelvollisia, tämä voidaan ilmoittaa käyttäjälle selaimessa ennen lomakkeen lähetystä. Tässä JavaScript parantaa sovelluksen käytettävyyttä mutta ei kuitenkaan ole välttämätön.</p>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

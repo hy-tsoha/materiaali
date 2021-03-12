@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Ulkoasu Bootstrapilla - Tieto&shy;kanta&shy;sovellus
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tieto&shy;kanta&shy;sovellus</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/index>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/pages/aikataulu.html">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/pages/arvostelu.html">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/pages/kysymykset.html">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/pages/taustamateriaali.html">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/content/osa-1/index.html">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/content/osa-1/index.html#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/content/osa-1/index.html#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/content/osa-1/index.html#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/content/osa-1/index.html#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/content/osa-2/index.html">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/content/osa-2/index.html#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/content/osa-2/index.html#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/content/osa-2/index.html#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/content/osa-2/index.html#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/content/osa-2/index.html#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/content/osa-3/index.html">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/content/osa-3/index.html#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/content/osa-3/index.html#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/content/osa-3/index.html#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/content/osa-3/index.html#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/content/osa-3/index.html#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/content/osa-4/index.html">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/content/osa-4/index.html#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/content/osa-4/index.html#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/content/osa-4/index.html#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/content/osa-4/index.html#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</nav>
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="ulkoasu-bootstrapilla">Ulkoasu Bootstrapilla</h1>
+
+<p>Yksi tapa luoda sovelluksen ulkoasu on käyttää valmista ulkoasukirjastoa. Näistä varmaankin eniten käytetty on <a href="https://getbootstrap.com/">Bootstrap</a>, mutta hyviä vaihtoehtoja on useita.</p>
+
+<p>Bootstrap tarjoaa suuren joukon komponentteja ulkoasun rakentamiseen. Tutustumme tässä joihinkin niistä, ja lisää tietoa on Bootstrapin <a href="https://getbootstrap.com/docs/4.5/getting-started/introduction/">dokumentaatiossa</a>.</p>
+
+<h2 id="vaihe-1-sivupohja">Vaihe 1: sivupohja</h2>
+
+<p>Bootstrapin saa helpoiten käyttöön lisäämällä sivulle seuraavan rivin:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>Tämä rivi hakee Bootstrapin kirjastotiedoston sisällönjakeluverkon (CDN) kautta. Koska Bootstrap on usein käytetty kirjasto, tämä tiedosto voi olla jo valmiina käyttäjän selaimen välimuistissa, mikä nopeuttaa sivun latautumista.</p>
+
+<p>Tehdään ensin sivupohja Bootstrapin <a href="https://getbootstrap.com/docs/4.5/layout/grid/">grid-systeemin</a> avulla. Ideana on, että sivun sisältöosa on jaettu 12 osaan ja luomme kaksi palstaa, joista vasen vie tilaa 8 osaa ja oikea vie tilaa 4 osaa.</p>
+
+<p>Sivulla oleva esimerkkiteksti on tuotettu <a href="https://www.lipsum.com/">lorem ipsum -generaattorin</a> avulla.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;title&gt;</span>Tsoha App<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h1&gt;</span>Welcome!<span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec massa a massa viverra luctus. Aenean ante nibh, convallis sit amet finibus vel, viverra ut ante. Quisque condimentum mi sit amet turpis condimentum, sit amet gravida libero vestibulum. Suspendisse potenti. Fusce varius ac odio at aliquet. Quisque at malesuada lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas molestie efficitur eleifend.
+      <span class="nt">&lt;p&gt;</span>
+        Fusce eleifend tellus non mauris cursus consequat. Maecenas vel sapien viverra, mattis est non, aliquam ante. In magna enim, pretium ac sem a, consequat tincidunt nibh. Pellentesque id tristique dui. In tellus risus, tincidunt ac massa vitae, hendrerit euismod mauris. Maecenas eget congue libero, quis pulvinar sem. Etiam mollis vulputate tellus, eget mollis ipsum ultricies at. Vivamus maximus euismod magna, ut facilisis mi posuere lobortis.
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2&gt;</span>Did you know?<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        Vestibulum at consectetur mi, vel ultrices leo. Nam rhoncus viverra velit, sed pretium tortor ultricies a. In ullamcorper metus sem, vel porttitor erat volutpat euismod. Nulla facilisi. Nam facilisis, odio quis condimentum fringilla, risus eros vehicula leo, a malesuada odio ante sit amet mauris. Praesent accumsan massa ut lorem pulvinar, non luctus erat laoreet. Etiam pulvinar libero at sapien lacinia, et vulputate nunc semper. Maecenas lobortis diam eu neque ultricies tempor. Vivamus efficitur eros ut feugiat fermentum. Quisque orci magna, commodo eget erat eu, tincidunt hendrerit nisl. 
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>Tuloksena oleva sivu näyttää seuraavalta:</p>
+
+<p><img class="screenshot-large" src="img/bootstrap1.png" /></p>
+
+<h2 id="vaihe-2-valikon-lisääminen">Vaihe 2: valikon lisääminen</h2>
+
+<p>Lisätään seuraavaksi sivulle valikko Bootstrapin <a href="https://getbootstrap.com/docs/4.5/components/navbar/">navbar-komponentin</a> avulla. Valikko tulee omalle rivilleen ennen sivun muuta sisältöä. Valikossa on ensin linkki sovelluksen etusivulle ja sitten kolme muuta linkkiä.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;title&gt;</span>Tsoha App<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-sm navbar-light"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Tsoha App<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Page 1<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Page 2<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Page 3<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h1&gt;</span>Welcome!<span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec massa a massa viverra luctus. Aenean ante nibh, convallis sit amet finibus vel, viverra ut ante. Quisque condimentum mi sit amet turpis condimentum, sit amet gravida libero vestibulum. Suspendisse potenti. Fusce varius ac odio at aliquet. Quisque at malesuada lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas molestie efficitur eleifend.
+      <span class="nt">&lt;p&gt;</span>
+        Fusce eleifend tellus non mauris cursus consequat. Maecenas vel sapien viverra, mattis est non, aliquam ante. In magna enim, pretium ac sem a, consequat tincidunt nibh. Pellentesque id tristique dui. In tellus risus, tincidunt ac massa vitae, hendrerit euismod mauris. Maecenas eget congue libero, quis pulvinar sem. Etiam mollis vulputate tellus, eget mollis ipsum ultricies at. Vivamus maximus euismod magna, ut facilisis mi posuere lobortis.
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2&gt;</span>Did you know?<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        Vestibulum at consectetur mi, vel ultrices leo. Nam rhoncus viverra velit, sed pretium tortor ultricies a. In ullamcorper metus sem, vel porttitor erat volutpat euismod. Nulla facilisi. Nam facilisis, odio quis condimentum fringilla, risus eros vehicula leo, a malesuada odio ante sit amet mauris. Praesent accumsan massa ut lorem pulvinar, non luctus erat laoreet. Etiam pulvinar libero at sapien lacinia, et vulputate nunc semper. Maecenas lobortis diam eu neque ultricies tempor. Vivamus efficitur eros ut feugiat fermentum. Quisque orci magna, commodo eget erat eu, tincidunt hendrerit nisl. 
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>Tässä vaiheessa sivu näyttää tältä:</p>
+
+<p><img class="screenshot-large" src="img/bootstrap2.png" /></p>
+
+<h2 id="vaihe-3-lomake-sivulle">Vaihe 3: lomake sivulle</h2>
+
+<p>Lisätään sivulle vielä kirjautumislomake <a href="https://getbootstrap.com/docs/4.5/components/forms/">form-komponentin</a> avulla. Lomakkeessa on kaksi tekstikenttää sekä nappi, jolla lomakkeen voi lähettää.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;title&gt;</span>Tsoha App<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-sm navbar-light"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Tsoha App<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-nav"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Page 1<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Page 2<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Page 3<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h1&gt;</span>Welcome!<span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec massa a massa viverra luctus. Aenean ante nibh, convallis sit amet finibus vel, viverra ut ante. Quisque condimentum mi sit amet turpis condimentum, sit amet gravida libero vestibulum. Suspendisse potenti. Fusce varius ac odio at aliquet. Quisque at malesuada lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas molestie efficitur eleifend.
+      <span class="nt">&lt;p&gt;</span>
+        Fusce eleifend tellus non mauris cursus consequat. Maecenas vel sapien viverra, mattis est non, aliquam ante. In magna enim, pretium ac sem a, consequat tincidunt nibh. Pellentesque id tristique dui. In tellus risus, tincidunt ac massa vitae, hendrerit euismod mauris. Maecenas eget congue libero, quis pulvinar sem. Etiam mollis vulputate tellus, eget mollis ipsum ultricies at. Vivamus maximus euismod magna, ut facilisis mi posuere lobortis.
+      <span class="nt">&lt;form&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-6"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputUsername"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputUsername"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-6"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputPassword"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-6"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Login<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2&gt;</span>Did you know?<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        Vestibulum at consectetur mi, vel ultrices leo. Nam rhoncus viverra velit, sed pretium tortor ultricies a. In ullamcorper metus sem, vel porttitor erat volutpat euismod. Nulla facilisi. Nam facilisis, odio quis condimentum fringilla, risus eros vehicula leo, a malesuada odio ante sit amet mauris. Praesent accumsan massa ut lorem pulvinar, non luctus erat laoreet. Etiam pulvinar libero at sapien lacinia, et vulputate nunc semper. Maecenas lobortis diam eu neque ultricies tempor. Vivamus efficitur eros ut feugiat fermentum. Quisque orci magna, commodo eget erat eu, tincidunt hendrerit nisl. 
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>Lopullinen sivu näyttää tältä:</p>
+
+<p><img class="screenshot-large" src="img/bootstrap3.png" /></p>
+
+<h2 id="lopuksi">Lopuksi</h2>
+
+<p>Jos Bootstrapia käyttää sellaisenaan, sovelluksesta tulee helposti saman näköinen muiden Bootstrapia käyttävien sovellusten kanssa, mistä voi tulla käyttäjälle epäammattimainen vaikutelma. Kuitenkin ulkoasua voi koettaa <a href="https://uxplanet.org/how-to-customize-bootstrap-b8078a011203">muokata omantyyliseksi CSS:n avulla</a>, vaikka taustalla onkin käytössä Bootstrap.</p>
+
+<p>Huomaa, että jotkin Bootstrapin komponentit käyttävät JavaScriptiä. Yllä olevassa esimerkissä ei tarvita JavaScriptiä, mutta lisätietoa asiasta löytyy Bootstrapin dokumentaatiosta.</p>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

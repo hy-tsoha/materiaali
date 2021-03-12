@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Python-opas - Tieto&shy;kanta&shy;sovellus
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tieto&shy;kanta&shy;sovellus</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/index>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/pages/aikataulu.html">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/pages/arvostelu.html">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/pages/kysymykset.html">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/pages/taustamateriaali.html">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/content/osa-1/index.html">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/content/osa-1/index.html#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/content/osa-1/index.html#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/content/osa-1/index.html#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/content/osa-1/index.html#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/content/osa-2/index.html">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/content/osa-2/index.html#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/content/osa-2/index.html#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/content/osa-2/index.html#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/content/osa-2/index.html#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/content/osa-2/index.html#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/content/osa-3/index.html">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/content/osa-3/index.html#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/content/osa-3/index.html#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/content/osa-3/index.html#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/content/osa-3/index.html#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/content/osa-3/index.html#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/content/osa-4/index.html">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/content/osa-4/index.html#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/content/osa-4/index.html#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/content/osa-4/index.html#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/content/osa-4/index.html#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</nav>
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="python-opas">Python-opas</h1>
+
+<p>Tämä opas käsittelee Python-kielen perusasioita tämän kurssin näkökulmasta. Oletuksena on, että osaat ohjelmoida ennestään jollakin ohjelmointikielellä.</p>
+
+<p>Perusteiden oppimisen jälkeen hyvä lähde on Pythonin <a href="https://docs.python.org/3/">dokumentaatio</a>.</p>
+
+<h2 id="pythonin-asennus">Pythonin asennus</h2>
+
+<p>Python on valmiiksi asennettuna useissa järjestelmissä. Tarvittaessa löydät ohjeita asentamiseen Pythonin <a href="https://www.python.org/downloads/">lataussivulta</a>.</p>
+
+<p>Nykyään käytettävä Pythonin versio on Python 3. Kaikki kurssin esimerkit olettavat, että käytössäsi on tämä Pythonin versio.</p>
+
+<h2 id="pythonin-käyttäminen">Pythonin käyttäminen</h2>
+
+<h3 id="komentotulkki">Komentotulkki</h3>
+
+<p>Pythonin komentotulkki on kätevä tapa kielen ominaisuuksien testaamiseen. Komentotulkki käynnistyy komennolla <code class="language-html highlighter-rouge">python3</code>, minkä jälkeen voi kirjoittaa suoritettavia komentoja.</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>python3
+<span class="p">&gt;&gt;&gt; </span>1+2
+3
+<span class="p">&gt;&gt;&gt; </span>len("testi")
+5
+<span class="p">&gt;&gt;&gt; </span>quit()
+</code></pre></div></div>
+
+<h3 id="koodi-tiedostossa">Koodi tiedostossa</h3>
+
+<p>Seuraavassa tiedostossa <code class="language-html highlighter-rouge">test.py</code> on Python-koodi, joka kysyy käyttäjän nimeä ja näyttää sitten tervehdyksen:</p>
+
+<p class="code-title">test.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="c1"># kommentti merkitään näin
+</span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Anna nimi: "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Moikka,"</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Koodi suoritetaan näin komentoriviltä:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>python3 test.py
+Anna nimi: Kotivalo
+Moikka, Kotivalo
+</code></pre></div></div>
+
+<h2 id="tyypit-ja-muuttujat">Tyypit ja muuttujat</h2>
+
+<p>Pythonin tavallisimmat tietotyypit ovat <code class="language-html highlighter-rouge">int</code> (kokonaisluku), <code class="language-html highlighter-rouge">float</code> (liukuluku), <code class="language-html highlighter-rouge">str</code> (merkkijono) ja <code class="language-html highlighter-rouge">bool</code> (totuusarvo). Esimerkkejä operaatioista:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">print</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># 30
+</span><span class="k">print</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 2.5
+</span><span class="k">print</span><span class="p">(</span><span class="mi">5</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 2
+</span><span class="k">print</span><span class="p">(</span><span class="mi">3</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># 81
+</span><span class="k">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># 1267650600228229401496703205376
+</span><span class="k">print</span><span class="p">(</span><span class="s">"esi"</span><span class="o">+</span><span class="s">"merkki"</span><span class="p">)</span> <span class="c1"># esimerkki
+</span><span class="k">print</span><span class="p">(</span><span class="s">"abc"</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># abcabcabcabc
+</span><span class="k">print</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># True
+</span><span class="k">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">)</span> <span class="c1"># False
+</span></code></pre></div></div>
+
+<p>Arvo <code class="language-html highlighter-rouge">None</code> tarkoittaa puuttuvaa tietoa.</p>
+
+<p>Pythonissa uusi muuttuja syntyy automaattisesti, kun muuttujalle annetaan arvo:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">name</span> <span class="o">=</span> <span class="s">"Maija"</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+</code></pre></div></div>
+
+<p>Muuttujalla ei ole kiinteää tyyppiä vaan tyyppi määräytyy sen mukaan, millainen arvo muuttujaan sijoitetaan.</p>
+
+<p>Python on tarkka tyypeistä, eikä esimerkiksi seuraava koodi toimi, koska merkkijonoa ja lukua ei voi suoraan yhdistää keskenään:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">a</span> <span class="o">=</span> <span class="s">"testi"</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+</code></pre></div></div>
+
+<p>Ratkaisu on käyttää funktiota <code class="language-html highlighter-rouge">str</code>, joka muuttaa tyypin merkkijonoksi:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">a</span> <span class="o">=</span> <span class="s">"testi"</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Vastaavasti funktiot <code class="language-html highlighter-rouge">int</code> ja <code class="language-html highlighter-rouge">float</code> muuttavat tyypin kokonais- ja liukuluvuksi.</p>
+
+<h2 id="lohkot">Lohkot</h2>
+
+<p>Pythonissa sisennys ilmaisee, mikä koodi kuuluu lohkon sisään esimerkiksi ehto- ja toistorakenteissa.</p>
+
+<p>Esimerkiksi seuraavassa koodissa on <code class="language-html highlighter-rouge">if</code>-rakenne:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">role</span> <span class="o">=</span> <span class="s">"user"</span>
+<span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">role</span> <span class="o">=</span> <span class="s">"admin"</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">role</span> <span class="o">=</span> <span class="s">"guest"</span>
+</code></pre></div></div>
+
+<p>Seuraavassa koodissa puolestaan on <code class="language-html highlighter-rouge">while</code>-rakenne:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">counter</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<h2 id="listat">Listat</h2>
+
+<p>Pythonin perustietorakenne on lista, jonka alkiot merkitään hakasulkujen <code class="language-html highlighter-rouge">[</code> ja <code class="language-html highlighter-rouge">]</code> sisään. Esimerkiksi seuraava koodi luo listan, jossa on kolme sanaa:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">"apina"</span><span class="p">,</span> <span class="s">"banaani"</span><span class="p">,</span> <span class="s">"cembalo"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Toinen tapa luoda lista on aloittaa tyhjästä listasta ja lisätä alkiot <code class="language-html highlighter-rouge">append</code>-metodilla:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">words</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"apina"</span><span class="p">)</span>
+<span class="n">words</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"banaani"</span><span class="p">)</span>
+<span class="n">words</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"cembalo"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Listan pituus saadaa funktiolla <code class="language-html highlighter-rouge">len</code> ja listan alkoihin pääsee käsiksi <code class="language-html highlighter-rouge">[]</code>-syntaksilla:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">))</span> <span class="c1"># 3
+</span><span class="k">print</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># apina
+</span><span class="k">print</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># banaani
+</span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s">"apila"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># apila
+</span></code></pre></div></div>
+
+<p>Pythonissa voi myös indeksoida negatiivisilla luvuilla, jolloin alkio haetaan listan lopusta laskien:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">print</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># cembalo
+</span></code></pre></div></div>
+
+<p>Operaattori <code class="language-html highlighter-rouge">in</code> kertoo, onko tietty alkio listalla:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">print</span><span class="p">(</span><span class="s">"cembalo"</span> <span class="ow">in</span> <span class="n">words</span><span class="p">)</span> <span class="c1"># True
+</span><span class="k">print</span><span class="p">(</span><span class="s">"tuuba"</span> <span class="ow">in</span> <span class="n">words</span><span class="p">)</span> <span class="c1"># False
+</span></code></pre></div></div>
+
+<p>Lista ja merkkijono muistuttavat Pythonissa toisiaan, ja merkkijonon merkkejä pystyy käsittelemään samaan tapaan kuin listan alkioita. Erona on kuitenkin, että merkkijonon sisältöä ei voi muuttaa eli merkkijonossa ei ole esimerkiksi metodia <code class="language-html highlighter-rouge">append</code>.</p>
+
+<h2 id="for-silmukka">For-silmukka</h2>
+
+<p>Pythonin <code class="language-html highlighter-rouge">for</code>-silmukka käy läpi listan alkiot:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">"apina"</span><span class="p">,</span><span class="s">"banaani"</span><span class="p">,</span><span class="s">"cembalo"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>apina
+banaani
+cembalo
+</code></pre></div></div>
+
+<p>Perinteisempi <code class="language-html highlighter-rouge">for</code>-silmukka saadaan aikaan funktion <code class="language-html highlighter-rouge">range</code> avulla. Tämä funktio tuottaa lukuvälin, joka voidaan käydä läpi silmukalla.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"rivi"</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>rivi 0
+rivi 1
+rivi 2
+rivi 3
+rivi 4
+</code></pre></div></div>
+
+<p>Tässä <code class="language-html highlighter-rouge">range(n)</code> tarkoittaa, että lukuväli alkaa 0:sta ja päättyy juuri ennen lukua <code class="language-html highlighter-rouge">n</code>. Vastaavasti <code class="language-html highlighter-rouge">range(a,b)</code> tarkoittaa, että lukuväli alkaa <code class="language-html highlighter-rouge">a</code>:sta ja päättyy juuri ennen lukua <code class="language-html highlighter-rouge">b</code>.</p>
+
+<h2 id="lisää-tietorakenteita">Lisää tietorakenteita</h2>
+
+<h3 id="sanakirja">Sanakirja</h3>
+
+<p>Sanakirja (<code class="language-html highlighter-rouge">dict</code>) muodostuu avain-arvo-pareista. Esimerkiksi seuraava koodi luo sanakirjan, jossa on kolme paria:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">ages</span> <span class="o">=</span> <span class="p">{</span><span class="s">"Maija"</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="s">"Anna"</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="s">"Kaaleppi"</span><span class="p">:</span><span class="mi">42</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>Voimme myös luoda vastaavan sanakirjan näin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">ages</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">ages</span><span class="p">[</span><span class="s">"Maija"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">ages</span><span class="p">[</span><span class="s">"Anna"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">ages</span><span class="p">[</span><span class="s">"Kaaleppi"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
+</code></pre></div></div>
+
+<p>Sanakirjasta voi hakea tietoa avaimen perusteella:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">print</span><span class="p">(</span><span class="n">ages</span><span class="p">[</span><span class="s">"Anna"</span><span class="p">])</span> <span class="c1"># 20
+</span></code></pre></div></div>
+
+<p>Operaattori <code class="language-html highlighter-rouge">in</code> kertoo, onko sanakirjassa tiettyä avainta:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">print</span><span class="p">(</span><span class="s">"Maija"</span> <span class="ow">in</span> <span class="n">ages</span><span class="p">)</span> <span class="c1"># True
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Uolevi"</span> <span class="ow">in</span> <span class="n">ages</span><span class="p">)</span> <span class="c1"># False
+</span></code></pre></div></div>
+
+<p>Voimme käydä sanakirjan avaimet läpi <code class="language-html highlighter-rouge">for</code>-silmukalla:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">ages</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="s">"on"</span><span class="p">,</span><span class="n">ages</span><span class="p">[</span><span class="n">name</span><span class="p">],</span><span class="s">"vuotta"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Maija on 25 vuotta
+Anna on 20 vuotta
+Kaaleppi on 42 vuotta
+</code></pre></div></div>
+
+<h3 id="tuple">Tuple</h3>
+
+<p>Tuple on kokoelma arvoja sulkujen sisällä. Se näyttää melko samalta kuin lista:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">person</span> <span class="o">=</span> <span class="p">(</span><span class="s">"Maija"</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s">"Finland"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># Maija
+</span><span class="k">print</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># 25
+</span><span class="k">print</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># Finland
+</span></code></pre></div></div>
+
+<p>Tuple eroaa kuitenkin listasta siinä, että sen sisältöä ei voi muuttaa. Tuplea käytetään toisiinsa liittyvän tiedon kokoamiseen yhteen yllä olevan esimerkin kaltaisesti.</p>
+
+<h2 id="tosi-vs-epätosi">Tosi vs. epätosi</h2>
+
+<p>Pythonissa mitä tahansa arvoa voidaan käyttää vertailussa totuusarvon tapaan. Epätosia arvoja ovat arvon <code class="language-html highlighter-rouge">False</code> lisäksi erilaiset tyhjät ja olemattomat arvot, kuten <code class="language-html highlighter-rouge">None</code>, <code class="language-html highlighter-rouge">0</code>, <code class="language-html highlighter-rouge">[]</code> (tyhjä lista), <code class="language-html highlighter-rouge">{}</code> (tyhjä sanakirja) ja <code class="language-html highlighter-rouge">()</code> (tyhjä tuple).</p>
+
+<p>Tätä ominaisuutta voi hyödyntää usein vertailuissa. Tarkastellaan esimerkkinä seuraavaa koodia:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"There are"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">),</span> <span class="s">"words"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"There are no words"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Koska tyhjä lista vastaa arvoa <code class="language-html highlighter-rouge">False</code> ja mikä tahansa muu lista vastaa arvoa <code class="language-html highlighter-rouge">True</code>, voimme kirjoittaa ehdon lyhemmin näin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"There are"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">),</span> <span class="s">"words"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"There are no words"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="viittaus-ja-kopiointi">Viittaus ja kopiointi</h2>
+
+<p>Pythonissa muuttujassa on aina viittaus varsinaiseen sisältöön. Seuraava koodi havainnollistaa asiaa:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">lista2</span> <span class="o">=</span> <span class="n">lista1</span>
+<span class="n">lista1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lista1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># 5
+</span><span class="k">print</span><span class="p">(</span><span class="n">lista2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># 5
+</span></code></pre></div></div>
+
+<p>Koodissa muuttujat <code class="language-html highlighter-rouge">lista1</code> ja <code class="language-html highlighter-rouge">lista2</code> viittaavat samaan listaan, joten kun listaa muutetaan muuttujan <code class="language-html highlighter-rouge">lista1</code> kautta, niin muutos heijastuu myös muuttujaan <code class="language-html highlighter-rouge">lista2</code>.</p>
+
+<p>Voimme kuitenkin tarvittaessa luoda listasta kopion <code class="language-html highlighter-rouge">[:]</code>-syntaksilla, jolloin listat ovat erillisiä:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">lista2</span> <span class="o">=</span> <span class="n">lista1</span><span class="p">[:]</span>
+<span class="n">lista1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lista1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># 5
+</span><span class="k">print</span><span class="p">(</span><span class="n">lista2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># 1
+</span></code></pre></div></div>
+
+<h2 id="funktiot">Funktiot</h2>
+
+<h3 id="funktion-määrittely">Funktion määrittely</h3>
+
+<p>Oma funktio määritellään avainsanan <code class="language-html highlighter-rouge">def</code> avulla. Esimerkiksi seuraava koodi määrittelee funktion <code class="language-html highlighter-rouge">hello</code>, joka tervehtii parametrina annettua nimeä:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Moikka,"</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">hello</span><span class="p">(</span><span class="s">"Liisa"</span><span class="p">)</span>
+<span class="n">hello</span><span class="p">(</span><span class="s">"Kaaleppi"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Moikka, Liisa
+Moikka, Kaaleppi
+</code></pre></div></div>
+
+<p>Seuraava funktio <code class="language-html highlighter-rouge">check</code> puolestaan tarkastaa, että nimen pituus on enintään maksimipituus:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">max_length</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">max_length</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="s">"Liisa"</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span> <span class="c1"># True
+</span><span class="k">print</span><span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="s">"Kaaleppi"</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># False
+</span></code></pre></div></div>
+
+<h3 id="muuttujien-näkyvyys">Muuttujien näkyvyys</h3>
+
+<p>Päätasolla luotu muuttuja näkyy kaikissa funktioissa:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 5
+</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">test</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 5
+</span></code></pre></div></div>
+
+<p>Jos taas muuttuja luodaan funktion sisällä, se näkyy vain kyseisessä funktiossa:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 5
+</span>
+<span class="n">test</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># ei toimi
+</span></code></pre></div></div>
+
+<p>Jos muuttuja saa arvon sekä päätasolla että funktiossa, syntyy kaksi erillistä muuttujaa:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 2
+</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">test</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 1
+</span></code></pre></div></div>
+
+<h2 id="virheenkäsittely">Virheenkäsittely</h2>
+
+<p>Koodissa mahdollisesti tapahtuvan virheen voi käsitellä <code class="language-html highlighter-rouge">try</code>/<code class="language-html highlighter-rouge">except</code>-rakenteella.</p>
+
+<p>Esimerkiksi seuraava funktio pyrkii lukemaan käyttäjältä kokonaisluvun. Jos käyttäjä antaa jotain muuta, funktion <code class="language-html highlighter-rouge">int</code>-kutsuminen aiheuttaa virheen, jolloin virheen käsittelyn seurauksena funktio palauttaa arvon 0.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">read_int</span><span class="p">():</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Anna luku: "</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+<h2 id="moduulit">Moduulit</h2>
+
+<h3 id="valmiit-moduulit">Valmiit moduulit</h3>
+
+<p>Komento <code class="language-html highlighter-rouge">import</code> ottaa käyttöön moduulin. Esimerkiksi Pythonin standardikirjastossa on suuri määrä moduuleita eri tarkoituksiin.</p>
+
+<p>Seuraava koodi käyttää Pythonin standardikirjaston moduulia <code class="language-html highlighter-rouge">random</code>, jossa on satunnaisuuteen liittyviä toimintoja. Koodi arpoo satunnaisen luvun funktiolla <code class="language-html highlighter-rouge">randint</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="k">print</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Toinen tapa on hakea moduulista funktio, jolloin sitä voi käyttää suoraan:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="k">print</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Käytämme kurssilla myös Pythonin standardikirjaston ulkopuolisia moduuleja kuten Flask-kirjaston moduulia <code class="language-html highlighter-rouge">flask</code>.</p>
+
+<h3 id="omat-moduulit">Omat moduulit</h3>
+
+<p>Kun tiedostossa on Python-koodia, tiedostoa voidaan käyttää moduulina. Esimerkiksi seuraava tiedosto <code class="language-html highlighter-rouge">test.py</code> määrittelee moduulin <code class="language-html highlighter-rouge">test</code>:</p>
+
+<p class="code-title">test.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Moikka,"</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tämän jälkeen voimme käyttää moduulia näin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">import</span> <span class="nn">test</span>
+<span class="n">test</span><span class="p">.</span><span class="n">hello</span><span class="p">(</span><span class="s">"Maija"</span><span class="p">)</span>
+<span class="n">test</span><span class="p">.</span><span class="n">hello</span><span class="p">(</span><span class="s">"Anna"</span><span class="p">)</span>
+<span class="n">test</span><span class="p">.</span><span class="n">hello</span><span class="p">(</span><span class="s">"Uolevi"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Moikka, Maija
+Moikka, Anna
+Moikka, Uolevi
+</code></pre></div></div>
+
+<h3 id="moduulin-suoritus">Moduulin suoritus</h3>
+
+<p>Kun moduuli otetaan mukaan <code class="language-html highlighter-rouge">import</code>-komennolla, siellä oleva koodi suoritetaan. Kuitenkin jos moduuli otetaan mukaan useita kertoja, koodi suoritetaan vain ensimmäisellä kerralla.</p>
+
+<p>Seuraava moduuli havainnollistaa asiaa:</p>
+
+<p class="code-title">test.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Moikka,"</span><span class="p">,</span><span class="n">name</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Täällä ollaan"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Seuraava koodi ottaa moduulin mukaan kahdesti, mutta vain ensimmäisellä kerralla suoritetaan moduulissa oleva <code class="language-html highlighter-rouge">print</code>-komento:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">import</span> <span class="nn">test</span>
+<span class="n">test</span><span class="p">.</span><span class="n">hello</span><span class="p">(</span><span class="s">"Maija"</span><span class="p">)</span>
+<span class="n">test</span><span class="p">.</span><span class="n">hello</span><span class="p">(</span><span class="s">"Anna"</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">test</span>
+<span class="n">test</span><span class="p">.</span><span class="n">hello</span><span class="p">(</span><span class="s">"Uolevi"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Täällä ollaan
+Moikka, Maija
+Moikka, Anna
+Moikka, Uolevi
+</code></pre></div></div>
+
+<h2 id="lisäaiheita">Lisäaiheita</h2>
+
+<h3 id="merkkijonon-muotoilu">Merkkijonon muotoilu</h3>
+
+<p>Melko uusi Pythonin ominaisuus on <em>f-string</em>, jossa merkkijonon alussa on merkki <code class="language-html highlighter-rouge">f</code>. Tämän avulla merkkijonon sisällä voi käyttää muuttujia ja muita lausekkeita aaltosuluissa.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">name</span> <span class="o">=</span> <span class="s">"Maija"</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="k">print</span><span class="p">(</span><span class="s">f"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s"> on </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s">-vuotias"</span><span class="p">)</span> <span class="c1"># Maija on 25-vuotias
+</span></code></pre></div></div>
+
+<h3 id="listakooste">Listakooste</h3>
+
+<p>Listakooste luo uuden listan vanhan listan perusteella ja voi samalla muokata alkioita jollakin tavalla. Esimerkiksi seuraava koodi luo uuden listan, jossa on jokaisen sanan pituus:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">"apina"</span><span class="p">,</span> <span class="s">"banaani"</span><span class="p">,</span> <span class="s">"cembalo"</span><span class="p">]</span>
+<span class="n">lengths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">words</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lengths</span><span class="p">)</span> <span class="c1"># [5, 6, 6]
+</span></code></pre></div></div>
+
+<h3 id="säännölliset-lausekkeet">Säännölliset lausekkeet</h3>
+
+<p>Säännöllinen lauseke (<em>regex</em>) kuvailee, mikä on haluttu merkkijonon muoto. Voimme käsitellä säännöllisiä lausekkeita moduulin <code class="language-html highlighter-rouge">re</code> avulla.</p>
+
+<p>Esimerkiksi seuraava koodi varmistaa, että merkkijono <code class="language-html highlighter-rouge">word</code> muodostuu kirjaimista <code class="language-html highlighter-rouge">a</code>–<code class="language-html highlighter-rouge">z</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">word</span> <span class="o">=</span> <span class="s">"apina"</span>
+<span class="k">if</span> <span class="n">re</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="s">r"^[a-z]+$"</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
+    <span class="n">ok</span> <span class="o">=</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<p>Tässä tapauksessa säännöllinen lauseke on <code class="language-html highlighter-rouge">^[a-z]+$</code>. Se muodostuu seuraavista osista:</p>
+
+<ul>
+  <li><code class="language-html highlighter-rouge">^</code> tarkoittaa merkkijonon alkua</li>
+  <li><code class="language-html highlighter-rouge">[a-z]</code> tarkoittaa mitä tahansa merkkiä väliltä <code class="language-html highlighter-rouge">a</code>–<code class="language-html highlighter-rouge">z</code></li>
+  <li><code class="language-html highlighter-rouge">+</code> toistaa edeltävää osaa yhden tai useamman kerran</li>
+  <li><code class="language-html highlighter-rouge">$</code> tarkoittaa merkkijonon loppua</li>
+</ul>
+
+<h3 id="dekoraattorit">Dekoraattorit</h3>
+
+<p>Dekoraattori luo funktion ympärille kuoren, jonka avulla funktion kutsuminen aiheuttaa automaattisesti jonkin lisätoiminnon.</p>
+
+<p>Esimerkiksi seuraavassa koodissa dekoraattori <code class="language-html highlighter-rouge">debug</code> tulostaa rivin tietoa aina, kun funktiota kutsutaan, ja näyttää funktion nimen ja parametrit.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">import</span> <span class="nn">functools</span>
+
+<span class="k">def</span> <span class="nf">debug</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="o">@</span><span class="n">functools</span><span class="p">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">f"kutsu </span><span class="si">{</span><span class="n">f</span><span class="p">.</span><span class="n">__name__</span><span class="si">}</span><span class="s"> parametreilla </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="o">@</span><span class="n">debug</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Moikka,"</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="n">hello</span><span class="p">(</span><span class="s">"Maija"</span><span class="p">)</span>
+<span class="n">hello</span><span class="p">(</span><span class="s">"Kaaleppi"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>kutsu hello parametreilla ('Maija',)
+Moikka, Maija
+kutsu hello parametreilla ('Kaaleppi',)
+Moikka, Kaaleppi
+</code></pre></div></div>
+
+<p>Flask-kirjastossa dekoraattorit ovat keskeisessä roolissa, koska niiden avulla määritetään, mitä sivupyyntöjä mikäkin funktio käsittelee.</p>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

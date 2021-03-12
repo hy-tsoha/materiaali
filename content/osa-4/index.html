@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Osa 4 - Tieto&shy;kanta&shy;sovellus
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tieto&shy;kanta&shy;sovellus</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/index>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/pages/aikataulu.html">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/pages/arvostelu.html">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/pages/kysymykset.html">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/pages/taustamateriaali.html">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/content/osa-1/index.html">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/content/osa-1/index.html#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/content/osa-1/index.html#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/content/osa-1/index.html#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/content/osa-1/index.html#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/content/osa-2/index.html">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/content/osa-2/index.html#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/content/osa-2/index.html#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/content/osa-2/index.html#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/content/osa-2/index.html#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/content/osa-2/index.html#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/content/osa-3/index.html">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/content/osa-3/index.html#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/content/osa-3/index.html#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/content/osa-3/index.html#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/content/osa-3/index.html#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/content/osa-3/index.html#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/content/osa-4/index.html">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/content/osa-4/index.html#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/content/osa-4/index.html#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/content/osa-4/index.html#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/content/osa-4/index.html#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</nav>
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+        <li><a href="#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+        <li><a href="#tietoturva">Tietoturva</a></li>
+        
+        <li><a href="#käytettävyys">Käytettävyys</a></li>
+        
+        <li><a href="#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+    </ul>
+</div>-->
+
+    <h1 id="osa-4">Osa 4</h1>
+
+<h2 id="oikeudet-ja-syötteet">Oikeudet ja syötteet</h2>
+
+<p>Kun web-sovellus saa käyttäjältä sivupyynnön, sovelluksen tulee tarkastaa ennen toiminnon suorittamista kaksi asiaa: (1) käyttäjällä on riittävät oikeudet toiminnon suorittamiseen ja (2) käyttäjän antama syöte (kuten lomakkeen kautta lähetetyt tiedot) on kelvollinen.</p>
+
+<p>Vaikka sovelluksen linkit ja lomakkeet ohjaisivat käyttäjää toimimaan tietyllä tavalla, ei voi luottaa, että näin tapahtuisi, koska web-tekniikkaa tunteva käyttäjä voi lähettää mitä tahansa sivupyyntöjä palvelimelle. Niinpä sovelluksen tulee aina varautua pahimpaan: vastassa on pahantahtoinen käyttäjä, joka koettaa aiheuttaa vahinkoa sovellukselle.</p>
+
+<h3 id="käyttäjän-oikeudet">Käyttäjän oikeudet</h3>
+
+<p>Tarkastellaan sovellusta, jossa käyttäjä voi luoda profiilin ja ystävystyä muiden kanssa. Käyttäjä voi katsoa oman profiilinsa ja lisäksi toisen käyttäjän profiilin, jos käyttäjät ovat ystäviä. Lisäksi admin-käyttäjä voi katsoa kenen tahansa profiilin.</p>
+
+<p>Oletetaan, että sivu <code class="language-html highlighter-rouge">profile/[id]</code> näyttää käyttäjän profiilin. Esimerkiksi jos käyttäjän id-numero on 123, sivu <code class="language-html highlighter-rouge">profile/123</code> näyttää profiilin. Koska käyttäjä voi kokeilla antaa sivulle minkä tahansa id-numeron, ennen profiilin näyttämistä täytyy tarkastaa huolellisesti, että käyttäjällä on todella oikeus nähdä profiili.</p>
+
+<p>Seuraava koodi tarkastaa, että käyttäjä saa nähdä profiilin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/profile/&lt;int:id&gt;"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+    <span class="n">allow</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">if</span> <span class="n">is_admin</span><span class="p">():</span>
+        <span class="n">allow</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">elif</span> <span class="n">is_user</span><span class="p">()</span> <span class="ow">and</span> <span class="n">user_id</span><span class="p">()</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
+        <span class="n">allow</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">elif</span> <span class="n">is_user</span><span class="p">():</span>
+        <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT 1 FROM friends WHERE user1=:user1 AND user2=:user2"</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"user1"</span><span class="p">:</span><span class="n">user_id</span><span class="p">(),</span> <span class="s">"user2"</span><span class="p">:</span><span class="nb">id</span><span class="p">})</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">allow</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">allow</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"error.html"</span><span class="p">,</span><span class="n">error</span><span class="o">=</span><span class="s">"Ei oikeutta nähdä sivua"</span><span class="p">)</span>
+    <span class="p">...</span>
+</code></pre></div></div>
+
+<p>Ideana on, että muuttuja <code class="language-html highlighter-rouge">allow</code> ilmaisee, saako käyttäjä nähdä sivua. Funktiot <code class="language-html highlighter-rouge">is_admin</code> ja <code class="language-html highlighter-rouge">is_user</code> tarkastavat, onko käyttäjä admin-käyttäjä tai kirjautunut käyttäjä, ja funktio <code class="language-html highlighter-rouge">user_id</code> antaa käyttäjän id-numeron. Käyttäjä saa nähdä profiilin, jos hän on admin-käyttäjä, katsoo omaa profiiliaan tai katsoo jonkun ystävänsä profiilia.</p>
+
+<p>Huomaa koodissa käytetty näppärä tapa tarkastaa SQL-kyselyllä, onko taulussa tiettyä riviä. Jos taulussa on rivi, kyselyn tulostaulussa on yksi rivi, jossa on arvo 1. Jos taas taulussa ei ole riviä, kyselyn tulostaulu on tyhjä.</p>
+
+<p>Jos käyttäjällä ei ole oikeutta nähdä sivua, käyttäjälle näytetään virhesivu sopivalla viestillä. Tällä sivulla käyttäjälle voi myös tarjota mahdollisuuden kirjautua sisään, koska virhe voi johtua siitä, että käyttäjällä olisi oikeus nähdä sivu mutta hän ei ole kirjautunut sisään.</p>
+
+<h3 id="syöte-lomakkeesta">Syöte lomakkeesta</h3>
+
+<p>Käyttäjä voi koettaa antaa lomakkeen kautta mitä tahansa tietoa, joten sovelluksen tulee tarkastaa ennen toiminnon toteuttamista, että tieto on kelvollista.</p>
+
+<p>Tarkastellaan esimerkkinä seuraavaa lomaketta, jonka kautta käyttäjä pystyy lähettämään uuden viestin keskustelualueelle:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/send"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+Otsikko: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"title"</span><span class="nt">&gt;</span>
+Viesti: <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>Tässä riskinä on, että käyttäjä syöttää lomakkeen kautta hyvin paljon tietoa. Esimerkiksi käyttäjä voi antaa viestille otsikon, jossa on miljoona merkkiä, mikä veisi paljon tilaa tietokannassa ja sotkisi sivuston ulkoasun. Niinpä lomakkeen käsittelijän tulee tarkastaa, että syötteet ovat järkevän pituisia. Voimme toteuttaa tämän tähän tapaan:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/send"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">send</span><span class="p">():</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"title"</span><span class="p">]</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"message"</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"error.html"</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="s">"Otsikko on liian pitkä"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5000</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"error.html"</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="s">"Viesti on liian pitkä"</span><span class="p">)</span>
+    <span class="p">...</span>
+</code></pre></div></div>
+
+<p>Tässä viestin otsikko saa olla enintään 100 merkkiä ja sisältö saa olla enintään 5000 merkkiä. Jos nämä rajat ylittyvät, viestiä ei tallenneta vaan käyttäjä ohjataan virhesivulle.</p>
+
+<p>Voimme vielä parantaa käyttökokemusta lisäämällä viestin lähetyssivulle JavaScript-koodin, joka tarkastaa lomakkeen sisällön selaimen puolella ennen lomakkeen lähettämistä:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/send"</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">onsubmit=</span><span class="s">"return check(this)"</span><span class="nt">&gt;</span>
+Otsikko: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"title"</span><span class="nt">&gt;</span>
+Viesti: <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">check</span><span class="p">(</span><span class="nx">form</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">form</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Otsikko on liian pitkä</span><span class="dl">"</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">form</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">5000</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Viesti on liian pitkä</span><span class="dl">"</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>Tässä tapauksessa lomake lähetetään palvelimelle vain, jos funktio <code class="language-html highlighter-rouge">check</code> palauttaa arvon <code class="language-html highlighter-rouge">true</code>. Nyt ilmoitus pituuden ylittymisestä tulee jo selaimen puolella:</p>
+
+<p><img class="screenshot" src="img/alert.png" /></p>
+
+<p>Tarkastus JavaScriptillä ei ole kuitenkaan luotettava, koska käyttäjä saattaa esimerkiksi kytkeä JavaScriptin pois selaimen asetuksista. Niinpä joka tapauksessa tarkastus täytyy olla palvelimella lomakkeen käsittelijässä.</p>
+
+<p>Huomaa, että käyttäjän syötteen muotoa ei yleensä kannata yrittää tarkastaa muilta osin kovin tarkasti, koska tämä menee helposti pieleen. Esimerkiksi verkko on täynnä virheellisiä sähköpostiosoitteen muodon tarkastajia, jotka hylkäävät toimivia osoitteita. Toisaalta käyttäjä voi aina halutessaan antaa keksittyä tietoa, kuten sähköpostiosoitteen <code class="language-html highlighter-rouge">lol@mikkihiiri.fi</code>, joka menee läpi kaikista tarkastuksista.</p>
+
+<h2 id="tietoturva">Tietoturva</h2>
+
+<h3 id="sql-injektio">SQL-injektio</h3>
+
+<p>SQL-injektio on tietoturvaongelma, joka syntyy siitä, että SQL-komennon osaksi laitetaan käyttäjän syöte yhdistämällä merkkijonoja. Tarkastellaan esimerkkinä seuraavaa koodia, jonka tarkoituksena on päivittää käyttäjän sähköpostiosoite:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/update"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="n">check_user</span><span class="p">()</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">session</span><span class="p">[</span><span class="s">"user_id"</span><span class="p">]</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"email"</span><span class="p">]</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"UPDATE users SET email='"</span><span class="o">+</span><span class="n">email</span><span class="o">+</span><span class="s">"' WHERE id="</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+    <span class="p">...</span>
+</code></pre></div></div>
+
+<p>Yllä oleva koodi sallii SQL-injektion, koska käyttäjän antama syöte liitetään suoraan SQL-komennon osaksi ja käyttäjä voi muuttaa tämän avulla SQL-komennon rakennetta. Esimerkiksi käyttäjä voi antaa sähköpostiosoitteeksi <code class="language-html highlighter-rouge">', status='admin</code>, jolloin komennosta tulee seuraavanlainen (olettaen, että käyttäjän id-numero on 123):</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">UPDATE</span> <span class="n">users</span> <span class="k">SET</span> <span class="n">email</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="s1">'admin'</span> <span class="k">WHERE</span> <span class="n">id</span><span class="o">=</span><span class="mi">123</span>
+</code></pre></div></div>
+
+<p>Tämä komento muuttaa käyttäjän sähköpostiosoitteen tyhjäksi ja antaa hänelle admin-oikeudet, eli käyttäjä pystyy muuttamaan itsensä adminiksi, vaikka tarkoituksena olisi vain pystyä muuttamaan sähköpostiosoitetta. Vastaavasti <code class="language-html highlighter-rouge">SELECT</code>-kyselyissä SQL-injektion avulla voi hakea tietoa, jota käyttäjän ei pitäisi pystyä saamaan.</p>
+
+<p>Tehokas tapa estää SQL-injektio on yhdistää syötteet SQL-komentoihin parametrien avulla, kuten olemme tehneet kaikissa kurssin esimerkeissä. Voimme poistaa SQL-injektion yllä olevasta koodista muuttamalla koodia näin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/update"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="n">check_user</span><span class="p">()</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">session</span><span class="p">[</span><span class="s">"user_id"</span><span class="p">]</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"email"</span><span class="p">]</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"UPDATE users SET email=:email WHERE id=:user_id"</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"email"</span><span class="p">:</span><span class="n">email</span><span class="p">,</span> <span class="s">"user_id"</span><span class="p">:</span><span class="n">user_id</span><span class="p">})</span>
+    <span class="p">...</span>
+</code></pre></div></div>
+
+<p>Tämän ansiosta muuttujan <code class="language-html highlighter-rouge">email</code> sisältö ei voi sotkea SQL-komennon rakennetta. Jos muuttujan osana on heittomerkki <code class="language-html highlighter-rouge">'</code>, se muuttuu automaattisesti muotoon <code class="language-html highlighter-rouge">\'</code>, jolloin aiempi yritys tuottaa seuraavan SQL-komennon:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">UPDATE</span> <span class="n">users</span> <span class="k">SET</span> <span class="n">email</span><span class="o">=</span><span class="s1">'</span><span class="se">\'</span><span class="s1">, status=</span><span class="se">\'</span><span class="s1">admin'</span> <span class="k">WHERE</span> <span class="n">id</span><span class="o">=</span><span class="mi">123</span>
+</code></pre></div></div>
+
+<p>Tämä komento muuttaa vain saraketta <code class="language-html highlighter-rouge">email</code> eikä aiheuta tietoturvaongelmaa.</p>
+
+<h3 id="xss-haavoittuvuus">XSS-haavoittuvuus</h3>
+
+<p>XSS-haavoittuvuus perustuu siihen, että käyttäjän antama syöte yhdistetään sellaisenaan sivun HTML-koodiin, jolloin käyttäjä pystyy vaikuttamaan sivun toimintaan selaimessa antamalla syötteen, jossa on HTML-koodia.</p>
+
+<p>Seuraavassa on esimerkki koodista, jossa on XSS-haavoittuvuus:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/result"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">result</span><span class="p">():</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s">"Moikka, "</span><span class="o">+</span><span class="n">name</span>
+</code></pre></div></div>
+
+<p>Tässä käyttäjä antaa nimensä lomakkeen kautta ja sivu näyttää viestin “Moikka, <em>nimi</em>”. Sivu toimii odotusten mukaisesti, jos käyttäjä antaa nimensä:</p>
+
+<p><img class="screenshot" src="img/xss1.png" /></p>
+
+<p>Kuitenkin käyttäjä voi antaa nimen sijasta myös merkkijonon, jossa on HTML-koodia. Esimerkiksi jos nimenä on <code class="language-html highlighter-rouge"><span class="nt">&lt;h1&gt;</span>LOL<span class="nt">&lt;/h1&gt;</span></code>, sivu näyttää tältä:</p>
+
+<p><img class="screenshot" src="img/xss2.png" /></p>
+
+<p>Lisäksi käyttäjä voi antaa JavaScript-koodia, joka myös suoritetaan selaimessa. Esimerkiksi jos nimenä on <code class="language-html highlighter-rouge"><span class="nt">&lt;script&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Sivu on hakkeroitu!</span><span class="dl">"</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span></code>, sivu näyttää tältä:</p>
+
+<p><img class="screenshot" src="img/xss3.png" /></p>
+
+<p>Tässä tapauksessa XSS-haavoittuvuus ei ole vielä vaarallinen, koska käyttäjä voi muuttaa vain itselleen näkyvää sivua. Kuitenkin asiasta tulee ongelma, jos käyttäjän syöte tallennetaan palvelimelle ja se välittyy muille käyttäjille. Kiusanteon lisäksi JavaScriptin avulla voi tuottaa todellisia tietoturvaongelmia XSS-haavoittuvuuden kautta.</p>
+
+<p>XSS-haavoittuvuuden pystyy estämään pitämällä huolta siitä, että käyttäjän antamia syötteitä ei näytetä koskaan sivulla sellaisenaan. Kun käytämme Flaskissa sivupohjia, tämä tapahtuu automaattisesti. Esimerkiksi seuraavassa koodissa ei ole XSS-haavoittuvuutta:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/result"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">result</span><span class="p">():</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"result.html"</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Kun muuttuja <code class="language-html highlighter-rouge">name</code> näytetään sivupohjassa, sen sisältöä muutetaan automaattisesti niin, että HTML-koodia ei suoriteta:</p>
+
+<p><img class="screenshot" src="img/xss4.png" /></p>
+
+<p>Käytännössä esimerkiksi merkit <code class="language-html highlighter-rouge"><span class="nt">&lt;</span></code> ja <code class="language-html highlighter-rouge">&gt;</code> muuttuvat muotoon <code class="language-html highlighter-rouge"><span class="ni">&amp;lt;</span></code> ja <code class="language-html highlighter-rouge"><span class="ni">&amp;gt;</span></code>, jolloin selain näyttää nämä merkit sellaisenaan eikä tulkitse niitä HTML-tagien osiksi.</p>
+
+<p>Jos emme käyttäisi sivupohjia, merkit tulisi muuttaa jollain toisella tavalla. Esimerkiksi Werkzeug-kirjastossa on funktio <code class="language-html highlighter-rouge">escape</code>, joka hoitaa tämän asian. Kuitenkin hyvä käytäntö on käyttää aina sivupohjia, jolloin XSS-haavoittuvuuden riski katoaa automaattisesti.</p>
+
+<h3 id="csrf-haavoittuvuus">CSRF-haavoittuvuus</h3>
+
+<p>CSRF-haavoittuvuus syntyy, kun web-sovellus ei varmista, että kirjautuneen käyttäjän tekemä sivupyyntö todella tulee käyttäjältä. Tarkastellaan esimerkkinä seuraavaa lomaketta, jonka kautta käyttäjä voi lähettää uuden viestin, ja sen käsittelijää:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/send"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+Uusi viesti:
+<span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/send"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">send</span><span class="p">():</span>
+    <span class="n">check_user</span><span class="p">()</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">session</span><span class="p">[</span><span class="s">"user_id"</span><span class="p">]</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"message"</span><span class="p">]</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO messages (user_id, message) VALUES (:user_id, :message)"</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"user_id"</span><span class="p">:</span><span class="n">user_id</span><span class="p">,</span> <span class="s">"message"</span><span class="p">:</span><span class="n">message</span><span class="p">})</span>
+    <span class="p">...</span>
+</code></pre></div></div>
+
+<p>Tässä lomakkeessa on CSRF-haavoittuvuus, koska hyökkääjä voi houkutella kirjautuneena olevan käyttäjän ulkopuoliselle sivulle, joka kutsuu taustalla sivua <code class="language-html highlighter-rouge">send</code> käyttäjän tietämättä. Koska käyttäjä on kirjautuneena selaimessa, viestin lähetys menee läpi. Niinpä hyökkääjä voi lähettää käyttäjän nimissä minkä tahansa itse valitun viestin.</p>
+
+<p>CSRF-haavoittuvuuden avulla hyökkääjä pystyy siis toimimaan käyttäjän nimissä sivustolla, olettaen että käyttäjä on kirjautunut sisään ja hyökkääjä on onnistunut houkuttelemaan hänet ulkoiselle hyökkääjän laatimalle sivulle.</p>
+
+<p>CSRF-haavoittuvuuden pystyy estämään muuttamalla lomaketta niin, että sen osana on käyttäjän istuntoon liittyvä tieto, joka ei ole hyökkääjän tiedossa. Esimerkiksi kun käyttäjä kirjautuu sisään, sovellus voi lisätä istuntoon satunnaisen kentän <code class="language-html highlighter-rouge">csrf_token</code>. Tässä on yksi tapa luoda kyseinen kenttä <code class="language-html highlighter-rouge">urandom</code>-funktion avulla:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code>    <span class="n">session</span><span class="p">[</span><span class="s">"csrf_token"</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">urandom</span><span class="p">(</span><span class="mi">16</span><span class="p">).</span><span class="nb">hex</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Tämän kentän sisältö laitetaan piilokentäksi lomakkeeseen:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/send"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+Uusi viesti:
+<span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"csrf_token"</span> <span class="na">value=</span><span class="s">"{{ session.csrf_token }}"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>Sitten lomakkeen käsittelijä tarkastaa, että <code class="language-html highlighter-rouge">csrf_token</code> on oikea:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code>    <span class="k">if</span> <span class="n">session</span><span class="p">[</span><span class="s">"csrf_token"</span><span class="p">]</span> <span class="o">!=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"csrf_token"</span><span class="p">]:</span>
+        <span class="n">abort</span><span class="p">(</span><span class="mi">403</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tässä tapauksessa jos <code class="language-html highlighter-rouge">csrf_token</code> on väärä, sivun käsittely katkeaa ja tuloksena on HTTP-virhekoodi 403 (Forbidden). Koska hyökkääjä ei tiedä, mikä <code class="language-html highlighter-rouge">csrf_token</code> liittyy käyttäjän istuntoon, tämä estää tehokkaasti CSRF-haavoittuvuuden.</p>
+
+<h3 id="muut-salaiset-tiedot">Muut salaiset tiedot</h3>
+
+<p>Web-sovelluksissa on usein muutakin salaista tietoa, kuten tietokannan salasana, Flaskissa istuntojen salainen avain jne. Näiden tietojen tulee olla turvallisessa paikassa palvelimella niin, että ulkopuoliset eivät pääse niihin käsiksi. Yksi turvallinen tapa on käyttää ympäristömuuttujia kurssin materiaalissa esitetyllä tavalla.</p>
+
+<p>Salaista tietoa ei erityisesti saa laittaa GitHubiin. Tutkimalla GitHubin käyttäjien projekteja voi löytää paljon salaista tietoa, jonka ei kuuluisi olla siellä. Pidä huoli, että oma projektisi ei ole yksi niistä. Jos kuitenkin vahingossa laitat GitHubiin salaista tietoa, niin huomaa, että pelkkä tiedon poistaminen repositoriosta ei riitä, koska myös tiedostojen muutoshistoria on tallessa. Lisää tietoa asiasta löydät esimerkiksi <a href="https://blog.gitguardian.com/leaking-secrets-on-github-what-to-do/">täältä</a>.</p>
+
+<h2 id="käytettävyys">Käytettävyys</h2>
+
+<p>Sovelluksen toimivuuden ja turvallisuuden lisäksi on tärkeää, että sovellusta on mukavaa käyttää. Tähän kuuluu muun muassa seuraavia asioita:</p>
+
+<ul>
+  <li>Sivut latautuvat nopeasti ja sovellus reagoi välittömästi, kun käyttäjä siirtyy sivulta toiselle tai lähettää lomakkeen.</li>
+  <li>Käyttäjälle on selvää, mitä sovelluksen toiminnot tekevät ja miten niitä on tarkoitus käyttää.</li>
+  <li>Kun käyttäjä suorittaa toiminnon, sovellus joko ilmaisee selkeästi, että toiminto onnistui, tai näyttää ymmärrettävän virheilmoituksen.</li>
+  <li>Sovellus toimii eri selaimilla ja eri laitteissa ja olettaa mahdollisimman vähän käyttäjän ympäristöstä.</li>
+  <li>Sovellusta pystyy käyttämään hyvin myös silloin, kun tietokannassa on paljon tietoa (usein sovellusta kehitettäessä tietoa on vain vähän).</li>
+</ul>
+
+<p>Verkossa on paljon sekä hyvin että huonosti toimivia sovelluksia. Hyvin toimivat sovellukset soveltuvat omien sovellusten esikuviksi, kun taas huonosti toimivat sovellukset muistuttavat siitä, mitä virheitä kannattaa varoa omissa sovelluksissa.</p>
+
+<p>Hyvä tulikoe sovellukselle on kokeilla jossain vaiheessa sen toimintaa tekstiselaimessa. Esimerkiksi osassa 3 tehty keskustelusovellus näyttää seuraavalta Lynx-selaimessa:</p>
+
+<p><img class="screenshot" src="img/chat1.png" /></p>
+
+<p><img class="screenshot" src="img/chat2.png" /></p>
+
+<p><img class="screenshot" src="img/chat3.png" /></p>
+
+<p>Tässä tapauksessa sovellusta pystyy käyttämään hyvin tekstiselaimessa, mikä on merkki siitä, että se toimii hyvin monenlaisissa ympäristöissä. Usein tähän tavoitteeseen päästään automaattisesti toteuttamalla sivut suoraviivaisella HTML:llä, jossa elementtejä on käytetty niiden merkityksen mukaisesti.</p>
+
+<p><em>Saavutettava</em> sovellus on sellainen, jonka suunnittelussa on otettu huomioon eri käyttäjäryhmät. Esimerkiksi näkövammaiset käyttävät ohjelmia, jotka lukevat ääneen verkkosivujen sisältöä, jolloin on tärkeää, että oleellinen sisältö on saatavilla tekstimuodossa ja HTML-elementtejä on käytetty loogisesti. Lisää tietoa asiasta löydät esimerkiksi suomeksi <a href="https://ronjao.github.io/Saavutettavuus/">Ronja Ojan materiaalista</a> ja englanniksi <a href="https://www.w3.org/WAI/tutorials/">W3C:n tutoriaalista</a> ja <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Mozillan materiaalista</a>.</p>
+<h2 id="ulkoasun-toteutus">Ulkoasun toteutus</h2>
+
+<h3 id="yhteinen-ulkoasu">Yhteinen ulkoasu</h3>
+
+<p>Yleensä kaikilla sovelluksen sivuilla on samantapainen ulkoasu, jolloin on hyvä tapa määritellä ulkoasu vain yhdessä paikassa ja viitata siihen muilla sivuilla. Esimerkiksi seuraava tiedosto <code class="language-html highlighter-rouge">layout.html</code> määrittelee ulkoasun:</p>
+
+<p class="code-title">layout.html</p>
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;title&gt;</span>Maijan sovellus - <span class="cp">{%</span> <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Maijan sovellus<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Etusivu<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/login"</span><span class="nt">&gt;</span>Kirjautuminen<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+<span class="nt">&lt;hr&gt;</span>
+Voit lähettää palautetta <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>tästä<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<p>Tässä <code class="language-html highlighter-rouge">block</code>-kohdat ovat sellaisia, joiden sisältö muuttuu riippuen sivusta. Kohtaan <code class="language-html highlighter-rouge">title</code> tulee sivun otsikko ja kohtaan <code class="language-html highlighter-rouge">content</code> tulee sivun varsinainen sisältö.</p>
+
+<p>Ulkoasun saa käyttöön muilla sivuilla <code class="language-html highlighter-rouge">extends</code>-komennon avulla seuraavasti:</p>
+
+<p class="code-title">index.html</p>
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"layout.html"</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}</span>Etusivu<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
+<span class="nt">&lt;h2&gt;</span>Etusivu<span class="nt">&lt;/h2&gt;</span>
+Tervetuloa sovellukseen!
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</code></pre></div></div>
+
+<p class="code-title">login.html</p>
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"layout.html"</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}</span>Kirjautuminen<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
+<span class="nt">&lt;h2&gt;</span>Kirjautuminen<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/login"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+Tunnus: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"username"</span><span class="nt">&gt;</span> <span class="nt">&lt;br&gt;</span>
+Salasana: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span><span class="nt">&gt;</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Kirjaudu"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</code></pre></div></div>
+
+<p>Tässä tapauksessa sivut näyttävät seuraavilta:</p>
+
+<p><img class="screenshot" src="img/pohja1.png" /></p>
+
+<p><img class="screenshot" src="img/pohja2.png" /></p>
+
+<h3 id="ulkoasun-suunnittelu">Ulkoasun suunnittelu</h3>
+
+<p>Nettisivujen ulkoasun toteuttamiseen käytetään CSS-kieltä, jonka avulla voi määrittää sivun asettelun, värit, fontit, jne. Ulkoasun suunnittelu vaatii toisaalta tietoa CSS:n ominaisuuksista ja toisaalta graafista silmää. Voit katsoa <a href="../../pages/ulkoasun_suunnittelu.html">tästä</a> esimerkin prosessista, jossa suunnitellaan ulkoasu ja toteutetaan se vaihe vaiheelta.</p>
+
+<h3 id="ulkoasu-kirjaston-avulla">Ulkoasu kirjaston avulla</h3>
+
+<p>Toinen tapa toteuttaa ulkoasu on käyttää valmista ulkoasukirjastoa. Tämän tavan etuna on, että ulkoasua ei tarvitse suunnitella tyhjästä vaan voi käyttää valmiita komponentteja, mutta toisaalta lopputulos ei ole välttämättä yksilöllinen. Suosittu kirjasto ulkoasun toteuttamiseen on Bootstrap, jonka käyttämisestä voit lukea lisää <a href="../../pages/bootstrap.html">tästä</a>.</p>
+
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

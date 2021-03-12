@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Osa 3 - Tieto&shy;kanta&shy;sovellus
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tieto&shy;kanta&shy;sovellus</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/index>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/pages/aikataulu.html">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/pages/arvostelu.html">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/pages/kysymykset.html">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/pages/taustamateriaali.html">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/content/osa-1/index.html">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/content/osa-1/index.html#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/content/osa-1/index.html#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/content/osa-1/index.html#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/content/osa-1/index.html#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/content/osa-2/index.html">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/content/osa-2/index.html#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/content/osa-2/index.html#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/content/osa-2/index.html#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/content/osa-2/index.html#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/content/osa-2/index.html#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/content/osa-3/index.html">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/content/osa-3/index.html#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/content/osa-3/index.html#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/content/osa-3/index.html#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/content/osa-3/index.html#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/content/osa-3/index.html#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/content/osa-4/index.html">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/content/osa-4/index.html#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/content/osa-4/index.html#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/content/osa-4/index.html#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/content/osa-4/index.html#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</nav>
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+        <li><a href="#versionhallinta">Versionhallinta</a></li>
+        
+        <li><a href="#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+        <li><a href="#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+        <li><a href="#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+        <li><a href="#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+    </ul>
+</div>-->
+
+    <h1 id="osa-3">Osa 3</h1>
+
+<p>Tämä osan aiheita ovat sovelluksen kehittäminen GitHubin avulla, sovelluksen siirtäminen julkiseksi Heroku-palvelimelle, virheiden etsiminen sekä sovelluksen jakaminen osiin.</p>
+
+<p>Jos Git ei ole sinulle vielä kovin tuttu työkalu, voit lukea <a href="../../pages/git_vinkit.html">tästä</a> tämän kurssin kannalta hyödyllisiä vinkkejä Gitin käyttämiseen.</p>
+
+<h2 id="versionhallinta">Versionhallinta</h2>
+
+<p>Käytämme kurssilla versionhallintaan <a href="https://github.com/">GitHubia</a>. Seuraavaksi käymme läpi esimerkin, jossa aloitamme sovelluksen kehityksen GitHubissa.</p>
+
+<p>Teemme pienen sovelluksen, joka tallentaa tietokantaan sivuston kävijöiden määrän ja näyttää tämän tiedon etusivulla. Esimerkki olettaa, että GitHubiin on luotu uusi repositorio <code class="language-html highlighter-rouge">tsoha-visitors</code>, jossa on tiedosto <code class="language-html highlighter-rouge">README.md</code> mutta ei vielä muuta.</p>
+
+<p>Seuraavat komennot kloonaavat repositorion omalle koneelle, luovat sovellusta varten virtuaaliympäristön sekä asentavat tarvittavat kirjastot. Tässä ja myöhemmin vastaavissa kohdissa <code class="language-html highlighter-rouge">user</code> on käytetty GitHub-tunnus.</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>git clone https://github.com/user/tsoha-visitors.git
+Cloning into 'tsoha-visitors'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+<span class="p">$ </span>cd tsoha-visitors/
+<span class="p">$ </span>python3 -m venv venv
+<span class="p">$ </span>source venv/bin/activate
+<span class="p">(venv) $ </span>pip install flask
+<span class="p">(venv) $ </span>pip install flask-sqlalchemy
+<span class="p">(venv) $ </span>pip install psycopg2
+<span class="p">(venv) $ </span>pip install python-dotenv
+</code></pre></div></div>
+
+<p>Luomme tietokantaan yhden taulun, johon tallennetaan jokaisen kävijän vierailuaika:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">visitors</span> <span class="p">(</span><span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span> <span class="nb">time</span> <span class="nb">TIMESTAMP</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Sovellus muodostuu seuraavista tiedostoista:</p>
+
+<p class="code-title">app.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">getenv</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="p">.</span><span class="n">config</span><span class="p">[</span><span class="s">"SQLALCHEMY_DATABASE_URI"</span><span class="p">]</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s">"DATABASE_URL"</span><span class="p">)</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="s">"INSERT INTO visitors (time) VALUES (NOW())"</span><span class="p">)</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="s">"SELECT COUNT(*) FROM visitors"</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">,</span> <span class="n">counter</span><span class="o">=</span><span class="n">counter</span><span class="p">)</span> 
+</code></pre></div></div>
+
+<p class="code-title">index.html</p>
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Tervetuloa!
+<span class="nt">&lt;p&gt;</span>
+Olet sivuston <span class="cp">{{</span> <span class="nv">counter</span> <span class="cp">}}</span>. käyttäjä
+</code></pre></div></div>
+
+<p class="code-title">.env</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>DATABASE_URL=postgresql:///user
+</code></pre></div></div>
+<p>Ideana on, että aina kun käyttäjä lataa etusivun, tauluun <code class="language-html highlighter-rouge">visitors</code> lisätään uusi rivi. Tämän jälkeen haetaan taulun rivien määrä, joka kertoo kävijöiden yhteismäärän.</p>
+
+<p>Nyt voimme kokeilla suorittaa sovelluksen:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>flask run
+</code></pre></div></div>
+
+<p>Sovelluksen käyttäminen näyttää tältä:</p>
+
+<p><img class="screenshot" src="img/visitors.png" /></p>
+
+<h3 id="tiedostojen-lisääminen-repositorioon">Tiedostojen lisääminen repositorioon</h3>
+
+<p>Koska sovelluksen ensimmäinen versio toimii, nyt on hyvä hetki lisätä sovelluksen tiedostot repositorioon. Hyödyllinen komento on <code class="language-html highlighter-rouge">git status</code>, joka näyttää repositorion tilanteen. Komento antaa nyt seuraavan tuloksen:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+	.env
+	__pycache__/
+	app.py
+	templates/
+	venv/
+
+nothing added to commit but untracked files present (use "git add" to track)
+</code></pre></div></div>
+
+<p>Komento antaa listan tiedostoista ja hakemistoista, joita <em>ei</em> ole repositoriossa:</p>
+
+<ul>
+  <li><code class="language-html highlighter-rouge">.env</code> on luomamme tiedosto, jossa on ympäristömuuttujia</li>
+  <li><code class="language-html highlighter-rouge">__pycache__</code> on sovelluksen suorituksen aikana syntynyt hakemisto, jossa on tavukoodiksi käännetty sovellus</li>
+  <li><code class="language-html highlighter-rouge">app.py</code> on luomamme tiedosto, jossa on sovelluksen koodi</li>
+  <li><code class="language-html highlighter-rouge">templates</code> on hakemisto, jossa on sivupohja <code class="language-html highlighter-rouge">index.html</code></li>
+  <li><code class="language-html highlighter-rouge">venv</code> on hakemisto, joka sisältää virtuaaliympäristön tarvitsemat tiedostot</li>
+</ul>
+
+<p>Tärkeä asia versionhallinnassa on päättää, mitkä tiedostot laitetaan repositorioon kaikkien saataville. Tässä tapauksessa repositorioon kuuluvat <code class="language-html highlighter-rouge">app.py</code> ja <code class="language-html highlighter-rouge">templates</code>, jotka muodostavat sovelluksen toteutuksen. Sen sijaan <code class="language-html highlighter-rouge">.env</code>, <code class="language-html highlighter-rouge">__pycache__</code> ja <code class="language-html highlighter-rouge">venv</code> eivät kuulu repositorioon, koska ne liittyvät käyttäjän ympäristöön eivätkä sovelluksen toteutukseen.</p>
+
+<p>Komento <code class="language-html highlighter-rouge">git add</code> laittaa tiedostoja lisättäväksi:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>git add app.py
+<span class="p">(venv) $ </span>git add templates
+</code></pre></div></div>
+
+<p>Nyt <code class="language-html highlighter-rouge">git status</code> näyttää muuttuneen tilanteen näin:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+	new file:   app.py
+	new file:   templates/index.html
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+	.env
+	__pycache__/
+	venv/
+</code></pre></div></div>
+
+<p>Tämä näyttää hyvältä, koska oikeat tiedostot ovat menossa repositorioon, joten voimme suorittaa komennot <code class="language-html highlighter-rouge">git commit</code> ja <code class="language-html highlighter-rouge">git push</code>:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>git commit -m "Create first version"
+<span class="p">(venv) $ </span>git push
+</code></pre></div></div>
+
+<p>Tämän seurauksena sovelluksen nykyinen versio on tallessa GitHubissa.</p>
+
+<h3 id="tiedosto-gitignore">Tiedosto .gitignore</h3>
+
+<p>Tiedosto <code class="language-html highlighter-rouge">.env</code> ja hakemistot <code class="language-html highlighter-rouge">__pycache__</code> ja <code class="language-html highlighter-rouge">venv</code> eivät siis kuulu repositorioon, mutta ne näkyvät häiritsevästi listassa aina, kun suoritamme komennon <code class="language-html highlighter-rouge">git status</code>.</p>
+
+<p>Hyödyllinen tiedosto on <code class="language-html highlighter-rouge">.gitignore</code>, joka määrittää, mitä tiedostoja ja hakemistoja <em>emme</em> halua viedä repositorioon. Tässä tapauksessa tiedoston sisältö voisi olla:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>.env
+__pycache__
+venv
+</code></pre></div></div>
+
+<p>Tämän tiedoston luomisen jälkeen <code class="language-html highlighter-rouge">git status</code> alkaa näyttää siistimmältä:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+</code></pre></div></div>
+
+<p>Tiedosto <code class="language-html highlighter-rouge">.gitignore</code> kuitenkin lisätään repositorioon:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>git add .gitignore 
+<span class="p">(venv) $ </span>git commit -m "Add .gitignore"
+<span class="p">(venv) $ </span>git push
+</code></pre></div></div>
+
+<p>Tästä lähtien tiedostossa <code class="language-html highlighter-rouge">.gitignore</code> mainitut tiedostot ja hakemistot eivät ole ehdolla repositorioon lisättäväksi. Projektin kehityksen aikana tiedostoon <code class="language-html highlighter-rouge">.gitignore</code> voi lisätä tarvittaessa lisää sisältöä.</p>
+
+<h3 id="sovelluksen-riippuvuudet">Sovelluksen riippuvuudet</h3>
+
+<p>Komento <code class="language-html highlighter-rouge">pip freeze</code> kertoo, mitkä ovat sovelluksen <em>riippuvuudet</em>  eli mitä kirjastoja sovellus tarvitsee toimiakseen. Kun suoritamme komennon nyt, saamme seuraavan tuloksen:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>pip freeze
+click==7.1.2
+Flask==1.1.2
+Flask-SQLAlchemy==2.4.4
+itsdangerous==1.1.0
+Jinja2==2.11.3
+MarkupSafe==1.1.1
+pkg-resources==0.0.0
+psycopg2==2.8.6
+python-dotenv==0.15.0
+SQLAlchemy==1.3.23
+Werkzeug==1.0.1
+</code></pre></div></div>
+
+<p>Tämä lista kertoo jokaisesta kirjastosta, minkä kirjaston version sovellus vaatii. Huomaa, että jos suoritat komennon itse, voit saada vähän eri versioita.</p>
+
+<p>Sovelluksen riippuvuuksista on tapana tehdä tiedosto <code class="language-html highlighter-rouge">requirements.txt</code>. Tämä tiedosto tallennetaan repositorioon:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>pip freeze &gt; requirements.txt
+<span class="p">(venv) $ </span>git add requirements.txt 
+<span class="p">(venv) $ </span>git commit -m "Add requirements"
+<span class="p">(venv) $ </span>git push
+</code></pre></div></div>
+
+<p>Nyt jos toinen henkilö hakee sovelluksen GitHubista, hän voi asentaa virtuaaliympäristöönsä tarvittavat kirjastot seuraavalla komennolla:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>pip install -r requirements.txt
+</code></pre></div></div>
+
+<h3 id="tietokannan-rakenne">Tietokannan rakenne</h3>
+
+<p>Repositoriosta puuttuu vielä tieto siitä, mikä on sovelluksen käyttämän tietokannan rakenne. Tätä varten luomme tiedoston <code class="language-html highlighter-rouge">schema.sql</code>, joka sisältää tietokannan skeeman. Tässä sovelluksessa tietokannassa on vain yksi taulu ja tiedoston sisältö on seuraava:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">visitors</span> <span class="p">(</span><span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span> <span class="nb">time</span> <span class="nb">TIMESTAMP</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Lisäämme uuden tiedoston repositorioon:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>git add schema.sql 
+<span class="p">(venv) $ </span>git commit -m "Add SQL schema"
+<span class="p">(venv) $ </span>git push
+</code></pre></div></div>
+
+<p>Tästä lähtien sovelluksen tarvitsemat taulut voi luoda tietokantaan seuraavasti ohjaamalla tiedostossa <code class="language-html highlighter-rouge">schema.sql</code> olevat komennot PostgreSQL-tulkille:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>psql &lt; schema.sql
+</code></pre></div></div>
+
+<p>Huomaa, että aina kun sovelluksen tietokannan rakenne muuttuu, myös tiedostosta <code class="language-html highlighter-rouge">schema.sql</code> täytyy tehdä uusi versio ja lähettää se repositorioon. Tämän avulla repositoriossa on aina tieto siitä, millainen on sovelluksen senhetkinen tietokanta.</p>
+
+<h2 id="sovellus-tuotantoon">Sovellus tuotantoon</h2>
+
+<p>Sovelluksen laittaminen <em>tuotantoon</em> tarkoittaa, että sovellus julkaistaan käyttäjille. Tällä kurssilla harjoittelemme tuotantoon laittamista <a href="https://heroku.com/">Heroku</a>-palvelun avulla. Heroku tarjoaa ilmaiseksi palvelintilaa, jonne voi sijoittaa muun muassa Flaskilla toteutetun web-sovelluksen.</p>
+
+<p>Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsovelluksen Herokuun. Jotta voit käyttää Herokua, sinun täytyy luoda ensin tunnus palveluun. Tunnuksen luominen on ilmaista, mutta huomaa, että Heroku tarjoaa myös maksullisia palveluja.</p>
+
+<p>Herokun ilmaisversiossa on joitakin merkittäviä rajoituksia. Sovellus saa käyttää rajoitetun määrän palvelimen aikaa kuukaudessa, ja jos sovellusta ei käytetä hetkeen, se sulkeutuu ja seuraavan käyttäjän saapuessa vie jonkin verran aikaa, ennen kuin sovellus käynnistyy uudestaan. Lisäksi tietokannan kokoa on rajoitettu niin, että tauluissa saa olla yhteensä enintään 10000 riviä. Näiden rajoitusten vuoksi Herokun ilmaisversio ei sovellu todellisten sovellusten alustaksi, mutta sen avulla voi harjoitella web-sovelluksen julkaisemista.</p>
+
+<p>Herokussa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Herokun sivuston <a href="https://dashboard.heroku.com/">hallintapaneelin</a> kautta tai omalle koneelle asennettavan <a href="https://devcenter.heroku.com/articles/heroku-cli">komentorivityökalun</a> avulla. Seuraava ohje näyttää, miten komentorivityökalu toimii.</p>
+
+<h3 id="komentorivityökalu">Komentorivityökalu</h3>
+
+<p>Komentorivityökalun käyttö alkaa kirjautumalla sisään:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>heroku login
+heroku: Press any key to open up the browser to login or q to exit:
+</code></pre></div></div>
+
+<p>Komento avaa nettiselaimen, jonka kautta pystyy kirjautumaan Herokuun. Kirjautumisen jälkeen komentorivityökalu on käyttökunnossa.</p>
+
+<p>Komento <code class="language-html highlighter-rouge">heroku help</code> (tai pelkkä <code class="language-html highlighter-rouge">heroku</code>) näyttää listan komentorivityökalun komennoista. Vastaavasti voi myös pyytää neuvoa tietyn komennon käyttämisestä: esimerkiksi <code class="language-html highlighter-rouge">heroku apps help</code> kertoo, miten komentoa <code class="language-html highlighter-rouge">heroku apps</code> käytetään.</p>
+
+<h3 id="sovelluksen-luonti">Sovelluksen luonti</h3>
+
+<p>Seuraava komento luo uuden Heroku-sovelluksen nimellä <code class="language-html highlighter-rouge">tsoha-visitors</code>:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>heroku apps:create tsoha-visitors
+Creating ⬢ tsoha-visitors... done
+https://tsoha-visitors.herokuapp.com/ | https://git.heroku.com/tsoha-visitors.git
+</code></pre></div></div>
+
+<p>Jokaisella Herokussa olevalla sovelluksella tulee olla eri nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä <code class="language-html highlighter-rouge">tsoha-visitors</code>, joten sovelluksen luonti onnistui. Kuitenkaan et voi itse luoda tämän nimistä sovellusta, koska se on jo olemassa. Jos et anna sovellukselle nimeä, sille tulee automaattisesti satunnainen nimi. Jos teet sovelluksen vain kokeilua tai tätä kurssia varten, satunnainen nimi riittää hyvin.</p>
+
+<p>Sovellus julkaistaan Herokussa lähettämällä haluttu sovelluksen versio Herokun git-repositorioon. Tämän voi tehdä kytkemällä paikallisen repositorion Herokuun, kuten teemme tässä ohjeessa, tai vaihtoehtoisesti Herokun GitHub-integraation kautta.</p>
+
+<p>Voimme kytkeä paikallisen repositorion Herokuun näin:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>heroku git:remote -a tsoha-visitors
+</code></pre></div></div>
+
+<p>Tämä komento määrittää, että tässä hakemistossa olevan sovelluksen repositorio kytketään Herokun sovelluksen <code class="language-html highlighter-rouge">tsoha-visitors</code> repositorioon. Voimme tarkastella komennon vaikutusta seuraavasti:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>git remote -v
+heroku	https://git.heroku.com/tsoha-visitors.git (fetch)
+heroku	https://git.heroku.com/tsoha-visitors.git (push)
+origin	https://github.com/user/tsoha-visitors.git (fetch)
+origin	https://github.com/user/tsoha-visitors.git (push)
+</code></pre></div></div>
+
+<p>Tästä näkee, että oletuskohde <code class="language-html highlighter-rouge">origin</code> osoittaa edelleen GitHubiin, mutta uutena on kohde <code class="language-html highlighter-rouge">heroku</code>, joka lähettää sovelluksen Herokuun. Lähetys tapahtuisi näin:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>git push heroku main
+</code></pre></div></div>
+
+<p>Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteensopiva vaan sovellukseen täytyy tehdä ensin joitakin muutoksia.</p>
+
+<h3 id="palvelimen-määrittely">Palvelimen määrittely</h3>
+
+<p>Tähän asti olemme käynnistäneet sovelluksen komennolla <code class="language-html highlighter-rouge">flask run</code>, mutta tätä tapaa ei suositella tuotantokäyttöön. Tämän vuoksi asennamme Herokua varten erillisen Gunicorn-palvelimen:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>pip install gunicorn
+</code></pre></div></div>
+
+<p>Tämän jälkeen tiedosto <code class="language-html highlighter-rouge">requirements.txt</code> tulee saattaa ajan tasalle:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>pip freeze &gt; requirements.txt
+</code></pre></div></div>
+
+<p>Lisäksi luomme sovelluksen päähakemistoon uuden tiedoston <code class="language-html highlighter-rouge">Procfile</code>, joka kertoo Herokulle, miten sovellus käynnistetään:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>web: gunicorn app:app
+</code></pre></div></div>
+
+<p>Tämä kertoo Herokulle, että tyyppiä “web” oleva sovellus käynnistetään komennolla <code class="language-html highlighter-rouge">gunicorn app:app</code>. Tässä ensimmäinen <code class="language-html highlighter-rouge">app</code> viittaa moduulin nimeen <code class="language-html highlighter-rouge">app.py</code> ja toinen <code class="language-html highlighter-rouge">app</code> viittaa koodissa luotavan Flask-olion nimeen.</p>
+
+<p>Tässä vaiheessa on hyvä laittaa muutokset talteen versionhallintaan:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>git add requirements.txt
+<span class="p">$ </span>git add Procfile
+<span class="p">$ </span>git commit -m "Add Heroku config"
+<span class="p">$ </span>git push
+</code></pre></div></div>
+
+<h3 id="tietokanta-ja-ympäristömuuttujat">Tietokanta ja ympäristömuuttujat</h3>
+
+<p>Seuraava komento luo Heroku-sovellukselle tietokannan:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>heroku addons:create heroku-postgresql
+</code></pre></div></div>
+
+<p>Tämän jälkeen voimme yhdistää tietokantaan näin ja luoda sinne taulun <code class="language-html highlighter-rouge">visitors</code>:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>heroku psql
+tsoha-visitors::DATABASE=&gt; CREATE TABLE visitors (id SERIAL PRIMARY KEY, time TIMESTAMP);
+tsoha-visitors::DATABASE=&gt; \q
+</code></pre></div></div>
+
+<p>Olisimme myös voineet luoda taulun näin ohjaamalla sinne tiedoston <code class="language-html highlighter-rouge">schema.sql</code> komennot:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>heroku psql &lt; schema.sql
+</code></pre></div></div>
+
+<p>Kun Herokuun luodaan tietokanta, samalla asetetaan ympäristömuuttuja <code class="language-html highlighter-rouge">DATABASE_URL</code>, minkä ansiosta sovellus toimii suoraan myös Herokussa, jos se käyttää tätä ympäristömuuttujaa. Voimme tarkastaa sovelluksen ympäristömuuttujat näin:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>heroku config
+=== tsoha-visitors Config Vars
+DATABASE_URL: postgres://(tietokannan osoite näkyy tässä)
+</code></pre></div></div>
+
+<p>Huomaa, että tietämällä Herokun tietokannan osoitteen siihen pääsee yhdistämään myös sovelluksen ulkopuolelta, joten tietokannan osoite on salassa pidettävää tietoa.</p>
+
+<p>Voimme myös asettaa ympäristömuuttujia tarvittaessa itse. Esimerkiksi istuntojen käyttäminen vaatii muuttujan <code class="language-html highlighter-rouge">SECRET_KEY</code> asettamista, mikä onnistuu näin:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>heroku config:set SECRET_KEY=(avain tähän)
+</code></pre></div></div>
+
+<h3 id="sovelluksen-lähetys">Sovelluksen lähetys</h3>
+
+<p>Nyt kaikki alkaa olla valmista ja voimme koettaa lähettää sovelluksen Herokuun:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>git push heroku main
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----&gt; Python app detected
+remote: -----&gt; Requirements file has been changed, clearing cached dependencies
+remote: -----&gt; Installing python-3.6.10
+remote: -----&gt; Installing pip
+remote: -----&gt; Installing SQLite3
+remote: -----&gt; Installing requirements with pip
+remote:        ERROR: Invalid requirement: 'pkg-resources=0.0.0' (from line 8 of /tmp/build_b6f49f8f28a88afca0c79ce857e4849b/requirements.txt)
+</code></pre></div></div>
+
+<p>Jotain meni kuitenkin pieleen: tiedostossa <code class="language-html highlighter-rouge">requirements.txt</code> oleva riippuvuus <code class="language-html highlighter-rouge">pkg-resources</code> ei kelpaa Herokulle. Tämä on tunnettu ongelma, ja tässä tapauksessa toimiva korjaus on poistaa kyseinen rivi tiedostosta, päivittää muutos versionhallintaan ja yrittää uudestaan:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>git push heroku main
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----&gt; Python app detected
+remote: -----&gt; No change in requirements detected, installing from cache
+remote: -----&gt; Installing SQLite3
+remote: -----&gt; Installing requirements with pip
+remote: -----&gt; Discovering process types
+remote:        Procfile declares types -&gt; web
+remote: 
+remote: -----&gt; Compressing...
+remote:        Done: 48.2M
+remote: -----&gt; Launching...
+remote:        Released v8
+remote:        https://tsoha-visitors.herokuapp.com/ deployed to Heroku
+</code></pre></div></div>
+
+<p>Tällä kertaa prosessi saatiin vietyä loppuun ja voimme mennä katsomaan sovellusta osoitteessa <a href="https://tsoha-visitors.herokuapp.com/">https://tsoha-visitors.herokuapp.com/</a>. Jos kaikki meni hyvin, tuloksena on:</p>
+
+<p><img class="screenshot" src="img/heroku.png" /></p>
+
+<h2 id="virheiden-etsiminen">Virheiden etsiminen</h2>
+
+<p>Tavallinen tilanne web-sovelluksen kehityksessä on, että sovellus ei toimi oikealla tavalla. Tämä voi näkyä niin, että sovellus ei käynnisty lainkaan tai jokin sovelluksen toiminto tuottaa virhesivun. Tästä ei kannata kuitenkaan hätkähtää, vaan virheen syy löytyy yleensä aina tutkimalla lokeja ja tarvittaessa lisäämällä debug-tulostusta koodiin.</p>
+
+<h3 id="lokien-tutkiminen">Lokien tutkiminen</h3>
+
+<p>Web-sovellus tulostaa toimintansa aikana lokitietoa, jonka avulla voi jäljittää sovelluksessa ilmeneviä virheitä. Esimerkiksi kun suoritamme paikallisesti komennon <code class="language-html highlighter-rouge">flask run</code>, lokitiedot ilmestyvät komentoikkunaan.</p>
+
+<p>Jos kaikki menee hyvin, komentoikkunaan voi tulla seuraavan tapaisia viestejä:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>flask run
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [03/Jul/2020 13:28:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Jul/2020 13:28:05] "GET / HTTP/1.1" 200 -
+</code></pre></div></div>
+
+<p>Tämä kertoo, että sovellus on käynnistetty ja sen etusivua on ladattu kahdesti. Molemmilla kerroilla vastaus on annettu HTTP-koodilla 200, mikä tarkoittaa onnistunutta pyyntöä.</p>
+
+<p>Tehdään nyt testimielessä sovellukseen tahallinen bugi muuttamalla SQL-kyselyä niin, että sanan <code class="language-html highlighter-rouge">SELECT</code> kohdalla on väärin kirjoitettu <code class="language-html highlighter-rouge">SELEC</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code>    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="s">"SELEC COUNT(*) FROM visitors"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tämän seurauksena sovellus antaa virhesivun, jonka viestinä on <em>Internal Server Error</em>:</p>
+
+<p><img class="screenshot" src="img/error.png" /></p>
+
+<p>Tällainen virhesivu kertoo hyvin vähän siitä, mikä mahdollinen virhe on, mutta voimme mennä heti tutkimaan lokin sisältöä:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>flask run
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+[2020-07-03 13:30:39,544] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/tsoha-visitors/venv/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
+    cursor, statement, parameters, context
+  File "/tsoha-visitors/venv/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.SyntaxError: syntax error at or near "SELEC"
+LINE 1: SELEC COUNT(*) FROM visitors
+        ^
+The above exception was the direct cause of the following exception:
+
+(...)
+
+  File "/tsoha-visitors/app.py", line 15, in index
+    result = db.session.execute("SELEC COUNT(*) FROM visitors")
+        ^
+
+(...)
+
+[SQL: SELEC COUNT(*) FROM visitors]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+127.0.0.1 - - [03/Jul/2020 13:30:39] "GET / HTTP/1.1" 500 -
+</code></pre></div></div>
+
+<p>Tästä näkee, että virheen syynä on <code class="language-html highlighter-rouge">syntax error at or near "SELEC"</code> ja virhe ilmenee rivillä 15 tiedostossa <code class="language-html highlighter-rouge">app.py</code>. Tällaisen tiedon avulla virhe on helppoa korjata.</p>
+
+<p>Jos sovellus aiheuttaa virheen Herokussa, lokin saa Herokun komentorivityökalun avulla näkyviin seuraavasti:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>heroku logs --tail
+</code></pre></div></div>
+
+<p>Vaikein asia lokin lukemisessa on, että virheen sattuessa lokissa on yleensä paljon rivejä. Vaatii kokemusta tunnistaa, mitkä rivit ovat oleellisia virheen etsimisen kannalta. Yleensä kannattaa etsiä lokista virheilmoitusta sekä sovelluksen koodin riviä, jolla virhe tapahtui.</p>
+
+<h3 id="debug-tulostukset">Debug-tulostukset</h3>
+
+<p>Sovelluksen toimintaa voi tutkia myös debug-tulostuksilla, joiden tekemiseen sopii vanha kunnon <code class="language-html highlighter-rouge">print</code>-komento. Voimme esimerkiksi tulostaa sovelluksen eri vaiheissa ongelmaan mahdollisesti liittyvien muuttujien arvoja ja tarkastaa, että ne ovat kunnossa.</p>
+
+<p>Esimerkiksi voimme tehdä seuraavan debug-tulostuksen, joka tulostaa muuttujan <code class="language-html highlighter-rouge">counter</code> arvon:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code>    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="s">"SELECT COUNT(*) FROM visitors"</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"counter is now"</span><span class="p">,</span> <span class="n">counter</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Nyt kun suoritamme sovelluksen ja käymme sivulla, lokiin ilmestyy seuraavaa tietoa:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>flask run
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+counter is now 12
+127.0.0.1 - - [03/Jul/2020 13:53:57] "GET / HTTP/1.1" 200 -
+</code></pre></div></div>
+
+<p>Lokista katsomalla näemme siis, että sovellus suoritti kyseisen rivin ja sillä hetkellä muuttujan <code class="language-html highlighter-rouge">counter</code> arvo oli 12.</p>
+
+<p>Kun ongelma on saatu korjattua ja debug-tulosteita ei enää tarvita, ne on kuitenkin hyvä siivota pois koodista.</p>
+
+<h2 id="sovelluksen-rakenne">Sovelluksen rakenne</h2>
+
+<p>Pienen sovelluksen voi toteuttaa mainiosti yhtenä tiedostona <code class="language-html highlighter-rouge">app.py</code>, joka käsittelee kaikki sivupyynnöt, mutta suuremmassa projektissa (kuten tällä kurssilla) koodi kannattaa jakaa sopivasti tiedostoihin (eli moduuleihin) ja funktioihin.</p>
+
+<p>Flask mahdollistaa monia tapoja toteuttaa sovelluksen rakenne, ja tutustumme seuraavaksi yhteen tapaan kävijäsovelluksen yhteydessä. Huomaa, että todellisuudessa näin pientä sovellusta ei olisi järkeä jakaa osiin, vaan tämä on vain esimerkki.</p>
+
+<p>Tärkein periaate sovelluksen rakenteen suunnittelussa on, että tiedostot ja funktiot antavat sovellukselle selkeän rakenteen ja sovellusta on mukavaa kehittää. Jos nämä vaatimukset eivät täyty, sovelluksen rakenne ei ole hyvä.</p>
+
+<p>Seuraavassa on mahdollinen tapa jakaa kävijäsovellus tiedostoiksi:</p>
+
+<p><strong>Moduuli <code class="language-html highlighter-rouge">app</code></strong></p>
+
+<p class="code-title">app.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">routes</span>
+</code></pre></div></div>
+
+<p>Kuten ennenkin, sovelluksen päämoduuli on <code class="language-html highlighter-rouge">app</code>, joka käynnistää sovelluksen. Koodi luo Flask-olion sekä ottaa lopuksi mukaan moduulin <code class="language-html highlighter-rouge">routes</code>.</p>
+
+<p><strong>Moduuli <code class="language-html highlighter-rouge">db</code></strong></p>
+
+<p class="code-title">db.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">app</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">getenv</span>
+
+<span class="n">app</span><span class="p">.</span><span class="n">config</span><span class="p">[</span><span class="s">"SQLALCHEMY_DATABASE_URI"</span><span class="p">]</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s">"DATABASE_URL"</span><span class="p">)</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Moduuli <code class="language-html highlighter-rouge">db</code> huolehtii tietokantaan liittyvistä asioista. Tässä sovelluksessa moduuli määrittää tietokannan osoitteen ja luo <code class="language-html highlighter-rouge">db</code>-olion, jonka kautta tietokantaa voidaan käyttää.</p>
+
+<p><strong>Moduuli <code class="language-html highlighter-rouge">routes</code></strong></p>
+
+<p class="code-title">routes.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">app</span>
+<span class="kn">import</span> <span class="nn">visits</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="n">visits</span><span class="p">.</span><span class="n">add_visit</span><span class="p">()</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">visits</span><span class="p">.</span><span class="n">get_counter</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">,</span> <span class="n">counter</span><span class="o">=</span><span class="n">counter</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Moduulin <code class="language-html highlighter-rouge">routes</code> tehtävänä on käsitellä sivupyynnöt. Toisin kuin ennen, sivupyynnön käsittelijä ei suorita tietokantakomentoja vaan kutsuu moduulissa <code class="language-html highlighter-rouge">visits</code> olevia funktioita.</p>
+
+<p><strong>Moduuli <code class="language-html highlighter-rouge">visits</code></strong></p>
+
+<p class="code-title">visits.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">db</span> <span class="kn">import</span> <span class="n">db</span>
+
+<span class="k">def</span> <span class="nf">add_visit</span><span class="p">():</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="s">"INSERT INTO visitors (time) VALUES (NOW())"</span><span class="p">)</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">get_counter</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="s">"SELECT COUNT(*) FROM visitors"</span><span class="p">)</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">counter</span>
+</code></pre></div></div>
+
+<p>Moduuli <code class="language-html highlighter-rouge">visits</code> sisältää funktiot <code class="language-html highlighter-rouge">add_visit</code> ja <code class="language-html highlighter-rouge">get_counter</code>, joiden avulla sovelluksessa pystyy lisäämään tiedon vierailusta sekä hakemaan vierailujen määrän.</p>
+
+<hr />
+
+<p>Tässä moduulit viittaavat toisiinsa muutamilla eri tavoilla. Periaatteena on, että kun moduuli tarvitsee toisessa moduulissa määriteltyä funktiota tai oliota, toinen moduuli otetaan mukaan <code class="language-html highlighter-rouge">import</code>-rivillä. Huomaa, että moduulissa oleva koodi (kuten olioiden <code class="language-html highlighter-rouge">app</code> ja <code class="language-html highlighter-rouge">db</code> luominen) suoritetaan vain kerran, vaikka moduuli otetaan mukaan useita kertoja.</p>
+
+<p>Tällainen rakenne sopii moneen sovellukseen: moduulit <code class="language-html highlighter-rouge">app</code>, <code class="language-html highlighter-rouge">db</code> ja <code class="language-html highlighter-rouge">routes</code> muodostavat sovelluksen perustan ja tämän lisäksi on muita moduuleja, jotka toteuttavat sovelluksen toimintoja. Tässä esimerkissä moduuli <code class="language-html highlighter-rouge">visits</code> toteuttaa käynteihin liittyvät toiminnot ja tämän moduulin funktioita on kätevä kutsua sivupyynnön käsittelijästä. Jos sovelluksessa on paljon sivuja, voi olla myös paikallaan jakaa sivupyyntöjen käsittely useampaan moduuliin.</p>
+
+<p>Sovelluksen kehittyessä kuuluu asiaan <em>refaktoroida</em> sen koodia eli muuttaa tarvittaessa sovelluksen rakennetta. On hyvä aloittaa yksinkertaisesta rakenteesta ja tarvittaessa jakaa myöhemmin koodia osiin sen sijaan, että tekee sovellukselle heti aluksi “varmuuden vuoksi” monimutkaisen rakenteen.</p>
+<h2 id="esimerkki-keskustelu">Esimerkki: Keskustelu</h2>
+
+<p>Seuraava esimerkkisovellus kokoaa yhteen tähän asti käsiteltyjä asioita. Sovelluksen aiheena on keskustelupalsta, jossa käyttäjä voi luoda tunnuksen ja lähettää viestejä. Kaikki viestit ovat samassa ketjussa aikajärjestyksessä.</p>
+
+<p>Sovelluksen käyttäminen näyttää tältä:</p>
+
+<p><img class="screenshot" src="img/chat1.png" /></p>
+
+<p><img class="screenshot" src="img/chat2.png" /></p>
+
+<p><img class="screenshot" src="img/chat3.png" /></p>
+
+<p>Sovelluksen koko lähdekoodi on GitHubissa osoitteessa <a href="https://github.com/hy-tsoha/tsoha-chat">https://github.com/hy-tsoha/tsoha-chat</a>, ja käymme tässä tarkemmin läpi sovelluksen toimintaa.</p>
+
+<p>Sovelluksen tietokanta muodostuu kahdesta taulusta:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">users</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">username</span> <span class="nb">TEXT</span> <span class="k">UNIQUE</span><span class="p">,</span>
+    <span class="n">password</span> <span class="nb">TEXT</span>
+<span class="p">);</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">messages</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">content</span> <span class="nb">TEXT</span><span class="p">,</span>
+    <span class="n">user_id</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">users</span><span class="p">,</span>
+    <span class="n">sent_at</span> <span class="nb">TIMESTAMP</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Taulu <code class="language-html highlighter-rouge">users</code> sisältää tiedot sivuston rekisteröityneistä käyttäjistä. Jokaisesta käyttäjästä tallennetaan käyttäjätunnus ja salasanan hajautusarvo. Huomaa, että sarake <code class="language-html highlighter-rouge">username</code> on <code class="language-html highlighter-rouge">UNIQUE</code>, mikä takaa, että jokaisella käyttäjällä on eri tunnus.</p>
+
+<p>Taulu <code class="language-html highlighter-rouge">messages</code> sisältää jokaisen viestin sisällön, viittauksen lähettäjään ja lähetysajan.</p>
+
+<p>Sovellus muodostuu viidestä moduulista. Kuten edellisessä osiossa, <code class="language-html highlighter-rouge">app</code> on päämoduuli, <code class="language-html highlighter-rouge">db</code> huolehtii tietokannasta ja <code class="language-html highlighter-rouge">routes</code> käsittelee sivupyynnöt. Näiden lisäksi <code class="language-html highlighter-rouge">messages</code> toteuttaa viestien hakemisen ja lähettämisen sekä <code class="language-html highlighter-rouge">users</code> vastaa käyttäjien hallinnasta.</p>
+
+<p>Sovelluksen etusivu näyttää lähetetyt viestit aikajärjestyksessä:</p>
+
+<p class="code-title">routes.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="nb">list</span> <span class="o">=</span> <span class="n">messages</span><span class="p">.</span><span class="n">get_list</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="n">messages</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p class="code-title">messages.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">get_list</span><span class="p">():</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT M.content, U.username, M.sent_at FROM messages M, users U"</span> \
+          <span class="s">"WHERE M.user_id=U.id ORDER BY M.id"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Moduulin <code class="language-html highlighter-rouge">messages</code> funktio <code class="language-html highlighter-rouge">get_list</code> hakee jokaisen viestin sisällön, lähettäjän ja lähetysajan. Koska viestit ja lähettäjät ovat eri tauluissa, tässä tarvitaan kahden taulun kysely.</p>
+
+<p>Seuraava koodi käsittelee käyttäjän lähettämän viestin:</p>
+
+<p class="code-title">routes.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/send"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">send</span><span class="p">():</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"content"</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">messages</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"error.html"</span><span class="p">,</span><span class="n">message</span><span class="o">=</span><span class="s">"Viestin lähetys ei onnistunut"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p class="code-title">messages.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">users</span><span class="p">.</span><span class="n">user_id</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">user_id</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO messages (content, user_id, sent_at) VALUES (:content, :user_id, NOW())"</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"content"</span><span class="p">:</span><span class="n">content</span><span class="p">,</span> <span class="s">"user_id"</span><span class="p">:</span><span class="n">user_id</span><span class="p">})</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<p>Moduulin <code class="language-html highlighter-rouge">messages</code> funktio <code class="language-html highlighter-rouge">send</code> lisää uuden viestin tietokantaan. Funktio palauttaa <code class="language-html highlighter-rouge">True</code>, jos viestin lähetys onnistui, ja muuten <code class="language-html highlighter-rouge">False</code>. Funktio hakee viestin lähettäjän id-numeron funktiolla <code class="language-html highlighter-rouge">user_id</code>. Jos id-numero on 0, käyttäjä ei ole kirjautunut eikä viestiä voi lähettää.</p>
+
+<p>Seuraavan koodin avulla käyttäjä voi kirjautua sisään:</p>
+
+<p class="code-title">routes.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/login"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"GET"</span><span class="p">,</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">"GET"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"login.html"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">"POST"</span><span class="p">:</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"username"</span><span class="p">]</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"password"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">users</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span><span class="n">password</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"error.html"</span><span class="p">,</span><span class="n">message</span><span class="o">=</span><span class="s">"Väärä tunnus tai salasana"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p class="code-title">users.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span><span class="n">password</span><span class="p">):</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT password, id FROM users WHERE username=:username"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"username"</span><span class="p">:</span><span class="n">username</span><span class="p">})</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="n">user</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">password</span><span class="p">):</span>
+            <span class="n">session</span><span class="p">[</span><span class="s">"user_id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">user</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<p>Tässä sivu <code class="language-html highlighter-rouge">login</code> ottaa vastaan sekä <code class="language-html highlighter-rouge">GET</code>- että <code class="language-html highlighter-rouge">POST</code>-metodia käyttävän sivupyynnön. Jos metodi on <code class="language-html highlighter-rouge">GET</code>, käyttäjälle näytetään kirjautumissivu. Jos taas metodi on <code class="language-html highlighter-rouge">POST</code>, käsitellään lomake, jonka kautta käyttäjä kirjautuu sisään.</p>
+
+<p>Moduulin <code class="language-html highlighter-rouge">users</code> funktio <code class="language-html highlighter-rouge">login</code> hoitaa varsinaisen kirjautumisen. Jos käyttäjä antaa oikean tunnuksen ja salasanan, istunnon kenttään <code class="language-html highlighter-rouge">user_id</code> asetetaan käyttäjän id-numero. Tämä ilmaisee, että käyttäjä on kirjautunut sisään sovellukseen.</p>
+
+<p>Käyttäjän kirjautuminen voidaan tarkastaa funktiolla <code class="language-html highlighter-rouge">user_id</code>:</p>
+
+<p class="code-title">users.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">user_id</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">session</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"user_id"</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tämä funktio antaa joko käyttäjän id-numeron tai arvon 0, jos käyttäjä ei ole kirjautunut sisään.</p>
+
+<p>Funktio <code class="language-html highlighter-rouge">logout</code> puolestaan kirjaa käyttäjän ulos poistamalla kentän <code class="language-html highlighter-rouge">user_id</code> istunnosta:</p>
+
+<p class="code-title">users.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">logout</span><span class="p">():</span>
+    <span class="k">del</span> <span class="n">session</span><span class="p">[</span><span class="s">"user_id"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Sovelluksessa on myös rekisteröintitoiminto, jonka avulla uusi käyttäjä voi luoda tunnuksen ja salasanan sivustolle:</p>
+
+<p class="code-title">routes.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/register"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"GET"</span><span class="p">,</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">register</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">"GET"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"register.html"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">"POST"</span><span class="p">:</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"username"</span><span class="p">]</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"password"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">users</span><span class="p">.</span><span class="n">register</span><span class="p">(</span><span class="n">username</span><span class="p">,</span><span class="n">password</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"error.html"</span><span class="p">,</span><span class="n">message</span><span class="o">=</span><span class="s">"Rekisteröinti ei onnistunut"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p class="code-title">users.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="n">username</span><span class="p">,</span><span class="n">password</span><span class="p">):</span>
+    <span class="n">hash_value</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO users (username,password) VALUES (:username,:password)"</span>
+        <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"username"</span><span class="p">:</span><span class="n">username</span><span class="p">,</span><span class="s">"password"</span><span class="p">:</span><span class="n">hash_value</span><span class="p">})</span>
+        <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span><span class="n">password</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Sivun <code class="language-html highlighter-rouge">login</code> tavoin myös sivu <code class="language-html highlighter-rouge">register</code> käsittelee sekä <code class="language-html highlighter-rouge">GET</code>- että <code class="language-html highlighter-rouge">POST</code>-pyyntöjä ja joko näyttää lomakkeen uuden tunnuksen luomiseen tai käsittelee käyttäjän lähettämän lomakkeen.</p>
+
+<p>Moduulin <code class="language-html highlighter-rouge">users</code> funktio <code class="language-html highlighter-rouge">register</code> toteuttaa rekisteröinnin. Jos rekisteröinti onnistui, funktio kirjaa saman tien käyttäjän sisään ja palauttaa arvon <code class="language-html highlighter-rouge">True</code>. Muussa tapauksessa funktio palauttaa arvon <code class="language-html highlighter-rouge">False</code>.</p>
+
+<p>Koska taulun <code class="language-html highlighter-rouge">users</code> sarakkeessa <code class="language-html highlighter-rouge">username</code> on määre <code class="language-html highlighter-rouge">UNIQUE</code>, rivin lisääminen komennolla <code class="language-html highlighter-rouge">INSERT</code> epäonnistuu, jos tunnus on jo käytössä. Tämä tilanne käsitellään <code class="language-html highlighter-rouge">try</code>/<code class="language-html highlighter-rouge">except</code>-rakenteella, minkä ansiosta käyttäjä saa tiedon siitä, ettei rekisteröinti onnistunut.</p>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

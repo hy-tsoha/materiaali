@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      SQLite vs. PostgreSQL - Tieto&shy;kanta&shy;sovellus
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tieto&shy;kanta&shy;sovellus</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/index>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/pages/aikataulu.html">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/pages/arvostelu.html">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/pages/kysymykset.html">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/pages/taustamateriaali.html">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/content/osa-1/index.html">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/content/osa-1/index.html#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/content/osa-1/index.html#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/content/osa-1/index.html#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/content/osa-1/index.html#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/content/osa-2/index.html">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/content/osa-2/index.html#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/content/osa-2/index.html#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/content/osa-2/index.html#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/content/osa-2/index.html#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/content/osa-2/index.html#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/content/osa-3/index.html">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/content/osa-3/index.html#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/content/osa-3/index.html#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/content/osa-3/index.html#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/content/osa-3/index.html#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/content/osa-3/index.html#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/content/osa-4/index.html">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/content/osa-4/index.html#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/content/osa-4/index.html#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/content/osa-4/index.html#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/content/osa-4/index.html#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</nav>
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="sqlite-vs-postgresql">SQLite vs. PostgreSQL</h1>
+
+<p>Kurssilla <em>Tietokantojen perusteet</em> käytettiin SQLite-tietokantaa, mutta tällä kurssilla käytetään PostgreSQL-tietokantaa. Mitä eroa näillä on?</p>
+
+<h2 id="tietokantaan-pääsy">Tietokantaan pääsy</h2>
+
+<p>SQLitessä tietokanta on tietyssä yksittäisessä tiedostossa. Esimerkiksi seuraava komento avaa tiedostossa <code class="language-html highlighter-rouge">testi.db</code> olevan tietokannan SQLite-tulkissa:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>sqlite3 testi.db
+</code></pre></div></div>
+
+<p>PostgreSQL:ssä on kiinteä tietokanta, jota hallinnoi taustalla suoritettava palvelinohjelma. Tietokantaan saa yhteyden esimerkiksi avaamalla PostgreSQL-tulkin:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>psql
+</code></pre></div></div>
+
+<p>PostgreSQL:n tietokanta on tallennettu hakemistoihin ja tiedostoihin, jotka ovat PostgreSQL:n sisäisesti käyttämässä hakemistossa.</p>
+
+<h2 id="sql-kieli">SQL-kieli</h2>
+
+<p>SQLite ja PostgreSQL käyttävät SQL-kieltä samaan tapaan, mutta niissä on monia pieniä eroja. Esimerkiksi SQLitessä <code class="language-html highlighter-rouge">id INTEGER PRIMARY KEY</code> määrittelee pääavaimen, jolla on automaattinen numerointi, kun taas PostgreSQL:ssä tämä merkitään <code class="language-html highlighter-rouge">id SERIAL PRIMARY KEY</code>.</p>
+
+<p>SQLite on tietyissä asioissa hyvin vapaamielinen verrattuna muihin tietokantoihin. Esimerkiksi SQLite antaa luoda sarakkeen tyyppiä <code class="language-html highlighter-rouge">INTEGER</code>, johon tallennetaan kuitenkin merkkijono:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">sqlite&gt; </span>CREATE TABLE test (x INTEGER);
+<span class="p">sqlite&gt; </span>INSERT INTO test (x) VALUES ('aybabtu');
+<span class="p">sqlite&gt; </span>SELECT * FROM test;
+aybabtu
+</code></pre></div></div>
+
+<p>Sama temppu ei onnistu PostgreSQL:ssä, vaan tulee ilmoitus väärästä tyypistä:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">user=# </span>CREATE TABLE test (x INTEGER);
+CREATE TABLE
+<span class="p">user=# </span>INSERT INTO test (x) VALUES ('aybabtu');
+ERROR:  invalid input syntax for integer: "aybabtu"
+LINE 1: INSERT INTO test (x) VALUES ('aybabtu');
+</code></pre></div></div>
+
+<p>Vastaavasti oletuksena SQLitessä viiteavaimia (<code class="language-html highlighter-rouge">REFERENCES</code>) ei tarkasteta, mutta PostgreSQL:ssä ne tarkastetaan aina.</p>
+
+<p>Yleensä ottaen PostgreSQL pyrkii seuraamaan SQL-standardia ja toteuttaa monia SQL:n ominaisuuksia, jotka puuttuvat SQLitestä.</p>
+
+<h2 id="käyttökohteet">Käyttökohteet</h2>
+
+<p>SQLiten vahvuuksia ovat sen keveys ja suoraviivainen toiminta. Koska tietokannan sisältö on yksittäisessä tiedostossa, tietokannan kopiointi on helppoa ja sitä pystyy käyttämään riippumatta muusta järjestelmästä. SQLite soveltuu erityisesti SQL-kielen harjoitteluun ja pieniin tietokantaa käyttäviin sovelluksiin.</p>
+
+<p>PostgreSQL on monipuolisempi tietokanta kuin SQLite ja sisältää esimerkiksi käyttäjien hallintaan ja rinnakkaisuuteen liittyviä ominaisuuksia, jotka puuttuvat kokonaan SQLitestä. PostgreSQL näyttää kyntensä silloin, kun tietokannassa on paljon tietoa ja paljon samanaikaisia käyttäjiä, mutta toisaalta se on selvästi monimutkaisempi kuin SQLite.</p>
+
+<p>Tämän kurssin laajuisen sovelluksen tietokannaksi soveltuisi sinänsä mainiosti sekä SQLite että PostgreSQL. Kuitenkin yksi kurssin tavoitteista on oppia käyttämään PostgreSQL:ää, koska on hyvä tuntea useita tietokantoja.</p>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Ohjelmointityyli - Tieto&shy;kanta&shy;sovellus
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tieto&shy;kanta&shy;sovellus</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/index>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/pages/aikataulu.html">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/pages/arvostelu.html">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/pages/kysymykset.html">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/pages/taustamateriaali.html">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/content/osa-1/index.html">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/content/osa-1/index.html#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/content/osa-1/index.html#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/content/osa-1/index.html#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/content/osa-1/index.html#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/content/osa-2/index.html">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/content/osa-2/index.html#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/content/osa-2/index.html#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/content/osa-2/index.html#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/content/osa-2/index.html#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/content/osa-2/index.html#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/content/osa-3/index.html">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/content/osa-3/index.html#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/content/osa-3/index.html#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/content/osa-3/index.html#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/content/osa-3/index.html#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/content/osa-3/index.html#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/content/osa-4/index.html">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/content/osa-4/index.html#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/content/osa-4/index.html#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/content/osa-4/index.html#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/content/osa-4/index.html#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    </ol>
+</nav>
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="ohjelmointityyli">Ohjelmointityyli</h1>
+
+<p><a href="https://www.python.org/dev/peps/pep-0008/">Pythonin tyyliohje</a> (PEP 8) antaa neuvoja Python-ohjelmoinnin tyyliasioihin. Myös <a href="https://google.github.io/styleguide/pyguide.html">Googlen tyyliohje</a> on tutustumisen arvoinen. Tärkein asia on kuitenkin, että koodin tyyli on <em>yhtenäinen</em> sovelluksen sisällä.</p>
+
+<p>Seuraavassa on kymmenen vinkkiä, joista on hyötyä tämän kurssin sovelluksen toteuttamisessa.</p>
+
+<h2 id="1-sisentäminen">1. Sisentäminen</h2>
+
+<p>Pythonissa käytäntönä on, että sisennyksen leveys on <em>neljä välilyöntiä</em>.</p>
+
+<p>Seuraa tätä käytäntöä koodissasi, eli varmista, että kaikkialla sisennyksenä on neljä välilyöntiä. Paras tapa on säätää editorin asetukset niin, että editori pitää huolta tästä.</p>
+
+<h2 id="2-koodin-kieli">2. Koodin kieli</h2>
+
+<p>Suositeltava tapa on kirjoittaa koodi englanniksi. Tämä koskee koodissa olevia nimiä, kommentteja ja myös tietokannan taulujen ja sarakkeiden nimiä.</p>
+
+<h2 id="3-nimien-valinta">3. Nimien valinta</h2>
+
+<p>Nimeä muuttujat kuvaavasti mutta älä tarpeettoman pitkästi. Hyvä nimi on esimerkiksi <code class="language-html highlighter-rouge">user_count</code>, huonoja nimiä ovat <code class="language-html highlighter-rouge">x</code> ja <code class="language-html highlighter-rouge">total_number_of_users_in_system</code>.</p>
+
+<p>Pythonissa on käytäntönä, että muuttujien, funktioiden ja moduulien nimet kirjoitetaan kokonaan pienillä kirjaimilla ja sanojen väliin laitetaan alaviiva. Noudata tätä käytäntöä kaikkialla koodissasi.</p>
+
+<p>Huomaa, että esimerkiksi Javassa on toisenlainen käytäntö. Javassa muuttuja <code class="language-html highlighter-rouge">user_count</code> kirjoitettaisiin <code class="language-html highlighter-rouge">userCount</code>.</p>
+
+<h2 id="4-totuusarvot">4. Totuusarvot</h2>
+
+<p>Seuraavan tapainen koodi on tarpeettoman pitkä:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<p>Saman voi toteuttaa lyhyesti näin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">return</span> <span class="n">success</span>
+</code></pre></div></div>
+
+<h2 id="5-lainausmerkit">5. Lainausmerkit</h2>
+
+<p>Pythonissa merkkijonon voi merkitä kahdella tavalla: <code class="language-html highlighter-rouge">'esimerkki'</code> ja <code class="language-html highlighter-rouge">"esimerkki"</code>. Valitse toinen tapa ja käytä sitä yhdenmukaisesti kaikkialla koodissa.</p>
+
+<h2 id="6-tyhjä-tila">6. Tyhjä tila</h2>
+
+<p>Käytä tyhjää tilaa (whitespace) yhdenmukaisesti kaikkialla koodissa. Esimerkiksi seuraava koodi ei näytä hyvältä:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Maija"</span><span class="p">,</span><span class="s">"Anna"</span><span class="p">,</span><span class="s">"Uolevi"</span><span class="p">]</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Ongelmana on, että ylemmällä rivillä listan sisällä ei ole välilyöntejä ja alemmalla rivillä on. Parempi tapa on kirjoittaa koodi näin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Maija"</span><span class="p">,</span> <span class="s">"Anna"</span><span class="p">,</span> <span class="s">"Uolevi"</span><span class="p">]</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h2 id="7-merkki-">7. Merkki =</h2>
+
+<p>Huomaa erityisesti Pythonin käytäntö, että muuttujan sijoituksessa <code class="language-html highlighter-rouge">=</code>-merkin ympärille tulee välit mutta funktion kutsussa nimetyssä parametrissa ei tule.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">name</span> <span class="o">=</span> <span class="s">"Maija"</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"Maija"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="8-pitkät-rivit">8. Pitkät rivit</h2>
+
+<p>Pitkät rivit koodissa vaikeuttavat koodin lukemista. Tällä kurssilla erityisesti SQL-komennot voivat aiheuttaa pitkiä rivejä. Jaa pitkä rivi tarvittaessa useammaksi riviksi.</p>
+
+<p>Esimerkiksi seuraava rivi on liian pitkä eikä näytä hyvältä:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT u.id, COUNT(*) FROM users u, messages m WHERE u.id=m.user_id AND m.status=1 GROUP BY u.id"</span>
+</code></pre></div></div>
+
+<p>Tässä on kaksi tapaa rivin jakamiseen:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT u.id, COUNT(*) FROM users u, messages m "</span> \
+      <span class="s">"WHERE u.id=m.user_id AND m.status=1 GROUP BY u.id"</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">sql</span> <span class="o">=</span> <span class="s">"""SELECT u.id, COUNT(*) FROM users u, messages m
+         WHERE u.id=m.user_id AND m.status=1 GROUP BY u.id"""</span>
+</code></pre></div></div>
+
+<h2 id="9-palautusarvo">9. Palautusarvo</h2>
+
+<p>Jos funktio palauttaa arvon, sillä tulee olla useita mahdollisia palautusarvoja. Esimerkiksi seuraava tyyli ei ole hyvä:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">add_message</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">content</span><span class="p">):</span>
+    <span class="p">...</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<p>Tässä funktio palauttaa aina lopuksi <code class="language-html highlighter-rouge">True</code> eikä voi koskaan palauttaa <code class="language-html highlighter-rouge">False</code>. Koska palautusarvo on aina sama, siitä ei ole hyötyä.</p>
+
+<h2 id="10-koodi-funktioissa">10. Koodi funktioissa</h2>
+
+<p>Koodia voi olla hankala lukea, jos funktiot ovat pitkiä. Tällöin kannattaa miettiä, voisiko funktion jakaa useiksi funktioiksi.</p>
+
+<p>Jos useassa paikassa toistuu samanlainen koodi, siitä kannattaa pyrkiä tekemään funktio, jota voidaan kutsua.</p>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>
