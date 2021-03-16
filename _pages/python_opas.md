@@ -54,7 +54,7 @@ Moikka, Kotivalo
 Pythonin tavallisimmat tietotyypit ovat `int` (kokonaisluku), `float` (liukuluku), `str` (merkkijono) ja `bool` (totuusarvo). Esimerkkejä operaatioista:
 
 ```python
-print(5*(2+3)) # 30
+print(5*(2+4)) # 30
 print(5/2) # 2.5
 print(5//2) # 2
 print(3**4) # 81
