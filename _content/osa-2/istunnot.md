@@ -22,12 +22,12 @@ SECRET_KEY=95d3763bb55e744e77dd181a47b4e1c6
 
 Tämä avain allekirjoittaa evästeessä olevan tiedon niin, että käyttäjä ei pysty muuttamaan istunnon sisältöä selaimessa. **On tärkeää, että avain on salainen, eli älä missään tapauksessa käytä yllä olevaa avainta vaan luo oma salainen avain!**
 
-Oman salaisen avaimen voi luoda vaikkapa Python-tulkin avulla. Esimerkiksi moduulin `os` funktio `urandom` antaa halutun määrän satunnaisia tavuja.
+Oman salaisen avaimen voi luoda vaikkapa Python-tulkin avulla. Esimerkiksi moduulin `secrets` funktio `token_hex` antaa halutun määrän satunnaisia tavuja.
 
 ```prompt
 $ python3
->>> from os import urandom
->>> urandom(16).hex()
+>>> import secrets
+>>> secrets.token_hex(16)
 '18fd24bf6a2ad4dac04a33963db1c42f'
 ```
 

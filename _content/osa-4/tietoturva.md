@@ -115,10 +115,10 @@ Tässä lomakkeessa on CSRF-haavoittuvuus, koska hyökkääjä voi houkutella ki
 
 CSRF-haavoittuvuuden avulla hyökkääjä pystyy siis toimimaan käyttäjän nimissä sivustolla, olettaen että käyttäjä on kirjautunut sisään ja hyökkääjä on onnistunut houkuttelemaan hänet ulkoiselle hyökkääjän laatimalle sivulle.
 
-CSRF-haavoittuvuuden pystyy estämään muuttamalla lomaketta niin, että sen osana on käyttäjän istuntoon liittyvä tieto, joka ei ole hyökkääjän tiedossa. Esimerkiksi kun käyttäjä kirjautuu sisään, sovellus voi lisätä istuntoon satunnaisen kentän `csrf_token`. Tässä on yksi tapa luoda kyseinen kenttä `urandom`-funktion avulla:
+CSRF-haavoittuvuuden pystyy estämään muuttamalla lomaketta niin, että sen osana on käyttäjän istuntoon liittyvä tieto, joka ei ole hyökkääjän tiedossa. Esimerkiksi kun käyttäjä kirjautuu sisään, sovellus voi lisätä istuntoon satunnaisen kentän `csrf_token`. Tässä on yksi tapa luoda kyseinen kenttä `secrets`-moduulin avulla:
 
 ```python
-    session["csrf_token"] = os.urandom(16).hex()
+    session["csrf_token"] = secrets.token_hex(16)
 ```
 
 Tämän kentän sisältö laitetaan piilokentäksi lomakkeeseen:
