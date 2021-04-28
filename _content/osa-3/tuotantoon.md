@@ -170,3 +170,5 @@ remote:        https://tsoha-visitors.herokuapp.com/ deployed to Heroku
 Tällä kertaa prosessi saatiin vietyä loppuun ja voimme mennä katsomaan sovellusta osoitteessa [https://tsoha-visitors.herokuapp.com/](https://tsoha-visitors.herokuapp.com/). Jos kaikki meni hyvin, tuloksena on:
 
 <img class="screenshot" src="img/heroku.png">
+
+Entä jos sovellus ei toimikaan? Tällä hetkellä Herokussa voi aiheuttaa ongelmia SQLAlchemyn versio 1.4 tai suurempi, koska Herokun muodostama tietokannan osoite ei toimi tällä versiolla (osoitteen alussa on `postgres` eikä `postgresql`). Helpoin tapa korjata asia on vaihtaa tiedostossa `requirements.txt` käyttöön SQLAlchemyn aiempi versio, kuten ylempänä näkyvä versio 1.3.23.
