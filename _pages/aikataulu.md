@@ -4,19 +4,19 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Kevään 2021 periodin 4 ryhmän aikataulu on seuraava:
+Alkukesän 2021 ryhmän aikataulu on seuraava:
 
-| ma 15.3.2021 | Aloitusluento klo 16–18 Zoomissa ([nauhoite](https://www2.helsinki.fi/fi/unitube/video/1178df0e-0474-49be-a6d1-67774c723bb4)) |
-| su 21.3.2021 | Välipalautus 1 |
-| su 11.4.2021 | Välipalautus 2 |
-| ke 14.4.2021 | Vertaisarvioinnin deadline |
-| su 25.4.2021 | Välipalautus 3 |
-| ke 28.4.2021 | Vertaisarvioinnin deadline |
-| su 9.5.2021 | Lopullinen palautus |
+| ti 11.5.2021 | Aloitusluento klo 16–18 Zoomissa ([linkki](https://helsinki.zoom.us/j/69766344977?pwd=MncwaXQ5TUxhMk9KOHBaNXgvWFo1dz09)) |
+| su 16.5.2021 | Välipalautus 1 |
+| su 30.5.2021 | Välipalautus 2 |
+| ke 2.6.2021 | Vertaisarvioinnin deadline |
+| su 13.6.2021 | Välipalautus 3 |
+| ke 16.6.2021 | Vertaisarvioinnin deadline |
+| su 27.6.2021 | Lopullinen palautus |
 
-Ryhmän ohjaajat ovat Olli-Pekka Mehtonen ja Leo Varis.
+Ryhmän ohjaaja on Mikael Törnwall.
 
-Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausta on tarjolla erityisesti maanantaisin klo 13–17, tiistaisin klo 15–17 sekä torstaisin klo 15–17. Huomaa, että to 1.4., ma 5.4. ja ti 6.4. ei ole ohjausta pääsiäisen vuoksi.
+Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha).
 
 Kun kysyt apua sovelluksesi toimintaan liittyen, on hyödyllistä, että sovelluksen nykyinen tilanne näkyy GitHubissa. Jos lähetät GitHubiin toimimatonta koodia, voit laittaa commit-viestiksi esimerkiksi "Add not working code to GitHub for debugging".
 
