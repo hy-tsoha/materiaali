@@ -16,7 +16,7 @@ Alkukesän 2021 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaaja on Mikael Törnwall.
 
-Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha).
+Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausta on tarjolla erityisesti keskiviikkoisin klo 13–15.
 
 Kun kysyt apua sovelluksesi toimintaan liittyen, on hyödyllistä, että sovelluksen nykyinen tilanne näkyy GitHubissa. Jos lähetät GitHubiin toimimatonta koodia, voit laittaa commit-viestiksi esimerkiksi "Add not working code to GitHub for debugging".
 
