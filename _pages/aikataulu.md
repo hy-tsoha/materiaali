@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Alkukesän 2021 ryhmän aikataulu on seuraava:
 
-| ti 11.5.2021 | Aloitusluento klo 16–18 Zoomissa ([linkki](https://helsinki.zoom.us/j/69766344977?pwd=MncwaXQ5TUxhMk9KOHBaNXgvWFo1dz09)) |
+| ti 11.5.2021 | Aloitusluento klo 16–18 Zoomissa ([tallenne](https://www2.helsinki.fi/fi/unitube/video/1597c1f3-af9f-423c-9748-66c93babc4de)) |
 | su 16.5.2021 | Välipalautus 1 |
 | su 30.5.2021 | Välipalautus 2 |
 | ke 2.6.2021 | Vertaisarvioinnin deadline |
