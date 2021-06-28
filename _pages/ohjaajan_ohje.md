@@ -44,6 +44,10 @@ Tässä vaiheessa kannattaa antaa erityisesti palautetta seuraavista asioista:
 * Ohjelmointityyli: onko koodi jaettu järkevästi osiin funktioiksi ja tiedostoiksi?
 * Tietokanta-asiat: tehdäänkö koodissa tiedon käsittelyä, jota kuuluisi tehdä SQL:ssä?
 
+### Loppupalautus
+
+Hyvä tapa kirjoittaa loppupalautuksen arviointi on käydä läpi [arvostelu.html](arvostelusivun) osiot ja tuoda esille, mitkä asiat toteutuvat sovelluksessa ja mitkä asiat eivät.
+
 ## Ohjaajan palkka
 
 Ohjaajan tuntipalkka on 17 €. Ohjaajalle maksetaan 3 &middot; 17 € kurssin loppuun asti jatkaneesta opiskelijasta ja 0.5 &middot; 17 € keskeyttäneestä opiskelijasta. Tämä kannattaa ottaa huomioon siinä, paljonko aikaa käyttää palautteen antamiseen ja arviointiin.
