@@ -46,7 +46,7 @@ Tässä vaiheessa kannattaa antaa erityisesti palautetta seuraavista asioista:
 
 ### Loppupalautus
 
-Hyvä tapa kirjoittaa loppupalautuksen arviointi on käydä läpi [arvostelu.html](arvostelusivun) osiot ja tuoda esille, mitkä asiat toteutuvat sovelluksessa ja mitkä asiat eivät.
+Hyvä tapa kirjoittaa loppupalautuksen arviointi on käydä läpi [arvostelusivun](arvostelu.html) osiot ja tuoda esille, mitkä asiat toteutuvat sovelluksessa ja mitkä asiat eivät.
 
 ## Ohjaajan palkka
 
