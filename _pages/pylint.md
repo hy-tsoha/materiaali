@@ -5,7 +5,7 @@ hidden: true
 
 # Pylint-työkalu
 
-[Pylint](https://pypi.org/project/pylint/) on työkalu, joka antaa palautetta siitä, miten Python-koodi noudattaa hyvää ohjelmointityyliä. Työkalun avulla on kätevää etsiä omasta koodista korjattavia asioita.
+[Pylint](https://pypi.org/project/pylint/) on työkalu, joka antaa palautetta Python-koodin ohjelmointityylistä. Työkalun avulla on kätevää etsiä omasta koodista korjattavia asioita.
 
 Esimerkiksi seuraava komento tarkastaa tiedoston `test.py` sisällön:
 
