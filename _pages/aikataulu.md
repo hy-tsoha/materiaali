@@ -4,21 +4,19 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Alkukesän 2021 ryhmän aikataulu on seuraava:
+Loppukesän 2021 ryhmän aikataulu on seuraava:
 
-| ti 11.5.2021 | Aloitusluento klo 16–18 Zoomissa ([tallenne](https://www2.helsinki.fi/fi/unitube/video/1597c1f3-af9f-423c-9748-66c93babc4de)) |
-| su 16.5.2021 | Välipalautus 1 |
-| su 30.5.2021 | Välipalautus 2 |
-| ke 2.6.2021 | Vertaisarvioinnin deadline |
-| su 13.6.2021 | Välipalautus 3 |
-| ke 16.6.2021 | Vertaisarvioinnin deadline |
-| su 27.6.2021 | Lopullinen palautus |
+| ti 20.7.2021 | Aloitusluento klo 16–18 Zoomissa |
+| su 25.7.2021 | Välipalautus 1 |
+| su 8.8.2021 | Välipalautus 2 |
+| ke 11.8.2021 | Vertaisarvioinnin deadline |
+| su 22.8.2021 | Välipalautus 3 |
+| ke 25.8.2021 | Vertaisarvioinnin deadline |
+| su 5.9.2021 | Lopullinen palautus |
 
-Ryhmän ohjaaja on Mikael Törnwall.
+Ryhmän ohjaaja on Olli-Pekka Mehtonen.
 
-Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausta on tarjolla erityisesti keskiviikkoisin klo 13–15.
-
-Kun kysyt apua sovelluksesi toimintaan liittyen, on hyödyllistä, että sovelluksen nykyinen tilanne näkyy GitHubissa. Jos lähetät GitHubiin toimimatonta koodia, voit laittaa commit-viestiksi esimerkiksi "Add not working code to GitHub for debugging".
+Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Tarkemmat ohjausajat ilmoitetaan lähempänä kurssin alkua.
 
 ## Kurssin eteneminen
 
