@@ -86,7 +86,10 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
   
 ## Tietokanta-asiat
 
-* Taulujen ja sarakkeiden nimien tulee olla englanniksi.
+* Käytä englantia taulujen ja sarakkeiden nimissä.
+* Nimeä taulut ja sarakkeet kuvaavasti ja yhdenmukaisesti.
+* Käytä `REFERENCES`-määrettä, kun taulun sarake viittaa toiseen tauluun.
+* Käytä `UNIQUE`-määrettä, kun sarakkeessa tulee olla eri arvo joka rivillä.
 * Kysely muotoa `SELECT *` ei ole koskaan hyvä. Merkitse aina näkyviin haettavat sarakkeet, vaikka hakisit kaikki tai lähes kaikki sarakkeet.
 * Jaa pitkät SQL-komennot useille riveille. Yksi hyvä tapa rivittää SQL-komento koodissa on käyttää `"""`-syntaksia:
   ```python
