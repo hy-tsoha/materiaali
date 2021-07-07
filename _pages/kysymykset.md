@@ -10,19 +10,15 @@ Kurssille voi osallistua vain Helsingin yliopiston tutkinto-opiskelijana.
 
 ### Millä kielellä projektin voi tehdä?
 
-Sovelluksen ja käyttöliittymän kieli voi olla suomi, ruotsi tai englanti.
+Sovelluksen koodin, tietokannan ja git-viestien kielen tulee olla englanti.
 
-Kielestä riippumatta suositeltava tapa on kirjoittaa koodi, commit-viestit jne. englanniksi.
+Sovelluksen käyttöliittymän ja `README.md`-tiedoston kieli voi olla suomi, ruotsi tai englanti.
 
-### Voiko sovelluksen tehdä muulla kuin Pythonilla/Flaskilla?
+### Voiko sovelluksen tehdä muilla tekniikoilla kuin materiaalissa?
 
-Jos suoritat kurssin ohjatusti, tämä on ainoa vaihtoehto. Jos suoritat kurssin itsenäisesti, voit tehdä sovelluksen millä tahansa haluamallasi tekniikalla.
+Tällä kurssilla sinun tulee tehdä Pythonilla ja Flaskilla web-sovellus, joka käyttää PostgreSQL-tietokantaa SQL-komentojen kautta.
 
-### Voiko sovelluksessa käyttää ORMia tai lisäkirjastoja?
-
-Kurssin tavoitteena on saada yleistä osaamista web-sovelluksen kehityksestä ja tietokannan käyttämisestä, joka ei ole sidottu tiettyyn ympäristöön tai kirjastoon.
-
-Kuitenkin jos haluat käyttää ORMia tai sopivia lisäkirjastoja ja opettelet ne itsenäisesti, niin voit mainiosti tehdä näin.
+(Aiemmin itsenäisessä suorituksessa oli sallittua käyttää muita tekniikoita. Jos olet sopinut asiasta kurssin vastuuhenkilön kanssa, saat edelleen tehdä työsi sen mukaisesti.)
 
 ### Voiko sovelluksen toteuttaa parityönä/ryhmässä?
 
