@@ -18,6 +18,10 @@ Ryhmän ohjaaja on Olli-Pekka Mehtonen.
 
 Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Tarkemmat ohjausajat ilmoitetaan lähempänä kurssin alkua.
 
+## Kurssin vaatimukset
+
+Löydät [arvostelusivulta](arvostelu.html) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan. Lisäksi [tekninen tarkastuslista](tekninen_tarkastuslista) kokoaa yhteen teknisiä vaatimuksia.
+
 ## Kurssin eteneminen
 
 Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautusten deadline on klo 23:59 sunnuntaina.
@@ -31,13 +35,13 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 ### Välipalautus 2
 
-* Tässä vaiheessa tavoitteena on, että sovelluksella on toimiva pohja ja keskeiset toiminnot ovat hyvässä vaiheessa.
+* Tavoitteena on, että sovelluksella on toimiva pohja ja keskeiset toiminnot ovat hyvässä vaiheessa.
 * `README.md`-tiedoston tulee kuvata, mikä on sovelluksen nykyinen tilanne ja miten sitä pystyy testaamaan Herokussa.
 * Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta Labtooliin.
 
 ### Välipalautus 3
 
-* Tässä vaiheessa tavoitteena on, että sovellus on viimeistelyä vaille valmis.
+* Tavoitteena on, että sovellus on viimeistelyä vaille valmis.
 * `README.md`-tiedoston tulee kuvata, mikä on sovelluksen nykyinen tilanne ja miten sitä pystyy testaamaan Herokussa.
 * Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta Labtooliin.
 

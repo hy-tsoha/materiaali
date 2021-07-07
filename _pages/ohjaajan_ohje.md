@@ -27,16 +27,18 @@ Tässä vaiheessa selviää, moniko opiskelija aloittaa kurssin. Ohjaaja antaa p
 
 ### Välipalautus 2
 
-Tässä vaiheessa kannattaa antaa erityisesti palautetta seuraavista asioista:
+Anna palautetta erityisesti seuraavista asioista:
 
 * Käyttökokemus: voiko sovelluksen perustoimintoja jo käyttää?
 * Gitin käyttö: onko repossa oikeat tiedostot ja ovatko commit-viestit hyviä?
-* Ohjelmointityyli: onko koodi siistiä ja seuraako se Python-kielen käytäntöjä? ([kurssin ohjeistus](ohjelmointityyli.html))
+* Ohjelmointityyli: onko koodi siistiä ja seuraako se Python-kielen käytäntöjä?
 * Tietokanta-asiat: onko SQL-skeema kunnossa ja käytetäänkö tietokantaa koodissa järkevästi?
+
+Muistuta opiskelijaa tarvittaessa [teknisestä tarkastuslistasta](tekninen_tarkastuslista.html).
 
 ### Välipalautus 3
 
-Tässä vaiheessa kannattaa antaa erityisesti palautetta seuraavista asioista:
+Anna palautetta erityisesti seuraavista asioista:
 
 * Käyttökokemus: mitä kannattaa parantaa vielä ennen lopullista palautusta?
 * Tietoturva: ovatko tarkastukset kunnossa koodissa, jotta käyttäjä voi käsitellä vain hänelle kuuluvia tietoja?
@@ -44,9 +46,11 @@ Tässä vaiheessa kannattaa antaa erityisesti palautetta seuraavista asioista:
 * Ohjelmointityyli: onko koodi jaettu järkevästi osiin funktioiksi ja tiedostoiksi?
 * Tietokanta-asiat: tehdäänkö koodissa tiedon käsittelyä, jota kuuluisi tehdä SQL:ssä?
 
+Muistuta opiskelijaa tarvittaessa [teknisestä tarkastuslistasta](tekninen_tarkastuslista.html).
+
 ### Loppupalautus
 
-Hyvä tapa kirjoittaa loppupalautuksen arviointi on käydä läpi [arvostelusivun](arvostelu.html) osiot ja tuoda esille, mitkä asiat toteutuvat sovelluksessa ja mitkä asiat eivät.
+Käy läpi [arvostelusivun](arvostelu.html) osiot ja tuo esille arvostelussa, mitkä asiat toteutuvat sovelluksessa ja mitkä asiat eivät. Anna sovelluksesta arvosana, joka ilmaisee sitä, miten arviointisivun vaatimukset toteutuvat kokonaisuutena sovelluksessa.
 
 ## Ohjaajan palkka
 

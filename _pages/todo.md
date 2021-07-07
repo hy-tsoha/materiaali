@@ -37,13 +37,8 @@ title: TODO
 
 ## 1. periodissa ilmennyttä
 
-* `SELECT *` ei ole hyvä kysely
-* `print`-komennot pois lopullisesta koodista
-* Ei turhaan `allow = True` jne. jos voi vain palauttaa `True` tai `False`
-* Epäselvää, milloin pitäisi olla `try`...`catch`
 * Git-viestit ja turhat tiedostot Gitissä
 * Muistutus CSRF-aukon estämisestä
-* `if (x)`: ei ole hyvä laittaa sulkuja tähän ja vastaaviin
 
 ## 2. periodissa ilmennyttä
 
