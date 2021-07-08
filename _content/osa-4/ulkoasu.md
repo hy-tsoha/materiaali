@@ -53,8 +53,16 @@ Tässä tapauksessa sivut näyttävät seuraavilta:
 
 ### Ulkoasun suunnittelu
 
-Nettisivujen ulkoasun toteuttamiseen käytetään CSS-kieltä, jonka avulla voi määrittää sivun asettelun, värit, fontit, jne. Ulkoasun suunnittelu vaatii toisaalta tietoa CSS:n ominaisuuksista ja toisaalta graafista silmää. Voit katsoa [tästä](../../pages/ulkoasun_suunnittelu.html) esimerkin prosessista, jossa suunnitellaan ulkoasu ja toteutetaan se vaihe vaiheelta.
+Nettisivujen ulkoasun toteuttamiseen käytetään CSS-kieltä, jonka avulla voi määrittää sivun asettelun, värit, fontit, jne. Ulkoasun suunnittelu vaatii toisaalta tietoa CSS:n ominaisuuksista ja toisaalta graafista silmää.
+
+* Taustamateriaali: [Ulkoasun suunnittelu](../../pages/ulkoasun_suunnittelu.html)
 
 ### Ulkoasu kirjaston avulla
 
-Toinen tapa toteuttaa ulkoasu on käyttää valmista ulkoasukirjastoa. Tämän tavan etuna on, että ulkoasua ei tarvitse suunnitella tyhjästä vaan voi käyttää valmiita komponentteja, mutta toisaalta lopputulos ei ole välttämättä yksilöllinen. Suosittu kirjasto ulkoasun toteuttamiseen on Bootstrap, jonka käyttämisestä voit lukea lisää [tästä](../../pages/bootstrap.html).
+Toinen tapa toteuttaa ulkoasu on käyttää valmista ulkoasukirjastoa. Tämän tavan etuna on, että ulkoasua ei tarvitse suunnitella tyhjästä vaan voi käyttää valmiita komponentteja, mutta toisaalta lopputulos ei ole välttämättä yksilöllinen.
+
+* Taustamateriaali: [Ulkoasu Bootstrapilla](../../pages/ulkoasun_suunnittelu.html)
+
+### CSS:n muutosten näkyminen
+
+Huomaa, että kun muokkaat CSS-tiedostoa, muutos ei tule välttämättä näkyviin selaimessa, vaikka lataisit sivun uudestaan. Syynä tähän voi olla, että CSS-tiedosto on selaimen välimuistissa. Ratkaisu ongelmaan on ladata sivu uudestaan täydellisesti, mikä tapahtuu monissa ympäristöissä painamalla Control + F5.
