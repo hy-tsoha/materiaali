@@ -23,7 +23,6 @@ title: TODO
   * Herokun dynot, samoin kuin suurin osa maailman palvelimista, on UTC-ajassa. Oikea ratkaisu on tallettaa ero sovellukseen ja muuntaa ajat ennen kuin ne lähetetään käyttäjälle, mutta Heroku sallii myös aikavyöhykkeen vaihtamisen https://help.heroku.com/JZKJJ4NC/how-do-i-set-the-timezone-on-my-dyno
 * HTML:n komponentit päivämäärän ja ajan kysymiseen ovat ongelmallisia (tätä ei ole käsitelty materiaalissa)
 * Kuinka tyhjentää istunnon avain, jos sitä ei ole välttämättä olemassa? Avaimen tarkastus tai `pop` ovat ratkaisuja.
-* PRG-mallin (Post/Redirect/Get) selitys puuttuu materiaalista
 * HTML:n moderneista ominaisuuksista lomakkeissa pitäisi kertoa (uusia kenttätyyppejä, required, pattern, yms.)
 * Kurssin materiaali ilmeisesti ei näy hyvin Safari-selaimella
 

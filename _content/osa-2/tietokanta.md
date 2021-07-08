@@ -181,7 +181,7 @@ Käyttäjän antama syöte yhdistetään SQL-komentoon parametrina, jolla on tie
 
 Huomaa, että sovelluksen tekemät SQL-komennot suoritetaan automaattisesti transaktion sisällä. Kun sovellus tekee muutoksia tietokantaan, muutosten jälkeen täytyy kutsua metodia `commit`, jotta transaktio viedään loppuun ja muutokset menevät pysyvästi tietokantaan.
 
-Funktio `redirect` aiheuttaa uudelleenohjauksen toiselle sivulle. Tässä tapauksessa viestin lähetyksen jälkeen siirrytään takaisin etusivulle.
+Funktio `redirect` aiheuttaa uudelleenohjauksen toiselle sivulle. Tässä tapauksessa viestin lähetyksen jälkeen siirrytään takaisin etusivulle. Tämä on hyvä tapa toteuttaa lomakkeen käsittely, koska käyttäjä ei voi vahingossa lähettää lomaketta uudestaan, jos hän lataa sivun uudestaan. Tällaista käytäntöä kutsutaan joskus nimellä PRG-malli (Post/Redirect/Get).
 
 ### Ympäristömuuttujat
 
