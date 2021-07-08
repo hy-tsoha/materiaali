@@ -56,7 +56,7 @@ Sivun osoitteessa annettu parametri välittyy funktiolle, joka voi käyttää si
 ### HTML ja sivupohjat
 
 Tähän mennessä olemme tuottaneet sivuja, joissa on pelkkää tekstiä,
-mutta tarkemmin ottaen voimme käyttää sivuilla HTML-koodia. HTML on kieli, jolla määritellään nettisivun sisältö. Jos HTML ei ole sinulle ennestään tuttu, voit tutustua siihen [tästä](../../pages/html_opas.html).
+mutta tarkemmin ottaen voimme käyttää sivuilla HTML-koodia. HTML on kieli, jolla määritellään nettisivun sisältö. Jos HTML ei ole sinulle ennestään tuttu, voit tutustua siihen [tästä]({% link _pages/html_opas.md %}).
 
 Esimerkiksi seuraava sivu käyttää HTML-komentoja:
 

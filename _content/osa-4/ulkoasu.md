@@ -55,13 +55,13 @@ Tässä tapauksessa sivut näyttävät seuraavilta:
 
 Nettisivujen ulkoasun toteuttamiseen käytetään CSS-kieltä, jonka avulla voi määrittää sivun asettelun, värit, fontit, jne. Ulkoasun suunnittelu vaatii toisaalta tietoa CSS:n ominaisuuksista ja toisaalta graafista silmää.
 
-* Taustamateriaali: [Ulkoasun suunnittelu](../../pages/ulkoasun_suunnittelu.html)
+* Taustamateriaali: [Ulkoasun suunnittelu]({% link _pages/ulkoasun_suunnittelu.md %})
 
 ### Ulkoasu kirjaston avulla
 
 Toinen tapa toteuttaa ulkoasu on käyttää valmista ulkoasukirjastoa. Tämän tavan etuna on, että ulkoasua ei tarvitse suunnitella tyhjästä vaan voi käyttää valmiita komponentteja, mutta toisaalta lopputulos ei ole välttämättä yksilöllinen.
 
-* Taustamateriaali: [Ulkoasu Bootstrapilla](../../pages/ulkoasun_suunnittelu.html)
+* Taustamateriaali: [Ulkoasu Bootstrapilla]({% link _pages/bootstrap.md %})
 
 ### CSS:n muutosten näkyminen
 

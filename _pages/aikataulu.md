@@ -20,7 +20,7 @@ Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_ts
 
 ## Kurssin vaatimukset
 
-Löydät [arvostelusivulta](arvostelu.html) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan. Lisäksi [tekninen tarkastuslista](tekninen_tarkastuslista) kokoaa yhteen teknisiä vaatimuksia.
+Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan. Lisäksi [tekninen tarkastuslista]({% link _pages/tekninen_tarkastuslista.md %}) kokoaa yhteen teknisiä vaatimuksia.
 
 ## Kurssin eteneminen
 
@@ -29,7 +29,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 ### Välipalautus 1
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.
-* Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?](aiheen_valinta.html) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
+* Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?]({% link _pages/aiheen_valinta.md %}) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
 * Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2021.V.A.2) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
@@ -48,7 +48,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 ### Vertaisarvioinnit
 
 Kurssiin kuuluu kaksi vertaisarviointia, joissa annetaan palautetta toisen opiskelijan työstä. Saat ohjeet vertaisarviointiin sähköpostitse välipalautusten 2 ja 3 jälkeen. 
-Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin ohje](vertaisarviointi.html)
+Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin ohje]({% link _pages/vertaisarviointi.md %})
 
 ### Lopullinen palautus
 

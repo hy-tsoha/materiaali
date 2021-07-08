@@ -12,7 +12,7 @@ sub-sections:
 
 Tämä osan aiheita ovat sovelluksen kehittäminen GitHubin avulla, sovelluksen siirtäminen julkiseksi Heroku-palvelimelle, virheiden etsiminen sekä sovelluksen jakaminen osiin.
 
-Jos Git ei ole sinulle vielä kovin tuttu työkalu, voit lukea [tästä](../../pages/git_vinkit.html) tämän kurssin kannalta hyödyllisiä vinkkejä Gitin käyttämiseen.
+Jos Git ei ole sinulle vielä kovin tuttu työkalu, voit lukea [tästä]({% link _pages/git_vinkit.md %}) tämän kurssin kannalta hyödyllisiä vinkkejä Gitin käyttämiseen.
 
 {% include_relative versionhallinta.md %}
 {% include_relative tuotantoon.md %}

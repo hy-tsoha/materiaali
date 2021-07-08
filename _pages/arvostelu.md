@@ -6,7 +6,7 @@ title: Arvostelu
 
 Tälle sivulle on koottu asiat, jotka kurssin ohjaaja käy läpi työsi arvostelussa. Kurssi arvostellaan asteikolla 1–5 sen mukaan, miten hyvin tämän sivun vaatimukset täyttyvät sovelluksessasi.
 
-Sinun kannattaa myös tutustua [tekniseen tarkastuslistaan](tekninen_tarkastuslista.html), johon on koottu yhteen ohjeita versionhallinnasta, ohjelmointityylistä, tietokanta-asioista ja tietoturvasta.
+Sinun kannattaa myös tutustua [tekniseen tarkastuslistaan]({% link _pages/tekninen_tarkastuslista.md %}), johon on koottu yhteen ohjeita versionhallinnasta, ohjelmointityylistä, tietokanta-asioista ja tietoturvasta.
 
 ### Perusvaatimukset
 

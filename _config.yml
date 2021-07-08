@@ -38,6 +38,7 @@ kramdown:
 collections:
   pages:
     output: true
+    permalink: /:title/
   content:
     output: true
 

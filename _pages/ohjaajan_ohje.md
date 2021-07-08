@@ -34,7 +34,7 @@ Anna palautetta erityisesti seuraavista asioista:
 * Ohjelmointityyli: onko koodi siistiä ja seuraako se Python-kielen käytäntöjä?
 * Tietokanta-asiat: onko SQL-skeema kunnossa ja käytetäänkö tietokantaa koodissa järkevästi?
 
-Muistuta opiskelijaa tarvittaessa [teknisestä tarkastuslistasta](tekninen_tarkastuslista.html).
+Muistuta opiskelijaa tarvittaessa [teknisestä tarkastuslistasta]({% link _pages/tekninen_tarkastuslista.md %}).
 
 ### Välipalautus 3
 
@@ -46,11 +46,11 @@ Anna palautetta erityisesti seuraavista asioista:
 * Ohjelmointityyli: onko koodi jaettu järkevästi osiin funktioiksi ja tiedostoiksi?
 * Tietokanta-asiat: tehdäänkö koodissa tiedon käsittelyä, jota kuuluisi tehdä SQL:ssä?
 
-Muistuta opiskelijaa tarvittaessa [teknisestä tarkastuslistasta](tekninen_tarkastuslista.html).
+Muistuta opiskelijaa tarvittaessa [teknisestä tarkastuslistasta]({% link _pages/tekninen_tarkastuslista.md %}).
 
 ### Loppupalautus
 
-Käy läpi [arvostelusivun](arvostelu.html) osiot ja tuo esille arvostelussa, mitkä asiat toteutuvat sovelluksessa ja mitkä asiat eivät. Anna sovelluksesta arvosana, joka ilmaisee sitä, miten arviointisivun vaatimukset toteutuvat kokonaisuutena sovelluksessa.
+Käy läpi [arvostelusivun]({% link _pages/arvostelu.md %}) osiot ja tuo esille arvostelussa, mitkä asiat toteutuvat sovelluksessa ja mitkä asiat eivät. Anna sovelluksesta arvosana, joka ilmaisee sitä, miten arviointisivun vaatimukset toteutuvat kokonaisuutena sovelluksessa.
 
 ## Ohjaajan palkka
 
