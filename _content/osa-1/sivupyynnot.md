@@ -134,3 +134,5 @@ Flaskissa suositeltu paikka sijoittaa staattiset tiedostot on hakemisto `static`
 ```html
 <img src="/static/kuva.png">
 ```
+
+Huomaa, että tiedoston polun alussa on merkki `/`, mikä tarkoittaa, että tiedostoon viitataan sovelluksen hakemiston juuresta alkaen. Tämä on hyvä tapa toteuttaa viittaus niin, että se toimii luotettavasti sovelluksen eri sivuilla.

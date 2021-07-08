@@ -25,7 +25,6 @@ title: TODO
 * Kuinka tyhjentää istunnon avain, jos sitä ei ole välttämättä olemassa? Avaimen tarkastus tai `pop` ovat ratkaisuja.
 * PRG-mallin (Post/Redirect/Get) selitys puuttuu materiaalista
 * HTML:n moderneista ominaisuuksista lomakkeissa pitäisi kertoa (uusia kenttätyyppejä, required, pattern, yms.)
-* Olisi hyvä korostaa, että viittaus tyyliin "static/..." ei toimi kunnolla vaan pitäisi olla "/static/..."
 * Jos css-tiedostoa muuttaa, selain ei ehkä näytä muutosta ilman kikkailua
 * Kurssin materiaali ilmeisesti ei näy hyvin Safari-selaimella
 
