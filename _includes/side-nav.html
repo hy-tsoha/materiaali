@@ -5,7 +5,7 @@
     <h2>{{ site.title}}</h2>
     <ol>
        
-        <li class="side-nav-obj" id="indexnav"><a href={{ 'index'  | relative_url }}>Etusivu </a></li>
+        <li class="side-nav-obj" id="indexnav"><a href={{ '/'  | relative_url }}>Etusivu </a></li>
 
         {% for page in site.pages %}
         {% if page.hidden != true%}
