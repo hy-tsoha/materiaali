@@ -6,7 +6,6 @@ title: TODO
 # TODO
 
 * Esimerkeissä haetaan nyt tietoa tietokannasta tupleina, mutta voisi käyttää myös pistenotaatiota ja se olisi parempi suunta.
-* Materiaalin linkit toimivat ilman .html, se olisi parempi tapa tehdä linkit
 * Jinjan rooli on epäselvä (missä se suoritetaan, mitä sillä kannattaa tehdä)
 * Pitäisi kertoa tarkemmin, miten SQL-komentojen parametrit toimivat. Termin "parametrisoitu kysely" mainitsemista voi harkita.
 * Materiaalissa olevassa esimerkissä uuden tunnuksen luonnissa kysytään salasana vain kerran, mikä on huono malli.

@@ -16,7 +16,7 @@ def index():
 
 Selaimissa on kehittäjän työkaluja, joiden avulla voi tarkastella selaimen ja palvelimen välistä liikennettä. Esimerkiksi Chromessa painamalla F12 avautuu kehittäjän näkymä. Välilehti `Network` näyttää, miten selain viestii palvelimen kanssa:
 
-<img class="screenshot" src="img/chrome1.png">
+<img class="screenshot" src="../assets/osa-1/chrome1.png">
 
 Tässä selain lähetti palvelimelle HTTP-pyynnön, jonka osoite on `http://127.0.0.1:5000/` ja metodi on `GET`. Palvelin vastasi tähän koodilla 200, jonka merkitys on _OK_ eli pyyntö onnistui. Palvelin lähetti vastauksena 13 tavua tietoa eli tekstin "Heipparallaa!". Samaan aikaan sovellus tulosti komentoikkunaan rivin tietoa pyynnöstä:
 
@@ -36,7 +36,7 @@ Nimi: <input type="text" name="name">
 
 Nyt sivupyyntö näyttää tältä:
 
-<img class="screenshot" src="img/chrome2.png">
+<img class="screenshot" src="../assets/osa-1/chrome2.png">
 
 Tässä tapauksessa metodi on `POST` ja käyttäjän lomakkeeseen kirjoittama tieto (tässä kentän `name` arvo) kulkee sivupyynnön mukana. Selain ei näytä tätä suoraan käyttäjälle, mutta asian pystyy havaitsemaan kehittäjän näkymästä.
 

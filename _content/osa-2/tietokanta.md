@@ -139,11 +139,11 @@ Viesti: <br>
 
 Sovelluksen käyttäminen voi näyttää tältä:
 
-<img class="screenshot" src="img/viestit1.png">
+<img class="screenshot" src="../assets/osa-2/viestit1.png">
 
-<img class="screenshot" src="img/viestit2.png">
+<img class="screenshot" src="../assets/osa-2/viestit2.png">
 
-<img class="screenshot" src="img/viestit3.png">
+<img class="screenshot" src="../assets/osa-2/viestit3.png">
 
 Katsotaan vielä tarkemmin joitakin kohtia koodista:
 

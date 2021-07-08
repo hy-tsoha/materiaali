@@ -47,9 +47,9 @@ Salasana: <input type="password" name="password"> <br>
 
 Tässä tapauksessa sivut näyttävät seuraavilta:
 
-<img class="screenshot" src="img/pohja1.png">
+<img class="screenshot" src="../assets/osa-4/pohja1.png">
 
-<img class="screenshot" src="img/pohja2.png">
+<img class="screenshot" src="../assets/osa-4/pohja2.png">
 
 ### Ulkoasun suunnittelu
 

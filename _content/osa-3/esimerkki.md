@@ -4,11 +4,11 @@ Seuraava esimerkkisovellus kokoaa yhteen tähän asti käsiteltyjä asioita. Sov
 
 Sovelluksen käyttäminen näyttää tältä:
 
-<img class="screenshot" src="img/chat1.png">
+<img class="screenshot" src="../assets/osa-3/chat1.png">
 
-<img class="screenshot" src="img/chat2.png">
+<img class="screenshot" src="../assets/osa-3/chat2.png">
 
-<img class="screenshot" src="img/chat3.png">
+<img class="screenshot" src="../assets/osa-3/chat3.png">
 
 
 Sovelluksen koko lähdekoodi on GitHubissa osoitteessa [https://github.com/hy-tsoha/tsoha-chat](https://github.com/hy-tsoha/tsoha-chat), ja käymme tässä tarkemmin läpi sovelluksen toimintaa.

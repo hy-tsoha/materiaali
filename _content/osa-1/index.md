@@ -1,5 +1,6 @@
 ---
 nav-title: Osa 1
+permalink: /osa-1/
 sub-sections:
       - sub-section-title: Johdatus web-sovelluksiin
       - sub-section-title: Sivupyynnöt

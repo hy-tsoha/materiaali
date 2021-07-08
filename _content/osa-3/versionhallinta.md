@@ -71,7 +71,7 @@ Nyt voimme kokeilla suorittaa sovelluksen:
 
 Sovelluksen käyttäminen näyttää tältä:
 
-<img class="screenshot" src="img/visitors.png">
+<img class="screenshot" src="../assets/osa-3/visitors.png">
 
 ### Tiedostojen lisääminen repositorioon
 

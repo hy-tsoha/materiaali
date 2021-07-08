@@ -1,5 +1,6 @@
 ---
 nav-title: Osa 2
+permalink: /osa-2/
 sub-sections:
       - sub-section-title: Tietokannan käyttäminen
       - sub-section-title: "Esimerkki: Kyselyt"

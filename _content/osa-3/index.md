@@ -1,5 +1,6 @@
 ---
 nav-title: Osa 3
+permalink: /osa-3/
 sub-sections:
       - sub-section-title: Versionhallinta
       - sub-section-title: Sovellus tuotantoon

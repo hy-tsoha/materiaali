@@ -2,11 +2,11 @@
 
 Teemme seuraavaksi hieman laajemman esimerkkisovelluksen, joka esittelee tietokannan käyttämiseen liittyviä tekniikoita. Sovelluksessa käyttäjät voivat luoda kyselyitä sekä vastata muiden luomiin kyselyihin. Sovelluksen käyttäminen näyttää tältä:
 
-<img class="screenshot" src="img/kysely1.png">
+<img class="screenshot" src="../assets/osa-2/kysely1.png">
 
-<img class="screenshot" src="img/kysely2.png">
+<img class="screenshot" src="../assets/osa-2/kysely2.png">
 
-<img class="screenshot" src="img/kysely3.png">
+<img class="screenshot" src="../assets/osa-2/kysely3.png">
 
 Sovelluksen koko lähdekoodi on GitHubissa osoitteessa [https://github.com/hy-tsoha/tsoha-polls](https://github.com/hy-tsoha/tsoha-polls), ja käymme tässä tarkemmin läpi sovelluksen toimintaa.
 

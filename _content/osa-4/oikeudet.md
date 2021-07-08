@@ -92,7 +92,7 @@ function check(form) {
 
 Tässä tapauksessa lomake lähetetään palvelimelle vain, jos funktio `check` palauttaa arvon `true`. Nyt ilmoitus pituuden ylittymisestä tulee jo selaimen puolella:
 
-<img class="screenshot" src="img/alert.png">
+<img class="screenshot" src="../assets/osa-4/alert.png">
 
 Tarkastus JavaScriptillä ei ole kuitenkaan luotettava, koska käyttäjä saattaa esimerkiksi kytkeä JavaScriptin pois selaimen asetuksista. Niinpä joka tapauksessa tarkastus täytyy olla palvelimella lomakkeen käsittelijässä.
 

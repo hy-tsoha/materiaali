@@ -59,15 +59,15 @@ def result():
 
 Tässä käyttäjä antaa nimensä lomakkeen kautta ja sivu näyttää viestin "Moikka, _nimi_". Sivu toimii odotusten mukaisesti, jos käyttäjä antaa nimensä:
 
-<img class="screenshot" src="img/xss1.png">
+<img class="screenshot" src="../assets/osa-4/xss1.png">
 
 Kuitenkin käyttäjä voi antaa nimen sijasta myös merkkijonon, jossa on HTML-koodia. Esimerkiksi jos nimenä on `<h1>LOL</h1>`, sivu näyttää tältä:
 
-<img class="screenshot" src="img/xss2.png">
+<img class="screenshot" src="../assets/osa-4/xss2.png">
 
 Lisäksi käyttäjä voi antaa JavaScript-koodia, joka myös suoritetaan selaimessa. Esimerkiksi jos nimenä on `<script>alert("Sivu on hakkeroitu!")</script>`, sivu näyttää tältä:
 
-<img class="screenshot" src="img/xss3.png">
+<img class="screenshot" src="../assets/osa-4/xss3.png">
 
 Tässä tapauksessa XSS-haavoittuvuus ei ole vielä vaarallinen, koska käyttäjä voi muuttaa vain itselleen näkyvää sivua. Kuitenkin asiasta tulee ongelma, jos käyttäjän syöte tallennetaan palvelimelle ja se välittyy muille käyttäjille. Kiusanteon lisäksi JavaScriptin avulla voi tuottaa todellisia tietoturvaongelmia XSS-haavoittuvuuden kautta.
 
@@ -82,7 +82,7 @@ def result():
 
 Kun muuttuja `name` näytetään sivupohjassa, sen sisältöä muutetaan automaattisesti niin, että HTML-koodia ei suoriteta:
 
-<img class="screenshot" src="img/xss4.png">
+<img class="screenshot" src="../assets/osa-4/xss4.png">
 
 Käytännössä esimerkiksi merkit `<` ja `>` muuttuvat muotoon `&lt;` ja `&gt;`, jolloin selain näyttää nämä merkit sellaisenaan eikä tulkitse niitä HTML-tagien osiksi.
 

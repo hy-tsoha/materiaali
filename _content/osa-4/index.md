@@ -1,5 +1,6 @@
 ---
 nav-title: Osa 4
+permalink: /osa-4/
 sub-sections:
       - sub-section-title: Oikeudet ja syötteet
       - sub-section-title: Tietoturva

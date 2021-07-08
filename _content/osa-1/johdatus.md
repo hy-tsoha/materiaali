@@ -4,7 +4,7 @@ Web-sovellusten toiminta perustuu HTTP-protokollaan, jossa selain lähettää pa
 
 Esimerkiksi seuraavassa kuvassa selain pyytää HTML-tiedostoa `index.html`. Palvelin lähettää tiedoston sisällön HTTP-koodilla 200, mikä tarkoittaa, että pyyntö onnistui.
 
-<img src="img/http.png">
+<img src="../assets/osa-1/http.png">
 
 Perinteinen tapa toteuttaa nettisivusto on luoda HTML-tiedostot käsin ja sijoittaa ne palvelimella olevaan hakemistoon. Tämän rajoituksena on kuitenkin, että palvelimella olevat sivut ovat _staattisia_ eli aina kun käyttäjä lataa tietyn sivun, se näyttää samalta.
 
@@ -63,7 +63,7 @@ Sovelluksen ideana on, että se näyttää tekstin `"Heipparallaa!"`, kun käytt
 
 Viimeisellä rivillä näkyy osoite, jonka kautta voimme käyttää sovellusta nettiselaimella. Kun menemme sivulle `http://127.0.0.1:5000/`, näemme sovelluksen:
 
-<img class="screenshot" src="img/sovellus.png">
+<img class="screenshot" src="../assets/osa-1/sovellus.png">
 
 Sovellus sulkeutuu painamalla Control+C komentorivillä, jolloin voimme tehdä jotain muuta komentorivillä tai käynnistää sovelluksen uudestaan.
 

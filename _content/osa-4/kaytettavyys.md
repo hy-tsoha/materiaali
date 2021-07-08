@@ -12,11 +12,11 @@ Verkossa on paljon sekä hyvin että huonosti toimivia sovelluksia. Hyvin toimiv
 
 Hyvä tulikoe sovellukselle on kokeilla jossain vaiheessa sen toimintaa tekstiselaimessa. Esimerkiksi osassa 3 tehty keskustelusovellus näyttää seuraavalta Lynx-selaimessa:
 
-<img class="screenshot" src="img/chat1.png">
+<img class="screenshot" src="../assets/osa-4/chat1.png">
 
-<img class="screenshot" src="img/chat2.png">
+<img class="screenshot" src="../assets/osa-4/chat2.png">
 
-<img class="screenshot" src="img/chat3.png">
+<img class="screenshot" src="../assets/osa-4/chat3.png">
 
 Tässä tapauksessa sovellusta pystyy käyttämään hyvin tekstiselaimessa, mikä on merkki siitä, että se toimii hyvin monenlaisissa ympäristöissä. Usein tähän tavoitteeseen päästään automaattisesti toteuttamalla sivut suoraviivaisella HTML:llä, jossa elementtejä on käytetty niiden merkityksen mukaisesti.
 
