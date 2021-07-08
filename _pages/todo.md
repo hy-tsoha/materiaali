@@ -6,12 +6,10 @@ title: TODO
 # TODO
 
 * Esimerkeissä haetaan nyt tietoa tietokannasta tupleina, mutta voisi käyttää myös pistenotaatiota ja se olisi parempi suunta.
-* Ensimmäisessä tietokantaesimerkissä haetaan erikseen rivien määrä ja rivien sisältö. Tämä ei ole hyvä tapa.
 * Materiaalin linkit toimivat ilman .html, se olisi parempi tapa tehdä linkit
 * Jinjan rooli on epäselvä (missä se suoritetaan, mitä sillä kannattaa tehdä)
 * Pitäisi kertoa tarkemmin, miten SQL-komentojen parametrit toimivat. Termin "parametrisoitu kysely" mainitsemista voi harkita.
 * Materiaalissa olevassa esimerkissä uuden tunnuksen luonnissa kysytään salasana vain kerran, mikä on huono malli.
-* Lähes kaikissa Bootstrapia käyttävissä sovelluksissa sivu on liian leveä ja etenkin lomakkeet näyttävät huonoilta.
 * Materiaali ei kerro `flash`-funktiosta, se voisi olla hyödyllinen tietää
 * Herokussa kellonaika on pielessä (ymmärrettävästi) Suomeen verrattuna, mitähän sille kannattaisi tehdä
   * Herokun dynot, samoin kuin suurin osa maailman palvelimista, on UTC-ajassa. Oikea ratkaisu on tallettaa ero sovellukseen ja muuntaa ajat ennen kuin ne lähetetään käyttäjälle, mutta Heroku sallii myös aikavyöhykkeen vaihtamisen https://help.heroku.com/JZKJJ4NC/how-do-i-set-the-timezone-on-my-dyno
