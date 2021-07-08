@@ -15,7 +15,6 @@ title: TODO
   * Tässä voi tietysti puhua myös tietoturvasta ja tunnusten käymisestä läpi järjestyksessä, mutta mielestäni tsohassa olisi ensisijaista toteuttaa pääsynhallinta oikein, sen sijaan että luotetaan siihen että kun osoite on piilossa kukaan asiaton ei löydä sinne.
 * Materiaalin linkit toimivat ilman .html, se olisi parempi tapa tehdä linkit
 * Jinjan rooli on epäselvä (missä se suoritetaan, mitä sillä kannattaa tehdä)
-* Esimerkissä `visible`-sarake on `INTEGER`, parempi olisi `BOOLEAN`
 * Pitäisi kertoa tarkemmin, miten SQL-komentojen parametrit toimivat. Termin "parametrisoitu kysely" mainitsemista voi harkita.
 * Materiaalissa olevassa esimerkissä uuden tunnuksen luonnissa kysytään salasana vain kerran, mikä on huono malli.
 * Lähes kaikissa Bootstrapia käyttävissä sovelluksissa sivu on liian leveä ja etenkin lomakkeet näyttävät huonoilta.
