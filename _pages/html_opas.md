@@ -238,6 +238,43 @@ Piilokenttä on lomakkeen osana oleva kenttä, joka ei näy sivun käyttäjälle
 
 Huomaa, että vaikka käyttäjä ei näe piilokenttää sivulla, kenttä kuitenkin näkyy sivun lähdekoodissa eli piilokentässä ei voi olla salaista tietoa.
 
+### Päivämäärä ja kellonaika
+
+Päivämäärä ja kellonaika voidaan kysyä näin:
+
+```html
+Päivämäärä: <input type="date" name="date"> <br>
+Kellonaika: <input type="time" name="time">
+```
+
+<div style="border-style:solid;border-width:1px;padding:10px">
+Päivämäärä: <input type="date" name="date"> <br>
+Kellonaika: <input type="time" name="time">
+</div>
+
+Oletuksena kellonajassa voidaan antaa tunnit ja minuutit muttei sekunteja. Jos halutaan myös sekunnit, tämä onnistuu attribuutin `step` avulla näin:
+
+```html
+Kellonaika: <input type="time" name="time" step="1">
+```
+
+### Tiedon validointi
+
+Lomakkeen elementeille voidaan lisätä attribuuttien avulla validointia, jonka tarkoituksena on varmistaa, että käyttäjä antaa lomakkeen kautta oikeanlaista tietoa. Esimerkiksi tekstikentässä voidaan käyttää seuraavia attribuutteja:
+
+* `required`: kenttä on pakko täyttää
+* `minlength`: pienin sallittu merkkien määrä
+* `maxlength`: suurin sallittu merkkien määrä
+* `pattern`: säännöllinen lauseke, joka ilmaisee vaaditun tiedon muodon
+
+Esimerkiksi seuraava tekstikenttä vaatii, että käyttäjän tunnuksessa on 1–16 merkkiä:
+
+```html
+Tunnus: <input type="text" name="name" minlength="1" maxlength="16">
+```
+
+Jos tiedon muoto ei ole oikea, selain huomauttaa asiasta eikä lähetä lomaketta. Huomaa kuitenkin, että osaava käyttäjä voi kiertää selaimen tarkastuksen, eli tiedon muoto tulee tarkastaa myös palvelimella selaimen validoinnista huolimatta.
+
 ## CSS
 
 Ihanteena on, että HTML määrittelee sivun _rakenteen_: mitä tekstiä, kuvia, listoja, taulukoita, jne. sivulla on. Kuitenkaan HTML:n tehtävänä ei ole määritellä tarkemmin sivun _ulkoasua_: mikä on tekstin fontti, kuinka leveitä rivit ovat, mikä on sivun taustaväri, jne.
