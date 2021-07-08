@@ -13,7 +13,6 @@ title: TODO
 * Materiaali ei kerro `flash`-funktiosta, se voisi olla hyödyllinen tietää
 * Herokussa kellonaika on pielessä (ymmärrettävästi) Suomeen verrattuna, mitähän sille kannattaisi tehdä
   * Herokun dynot, samoin kuin suurin osa maailman palvelimista, on UTC-ajassa. Oikea ratkaisu on tallettaa ero sovellukseen ja muuntaa ajat ennen kuin ne lähetetään käyttäjälle, mutta Heroku sallii myös aikavyöhykkeen vaihtamisen https://help.heroku.com/JZKJJ4NC/how-do-i-set-the-timezone-on-my-dyno
-* Kuinka tyhjentää istunnon avain, jos sitä ei ole välttämättä olemassa? Avaimen tarkastus tai `pop` ovat ratkaisuja.
 * Kurssin materiaali ilmeisesti ei näy hyvin Safari-selaimella
 * TIMESTAMP ilman aikavyöhykettä ei ole hyvä ratkaisu
 
