@@ -156,7 +156,7 @@ Seuraava koodi puolestaan tarkastaa, onko käyttäjän antama tunnus ja salasana
 sql = "SELECT password FROM users WHERE username=:username"
 result = db.session.execute(sql, {"username":username})
 user = result.fetchone()    
-if user == None:
+if not user:
     # TODO: invalid username
 else:
     hash_value = user[0]

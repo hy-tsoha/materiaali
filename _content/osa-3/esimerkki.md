@@ -106,7 +106,7 @@ def login(username,password):
     sql = "SELECT password, id FROM users WHERE username=:username"
     result = db.session.execute(sql, {"username":username})
     user = result.fetchone()
-    if user == None:
+    if not user:
         return False
     else:
         if check_password_hash(user[0],password):

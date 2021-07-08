@@ -5,7 +5,6 @@ title: TODO
 
 # TODO
 
-* Esimerkeissä tulisi käsitellä `None`-arvot Python-tyylisesti
 * Esimerkeissä haetaan nyt tietoa tietokannasta tupleina, mutta voisi käyttää myös pistenotaatiota ja se olisi parempi suunta.
 * Ensimmäisessä tietokantaesimerkissä haetaan erikseen rivien määrä ja rivien sisältö. Tämä ei ole hyvä tapa.
 * Materiaalin linkit toimivat ilman .html, se olisi parempi tapa tehdä linkit

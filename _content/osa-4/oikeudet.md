@@ -23,7 +23,7 @@ def profile(id):
     elif is_user():
         sql = "SELECT 1 FROM friends WHERE user1=:user1 AND user2=:user2"
         result = db.session.execute(sql, {"user1":user_id(), "user2":id})
-        if result.fetchone() != None:
+        if result.fetchone():
             allow = True
     if not allow:
         return render_template("error.html",error="Ei oikeutta nähdä sivua")
