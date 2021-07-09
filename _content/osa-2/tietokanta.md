@@ -92,16 +92,14 @@ from flask import redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://user"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///user"
 db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
-    result = db.session.execute("SELECT COUNT(*) FROM messages")
-    count = result.fetchone()[0]
     result = db.session.execute("SELECT content FROM messages")
     messages = result.fetchall()
-    return render_template("index.html", count=count, messages=messages) 
+    return render_template("index.html", count=len(messages), messages=messages) 
 
 @app.route("/new")
 def new():
@@ -121,7 +119,7 @@ def send():
 {% raw %}Viestien määrä: {{ count }}
 <hr>
 {% for message in messages %}
-{{ message[0] }}
+{{ message.content }}
 <hr>
 {% endfor %}
 <a href="/new">Lähetä viesti</a>{% endraw %}
@@ -148,25 +146,18 @@ Sovelluksen käyttäminen voi näyttää tältä:
 Katsotaan vielä tarkemmin joitakin kohtia koodista:
 
 ```python
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://user"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///user"
 db = SQLAlchemy(app)
 ```
 
 Tämä koodi määrittelee osoitteen, jonka kautta tietokantaan saadaan yhteys, sekä luo `db`-olion, jonka avulla sovellus voi suorittaa SQL-komentoja.
 
 ```python
-    result = db.session.execute("SELECT COUNT(*) FROM messages")
-    count = result.fetchone()[0]
-```
-
-Tämä kysely tuottaa tulostaulun, jossa on yksi rivi: funktion `COUNT(*)` palauttama taulun rivien määrä. Metodi `fetchone` hakee rivin sisällön tuplena ja kohta 0 viittaa ensimmäiseen (tässä tapauksessa ainoaan) sarakkeeseen, jossa on rivien määrä.
-
-```python
     result = db.session.execute("SELECT content FROM messages")
     messages = result.fetchall()
 ```
 
-Tämä kysely hakee sisällön kaikista taulussa olevista viesteistä. Metodi `fetchall` antaa listan, jossa on kunkin rivin sisältö tuplena. Sivupohjassa `message[0]` näyttää rivin ensimmäisen sarakkeen arvon eli viestin sisällön.
+Tämä koodi suorittaa kyselyn, joka hakee kaikki taulussa olevat viestit. Metodi `fetchall` antaa listan, jonka jokainen alkio on yhden rivin sisältö. Sivupohjassa `message.content` näyttää rivin sarakkeen `content` arvon eli viestin sisällön.
 
 ```python
     sql = "INSERT INTO messages (content) VALUES (:content)"
@@ -177,11 +168,49 @@ Tämä kysely hakee sisällön kaikista taulussa olevista viesteistä. Metodi `f
 
 Tämä koodi lisää tietokantaan uuden rivin, kun käyttäjä on lähettänyt viestin lomakkeella.
 
-Käyttäjän antama syöte yhdistetään SQL-komentoon parametrina, jolla on tietty nimi, tässä tapauksessa `content`. SQL-komennossa ennen parametrin nimeä on kaksoispiste.
+Käyttäjän antama syöte yhdistetään SQL-komentoon parametrina, jolla on tietty nimi, tässä tapauksessa `content`. SQL-komennossa ennen parametrin nimeä on kaksoispiste. Parametrin käyttäminen on turvallinen tapa yhdistää käytäjän antamaa tietoa SQL-komentoon, koska tällöin tiedon yhdistäminen ei aiheuta SQL-injektiota eli muuta kyselyn rakennetta.
 
 Huomaa, että sovelluksen tekemät SQL-komennot suoritetaan automaattisesti transaktion sisällä. Kun sovellus tekee muutoksia tietokantaan, muutosten jälkeen täytyy kutsua metodia `commit`, jotta transaktio viedään loppuun ja muutokset menevät pysyvästi tietokantaan.
 
-Funktio `redirect` aiheuttaa uudelleenohjauksen toiselle sivulle. Tässä tapauksessa viestin lähetyksen jälkeen siirrytään takaisin etusivulle. Tämä on hyvä tapa toteuttaa lomakkeen käsittely, koska käyttäjä ei voi vahingossa lähettää lomaketta uudestaan, jos hän lataa sivun uudestaan. Tällaista käytäntöä kutsutaan joskus nimellä PRG-malli (Post/Redirect/Get).
+Funktio `redirect` ohjaa käyttäjän toiselle sivulle. Tässä tapauksessa viestin lähetyksen jälkeen siirrytään takaisin etusivulle. Tämän tavan etuna on, että käyttäjä ei voi vahingossa lähettää lomaketta uudestaan, jos hän lataa sivun uudestaan. Tämä on hyvin yleinen toteutustapa web-ohjelmoinnissa, ja siitä käytetään joskus nimeä PRG-malli (Post/Redirect/Get).
+
+### Kyselyn tulosten hakeminen
+
+Kaksi tavallista metodia kyselyn tulosten hakemiseen ovat `fetchall` ja `fetchone`. Metodi `fetchall` hakee kaikki kyselyn antamat rivit listana, kuten teimme äskeisessä esimerkissä, kun taas metodi `fetchone` hakee vain yhden (ensimmäisen) rivin. Metodi `fetchone` on hyödyllinen silloin, kun kysely palauttaa varmasti tarkalleen yhden rivin.
+
+Molemmissa metodeissa yksittäisen rivin sisältö on olio, josta voidaan hakea tietyn sarakkeen sisältö useilla tavoilla:
+
+* `row[i]`: hakee sarakkeen `i` sisällön (0-indeksoituna)
+* `row.name`: hakee sarakkeen `name` sisällön
+* `row["name"]`: hakee sarakkeen `name` 
+
+Esimerkiksi seuraava koodi näyttää kolme tapaa hakea rivit metodilla `fetchall` ja tulostaa sarakkeiden `id` ja `content` arvot joka riviltä.
+
+```python
+result = db.session.execute("SELECT id, content FROM messages")
+messages = result.fetchall()
+
+for message in messages:
+    print(message[0], message[1])
+
+for message in messages:
+    print(message.id, message.content)
+
+for message in messages:
+    print(message["id"], message["content"])
+```
+
+Seuraava koodi puolestaan hakee rivien lukumäärän funktion `COUNT` avulla. Koska kysely palauttaa aina tasan yhden rivin, on luontevaa käyttää metodia `fetchone`.
+
+```python
+result = db.session.execute("SELECT COUNT(*) FROM messages")
+row = result.fetchone()
+print(row[0])
+print(row.count)
+print(row["count"])
+```
+
+Rivin sarakkeen sisällön hakemiseen on siis kolme erilaista syntaksia, ja on makuasia, mitä niistä käyttää milloinkin. Sarakkeen indeksin perusteella hakemisessa etuna on, että indeksointi tapahtuu aina samalla tavalla. Muut tavat ovat helpompia lukea, mutta voi olla epäselvää, mikä on tulostaulun sarakkeen nimi. Esimerkiksi äskeisessä koodissa piti tietää tai arvata, että funktiosta `COUNT(*)` tulee tulostauluun sarake `count`.
 
 ### Ympäristömuuttujat
 
@@ -190,7 +219,7 @@ Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen 
 Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa `export` seuraavasti ennen sovelluksen käynnistämistä:
 
 ```prompt
-(venv) $ export DATABASE_URL=postgresql://user
+(venv) $ export DATABASE_URL=postgresql:///user
 (venv) $ flask run
 ```
 
@@ -203,7 +232,7 @@ Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto `python-dotenv`:
 Kun kirjasto on asennettu, Flask osaa käyttää sitä automaattisesti. Tämän ansiosta voimme luoda tiedoston `.env`, jossa on määritelty ympäristömuuttujat:
 
 ```
-DATABASE_URL=postgresql://user
+DATABASE_URL=postgresql:///user
 ```
 
 Tämän etuna on, että ennen sovelluksen käynnistämistä ei tarvitse suorittaa `export`-komentoa vaan ympäristömuuttujat ovat aina tallessa tiedostossa.
