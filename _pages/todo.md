@@ -5,7 +5,6 @@ title: TODO
 
 # TODO
 
-* Jinjan rooli on epäselvä (missä se suoritetaan, mitä sillä kannattaa tehdä)
 * Materiaalissa olevassa esimerkissä uuden tunnuksen luonnissa kysytään salasana vain kerran, mikä on huono malli.
 * Materiaali ei kerro `flash`-funktiosta, se voisi olla hyödyllinen tietää
 * Herokussa kellonaika on pielessä (ymmärrettävästi) Suomeen verrattuna, mitähän sille kannattaisi tehdä
