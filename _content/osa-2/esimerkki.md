@@ -49,10 +49,10 @@ def index():
 {% raw %}<a href="/new">Uusi kysely</a>
 <hr>
 {% for poll in polls %}
-Aihe: {{ poll[1] }} <br>
-Luotu: {{ poll[2].strftime("%Y-%m-%d %H:%M:%S") }} <br>
-<a href="/poll/{{ poll[0] }}">Mene kyselyyn</a> |
-<a href="/result/{{ poll[0] }}">Näytä tulokset</a> <br>
+Aihe: {{ poll.topic }} <br>
+Luotu: {{ poll.created_at.strftime("%Y-%m-%d %H:%M:%S") }} <br>
+<a href="/poll/{{ poll.id }}">Mene kyselyyn</a> |
+<a href="/result/{{ poll.id }}">Näytä tulokset</a> <br>
 <hr>
 {% endfor %}{% endraw %}
 ```
@@ -131,7 +131,7 @@ def poll(id):
 <hr>
 <form action="/answer" method="POST">
 {% for choice in choices %}
-<input type="radio" name="answer" value="{{ choice[0] }}"> {{ choice[1] }} <br>
+<input type="radio" name="answer" value="{{ choice.id }}"> {{ choice.choice }} <br>
 {% endfor %}
 <p>
 <input type="submit" value="Lähetä">
@@ -182,7 +182,7 @@ def result(id):
 <hr>
 <ul>
 {% for choice in choices %}
-<li> {{ choice[0] }}: {{ choice[1] }} kpl
+<li> {{ choice.choice }}: {{ choice.count }} kpl
 {% endfor %}
 </ul>
 <hr>
