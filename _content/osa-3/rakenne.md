@@ -1,12 +1,12 @@
 ## Sovelluksen rakenne
 
-Pienen sovelluksen voi toteuttaa mainiosti yhtenä tiedostona `app.py`, joka käsittelee kaikki sivupyynnöt, mutta suuremmassa projektissa (kuten tällä kurssilla) koodi kannattaa jakaa sopivasti tiedostoihin (eli moduuleihin) ja funktioihin.
+Pienen sovelluksen voi toteuttaa mainiosti yhtenä tiedostona `app.py`, joka käsittelee kaikki sivupyynnöt, mutta suuremmassa projektissa (kuten tällä kurssilla) koodi kannattaa jakaa sopivasti moduuleihin ja funktioihin. Moduuli on tiedosto, jossa on Python-koodia ja jonka voi ottaa mukaan `import`-komennolla.
 
 Flask mahdollistaa monia tapoja toteuttaa sovelluksen rakenne, ja tutustumme seuraavaksi yhteen tapaan kävijäsovelluksen yhteydessä. Huomaa, että todellisuudessa näin pientä sovellusta ei olisi järkeä jakaa osiin, vaan tämä on vain esimerkki.
 
-Tärkein periaate sovelluksen rakenteen suunnittelussa on, että tiedostot ja funktiot antavat sovellukselle selkeän rakenteen ja sovellusta on mukavaa kehittää. Jos nämä vaatimukset eivät täyty, sovelluksen rakenne ei ole hyvä.
+Tärkein periaate sovelluksen rakenteen suunnittelussa on, että moduulit ja funktiot antavat sovellukselle selkeän rakenteen ja sovellusta on mukavaa kehittää. Jos nämä vaatimukset eivät täyty, sovelluksen rakenne ei ole hyvä.
 
-Seuraavassa on mahdollinen tapa jakaa kävijäsovellus tiedostoiksi:
+Seuraavassa on mahdollinen tapa jakaa kävijäsovellus moduuleiksi:
 
 **Moduuli `app`**
 

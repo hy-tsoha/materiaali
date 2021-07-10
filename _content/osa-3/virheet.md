@@ -4,7 +4,7 @@ Tavallinen tilanne web-sovelluksen kehityksessä on, että sovellus ei toimi oik
 
 ### Lokien tutkiminen
 
-Web-sovellus tulostaa toimintansa aikana lokitietoa, jonka avulla voi jäljittää sovelluksessa ilmeneviä virheitä. Esimerkiksi kun suoritamme paikallisesti komennon `flask run`, lokitiedot ilmestyvät komentoikkunaan.
+Web-sovellus tulostaa toimintansa aikana lokitietoa, jonka avulla voi jäljittää sovelluksessa esiintyviä virheitä. Esimerkiksi kun suoritamme paikallisesti komennon `flask run`, lokitiedot ilmestyvät komentoikkunaan.
 
 Jos kaikki menee hyvin, komentoikkunaan voi tulla seuraavan tapaisia viestejä:
 
@@ -21,7 +21,7 @@ Jos kaikki menee hyvin, komentoikkunaan voi tulla seuraavan tapaisia viestejä:
 
 Tämä kertoo, että sovellus on käynnistetty ja sen etusivua on ladattu kahdesti. Molemmilla kerroilla vastaus on annettu HTTP-koodilla 200, mikä tarkoittaa onnistunutta pyyntöä.
 
-Tehdään nyt testimielessä sovellukseen tahallinen bugi muuttamalla SQL-kyselyä niin, että sanan `SELECT` kohdalla on väärin kirjoitettu `SELEC`:
+Tehdään nyt testimielessä sovellukseen tahallinen bugi muuttamalla SQL-kyselyä niin, että sanan `SELECT` tilalla on väärin kirjoitettu `SELEC`:
 
 ```python
     result = db.session.execute("SELEC COUNT(*) FROM visitors")
@@ -66,7 +66,7 @@ The above exception was the direct cause of the following exception:
 
 Tästä näkee, että virheen syynä on `syntax error at or near "SELEC"` ja virhe ilmenee rivillä 15 tiedostossa `app.py`. Tällaisen tiedon avulla virhe on helppoa korjata.
 
-Jos sovellus aiheuttaa virheen Herokussa, lokin saa Herokun komentorivityökalun avulla näkyviin seuraavasti:
+Jos sovellus aiheuttaa virheen Herokussa, vastaavan lokin saa Herokun komentorivityökalun avulla näkyviin seuraavasti:
 
 ```prompt
 $ heroku logs --tail
@@ -101,4 +101,4 @@ counter is now 12
 
 Lokista katsomalla näemme siis, että sovellus suoritti kyseisen rivin ja sillä hetkellä muuttujan `counter` arvo oli 12.
 
-Kun ongelma on saatu korjattua ja debug-tulosteita ei enää tarvita, ne on kuitenkin hyvä siivota pois koodista.
+Kun ongelma on saatu korjattua ja debug-tulosteita ei enää tarvita, muista kuitenkin siivota debug-tulosteet pois koodista.

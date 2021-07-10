@@ -102,7 +102,7 @@ Komento antaa listan tiedostoista ja hakemistoista, joita _ei_ ole repositorioss
 * `templates` on hakemisto, jossa on sivupohja `index.html`
 * `venv` on hakemisto, joka sisältää virtuaaliympäristön tarvitsemat tiedostot
 
-Tärkeä asia versionhallinnassa on päättää, mitkä tiedostot laitetaan repositorioon kaikkien saataville. Tässä tapauksessa repositorioon kuuluvat `app.py` ja `templates`, jotka muodostavat sovelluksen toteutuksen. Sen sijaan `.env`, `__pycache__` ja `venv` eivät kuulu repositorioon, koska ne liittyvät käyttäjän ympäristöön eivätkä sovelluksen toteutukseen.
+Tärkeä asia versionhallinnassa on päättää, mitkä tiedostot laitetaan repositorioon kaikkien saataville. Tässä tapauksessa repositorioon kuuluvat `app.py` ja `templates`, jotka muodostavat sovelluksen toteutuksen. Sen sijaan `.env`, `__pycache__` ja `venv` eivät kuulu repositorioon, koska ne liittyvät sovelluksen kehittäjän ympäristöön eivätkä sovelluksen toteutukseen.
 
 Komento `git add` laittaa tiedostoja lisättäväksi:
 

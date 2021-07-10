@@ -142,7 +142,7 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
   result = db.session.execute(query, {"id":book_id})
   best = result.fetchone()[0]
   ```  
-* Käytä `try`...`catch`-virheenkäsittelyä SQL-komennon ympärillä vain silloin, kun todella aiot tunnistaa jonkin virheen. Hyvä esimerkki on tilanne, jossa sarakkeessa on ehto `UNIQUE` ja haluat varmistaa, ettei samaa arvoa lisätä uudestaan.
+* Käytä `try`/`except`-virheenkäsittelyä SQL-komennon ympärillä vain silloin, kun todella aiot tunnistaa jonkin virheen. Hyvä esimerkki on tilanne, jossa sarakkeessa on ehto `UNIQUE` ja haluat varmistaa, ettei samaa arvoa lisätä uudestaan.
 
 ## Tietoturva
 

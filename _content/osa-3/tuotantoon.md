@@ -31,7 +31,7 @@ Creating ⬢ tsoha-visitors... done
 https://tsoha-visitors.herokuapp.com/ | https://git.heroku.com/tsoha-visitors.git
 ```
 
-Jokaisella Herokussa olevalla sovelluksella tulee olla eri nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Kuitenkaan et voi itse luoda tämän nimistä sovellusta, koska se on jo olemassa. Jos et anna sovellukselle nimeä, sille tulee automaattisesti satunnainen nimi. Jos teet sovelluksen vain kokeilua tai tätä kurssia varten, satunnainen nimi riittää hyvin.
+Jokaisella Herokussa olevalla sovelluksella tulee olla yksilöllinen nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Kuitenkaan et voi itse luoda tämän nimistä sovellusta, koska se on jo olemassa. Jos et anna sovellukselle nimeä, sille tulee automaattisesti satunnainen nimi. Jos teet sovelluksen vain kokeilua tai tätä kurssia varten, satunnainen nimi riittää hyvin.
 
 Sovellus julkaistaan Herokussa lähettämällä haluttu sovelluksen versio Herokun git-repositorioon. Tämän voi tehdä kytkemällä paikallisen repositorion Herokuun, kuten teemme tässä ohjeessa, tai vaihtoehtoisesti Herokun GitHub-integraation kautta.
 
@@ -57,7 +57,7 @@ Tästä näkee, että oletuskohde `origin` osoittaa edelleen GitHubiin, mutta uu
 $ git push heroku main
 ```
 
-Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteensopiva vaan sovellukseen täytyy tehdä ensin joitakin muutoksia.
+Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteensopiva, vaan sovellukseen täytyy tehdä ensin joitakin muutoksia.
 
 ### Palvelimen määrittely
 
@@ -112,7 +112,7 @@ Olisimme myös voineet luoda taulun näin ohjaamalla sinne tiedoston `schema.sql
 $ heroku psql < schema.sql
 ```
 
-Kun Herokuun luodaan tietokanta, samalla asetetaan ympäristömuuttuja `DATABASE_URL`, minkä ansiosta sovellus toimii suoraan myös Herokussa, jos se käyttää tätä ympäristömuuttujaa. Voimme tarkastaa sovelluksen ympäristömuuttujat näin:
+Kun Heroku luo tietokannan, se asettaa samalla ympäristömuuttujan `DATABASE_URL`, minkä ansiosta sovellus toimii suoraan myös Herokussa, jos se käyttää tätä ympäristömuuttujaa. Voimme tarkastaa sovelluksen ympäristömuuttujat näin:
 
 ```prompt
 $ heroku config
@@ -171,4 +171,4 @@ Tällä kertaa prosessi saatiin vietyä loppuun ja voimme mennä katsomaan sovel
 
 <img class="screenshot" src="../assets/osa-3/heroku.png">
 
-Entä jos sovellus ei toimikaan? Tällä hetkellä Herokussa voi aiheuttaa ongelmia SQLAlchemyn versio 1.4 tai suurempi, koska Herokun muodostama tietokannan osoite ei toimi tällä versiolla (osoitteen alussa on `postgres` eikä `postgresql`). Helpoin tapa korjata asia on vaihtaa tiedostossa `requirements.txt` käyttöön SQLAlchemyn aiempi versio, kuten ylempänä näkyvä versio 1.3.23.
+Entä jos sovellus ei toimikaan? Tällä hetkellä Herokussa aiheuttaa ongelmia SQLAlchemyn versio 1.4 tai uudempi, jossa ei toimi Herokun muodostama tietokannan osoite. Helppo tapa korjata asia on vaihtaa tiedostoon `requirements.txt` aiempi SQLAlchemyn versio, kuten ylempänä näkyvä versio 1.3.23. Lisätietoa ja vaihtoehtoinen korjaustapa on [Herokun ohjeissa](https://help.heroku.com/ZKNTJQSK/why-is-sqlalchemy-1-4-x-not-connecting-to-heroku-postgres).

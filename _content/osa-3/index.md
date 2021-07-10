@@ -11,9 +11,9 @@ sub-sections:
 ---
 # Osa 3
 
-Tämä osan aiheita ovat sovelluksen kehittäminen GitHubin avulla, sovelluksen siirtäminen julkiseksi Heroku-palvelimelle, virheiden etsiminen sekä sovelluksen jakaminen osiin.
+Tämän osan aiheita ovat versionhallinta (Git) sovelluksen kehittämisessä, sovelluksen siirtäminen tuotantoon julkiselle palvelimelle, virheiden etsiminen koodista sekä koodin rakenteen parantaminen jakamalla se tiedostoihin.
 
-Jos Git ei ole sinulle vielä kovin tuttu työkalu, voit lukea [tästä]({% link _pages/git_vinkit.md %}) tämän kurssin kannalta hyödyllisiä vinkkejä Gitin käyttämiseen.
+Kurssin lisämateriaalissa on [Git-vinkkejä]({% link _pages/git_vinkit.md %}), joista on hyötyä sovelluksen kehittämisessä tällä kurssilla ja muutenkin.
 
 {% include_relative versionhallinta.md %}
 {% include_relative tuotantoon.md %}

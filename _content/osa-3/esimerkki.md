@@ -21,6 +21,7 @@ CREATE TABLE users (
     username TEXT UNIQUE,
     password TEXT
 );
+
 CREATE TABLE messages (
     id SERIAL PRIMARY KEY,
     content TEXT,
@@ -66,7 +67,7 @@ def send():
     if messages.send(content):
         return redirect("/")
     else:
-        return render_template("error.html",message="Viestin lähetys ei onnistunut")
+        return render_template("error.html", message="Viestin lähetys ei onnistunut")
 ```
 
 <p class="code-title">messages.py</p>
@@ -87,30 +88,30 @@ Seuraavan koodin avulla käyttäjä voi kirjautua sisään:
 
 <p class="code-title">routes.py</p>
 ```python
-@app.route("/login", methods=["GET","POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "GET":
         return render_template("login.html")
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
-        if users.login(username,password):
+        if users.login(username, password):
             return redirect("/")
         else:
-            return render_template("error.html",message="Väärä tunnus tai salasana")
+            return render_template("error.html", message="Väärä tunnus tai salasana")
 ```
 
 <p class="code-title">users.py</p>
 ```python
-def login(username,password):
-    sql = "SELECT password, id FROM users WHERE username=:username"
+def login(username, password):
+    sql = "SELECT id, password FROM users WHERE username=:username"
     result = db.session.execute(sql, {"username":username})
     user = result.fetchone()
     if not user:
         return False
     else:
-        if check_password_hash(user[0],password):
-            session["user_id"] = user[1]
+        if check_password_hash(user.password, password):
+            session["user_id"] = user.id
             return True
         else:
             return False
@@ -125,7 +126,7 @@ Käyttäjän kirjautuminen voidaan tarkastaa funktiolla `user_id`:
 <p class="code-title">users.py</p>
 ```python
 def user_id():
-    return session.get("user_id",0)
+    return session.get("user_id", 0)
 ```
 
 Tämä funktio antaa joko käyttäjän id-numeron tai arvon 0, jos käyttäjä ei ole kirjautunut sisään.
@@ -151,24 +152,24 @@ def register():
         password1 = request.form["password1"]
         password2 = request.form["password2"]
         if password1 != password2:
-            return render_template("error.html",message="Salasanat eroavat")
-        if users.register(username,password1):
+            return render_template("error.html", message="Salasanat eroavat")
+        if users.register(username, password1):
             return redirect("/")
         else:
-            return render_template("error.html",message="Rekisteröinti ei onnistunut")
+            return render_template("error.html", message="Rekisteröinti ei onnistunut")
 ```
 
 <p class="code-title">users.py</p>
 ```python
-def register(username,password):
+def register(username, password):
     hash_value = generate_password_hash(password)
     try:
-        sql = "INSERT INTO users (username,password) VALUES (:username,:password)"
-        db.session.execute(sql, {"username":username,"password":hash_value})
+        sql = "INSERT INTO users (username, password) VALUES (:username, :password)"
+        db.session.execute(sql, {"username":username, "password":hash_value})
         db.session.commit()
     except:
         return False
-    return login(username,password)
+    return login(username, password)
 ```
 
 Sivun `login` tavoin myös sivu `register` käsittelee sekä `GET`- että `POST`-pyyntöjä ja joko näyttää lomakkeen uuden tunnuksen luomiseen tai käsittelee käyttäjän lähettämän lomakkeen.
