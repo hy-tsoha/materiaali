@@ -8,6 +8,7 @@ title: TODO
 * Materiaali ei kerro `flash`-funktiosta, se voisi olla hyödyllinen tietää
 * Kurssin materiaali ilmeisesti ei näy hyvin Safari-selaimella
 * Monissa esimerkeissä toimitaan Python-tyylin vastaisesti
+* Miten tulisi olla eri tilanteissa GET vs get ja POST vs post?
 
 ## Taulukoista 
 

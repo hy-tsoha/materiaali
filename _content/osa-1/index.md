@@ -11,9 +11,9 @@ sub-sections:
 
 Toteutamme kurssilla web-sovelluksen Python-kielellä [Flask](https://flask.palletsprojects.com/)-kirjastolla, johon tutustumme tässä osassa. Flask on suosittu kevyt kirjasto, joka soveltuu sekä web-ohjelmoinnin opetteluun että todellisten sovellusten alustaksi.
 
-Kurssin materiaali olettaa, että osaat perusasiat Linuxin komentorivistä ja Python-kielestä. Jos et ole käyttänyt aiemmin Pythonia, voit tutustua kieleen [tästä]({% link _pages/python_opas.md %}).
+Kurssin materiaali olettaa, että osaat perusasiat Python-kielestä. Jos Python on sinulle uusi kieli, ei hätää, koska se on helppo kieli ja voit oppia sen kurssin aikana. Kurssin taustamateriaalissa on [Python-opas]({% link _pages/python_opas.md %}), joka antaa yleiskuvan kielestä.
 
-Materiaali olettaa, että käyttöjärjestelmänä on Linux. Jos käytät Windowsia, kannattaa asentaa Windows Subsystem for Linux (WSL), jonka asentamiseen löytyy ohjeet [tästä](https://tkt-lapio.github.io/).
+Kurssin materiaali on kirjoitettu Linux-käyttäjän näkökulmasta, mutta voit käyttää muutakin käyttöjärjestelmää materiaalia soveltaen. Jos käytät Windowsia, sinun kannattaa asentaa Windows Subsystem for Linux. Löydät ohjeita asentamiseen [Tietokone työvälineenä -kurssilta](https://tkt-lapio.github.io/).
 
 {% include_relative johdatus.md %}
 {% include_relative sivupyynnot.md %}

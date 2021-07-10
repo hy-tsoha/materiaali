@@ -50,7 +50,7 @@ def index():
     return "Heipparallaa!"
 ```
 
-Sovelluksen ideana on, että se näyttää tekstin `"Heipparallaa!"`, kun käyttäjä menee sovelluksen etusivulle. Saamme sovelluksen käyntiin näin:
+Sovelluksen ideana on, että se näyttää tekstin "Heipparallaa!", kun käyttäjä menee sovelluksen etusivulle. Saamme sovelluksen käyntiin näin:
 
 ```prompt
 (venv) $ flask run
@@ -74,4 +74,4 @@ Komento `deactivate` lopettaa virtuaaliympäristön käyttämisen ja palauttaa k
 $ 
 ```
 
-Huomaa, että tämän jälkeen sovellusta ei voi enää käynnistää, koska Flask-kirjasto on asennettu vain virtuaaliympäristöön. Voimme käynnistää sovelluksen vain virtuaaliympäristössä, minkä tunnistaa siitä, että rivin alussa lukee `(venv)`.
+Huomaa, että sovellusta ei voi käynnistää tavalliselta komentoriviltä, koska Flask-kirjasto on asennettu vain virtuaaliympäristöön. Voimme käynnistää sovelluksen vain virtuaaliympäristössä, minkä tunnistaa siitä, että rivin alussa lukee `(venv)`.

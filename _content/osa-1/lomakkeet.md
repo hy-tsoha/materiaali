@@ -34,7 +34,7 @@ def form():
 
 @app.route("/result", methods=["POST"])
 def result():
-    return render_template("result.html",name=request.form["name"])
+    return render_template("result.html", name=request.form["name"])
 ```
 
 Sivu `result` ottaa vastaan `POST`-metodilla lähetetyn lomakkeen, mikä näkyy dekoraattorin parametrissa `methods`. Lomakkeen kautta lähetetty tieto on saatavilla olion `request` kautta. Koska lomakkeen tekstikentän nimi on `name`, siihen viitataan `request.form["name"]`.
@@ -45,7 +45,7 @@ Lomakkeen käyttäminen voi näyttää tältä:
 
 <img class="screenshot" src="../assets/osa-1/result.png">
 
-Metodi `POST` on yleisin tapa lomakkeen lähettämiseen, ja se soveltuu useimpiin tilanteisiin. Toinen metodi on `GET`, johon palaamme myöhemmin.
+Metodi `POST` on yleisin tapa lomakkeen lähettämiseen, ja se soveltuu useimpiin tilanteisiin. Toinen tavallinen metodi on `GET`, johon palaamme myöhemmin.
 
 ### Lomakkeen elementit
 

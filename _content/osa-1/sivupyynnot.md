@@ -1,6 +1,6 @@
 ## Sivupyynnöt
 
-Flask-kirjaston ideana on, että määrittelemme ohjelmassa funktioita, jotka käsittelevät sivupyyntöjä. Ennen funktion määrittelyä oleva _dekoraattori_ `@app.route` ilmaisee, mikä on sivun osoite, ja funktio palauttaa merkkijonona sivun sisällön.
+Flask-kirjaston ideana on, että määrittelemme ohjelmassa funktioita, jotka käsittelevät sivupyyntöjä. Ennen funktion määrittelyä oleva _dekoraattori_ `@app.route` ilmaisee, mikä on sivun osoite. Funktio palauttaa merkkijonon, jossa on sivun sisältö.
 
 Esimerkiksi voisimme laajentaa sovellusta niin, että siinä on kolme sivua:
 
@@ -32,8 +32,8 @@ Koska sivun sisältö luodaan Pythonilla, voimme käyttää sivun luomisessa mit
 @app.route("/test")
 def test():
     content = ""
-    for i in range(1,101):
-        content += str(i)+" "
+    for i in range(100):
+        content += str(i + 1) + " "
     return content
 ```
 
@@ -46,7 +46,7 @@ Voimme myös määritellä sivun osoitteen niin, että siinä on _parametri_. Es
 ```python
 @app.route("/page/<int:id>")
 def page(id):
-    return "Tämä on sivu "+str(id)
+    return "Tämä on sivu " + str(id)
 ```
 
 Sivun osoitteessa annettu parametri välittyy funktiolle, joka voi käyttää sitä haluamallaan tavalla sivun luomisessa. Tässä tapauksessa funktio näyttää sivulla viestin "Tämä on sivu _id_", eli esimerkiksi osoitteessa `page/123` oleva sivu näyttää tältä:
@@ -56,7 +56,7 @@ Sivun osoitteessa annettu parametri välittyy funktiolle, joka voi käyttää si
 ### HTML ja sivupohjat
 
 Tähän mennessä olemme tuottaneet sivuja, joissa on pelkkää tekstiä,
-mutta tarkemmin ottaen voimme käyttää sivuilla HTML-koodia. HTML on kieli, jolla määritellään nettisivun sisältö. Jos HTML ei ole sinulle ennestään tuttu, voit tutustua siihen [tästä]({% link _pages/html_opas.md %}).
+mutta tarkemmin ottaen voimme käyttää sivuilla HTML-koodia. HTML on kieli, jolla määritellään nettisivun sisältö. Kurssin taustamateriaalissa on [HTML-opas]({% link _pages/html_opas.md %}), joka käsittelee HTML:n perusteet.
 
 Esimerkiksi seuraava sivu käyttää HTML-komentoja:
 
@@ -117,8 +117,8 @@ Tässä sivun osaksi tulee parametrin `message` määrittämä viesti sekä list
 ```python
 @app.route("/")
 def index():
-    words = ["apina","banaani","cembalo"]
-    return render_template("index.html",message="Tervetuloa!",items=words)
+    words = ["apina", "banaani", "cembalo"]
+    return render_template("index.html", message="Tervetuloa!", items=words)
 ```
 
 Tämän seurauksena sivu näyttää tältä:
@@ -127,7 +127,7 @@ Tämän seurauksena sivu näyttää tältä:
 
 ### Staattiset tiedostot
 
-Staattiset tiedostot ovat sivuston osana olevia tiedostoja, joita ei luoda ohjelmallisesti. Esimerkiksi tavallisia staattisia tiedostoja ovat sivulla olevat kuvat.
+Staattiset tiedostot ovat sivuston osana olevia tiedostoja, joita ei luoda ohjelmallisesti. Tavallisia staattisia tiedostoja ovat sivustolla olevat kuvat.
 
 Flaskissa suositeltu paikka sijoittaa staattiset tiedostot on hakemisto `static`. Esimerkiksi seuraava HTML-koodi näyttää hakemistossa olevan kuvan `kuva.png`:
 
