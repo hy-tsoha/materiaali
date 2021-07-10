@@ -143,7 +143,7 @@ Sovelluksessa on myös rekisteröintitoiminto, jonka avulla uusi käyttäjä voi
 
 <p class="code-title">routes.py</p>
 ```python
-@app.route("/register", methods=["get","post"])
+@app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "GET":
         return render_template("register.html")
