@@ -18,11 +18,13 @@ CREATE TABLE polls (
     topic TEXT,
     created_at TIMESTAMP
 );
+
 CREATE TABLE choices (
     id SERIAL PRIMARY KEY,
     poll_id INTEGER REFERENCES polls,
     choice TEXT
 );
+
 CREATE TABLE answers (
     id SERIAL PRIMARY KEY,
     choice_id INTEGER REFERENCES choices,
@@ -108,7 +110,7 @@ def create():
 
 Tämä funktio lisää ensin kyselyä vastaavan rivin tauluun `polls`. Kyselyn aihe tulee käyttäjältä ja SQL-funktio `NOW()` antaa nykyisen ajanhetken. Komennon `INSERT` lopussa on `RETURNING id`, minkä ansiosta komento palauttaa lisätyn rivin id-numeron.
 
-Tämän jälkeen käydään läpi käyttäjän antamat vastausvaihtoehdot. Koska lomakkeessa on useita `choice`-kenttiä, niiden sisältö haetaan listana metodilla `getlist`. Jokaisesta epätyhjästä vaihtoehdosta luodaan rivi tauluun `choices` ja lopuksi käyttäjä ohjataan etusivulle.
+Tämän jälkeen käydään läpi käyttäjän antamat vastausvaihtoehdot. Koska lomakkeessa on useita `choice`-kenttiä, niiden sisältö haetaan listana metodilla `getlist`. Jokaisesta epätyhjästä vaihtoehdosta luodaan rivi tauluun `choices`, ja lopuksi käyttäjä ohjataan etusivulle.
 
 Sivu `poll/[id]` näyttää kyselyn sen id-numeron perusteella. Sivulla on lomake, jonka kautta käyttäjä voi vastata kyselyyn:
 
@@ -155,7 +157,7 @@ def answer():
         sql = "INSERT INTO answers (choice_id, sent_at) VALUES (:choice_id, NOW())"
         db.session.execute(sql, {"choice_id":choice_id})
         db.session.commit()
-    return redirect("/result/"+str(poll_id))
+    return redirect("/result/" + str(poll_id))
 ```
 
 Funktio hakee kyselyn id-numeron piilokentästä ja tarkastaa sitten, onko käyttäjä valinnut jonkin vastauksen. Jos käyttäjä on valinnut vastauksen, tämä vastaus lisätään `answers`-tauluun. Lopuksi käyttäjä ohjataan kyselyn tuloksiin.

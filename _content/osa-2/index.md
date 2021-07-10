@@ -12,7 +12,7 @@ sub-sections:
 
 Käytämme kurssilla [PostgreSQL](https://www.postgresql.org/)-tietokantaa, joka on suosittu avoimen lähdekoodin tietokantajärjestelmä. Tämä osa käsittelee tietokannan käyttöönottoa sekä SQL-komentojen suorittamista web-sovelluksessa.
 
-Jos olet käyttänyt aiemmin SQLite-tietokantaa mutta PostgreSQL ei ole tuttu, voit katsoa [tästä]({% link _pages/sqlite_postgre.md %}) yhteenvedon näiden tietokantojen eroista.
+PostgreSQL on erilainen tietokanta kuin kurssilla _Tietokantojen perusteet_ käytetty tietokanta SQLite. Tämän kurssin kannalta erot ovat kuitenkin pieniä. Taustamateriaalissa on vertailu [SQLite vs. PostgreSQL]({% link _pages/sqlite_postgre.md %}), joka antaa yhteenvedon tietokantojen eroista.
 
 {% include_relative tietokanta.md %}
 {% include_relative esimerkki.md %}

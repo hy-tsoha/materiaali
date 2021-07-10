@@ -101,7 +101,7 @@ Tällä rivillä sovellus hakee salaisen avaimen ympäristömuuttujasta `SECRET_
 {% else %}{% endraw %}
 ```
 
-Sivupohjassa `session`-olioon pääsee käsiksi yllä olevalla syntaksilla. Jos `username` on asetettu, käyttäjä näkee tunnuksensa ja linkin,josta painamalla voi kirjautua ulos. Muuten käyttäjä näkee lomakkeen, jonka avulla voi kirjautua sisään.
+Sivupohjassa `session`-olioon pääsee käsiksi yllä olevalla syntaksilla. Jos `username` on asetettu, käyttäjä näkee tunnuksensa ja linkin, josta painamalla voi kirjautua ulos. Muuten käyttäjä näkee lomakkeen, jonka avulla voi kirjautua sisään.
 
 
 ```python
@@ -127,7 +127,7 @@ Tämä funktio kirjaa käyttäjän ulos poistamalla `session`-rakenteesta avaime
 
 ### Käyttäjät tietokannassa
 
-Kirjautuminen on järkevää toteuttaa niin, että tiedot käyttäjistä ovat tietokannassa. Voimme käyttää tähän seuraavan tapaista taulua:
+Kirjautuminen on järkevää toteuttaa niin, että tiedot käyttäjistä ovat tietokannassa. Voimme käyttää tähän seuraavanlaista taulua:
 
 ```sql
 CREATE TABLE users (id SERIAL PRIMARY KEY, username TEXT, password TEXT);
@@ -135,7 +135,7 @@ CREATE TABLE users (id SERIAL PRIMARY KEY, username TEXT, password TEXT);
 
 Tässä tapauksessa käyttäjästä tallennetaan käyttäjätunnus ja salasana. Tämän lisäksi taulussa voisi olla muutakin tietoa, kuten onko käyttäjä peruskäyttäjä vai admin-käyttäjä.
 
-Turvallinen tapa tallentaa salasana tietokantaan on tallentaa selkokielisen salasanan sijasta salasanan _hajautusarvo_ (_hash value_), jonka avulla voidaan tarkastaa, onko salasana oikea. Voimme käyttää tähän Flaskin mukana tulevaa Werkzeug-kirjastoa:
+Turvallinen tapa tallentaa salasana tietokantaan on tallentaa salasanan sijasta salasanan _hajautusarvo_ (_hash value_), jonka avulla voidaan tarkastaa, onko salasana oikea. Voimme käyttää tähän Flaskin mukana tulevaa Werkzeug-kirjastoa:
 
 ```python
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -145,28 +145,28 @@ Esimerkiksi seuraava koodi lisää tietokantaan uuden käyttäjän, jonka tunnus
 
 ```python
 hash_value = generate_password_hash(password)
-sql = "INSERT INTO users (username,password) VALUES (:username,:password)"
-db.session.execute(sql, {"username":username,"password":hash_value})
+sql = "INSERT INTO users (username, password) VALUES (:username, :password)"
+db.session.execute(sql, {"username":username, "password":hash_value})
 db.session.commit()
 ```
 
 Seuraava koodi puolestaan tarkastaa, onko käyttäjän antama tunnus ja salasana oikein:
 
 ```python
-sql = "SELECT password FROM users WHERE username=:username"
+sql = "SELECT id, password FROM users WHERE username=:username"
 result = db.session.execute(sql, {"username":username})
 user = result.fetchone()    
 if not user:
     # TODO: invalid username
 else:
-    hash_value = user[0]
-    if check_password_hash(hash_value,password):
+    hash_value = user.password
+    if check_password_hash(hash_value, password):
         # TODO: correct username and password
     else:
         # TODO: invalid password
 ```
 
-Koodi hakee tietokannasta käyttäjän antamaa tunnusta vastaavan salasanan. Jos tietokannasta ei tule riviä (tulos on `None`), tämä tarkoittaa, että käyttäjää ei ole tietokannassa. Muuten koodi tarkastaa funktiolla `check_password_hash`, onko salasana oikea.
+Koodi hakee tietokannasta käyttäjän antamaa tunnusta vastaavan id-numeron ja salasanan. Jos tietokannasta ei tule riviä (tulos on `None`), tämä tarkoittaa, että käyttäjää ei ole tietokannassa. Muuten koodi tarkastaa funktiolla `check_password_hash`, onko salasana oikea.
 
 Salasana näyttää tietokannassa seuraavalta:
 
@@ -180,7 +180,9 @@ user=# SELECT password FROM users WHERE username='maija';
 
 Tässä tapauksessa käyttäjän "maija" salasana on "kissa". Salasanasta on tallennettu tietokantaan merkkijono, jonka osana on käytetty hajautusfunktio (tässä `sha256`), muuta tietoa hajautustavasta ja varsinainen hajautusarvo. Tämän avulla voidaan tarkastaa myöhemmin, onko käyttäjän antama salasana oikea.
 
-Mitä hyötyä on tallentaa salasana hajautusarvona? Tässä on kyse siitä, että jos jostain syystä hyökkääjä pääsee käsiksi tietokannan sisältöön ja salasanat olisi tallennettu sellaisenaan, hyökkääjä saisi selville suoraan käyttäjien salasanat. Moni käyttää samoja tai samantapaisia salasanoja eri palveluissa, joten tästä voisi olla huomattava hyöty pahantahtoiselle hyökkääjälle. Salasanan tallentaminen hajautusarvona _hidastaa_ hyökkääjän työtä: jos hyökkääjä haluaa selvittää alkuperäisen salasanan, hänen täytyy käytännössä kokeilla läpi suuri määrä mahdollisia salasanoja ja tarkastaa, antaako jokin niistä saman hajautusarvon.
+### Miksi tallentaa salasana hajautusarvona?
+
+Jos jostain syystä hyökkääjä pääsisi käsiksi tietokannan sisältöön ja salasanat olisi tallennettu sellaisenaan, hyökkääjä saisi selville suoraan käyttäjien salasanat. Moni käyttää samoja tai samantapaisia salasanoja eri palveluissa, joten tästä voisi olla huomattava hyöty pahantahtoiselle hyökkääjälle. Salasanan tallentaminen hajautusarvona _hidastaa_ hyökkääjän työtä: jos hyökkääjä haluaa selvittää alkuperäisen salasanan, hänen täytyy käytännössä kokeilla läpi suuri määrä mahdollisia salasanoja ja tarkastaa, antaako jokin niistä oikean hajautusarvon.
 
 Huomaa, että jos hyökkääjä saa käsiinsä tietokannan sisällön, tilanne on jo erittäin paha eikä näin saisi päästä tapahtumaan. Kuitenkin tilanne olisi vielä pahempi, jos salasanat olisi tallennettu tietokantaan sellaisenaan. Toisaalta salasanan tallentaminen hajautusarvona ei auta asiaa, jos salasana on _huono_ eli helposti arvattava tai lyhyt. Tällöin hyökkääjä saa sen joka tapauksessa selville käymällä läpi raa'alla voimalla mahdollisia salasanoja. Käyttäjä on siis aina osittain vastuussa omasta tietoturvastaan.
 

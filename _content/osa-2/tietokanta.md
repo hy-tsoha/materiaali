@@ -4,9 +4,7 @@
 
 Jotta voit kehittää sovellusta, sinun täytyy asentaa koneellesi PostgreSQL-tietokanta.
 
-Olemme tehneet kurssia varten [asennusskriptin](https://github.com/hy-tsoha/local-pg), joka asentaa PostgreSQL:n Linux-ympäristöön. Skripti asentaa tietokannan käyttäjän kotihakemistoon niin, että asennus ei vaadi pääkäyttäjän oikeuksia eikä tietokanta ole muiden käyttäjien käytettävissä. Skripti on tarkoitettu erityisesti käytettäväksi tietojenkäsittelytieteen osaston fuksiläppäreissä ja mikroluokissa.
-
-Jos sinulla on ongelmia asennusskriptin kanssa, voit katsoa [videon](https://www.helsinki.fi/fi/unitube/video/617d690b-b1ce-44f0-997a-dca01bf7eff0), joka näyttää asennuksen vaiheet sekä sen jälkeen esimerkin tietokannan käyttämisestä.
+Voit asentaa PostgreSQL:n Linuxiin käyttäen [asennusskriptiä](https://github.com/hy-tsoha/local-pg), joka on tehty tätä kurssia varten. Skripti asentaa PostgreSQL:n käyttäjän kotihakemistoon ja on tarkoitettu erityisesti käytettäväksi tietojenkäsittelytieteen osaston fuksiläppäreissä ja mikroluokissa. Saatavilla on myös [video](https://www.helsinki.fi/fi/unitube/video/617d690b-b1ce-44f0-997a-dca01bf7eff0), joka näyttää asennuksen vaiheet ja esimerkin tietokannan käyttämisestä.
 
 Voit myös asentaa PostgreSQL:n pääkäyttäjänä käyttöjärjestelmäsi pakettienhallinnan kautta, käyttää Dockeria tai vastaavaa alustaa tai ladata asennuspaketin itse. Ohjeita asennukseen eri järjestelmiin on [PostgreSQL:n sivulla](https://www.postgresql.org/download/).
 
@@ -77,11 +75,11 @@ Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjasto
 
 Ensimmäinen kirjasto `flask-sqlalchemy` on SQLAlchemy-rajapinta, jonka kautta voi käyttää tietokantaa Flaskissa. Toinen kirjasto `psycopg2` puolestaan mahdollistaa yhteyden muodostamisen PostgreSQL-tietokantaan.
 
-Jos jälkimmäinen komento ei toimi, voit kokeilla korvata nimen `psycopg2` nimellä `psycopg2-binary`. Tätä ennen kannattaa kuitenkin yrittää ratkaista mahdolliset ongelmat muuten, esimerkiksi Macin käyttäjille on neuvoja [tässä Stackoverflown kysymyksessä](https://stackoverflow.com/questions/33866695/install-psycopg2-on-mac-osx-10-9-5).
+Jos sinulla on ongelmia saada kirjasto `psycopg2` toimimaan, voit kokeilla asentaa sen sijaan kirjaston `psycopg2-binary`, jolla on vähemmän riippuvuuksia.
 
 Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan _osoite_. Tässä materiaalissa käytämme osoitetta muodossa `postgresql:///user`, missä `user` on käytettävän tietokannan nimi ja näkyy myös PostgreSQL-tulkissa rivien alussa. Tietokannan nimi on siis tässä sama kuin käyttäjän tunnus.
 
-Huomaa, että [vaadittu tapa antaa tietokannan osoite (URI)](https://www.postgresql.org/docs/12/libpq-connect.html#LIBPQ-CONNSTRING) voi olla vähän erilainen riippuen siitä, miten tietokantaan otetaan yhteys.
+Huomaa, että vaadittu tapa antaa tietokannan osoite riippuu siitä, mikä järjestelmä on käytössä ja miten PostgreSQL on asennettu. Jos asensit PostgreSQL:n tämän kurssin asennusskriptillä, voit käyttää osoitetta `postgresql+psycopg2://`. Lisää tietoa tietokannan osoitteen muodostumisesta on [PostgreSQL:n dokumentaatiossa](https://www.postgresql.org/docs/12/libpq-connect.html#LIBPQ-CONNSTRING) 
 
 Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellus olettaa, että tietokannassa on äsken luomamme `messages`-taulu.
 
@@ -168,7 +166,7 @@ Tämä koodi suorittaa kyselyn, joka hakee kaikki taulussa olevat viestit. Metod
 
 Tämä koodi lisää tietokantaan uuden rivin, kun käyttäjä on lähettänyt viestin lomakkeella.
 
-Käyttäjän antama syöte yhdistetään SQL-komentoon parametrina, jolla on tietty nimi, tässä tapauksessa `content`. SQL-komennossa ennen parametrin nimeä on kaksoispiste. Parametrin käyttäminen on turvallinen tapa yhdistää käytäjän antamaa tietoa SQL-komentoon, koska tällöin tiedon yhdistäminen ei aiheuta SQL-injektiota eli muuta kyselyn rakennetta.
+Käyttäjän antama syöte yhdistetään SQL-komentoon parametrina, jolla on tietty nimi, tässä tapauksessa `content`. SQL-komennossa ennen parametrin nimeä on kaksoispiste. Parametrin käyttäminen on turvallinen tapa yhdistää käytäjän antamaa tietoa SQL-komentoon, koska tällöin tiedon yhdistäminen ei voi muuttaa kyselyn rakennetta eikä SQL-injektio ole mahdollinen.
 
 Huomaa, että sovelluksen tekemät SQL-komennot suoritetaan automaattisesti transaktion sisällä. Kun sovellus tekee muutoksia tietokantaan, muutosten jälkeen täytyy kutsua metodia `commit`, jotta transaktio viedään loppuun ja muutokset menevät pysyvästi tietokantaan.
 
@@ -182,7 +180,7 @@ Molemmissa metodeissa yksittäisen rivin sisältö on olio, josta voidaan hakea 
 
 * `row[i]`: hakee sarakkeen `i` sisällön (0-indeksoituna)
 * `row.name`: hakee sarakkeen `name` sisällön
-* `row["name"]`: hakee sarakkeen `name` 
+* `row["name"]`: hakee sarakkeen `name` sisällön
 
 Esimerkiksi seuraava koodi näyttää kolme tapaa hakea rivit metodilla `fetchall` ja tulostaa sarakkeiden `id` ja `content` arvot joka riviltä.
 

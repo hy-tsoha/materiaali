@@ -29,7 +29,7 @@ def result():
     sql = "SELECT id, content FROM messages WHERE content LIKE :query"
     result = db.session.execute(sql, {"query":"%"+query+"%"})
     messages = result.fetchall()
-    return render_template("result.html",messages=messages)
+    return render_template("result.html", messages=messages)
 ```
 
 Kun käytössä on `GET`-metodi, lomakkeen sisältö välitetään sivun osoitteen mukana. Esimerkiksi kun käyttäjä hakee sanalla "kissa", sivun osoite on `/result?query=kissa`. Tämä tarkoittaa myös, että käyttäjä voi tehdä helposti hakuja myös ilman lomaketta muuttamalla osoitetta.
@@ -46,4 +46,4 @@ def result():
 
 Huomaa, että on vain käytäntö, että `GET`-metodi ei muuta tietokannan sisältöä. Metodista riippumatta sivupyynnön käsittelijä voi suorittaa mitä tahansa SQL-komentoja.
 
-Koska `GET`-metodia käyttäessä lomakkeen tiedot välitetään sivun osoitteen kautta, tiedoista jää kopioita palvelinten lokitiedostoihin. Lisäksi selain voi säilyttää `GET`-pyyntöjen vastaukset välimuistissaan, mutta `POST`-pyyntöjen vastauksia ei oletusarvoisesti säilytetä.
+Koska `GET`-metodia käyttäessä lomakkeen tiedot välitetään sivun osoitteen kautta, tiedoista jää kopioita palvelinten lokitiedostoihin. Lisäksi selain voi säilyttää `GET`-pyyntöjen vastaukset välimuistissaan, mutta `POST`-pyyntöjen vastauksia ei yleensä säilytetä.
