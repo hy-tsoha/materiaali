@@ -53,7 +53,7 @@ Sinun kannattaa myös tutustua [tekniseen tarkastuslistaan]({% link _pages/tekni
 * Salasanat tallennetaan tietokantaan asianmukaisesti
 * Käyttäjän syötteet tarkastetaan ennen tietokantaan tallentamista
 * Käyttäjä ei pääse käsiksi tietoon, johon hänellä ei ole oikeutta
-* Sovelluksessa ei ole XSS- ja CSRF-haavoittuvuuksia eikä SQL-injektiota
+* Sovelluksessa ei ole SQL-injektiota eikä XSS- ja CSRF-haavoittuvuuksia
 
 ### Palaute
 

@@ -53,15 +53,11 @@ Tässä tapauksessa sivut näyttävät seuraavilta:
 
 ### Ulkoasun suunnittelu
 
-Nettisivujen ulkoasun toteuttamiseen käytetään CSS-kieltä, jonka avulla voi määrittää sivun asettelun, värit, fontit, jne. Ulkoasun suunnittelu vaatii toisaalta tietoa CSS:n ominaisuuksista ja toisaalta graafista silmää.
-
-* Taustamateriaali: [Ulkoasun suunnittelu]({% link _pages/ulkoasun_suunnittelu.md %})
+Nettisivujen ulkoasun toteuttamiseen käytetään CSS-kieltä, jonka avulla voi määrittää sivun asettelun, värit, fontit, jne. Ulkoasun suunnittelu vaatii toisaalta tietoa CSS:n ominaisuuksista ja toisaalta graafista silmää. Kurssin taustamateriaalissa on [esimerkki]({% link _pages/ulkoasun_suunnittelu.md %}), jossa luodaan sivuston ulkoasu CSS:n avulla.
 
 ### Ulkoasu kirjaston avulla
 
-Toinen tapa toteuttaa ulkoasu on käyttää valmista ulkoasukirjastoa. Tämän tavan etuna on, että ulkoasua ei tarvitse suunnitella tyhjästä vaan voi käyttää valmiita komponentteja, mutta toisaalta lopputulos ei ole välttämättä yksilöllinen.
-
-* Taustamateriaali: [Ulkoasu Bootstrapilla]({% link _pages/bootstrap.md %})
+Toinen tapa toteuttaa ulkoasu on käyttää valmista ulkoasukirjastoa. Tämän tavan etuna on, että ulkoasua ei tarvitse suunnitella tyhjästä vaan voi käyttää valmiita komponentteja, mutta toisaalta lopputulos ei ole välttämättä yksilöllinen. Kurssin taustamateriaalissa on [esimerkki]({% link _pages/bootstrap.md %}), jossa luodaan ulkoasu suositun Bootstrap-kirjaston avulla.
 
 ### CSS:n muutosten näkyminen
 

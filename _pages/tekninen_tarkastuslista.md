@@ -156,8 +156,8 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
 
 * Lomakkeen lähettämisen jälkeen tarkastetaan, että lomakkeessa annettu tieto on oikeanlaista ja käyttäjällä on oikeus lähettää lomake. Huomaa, että käyttäjä voi kokeilla vaihtaa myös lomakkeessa olevia piilokenttiä (`input type="hidden"`).
 
-* Sovelluksessa ei ole XSS-haavoittuvuutta. Tämän voi varmistaa käyttämällä sivupohjia kurssin materiaalissa esitetyllä tavalla.
-
 * Sovelluksessa ei ole SQL-injektion mahdollisuutta. Tämän voi varmistaa toteuttamalla kaikki SQL-kyselyt parametrien avulla kurssin materiaalissa esitetyllä tavalla.
+
+* Sovelluksessa ei ole XSS-haavoittuvuutta. Tämän voi varmistaa käyttämällä sivupohjia kurssin materiaalissa esitetyllä tavalla.
 
 * Sovelluksessa ei ole CSRF-haavoittuvuutta. Tämä vaatii, että lomakkeessa on piilokenttänä käyttäjän istuntoon liittyvä tieto, joka tarkastetaan lomakkeen lähettämisen jälkeen.

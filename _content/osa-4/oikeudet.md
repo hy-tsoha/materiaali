@@ -26,7 +26,7 @@ def profile(id):
         if result.fetchone():
             allow = True
     if not allow:
-        return render_template("error.html",error="Ei oikeutta nähdä sivua")
+        return render_template("error.html", error="Ei oikeutta nähdä sivua")
     ...
 ```
 
@@ -96,4 +96,4 @@ Tässä tapauksessa lomake lähetetään palvelimelle vain, jos funktio `check` 
 
 Tarkastus JavaScriptillä ei ole kuitenkaan luotettava, koska käyttäjä saattaa esimerkiksi kytkeä JavaScriptin pois selaimen asetuksista. Niinpä joka tapauksessa tarkastus täytyy olla palvelimella lomakkeen käsittelijässä.
 
-Huomaa, että käyttäjän syötteen muotoa ei yleensä kannata yrittää tarkastaa muilta osin kovin tarkasti, koska tämä menee helposti pieleen. Esimerkiksi verkko on täynnä virheellisiä sähköpostiosoitteen muodon tarkastajia, jotka hylkäävät toimivia osoitteita. Toisaalta käyttäjä voi aina halutessaan antaa keksittyä tietoa, kuten sähköpostiosoitteen `lol@mikkihiiri.fi`, joka menee läpi kaikista tarkastuksista.
+Huomaa, että käyttäjän syötteen muotoa ei yleensä kannata yrittää tarkastaa kovin tarkasti, koska tämä menee helposti pieleen. Esimerkiksi verkko on täynnä virheellisiä sähköpostiosoitteen muodon tarkastajia, jotka hylkäävät toimivia osoitteita. Toisaalta käyttäjä voi aina halutessaan antaa keksittyä tietoa, kuten sähköpostiosoitteen `lol@mikkihiiri.fi`, joka menee läpi kaikista tarkastuksista.

@@ -10,18 +10,18 @@ def update():
     check_user()
     user_id = session["user_id"]
     email = request.form["email"]
-    sql = "UPDATE users SET email='"+email+"' WHERE id="+str(user_id)
+    sql = "UPDATE users SET email='" + email + "' WHERE id=" + str(user_id)
     db.session.execute(sql)
     ...
 ```
 
-Yllä oleva koodi sallii SQL-injektion, koska käyttäjän antama syöte liitetään suoraan SQL-komennon osaksi ja käyttäjä voi muuttaa tämän avulla SQL-komennon rakennetta. Esimerkiksi käyttäjä voi antaa sähköpostiosoitteeksi `', status='admin`, jolloin komennosta tulee seuraavanlainen (olettaen, että käyttäjän id-numero on 123):
+Yllä oleva koodi sallii SQL-injektion, koska käyttäjän antama syöte liitetään suoraan SQL-komennon osaksi ja käyttäjä voi muuttaa tämän avulla SQL-komennon rakennetta. Esimerkiksi käyttäjä voi antaa sähköpostiosoitteeksi `', is_admin=TRUE --`, jolloin komennosta tulee seuraavanlainen (olettaen, että käyttäjän id-numero on 123):
 
 ```sql
-UPDATE users SET email='', status='admin' WHERE id=123
+UPDATE users SET email='', is_admin=TRUE --' WHERE id=123
 ```
 
-Tämä komento muuttaa käyttäjän sähköpostiosoitteen tyhjäksi ja antaa hänelle admin-oikeudet, eli käyttäjä pystyy muuttamaan itsensä adminiksi, vaikka tarkoituksena olisi vain pystyä muuttamaan sähköpostiosoitetta. Vastaavasti `SELECT`-kyselyissä SQL-injektion avulla voi hakea tietoa, jota käyttäjän ei pitäisi pystyä saamaan.
+Tämä komento muuttaa _kaikki_ sovelluksen käyttäjät admin-käyttäjiksi ja myös poistaa kaikki sähköpostiosoitteet. Tässä SQL-komennon rakenne muuttuu merkittävästi, koska käyttäjän antama syöte lisää muutettavan sarakkeen `is_admin` sekä poistaa komennon loppuosan, joka rajaa muutettavan käyttäjän (SQL:ssä merkintä `--` aloittaa kommentin). Vastaavasti käyttäjä voisi hakea `SELECT`-kyselyssä tietoa, jota hänen ei pitäisi pystyä saamaan.
 
 Tehokas tapa estää SQL-injektio on yhdistää syötteet SQL-komentoihin parametrien avulla, kuten olemme tehneet kaikissa kurssin esimerkeissä. Voimme poistaa SQL-injektion yllä olevasta koodista muuttamalla koodia näin:
 
@@ -39,7 +39,7 @@ def update():
 Tämän ansiosta muuttujan `email` sisältö ei voi sotkea SQL-komennon rakennetta. Jos muuttujan osana on heittomerkki `'`, se muuttuu automaattisesti muotoon `\'`, jolloin aiempi yritys tuottaa seuraavan SQL-komennon:
 
 ```sql
-UPDATE users SET email='\', status=\'admin' WHERE id=123
+UPDATE users SET email='\', is_admin=TRUE --' WHERE id=123
 ```
 
 Tämä komento muuttaa vain saraketta `email` eikä aiheuta tietoturvaongelmaa.
@@ -54,7 +54,7 @@ Seuraavassa on esimerkki koodista, jossa on XSS-haavoittuvuus:
 @app.route("/result", methods=["POST"])
 def result():
     name = request.form["name"]
-    return "Moikka, "+name
+    return "Moikka, " + name
 ```
 
 Tässä käyttäjä antaa nimensä lomakkeen kautta ja sivu näyttää viestin "Moikka, _nimi_". Sivu toimii odotusten mukaisesti, jos käyttäjä antaa nimensä:
@@ -77,7 +77,7 @@ XSS-haavoittuvuuden pystyy estämään pitämällä huolta siitä, että käytt�
 @app.route("/result", methods=["POST"])
 def result():
     name = request.form["name"]
-    return render_template("result.html",name=name)
+    return render_template("result.html", name=name)
 ```
 
 Kun muuttuja `name` näytetään sivupohjassa, sen sisältöä muutetaan automaattisesti niin, että HTML-koodia ei suoriteta:
@@ -90,7 +90,7 @@ Jos emme käyttäisi sivupohjia, merkit tulisi muuttaa jollain toisella tavalla.
 
 ### CSRF-haavoittuvuus
 
-CSRF-haavoittuvuus syntyy, kun web-sovellus ei varmista, että kirjautuneen käyttäjän tekemä sivupyyntö todella tulee käyttäjältä. Tarkastellaan esimerkkinä seuraavaa lomaketta, jonka kautta käyttäjä voi lähettää uuden viestin, ja sen käsittelijää:
+CSRF-haavoittuvuus syntyy, kun web-sovellus ei varmista, että kirjautuneen käyttäjän tekemä sivupyyntö todella tulee käyttäjältä. Tarkastellaan esimerkkinä seuraavaa lomaketta, jonka kautta käyttäjä voi lähettää uuden viestin:
 
 ```html
 <form action="/send" method="POST">
@@ -145,4 +145,4 @@ Tässä tapauksessa jos `csrf_token` on väärä, sivun käsittely katkeaa ja tu
 
 Web-sovelluksissa on usein muutakin salaista tietoa, kuten tietokannan salasana, Flaskissa istuntojen salainen avain jne. Näiden tietojen tulee olla turvallisessa paikassa palvelimella niin, että ulkopuoliset eivät pääse niihin käsiksi. Yksi turvallinen tapa on käyttää ympäristömuuttujia kurssin materiaalissa esitetyllä tavalla.
 
-Salaista tietoa ei erityisesti saa laittaa GitHubiin. Tutkimalla GitHubin käyttäjien projekteja voi löytää paljon salaista tietoa, jonka ei kuuluisi olla siellä. Pidä huoli, että oma projektisi ei ole yksi niistä. Jos kuitenkin vahingossa laitat GitHubiin salaista tietoa, niin huomaa, että pelkkä tiedon poistaminen repositoriosta ei riitä, koska myös tiedostojen muutoshistoria on tallessa. Lisää tietoa asiasta löydät esimerkiksi [täältä](https://blog.gitguardian.com/leaking-secrets-on-github-what-to-do/).
+Salaista tietoa ei erityisesti saa laittaa GitHubiin. Tutkimalla GitHubin käyttäjien projekteja voi löytää paljon salaista tietoa, jonka ei kuuluisi olla siellä. Pidä huoli, että oma projektisi ei ole yksi niistä. Jos kuitenkin vahingossa laitat GitHubiin salaista tietoa, niin huomaa, että pelkkä tiedon poistaminen repositoriosta ei riitä, koska myös tiedostojen muutoshistoria on tallessa. Lisätietoa asiasta on esimerkiksi [GitGuardian-sivustolla](https://blog.gitguardian.com/leaking-secrets-on-github-what-to-do/).
