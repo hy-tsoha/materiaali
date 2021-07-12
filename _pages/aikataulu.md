@@ -18,9 +18,7 @@ Ryhmän ohjaaja on Olli-Pekka Mehtonen.
 
 Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Tarkemmat ohjausajat ilmoitetaan lähempänä kurssin alkua.
 
-## Kurssin vaatimukset
-
-Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan. Lisäksi [tekninen tarkastuslista]({% link _pages/tekninen_tarkastuslista.md %}) kokoaa yhteen teknisiä vaatimuksia.
+Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
 ## Kurssin eteneminen
 

@@ -43,7 +43,7 @@ Anna palautetta erityisesti seuraavista asioista:
 * Käyttökokemus: mitä kannattaa parantaa vielä ennen lopullista palautusta?
 * Tietoturva: ovatko tarkastukset kunnossa koodissa, jotta käyttäjä voi käsitellä vain hänelle kuuluvia tietoja?
 * Tietoturva: onko koodissa SQL-injektiota, XSS-aukkoa tai CSRF-aukkoa?
-* Ohjelmointityyli: onko koodi jaettu järkevästi osiin funktioiksi ja tiedostoiksi?
+* Ohjelmointityyli: onko koodi jaettu järkevästi osiin moduuleiksi ja funktioiksi?
 * Tietokanta-asiat: tehdäänkö koodissa tiedon käsittelyä, jota kuuluisi tehdä SQL:ssä?
 
 Muistuta opiskelijaa tarvittaessa [teknisestä tarkastuslistasta]({% link _pages/tekninen_tarkastuslista.md %}).

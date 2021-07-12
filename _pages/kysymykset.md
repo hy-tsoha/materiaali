@@ -10,15 +10,13 @@ Kurssille voi osallistua vain Helsingin yliopiston tutkinto-opiskelijana.
 
 ### Millä kielellä projektin voi tehdä?
 
-Sovelluksen koodin, tietokannan ja git-viestien kielen tulee olla englanti.
+Sovelluksen koodin, tietokannan ja commit-viestien kielen tulee olla englanti.
 
 Sovelluksen käyttöliittymän ja `README.md`-tiedoston kieli voi olla suomi, ruotsi tai englanti.
 
 ### Voiko sovelluksen tehdä muilla tekniikoilla kuin materiaalissa?
 
-Tällä kurssilla sinun tulee tehdä Pythonilla ja Flaskilla web-sovellus, joka käyttää PostgreSQL-tietokantaa SQL-komentojen kautta.
-
-(Aiemmin itsenäisessä suorituksessa oli sallittua käyttää muita tekniikoita. Jos olet sopinut asiasta kurssin vastuuhenkilön kanssa, saat edelleen tehdä työsi sen mukaisesti.)
+Tällä kurssilla sinun tulee tehdä Pythonilla ja Flaskilla web-sovellus, joka käyttää PostgreSQL-tietokantaa SQL-komentojen kautta. Voit tämän lisäksi halutessasi käyttää materiaalin ulkopuolisia tekniikoita.
 
 ### Voiko sovelluksen toteuttaa parityönä/ryhmässä?
 
@@ -34,7 +32,7 @@ Suositeltava jatkokurssi on [Full Stack Open](https://fullstackopen.com/), joka 
 
 ### Voinko käyttää muuta kuin Linuxia sovelluksen kehityksessä?
 
-Kurssimateriaali olettaa että käytössä on Linux, mutta voit mainiosti käyttää muutakin. Tällöin kuitenkin joissakin kohdissa täytyy soveltaa ohjeita ja etsiä lisätietoa itsenäisesti.
+Kurssimateriaali olettaa että käytössä on Linux, mutta voit halutessasi käyttää muutakin. Tällöin kuitenkin joissakin kohdissa täytyy soveltaa ohjeita ja etsiä lisätietoa itsenäisesti.
 
 ### Mitä käy, jos en saa sovellusta valmiiksi?
 

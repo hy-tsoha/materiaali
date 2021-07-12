@@ -6,11 +6,11 @@ title: Arvostelu
 
 Tälle sivulle on koottu asiat, jotka kurssin ohjaaja käy läpi työsi arvostelussa. Kurssi arvostellaan asteikolla 1–5 sen mukaan, miten hyvin tämän sivun vaatimukset täyttyvät sovelluksessasi.
 
-Sinun kannattaa myös tutustua [tekniseen tarkastuslistaan]({% link _pages/tekninen_tarkastuslista.md %}), johon on koottu yhteen ohjeita versionhallinnasta, ohjelmointityylistä, tietokanta-asioista ja tietoturvasta.
+Tutustu myös [tekniseen tarkastuslistaan]({% link _pages/tekninen_tarkastuslista.md %}), johon on koottu yhteen ohjeita versionhallinnasta, ohjelmointityylistä, tietokanta-asioista ja tietoturvasta.
 
 ### Perusvaatimukset
 
-* On toteutettu tietokantaa käyttävä web-sovellus
+* Sovelluksen aihe on sopiva kurssille (ks. [aiheen valinta]({% link _pages/aiheen_valinta.md %}))
 * Sovelluksen koodi on saatavilla versionhallinnassa
 * Sovellus on testattavissa tuotantopalvelimella
 * Sovelluksessa on tietokanta, jossa on noin 5–10 taulua
@@ -36,7 +36,7 @@ Sinun kannattaa myös tutustua [tekniseen tarkastuslistaan]({% link _pages/tekni
 * Koodin muotoilu seuraa Pythonin tyyliohjetta
 * Koodi on kirjoitettu englanniksi
 * Koodi on selkeää, suoraviivaista ja tiivistä
-* Koodi on jaettu järkevästi osiin tiedostoiksi ja funktioiksi
+* Koodi on jaettu järkevästi osiin moduuleiksi ja funktioiksi
 * Koodi on yhdenmukaista sovelluksen eri osissa
 
 ### Tietokanta-asiat
@@ -57,5 +57,5 @@ Sinun kannattaa myös tutustua [tekniseen tarkastuslistaan]({% link _pages/tekni
 
 ### Palaute
 
-* Annoit hyödyllistä vertaispalautetta muille opiskelijalle
-* Annoit kurssin lopussa kurssipalautteen
+* Opiskelija antoi hyödyllistä vertaispalautetta muille opiskelijalle
+* Opiskelija antoi kurssin lopussa kurssipalautteen
