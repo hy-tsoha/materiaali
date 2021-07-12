@@ -10,6 +10,7 @@ Tutustu myös [tekniseen tarkastuslistaan]({% link _pages/tekninen_tarkastuslist
 
 ### Perusvaatimukset
 
+* On toteutettu web-sovellus Pythonilla/Flaskilla
 * Sovelluksen aihe on sopiva kurssille (ks. [aiheen valinta]({% link _pages/aiheen_valinta.md %}))
 * Sovelluksen koodi on saatavilla versionhallinnassa
 * Sovellus on testattavissa tuotantopalvelimella
@@ -59,3 +60,4 @@ Tutustu myös [tekniseen tarkastuslistaan]({% link _pages/tekninen_tarkastuslist
 
 * Opiskelija antoi hyödyllistä vertaispalautetta muille opiskelijalle
 * Opiskelija antoi kurssin lopussa kurssipalautteen
+* Tämä osio ei ole mukana itsenäisen suorituksen arvioinnissa.
