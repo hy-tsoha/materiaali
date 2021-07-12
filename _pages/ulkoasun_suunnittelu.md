@@ -53,7 +53,7 @@ Huomaa sivun alussa rivi `<meta name="viewport" content="width=device-width, ini
 
 Tuloksena on seuraava sivu, jossa ei vielä ole muotoilua:
 
-<img class="screenshot-large" src="img/ulkoasu1.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu1.png">
 
 Kun miettii, miten nämä viisi komponenttia halutaan esittää sivulla, on otettava huomioon, miten käyttäjä käyttää sivua. Mitä käyttäjä näkee, kun hän avaa sivun ensimmäisen kerran? Onko valikko helppo löytää? Tunnistaako käyttäjä, millä sivulla on? 
 
@@ -75,7 +75,7 @@ body {
 
 Tämän seurauksena sivu näyttää seuraavalta:
 
-<img class="screenshot-large" src="img/ulkoasu2.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu2.png">
 
 Järjestetään seuraavaksi valikon linkit riviin käyttämällä `display: inline-block` -määrettä. Lisäksi ominaisuudelle `padding` annetaan kaksi parametria, joista ensimmäinen kertoo pystysuoran tilan ja toinen kertoo vaakasuoran tilan elementin sisällä.
 
@@ -88,7 +88,7 @@ nav li {
 
 Nyt valikko näyttää tältä:
 
-<img class="screenshot-large" src="img/ulkoasu3.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu3.png">
 
 Käyttäjän huomio halutaan kiinnittää sivun otsikkoon, jotta käyttäjä tunnistaa helposti, millä sivulla hän on. Tehdään otsikolle oma `div`-elementti, joka helpottaa sen muotoilua.
 
@@ -111,7 +111,7 @@ Kiinnitetään käyttäjän huomio otsikkoon asettamalla taustaväriksi `sandybr
 
 Nyt otsikko näyttää tältä:
 
-<img class="screenshot-large" src="img/ulkoasu4.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu4.png">
 
 Siirretään seuraavaksi kirjautumislomake sille suunniteltuun paikkaan sisällön oikeaan yläreunaan käyttämällä `float`-ominaisuutta. Koska sivulla ei ole tällä hetkellä muita lomakkeita kuin kirjautuminen, niin voidaan valita universaalilla selektorilla kaikki mahdolliset `form`-elementit. Jos sivulla olisi kuitenkin muitakin lomakkeita, olisi lomakkeelle hyvä asettaa luokka tai id-tunnus ja muotoilla se tällä perusteella. 
 
@@ -124,13 +124,13 @@ form {
 
 Tämän jälkeen lomake on oikealla paikallaan:
 
-<img class="screenshot-large" src="img/ulkoasu5.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu5.png">
 
 Nyt pohjan komponentin ovat niillä paikoilla, joihin ne haluttiinkin asettaa. Silti lopputuloksessa on muutamia asioita, jotka eivät näytä hyvältä. Ensinnäkin valikon vasen reuna ei ole samassa kohdassa kuin muissa komponenteissa, ja lisäksi toisen tason `h2`-otsikko ei ole samassa tasossa kirjautumislomakkeen suhteen.
 
 Aloitetaan ensimmäisestä ongelmasta eli valikon sijainnista. Kun valikkoa klikkaa hiiren oikealla painikkeella ja valitsee avautuvasta valikosta vaihtoehdon _Inspect Element_, aukeaa kehittäjän näkymä, josta voi katsella elementtien ominaisuuksia:
 
-<img class="screenshot-large" src="img/ulkoasu6.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu6.png">
 
 Kehittäjän näkymästä huomataan, että navigaation sisällä olevalle `ul`-listalle on tullut automaattisesti `padding`-arvoa. Otetaan tämä pois.
 
@@ -164,7 +164,7 @@ form {
 
 Näiden muutosten jälkeen sivu näyttää seuraavalta:
 
-<img class="screenshot-large" src="img/ulkoasu7.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu7.png">
 
 Nyt pohja on valmiina ja voi alkaa ideoimaan ulkoasua tunnistettavammaksi. Ensimmäisessä vaiheessa toteutettiin runko, jonka ulkoasua lähdetään seuraavaksi muokkaamaan.
 
@@ -221,7 +221,7 @@ form {
 
 Tämän vaiheen muutosten jälkeen sivu näyttää seuraavalta:
 
-<img class="screenshot-large" src="img/ulkoasu8.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu8.png">
 
 Sivun värien lisääminen ja päättäminen on haastavaa, sillä värit jakavat mielipiteitä. Hyvän väriskaalan voi saada esimerkiksi käyttämällä yhtä pääväriä ja sen eri sävyjä. Valitsemalla päävärin lisäksi korostusvärin, joka kiinnittää käyttäjän huomion, saadaan aikaiseksi miellyttävä kokonaisuus.
 
@@ -257,7 +257,7 @@ form {
 
 Pyöristykset näyttävät tältä:
 
-<img class="screenshot-large" src="img/ulkoasu9.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu9.png">
 
 Parannetaan seuraavaksi valikon ulkoasua ja käyttökokemusta. Tehdään valikon painikkeista pyöristetyt sekä kasvatetaan niiden `padding`- ja `margin`-arvoja, jotta ne olisivat hieman kauempana toisistaan.
 
@@ -299,7 +299,7 @@ nav li:hover {
 
 Näiden muutosten jälkeen sivu näyttää tältä:
 
-<img class="screenshot-large" src="img/ulkoasu10.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu10.png">
 
 Muotoillaan vielä kirjautumislomaketta käyttämällä [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)-asettelua. Asetetaan `form`-elementin `display`-arvoksi `grid`:
 
@@ -391,7 +391,7 @@ form {
 
 Nyt lomakkeen muotoilu on valmis, ja lopullinen sivu näyttää tältä:
 
-<img class="screenshot-large" src="img/ulkoasu11.png">
+<img class="screenshot-large" src="../assets/pages/ulkoasu11.png">
 
 Sivulla on nyt tunnistettava ulkoasu. Voit testata lopullista sivua [täällä](https://millakortelainen.github.io/tsoha-app/) ja sivun koko koodi on saatavilla myös [GitHub-repositoriossa](https://github.com/millakortelainen/tsoha-app).
 

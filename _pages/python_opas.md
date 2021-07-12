@@ -23,7 +23,7 @@ Pythonin komentotulkki on kätevä tapa kielen ominaisuuksien testaamiseen. Kome
 
 ```prompt
 $ python3
->>> 1+2
+>>> 1 + 2
 3
 >>> len("testi")
 5
@@ -54,14 +54,14 @@ Moikka, Kotivalo
 Pythonin tavallisimmat tietotyypit ovat `int` (kokonaisluku), `float` (liukuluku), `str` (merkkijono) ja `bool` (totuusarvo). Esimerkkejä operaatioista:
 
 ```python
-print(5*(2+4)) # 30
-print(5/2) # 2.5
-print(5//2) # 2
-print(3**4) # 81
-print(2**100) # 1267650600228229401496703205376
-print("esi"+"merkki") # esimerkki
-print("abc"*4) # abcabcabcabc
-print(1+2 == 3) # True
+print(5 * (2 + 4)) # 30
+print(5 / 2) # 2.5
+print(5 // 2) # 2
+print(3 ** 4) # 81
+print(2 ** 100) # 1267650600228229401496703205376
+print("esi" + "merkki") # esimerkki
+print("abc" * 4) # abcabcabcabc
+print(1 + 2 == 3) # True
 print(3 > 7) # False
 ```
 
@@ -81,7 +81,7 @@ Python on tarkka tyypeistä, eikä esimerkiksi seuraava koodi toimi, koska merkk
 ```python
 a = "testi"
 b = 123
-c = a+b
+c = a + b
 ```
 
 Ratkaisu on käyttää funktiota `str`, joka muuttaa tyypin merkkijonoksi:
@@ -89,7 +89,7 @@ Ratkaisu on käyttää funktiota `str`, joka muuttaa tyypin merkkijonoksi:
 ```python
 a = "testi"
 b = 123
-c = a+str(b)
+c = a + str(b)
 ```
 
 Vastaavasti funktiot `int` ja `float` muuttavat tyypin kokonais- ja liukuluvuksi.
@@ -165,7 +165,7 @@ Lista ja merkkijono muistuttavat Pythonissa toisiaan, ja merkkijonon merkkejä p
 Pythonin `for`-silmukka käy läpi listan alkiot:
 
 ```python
-words = ["apina","banaani","cembalo"]
+words = ["apina", "banaani", "cembalo"]
 for word in words:
     print(word)
 ```
@@ -180,7 +180,7 @@ Perinteisempi `for`-silmukka saadaan aikaan funktion `range` avulla. Tämä funk
 
 ```python
 for i in range(5):
-    print("rivi",i)
+    print("rivi", i)
 ```
 
 ```
@@ -191,7 +191,7 @@ rivi 3
 rivi 4
 ```
 
-Tässä `range(n)` tarkoittaa, että lukuväli alkaa 0:sta ja päättyy juuri ennen lukua `n`. Vastaavasti `range(a,b)` tarkoittaa, että lukuväli alkaa `a`:sta ja päättyy juuri ennen lukua `b`.
+Tässä `range(n)` tarkoittaa, että lukuväli alkaa 0:sta ja päättyy juuri ennen lukua `n`. Vastaavasti `range(a, b)` tarkoittaa, että lukuväli alkaa `a`:sta ja päättyy juuri ennen lukua `b`.
 
 ## Lisää tietorakenteita
 
@@ -229,7 +229,7 @@ Voimme käydä sanakirjan avaimet läpi `for`-silmukalla:
 
 ```python
 for name in ages:
-    print(name,"on",ages[name],"vuotta")
+    print(name, "on", ages[name], "vuotta")
 ```
 
 ```
@@ -278,7 +278,7 @@ else:
 Pythonissa muuttujassa on aina viittaus varsinaiseen sisältöön. Seuraava koodi havainnollistaa asiaa:
 
 ```python
-lista1 = [1,2,3]
+lista1 = [1, 2, 3]
 lista2 = lista1
 lista1[0] = 5
 print(lista1[0]) # 5
@@ -290,7 +290,7 @@ Koodissa muuttujat `lista1` ja `lista2` viittaavat samaan listaan, joten kun lis
 Voimme kuitenkin tarvittaessa luoda listasta kopion `[:]`-syntaksilla, jolloin listat ovat erillisiä:
 
 ```python
-lista1 = [1,2,3]
+lista1 = [1, 2, 3]
 lista2 = lista1[:]
 lista1[0] = 5
 print(lista1[0]) # 5
@@ -305,7 +305,7 @@ Oma funktio määritellään avainsanan `def` avulla. Esimerkiksi seuraava koodi
 
 ```python
 def hello(name):
-    print("Moikka,",name)
+    print("Moikka,", name)
 
 hello("Liisa")
 hello("Kaaleppi")
@@ -319,11 +319,11 @@ Moikka, Kaaleppi
 Seuraava funktio `check` puolestaan tarkastaa, että nimen pituus on enintään maksimipituus:
 
 ```python
-def check(name,max_length):
+def check(name, max_length):
     return len(name) <= max_length
 
-print(check("Liisa",6)) # True
-print(check("Kaaleppi",3)) # False
+print(check("Liisa", 6)) # True
+print(check("Kaaleppi", 3)) # False
 ```
 
 ### Muuttujien näkyvyys
@@ -388,14 +388,14 @@ Seuraava koodi käyttää Pythonin standardikirjaston moduulia `random`, jossa o
 
 ```python
 import random
-print(random.randint(1,10))
+print(random.randint(1, 10))
 ```
 
 Toinen tapa on hakea moduulista funktio, jolloin sitä voi käyttää suoraan:
 
 ```python
 from random import randint
-print(randint(1,10))
+print(randint(1, 10))
 ```
 
 Käytämme kurssilla myös Pythonin standardikirjaston ulkopuolisia moduuleja kuten Flask-kirjaston moduulia `flask`.
@@ -407,7 +407,7 @@ Kun tiedostossa on Python-koodia, tiedostoa voidaan käyttää moduulina. Esimer
 <p class="code-title">test.py</p>
 ```python
 def hello(name):
-    print("Moikka,",name)
+    print("Moikka,", name)
 ```
 
 Tämän jälkeen voimme käyttää moduulia näin:
@@ -434,7 +434,7 @@ Seuraava moduuli havainnollistaa asiaa:
 <p class="code-title">test.py</p>
 ```python
 def hello(name):
-    print("Moikka,",name)
+    print("Moikka,", name)
 
 print("Täällä ollaan")
 ```

@@ -46,7 +46,7 @@ Sivu päättyy tähän.
 
 Sivu voi näyttää selaimessa seuraavalta:
 
-<img class="screenshot" src="img/html.png">
+<img class="screenshot" src="../assets/pages/html.png">
 
 Katsotaan seuraavaksi tarkemmin joitakin HTML-koodin osia.
 
@@ -90,7 +90,7 @@ Elementin `img` attribuutti `src` antaa osoitteen kuvatiedostoon ja attribuutti 
 
 Esimerkiksi jos sivua katsoo Lynx-tekstiselaimella, kuvan sijasta näkyy teksti:
 
-<img class="screenshot" src="img/lynx.png">
+<img class="screenshot" src="../assets/pages/lynx.png">
 
 Vaihtoehtoinen teksti on myös hyödyllinen näkövammaisille käyttäjille, koska se voidaan lukea ääneen kuvan näyttämisen sijasta.
 

@@ -35,8 +35,8 @@ Tiedoston nimi on kentässä `filename` ja tiedoston sisällön voi lukea metodi
 @app.route("/send", methods=["POST"])
 def send():
     file = request.files["file"]
-    print("name",file.filename)
-    print("length",len(file.read()),"bytes")
+    print("name", file.filename)
+    print("length", len(file.read()), "bytes")
     ...
 ```
 
@@ -63,7 +63,7 @@ def send():
     if len(data) > 100*1024:
         return "Too big file"
     sql = "INSERT INTO images (name,data) VALUES (:name,:data)"
-    db.session.execute(sql, {"name":name,"data":data})
+    db.session.execute(sql, {"name":name, "data":data})
     db.session.commit()
     return "OK"
 ```
@@ -83,7 +83,7 @@ def show(id):
     result = db.session.execute(sql, {"id":id})
     data = result.fetchone()[0]
     response = make_response(bytes(data))
-    response.headers.set("Content-Type","image/jpeg")
+    response.headers.set("Content-Type", "image/jpeg")
     return response
 ```
 

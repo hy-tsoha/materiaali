@@ -48,7 +48,7 @@ Sivulla oleva esimerkkiteksti on tuotettu [lorem ipsum -generaattorin](https://w
 
 Tuloksena oleva sivu näyttää seuraavalta:
 
-<img class="screenshot-large" src="img/bootstrap1.png">
+<img class="screenshot-large" src="../assets/pages/bootstrap1.png">
 
 ## Vaihe 2: valikon lisääminen
 
@@ -93,7 +93,7 @@ Lisätään seuraavaksi sivulle valikko Bootstrapin [navbar-komponentin](https:/
 
 Tässä vaiheessa sivu näyttää tältä:
 
-<img class="screenshot-large" src="img/bootstrap2.png">
+<img class="screenshot-large" src="../assets/pages/bootstrap2.png">
 
 ## Vaihe 3: lomake sivulle
 
@@ -151,7 +151,7 @@ Lisätään sivulle vielä kirjautumislomake [form-komponentin](https://getboots
 
 Lopullinen sivu näyttää tältä:
 
-<img class="screenshot-large" src="img/bootstrap3.png">
+<img class="screenshot-large" src="../assets/pages/bootstrap3.png">
 
 ## Lopuksi
 

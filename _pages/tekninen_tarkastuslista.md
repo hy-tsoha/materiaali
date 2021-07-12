@@ -11,7 +11,7 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
 
 * Tee usein commiteja niin, että jokainen commit muuttaa jonkin yksittäisen asian.
 
-* Kirjoita commit-viestit englanniksi ja aloita ne suurella alkukirjaimella.
+* Kirjoita commit-viestit englanniksi ja yhtenäisellä tyylillä.
 
 * Kirjoita commit-viestiin selkeästi tehty muutos (esim. mikä ominaisuus lisättiin). Esimerkki hyvästä commit-viestistä on "Show number of users in each group".
 
@@ -40,9 +40,12 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
   ```python
   return render_template("index.html", name="Maija")
   ```
-* Listoissa pilkun oikealla puolella on välilyönti:
+* Pilkun oikealla puolella on välilyönti. Tämä vaikuttaa esimerkiksi listojen ja funktion parametrien muotoiluun.
   ```python
   names = ["Maija", "Anna", "Uolevi"]  
+  ```
+  ```python
+  def login(username, password):
   ```
 * Seuraavan tapainen koodi on tarpeettoman pitkä:
   ```python
@@ -91,16 +94,14 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
 * Käytä `REFERENCES`-määrettä, kun taulun sarake viittaa toiseen tauluun.
 * Käytä `UNIQUE`-määrettä, kun sarakkeessa tulee olla eri arvo joka rivillä.
 * Kysely muotoa `SELECT *` ei ole koskaan hyvä. Merkitse aina näkyviin haettavat sarakkeet, vaikka hakisit kaikki tai lähes kaikki sarakkeet.
-* Jaa pitkät SQL-komennot useille riveille. Yksi hyvä tapa rivittää SQL-komento koodissa on käyttää `"""`-syntaksia:
+* Jaa pitkät SQL-komennot useille riveille. Tässä on kaksi tapaa rivittämiseen:
   ```python
-  sql = """SELECT
-             u.id, COUNT(*)
-           FROM
-             users u, messages m
-           WHERE
-             u.id = m.user_id AND m.status = 1
-           GROUP BY
-             u.id"""
+  sql = "SELECT u.id, COUNT(*) FROM users u, messages m " \
+        "WHERE u.id = m.user_id AND m.status = 1 GROUP BY u.id"
+  ```
+  ```python
+  sql = """SELECT u.id, COUNT(*) FROM users u, messages m
+           WHERE u.id = m.user_id AND m.status = 1 GROUP BY u.id"""
   ```
 * Hae kaikki tiedot yhdellä SQL-kyselyllä, jos se on mielekkäästi mahdollista. Esimerkiksi seuraavassa on huono tapa hakea joka ryhmästä id, nimi ja käyttäjien määrä:
   ```python
@@ -116,14 +117,8 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
   ```
   Koodi hakee ensin ryhmien nimet ja id:t ja sitten joka ryhmästä erikseen käyttäjien määrän. Parempi tapa on tehdä yksi SQL-kysely, joka hakee suoraan kaiken:
   ```python
-  sql = """SELECT
-             g.id, g.name, COUNT(*)
-           FROM
-             groups g, users u
-           WHERE
-             g.id = u.group_id
-           GROUP BY
-             g.id, g.name"""
+  sql = "SELECT g.id, g.name, COUNT(*) FROM groups g, users u" \
+        "WHERE g.id = u.group_id GROUP BY g.id, g.name"
   result = db.session.execute(sql)
   data = result.fetchall()
   ```
@@ -146,18 +141,18 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
 
 ## Tietoturva
 
-* Versionhallinnassa ei ole salaista tietoa, kuten istuntojen salaista avainta tai osoitetta, jonka kautta pääsee käsiksi tuotantotietokantaan.
+* Älä laita versionhallintaan salaista tietoa, kuten istuntojen salaista avainta tai osoitetta, jonka kautta pääsee käsiksi tuotantotietokantaan.
 
-* Salasanat on tallennettu tietokantaan turvallisesti hash-muodossa.
+* Tallenna salasanat on tietokantaan turvallisesti.
 
-* Käyttäjän antama tieto tarkastetaan ennen tietokantaan tallentamista (esim. merkkijonon pituudella on sopiva yläraja).
+* Tarkasta käyttäjän antama tieto ennen tietokantaan tallentamista (esim. merkkijonon pituudella on sopiva yläraja).
 
-* Jokaisella sivulla tarkastetaan käyttäjän oikeudet niin, että käyttäjä voi nähdä sivun sisällön vain, jos se on sallittua. Huomaa, että käyttäjä voi kokeilla vaihtaa sivun osoitetta ja päästä käsiksi toisen käyttäjän tietoon.
+* Tarkasta jokaisella sivulla käyttäjän oikeudet niin, että käyttäjä voi nähdä sivun sisällön vain, jos se on sallittua. Huomaa, että käyttäjä voi kokeilla vaihtaa sivun osoitetta ja päästä käsiksi toisen käyttäjän tietoon.
 
-* Lomakkeen lähettämisen jälkeen tarkastetaan, että lomakkeessa annettu tieto on oikeanlaista ja käyttäjällä on oikeus lähettää lomake. Huomaa, että käyttäjä voi kokeilla vaihtaa myös lomakkeessa olevia piilokenttiä (`input type="hidden"`).
+* Tarkasta lomakkeen lähettämisen jälkeen, että käyttäjällä on oikeus lähettää lomake. Huomaa, että käyttäjä voi kokeilla vaihtaa myös lomakkeessa olevia piilokenttiä.
 
-* Sovelluksessa ei ole SQL-injektion mahdollisuutta. Tämän voi varmistaa toteuttamalla kaikki SQL-kyselyt parametrien avulla kurssin materiaalissa esitetyllä tavalla.
+* Käytä aina parametreja SQL-komennoissa, mikä estää SQL-injektion tekemisen.
 
-* Sovelluksessa ei ole XSS-haavoittuvuutta. Tämän voi varmistaa käyttämällä sivupohjia kurssin materiaalissa esitetyllä tavalla.
+* Käytä aina sivupohjia, mikä estää XSS-haavoittuvuuden.
 
-* Sovelluksessa ei ole CSRF-haavoittuvuutta. Tämä vaatii, että lomakkeessa on piilokenttänä käyttäjän istuntoon liittyvä tieto, joka tarkastetaan lomakkeen lähettämisen jälkeen.
+* Varmista, että sovelluksessa ei ole CSRF-haavoittuvuutta. Tämä vaatii, että lomakkeissa on istuntokohtainen salainen avain, joka tarkastetaan.

@@ -15,7 +15,7 @@ $ pylint test.py
 
 ## Esimerkki
 
-Kokeillaan esimerkin vuoksi, millaista palautetta Pylint antaa kurssin [esimerkkisovelluksesta](https://github.com/hy-tsoha/tsoha-words). Tässä tapauksessa on kätevää antaa parametriksi `*.py`, jolloin saadaan palaute kaikista hakemiston Python-tiedostoista.
+Kokeillaan testimielessä, millaista palautetta Pylint antaa kurssin [esimerkkisovelluksesta](https://github.com/hy-tsoha/tsoha-words). Tässä tapauksessa on kätevää antaa parametriksi `*.py`, jolloin saadaan palaute kaikista hakemiston Python-tiedostoista.
 
 ```prompt
 $ pylint *.py
@@ -124,7 +124,7 @@ Pylintin antama raportti kannattaa lukea huolellisesti ja miettiä, miten koodin
   Koodissa on liian pitkä rivi. Rivillä saa olla korkeintaan 100 merkkiä.
   
 * **Redefining built-in X (redefined-builtin)**:
-  Koodissa on käytetty nimeä, joka korvaa Python-kielessä olevan nimen. Näin on esimerkiksi seuraavassa koodissa:
+  Koodissa on käytetty nimeä, joka korvaa Python-kielessä olevan nimen. Näin on esimerkiksi seuraavassa funktiossa:
 ```python
 @app.route("/deck/<int:id>")
   def deck(id):
