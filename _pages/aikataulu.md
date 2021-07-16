@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Loppukesän 2021 ryhmän aikataulu on seuraava:
 
-| ti 20.7.2021 | Aloitusluento klo 16–18 Zoomissa |
+| ti 20.7.2021 | Aloitusluento klo 16–18 Zoomissa ([Zoom-linkki](https://helsinki.zoom.us/j/68785465695?pwd=bkpCMzBhNm5KcjFnQVo1TDZ5YXJuQT09)) |
 | su 25.7.2021 | Välipalautus 1 |
 | su 8.8.2021 | Välipalautus 2 |
 | ke 11.8.2021 | Vertaisarvioinnin deadline |
@@ -16,7 +16,7 @@ Loppukesän 2021 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaaja on Olli-Pekka Mehtonen.
 
-Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Tarkemmat ohjausajat ilmoitetaan lähempänä kurssin alkua.
+Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausta on tarjolla erityisesti kurssin toisesta viikosta alkaen maanantaisin välillä 12–16.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
