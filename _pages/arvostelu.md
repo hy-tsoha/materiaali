@@ -4,7 +4,7 @@ title: Arvostelu
 
 # Arvostelu
 
-Tälle sivulle on koottu asiat, jotka kurssin ohjaaja käy läpi työsi arvostelussa. Kurssi arvostellaan asteikolla 1–5 sen mukaan, miten hyvin tämän sivun vaatimukset täyttyvät sovelluksessasi.
+Tälle sivulle on koottu asiat, jotka kurssin ohjaaja käy läpi työsi arvostelussa. Kurssi arvostellaan asteikolla 1–5 sen mukaan, miten hyvin vaatimukset toteutuvat sovelluksessasi.
 
 Tutustu myös [tekniseen tarkastuslistaan]({% link _pages/tekninen_tarkastuslista.md %}), johon on koottu yhteen ohjeita versionhallinnasta, ohjelmointityylistä, tietokanta-asioista ja tietoturvasta.
 
