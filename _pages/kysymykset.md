@@ -48,7 +48,7 @@ Yliopistolla on rajallisesti resursseja järjestää henkilökohtaista ohjausta.
 
 ### Miten pääsen kurssin ohjaajaksi?
 
-Uusille ohjaajille on aina tarvetta. Jos olet kiinnostunut ohjaamisesta, ota yhteyttä kurssin vastuuhenkilöön ja jutellaan lisää. [Ohjaajan ohje]({% link _pages/ohjaajan_ohje.md %})
+Uusille ohjaajille on aina tarvetta. Jos olet kiinnostunut ohjaamisesta, ota yhteyttä kurssin vastuuhenkilöön. [Ohjaajan ohje]({% link _pages/ohjaajan_ohje.md %})
 
 ### Miksi kurssin lyhenne on _Tsoha_?
 

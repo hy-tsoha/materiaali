@@ -43,10 +43,12 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 * `README.md`-tiedoston tulee kuvata, mikä on sovelluksen nykyinen tilanne ja miten sitä pystyy testaamaan Herokussa.
 * Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta Labtooliin.
 
-### Vertaisarvioinnit
+### Palautteet
 
 Kurssiin kuuluu kaksi vertaisarviointia, joissa annetaan palautetta toisen opiskelijan työstä. Saat ohjeet vertaisarviointiin sähköpostitse välipalautusten 2 ja 3 jälkeen. 
 Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin ohje]({% link _pages/vertaisarviointi.md %})
+
+Kurssin lopussa saat sähköpostitse linkin, jonka kautta voit antaa kurssipalautteen.
 
 ### Lopullinen palautus
 
