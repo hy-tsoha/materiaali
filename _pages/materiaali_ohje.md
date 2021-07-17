@@ -1,15 +1,7 @@
 ---
 hidden: true
-title: TODO
+title: Ohje materiaalin muokkaamiseen
 ---
-
-# TODO
-
-* Materiaali ei kerro `flash`-funktiosta, se voisi olla hyödyllinen tietää
-* Kurssin materiaali ilmeisesti ei näy hyvin Safari-selaimella
-* Monissa esimerkeissä toimitaan Python-tyylin vastaisesti
-* Miten tulisi olla eri tilanteissa GET vs get ja POST vs post?
-* Googlen tyyliohjeessa tulee aina antaa moduulin nimi koodissa
 
 ## Taulukoista 
 
