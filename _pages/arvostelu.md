@@ -60,4 +60,4 @@ Tutustu myös [tekniseen tarkastuslistaan]({% link _pages/tekninen_tarkastuslist
 
 * Opiskelija antoi hyödyllistä vertaispalautetta muille opiskelijalle
 * Opiskelija antoi kurssin lopussa kurssipalautteen
-* Tämä osio ei ole mukana itsenäisen suorituksen arvioinnissa.
+* Tämä osio ei ole mukana itsenäisen suorituksen arvioinnissa
