@@ -23,7 +23,7 @@ Ohjaajan ei tarvitse tietää kaikkea ennestään, ja usein ohjaaja oppii itseki
 
 ### Välipalautus 1
 
-Tässä vaiheessa selviää, moniko opiskelija aloittaa kurssin. Ohjaaja antaa palautetta siitä, onko harjoitustyön aihe sopivan laaja kurssille. Erityisesti ohjaajan on tärkeää tuoda esille, jos aihe on kuvauksen perusteella liian suppea.
+Tässä vaiheessa selviää, moniko opiskelija aloittaa kurssin. Anna palautetta siitä, onko harjoitustyön aihe sopivan laaja kurssille. Tuo erityisesti esille, jos sovelluksen aihe on kuvauksen perusteella liian suppea.
 
 ### Välipalautus 2
 
@@ -50,7 +50,7 @@ Muistuta opiskelijaa tarvittaessa [teknisestä tarkastuslistasta]({% link _pages
 
 ### Loppupalautus
 
-Käy läpi [arvostelusivun]({% link _pages/arvostelu.md %}) osiot ja tuo esille arvostelussa, mitkä asiat toteutuvat sovelluksessa ja mitkä asiat eivät. Anna sovelluksesta arvosana, joka ilmaisee sitä, miten arviointisivun vaatimukset toteutuvat kokonaisuutena sovelluksessa.
+Käy läpi [arvostelusivun]({% link _pages/arvostelu.md %}) osiot ja tuo esille arvostelussa, mitkä asiat toteutuvat sovelluksessa ja mitkä asiat eivät. Anna sovelluksesta arvosana, joka ilmaisee sitä, miten arvostelusivun vaatimukset toteutuvat kokonaisuutena sovelluksessa.
 
 ## Ohjaajan palkka
 
