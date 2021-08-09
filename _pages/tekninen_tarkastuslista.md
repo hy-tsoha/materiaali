@@ -117,7 +117,7 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
   ```
   Koodi hakee ensin ryhmien nimet ja id:t ja sitten joka ryhmästä erikseen käyttäjien määrän. Parempi tapa on tehdä yksi SQL-kysely, joka hakee suoraan kaiken:
   ```python
-  sql = "SELECT g.id, g.name, COUNT(*) FROM groups g, users u" \
+  sql = "SELECT g.id, g.name, COUNT(*) FROM groups g, users u " \
         "WHERE g.id = u.group_id GROUP BY g.id, g.name"
   result = db.session.execute(sql)
   data = result.fetchall()
@@ -143,7 +143,7 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
 
 * Älä laita versionhallintaan salaista tietoa, kuten istuntojen salaista avainta tai osoitetta, jonka kautta pääsee käsiksi tuotantotietokantaan.
 
-* Tallenna salasanat on tietokantaan turvallisesti.
+* Tallenna salasanat tietokantaan turvallisesti.
 
 * Tarkasta käyttäjän antama tieto ennen tietokantaan tallentamista (esim. merkkijonon pituudella on sopiva yläraja).
 
