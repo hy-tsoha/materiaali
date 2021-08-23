@@ -16,7 +16,7 @@ Loppukesän 2021 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaaja on Olli-Pekka Mehtonen.
 
-Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausta on tarjolla erityisesti kurssin toisesta viikosta alkaen maanantaisin välillä 12–16.
+Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausta on tarjolla erityisesti kurssin toisesta viikosta alkaen maanantaisin välillä 12–16. Poikkeuksellisesti 30.8. ohjausta on tarjolla välillä 14–18.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
