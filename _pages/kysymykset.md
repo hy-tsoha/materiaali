@@ -16,7 +16,7 @@ Sovelluksen käyttöliittymän ja `README.md`-tiedoston kieli voi olla suomi, ru
 
 ### Voiko sovelluksen tehdä muilla tekniikoilla kuin materiaalissa?
 
-Tällä kurssilla sinun tulee tehdä Pythonilla ja Flaskilla web-sovellus, joka käyttää PostgreSQL-tietokantaa SQL-komentojen kautta. Voit tämän lisäksi halutessasi käyttää materiaalin ulkopuolisia tekniikoita.
+Tällä kurssilla sinun tulee tehdä Pythonilla ja Flaskilla web-sovellus, joka käyttää PostgreSQL-tietokantaa SQL-komentojen kautta kurssimateriaalin mukaisella tavalla. Voit tämän lisäksi halutessasi käyttää materiaalin ulkopuolisia tekniikoita.
 
 ### Voiko sovelluksen toteuttaa parityönä/ryhmässä?
 
