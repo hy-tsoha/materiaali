@@ -16,7 +16,7 @@ Syksyn 2021 periodin 1 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaajat ovat Olli-Pekka Mehtonen ja Leo Varis.
 
-Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Lisätietoa ohjauksesta ilmoitetaan myöhemmin.
+Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausta on erityisesti tarjolla ti 15–18 ja to 15–18 kurssin toisesta viikosta alkaen.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
