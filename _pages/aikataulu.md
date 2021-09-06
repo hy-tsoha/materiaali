@@ -4,19 +4,19 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Loppukesän 2021 ryhmän aikataulu on seuraava:
+Syksyn 2021 periodin 1 ryhmän aikataulu on seuraava:
 
-| ti 20.7.2021 | Aloitusluento klo 16–18 Zoomissa ([Zoom-linkki](https://helsinki.zoom.us/j/68785465695?pwd=bkpCMzBhNm5KcjFnQVo1TDZ5YXJuQT09)) |
-| su 25.7.2021 | Välipalautus 1 |
-| su 8.8.2021 | Välipalautus 2 |
-| ke 11.8.2021 | Vertaisarvioinnin deadline |
-| su 22.8.2021 | Välipalautus 3 |
-| ke 25.8.2021 | Vertaisarvioinnin deadline |
-| su 5.9.2021 | Lopullinen palautus |
+| ti 7.9.2021 | Aloitusluento klo 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/68370176326?pwd=VVkwV2d4cHl5dEpiUDhUUGNKdEdNQT09)) |
+| su 12.9.2021 | Välipalautus 1 |
+| su 26.9.2021 | Välipalautus 2 |
+| ke 29.9.2021 | Vertaisarvioinnin deadline |
+| su 10.10.2021 | Välipalautus 3 |
+| ke 13.10.2021 | Vertaisarvioinnin deadline |
+| su 24.10.2021 | Lopullinen palautus |
 
-Ryhmän ohjaaja on Olli-Pekka Mehtonen.
+Ryhmän ohjaajat ovat Olli-Pekka Mehtonen ja Leo Varis.
 
-Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Ohjausta on tarjolla erityisesti kurssin toisesta viikosta alkaen maanantaisin välillä 12–16. Poikkeuksellisesti 30.8. ohjausta on tarjolla välillä 14–18.
+Voit saada ohjausta harjoitustyön tekemiseen [Telegramissa](https://t.me/tkt_tsoha). Lisätietoa ohjauksesta ilmoitetaan myöhemmin.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
@@ -28,7 +28,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?]({% link _pages/aiheen_valinta.md %}) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
-* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2021.V.A.2) ja ilmoita siellä projektisi GitHub-osoite.
+* Kirjaudu Labtooliin (linkki ilmestyy pian) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
