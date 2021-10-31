@@ -4,19 +4,21 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Syksyn 2021 periodin 1 ryhmän aikataulu on seuraava:
+Syksyn 2021 periodin 2 ryhmän aikataulu on seuraava:
 
-| ti 7.9.2021 | Aloitusluento klo 16:15 alkaen ([Luentonauhoite](https://www2.helsinki.fi/unitube/video/b0b11bdd-1806-4b77-82df-52321e898b53)) |
-| su 12.9.2021 | Välipalautus 1 |
-| su 26.9.2021 | Välipalautus 2 |
-| ke 29.9.2021 | Vertaisarvioinnin deadline |
-| su 10.10.2021 | Välipalautus 3 |
-| ke 13.10.2021 | Vertaisarvioinnin deadline |
-| su 24.10.2021 | Lopullinen palautus |
+| ti 2.11.2021 | Aloitusluento Zoomissa 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/61884706604?pwd=a2E3UmQrYitEU0lieHFKTFlWS2J4UT09)) |
+| su 7.11.2021 | Välipalautus 1 |
+| su 21.11.2021 | Välipalautus 2 |
+| ke 24.11.2021 | Vertaisarvioinnin deadline |
+| su 5.12.2021 | Välipalautus 3 |
+| ke 8.12.2021 | Vertaisarvioinnin deadline |
+| su 19.12.2021 | Lopullinen palautus |
 
 Ryhmän ohjaajat ovat Olli-Pekka Mehtonen ja Leo Varis.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on tarjolla ti 15–18 ja to 15–18 [Telegramissa](https://t.me/tkt_tsoha) sekä pe 14–17 Kumpulassa (Exactum, sali B221).
+<!-- Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on tarjolla ti 15–18 ja to 15–18 [Telegramissa](https://t.me/tkt_tsoha) sekä pe 14–17 Kumpulassa (Exactum, sali B221). -->
+
+Kurssin ohjausajat ilmoitetaan lähempänä kurssin alkua.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
@@ -28,7 +30,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?]({% link _pages/aiheen_valinta.md %}) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
-* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2021.S.A.2) ja ilmoita siellä projektisi GitHub-osoite.
+* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2021.S.A.1) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
@@ -43,7 +45,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 * `README.md`-tiedoston tulee kuvata, mikä on sovelluksen nykyinen tilanne ja miten sitä pystyy testaamaan Herokussa.
 * Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta Labtooliin.
 
-### Palautteet
+### Vertaisarviointi
 
 Kurssiin kuuluu kaksi vertaisarviointia, joissa annetaan palautetta toisen opiskelijan työstä. Saat ohjeet vertaisarviointiin sähköpostitse välipalautusten 2 ja 3 jälkeen. 
 Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin ohje]({% link _pages/vertaisarviointi.md %})
@@ -55,6 +57,7 @@ Kurssin lopussa saat sähköpostitse linkin, jonka kautta voit antaa kurssipalau
 * Kurssi arvostellaan tämän sovelluksen version perusteella.
 * `README.md`-tiedoston tulee kuvata, millainen lopullinen sovellus on ja miten sitä pystyy testaamaan Herokussa.
 * Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.
+* Anna lisäksi [kurssipalaute](https://coursefeedback.helsinki.fi/targets/5234247) palautuksen deadlineen mennessä.
 
 ## Ohjeita
 
