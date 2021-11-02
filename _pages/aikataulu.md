@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Syksyn 2021 periodin 2 ryhmän aikataulu on seuraava:
 
-| ti 2.11.2021 | Aloitusluento Zoomissa 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/61884706604?pwd=a2E3UmQrYitEU0lieHFKTFlWS2J4UT09)) |
+| ti 2.11.2021 | Aloitusluento Zoomissa 16:15 alkaen ([Nauhoite](https://www2.helsinki.fi/fi/unitube/video/7be26e3e-04a9-4505-a793-0bc008b2593b)) |
 | su 7.11.2021 | Välipalautus 1 |
 | su 21.11.2021 | Välipalautus 2 |
 | ke 24.11.2021 | Vertaisarvioinnin deadline |
