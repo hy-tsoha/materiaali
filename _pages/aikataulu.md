@@ -28,7 +28,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?]({% link _pages/aiheen_valinta.md %}) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
-* Kirjaudu Labtooliin ja ilmoita siellä projektisi GitHub-osoite.
+* Kirjaudu [https://study.cs.helsinki.fi/labtool/courses/TKT20011.2022.K.A.2](Labtooliin) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
@@ -53,7 +53,7 @@ Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin oh
 * Kurssi arvostellaan tämän sovelluksen version perusteella.
 * `README.md`-tiedoston tulee kuvata, millainen lopullinen sovellus on ja miten sitä pystyy testaamaan Herokussa.
 * Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.
-* Anna lisäksi [kurssipalaute](https://coursefeedback.helsinki.fi/targets/5234247) palautuksen deadlineen mennessä.
+* Anna lisäksi [kurssipalaute](https://coursefeedback.helsinki.fi/targets/19934857) palautuksen deadlineen mennessä.
 
 ## Ohjeita
 
