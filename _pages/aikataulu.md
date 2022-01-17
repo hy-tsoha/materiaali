@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Kevään 2022 periodin 3 ryhmän aikataulu on seuraava:
 
-| ma 17.1.2022 | Aloitusluento Zoomissa 16:15 alkaen ([Zoom-linkki]( https://helsinki.zoom.us/j/67575311700?pwd=T0dHc21UUXpnb1hiMGJxZWZnZUxodz09)) |
+| ma 17.1.2022 | Aloitusluento Zoomissa 16:15 alkaen ([Tallenne](https://www2.helsinki.fi/fi/unitube/video/6701621d-62aa-4a84-88c4-0df3a5596fcc)) |
 | su 23.1.2022 | Välipalautus 1 |
 | su 6.2.2022 | Välipalautus 2 |
 | ke 9.2.2022 | Vertaisarvioinnin deadline |
