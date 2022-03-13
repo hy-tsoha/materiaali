@@ -4,19 +4,19 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Kevään 2022 periodin 3 ryhmän aikataulu on seuraava:
+Kevään 2022 periodin 4 ryhmän aikataulu on seuraava:
 
-| ma 17.1.2022 | Aloitusluento Zoomissa 16:15 alkaen ([Tallenne](https://www2.helsinki.fi/fi/unitube/video/6701621d-62aa-4a84-88c4-0df3a5596fcc)) |
-| su 23.1.2022 | Välipalautus 1 |
-| su 6.2.2022 | Välipalautus 2 |
-| ke 9.2.2022 | Vertaisarvioinnin deadline |
-| su 20.2.2022 | Välipalautus 3 |
-| ke 23.2.2022 | Vertaisarvioinnin deadline |
-| su 6.3.2022 | Lopullinen palautus |
+| ma 14.3.2022 | Aloitusluento 16:15 alkaen (Exactum, D122)
+| su 20.3.2022 | Välipalautus 1 |
+| su 3.4.2022 | Välipalautus 2 |
+| ke 6.4.2022 | Vertaisarvioinnin deadline |
+| su 24.4.2022 | Välipalautus 3 |
+| ke 27.4.2022 | Vertaisarvioinnin deadline |
+| su 8.5.2022 | Lopullinen palautus |
 
-Ryhmän ohjaajat ovat Ekaterina Khlebova ja Olli-Pekka Mehtonen.
+Ryhmän ohjaajat ovat Markus Kaihola, Ekaterina Khlebova ja Olli-Pekka Mehtonen.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on tarjolla ma 13–16 ja to 16–19 [Telegramissa](https://t.me/tkt_tsoha).
+Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Lisää tietoa ohjauksesta ilmoitetaan myöhemmin.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
@@ -28,7 +28,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?]({% link _pages/aiheen_valinta.md %}) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
-* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2022.K.A.2) ja ilmoita siellä projektisi GitHub-osoite.
+* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2022.K.A.1) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
@@ -53,12 +53,12 @@ Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin oh
 * Kurssi arvostellaan tämän sovelluksen version perusteella.
 * `README.md`-tiedoston tulee kuvata, millainen lopullinen sovellus on ja miten sitä pystyy testaamaan Herokussa.
 * Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.
-* Anna lisäksi [kurssipalaute](https://coursefeedback.helsinki.fi/targets/19934857) palautuksen deadlineen mennessä.
+* Anna lisäksi [kurssipalaute](https://coursefeedback.helsinki.fi/targets/19928188) palautuksen deadlineen mennessä.
 
 ## Ohjeita
 
 * Ennen sovelluksen toteuttamisen aloittamista sinun kannattaa tutustua huolellisesti kurssisivuston materiaaliin ja tehdä pieniä kokeiluja, jotta saat harjoiteltua kurssilla käytettyjä tekniikoita.
-* Neuvoja tietokannan suunnitteluun löydät kurssin _Tietokantojen perusteet_ materiaalista. Erityisesti kurssin materiaalin [luku 6](https://tikape.mooc.fi/kevat-2021/content/osa-6/) on hyödyllinen.
+* Neuvoja tietokannan suunnitteluun löydät kurssin _Tietokantojen perusteet_ materiaalista. Erityisesti kurssin materiaalin [luku 6](https://tikape.mooc.fi/kevat-2022/content/osa-6/) on hyödyllinen.
 * Sovellus ja tietokanta rakentuvat pikkuhiljaa ja niihin tulee muutoksia. Kannattaa aloittaa yksinkertaisesta ja muuttaa rakennetta tarvittaessa myöhemmin.
 * Palautuksissa ohjaaja tutustuu projektiisi GitHubin ja Herokun kautta. Pidä huoli siitä, että sovelluksen ajantasainen versio on saatavilla näissä paikoissa.
 * Sovelluksen dokumentaatio luodaan tiedostoon `README.md`, joka näkyy GitHubissa projektin etusivulla. Kirjoita dokumentaatio sellaista henkilöä varten, joka haluaa saada käsityksen sovelluksesta ja mahdollisesti ottaa sen käyttöön itse tai kehittää sovellusta.
