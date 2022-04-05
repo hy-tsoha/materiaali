@@ -16,7 +16,7 @@ Kevään 2022 periodin 4 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaajat ovat Markus Kaihola, Ekaterina Khlebova ja Olli-Pekka Mehtonen.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on tarjolla maanantaisin klo 13–15 (Telegram), keskiviikkoisin klo 13–15 (Exactum, B221) sekä perjantaisin klo 13–15 (Exactum, B221).
+Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on tarjolla maanantaisin klo 13–15 (Telegram), keskiviikkoisin klo 13–15 (Exactum, B221) sekä perjantaisin klo 13–15 (Exactum, B221). Yliopiston pääsiäistauon aikana (14.–20.4.) ei ole ohjausta.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
