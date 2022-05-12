@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Alkukesän 2022 ryhmän aikataulu on seuraava:
 
-| ti 17.5.2022 | Aloitusluento 16:15 alkaen (Zoomissa)
+| ti 17.5.2022 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/62046731389?pwd=cG4yb0hEUDlmYW5wTlc1dmwxM0hVZz09))
 | su 22.5.2022 | Välipalautus 1 |
 | su 5.6.2022 | Välipalautus 2 |
 | ke 8.6.2022 | Vertaisarvioinnin deadline |
@@ -14,9 +14,9 @@ Alkukesän 2022 ryhmän aikataulu on seuraava:
 | ke 22.6.2022 | Vertaisarvioinnin deadline |
 | su 3.7.2022 | Lopullinen palautus |
 
-Ryhmän ohjaajat on Olli-Pekka Mehtonen.
+Ryhmän ohjaaja on Olli-Pekka Mehtonen.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjauksen aikataulu ilmoitetaan lähempänä kurssin alkua.
+Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on tarjolla maanantaisin klo 13–15 Telegramissa.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
