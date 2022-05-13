@@ -125,7 +125,7 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
 * Älä tee Python-koodissa tiedon käsittelyä, jos sen voi tehdä mielekkäästi tietokannan puolella. Esimerkiksi seuraavassa on huono tapa etsiä paras annettu arvosana:
   ```python
   sql = "SELECT grade FROM reviews WHERE book_id = :id"
-  result = db.session.execute(query, {"id":book_id})
+  result = db.session.execute(sql, {"id":book_id})
   grades = result.fetchall()
   best = 0
   for grade in grades:
@@ -134,7 +134,7 @@ Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunn
   Koodi hakee listaan kaikki arvosanat ja etsii parhaan arvosanan `for`-silmukan avulla. Kuitenkin parhaan arvosanan voi hakea suoraan SQL:llä:
   ```python
   sql = "SELECT MAX(grade) FROM reviews WHERE book_id = :id"
-  result = db.session.execute(query, {"id":book_id})
+  result = db.session.execute(sql, {"id":book_id})
   best = result.fetchone()[0]
   ```  
 * Käytä `try`/`except`-virheenkäsittelyä SQL-komennon ympärillä vain silloin, kun todella aiot tunnistaa jonkin virheen. Hyvä esimerkki on tilanne, jossa sarakkeessa on ehto `UNIQUE` ja haluat varmistaa, ettei samaa arvoa lisätä uudestaan.
