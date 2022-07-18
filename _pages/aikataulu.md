@@ -4,19 +4,19 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Alkukesän 2022 ryhmän aikataulu on seuraava:
+Loppukesän 2022 ryhmän aikataulu on seuraava:
 
-| ti 17.5.2022 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/62046731389?pwd=cG4yb0hEUDlmYW5wTlc1dmwxM0hVZz09))
-| su 22.5.2022 | Välipalautus 1 |
-| su 5.6.2022 | Välipalautus 2 |
-| ke 8.6.2022 | Vertaisarvioinnin deadline |
-| su 19.6.2022 | Välipalautus 3 |
-| ke 22.6.2022 | Vertaisarvioinnin deadline |
-| su 3.7.2022 | Lopullinen palautus |
+| ti 19.7.2022 | Aloitusluento 16:15 alkaen (Exactum B221)
+| su 24.7.2022 | Välipalautus 1 |
+| su 7.8.2022 | Välipalautus 2 |
+| ke 10.8.2022 | Vertaisarvioinnin deadline |
+| su 21.8.2022 | Välipalautus 3 |
+| ke 24.8.2022 | Vertaisarvioinnin deadline |
+| su 4.9.2022 | Lopullinen palautus |
 
-Ryhmän ohjaaja on Olli-Pekka Mehtonen.
+Ryhmän ohjaaja on Markus Kaihola.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on tarjolla maanantaisin klo 13–15 Telegramissa.
+Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausajat ilmoitetaan lähiaikoina.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
@@ -28,7 +28,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?]({% link _pages/aiheen_valinta.md %}) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
-* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2022.V.A.2) ja ilmoita siellä projektisi GitHub-osoite.
+* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2022.V.A.1) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
@@ -53,7 +53,7 @@ Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin oh
 * Kurssi arvostellaan tämän sovelluksen version perusteella.
 * `README.md`-tiedoston tulee kuvata, millainen lopullinen sovellus on ja miten sitä pystyy testaamaan Herokussa.
 * Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.
-* Anna lisäksi [kurssipalaute](https://coursefeedback.helsinki.fi/targets/33661222) palautuksen deadlineen mennessä.
+* Anna lisäksi [kurssipalaute](https://coursefeedback.helsinki.fi/targets/34566653) palautuksen deadlineen mennessä.
 
 ## Ohjeita
 
