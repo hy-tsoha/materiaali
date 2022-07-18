@@ -16,7 +16,7 @@ Loppukesän 2022 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaaja on Markus Kaihola.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausajat ilmoitetaan lähiaikoina.
+Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on Telegramissa maanantaisin välillä 14–16.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
