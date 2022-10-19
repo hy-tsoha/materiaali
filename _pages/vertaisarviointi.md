@@ -10,7 +10,7 @@ Vertaisarvioinnissa tutustut toisen kurssin opiskelijan työhön ja annat siitä
 Vertaisarvioinnin ohje:
 
 1. Löydät linkin arvioitavan työn GitHub-sivulle Labtoolista.
-2. Tutustu ensin sovellukseen käyttämällä sitä Herokussa. Kiinnitä huomiota siihen, miten sovellus toimii ja onko sitä mukava käyttää.
+2. Tutustu ensin sovellukseen käyttämällä sitä tuotannossa eli Fly.io:ssa olevassa versiossa. Kiinnitä huomiota siihen, miten sovellus toimii ja onko sitä mukava käyttää.
 3. Tämän jälkeen käy läpi sovelluksen koodi ja tietokannan rakenne. Mieti, mitä asioita sovelluksen toteutuksessa voisi parantaa.
 4. Lisää arvioitavan työn GitHub-sivulle issue, jossa raportoit kohdissa 2 ja 3 huomaamasi asiat. Koeta kirjoittaa raportti niin, että se auttaa työn tekijää.
 5. Lisää URL-osoite (linkki) kirjoittamaasi issueen Labtooliin. Varmista linkkiä lisätessäsi, että linkin alussa on protokollan määrittely `https`.

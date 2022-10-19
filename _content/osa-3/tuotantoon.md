@@ -1,67 +1,99 @@
 ## Sovellus tuotantoon
 
-Sovelluksen laittaminen _tuotantoon_ tarkoittaa, että sovellus julkaistaan käyttäjille. Tällä kurssilla harjoittelemme tuotantoon laittamista [Heroku](https://heroku.com/)-palvelun avulla. Heroku tarjoaa ilmaiseksi palvelintilaa, jonne voi sijoittaa muun muassa Flaskilla toteutetun web-sovelluksen.
+Sovelluksen laittaminen _tuotantoon_ tarkoittaa, että sovellus julkaistaan käyttäjille. Tällä kurssilla harjoittelemme tuotantoon laittamista [Fly.io](https://fly.io)-palvelun avulla. Fly.io tarjoaa ilmaiseksi palvelintilaa, jonne voi sijoittaa muun muassa Flaskilla toteutetun web-sovelluksen.
 
-Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsovelluksen Herokuun. Jotta voit käyttää Herokua, sinun täytyy luoda ensin tunnus palveluun. Tunnuksen luominen on ilmaista, mutta huomaa, että Heroku tarjoaa myös maksullisia palveluja.
+Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsovelluksen Fly.io:hon. Jotta voit käyttää Fly.io:a, sinun täytyy luoda ensin tunnus palveluun. Tunnuksen luominen on ilmaista, mutta huomaa, että Fly.io tarjoaa myös maksullisia palveluja. Voit myös kirjautua Github-tunnuksillasi.
 
-Herokun ilmaisversiossa on joitakin merkittäviä rajoituksia. Sovellus saa käyttää rajoitetun määrän palvelimen aikaa kuukaudessa, ja jos sovellusta ei käytetä hetkeen, se sulkeutuu ja seuraavan käyttäjän saapuessa vie jonkin verran aikaa, ennen kuin sovellus käynnistyy uudestaan. Lisäksi tietokannan kokoa on rajoitettu niin, että tauluissa saa olla yhteensä enintään 10000 riviä. Näiden rajoitusten vuoksi Herokun ilmaisversio ei sovellu todellisten sovellusten alustaksi, mutta sen avulla voi harjoitella web-sovelluksen julkaisemista.
+Flyn ilmaisversiossa on tiettyjä rajoituksia erityisesti suorituskykyyn liittyen. Tämän kurssin puitteisiin ilmaisversion tarjoamat ominaisuudet kuitenkin riittävät oikein hyvin. Voit lukea niistä tarkemmin [täältä](https://fly.io/docs/about/pricing/) tai ilmaisten Postgres tietokantojen rajoituksista [täältä](https://fly.io/docs/postgres/#about-free-postgres-on-fly-io).
 
-Herokussa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Herokun sivuston [hallintapaneelin](https://dashboard.heroku.com/) kautta tai omalle koneelle asennettavan [komentorivityökalun](https://devcenter.heroku.com/articles/heroku-cli) avulla. Seuraava ohje näyttää, miten komentorivityökalu toimii.
+Flyssa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Fly.io:n sivuston [hallintapaneelin](https://fly.io/dashboard) kautta tai omalle koneelle asennettavan [komentorivityökalun](https://fly.io/docs/hands-on/install-flyctl/) avulla. Seuraava ohje näyttää, miten komentorivityökalu toimii.
 
 ### Komentorivityökalu
 
 Komentorivityökalun käyttö alkaa kirjautumalla sisään:
 
 ```prompt
-$ heroku login
-heroku: Press any key to open up the browser to login or q to exit:
+$ fly auth login
 ```
 
-Komento avaa nettiselaimen, jonka kautta pystyy kirjautumaan Herokuun. Kirjautumisen jälkeen komentorivityökalu on käyttökunnossa.
+Komento avaa nettiselaimen, jonka kautta pystyy kirjautumaan. Kirjautumisen jälkeen komentorivityökalu on käyttökunnossa.
 
-Komento `heroku help` (tai pelkkä `heroku`) näyttää listan komentorivityökalun komennoista. Vastaavasti voi myös pyytää neuvoa tietyn komennon käyttämisestä: esimerkiksi `heroku apps help` kertoo, miten komentoa `heroku apps` käytetään.
+Komento `fly help` (tai pelkkä `fly`) näyttää listan komentorivityökalun komennoista. Vastaavasti voi myös pyytää neuvoa tietyn komennon käyttämisestä: esimerkiksi `fly apps help` kertoo, miten komentoa `fly apps` käytetään.
 
 ### Sovelluksen luonti
 
-Seuraava komento luo uuden Heroku-sovelluksen nimellä `tsoha-visitors`:
+Komento `fly launch` luo uuden Fly-sovelluksen:
 
 ```prompt
-$ heroku apps:create tsoha-visitors
-Creating ⬢ tsoha-visitors... done
-https://tsoha-visitors.herokuapp.com/ | https://git.heroku.com/tsoha-visitors.git
+$ fly launch
+Creating app in /home/user/tsoha-visitors
+Scanning source code
+Detected a Python app
+Using the following build configuration:
+	Builder: paketobuildpacks/builder:base
+? App Name (leave blank to use an auto-generated name): tsoha-visitors
+Automatically selected personal organization: user
+? Select regions:  [Use arrows to move, type to filter]
+  Amsterdam, Netherlands (ams)
+  ...
+> Frankfurt, Germany (fra)
+  São Paulo (gru)
+  ...
+  Miami, Florida (US) (mia)
+? Select region: fra (Frankfurt, Germany)
+Created app tsoha-visitors in organization personal
+Wrote config file fly.toml
+? Would you like to set up a Postgresql database now? No
+We have generated a simple Procfile for you. Modify it to fit your needs and run "fly deploy" to deploy your application.
+
 ```
 
-Jokaisella Herokussa olevalla sovelluksella tulee olla yksilöllinen nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Kuitenkaan et voi itse luoda tämän nimistä sovellusta, koska se on jo olemassa. Jos et anna sovellukselle nimeä, sille tulee automaattisesti satunnainen nimi. Jos teet sovelluksen vain kokeilua tai tätä kurssia varten, satunnainen nimi riittää hyvin.
+Komento pyytää käyttäjältä sovelluksen nimeä sekä palvelimen sijaintia. Palvelimen sijainniksi kannattaa valita Euroopan alueella sijaitseva palvelin, esimerkiksi Frankfurt.
 
-Sovellus julkaistaan Herokussa lähettämällä haluttu sovelluksen versio Herokun git-repositorioon. Tämän voi tehdä kytkemällä paikallisen repositorion Herokuun, kuten teemme tässä ohjeessa, tai vaihtoehtoisesti Herokun GitHub-integraation kautta.
+Jokaisella Flyssa olevalla sovelluksella tulee olla yksilöllinen nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Kuitenkaan et voi itse luoda tämän nimistä sovellusta, koska se on jo olemassa. Jos et anna sovellukselle nimeä, sille tulee automaattisesti satunnainen nimi. Jos teet sovelluksen vain kokeilua tai tätä kurssia varten, satunnainen nimi riittää hyvin.
 
-Voimme kytkeä paikallisen repositorion Herokuun näin:
+Komento myös kysyy, luodaanko samalla projektille Postgres tietokanta. Älä kuitenkaan luo tietokantaa vielä tai saatat joutua ongelmiin tietokantaan yhdistämisen kanssa.
 
-```prompt
-$ heroku git:remote -a tsoha-visitors
+Komento luo automaattisesti kaksi tiedostoa repositorioon.
+
+Ensimmäinen tiedosto on `fly.toml`, jota Fly käyttää projektin konfigurointiin. Tiedostoon generoituu automaattisesti tarvittavat tiedot. Vaihdetaan kuitenkin sovelluksen portti vastaamaan Flaskin oletuksen käyttämää porttia `5000`. Muutetaan kohdat
+
+```
+[env]
+  PORT ="8080"
+
+[[services]]
+  internal_port = 8080
 ```
 
-Tämä komento määrittää, että tässä hakemistossa olevan sovelluksen repositorio kytketään Herokun sovelluksen `tsoha-visitors` repositorioon. Voimme tarkastella komennon vaikutusta seuraavasti:
+muotoon
 
-```prompt
-$ git remote -v
-heroku	https://git.heroku.com/tsoha-visitors.git (fetch)
-heroku	https://git.heroku.com/tsoha-visitors.git (push)
-origin	https://github.com/user/tsoha-visitors.git (fetch)
-origin	https://github.com/user/tsoha-visitors.git (push)
+```
+[env]
+  PORT = "5000"
+
+[[services]]
+  internal_port = 5000
 ```
 
-Tästä näkee, että oletuskohde `origin` osoittaa edelleen GitHubiin, mutta uutena on kohde `heroku`, joka lähettää sovelluksen Herokuun. Lähetys tapahtuisi näin:
+Toinen tiedosto on nimeltään `Procfile`, jota joudumme myös muokkaamaan. Sisältö on aluksi seuraava:
 
-```prompt
-$ git push heroku main
+```
+# Modify this Procfile to fit your needs
+web: gunicorn server:app
 ```
 
-Emme voi kuitenkaan lähettää sovellusta vielä, koska se ei ole Heroku-yhteensopiva, vaan sovellukseen täytyy tehdä ensin joitakin muutoksia.
+Muutetaan se muotoon
 
-### Palvelimen määrittely
+```
+web: gunicorn app:app
+```
 
-Tähän asti olemme käynnistäneet sovelluksen komennolla `flask run`, mutta tätä tapaa ei suositella tuotantokäyttöön. Tämän vuoksi asennamme Herokua varten erillisen Gunicorn-palvelimen:
+Tiedostossa oleva komento `gunicorn app:app` on vastuussa sovelluksen käynnistämisestä tuotantopalvelimella. Tähän asti olemme paikallisesti käyttäneet tähän komentoa `flask run`, mutta sitä ei suositella käytettäväksi tuotannossa, joten käytetään siihen tuotantoversiossa `gunicorn`ia.
+
+`Procfile` määrittää, että tyyppiä "web" oleva sovellus käynnistetään komennolla `gunicorn app:app`. Tässä ensimmäinen `app` viittaa moduulin nimeen `app.py` ja toinen `app` viittaa koodissa luotavan Flask-olion nimeen.
+
+Tätä varten asennetaan projektiin vielä `gunicorn`:
 
 ```prompt
 (venv) $ pip install gunicorn
@@ -73,102 +105,114 @@ Tämän jälkeen tiedosto `requirements.txt` tulee saattaa ajan tasalle:
 (venv) $ pip freeze > requirements.txt
 ```
 
-Lisäksi luomme sovelluksen päähakemistoon uuden tiedoston `Procfile`, joka kertoo Herokulle, miten sovellus käynnistetään:
-
-```
-web: gunicorn app:app
-```
-
-Tämä kertoo Herokulle, että tyyppiä "web" oleva sovellus käynnistetään komennolla `gunicorn app:app`. Tässä ensimmäinen `app` viittaa moduulin nimeen `app.py` ja toinen `app` viittaa koodissa luotavan Flask-olion nimeen.
-
 Tässä vaiheessa on hyvä laittaa muutokset talteen versionhallintaan:
 
 ```prompt
+$ git add fly.toml
 $ git add requirements.txt
 $ git add Procfile
-$ git commit -m "Add Heroku config"
+$ git commit -m "Add Fly.io config"
 $ git push
 ```
 
 ### Tietokanta ja ympäristömuuttujat
 
-Seuraava komento luo Heroku-sovellukselle tietokannan:
+Luodaan seuraavaksi sovellukselle tietokanta komennolla `fly postgres create`. Komento kysyy sovellukselle nimeä (tietokanta on erilline Fly-sovelluksensa), sijaintia sekä kokoa. Alueeksi kannattaa valita sama, jossa varsinainen sovelluksesi sijaitsee.
 
 ```prompt
-$ heroku addons:create heroku-postgresql
+$ fly postgres create
+? Choose an app name (leave blank to generate one): tsoha-visitors-db
+? Select regions:  [Use arrows to move, type to filter]
+  Amsterdam, Netherlands (ams)
+  ...
+> Frankfurt, Germany (fra)
+  São Paulo (gru)
+  ...
+  Miami, Florida (US) (mia)
+? Select regions: Frankfurt, Germany (fra)
+? Select configuration:  [Use arrows to move, type to filter]
+> Development - Single node, 1x shared CPU, 256MB RAM, 1GB disk
+  Production - Highly available, 2x shared CPUs, 4GB RAM, 40GB disk
+  Production - Highly available, 4x shared CPUs, 8GB RAM, 80GB disk
+  Specify custom configuration
+? Select configuration: Development - Single node, 1x shared CPU, 256MB RAM, 1GB disk
+Creating postgres cluster tsoha-test1-db in organization personal
+Creating app...
+Setting secrets...
 ```
 
-Tämän jälkeen voimme yhdistää tietokantaan näin ja luoda sinne taulun `visitors`:
+Tietokanta täytyy vielä erikseen yhdistää sovellukseemme:
 
 ```prompt
-$ heroku psql
-tsoha-visitors::DATABASE=> CREATE TABLE visitors (id SERIAL PRIMARY KEY, time TIMESTAMP);
-tsoha-visitors::DATABASE=> \q
+$ fly postgres attach --app tsoha-visitors tsoha-visitors-db --database-name postgres
+? Database "postgres" already exists. Continue with the attachment process? Yes
+```
+
+Jos komento ei onnistu heti tietokannan luomisen jälkeen, odota muutama minuutti ja yritä uudelleen.
+
+Huomaa, että määritämme käytettävän tietokannan nimeksi `postgres`, sillä muuten komento luo uuden tietokannan, jonka nimeksi tulisi sovelluksen nimi. Emme kuitenkaan halua tällaista tilannetta, sillä kohta tarvitsemamme komento `fly postgres connect` käyttää automaattisesti tietokantaa nimeltä `postgres`.
+
+Nyt voimme yhdistää tietokantaan näin ja luoda sinne taulun `visitors`:
+
+```prompt
+$ fly postgres connect -a tsoha-visitors-db
+postgres=# CREATE TABLE visitors (id SERIAL PRIMARY KEY, time TIMESTAMP);
+postgres=# \q
 ```
 
 Olisimme myös voineet luoda taulun näin ohjaamalla sinne tiedoston `schema.sql` komennot:
 
 ```prompt
-$ heroku psql < schema.sql
+$ fly postgres connect -a tsoha-visitors-db < schema.sql
 ```
 
-Kun Heroku luo tietokannan, se asettaa samalla ympäristömuuttujan `DATABASE_URL`, minkä ansiosta sovellus toimii suoraan myös Herokussa, jos se käyttää tätä ympäristömuuttujaa. Voimme tarkastaa sovelluksen ympäristömuuttujat näin:
+Kun Fly.io luo tietokannan, se asettaa samalla ympäristömuuttujan `DATABASE_URL`, minkä ansiosta sovellus toimii suoraan myös tuotannossa, jos se käyttää tätä ympäristömuuttujaa. Voimme tarkastaa sovelluksen ympäristömuuttujat näin:
 
 ```prompt
-$ heroku config
-=== tsoha-visitors Config Vars
-DATABASE_URL: postgres://(tietokannan osoite näkyy tässä)
+$ fly secrets list
+NAME        	DIGEST          	CREATED AT
+DATABASE_URL	e26ed699c4d898b8	1h29m ago
 ```
 
-Huomaa, että tietämällä Herokun tietokannan osoitteen siihen pääsee yhdistämään myös sovelluksen ulkopuolelta, joten tietokannan osoite on salassa pidettävää tietoa.
+Fly ei paljasta ympäristömuuttujien sisältöä, näet vain minkä nimisiä muuttujia projektissa on.
 
 Voimme myös asettaa ympäristömuuttujia tarvittaessa itse. Esimerkiksi istuntojen käyttäminen vaatii muuttujan `SECRET_KEY` asettamista, mikä onnistuu näin:
 
 ```prompt
-$ heroku config:set SECRET_KEY=(avain tähän)
+$ fly secrets set SECRET_KEY=(avain tähän)
 ```
 
-### Sovelluksen lähetys
+### Sovelluksen julkaiseminen
 
-Nyt kaikki alkaa olla valmista ja voimme koettaa lähettää sovelluksen Herokuun:
+Nyt kaikki alkaa olla valmista ja voimme julkaista sovelluksen:
 
 ```prompt
-$ git push heroku main
-remote: Compressing source files... done.
-remote: Building source:
-remote: 
-remote: -----> Python app detected
-remote: -----> Requirements file has been changed, clearing cached dependencies
-remote: -----> Installing python-3.6.10
-remote: -----> Installing pip
-remote: -----> Installing SQLite3
-remote: -----> Installing requirements with pip
-remote:        ERROR: Invalid requirement: 'pkg-resources=0.0.0' (from line 8 of /tmp/build_b6f49f8f28a88afca0c79ce857e4849b/requirements.txt)
+$ fly deploy
 ```
 
-Jotain meni kuitenkin pieleen: tiedostossa `requirements.txt` oleva riippuvuus `pkg-resources` ei kelpaa Herokulle. Tämä on tunnettu ongelma, ja tässä tapauksessa toimiva korjaus on poistaa kyseinen rivi tiedostosta, päivittää muutos versionhallintaan ja yrittää uudestaan:
+Ensimmäisellä suorituskerralla `deploy` hakee monia _docker_ imageja, näistä ei tarvitse välittää.
+
+Fly tekee automaattisesti _health checkin_ projektille jokaisen julkaisun yhteydessä. Jos nämä testit eivät mene läpi, sovelluksen uuden version julkaisu perutaan ja palataan aiempaan versioon. Vastaasi tulee todennäköisesti seuraavanlainen virheviesti
 
 ```prompt
-$ git push heroku main
-remote: Compressing source files... done.
-remote: Building source:
-remote: 
-remote: -----> Python app detected
-remote: -----> No change in requirements detected, installing from cache
-remote: -----> Installing SQLite3
-remote: -----> Installing requirements with pip
-remote: -----> Discovering process types
-remote:        Procfile declares types -> web
-remote: 
-remote: -----> Compressing...
-remote:        Done: 48.2M
-remote: -----> Launching...
-remote:        Released v8
-remote:        https://tsoha-visitors.herokuapp.com/ deployed to Heroku
+2022-10-19T21:46:49Z   [info]    raise exc.NoSuchModuleError(
+2022-10-19T21:46:49Z   [info]sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
 ```
 
-Tällä kertaa prosessi saatiin vietyä loppuun ja voimme mennä katsomaan sovellusta osoitteessa [https://tsoha-visitors.herokuapp.com/](https://tsoha-visitors.herokuapp.com/). Jos kaikki meni hyvin, tuloksena on:
+Tämä johtuu `SQLAlchemy` kirjastossa version 1.3.23 jälkeen tapahtuneesta muutoksesta tietokantaosoitteen käsittelyssä. Kun se ennen hyväksyi sekä `postgresql://` että `postgres://` alkuiset osoitteet, sen uusimmat versiot hyväksyvät vain `postgresql://` alkuiset osoitteet. Fly antaa tietokannan osoitteen väärässä muodossa, joten simppeli korjaus tälle on määrittää tietokannan osoite koodissa seuraavanlaisesti ja tehdä uusi julkaisu
 
-<img class="screenshot" src="../assets/osa-3/heroku.png">
+```python
+app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL").replace("://", "ql://", 1)
+```
 
-Entä jos sovellus ei toimikaan? Tällä hetkellä Herokussa aiheuttaa ongelmia SQLAlchemyn versio 1.4 tai uudempi, jossa ei toimi Herokun muodostama tietokannan osoite. Helppo tapa korjata asia on vaihtaa tiedostoon `requirements.txt` aiempi SQLAlchemyn versio, kuten ylempänä näkyvä versio 1.3.23. Lisätietoa ja vaihtoehtoinen korjaustapa on [Herokun ohjeissa](https://help.heroku.com/ZKNTJQSK/why-is-sqlalchemy-1-4-x-not-connecting-to-heroku-postgres).
+Toinen vaihtoehto olisi päivittää `SQLAlchemy`n versio _requirements.txt_ tiedostossa versioon 1.3.23, mutta se tarkoittaisi myös `Flask-SQLAlchemy` kirjaston version päivittämistä versioon 2.x.x.
+
+Kun sovellus on julkaistu, voimme avata sen selaimeen
+
+```prompt
+$ fly open
+```
+
+Jos kaikki meni hyvin, tuloksena on:
+
+<img class="screenshot" src="../assets/osa-3/fly.png">
