@@ -6,7 +6,7 @@ Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsove
 
 Flyn ilmaisversiossa on tiettyjä rajoituksia erityisesti suorituskykyyn liittyen. Tämän kurssin puitteisiin ilmaisversion tarjoamat ominaisuudet kuitenkin riittävät oikein hyvin. Voit lukea niistä tarkemmin [täältä](https://fly.io/docs/about/pricing/) tai ilmaisten Postgres-tietokantojen rajoituksista [täältä](https://fly.io/docs/postgres/#about-free-postgres-on-fly-io).
 
-Flyssa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Fly.io:n sivuston [hallintapaneelin](https://fly.io/dashboard) kautta tai omalle koneelle asennettavan [komentorivityökalun](https://fly.io/docs/hands-on/install-flyctl/) avulla. Seuraava ohje näyttää, miten komentorivityökalu toimii.
+Flyssa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Fly.io:n sivuston [hallintapaneelin](https://fly.io/dashboard) kautta tai omalle koneelle asennettavan komentorivityökalun, jonka pääset asentamaan [täältä](https://fly.io/docs/hands-on/install-flyctl/), avulla. Huomaa asennuksen lopussa tuleva ohjeistus lisätä flyctl `PATH` ympäristömuuttujaan, pääset muokkaamaan tähän oikeaa tiedostoa esimerkiksi komennolla `gedit ~/.bashrc`. Lisää annetut rivit tiedoston loppuun. Seuraava ohje näyttää, miten itse komentorivityökalu toimii.
 
 ### Komentorivityökalu
 
