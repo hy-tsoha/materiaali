@@ -34,7 +34,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 ### Välipalautus 2
 
 * Tavoitteena on, että sovelluksella on toimiva pohja ja keskeiset toiminnot ovat hyvässä vaiheessa.
-* `README.md`-tiedoston tulee kuvata, mikä on sovelluksen nykyinen tilanne ja miten sitä pystyy testaamaa tuotannossa.
+* `README.md`-tiedoston tulee kuvata, mikä on sovelluksen nykyinen tilanne ja miten sitä pystyy testaamaan tuotannossa.
 * Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta Labtooliin.
 
 ### Välipalautus 3

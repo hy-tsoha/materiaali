@@ -4,7 +4,7 @@ Sovelluksen laittaminen _tuotantoon_ tarkoittaa, että sovellus julkaistaan käy
 
 Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsovelluksen Fly.io:hon. Jotta voit käyttää Fly.io:a, sinun täytyy luoda ensin tunnus palveluun. Tunnuksen luominen on ilmaista, mutta huomaa, että Fly.io tarjoaa myös maksullisia palveluja. Voit myös kirjautua Github-tunnuksillasi.
 
-Flyn ilmaisversiossa on tiettyjä rajoituksia erityisesti suorituskykyyn liittyen. Tämän kurssin puitteisiin ilmaisversion tarjoamat ominaisuudet kuitenkin riittävät oikein hyvin. Voit lukea niistä tarkemmin [täältä](https://fly.io/docs/about/pricing/) tai ilmaisten Postgres tietokantojen rajoituksista [täältä](https://fly.io/docs/postgres/#about-free-postgres-on-fly-io).
+Flyn ilmaisversiossa on tiettyjä rajoituksia erityisesti suorituskykyyn liittyen. Tämän kurssin puitteisiin ilmaisversion tarjoamat ominaisuudet kuitenkin riittävät oikein hyvin. Voit lukea niistä tarkemmin [täältä](https://fly.io/docs/about/pricing/) tai ilmaisten Postgres-tietokantojen rajoituksista [täältä](https://fly.io/docs/postgres/#about-free-postgres-on-fly-io).
 
 Flyssa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Fly.io:n sivuston [hallintapaneelin](https://fly.io/dashboard) kautta tai omalle koneelle asennettavan [komentorivityökalun](https://fly.io/docs/hands-on/install-flyctl/) avulla. Seuraava ohje näyttää, miten komentorivityökalu toimii.
 
@@ -115,7 +115,7 @@ $ git push
 
 ### Tietokanta ja ympäristömuuttujat
 
-Luodaan seuraavaksi sovellukselle tietokanta komennolla `fly postgres create`. Komento kysyy sovellukselle nimeä (tietokanta on erillinen Fly-sovelluksensa), sijaintia sekä kokoa. Alueeksi kannattaa valita sama, jossa varsinainen sovelluksesi sijaitsee.
+Luodaan seuraavaksi sovellukselle tietokanta komennolla `fly postgres create`. Komento kysyy sovellukselle nimeä (tietokanta on erillinen Fly-sovelluksensa), sijaintia sekä kuinka tehokkaan tietokannan haluaa luoda. Alueeksi kannattaa valita sama, jossa varsinainen sovelluksesi sijaitsee.
 
 ```prompt
 $ fly postgres create
