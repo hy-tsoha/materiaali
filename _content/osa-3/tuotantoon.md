@@ -54,7 +54,7 @@ Jokaisella Flyssa olevalla sovelluksella tulee olla yksilöllinen nimi. Tämän 
 
 Komento myös kysyy, luodaanko samalla projektille Postgres tietokanta. Älä kuitenkaan luo tietokantaa vielä tai saatat joutua ongelmiin tietokantaan yhdistämisen kanssa.
 
-Komento luo automaattisesti kaksi tiedostoa kansioon, joita Fly käyttää sovelluksen hallintaan palvelimella.
+Komento luo automaattisesti kaksi tiedostoa, joita Fly käyttää sovelluksen hallintaan palvelimella.
 
 Ensimmäinen tiedosto on `fly.toml`, jota Fly käyttää projektin konfigurointiin. Tiedostoon generoituu automaattisesti tarvittavat tiedot. Vaihdetaan kuitenkin sovelluksen portti vastaamaan Flaskin oletuksen käyttämää porttia `5000`. Muutetaan kohdat
 
@@ -76,7 +76,7 @@ muotoon
   internal_port = 5000
 ```
 
-Toinen tiedosto on nimeltään `Procfile`, jota joudumme myös muokkaamaan. Sisältö on aluksi seuraava:
+Toinen tiedosto on nimeltään `Procfile`, jota käytetään sovelluksen käynnistämiseen. Joudumme muokkaamaan sitäkin hieman, sisältö on aluksi seuraava:
 
 ```
 # Modify this Procfile to fit your needs
