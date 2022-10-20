@@ -18,7 +18,7 @@ $ fly auth login
 
 Komento avaa nettiselaimen, jonka kautta pystyy kirjautumaan. Kirjautumisen jälkeen komentorivityökalu on käyttökunnossa.
 
-Komento `fly help` (tai pelkkä `fly`) näyttää listan komentorivityökalun komennoista. Vastaavasti voi myös pyytää neuvoa tietyn komennon käyttämisestä: esimerkiksi `fly apps help` kertoo, miten komentoa `fly apps` käytetään.
+Komento `fly help` näyttää listan komentorivityökalun komennoista. Vastaavasti voi myös pyytää neuvoa tietyn komennon käyttämisestä: esimerkiksi `fly apps help` kertoo, miten komentoa `fly apps` käytetään.
 
 ### Sovelluksen luonti
 
@@ -54,7 +54,7 @@ Jokaisella Flyssa olevalla sovelluksella tulee olla yksilöllinen nimi. Tämän 
 
 Komento myös kysyy, luodaanko samalla projektille Postgres tietokanta. Älä kuitenkaan luo tietokantaa vielä tai saatat joutua ongelmiin tietokantaan yhdistämisen kanssa.
 
-Komento luo automaattisesti kaksi tiedostoa repositorioon.
+Komento luo automaattisesti kaksi tiedostoa kansioon, joita Fly käyttää sovelluksen hallintaan palvelimella.
 
 Ensimmäinen tiedosto on `fly.toml`, jota Fly käyttää projektin konfigurointiin. Tiedostoon generoituu automaattisesti tarvittavat tiedot. Vaihdetaan kuitenkin sovelluksen portti vastaamaan Flaskin oletuksen käyttämää porttia `5000`. Muutetaan kohdat
 
@@ -89,9 +89,7 @@ Muutetaan se muotoon
 web: gunicorn app:app
 ```
 
-Tiedostossa oleva komento `gunicorn app:app` on vastuussa sovelluksen käynnistämisestä tuotantopalvelimella. Tähän asti olemme paikallisesti käyttäneet tähän komentoa `flask run`, mutta sitä ei suositella käytettäväksi tuotannossa, joten käytetään siihen tuotantoversiossa `gunicorn`ia.
-
-`Procfile` määrittää, että tyyppiä "web" oleva sovellus käynnistetään komennolla `gunicorn app:app`. Tässä ensimmäinen `app` viittaa moduulin nimeen `app.py` ja toinen `app` viittaa koodissa luotavan Flask-olion nimeen.
+Tiedostossa oleva komento `gunicorn app:app` on vastuussa sovelluksen käynnistämisestä tuotantopalvelimella. Tähän asti olemme paikallisesti käyttäneet tähän komentoa `flask run`, mutta sitä ei suositella käytettäväksi tuotannossa, joten käytetään siihen tuotantoversiossa `gunicorn`ia. Määrittelimme nyt, että tyyppiä "web" oleva sovellus käynnistetään komennolla `gunicorn app:app`. Tässä ensimmäinen `app` viittaa moduulin nimeen `app.py` ja toinen `app` viittaa koodissa luotavan Flask-olion nimeen.
 
 Tätä varten asennetaan projektiin vielä `gunicorn`:
 
@@ -117,7 +115,7 @@ $ git push
 
 ### Tietokanta ja ympäristömuuttujat
 
-Luodaan seuraavaksi sovellukselle tietokanta komennolla `fly postgres create`. Komento kysyy sovellukselle nimeä (tietokanta on erilline Fly-sovelluksensa), sijaintia sekä kokoa. Alueeksi kannattaa valita sama, jossa varsinainen sovelluksesi sijaitsee.
+Luodaan seuraavaksi sovellukselle tietokanta komennolla `fly postgres create`. Komento kysyy sovellukselle nimeä (tietokanta on erillinen Fly-sovelluksensa), sijaintia sekä kokoa. Alueeksi kannattaa valita sama, jossa varsinainen sovelluksesi sijaitsee.
 
 ```prompt
 $ fly postgres create
@@ -190,8 +188,6 @@ Nyt kaikki alkaa olla valmista ja voimme julkaista sovelluksen:
 $ fly deploy
 ```
 
-Ensimmäisellä suorituskerralla `deploy` hakee monia _docker_ imageja, näistä ei tarvitse välittää.
-
 Fly tekee automaattisesti _health checkin_ projektille jokaisen julkaisun yhteydessä. Jos nämä testit eivät mene läpi, sovelluksen uuden version julkaisu perutaan ja palataan aiempaan versioon. Vastaasi tulee todennäköisesti seuraavanlainen virheviesti
 
 ```prompt
@@ -199,7 +195,7 @@ Fly tekee automaattisesti _health checkin_ projektille jokaisen julkaisun yhteyd
 2022-10-19T21:46:49Z   [info]sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
 ```
 
-Tämä johtuu `SQLAlchemy` kirjastossa version 1.3.23 jälkeen tapahtuneesta muutoksesta tietokantaosoitteen käsittelyssä. Kun se ennen hyväksyi sekä `postgresql://` että `postgres://` alkuiset osoitteet, sen uusimmat versiot hyväksyvät vain `postgresql://` alkuiset osoitteet. Fly antaa tietokannan osoitteen väärässä muodossa, joten simppeli korjaus tälle on määrittää tietokannan osoite koodissa seuraavanlaisesti ja tehdä uusi julkaisu
+Tämä johtuu `SQLAlchemy` kirjastossa version 1.3.23 jälkeen tapahtuneesta muutoksesta tietokantaosoitteen käsittelyssä. Kun se ennen hyväksyi sekä `postgresql://` että `postgres://` alkuiset osoitteet, sen uusimmat versiot hyväksyvät vain `postgresql://` alkuiset osoitteet. Fly antaa tietokannan osoitteen ''väärässä'' muodossa, joten simppeli korjaus tälle on määrittää tietokannan osoite koodissa seuraavanlaisesti ja tehdä uusi julkaisu
 
 ```python
 app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL").replace("://", "ql://", 1)
