@@ -16,7 +16,7 @@ Syksyn 2022 periodin 2 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaajat ovat Roosa Huttunen, Markus Kaihola ja Sani Kemppainen.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Tarkemmat ohjausajat ilmoitetaan pian.
+Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on saatavilla tiistaisin klo 14–16 sekä keskiviikkoisin klo 12–14 Exactumin salissa B221.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
