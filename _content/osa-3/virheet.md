@@ -66,10 +66,10 @@ The above exception was the direct cause of the following exception:
 
 Tästä näkee, että virheen syynä on `syntax error at or near "SELEC"` ja virhe ilmenee rivillä 15 tiedostossa `app.py`. Tällaisen tiedon avulla virhe on helppoa korjata.
 
-Jos sovellus aiheuttaa virheen Herokussa, vastaavan lokin saa Herokun komentorivityökalun avulla näkyviin seuraavasti:
+Jos sovellus aiheuttaa virheen Fly.iossa, vastaavan lokin saa Fly.ion komentorivityökalun avulla näkyviin seuraavasti:
 
 ```prompt
-$ heroku logs --tail
+$ fly logs
 ```
 
 Vaikein asia lokin lukemisessa on, että virheen sattuessa lokissa on yleensä paljon rivejä. Vaatii kokemusta tunnistaa, mitkä rivit ovat oleellisia virheen etsimisen kannalta. Yleensä kannattaa etsiä lokista virheilmoitusta sekä sovelluksen koodin riviä, jolla virhe tapahtui.
