@@ -66,7 +66,7 @@ The above exception was the direct cause of the following exception:
 
 Tästä näkee, että virheen syynä on `syntax error at or near "SELEC"` ja virhe ilmenee rivillä 15 tiedostossa `app.py`. Tällaisen tiedon avulla virhe on helppoa korjata.
 
-Jos sovellus aiheuttaa virheen Flyssa, vastaavan lokin saa Flyn komentorivityökalun avulla näkyviin seuraavasti:
+Jos sovellus aiheuttaa virheen Fly.iossa, vastaavan lokin saa Fly.ion komentorivityökalun avulla näkyviin seuraavasti:
 
 ```prompt
 $ fly logs

@@ -2,11 +2,11 @@
 
 Sovelluksen laittaminen _tuotantoon_ tarkoittaa, että sovellus julkaistaan käyttäjille. Tällä kurssilla harjoittelemme tuotantoon laittamista [Fly.io](https://fly.io)-palvelun avulla. Fly.io tarjoaa ilmaiseksi palvelintilaa, jonne voi sijoittaa muun muassa Flaskilla toteutetun web-sovelluksen.
 
-Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsovelluksen Fly.io:hon. Jotta voit käyttää Fly.io:a, sinun täytyy luoda ensin tunnus palveluun. Tunnuksen luominen on ilmaista, mutta huomaa, että Fly.io tarjoaa myös maksullisia palveluja. Voit myös kirjautua Github-tunnuksillasi.
+Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsovelluksen Fly.ioon. Jotta voit käyttää Fly.ioa, sinun täytyy luoda ensin tunnus palveluun. Tunnuksen luominen on ilmaista, mutta huomaa, että Fly.io tarjoaa myös maksullisia palveluja. Voit myös kirjautua Github-tunnuksillasi.
 
-Flyn ilmaisversiossa on tiettyjä rajoituksia erityisesti suorituskykyyn liittyen. Tämän kurssin puitteisiin ilmaisversion tarjoamat ominaisuudet kuitenkin riittävät oikein hyvin. Voit lukea niistä tarkemmin [täältä](https://fly.io/docs/about/pricing/) tai ilmaisten Postgres-tietokantojen rajoituksista [täältä](https://fly.io/docs/postgres/#about-free-postgres-on-fly-io).
+Flyn ilmaisversiossa on tiettyjä rajoituksia erityisesti suorituskykyyn liittyen. Tämän kurssin puitteisiin ilmaisversion tarjoamat ominaisuudet kuitenkin riittävät hyvin. Voit lukea palvelun rajoituksista tarkemmin [täältä](https://fly.io/docs/about/pricing/) sekä ilmaisten Postgres-tietokantojen rajoituksista [täältä](https://fly.io/docs/postgres/#about-free-postgres-on-fly-io).
 
-Flyssa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Fly.io:n sivuston [hallintapaneelin](https://fly.io/dashboard) kautta tai omalle koneelle asennettavan komentorivityökalun, jonka pääset asentamaan [täältä](https://fly.io/docs/hands-on/install-flyctl/), avulla. Huomaa asennuksen lopussa tuleva ohjeistus lisätä flyctl `PATH` ympäristömuuttujaan, pääset muokkaamaan tähän oikeaa tiedostoa esimerkiksi komennolla `gedit ~/.bashrc`. Lisää annetut rivit tiedoston loppuun. Seuraava ohje näyttää, miten itse komentorivityökalu toimii.
+Fly.iossa olevaa sovellusta voidaan hallinnoida kahdella tavalla: nettiselaimella Fly.ion sivuston [hallintapaneelin](https://fly.io/dashboard) kautta tai omalle koneelle asennettavan [komentorivityökalun](https://fly.io/docs/hands-on/install-flyctl/) avulla. Huomaa asennuksen lopussa tuleva ohjeistus lisätä flyctl `PATH`-ympäristömuuttujaan. Pääset muokkaamaan oikeaa tiedostoa esimerkiksi komennolla `gedit ~/.bashrc`. Lisää annetut rivit tiedoston loppuun. Seuraava ohje näyttää, miten komentorivityökalu toimii.
 
 ### Komentorivityökalu
 
@@ -22,7 +22,7 @@ Komento `fly help` näyttää listan komentorivityökalun komennoista. Vastaavas
 
 ### Sovelluksen luonti
 
-Komento `fly launch` luo uuden Fly-sovelluksen:
+Komento `fly launch` luo uuden Fly.io-sovelluksen:
 
 ```prompt
 $ fly launch
@@ -50,13 +50,13 @@ We have generated a simple Procfile for you. Modify it to fit your needs and run
 
 Komento pyytää käyttäjältä sovelluksen nimeä sekä palvelimen sijaintia. Palvelimen sijainniksi kannattaa valita Euroopan alueella sijaitseva palvelin, esimerkiksi Frankfurt.
 
-Jokaisella Flyssa olevalla sovelluksella tulee olla yksilöllinen nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Kuitenkaan et voi itse luoda tämän nimistä sovellusta, koska se on jo olemassa. Jos et anna sovellukselle nimeä, sille tulee automaattisesti satunnainen nimi. Jos teet sovelluksen vain kokeilua tai tätä kurssia varten, satunnainen nimi riittää hyvin.
+Jokaisella Fly.iossa olevalla sovelluksella tulee olla yksilöllinen nimi. Tämän materiaalin kirjoitushetkellä kukaan ei ollut luonut sovellusta nimellä `tsoha-visitors`, joten sovelluksen luonti onnistui. Kuitenkaan et voi itse luoda tämän nimistä sovellusta, koska se on jo olemassa. Jos et anna sovellukselle nimeä, sille tulee automaattisesti satunnainen nimi. Jos teet sovelluksen vain kokeilua tai tätä kurssia varten, satunnainen nimi riittää hyvin.
 
-Komento myös kysyy, luodaanko samalla projektille Postgres tietokanta. Älä kuitenkaan luo tietokantaa vielä tai saatat joutua ongelmiin tietokantaan yhdistämisen kanssa.
+Komento myös kysyy, luodaanko samalla projektille Postgres-tietokanta. Älä kuitenkaan luo tietokantaa vielä, tai saatat joutua ongelmiin tietokantaan yhdistämisen kanssa.
 
-Komento luo automaattisesti kaksi tiedostoa, joita Fly käyttää sovelluksen hallintaan palvelimella.
+Komento luo automaattisesti kaksi tiedostoa, joita Fly.io käyttää sovelluksen hallintaan palvelimella.
 
-Ensimmäinen tiedosto on `fly.toml`, jota Fly käyttää projektin konfigurointiin. Tiedostoon generoituu automaattisesti tarvittavat tiedot. Vaihdetaan kuitenkin sovelluksen portti vastaamaan Flaskin oletuksen käyttämää porttia `5000`. Muutetaan kohdat
+Ensimmäinen tiedosto on `fly.toml`, jota Fly.io käyttää projektin konfigurointiin. Tiedostoon generoituu automaattisesti tarvittavat tiedot. Vaihdetaan kuitenkin sovelluksen portti vastaamaan Flaskin oletuksena käyttämää porttia `5000`. Muutetaan kohdat
 
 ```
 [env]
@@ -76,7 +76,7 @@ muotoon
   internal_port = 5000
 ```
 
-Toinen tiedosto on nimeltään `Procfile`, jota käytetään sovelluksen käynnistämiseen. Joudumme muokkaamaan sitäkin hieman, sisältö on aluksi seuraava:
+Toinen tiedosto on nimeltään `Procfile`, jota käytetään sovelluksen käynnistämiseen. Joudumme muokkaamaan sitäkin hieman. Tiedoston sisältö on aluksi seuraava:
 
 ```
 # Modify this Procfile to fit your needs
@@ -89,7 +89,7 @@ Muutetaan se muotoon
 web: gunicorn app:app
 ```
 
-Tiedostossa oleva komento `gunicorn app:app` on vastuussa sovelluksen käynnistämisestä tuotantopalvelimella. Tähän asti olemme paikallisesti käyttäneet tähän komentoa `flask run`, mutta sitä ei suositella käytettäväksi tuotannossa, joten käytetään siihen tuotantoversiossa `gunicorn`ia. Määrittelimme nyt, että tyyppiä "web" oleva sovellus käynnistetään komennolla `gunicorn app:app`. Tässä ensimmäinen `app` viittaa moduulin nimeen `app.py` ja toinen `app` viittaa koodissa luotavan Flask-olion nimeen.
+Tiedostossa oleva komento `gunicorn app:app` on vastuussa sovelluksen käynnistämisestä tuotantopalvelimella. Tähän asti olemme paikallisesti käyttäneet tähän komentoa `flask run`, mutta sitä ei suositella käytettäväksi tuotannossa, joten käytetään siihen tuotantoversiossa gunicornia. Määrittelimme nyt, että tyyppiä "web" oleva sovellus käynnistetään komennolla `gunicorn app:app`. Tässä ensimmäinen `app` viittaa moduulin nimeen `app.py` ja toinen `app` viittaa koodissa luotavan Flask-olion nimeen.
 
 Tätä varten asennetaan projektiin vielä `gunicorn`:
 
@@ -115,7 +115,7 @@ $ git push
 
 ### Tietokanta ja ympäristömuuttujat
 
-Luodaan seuraavaksi sovellukselle tietokanta komennolla `fly postgres create`. Komento kysyy sovellukselle nimeä (tietokanta on erillinen Fly-sovelluksensa), sijaintia sekä kuinka tehokkaan tietokannan haluaa luoda. Alueeksi kannattaa valita sama, jossa varsinainen sovelluksesi sijaitsee.
+Luodaan seuraavaksi sovellukselle tietokanta komennolla `fly postgres create`. Komento kysyy sovellukselle nimeä (tietokanta on erillinen Fly.io-sovelluksensa), sijaintia sekä kuinka tehokkaan tietokannan haluaa luoda. Alueeksi kannattaa valita sama, jossa varsinainen sovelluksesi sijaitsee.
 
 ```prompt
 $ fly postgres create
@@ -172,7 +172,7 @@ NAME        	DIGEST          	CREATED AT
 DATABASE_URL	e26ed699c4d898b8	1h29m ago
 ```
 
-Fly ei paljasta ympäristömuuttujien sisältöä, näet vain minkä nimisiä muuttujia projektissa on.
+Fly.io ei paljasta ympäristömuuttujien sisältöä, vaan näet vain, minkä nimisiä muuttujia projektissa on.
 
 Voimme myös asettaa ympäristömuuttujia tarvittaessa itse. Esimerkiksi istuntojen käyttäminen vaatii muuttujan `SECRET_KEY` asettamista, mikä onnistuu näin:
 
@@ -188,20 +188,20 @@ Nyt kaikki alkaa olla valmista ja voimme julkaista sovelluksen:
 $ fly deploy
 ```
 
-Fly tekee automaattisesti _health checkin_ projektille jokaisen julkaisun yhteydessä. Jos nämä testit eivät mene läpi, sovelluksen uuden version julkaisu perutaan ja palataan aiempaan versioon. Vastaasi tulee todennäköisesti seuraavanlainen virheviesti
+Fly.io tekee automaattisesti _health checkin_ projektille jokaisen julkaisun yhteydessä. Jos nämä testit eivät mene läpi, sovelluksen uuden version julkaisu perutaan ja palataan aiempaan versioon. Vastaasi tulee todennäköisesti seuraavanlainen virheviesti:
 
 ```prompt
 2022-10-19T21:46:49Z   [info]    raise exc.NoSuchModuleError(
 2022-10-19T21:46:49Z   [info]sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
 ```
 
-Tämä johtuu `SQLAlchemy` kirjastossa version 1.3.23 jälkeen tapahtuneesta muutoksesta tietokantaosoitteen käsittelyssä. Kun se ennen hyväksyi sekä `postgresql://` että `postgres://` alkuiset osoitteet, sen uusimmat versiot hyväksyvät vain `postgresql://` alkuiset osoitteet. Fly antaa tietokannan osoitteen ''väärässä'' muodossa, joten simppeli korjaus tälle on määrittää tietokannan osoite koodissa seuraavanlaisesti ja tehdä uusi julkaisu
+Tämä johtuu `SQLAlchemy`-kirjastossa version 1.3.23 jälkeen tapahtuneesta muutoksesta tietokantaosoitteen käsittelyssä. Kun se ennen hyväksyi sekä `postgresql://`- että `postgres://`-alkuiset osoitteet, sen uusimmat versiot hyväksyvät vain `postgresql://`-alkuiset osoitteet. Fly.io antaa tietokannan osoitteen ''väärässä'' muodossa, joten helppo korjaus tälle on määrittää tietokannan osoite koodissa seuraavanlaisesti ja tehdä uusi julkaisu.
 
 ```python
 app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL").replace("://", "ql://", 1)
 ```
 
-Toinen vaihtoehto olisi päivittää `SQLAlchemy`n versio _requirements.txt_ tiedostossa versioon 1.3.23, mutta se tarkoittaisi myös `Flask-SQLAlchemy` kirjaston version päivittämistä versioon 2.x.x.
+Toinen vaihtoehto olisi päivittää SQLAlchemyn versio `requirements.txt`-tiedostossa versioon 1.3.23, mutta tämä tarkoittaisi myös Flask-SQLAlchemy-kirjaston version päivittämistä versioon 2.x.x.
 
 Kun sovellus on julkaistu, voimme avata sen selaimeen
 
