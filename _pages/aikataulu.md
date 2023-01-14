@@ -16,7 +16,7 @@ Kevään 2023 periodin 3 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaajat ovat Roosa Huttunen, Markus Kaihola ja Sani Kemppainen.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Tarkemmat ohjausajat ilmoitetaan myöhemmin.
+Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on Exactumin salissa BK107 maanantaisin klo 15–17, keskiviikkoisin klo 14–16 sekä torstaisin klo 16–18.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
