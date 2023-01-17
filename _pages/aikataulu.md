@@ -73,22 +73,22 @@ SECRET_KEY=<salainen-avain>
 
 Seuraavaksi aktivoi virtuaaliympäristö ja asenna sovelluksen riippuvuudet komennoilla
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r ./requirements.txt
+```prompt
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install -r ./requirements.txt
 ```
 
 Määritä vielä tietokannan skeema komennolla
 
-```bash
-psql < schema.sql
+```prompt
+$ psql < schema.sql
 ```
 
 Nyt voit käynnistää sovelluksen komennolla
 
-```bash
-flask run
+```prompt
+$ flask run
 ```
 
 ## Ohjeita
