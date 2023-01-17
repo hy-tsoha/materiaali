@@ -55,6 +55,42 @@ Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin oh
 * Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.
 * Anna lisäksi [kurssipalaute](https://coursefeedback.helsinki.fi/targets/48400008) palautuksen deadlineen mennessä.
 
+## Huomio Fly.iosta
+
+Koska Fly.io vaatii ilmaisiinkin sovelluksiin maksutietojen syöttämisen palveluun, kurssilla ei toistaiseksi vaadita sovelluksen viemistä tuotantoon.
+Halutessasi voit viedä sovelluksesi Fly.ioon materiaalin osan 3 [ohjeiden](/materiaali/osa-3) mukaan.
+
+Jos sovelluksesi ei ole testattavissa Fly.iossa, mainitsehan asiasta `README.md`-tiedostossa ja lisäät ohjeet sovelluksen käynnistämiseen paikallisesti, jotta ohjaajat ja vertaisarvioijat pystyvät testaamaan sovellustasi. Alla on esimerkki ohjeista sovelluksen paikalliseen käyttöön.
+
+### Esimerkki käynnistysohjeista
+
+Kloonaa tämä repositorio omalle koneellesi ja siirry sen juurikansioon. Luo kansioon `.env`-tiedosto ja määritä sen sisältö seuraavanlaiseksi:
+
+```
+DATABASE_URL=<tietokannan-paikallinen-osoite>
+SECRET_KEY=<salainen-avain>
+```
+
+Seuraavaksi aktivoi virtuaaliympäristö ja asenna sovelluksen riippuvuudet komennoilla
+
+```prompt
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install -r ./requirements.txt
+```
+
+Määritä vielä tietokannan skeema komennolla
+
+```prompt
+$ psql < schema.sql
+```
+
+Nyt voit käynnistää sovelluksen komennolla
+
+```prompt
+$ flask run
+```
+
 ## Ohjeita
 
 * Ennen sovelluksen toteuttamisen aloittamista sinun kannattaa tutustua huolellisesti kurssisivuston materiaaliin ja tehdä pieniä kokeiluja, jotta saat harjoiteltua kurssilla käytettyjä tekniikoita.

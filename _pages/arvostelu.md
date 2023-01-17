@@ -17,6 +17,9 @@ Tutustu myös [tekniseen tarkastuslistaan]({% link _pages/tekninen_tarkastuslist
 * Sovelluksessa on tietokanta, jossa on noin 5–10 taulua
 * Tietokantaa käsitellään monipuolisesti SQL-komennoilla
 
+<mark>HUOM! 3. periodissa sovelluksen ei tarvitse olla testattavissa tuotantopalvelimella. Riittää, että sen saa käynnistettyä paikallisesti.
+Lisätietoja <a href="/materiaali/aikataulu#huomio-flyiosta">täällä</a>.</mark>
+
 ### Toimivuus ja käytettävyys
 
 * Sovellus toimii, kun käyttäjä testaa sitä
