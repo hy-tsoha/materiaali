@@ -33,3 +33,5 @@ $ psql -d <tietokannan-nimi> < schema.sql
 ```
 
 Määritä vielä tietokannan osoite projektille siten, että osoite päättyy luomasi tietokannan nimeen.
+Esimerkiksi, jos omalla sovelluksellasi osoite on muotoa `postgresql:///user` ja loit vertaisarviontia varten tietokannan nimeltä `testi`,
+tulisi uudeksi tietokannan osoitteeksi `postgresql:///testi`.

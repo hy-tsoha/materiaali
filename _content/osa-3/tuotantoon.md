@@ -2,6 +2,9 @@
 
 Sovelluksen laittaminen _tuotantoon_ tarkoittaa, että sovellus julkaistaan käyttäjille. Tällä kurssilla harjoittelemme tuotantoon laittamista [Fly.io](https://fly.io)-palvelun avulla. Fly.io tarjoaa ilmaiseksi palvelintilaa, jonne voi sijoittaa muun muassa Flaskilla toteutetun web-sovelluksen.
 
+<mark>HUOM! 3. periodissa sovelluksen ei tarvitse olla testattavissa tuotantopalvelimella. Riittää, että sen saa käynnistettyä paikallisesti.
+Lisätietoja <a href="/materiaali/aikataulu#huomio-flyiosta">täällä</a>.</mark>
+
 Käymme läpi seuraavaksi esimerkin, jossa siirrämme äsken luodun kävijäsovelluksen Fly.ioon. Jotta voit käyttää Fly.ioa, sinun täytyy luoda ensin tunnus palveluun. Tunnuksen luominen on ilmaista, mutta huomaa, että Fly.io tarjoaa myös maksullisia palveluja. Voit myös kirjautua Github-tunnuksillasi.
 
 Flyn ilmaisversiossa on tiettyjä rajoituksia erityisesti suorituskykyyn liittyen. Tämän kurssin puitteisiin ilmaisversion tarjoamat ominaisuudet kuitenkin riittävät hyvin. Voit lukea palvelun rajoituksista tarkemmin [täältä](https://fly.io/docs/about/pricing/) sekä ilmaisten Postgres-tietokantojen rajoituksista [täältä](https://fly.io/docs/postgres/#about-free-postgres-on-fly-io).
