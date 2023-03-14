@@ -14,9 +14,9 @@ Kevään 2023 periodin 4 ryhmän aikataulu on seuraava:
 | ke 26.4.2023 | Vertaisarvioinnin deadline |
 | su 7.5.2023 | Lopullinen palautus |
 
-Ryhmän ohjaajat ilmoitetaan myöhemmin.
+Ryhmän ohjaajat ovat Roosa Huttunen, Markus Kaihola, Sani Kemppainen ja Johannes Pyykönen.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausajat ilmoitetaan myöhemmin.
+Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on tarjolla Exactumin salissa BK107 tiistaisin klo 16–18, keskiviikkoisin klo 14–16 sekä torstaisin klo 11:30–13:30.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
