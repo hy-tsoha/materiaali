@@ -16,7 +16,7 @@ Alkukesän 2023 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaaja on Ekaterina Khlebova.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausajat ilmoitetaan myöhemmin.
+Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on Telegramissa tiistaisin välillä 10–12.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
