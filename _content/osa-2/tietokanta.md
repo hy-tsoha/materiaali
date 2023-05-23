@@ -133,7 +133,7 @@ Viesti: <br>
 </form>
 ```
 
-Huom! SQLALchemy-kirjaston eri versiot toimivat vähän eri tavalla, eikä yllä oleva koodi välttämättä toimi. Jos koodi ei toimi, kokeile lisätä koodin alkuun
+Huomaa, että yllä oleva koodi ei välttämättä toimi SQLALchemy-kirjaston uusissa versioissa. Jos koodi ei toimi, kokeile lisätä koodin alkuun
 
 ```python
 from sqlalchemy.sql import text
