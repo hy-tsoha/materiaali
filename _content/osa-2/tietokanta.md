@@ -133,6 +133,18 @@ Viesti: <br>
 </form>
 ```
 
+Huom! SQLALchemy-kirjaston eri versiot toimivat vähän eri tavalla, eikä yllä oleva koodi välttämättä toimi. Jos koodi ei toimi, kokeile lisätä koodin alkuun
+
+```python
+from sqlalchemy.sql import text
+```
+
+sekä `execute`-funktion kutsuissa SQL-komennon ympärille funktio `text` seuraavaan tapaan:
+
+```python
+    result = db.session.execute(text("SELECT content FROM messages"))
+```
+
 Sovelluksen käyttäminen voi näyttää tältä:
 
 <img class="screenshot" src="../assets/osa-2/viestit1.png">
