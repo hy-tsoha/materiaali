@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tieto&shy;kanta&shy;sovellus
+title: Tietokannat ja web-ohjelmointi
 ---
 
 Tietokannat ja web-ohjelmointi on tietojenkäsittelytieteen harjoitustyökurssi, jossa toteutetaan tietokantaa käyttävä web-sovellus. Kurssin laajuus on 4 op ja sen esitietokurssit ovat _Ohjelmoinnin perusteet_, _Ohjelmoinnin jatkokurssi_ sekä _Tietokantojen perusteet_.
