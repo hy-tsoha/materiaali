@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Syksyn 2023 ryhmän aikataulu on seuraava:
 
-| ti 5.9.2023 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/64260982103?pwd=Wk53ZHhmOElWRkxhZ2tBT3J3SS9Mdz09)) |
+| ti 5.9.2023 | Aloitusluento 16:15 alkaen ([Luentotallenne](https://www.helsinki.fi/fi/unitube/video/7c0b6d8b-c807-40b1-857b-d4e8f1aa238a)) |
 | su 10.9.2023 | Välipalautus 1 |
 | su 24.9.2023 | Välipalautus 2 |
 | pe 29.9.2023 | Vertaisarvioinnin deadline |
