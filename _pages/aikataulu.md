@@ -4,19 +4,19 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Loppukesän 2023 ryhmän aikataulu on seuraava:
+Syksyn 2023 ryhmän aikataulu on seuraava:
 
-| ma 17.7.2023 | Aloitusluento 10:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/61285852675)) |
-| su 23.7.2023 | Välipalautus 1 |
-| su 6.8.2023 | Välipalautus 2 |
-| pe 11.8.2023 | Vertaisarvioinnin deadline |
-| su 20.8.2023 | Välipalautus 3 |
-| pe 25.8.2023 | Vertaisarvioinnin deadline |
-| su 3.9.2023 | Lopullinen palautus |
+| ti 5.9.2023 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/64260982103?pwd=Wk53ZHhmOElWRkxhZ2tBT3J3SS9Mdz09)) |
+| su 10.9.2023 | Välipalautus 1 |
+| su 24.9.2023 | Välipalautus 2 |
+| pe 29.9.2023 | Vertaisarvioinnin deadline |
+| su 8.10.2023 | Välipalautus 3 |
+| pe 13.10.2023 | Vertaisarvioinnin deadline |
+| su 22.10.2023 | Lopullinen palautus |
 
-Ryhmän ohjaaja on Ekaterina Khlebova.
+Ryhmän ohjaajat ilmoitetaan myöhemmin.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausta on Telegramissa tiistaisin välillä 10–12.
+Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausajat ilmoitetaan myöhemmin.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
@@ -28,7 +28,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?]({% link _pages/aiheen_valinta.md %}) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
-* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20011.2023.V.A.1) ja ilmoita siellä projektisi GitHub-osoite.
+* Kirjaudu Labtooliin (linkki tulee tähän myöhemmin) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
@@ -53,7 +53,7 @@ Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin oh
 * Kurssi arvostellaan tämän sovelluksen version perusteella.
 * `README.md`-tiedoston tulee kuvata, millainen lopullinen sovellus on ja miten sitä pystyy testaamaan tuotannossa.
 * Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.
-* Anna lisäksi [kurssipalaute](https://coursefeedback.helsinki.fi/targets/70060747) palautuksen deadlineen mennessä.
+* Anna lisäksi [kurssipalaute](https://norppa.helsinki.fi/targets/72437208) palautuksen deadlineen mennessä.
 
 ## Huomio Fly.iosta
 
@@ -94,7 +94,7 @@ $ flask run
 ## Ohjeita
 
 * Ennen sovelluksen toteuttamisen aloittamista sinun kannattaa tutustua huolellisesti kurssisivuston materiaaliin ja tehdä pieniä kokeiluja, jotta saat harjoiteltua kurssilla käytettyjä tekniikoita.
-* Neuvoja tietokannan suunnitteluun löydät kurssin _Tietokantojen perusteet_ materiaalista. Erityisesti kurssin materiaalin [luku 6](https://tikape.mooc.fi/kevat-2023/content/osa-6/) on hyödyllinen.
+* Neuvoja tietokannan suunnitteluun löydät kurssin _Tietokantojen perusteet_ materiaalista. Erityisesti kurssin materiaalin [luku 6](https://tikape.mooc.fi/syksy-2023/content/osa-6/) on hyödyllinen.
 * Sovellus ja tietokanta rakentuvat pikkuhiljaa ja niihin tulee muutoksia. Kannattaa aloittaa yksinkertaisesta ja muuttaa rakennetta tarvittaessa myöhemmin.
 * Palautuksissa ohjaaja tutustuu projektiisi GitHubin ja Fly.io:n kautta. Pidä huoli siitä, että sovelluksen ajantasainen versio on saatavilla näissä paikoissa.
 * Sovelluksen dokumentaatio luodaan tiedostoon `README.md`, joka näkyy GitHubissa projektin etusivulla. Kirjoita dokumentaatio sellaista henkilöä varten, joka haluaa saada käsityksen sovelluksesta ja mahdollisesti ottaa sen käyttöön itse tai kehittää sovellusta.
