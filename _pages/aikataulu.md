@@ -14,9 +14,9 @@ Syksyn 2023 ryhmän aikataulu on seuraava:
 | pe 13.10.2023 | Vertaisarvioinnin deadline |
 | su 22.10.2023 | Lopullinen palautus |
 
-Ryhmän ohjaajat ilmoitetaan myöhemmin.
+Ryhmän ohjaajat ovat Joonatan Huang, Markus Kaihola ja Sani Kemppainen.
 
-Kurssin ohjausta järjestetään kurssin toisesta viikosta alkaen. Ohjausajat ilmoitetaan myöhemmin.
+Kurssin ohjausta järjestetään kurssin Telegram-ryhmässä, jossa on paikalla kurssin ohjaajia ja opiskelijoita.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
