@@ -12,7 +12,7 @@ Macilla helppo tapa saada PostgreSQL käyttöön on [Postgres.app](https://postg
 
 ### PostgreSQL-tulkki
 
-Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun `messages`, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
+Tietokannan asennuksen jälkeen komento `psql` avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Huomaa, että tietokannan tulee olla käynnissä, kun suoritat komennon. Jos asensit PostgreSQL:n yllä mainitulla asennusskriptillä, saat tietokannan käyntiin toisessa komentorivi-ikkunassa komennolla `start-pg.sh`. Esimerkiksi voimme luoda seuraavasti taulun `messages`, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:
 
 ```prompt
 $ psql
@@ -81,7 +81,7 @@ Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan _osoi
 
 Huomaa, että vaadittu tapa antaa tietokannan osoite riippuu siitä, mikä järjestelmä on käytössä ja miten PostgreSQL on asennettu. Jos asensit PostgreSQL:n tämän kurssin asennusskriptillä, voit käyttää osoitetta `postgresql+psycopg2://`. Lisää tietoa tietokannan osoitteen muodostumisesta on [PostgreSQL:n dokumentaatiossa](https://www.postgresql.org/docs/12/libpq-connect.html#LIBPQ-CONNSTRING) 
 
-Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellus olettaa, että tietokannassa on äsken luomamme `messages`-taulu.
+Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellus olettaa, että tietokannassa on äsken luomamme `messages`-taulu. Muista pitää myös tietokanta käynnissä, kun käynnistät sovelluksen.
 
 <p class="code-title">app.py</p>
 ```python
