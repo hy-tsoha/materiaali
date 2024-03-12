@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Kevään 2024 periodin 4 ryhmän aikataulu on seuraava:
 
-| ti 12.3.2024 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/61493431710?pwd=SkQzZk9HVVRLMGlWb1pGc1BRUkRvUT09)) |
+| ti 12.3.2024 | Aloitusluento 16:15 alkaen ([Luentotallenne](https://www.helsinki.fi/fi/unitube/video/9905a0ff-0d1b-4447-89e5-b7fbcf6c9c7a)) |
 | su 17.3.2024 | Välipalautus 1 |
 | su 7.4.2024 | Välipalautus 2 |
 | pe 12.4.2024 | Vertaisarvioinnin deadline |
