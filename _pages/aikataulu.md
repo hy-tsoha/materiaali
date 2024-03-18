@@ -14,7 +14,7 @@ Kevään 2024 periodin 4 ryhmän aikataulu on seuraava:
 | pe 26.4.2024 | Vertaisarvioinnin deadline |
 | su 5.5.2024 | Lopullinen palautus |
 
-Ryhmän ohjaajat ovat Markus Kaihola, Sani Kemppainen ja Erik Peteri.
+Ryhmän ohjaajat ovat Markus Kaihola, Sani Kemppainen, Miska Pajukangas ja Erik Peteri.
 
 Voit kysyä kurssiin liittyvistä asioista kurssin Telegram-ryhmässä, jossa on paikalla kurssin ohjaajia. Kurssilla on lisäksi tarjolla pajaohjausta maanantaisin, torstaisin ja perjantaisin klo 13–16 Exactumissa (BK107).
 
