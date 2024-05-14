@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Alkukesän 2024 ryhmän aikataulu on seuraava:
 
-| ti 14.5.2024 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/65113424481?pwd=a21RSjFONHU0QUVxMVVJZURBdmltQT09)) |
+| ti 14.5.2024 | Aloitusluento 16:15 alkaen ([Luentotallenne](https://www.helsinki.fi/fi/unitube/video/160ef938-2779-4c57-bd16-9828b638140b)) |
 | su 19.5.2024 | Välipalautus 1 |
 | su 2.6.2024 | Välipalautus 2 |
 | pe 7.6.2024 | Vertaisarvioinnin deadline |
