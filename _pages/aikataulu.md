@@ -4,15 +4,15 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Alkukesän 2024 ryhmän aikataulu on seuraava:
+Loppukesän 2024 ryhmän aikataulu on seuraava:
 
-| ti 14.5.2024 | Aloitusluento 16:15 alkaen ([Luentotallenne](https://www.helsinki.fi/fi/unitube/video/160ef938-2779-4c57-bd16-9828b638140b)) |
-| su 19.5.2024 | Välipalautus 1 |
-| su 2.6.2024 | Välipalautus 2 |
-| pe 7.6.2024 | Vertaisarvioinnin deadline |
-| su 16.6.2024 | Välipalautus 3 |
-| pe 21.6.2024 | Vertaisarvioinnin deadline |
-| su 30.6.2024 | Lopullinen palautus |
+| ti 16.7.2024 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/68586388260?pwd=GUwkHbZwB4fPAAaFUlzydPjpIG8f94.1)) |
+| su 21.7.2024 | Välipalautus 1 |
+| su 4.8.2024 | Välipalautus 2 |
+| pe 9.8.2024 | Vertaisarvioinnin deadline |
+| su 18.8.2024 | Välipalautus 3 |
+| pe 23.8.2024 | Vertaisarvioinnin deadline |
+| su 1.9.2024 | Lopullinen palautus |
 
 Ryhmän ohjaaja on Miska Pajukangas.
 
@@ -28,7 +28,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?]({% link _pages/aiheen_valinta.md %}) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
-* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20019.2024.V.K.1) ja ilmoita siellä projektisi GitHub-osoite.
+* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20019.2024.V.K.2) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
@@ -53,7 +53,7 @@ Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin oh
 * Kurssi arvostellaan tämän sovelluksen version perusteella.
 * `README.md`-tiedoston tulee kuvata, millainen lopullinen sovellus on ja miten sitä pystyy testaamaan tuotannossa.
 * Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.
-* Anna lisäksi [kurssipalaute](https://norppa.helsinki.fi/targets/72437055) palautuksen deadlineen mennessä.
+* Anna lisäksi [kurssipalaute](https://norppa.helsinki.fi/targets/80055892) palautuksen deadlineen mennessä.
 
 ## Huomio Fly.iosta
 
