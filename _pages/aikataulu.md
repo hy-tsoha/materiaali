@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Loppukesän 2024 ryhmän aikataulu on seuraava:
 
-| ti 16.7.2024 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/68586388260?pwd=GUwkHbZwB4fPAAaFUlzydPjpIG8f94.1)) |
+| ti 16.7.2024 | Aloitusluento 16:15 alkaen ([Luentotallenne](https://www.helsinki.fi/fi/unitube/video/afa2187c-54c8-4ce8-be69-95b4b70ede46)) |
 | su 21.7.2024 | Välipalautus 1 |
 | su 4.8.2024 | Välipalautus 2 |
 | pe 9.8.2024 | Vertaisarvioinnin deadline |
