@@ -4,19 +4,19 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Loppukesän 2024 ryhmän aikataulu on seuraava:
+Syksyn 2024 periodin 1 ryhmän aikataulu on seuraava:
 
-| ti 16.7.2024 | Aloitusluento 16:15 alkaen ([Luentotallenne](https://www.helsinki.fi/fi/unitube/video/afa2187c-54c8-4ce8-be69-95b4b70ede46)) |
-| su 21.7.2024 | Välipalautus 1 |
-| su 4.8.2024 | Välipalautus 2 |
-| pe 9.8.2024 | Vertaisarvioinnin deadline |
-| su 18.8.2024 | Välipalautus 3 |
-| pe 23.8.2024 | Vertaisarvioinnin deadline |
-| su 1.9.2024 | Lopullinen palautus |
+| ti 3.9.2024 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/67189490756?pwd=3I79DTzkAB09W06GTQQbGf6kxk0TB8.1)) |
+| su 8.9.2024 | Välipalautus 1 |
+| su 22.9.2024 | Välipalautus 2 |
+| pe 27.9.2024 | Vertaisarvioinnin deadline |
+| su 6.10.2024 | Välipalautus 3 |
+| pe 11.10.2024 | Vertaisarvioinnin deadline |
+| su 20.10.2024 | Lopullinen palautus |
 
-Ryhmän ohjaaja on Miska Pajukangas.
+Ryhmän ohjaajat ovat Markus Kaihola, Sani Kemppainen, Miska Pajukangas ja Erik Peteri.
 
-Voit kysyä kurssiin liittyvistä asioista kurssin Telegram-ryhmässä, jossa on paikalla kurssin ohjaajia.
+Voit kysyä kurssiin liittyvistä asioista kurssin Telegram-ryhmässä, jossa on paikalla kurssin ohjaajia. Kurssilla on myös tarjolla pajaohjausta, jonka aikataulu ilmoitetaan myöhemmin.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
@@ -28,7 +28,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?]({% link _pages/aiheen_valinta.md %}) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
-* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20019.2024.V.K.2) ja ilmoita siellä projektisi GitHub-osoite.
+* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20019.2024.S.K.2) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
@@ -53,7 +53,7 @@ Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin oh
 * Kurssi arvostellaan tämän sovelluksen version perusteella.
 * `README.md`-tiedoston tulee kuvata, millainen lopullinen sovellus on ja miten sitä pystyy testaamaan tuotannossa.
 * Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.
-* Anna lisäksi [kurssipalaute](https://norppa.helsinki.fi/targets/80055892) palautuksen deadlineen mennessä.
+* Anna lisäksi [kurssipalaute](https://norppa.helsinki.fi/targets/84704287) palautuksen deadlineen mennessä.
 
 ## Huomio Fly.iosta
 
@@ -94,7 +94,7 @@ $ flask run
 ## Ohjeita
 
 * Ennen sovelluksen toteuttamisen aloittamista sinun kannattaa tutustua huolellisesti kurssisivuston materiaaliin ja tehdä pieniä kokeiluja, jotta saat harjoiteltua kurssilla käytettyjä tekniikoita.
-* Neuvoja tietokannan suunnitteluun löydät kurssin _Tietokantojen perusteet_ materiaalista. Erityisesti kurssin materiaalin [luku 6](https://tikape.mooc.fi/kevat-2024/osa6/) on hyödyllinen.
+* Neuvoja tietokannan suunnitteluun löydät kurssin _Tietokantojen perusteet_ materiaalista. Erityisesti kurssin materiaalin [luku 6](https://tikape.mooc.fi/syksy-2024/osa6/) on hyödyllinen.
 * Sovellus ja tietokanta rakentuvat pikkuhiljaa ja niihin tulee muutoksia. Kannattaa aloittaa yksinkertaisesta ja muuttaa rakennetta tarvittaessa myöhemmin.
 * Palautuksissa ohjaaja tutustuu projektiisi GitHubin ja Fly.io:n kautta. Pidä huoli siitä, että sovelluksen ajantasainen versio on saatavilla näissä paikoissa.
 * Sovelluksen dokumentaatio luodaan tiedostoon `README.md`, joka näkyy GitHubissa projektin etusivulla. Kirjoita dokumentaatio sellaista henkilöä varten, joka haluaa saada käsityksen sovelluksesta ja mahdollisesti ottaa sen käyttöön itse tai kehittää sovellusta.
