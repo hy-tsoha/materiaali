@@ -16,7 +16,7 @@ Syksyn 2024 periodin 1 ryhmän aikataulu on seuraava:
 
 Ryhmän ohjaajat ovat Markus Kaihola, Sani Kemppainen, Miska Pajukangas ja Erik Peteri.
 
-Voit kysyä kurssiin liittyvistä asioista kurssin Telegram-ryhmässä, jossa on paikalla kurssin ohjaajia. Kurssilla on myös tarjolla pajaohjausta, jonka aikataulu ilmoitetaan myöhemmin.
+Voit kysyä kurssiin liittyvistä asioista kurssin Telegram-ryhmässä, jossa on paikalla kurssin ohjaajia. Kurssilla on myös tarjolla pajaohjausta Exactumin salissa BK107 tiistaisin, torstaisin ja perjantaisin klo 14–18.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
