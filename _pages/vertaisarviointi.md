@@ -19,7 +19,7 @@ Huomaa, että "Hyvältä näyttää" tms. ei ole riittävä raportti. Jos työ o
 
 Kun saat palautteen työstäsi toiselta opiskelijalta, mieti, miten voisit parantaa työtä palautteen avulla. Usein ulkopuolinen huomaa asioita, joihin ei ole kiinnittänyt itse huomiota. Kuitenkin voi olla myös, että ei kannata noudattaa palautteen neuvoja.
 
-Jos yrität käynnistää vertaisarviotavaa sovellusta paikallisesti, ota huomioon, että vertaisarviotavassa sovelluksessa saattaa olla samannimisiä tietokantatauluja kuin omassa sovelluksessasi. Tämä voi aiheuttaa ongelmia, kun yrität määrittää vertaisarviotavan projektin tietokantaskeemaa. Voit luoda vertaisarviointia varten Postgresiin oman tietokannan seuraavasti:
+Jos yrität käynnistää vertaisarvioitavaa sovellusta paikallisesti, ota huomioon, että vertaisarvioitavassa sovelluksessa saattaa olla samannimisiä tietokantatauluja kuin omassa sovelluksessasi. Tämä voi aiheuttaa ongelmia, kun yrität määrittää vertaisarviotavan projektin tietokantaskeemaa. Voit luoda vertaisarviointia varten Postgresiin oman tietokannan seuraavasti:
 
 ```prompt
 $ psql
