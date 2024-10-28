@@ -4,19 +4,19 @@ title: Aikataulu ja ohjeet
 
 # Aikataulu ja ohjeet
 
-Syksyn 2024 periodin 1 ryhmän aikataulu on seuraava:
+Syksyn 2024 periodin 2 ryhmän aikataulu on seuraava:
 
-| ti 3.9.2024 | Aloitusluento 16:15 alkaen ([Luentonauhoite](https://www.helsinki.fi/fi/unitube/video/45eb5810-c272-4089-ac58-d04fb7b86edf)) |
-| su 8.9.2024 | Välipalautus 1 |
-| su 22.9.2024 | Välipalautus 2 |
-| pe 27.9.2024 | Vertaisarvioinnin deadline |
-| su 6.10.2024 | Välipalautus 3 |
-| pe 11.10.2024 | Vertaisarvioinnin deadline |
-| su 20.10.2024 | Lopullinen palautus |
+| ti 29.10.2024 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/65647055598?pwd=tQ0WZGxDX51GdI3WiLBkaUZR4pKprP.1)) |
+| su 3.11.2024 | Välipalautus 1 |
+| su 17.11.2024 | Välipalautus 2 |
+| pe 22.11.2024 | Vertaisarvioinnin deadline |
+| su 1.12.2024 | Välipalautus 3 |
+| pe 6.12.2024 | Vertaisarvioinnin deadline |
+| su 15.12.2024 | Lopullinen palautus |
 
 Ryhmän ohjaajat ovat Markus Kaihola, Sani Kemppainen, Miska Pajukangas ja Erik Peteri.
 
-Voit kysyä kurssiin liittyvistä asioista kurssin Telegram-ryhmässä, jossa on paikalla kurssin ohjaajia. Kurssilla on myös tarjolla pajaohjausta Exactumin salissa BK107 tiistaisin, torstaisin ja perjantaisin klo 14–18.
+Voit kysyä kurssiin liittyvistä asioista kurssin Telegram-ryhmässä, jossa on paikalla kurssin ohjaajia. Kurssilla on myös tarjolla pajaohjausta Exactumin salissa BK107 tiistaisin ja torstaisin klo 14–18.
 
 Löydät [arvostelusivulta]({% link _pages/arvostelu.md %}) tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.
 
@@ -28,7 +28,7 @@ Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautust
 
 * Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.
 * Valitse projektille aihe ja kirjoita `README.md`-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. [Kuinka valita aihe?]({% link _pages/aiheen_valinta.md %}) Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.
-* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20019.2024.S.K.2) ja ilmoita siellä projektisi GitHub-osoite.
+* Kirjaudu [Labtooliin](https://study.cs.helsinki.fi/labtool/courses/TKT20019.2024.S.K.1) ja ilmoita siellä projektisi GitHub-osoite.
 * Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.
 
 ### Välipalautus 2
@@ -53,7 +53,7 @@ Linkin katselmoitavaan repositorioon löydät Labtoolista. [Vertaisarvioinnin oh
 * Kurssi arvostellaan tämän sovelluksen version perusteella.
 * `README.md`-tiedoston tulee kuvata, millainen lopullinen sovellus on ja miten sitä pystyy testaamaan tuotannossa.
 * Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.
-* Anna lisäksi [kurssipalaute](https://norppa.helsinki.fi/targets/84704287) palautuksen deadlineen mennessä.
+* Anna lisäksi [kurssipalaute](https://norppa.helsinki.fi/targets/84704669) palautuksen deadlineen mennessä.
 
 ## Huomio Fly.iosta
 
