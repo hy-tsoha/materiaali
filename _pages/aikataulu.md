@@ -6,7 +6,7 @@ title: Aikataulu ja ohjeet
 
 Syksyn 2024 periodin 2 ryhmän aikataulu on seuraava:
 
-| ti 29.10.2024 | Aloitusluento 16:15 alkaen ([Zoom-linkki](https://helsinki.zoom.us/j/65647055598?pwd=tQ0WZGxDX51GdI3WiLBkaUZR4pKprP.1)) |
+| ti 29.10.2024 | Aloitusluento 16:15 alkaen |
 | su 3.11.2024 | Välipalautus 1 |
 | su 17.11.2024 | Välipalautus 2 |
 | pe 22.11.2024 | Vertaisarvioinnin deadline |
