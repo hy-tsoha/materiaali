@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Aikataulu ja ohjeet - Tietokannat ja web-ohjelmointi
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tietokannat ja web-ohjelmointi</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/aikataulu/">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/arvostelu/">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/kysymykset/">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/taustamateriaali/">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/osa-1/">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/osa-1/#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/osa-1/#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/osa-1/#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/osa-1/#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/osa-2/">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/osa-2/#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/osa-2/#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/osa-2/#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/osa-2/#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/osa-2/#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/osa-3/">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/osa-3/#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/osa-3/#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/osa-3/#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/osa-3/#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/osa-3/#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/osa-4/">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/osa-4/#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/osa-4/#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/osa-4/#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/osa-4/#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+    </ol>
+</nav>
+
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="aikataulu-ja-ohjeet">Aikataulu ja ohjeet</h1>
+
+<p>Syksyn 2024 periodin 2 ryhmän aikataulu on seuraava:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ti 29.10.2024</td>
+      <td>Aloitusluento 16:15 alkaen</td>
+    </tr>
+    <tr>
+      <td>su 3.11.2024</td>
+      <td>Välipalautus 1</td>
+    </tr>
+    <tr>
+      <td>su 17.11.2024</td>
+      <td>Välipalautus 2</td>
+    </tr>
+    <tr>
+      <td>pe 22.11.2024</td>
+      <td>Vertaisarvioinnin deadline</td>
+    </tr>
+    <tr>
+      <td>su 1.12.2024</td>
+      <td>Välipalautus 3</td>
+    </tr>
+    <tr>
+      <td>pe 6.12.2024</td>
+      <td>Vertaisarvioinnin deadline</td>
+    </tr>
+    <tr>
+      <td>su 15.12.2024</td>
+      <td>Lopullinen palautus</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ryhmän ohjaajat ovat Markus Kaihola, Sani Kemppainen, Miska Pajukangas ja Erik Peteri.</p>
+
+<p>Voit kysyä kurssiin liittyvistä asioista kurssin Telegram-ryhmässä, jossa on paikalla kurssin ohjaajia. Kurssilla on myös tarjolla pajaohjausta Exactumin salissa BK107 tiistaisin ja torstaisin klo 14–18.</p>
+
+<p>Löydät <a href="/materiaali/arvostelu/">arvostelusivulta</a> tietoa siitä, mitä vaatimuksia kurssilla on ja miten työsi arvostellaan.</p>
+
+<h2 id="kurssin-eteneminen">Kurssin eteneminen</h2>
+
+<p>Kurssiin kuuluu kolme välipalautusta ja lopullinen palautus. Kaikkien palautusten deadline on klo 23:59 sunnuntaina.</p>
+
+<h3 id="välipalautus-1">Välipalautus 1</h3>
+
+<ul>
+  <li>Luo GitHubiin julkinen repositorio harjoitustyötä varten. Nimeä repositoriosi kuvaavasti.</li>
+  <li>Valitse projektille aihe ja kirjoita <code class="language-html highlighter-rouge">README.md</code>-tiedostoon kuvaus, joka esittelee sovelluksen keskeiset toiminnot. <a href="/materiaali/aiheen_valinta/">Kuinka valita aihe?</a> Mitä paremmin kuvailet aihettasi, sitä paremmin ohjaaja ymmärtää aiheesi ja voi kommentoida sitä.</li>
+  <li>Kirjaudu <a href="https://study.cs.helsinki.fi/labtool/courses/TKT20019.2024.S.K.1">Labtooliin</a> ja ilmoita siellä projektisi GitHub-osoite.</li>
+  <li>Saat seuraavan viikon alussa ohjaajalta palautteen aiheesta Labtooliin.</li>
+</ul>
+
+<h3 id="välipalautus-2">Välipalautus 2</h3>
+
+<ul>
+  <li>Tavoitteena on, että sovelluksella on toimiva pohja ja keskeiset toiminnot ovat hyvässä vaiheessa.</li>
+  <li><code class="language-html highlighter-rouge">README.md</code>-tiedoston tulee kuvata, mikä on sovelluksen nykyinen tilanne ja miten sitä pystyy testaamaan tuotannossa.</li>
+  <li>Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta Labtooliin.</li>
+</ul>
+
+<h3 id="välipalautus-3">Välipalautus 3</h3>
+
+<ul>
+  <li>Tavoitteena on, että sovellus on viimeistelyä vaille valmis.</li>
+  <li><code class="language-html highlighter-rouge">README.md</code>-tiedoston tulee kuvata, mikä on sovelluksen nykyinen tilanne ja miten sitä pystyy testaamaan tuotannossa.</li>
+  <li>Saat seuraavan viikon alussa ohjaajalta palautteen sovelluksesta Labtooliin.</li>
+</ul>
+
+<h3 id="vertaisarviointi">Vertaisarviointi</h3>
+
+<p>Kurssiin kuuluu kaksi vertaisarviointia, joissa annetaan palautetta toisen opiskelijan työstä. Saat ohjeet vertaisarviointiin sähköpostitse välipalautusten 2 ja 3 jälkeen.
+Linkin katselmoitavaan repositorioon löydät Labtoolista. <a href="/materiaali/vertaisarviointi/">Vertaisarvioinnin ohje</a></p>
+
+<h3 id="lopullinen-palautus">Lopullinen palautus</h3>
+
+<ul>
+  <li>Kurssi arvostellaan tämän sovelluksen version perusteella.</li>
+  <li><code class="language-html highlighter-rouge">README.md</code>-tiedoston tulee kuvata, millainen lopullinen sovellus on ja miten sitä pystyy testaamaan tuotannossa.</li>
+  <li>Ohjaaja arvostelee työn ja antaa palautetta Labtooliin. Ohjaaja ilmoittaa kurssin arvosanan kuukauden kuluessa.</li>
+  <li>Anna lisäksi <a href="https://norppa.helsinki.fi/targets/84704669">kurssipalaute</a> palautuksen deadlineen mennessä.</li>
+</ul>
+
+<h2 id="huomio-flyiosta">Huomio Fly.iosta</h2>
+
+<p>Koska Fly.io vaatii ilmaisiinkin sovelluksiin maksutietojen syöttämisen palveluun, kurssilla ei toistaiseksi vaadita sovelluksen viemistä tuotantoon.
+Halutessasi voit viedä sovelluksesi Fly.ioon materiaalin osan 3 <a href="/materiaali/osa-3">ohjeiden</a> mukaan.</p>
+
+<p>Jos sovelluksesi ei ole testattavissa Fly.iossa, mainitsehan asiasta <code class="language-html highlighter-rouge">README.md</code>-tiedostossa ja lisäät ohjeet sovelluksen käynnistämiseen paikallisesti, jotta ohjaajat ja vertaisarvioijat pystyvät testaamaan sovellustasi. Alla on esimerkki ohjeista sovelluksen paikalliseen käyttöön.</p>
+
+<h3 id="esimerkki-käynnistysohjeista">Esimerkki käynnistysohjeista</h3>
+
+<p>Kloonaa tämä repositorio omalle koneellesi ja siirry sen juurikansioon. Luo kansioon <code class="language-html highlighter-rouge">.env</code>-tiedosto ja määritä sen sisältö seuraavanlaiseksi:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>DATABASE_URL=<span class="nt">&lt;tietokannan-paikallinen-osoite&gt;</span>
+SECRET_KEY=<span class="nt">&lt;salainen-avain&gt;</span>
+</code></pre></div></div>
+
+<p>Seuraavaksi aktivoi virtuaaliympäristö ja asenna sovelluksen riippuvuudet komennoilla</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>python3 -m venv venv
+<span class="p">$ </span>source venv/bin/activate
+<span class="p">$ </span>pip install -r ./requirements.txt
+</code></pre></div></div>
+
+<p>Määritä vielä tietokannan skeema komennolla</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>psql &lt; schema.sql
+</code></pre></div></div>
+
+<p>Nyt voit käynnistää sovelluksen komennolla</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>flask run
+</code></pre></div></div>
+
+<h2 id="ohjeita">Ohjeita</h2>
+
+<ul>
+  <li>Ennen sovelluksen toteuttamisen aloittamista sinun kannattaa tutustua huolellisesti kurssisivuston materiaaliin ja tehdä pieniä kokeiluja, jotta saat harjoiteltua kurssilla käytettyjä tekniikoita.</li>
+  <li>Neuvoja tietokannan suunnitteluun löydät kurssin <em>Tietokantojen perusteet</em> materiaalista. Erityisesti kurssin materiaalin <a href="https://tikape.mooc.fi/syksy-2024/osa6/">luku 6</a> on hyödyllinen.</li>
+  <li>Sovellus ja tietokanta rakentuvat pikkuhiljaa ja niihin tulee muutoksia. Kannattaa aloittaa yksinkertaisesta ja muuttaa rakennetta tarvittaessa myöhemmin.</li>
+  <li>Palautuksissa ohjaaja tutustuu projektiisi GitHubin ja Fly.io:n kautta. Pidä huoli siitä, että sovelluksen ajantasainen versio on saatavilla näissä paikoissa.</li>
+  <li>Sovelluksen dokumentaatio luodaan tiedostoon <code class="language-html highlighter-rouge">README.md</code>, joka näkyy GitHubissa projektin etusivulla. Kirjoita dokumentaatio sellaista henkilöä varten, joka haluaa saada käsityksen sovelluksesta ja mahdollisesti ottaa sen käyttöön itse tai kehittää sovellusta.</li>
+  <li>Oleellinen asia kurssilla on sovelluksen toimivuus: millainen käyttökokemus tulee testaajalle, joka käyttää sovellusta tuotannossa. Jos sovellus ei toimi, muut osa-alueet eivät voi pelastaa sitä.</li>
+  <li>Jos jokin asia kurssilla on epäselvä, niin otathan yhteyttä ohjaajaan tai kurssin vastuuhenkilöön.</li>
+</ul>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

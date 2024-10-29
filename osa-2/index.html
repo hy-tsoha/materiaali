@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Osa 2 - Tietokannat ja web-ohjelmointi
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tietokannat ja web-ohjelmointi</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/aikataulu/">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/arvostelu/">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/kysymykset/">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/taustamateriaali/">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/osa-1/">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/osa-1/#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/osa-1/#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/osa-1/#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/osa-1/#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/osa-2/">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/osa-2/#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/osa-2/#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/osa-2/#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/osa-2/#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/osa-2/#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/osa-3/">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/osa-3/#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/osa-3/#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/osa-3/#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/osa-3/#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/osa-3/#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/osa-4/">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/osa-4/#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/osa-4/#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/osa-4/#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/osa-4/#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+    </ol>
+</nav>
+
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+        <li><a href="#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+        <li><a href="#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+        <li><a href="#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+        <li><a href="#hakutoiminto">Hakutoiminto</a></li>
+        
+        <li><a href="#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+    </ul>
+</div>-->
+
+    <h1 id="osa-2">Osa 2</h1>
+
+<p>Käytämme kurssilla <a href="https://www.postgresql.org/">PostgreSQL</a>-tietokantaa, joka on suosittu avoimen lähdekoodin tietokantajärjestelmä. Tämä osa käsittelee tietokannan käyttöönottoa sekä SQL-komentojen suorittamista web-sovelluksessa.</p>
+
+<p>PostgreSQL on erilainen tietokanta kuin kurssilla <em>Tietokantojen perusteet</em> käytetty tietokanta SQLite. Tämän kurssin kannalta erot ovat kuitenkin pieniä. Taustamateriaalissa on vertailu <a href="/materiaali/sqlite_postgre/">SQLite vs. PostgreSQL</a>, joka antaa yhteenvedon tietokantojen eroista.</p>
+
+<h2 id="tietokannan-käyttäminen">Tietokannan käyttäminen</h2>
+
+<h3 id="postgresqln-asennus">PostgreSQL:n asennus</h3>
+
+<p>Jotta voit kehittää sovellusta, sinun täytyy asentaa koneellesi PostgreSQL-tietokanta.</p>
+
+<p>Voit asentaa PostgreSQL:n Linuxiin käyttäen <a href="https://github.com/hy-tsoha/local-pg">asennusskriptiä</a>, joka on tehty tätä kurssia varten. Skripti asentaa PostgreSQL:n käyttäjän kotihakemistoon ja on tarkoitettu erityisesti käytettäväksi tietojenkäsittelytieteen osaston fuksiläppäreissä ja mikroluokissa. Saatavilla on myös <a href="https://www.helsinki.fi/fi/unitube/video/617d690b-b1ce-44f0-997a-dca01bf7eff0">video</a>, joka näyttää asennuksen vaiheet ja esimerkin tietokannan käyttämisestä.</p>
+
+<p>Voit myös asentaa PostgreSQL:n pääkäyttäjänä käyttöjärjestelmäsi pakettienhallinnan kautta, käyttää Dockeria tai vastaavaa alustaa tai ladata asennuspaketin itse. Ohjeita asennukseen eri järjestelmiin on <a href="https://www.postgresql.org/download/">PostgreSQL:n sivulla</a>.</p>
+
+<p>Macilla helppo tapa saada PostgreSQL käyttöön on <a href="https://postgresapp.com/">Postgres.app</a>.</p>
+
+<h3 id="postgresql-tulkki">PostgreSQL-tulkki</h3>
+
+<p>Tietokannan asennuksen jälkeen komento <code class="language-html highlighter-rouge">psql</code> avaa PostgreSQL-tulkin, jonka avulla voi suorittaa SQL-komentoja komentorivillä. Esimerkiksi voimme luoda seuraavasti taulun <code class="language-html highlighter-rouge">messages</code>, lisätä sinne kolme riviä ja hakea sitten kaikki rivit taulusta:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>psql
+<span class="p">user=# </span>CREATE TABLE messages (id SERIAL PRIMARY KEY, content TEXT);
+CREATE TABLE
+<span class="p">user=# </span>INSERT INTO messages (content) VALUES ('moikka');
+INSERT 0 1
+<span class="p">user=# </span>INSERT INTO messages (content) VALUES ('apina banaani cembalo');
+INSERT 0 1
+<span class="p">user=# </span>INSERT INTO messages (content) VALUES ('kolmas viesti');
+INSERT 0 1
+<span class="p">user=# </span>SELECT * FROM messages;
+ id |        content        
+----+-----------------------
+  1 | moikka
+  2 | apina banaani cembalo
+  3 | kolmas viesti
+(3 rows)
+</code></pre></div></div>
+
+<p>Rivien alussa oleva <code class="language-html highlighter-rouge">user</code> on tietokoneen käyttäjän tunnus, jonka kautta tietokantaa käytetään. Tässä materiaalissa käytetään esimerkkinä tunnusta <code class="language-html highlighter-rouge">user</code>, mutta omalla koneellasi se on todennäköisesti jokin muu.</p>
+
+<p>PostgreSQL:ssä tyyppi <code class="language-html highlighter-rouge">SERIAL</code> tarkoittaa taulun avaimena käytettävää kokonaislukua, joka kasvaa automaattisesti, kun tauluun lisätään uusia rivejä.</p>
+
+<p>Hyödyllisiä PostgreSQL-tulkin komentoja ovat <code class="language-html highlighter-rouge">\dt</code>, joka näyttää listan tauluista, sekä <code class="language-html highlighter-rouge">\d [taulu]</code>, joka näyttää taulun sarakkeet ja muuta tietoa siitä.</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">user=# </span>\dt
+         List of relations
+ Schema |   Name   | Type  | Owner 
+--------+----------+-------+-------
+ public | messages | table | user
+(1 row)
+
+<span class="p">user=# </span>\d messages
+                             Table "public.messages"
+ Column  |  Type   | Collation | Nullable |               Default                
+---------+---------+-----------+----------+--------------------------------------
+ id      | integer |           | not null | nextval('messages_id_seq'::regclass)
+ content | text    |           |          | 
+Indexes:
+    "messages_pkey" PRIMARY KEY, btree (id)
+</code></pre></div></div>
+
+<p>Komento <code class="language-html highlighter-rouge">\q</code> poistuu PostgreSQL-tulkista:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">user=# </span>\q
+<span class="p">$ 
+</span></code></pre></div></div>
+
+<h3 id="tietokantayhteys-sovelluksesta">Tietokantayhteys sovelluksesta</h3>
+
+<p>Jotta voimme käyttää tietokantaa Flask-sovelluksessa, asennamme pari kirjastoa lisää:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>pip install flask-sqlalchemy
+<span class="p">(venv) $ </span>pip install psycopg2
+</code></pre></div></div>
+
+<p>Ensimmäinen kirjasto <code class="language-html highlighter-rouge">flask-sqlalchemy</code> on SQLAlchemy-rajapinta, jonka kautta voi käyttää tietokantaa Flaskissa. Toinen kirjasto <code class="language-html highlighter-rouge">psycopg2</code> puolestaan mahdollistaa yhteyden muodostamisen PostgreSQL-tietokantaan.</p>
+
+<p>Jos sinulla on ongelmia saada kirjasto <code class="language-html highlighter-rouge">psycopg2</code> toimimaan, voit kokeilla asentaa sen sijaan kirjaston <code class="language-html highlighter-rouge">psycopg2-binary</code>, jolla on vähemmän riippuvuuksia.</p>
+
+<p>Jotta sovellus saa yhteyden tietokantaan, sen täytyy tietää tietokannan <em>osoite</em>. Tässä materiaalissa käytämme osoitetta muodossa <code class="language-html highlighter-rouge">postgresql:///user</code>, missä <code class="language-html highlighter-rouge">user</code> on käytettävän tietokannan nimi ja näkyy myös PostgreSQL-tulkissa rivien alussa. Tietokannan nimi on siis tässä sama kuin käyttäjän tunnus.</p>
+
+<p>Huomaa, että vaadittu tapa antaa tietokannan osoite riippuu siitä, mikä järjestelmä on käytössä ja miten PostgreSQL on asennettu. Jos asensit PostgreSQL:n tämän kurssin asennusskriptillä, voit käyttää osoitetta <code class="language-html highlighter-rouge">postgresql+psycopg2://</code>. Lisää tietoa tietokannan osoitteen muodostumisesta on <a href="https://www.postgresql.org/docs/12/libpq-connect.html#LIBPQ-CONNSTRING">PostgreSQL:n dokumentaatiossa</a></p>
+
+<p>Seuraavassa on yksinkertainen sovellus, joka testaa tietokantayhteyttä. Sovellus olettaa, että tietokannassa on äsken luomamme <code class="language-html highlighter-rouge">messages</code>-taulu.</p>
+
+<p class="code-title">app.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="p">.</span><span class="n">config</span><span class="p">[</span><span class="s">"SQLALCHEMY_DATABASE_URI"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"postgresql:///user"</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="s">"SELECT content FROM messages"</span><span class="p">)</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">messages</span><span class="p">),</span> <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">)</span> 
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/new"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">new</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"new.html"</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/send"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">send</span><span class="p">():</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"content"</span><span class="p">]</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO messages (content) VALUES (:content)"</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"content"</span><span class="p">:</span><span class="n">content</span><span class="p">})</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p class="code-title">index.html</p>
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Viestien määrä: <span class="cp">{{</span> <span class="nv">count</span> <span class="cp">}}</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">message</span> <span class="ow">in</span> <span class="nv">messages</span> <span class="cp">%}</span>
+<span class="cp">{{</span> <span class="nv">message.content</span> <span class="cp">}}</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/new"</span><span class="nt">&gt;</span>Lähetä viesti<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<p class="code-title">new.html</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/send"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+Viesti: <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"content"</span> <span class="na">rows=</span><span class="s">"3"</span> <span class="na">cols=</span><span class="s">"40"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>Huomaa, että yllä oleva koodi ei välttämättä toimi SQLALchemy-kirjaston uusissa versioissa. Jos koodi ei toimi, kokeile lisätä koodin alkuun</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">sqlalchemy.sql</span> <span class="kn">import</span> <span class="n">text</span>
+</code></pre></div></div>
+
+<p>sekä <code class="language-html highlighter-rouge">execute</code>-funktion kutsuissa SQL-komennon ympärille funktio <code class="language-html highlighter-rouge">text</code> seuraavaan tapaan:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code>    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">text</span><span class="p">(</span><span class="s">"SELECT content FROM messages"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Sovelluksen käyttäminen voi näyttää tältä:</p>
+
+<p><img class="screenshot" src="../assets/osa-2/viestit1.png" /></p>
+
+<p><img class="screenshot" src="../assets/osa-2/viestit2.png" /></p>
+
+<p><img class="screenshot" src="../assets/osa-2/viestit3.png" /></p>
+
+<p>Katsotaan vielä tarkemmin joitakin kohtia koodista:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">app</span><span class="p">.</span><span class="n">config</span><span class="p">[</span><span class="s">"SQLALCHEMY_DATABASE_URI"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"postgresql:///user"</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tämä koodi määrittelee osoitteen, jonka kautta tietokantaan saadaan yhteys, sekä luo <code class="language-html highlighter-rouge">db</code>-olion, jonka avulla sovellus voi suorittaa SQL-komentoja.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code>    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="s">"SELECT content FROM messages"</span><span class="p">)</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Tämä koodi suorittaa kyselyn, joka hakee kaikki taulussa olevat viestit. Metodi <code class="language-html highlighter-rouge">fetchall</code> antaa listan, jonka jokainen alkio on yhden rivin sisältö. Sivupohjassa <code class="language-html highlighter-rouge">message.content</code> näyttää rivin sarakkeen <code class="language-html highlighter-rouge">content</code> arvon eli viestin sisällön.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code>    <span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO messages (content) VALUES (:content)"</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"content"</span><span class="p">:</span><span class="n">content</span><span class="p">})</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tämä koodi lisää tietokantaan uuden rivin, kun käyttäjä on lähettänyt viestin lomakkeella.</p>
+
+<p>Käyttäjän antama syöte yhdistetään SQL-komentoon parametrina, jolla on tietty nimi, tässä tapauksessa <code class="language-html highlighter-rouge">content</code>. SQL-komennossa ennen parametrin nimeä on kaksoispiste. Parametrin käyttäminen on turvallinen tapa yhdistää käytäjän antamaa tietoa SQL-komentoon, koska tällöin tiedon yhdistäminen ei voi muuttaa kyselyn rakennetta eikä SQL-injektio ole mahdollinen.</p>
+
+<p>Huomaa, että sovelluksen tekemät SQL-komennot suoritetaan automaattisesti transaktion sisällä. Kun sovellus tekee muutoksia tietokantaan, muutosten jälkeen täytyy kutsua metodia <code class="language-html highlighter-rouge">commit</code>, jotta transaktio viedään loppuun ja muutokset menevät pysyvästi tietokantaan.</p>
+
+<p>Funktio <code class="language-html highlighter-rouge">redirect</code> ohjaa käyttäjän toiselle sivulle. Tässä tapauksessa viestin lähetyksen jälkeen siirrytään takaisin etusivulle. Tämän tavan etuna on, että käyttäjä ei voi vahingossa lähettää lomaketta uudestaan, jos hän lataa sivun uudestaan. Tämä on hyvin yleinen toteutustapa web-ohjelmoinnissa, ja siitä käytetään joskus nimeä PRG-malli (Post/Redirect/Get).</p>
+
+<h3 id="kyselyn-tulosten-hakeminen">Kyselyn tulosten hakeminen</h3>
+
+<p>Kaksi tavallista metodia kyselyn tulosten hakemiseen ovat <code class="language-html highlighter-rouge">fetchall</code> ja <code class="language-html highlighter-rouge">fetchone</code>. Metodi <code class="language-html highlighter-rouge">fetchall</code> hakee kaikki kyselyn antamat rivit listana, kuten teimme äskeisessä esimerkissä, kun taas metodi <code class="language-html highlighter-rouge">fetchone</code> hakee vain yhden (ensimmäisen) rivin. Metodi <code class="language-html highlighter-rouge">fetchone</code> on hyödyllinen silloin, kun kysely palauttaa varmasti tarkalleen yhden rivin.</p>
+
+<p>Molemmissa metodeissa yksittäisen rivin sisältö on olio, josta voidaan hakea tietyn sarakkeen sisältö useilla tavoilla:</p>
+
+<ul>
+  <li><code class="language-html highlighter-rouge">row[i]</code>: hakee sarakkeen <code class="language-html highlighter-rouge">i</code> sisällön (0-indeksoituna)</li>
+  <li><code class="language-html highlighter-rouge">row.name</code>: hakee sarakkeen <code class="language-html highlighter-rouge">name</code> sisällön</li>
+  <li><code class="language-html highlighter-rouge">row["name"]</code>: hakee sarakkeen <code class="language-html highlighter-rouge">name</code> sisällön</li>
+</ul>
+
+<p>Esimerkiksi seuraava koodi näyttää kolme tapaa hakea rivit metodilla <code class="language-html highlighter-rouge">fetchall</code> ja tulostaa sarakkeiden <code class="language-html highlighter-rouge">id</code> ja <code class="language-html highlighter-rouge">content</code> arvot joka riviltä.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="s">"SELECT id, content FROM messages"</span><span class="p">)</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">message</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">messages</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="s">"id"</span><span class="p">],</span> <span class="n">message</span><span class="p">[</span><span class="s">"content"</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Seuraava koodi puolestaan hakee rivien lukumäärän funktion <code class="language-html highlighter-rouge">COUNT</code> avulla. Koska kysely palauttaa aina tasan yhden rivin, on luontevaa käyttää metodia <code class="language-html highlighter-rouge">fetchone</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="s">"SELECT COUNT(*) FROM messages"</span><span class="p">)</span>
+<span class="n">row</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="n">count</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s">"count"</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Rivin sarakkeen sisällön hakemiseen on siis kolme erilaista syntaksia, ja on makuasia, mitä niistä käyttää milloinkin. Sarakkeen indeksin perusteella hakemisessa etuna on, että indeksointi tapahtuu aina samalla tavalla. Muut tavat ovat helpompia lukea, mutta voi olla epäselvää, mikä on tulostaulun sarakkeen nimi. Esimerkiksi äskeisessä koodissa piti tietää tai arvata, että funktiosta <code class="language-html highlighter-rouge">COUNT(*)</code> tulee tulostauluun sarake <code class="language-html highlighter-rouge">count</code>.</p>
+
+<h3 id="ympäristömuuttujat">Ympäristömuuttujat</h3>
+
+<p>Käytännössä ei ole hyvä tapa kovakoodata tietokannan osoitetta sovelluksen koodiin, vaan parempi tapa on välittää tämä tieto <em>ympäristömuuttujan</em> kautta. Tässä tapauksessa voimme päättää, että ympäristömuuttuja <code class="language-html highlighter-rouge">DATABASE_URL</code> ilmaisee tietokannan osoitteen.</p>
+
+<p>Yksi tapa määritellä ympäristömuuttuja olisi käyttää komentoa <code class="language-html highlighter-rouge">export</code> seuraavasti ennen sovelluksen käynnistämistä:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>export DATABASE_URL=postgresql:///user
+<span class="p">(venv) $ </span>flask run
+</code></pre></div></div>
+
+<p>Kuitenkin kätevämpi tapa on ottaa käyttöön kirjasto <code class="language-html highlighter-rouge">python-dotenv</code>:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>pip install python-dotenv
+</code></pre></div></div>
+
+<p>Kun kirjasto on asennettu, Flask osaa käyttää sitä automaattisesti. Tämän ansiosta voimme luoda tiedoston <code class="language-html highlighter-rouge">.env</code>, jossa on määritelty ympäristömuuttujat:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>DATABASE_URL=postgresql:///user
+</code></pre></div></div>
+
+<p>Tämän etuna on, että ennen sovelluksen käynnistämistä ei tarvitse suorittaa <code class="language-html highlighter-rouge">export</code>-komentoa vaan ympäristömuuttujat ovat aina tallessa tiedostossa.</p>
+
+<p>Voimme hakea ympäristömuuttujan arvon sovellukseen näin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">getenv</span>
+
+<span class="n">app</span><span class="p">.</span><span class="n">config</span><span class="p">[</span><span class="s">"SQLALCHEMY_DATABASE_URI"</span><span class="p">]</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s">"DATABASE_URL"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tästä lähtien oletamme, että ympäristömuuttuja <code class="language-html highlighter-rouge">DATABASE_URL</code> kertoo tietokannan osoitteen. Tämä tieto voi olla ympäristöstä riippuen tiedostossa <code class="language-html highlighter-rouge">.env</code> tai määritetty muulla tavalla.</p>
+
+<h3 id="sqlalchemyn-varoitus">SQLAlchemyn varoitus</h3>
+
+<p>Kun sovelluksessa käytetään tietokantaa SQLAlchemyn kautta, sovelluksen käynnistäminen saattaa antaa seuraavan varoituksen:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code>FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+</code></pre></div></div>
+
+<p>Tässä projektissa tämä ei haittaa sinänsä, mutta jos haluat päästä varoituksesta eroon, voit lisätä koodiin seuraavan rivin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">app</span><span class="p">.</span><span class="n">config</span><span class="p">[</span><span class="s">"SQLALCHEMY_TRACK_MODIFICATIONS"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<p>Lisää tietoa varoituksen syystä löydät <a href="https://stackoverflow.com/questions/33738467/how-do-i-know-if-i-can-disable-sqlalchemy-track-modifications">Stack Overflow’n keskustelusta</a>.</p>
+
+<h2 id="esimerkki-kyselyt">Esimerkki: Kyselyt</h2>
+
+<p>Teemme seuraavaksi hieman laajemman esimerkkisovelluksen, joka esittelee tietokannan käyttämiseen liittyviä tekniikoita. Sovelluksessa käyttäjät voivat luoda kyselyitä sekä vastata muiden luomiin kyselyihin. Sovelluksen käyttäminen näyttää tältä:</p>
+
+<p><img class="screenshot" src="../assets/osa-2/kysely1.png" /></p>
+
+<p><img class="screenshot" src="../assets/osa-2/kysely2.png" /></p>
+
+<p><img class="screenshot" src="../assets/osa-2/kysely3.png" /></p>
+
+<p>Sovelluksen koko lähdekoodi on GitHubissa osoitteessa <a href="https://github.com/hy-tsoha/tsoha-polls">https://github.com/hy-tsoha/tsoha-polls</a>, ja käymme tässä tarkemmin läpi sovelluksen toimintaa.</p>
+
+<p>Sovellusta varten luomme tietokantaan kolme taulua:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">polls</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">topic</span> <span class="nb">TEXT</span><span class="p">,</span>
+    <span class="n">created_at</span> <span class="nb">TIMESTAMP</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">choices</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">poll_id</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">polls</span><span class="p">,</span>
+    <span class="n">choice</span> <span class="nb">TEXT</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">answers</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">choice_id</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">choices</span><span class="p">,</span>
+    <span class="n">sent_at</span> <span class="nb">TIMESTAMP</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Taulu <code class="language-html highlighter-rouge">polls</code> sisältää jokaisen kyselyn aiheen ja luontiajan, ja tauluun <code class="language-html highlighter-rouge">choices</code> tallennetaan kunkin kyselyn vastausvaihtoehdot. Taulussa <code class="language-html highlighter-rouge">answers</code> on puolestaan kyselyihin annetut vastaukset ja niiden lähetysajat.</p>
+
+<p>Sovelluksen etusivu näyttää kyselyt käänteisessä aikajärjestyksessä:</p>
+
+<p class="code-title">app.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT id, topic, created_at FROM polls ORDER BY id DESC"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+    <span class="n">polls</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">,</span> <span class="n">polls</span><span class="o">=</span><span class="n">polls</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p class="code-title">index.html</p>
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/new"</span><span class="nt">&gt;</span>Uusi kysely<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">poll</span> <span class="ow">in</span> <span class="nv">polls</span> <span class="cp">%}</span>
+Aihe: <span class="cp">{{</span> <span class="nv">poll.topic</span> <span class="cp">}}</span> <span class="nt">&lt;br&gt;</span>
+Luotu: <span class="cp">{{</span> <span class="nv">poll.created_at.strftime</span><span class="p">(</span><span class="s2">"%Y-%m-%d %H:%M:%S"</span><span class="p">)</span> <span class="cp">}}</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/poll/</span><span class="cp">{{</span> <span class="nv">poll.id</span> <span class="cp">}}</span><span class="s">"</span><span class="nt">&gt;</span>Mene kyselyyn<span class="nt">&lt;/a&gt;</span> |
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/result/</span><span class="cp">{{</span> <span class="nv">poll.id</span> <span class="cp">}}</span><span class="s">"</span><span class="nt">&gt;</span>Näytä tulokset<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+</code></pre></div></div>
+
+<p>Tässä tietokannasta haetaan jokaisen kyselyn id-numero, aihe ja luontiaika. Sivupohjassa id-numeron perusteella luodaan kaksi linkkiä: sivu <code class="language-html highlighter-rouge">poll/[id]</code> antaa käyttäjän vastata kyselyyn ja sivu <code class="language-html highlighter-rouge">result/[id]</code> puolestaan näyttää kyselyn tulokset.</p>
+
+<p>Sivu <code class="language-html highlighter-rouge">new</code> näyttää lomakkeen, jonka kautta voi lähettää uuden kyselyn.
+Käyttäjä antaa lomakkeeseen kyselyn aiheen sekä enintään neljä
+vastausvaihtoehtoa:</p>
+
+<p class="code-title">app.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/new"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">new</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"new.html"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p class="code-title">new.html</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/create"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;p&gt;</span>Aihe:<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"topic"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Vaihtoehto 1:<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"choice"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Vaihtoehto 2:<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"choice"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Vaihtoehto 3:<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"choice"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Vaihtoehto 4:<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"choice"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Luo kysely"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>Kun käyttäjä lähettää lomakkeen, sen käsittelee funktio <code class="language-html highlighter-rouge">create</code>:</p>
+
+<p class="code-title">app.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/create"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
+    <span class="n">topic</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"topic"</span><span class="p">]</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO polls (topic, created_at) VALUES (:topic, NOW()) RETURNING id"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"topic"</span><span class="p">:</span><span class="n">topic</span><span class="p">})</span>
+    <span class="n">poll_id</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">choices</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">.</span><span class="n">getlist</span><span class="p">(</span><span class="s">"choice"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">choices</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">choice</span> <span class="o">!=</span> <span class="s">""</span><span class="p">:</span>
+            <span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO choices (poll_id, choice) VALUES (:poll_id, :choice)"</span>
+            <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"poll_id"</span><span class="p">:</span><span class="n">poll_id</span><span class="p">,</span> <span class="s">"choice"</span><span class="p">:</span><span class="n">choice</span><span class="p">})</span>
+    <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tämä funktio lisää ensin kyselyä vastaavan rivin tauluun <code class="language-html highlighter-rouge">polls</code>. Kyselyn aihe tulee käyttäjältä ja SQL-funktio <code class="language-html highlighter-rouge">NOW()</code> antaa nykyisen ajanhetken. Komennon <code class="language-html highlighter-rouge">INSERT</code> lopussa on <code class="language-html highlighter-rouge">RETURNING id</code>, minkä ansiosta komento palauttaa lisätyn rivin id-numeron.</p>
+
+<p>Tämän jälkeen käydään läpi käyttäjän antamat vastausvaihtoehdot. Koska lomakkeessa on useita <code class="language-html highlighter-rouge">choice</code>-kenttiä, niiden sisältö haetaan listana metodilla <code class="language-html highlighter-rouge">getlist</code>. Jokaisesta epätyhjästä vaihtoehdosta luodaan rivi tauluun <code class="language-html highlighter-rouge">choices</code>, ja lopuksi käyttäjä ohjataan etusivulle.</p>
+
+<p>Sivu <code class="language-html highlighter-rouge">poll/[id]</code> näyttää kyselyn sen id-numeron perusteella. Sivulla on lomake, jonka kautta käyttäjä voi vastata kyselyyn:</p>
+
+<p class="code-title">app.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/poll/&lt;int:id&gt;"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">poll</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT topic FROM polls WHERE id=:id"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"id"</span><span class="p">:</span><span class="nb">id</span><span class="p">})</span>
+    <span class="n">topic</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT id, choice FROM choices WHERE poll_id=:id"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"id"</span><span class="p">:</span><span class="nb">id</span><span class="p">})</span>
+    <span class="n">choices</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"poll.html"</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">topic</span><span class="o">=</span><span class="n">topic</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">choices</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p class="code-title">poll.html</p>
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">{{</span> <span class="nv">topic</span> <span class="cp">}}</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/answer"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">choice</span> <span class="ow">in</span> <span class="nv">choices</span> <span class="cp">%}</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"answer"</span> <span class="na">value=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">choice.id</span> <span class="cp">}}</span><span class="s">"</span><span class="nt">&gt;</span> <span class="cp">{{</span> <span class="nv">choice.choice</span> <span class="cp">}}</span> <span class="nt">&lt;br&gt;</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"id"</span> <span class="na">value=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">id</span> <span class="cp">}}</span><span class="s">"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Takaisin<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<p>Lomake antaa käyttäjän valita yhden vaihtoehdoista, ja lisäksi lomakkeessa on käyttäjälle näkymätön <em>piilokenttä</em>, jossa on kyselyn id-numero. Tämän kentän avulla lomakkeen käsittelijä tietää, mihin kyselyyn käyttäjän antama vastaus liittyy.</p>
+
+<p>Funktio <code class="language-html highlighter-rouge">answer</code> käsittelee käyttäjän antaman vastauksen:</p>
+
+<p class="code-title">app.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/answer"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">answer</span><span class="p">():</span>
+    <span class="n">poll_id</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span>
+    <span class="k">if</span> <span class="s">"answer"</span> <span class="ow">in</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">:</span>
+        <span class="n">choice_id</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"answer"</span><span class="p">]</span>
+        <span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO answers (choice_id, sent_at) VALUES (:choice_id, NOW())"</span>
+        <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"choice_id"</span><span class="p">:</span><span class="n">choice_id</span><span class="p">})</span>
+        <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/result/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">poll_id</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Funktio hakee kyselyn id-numeron piilokentästä ja tarkastaa sitten, onko käyttäjä valinnut jonkin vastauksen. Jos käyttäjä on valinnut vastauksen, tämä vastaus lisätään <code class="language-html highlighter-rouge">answers</code>-tauluun. Lopuksi käyttäjä ohjataan kyselyn tuloksiin.</p>
+
+<p>Sivu <code class="language-html highlighter-rouge">result/[id]</code> näyttää kyselyn tulokset:</p>
+
+<p class="code-title">app.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/result/&lt;int:id&gt;"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">result</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT topic FROM polls WHERE id=:id"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"id"</span><span class="p">:</span><span class="nb">id</span><span class="p">})</span>
+    <span class="n">topic</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT c.choice, COUNT(a.id) FROM choices c LEFT JOIN answers a "</span> \
+          <span class="s">"ON c.id=a.choice_id WHERE c.poll_id=:poll_id GROUP BY c.id"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"poll_id"</span><span class="p">:</span><span class="nb">id</span><span class="p">})</span>
+    <span class="n">choices</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"result.html"</span><span class="p">,</span> <span class="n">topic</span><span class="o">=</span><span class="n">topic</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">choices</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p class="code-title">result.html</p>
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">{{</span> <span class="nv">topic</span> <span class="cp">}}</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">choice</span> <span class="ow">in</span> <span class="nv">choices</span> <span class="cp">%}</span>
+<span class="nt">&lt;li&gt;</span> <span class="cp">{{</span> <span class="nv">choice.choice</span> <span class="cp">}}</span>: <span class="cp">{{</span> <span class="nv">choice.count</span> <span class="cp">}}</span> kpl
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Takaisin<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<p>Tämän sivun perustana on tauluista <code class="language-html highlighter-rouge">choices</code> ja <code class="language-html highlighter-rouge">answers</code> tietoa hakeva kysely, joka hakee jokaisesta kyselyn vastausvaihtoehdosta vastausten määrän. Kyselyssä on käytössä <code class="language-html highlighter-rouge">LEFT JOIN</code>, jotta mukaan tulevat myös vaihtoehdot, joissa ei ole yhtään vastausta. Koska kysely on pitkä, se on jaettu kahdelle riville merkin <code class="language-html highlighter-rouge">\</code> avulla.</p>
+
+<h2 id="istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</h2>
+
+<p>Useimmissa web-sovelluksissa on mahdollista kirjautua sisään antamalla tunnus ja salasana, minkä jälkeen pääsee tekemään jotain erityistä. Kirjautuminen vaatii, että tietoa säilyy sovelluksessa sivulta toiselle, ja tämä onnistuu <em>istunnon</em> (<em>session</em>) avulla.</p>
+
+<p>Ideana on, että voimme tallentaa istuntoon avain-arvo-pareja, jotka säilyvät muistissa sivulta toiselle. Flask toteuttaa istunnon <code class="language-html highlighter-rouge">session</code>-oliona, jonka tiedot tallennetaan selaimelle lähetettävään <em>evästeeseen</em> (<em>cookie</em>). Esimerkiksi seuraava koodi tallentaa istuntoon tiedon, että avaimen <code class="language-html highlighter-rouge">test</code> arvo on <code class="language-html highlighter-rouge">aybabtu</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">session</span><span class="p">[</span><span class="s">"test"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"aybabtu"</span>
+</code></pre></div></div>
+
+<p>Tämän jälkeen voimme hakea avaimen arvon toisessa sivupyynnössä näin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">value</span> <span class="o">=</span> <span class="n">session</span><span class="p">[</span><span class="s">"test"</span><span class="p">]</span> <span class="c1"># aybabtu
+</span></code></pre></div></div>
+
+<p>Istunnon käyttäminen vaatii, että sovelluksessa on käytössä salainen avain. Lisäämme satunnaisesti muodostetun salaisen avaimen <code class="language-html highlighter-rouge">.env</code>-tiedostoon:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>SECRET_KEY=95d3763bb55e744e77dd181a47b4e1c6
+</code></pre></div></div>
+
+<p>Tämä avain allekirjoittaa evästeessä olevan tiedon niin, että käyttäjä ei pysty muuttamaan istunnon sisältöä selaimessa. <strong>On tärkeää, että avain on salainen, eli älä missään tapauksessa käytä yllä olevaa avainta vaan luo oma salainen avain!</strong></p>
+
+<p>Oman salaisen avaimen voi luoda vaikkapa Python-tulkin avulla. Esimerkiksi moduulin <code class="language-html highlighter-rouge">secrets</code> funktio <code class="language-html highlighter-rouge">token_hex</code> antaa halutun määrän satunnaisia tavuja.</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>python3
+<span class="p">&gt;&gt;&gt; </span>import secrets
+<span class="p">&gt;&gt;&gt; </span>secrets.token_hex(16)
+'18fd24bf6a2ad4dac04a33963db1c42f'
+</code></pre></div></div>
+
+<p>Huomaa, että evästeen allekirjoittaminen salaisella avaimella estää käyttäjää muuttamasta istunnon sisältöä mutta ei estä tallennetun tiedon <em>katsomista</em> selaimessa.Tämän vuoksi istuntoon ei saa tallentaa mitään salaista tietoa. Jos haluat tietää lisää Flaskin istuntojen turvallisuudesta, löydät lisää asiasta <a href="https://blog.miguelgrinberg.com/post/how-secure-is-the-flask-user-session">Miguel Grinbergin blogista</a>.</p>
+
+<h3 id="kirjautumisen-toteutus">Kirjautumisen toteutus</h3>
+
+<p>Seuraava sovellus antaa näytteen kirjautumisen toteuttamisesta:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">session</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">getenv</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="p">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s">"SECRET_KEY"</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/login"</span><span class="p">,</span><span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"username"</span><span class="p">]</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"password"</span><span class="p">]</span>
+    <span class="c1"># TODO: check username and password
+</span>    <span class="n">session</span><span class="p">[</span><span class="s">"username"</span><span class="p">]</span> <span class="o">=</span> <span class="n">username</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/logout"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">logout</span><span class="p">():</span>
+    <span class="k">del</span> <span class="n">session</span><span class="p">[</span><span class="s">"username"</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Sovellus käyttää seuraavaa sivupohjaa <code class="language-html highlighter-rouge">index.html</code>, joka joko näyttää kirjautumislomakkeen tai kertoo, että käyttäjä on sisällä:</p>
+
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">session.username</span> <span class="cp">%}</span>
+<span class="nt">&lt;p&gt;</span>Olet kirjautunut nimellä <span class="cp">{{</span> <span class="nv">session.username</span> <span class="cp">}}</span><span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/logout"</span><span class="nt">&gt;</span>Kirjaudu ulos<span class="nt">&lt;/a&gt;</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/login"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;p&gt;</span>Tunnus:<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"username"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Salasana:<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Kirjaudu"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</code></pre></div></div>
+
+<p>Sovelluksen käyttäminen voi näyttää tältä:</p>
+
+<p><img class="screenshot" src="../assets/osa-2/login1.png" /></p>
+
+<p><img class="screenshot" src="../assets/osa-2/login2.png" /></p>
+
+<p>Katsotaan nyt tarkemmin sovelluksen osia:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">app</span><span class="p">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s">"SECRET_KEY"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tällä rivillä sovellus hakee salaisen avaimen ympäristömuuttujasta <code class="language-html highlighter-rouge">SECRET_KEY</code>. Istuntoa ei ole mahdollista käyttää ilman salaista avainta.</p>
+
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">{%</span> <span class="k">if</span> <span class="nv">session.username</span> <span class="cp">%}</span>
+<span class="nt">&lt;p&gt;</span>Olet kirjautunut nimellä <span class="cp">{{</span> <span class="nv">session.username</span> <span class="cp">}}</span><span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/logout"</span><span class="nt">&gt;</span>Kirjaudu ulos<span class="nt">&lt;/a&gt;</span>
+<span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+</code></pre></div></div>
+
+<p>Sivupohjassa <code class="language-html highlighter-rouge">session</code>-olioon pääsee käsiksi yllä olevalla syntaksilla. Jos <code class="language-html highlighter-rouge">username</code> on asetettu, käyttäjä näkee tunnuksensa ja linkin, josta painamalla voi kirjautua ulos. Muuten käyttäjä näkee lomakkeen, jonka avulla voi kirjautua sisään.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/login"</span><span class="p">,</span><span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"username"</span><span class="p">]</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"password"</span><span class="p">]</span>
+    <span class="c1"># TODO: check username and password
+</span>    <span class="n">session</span><span class="p">[</span><span class="s">"username"</span><span class="p">]</span> <span class="o">=</span> <span class="n">username</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tämä funktio käsittelee kirjautumislomakkeen. Tällä hetkellä funktiosta puuttuu vielä osa (TODO-kohta), joka varmistaa, että käyttäjä antaa oikean tunnuksen ja salasanan. Niinpä sovellus hyväksyy minkä tahansa tunnuksen ja salasanan.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/logout"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">logout</span><span class="p">():</span>
+    <span class="k">del</span> <span class="n">session</span><span class="p">[</span><span class="s">"username"</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tämä funktio kirjaa käyttäjän ulos poistamalla <code class="language-html highlighter-rouge">session</code>-rakenteesta avaimen <code class="language-html highlighter-rouge">username</code>.</p>
+
+<h3 id="käyttäjät-tietokannassa">Käyttäjät tietokannassa</h3>
+
+<p>Kirjautuminen on järkevää toteuttaa niin, että tiedot käyttäjistä ovat tietokannassa. Voimme käyttää tähän seuraavanlaista taulua:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">users</span> <span class="p">(</span><span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span> <span class="n">username</span> <span class="nb">TEXT</span><span class="p">,</span> <span class="n">password</span> <span class="nb">TEXT</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Tässä tapauksessa käyttäjästä tallennetaan käyttäjätunnus ja salasana. Tämän lisäksi taulussa voisi olla muutakin tietoa, kuten onko käyttäjä peruskäyttäjä vai admin-käyttäjä.</p>
+
+<p>Turvallinen tapa tallentaa salasana tietokantaan on tallentaa salasanan sijasta salasanan <em>hajautusarvo</em> (<em>hash value</em>), jonka avulla voidaan tarkastaa, onko salasana oikea. Voimme käyttää tähän Flaskin mukana tulevaa Werkzeug-kirjastoa:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">check_password_hash</span><span class="p">,</span> <span class="n">generate_password_hash</span>
+</code></pre></div></div>
+
+<p>Esimerkiksi seuraava koodi lisää tietokantaan uuden käyttäjän, jonka tunnus on <code class="language-html highlighter-rouge">username</code> ja salasana on <code class="language-html highlighter-rouge">password</code>. Koodi laskee salasanan hajautusarvon Werkzeug-kirjaston funktiolla <code class="language-html highlighter-rouge">generate_password_hash</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">hash_value</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+<span class="n">sql</span> <span class="o">=</span> <span class="s">"INSERT INTO users (username, password) VALUES (:username, :password)"</span>
+<span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"username"</span><span class="p">:</span><span class="n">username</span><span class="p">,</span> <span class="s">"password"</span><span class="p">:</span><span class="n">hash_value</span><span class="p">})</span>
+<span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">commit</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Seuraava koodi puolestaan tarkastaa, onko käyttäjän antama tunnus ja salasana oikein:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT id, password FROM users WHERE username=:username"</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"username"</span><span class="p">:</span><span class="n">username</span><span class="p">})</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()</span>    
+<span class="k">if</span> <span class="ow">not</span> <span class="n">user</span><span class="p">:</span>
+    <span class="c1"># TODO: invalid username
+</span><span class="k">else</span><span class="p">:</span>
+    <span class="n">hash_value</span> <span class="o">=</span> <span class="n">user</span><span class="p">.</span><span class="n">password</span>
+    <span class="k">if</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="n">hash_value</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="c1"># TODO: correct username and password
+</span>    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># TODO: invalid password
+</span></code></pre></div></div>
+
+<p>Koodi hakee tietokannasta käyttäjän antamaa tunnusta vastaavan id-numeron ja salasanan. Jos tietokannasta ei tule riviä (tulos on <code class="language-html highlighter-rouge">None</code>), tämä tarkoittaa, että käyttäjää ei ole tietokannassa. Muuten koodi tarkastaa funktiolla <code class="language-html highlighter-rouge">check_password_hash</code>, onko salasana oikea.</p>
+
+<p>Salasana näyttää tietokannassa seuraavalta:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">user=# </span>SELECT password FROM users WHERE username='maija';
+                                            password                                            
+------------------------------------------------------------------------------------------------
+ pbkdf2:sha256:150000$98mnxMjT$cedf43db2f098831ab5f533d814cf094db01540e34251aee3d5afd7d5607fc5a
+(1 row)
+</code></pre></div></div>
+
+<p>Tässä tapauksessa käyttäjän “maija” salasana on “kissa”. Salasanasta on tallennettu tietokantaan merkkijono, jonka osana on käytetty hajautusfunktio (tässä <code class="language-html highlighter-rouge">sha256</code>), muuta tietoa hajautustavasta ja varsinainen hajautusarvo. Tämän avulla voidaan tarkastaa myöhemmin, onko käyttäjän antama salasana oikea.</p>
+
+<h3 id="miksi-tallentaa-salasana-hajautusarvona">Miksi tallentaa salasana hajautusarvona?</h3>
+
+<p>Jos jostain syystä hyökkääjä pääsisi käsiksi tietokannan sisältöön ja salasanat olisi tallennettu sellaisenaan, hyökkääjä saisi selville suoraan käyttäjien salasanat. Moni käyttää samoja tai samantapaisia salasanoja eri palveluissa, joten tästä voisi olla huomattava hyöty pahantahtoiselle hyökkääjälle. Salasanan tallentaminen hajautusarvona <em>hidastaa</em> hyökkääjän työtä: jos hyökkääjä haluaa selvittää alkuperäisen salasanan, hänen täytyy käytännössä kokeilla läpi suuri määrä mahdollisia salasanoja ja tarkastaa, antaako jokin niistä oikean hajautusarvon.</p>
+
+<p>Huomaa, että jos hyökkääjä saa käsiinsä tietokannan sisällön, tilanne on jo erittäin paha eikä näin saisi päästä tapahtumaan. Kuitenkin tilanne olisi vielä pahempi, jos salasanat olisi tallennettu tietokantaan sellaisenaan. Toisaalta salasanan tallentaminen hajautusarvona ei auta asiaa, jos salasana on <em>huono</em> eli helposti arvattava tai lyhyt. Tällöin hyökkääjä saa sen joka tapauksessa selville käymällä läpi raa’alla voimalla mahdollisia salasanoja. Käyttäjä on siis aina osittain vastuussa omasta tietoturvastaan.</p>
+
+<p>Vaikka hyökkääjistä ei olisi huolta, ei silti olisi hyvä idea tallentaa salasanoja sellaisenaan, koska tietokannan ylläpitäjä voisi tahattomasti nähdä käyttäjien salasanoja.</p>
+
+<h2 id="hakutoiminto">Hakutoiminto</h2>
+
+<p>Perinteinen periaate web-sovelluksissa on, että <code class="language-html highlighter-rouge">GET</code>-metodia käyttävä sivupyyntö <em>hakee</em> tietokannasta tietoa (<code class="language-html highlighter-rouge">SELECT</code>-komennoilla), kun taas <code class="language-html highlighter-rouge">POST</code>-metodia käyttävä sivupyyntö voi myös <em>muuttaa</em> tietoa (<code class="language-html highlighter-rouge">INSERT</code>-, <code class="language-html highlighter-rouge">UPDATE</code>- ja <code class="language-html highlighter-rouge">DELETE</code>-komennoilla). Toisin sanoen <code class="language-html highlighter-rouge">GET</code>-metodi ei muuta tietokannan <em>tilaa</em>, kun taas <code class="language-html highlighter-rouge">POST</code>-metodi voi muuttaa sitä.</p>
+
+<p>Olemme tähän mennessä toteuttaneet kaikki lomakkeet <code class="language-html highlighter-rouge">POST</code>-metodilla, mikä on luontevaa, koska yleensä lomakkeen lähetys aiheuttaa muutoksia tietokannassa. Kuitenkin joskus on paikallaan <code class="language-html highlighter-rouge">GET</code>-metodia käyttävä lomake, joka ei muuta tietokantaa.</p>
+
+<p>Tarkastellaan seuraavaksi tilannetta, jossa haluamme toteuttaa sovellukseen <em>hakutoiminnon</em>. Ideana on, että käyttäjä voi antaa lomakkeella hakusanan, minkä jälkeen sovellus etsii tietokannasta kaikki tähän täsmäävät rivit. Oletamme, että sovelluksessa on taulu <code class="language-html highlighter-rouge">messages</code>:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">messages</span> <span class="p">(</span><span class="n">id</span> <span class="nb">SERIAL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span> <span class="n">content</span> <span class="nb">TEXT</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Käyttäjä pystyy hakemaan tietoa seuraavan lomakkeen kautta, joka on määritelty muuten samaan tyyliin kuin aiemmin, mutta metodina on <code class="language-html highlighter-rouge">GET</code> eikä <code class="language-html highlighter-rouge">POST</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/result"</span> <span class="na">method=</span><span class="s">"GET"</span><span class="nt">&gt;</span>
+Hakusana: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"query"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>Seuraava sivu käsittelee lomakkeen:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/result"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">result</span><span class="p">():</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">[</span><span class="s">"query"</span><span class="p">]</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT id, content FROM messages WHERE content LIKE :query"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"query"</span><span class="p">:</span><span class="s">"%"</span><span class="o">+</span><span class="n">query</span><span class="o">+</span><span class="s">"%"</span><span class="p">})</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"result.html"</span><span class="p">,</span> <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Kun käytössä on <code class="language-html highlighter-rouge">GET</code>-metodi, lomakkeen sisältö välitetään sivun osoitteen mukana. Esimerkiksi kun käyttäjä hakee sanalla “kissa”, sivun osoite on <code class="language-html highlighter-rouge">/result?query=kissa</code>. Tämä tarkoittaa myös, että käyttäjä voi tehdä helposti hakuja myös ilman lomaketta muuttamalla osoitetta.</p>
+
+<p>Lomakkeen käsittelyssä <code class="language-html highlighter-rouge">GET</code>-metodilla lähetetty tieto on saatavilla <code class="language-html highlighter-rouge">request.args</code>-olion kautta. Yllä oleva koodi muodostaa SQL-kyselyn, jossa hakuehdossa on <code class="language-html highlighter-rouge">LIKE</code>-operaattori eli riittää, että hakusana esiintyy jossain kohtaa viestin sisältöä. Esimerkiksi kun hakusana on <code class="language-html highlighter-rouge">kissa</code>, ehdoksi tulee <code class="language-html highlighter-rouge">content LIKE '%kissa%'</code>.</p>
+
+<p>Koska kyseessä on <code class="language-html highlighter-rouge">GET</code>-metodi, lomakkeen käsittelijän alussa ei tarvitse ilmoittaa metodia, koska Flaskissa oletusmetodi on <code class="language-html highlighter-rouge">GET</code>. Silti voisimme halutessamme merkitä selkeyden vuoksi myös <code class="language-html highlighter-rouge">GET</code>-metodin samaan tapaan kuin ennen:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/result"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"GET"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">result</span><span class="p">():</span>
+    <span class="p">...</span>
+</code></pre></div></div>
+
+<p>Huomaa, että on vain käytäntö, että <code class="language-html highlighter-rouge">GET</code>-metodi ei muuta tietokannan sisältöä. Metodista riippumatta sivupyynnön käsittelijä voi suorittaa mitä tahansa SQL-komentoja.</p>
+
+<p>Koska <code class="language-html highlighter-rouge">GET</code>-metodia käyttäessä lomakkeen tiedot välitetään sivun osoitteen kautta, tiedoista jää kopioita palvelinten lokitiedostoihin. Lisäksi selain voi säilyttää <code class="language-html highlighter-rouge">GET</code>-pyyntöjen vastaukset välimuistissaan, mutta <code class="language-html highlighter-rouge">POST</code>-pyyntöjen vastauksia ei yleensä säilytetä.</p>
+
+<h2 id="tiedon-poistaminen">Tiedon poistaminen</h2>
+
+<p>Tiedon poistaminen tietokannasta ei ole välttämättä niin helppoa kuin voisi ajatella. Tarkastellaan esimerkkisovelluksen taulua <code class="language-html highlighter-rouge">polls</code>, jossa on tiedot kyselyistä:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">user=# </span>SELECT * FROM polls;
+ id |          topic           |         created_at         
+----+--------------------------+----------------------------
+  1 | Mikä meno?               | 2020-07-05 12:39:23.456712
+  2 | Kuuluuko ananas pizzaan? | 2020-07-05 12:39:54.02045
+(2 rows)
+</code></pre></div></div>
+
+<p>Yritys poistaa rivi <code class="language-html highlighter-rouge">DELETE</code>-komennolla epäonnistuu:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">user=# </span>DELETE FROM polls WHERE id=2;
+ERROR:  update or delete on table "polls" violates foreign key constraint "choices_poll_id_fkey" on table "choices"
+DETAIL:  Key (id)=(2) is still referenced from table "choices".
+</code></pre></div></div>
+
+<p>Tässä on ongelmana, että taulusta <code class="language-html highlighter-rouge">choices</code> on viittaus taulun <code class="language-html highlighter-rouge">polls</code> riviin 2, minkä vuoksi tietokanta ei anna poistaa riviä.</p>
+
+<p>Yksi ratkaisu asiaan olisi määritellä taulun luonnissa tarkemmin <code class="language-html highlighter-rouge">ON DELETE</code> -osassa, mitä tapahtuu, kun taulusta poistetaan rivi. Esimerkiksi <code class="language-html highlighter-rouge">ON DELETE CASCADE</code> määrittää, että kun rivi poistetaan, niin myös siihen viittaavat rivit poistetaan. Lisätietoa tästä lähestymistavasta on kurssin <em>Tietokantojen perusteet</em> <a href="https://tikape.mooc.fi/kevat-2021/content/osa-7/#viittaukset-ja-poistot">luvussa 7</a>.</p>
+
+<p>Vaihtoehtoinen ratkaisu on toteuttaa rivin poistaminen niin, että tietokannasta ei todellisuudessa poisteta mitään, vaan rivi vain <em>piilotetaan</em>. Tämä onnistuu lisäämällä tauluun sarake, joka ilmaisee rivin näkyvyyden:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">user=# </span>SELECT * FROM polls;
+ id |          topic           |         created_at         | visible 
+----+--------------------------+----------------------------+---------
+  1 | Mikä meno?               | 2020-07-05 12:39:23.456712 |       t
+  2 | Kuuluuko ananas pizzaan? | 2020-07-05 12:39:54.02045  |       t
+(2 rows)
+</code></pre></div></div>
+
+<p>Tässä <code class="language-html highlighter-rouge">BOOLEAN</code>-tyyppinen sarake <code class="language-html highlighter-rouge">visible</code> ilmaisee, onko rivi näkyvissä. Tämän sarakkeen arvona on <code class="language-html highlighter-rouge">TRUE</code> tai <code class="language-html highlighter-rouge">FALSE</code> (PostgreSQL-tulkki näyttää <code class="language-html highlighter-rouge">t</code> tai <code class="language-html highlighter-rouge">f</code>). Aluksi arvo on <code class="language-html highlighter-rouge">TRUE</code>, jolloin rivi on näkyvissä. Sitten kun rivi halutaan poistaa, arvoksi muutetaan <code class="language-html highlighter-rouge">FALSE</code>:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">user=# </span>UPDATE polls SET visible=FALSE WHERE id=2;
+UPDATE 1
+</code></pre></div></div>
+
+<p>Tämän lisäksi sovellusta täytyy muuttaa niin, että se näyttää käyttäjälle tietoa vain riveistä, joissa sarakkeen <code class="language-html highlighter-rouge">visible</code> arvo on <code class="language-html highlighter-rouge">TRUE</code>.</p>
+
+<p>Tämän ratkaisun etuna on, että <code class="language-html highlighter-rouge">UPDATE</code>-komennolla tehtävä näkyvyyden muutos ei vaikuta viittauksiin, minkä ansiosta se onnistuu aina. Lisäksi koska tietokannasta ei poisteta tietoa, piilotettu rivi on helppoa palauttaa muuttamalla saraketta <code class="language-html highlighter-rouge">visible</code>.</p>
+
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

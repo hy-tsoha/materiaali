@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Pylint-työkalu - Tietokannat ja web-ohjelmointi
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tietokannat ja web-ohjelmointi</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/aikataulu/">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/arvostelu/">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/kysymykset/">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/taustamateriaali/">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/osa-1/">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/osa-1/#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/osa-1/#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/osa-1/#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/osa-1/#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/osa-2/">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/osa-2/#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/osa-2/#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/osa-2/#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/osa-2/#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/osa-2/#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/osa-3/">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/osa-3/#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/osa-3/#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/osa-3/#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/osa-3/#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/osa-3/#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/osa-4/">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/osa-4/#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/osa-4/#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/osa-4/#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/osa-4/#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+    </ol>
+</nav>
+
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="pylint-työkalu">Pylint-työkalu</h1>
+
+<p><a href="https://pypi.org/project/pylint/">Pylint</a> on työkalu, joka antaa palautetta Python-koodin ohjelmointityylistä. Työkalun avulla on kätevää etsiä omasta koodista korjattavia asioita.</p>
+
+<p>Esimerkiksi seuraava komento tarkastaa tiedoston <code class="language-html highlighter-rouge">test.py</code> sisällön:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>pylint test.py
+</code></pre></div></div>
+
+<h2 id="esimerkki">Esimerkki</h2>
+
+<p>Kokeillaan testimielessä, millaista palautetta Pylint antaa kurssin <a href="https://github.com/hy-tsoha/tsoha-words">esimerkkisovelluksesta</a>. Tässä tapauksessa on kätevää antaa parametriksi <code class="language-html highlighter-rouge">*.py</code>, jolloin saadaan palaute kaikista hakemiston Python-tiedostoista.</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>pylint *.py
+************* Module app
+app.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app.py:1:0: E0401: Unable to import 'flask' (import-error)
+app.py:7:0: C0413: Import "import routes" should be placed at the top of the module (wrong-import-position)
+app.py:7:0: W0611: Unused import routes (unused-import)
+app.py:2:0: C0411: standard import "from os import getenv" should be placed before "from flask import Flask" (wrong-import-order)
+************* Module db
+db.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+db.py:2:0: E0401: Unable to import 'flask_sqlalchemy' (import-error)
+db.py:3:0: C0411: standard import "from os import getenv" should be placed before "from app import app" (wrong-import-order)
+************* Module decks
+decks.py:72:0: C0301: Line too long (101/100) (line-too-long)
+decks.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+decks.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:13:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:17:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:22:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:39:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:44:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:50:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:54:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:64:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:69:0: C0116: Missing function or method docstring (missing-function-docstring)
+decks.py:2:0: C0411: standard import "from random import randint" should be placed before "from db import db" (wrong-import-order)
+************* Module routes
+routes.py:56:0: C0301: Line too long (135/100) (line-too-long)
+routes.py:98:0: C0301: Line too long (110/100) (line-too-long)
+routes.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+routes.py:2:0: E0401: Unable to import 'flask' (import-error)
+routes.py:3:0: C0410: Multiple imports on one line (decks, stats, users) (multiple-imports)
+routes.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+routes.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
+routes.py:10:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+routes.py:35:8: W0622: Redefining built-in 'list' (redefined-builtin)
+routes.py:42:12: W0621: Redefining name 'deck' from outer scope (line 48) (redefined-outer-name)
+routes.py:31:0: C0116: Missing function or method docstring (missing-function-docstring)
+routes.py:31:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+routes.py:48:9: W0622: Redefining built-in 'id' (redefined-builtin)
+routes.py:48:0: C0103: Argument name "id" doesn't conform to snake_case naming style (invalid-name)
+routes.py:48:0: C0116: Missing function or method docstring (missing-function-docstring)
+routes.py:59:0: C0116: Missing function or method docstring (missing-function-docstring)
+routes.py:80:9: W0622: Redefining built-in 'id' (redefined-builtin)
+routes.py:80:0: C0103: Argument name "id" doesn't conform to snake_case naming style (invalid-name)
+routes.py:80:0: C0116: Missing function or method docstring (missing-function-docstring)
+routes.py:87:0: C0116: Missing function or method docstring (missing-function-docstring)
+routes.py:101:0: C0116: Missing function or method docstring (missing-function-docstring)
+routes.py:109:8: R1705: Unnecessary "else" after "return" (no-else-return)
+routes.py:101:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+routes.py:115:0: C0116: Missing function or method docstring (missing-function-docstring)
+routes.py:120:0: C0116: Missing function or method docstring (missing-function-docstring)
+routes.py:137:11: R1714: Consider merging these comparisons with "in" to "role not in ('1', '2')" (consider-using-in)
+routes.py:140:8: R1705: Unnecessary "else" after "return" (no-else-return)
+routes.py:120:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+routes.py:120:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+routes.py:146:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module stats
+stats.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+stats.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)
+stats.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module users
+users.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+users.py:2:0: E0401: Unable to import 'flask' (import-error)
+users.py:3:0: E0401: Unable to import 'werkzeug.security' (import-error)
+users.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
+users.py:10:4: R1705: Unnecessary "else" after "return" (no-else-return)
+users.py:13:8: R1705: Unnecessary "else" after "return" (no-else-return)
+users.py:22:0: C0116: Missing function or method docstring (missing-function-docstring)
+users.py:27:0: C0116: Missing function or method docstring (missing-function-docstring)
+users.py:34:4: W0702: No exception type(s) specified (bare-except)
+users.py:38:0: C0116: Missing function or method docstring (missing-function-docstring)
+users.py:41:0: C0116: Missing function or method docstring (missing-function-docstring)
+users.py:45:0: C0116: Missing function or method docstring (missing-function-docstring)
+users.py:4:0: C0411: standard import "import os" should be placed before "from db import db" (wrong-import-order)
+users.py:1:0: R0401: Cyclic import (app -&gt; routes) (cyclic-import)
+users.py:1:0: R0401: Cyclic import (app -&gt; routes -&gt; decks -&gt; db) (cyclic-import)
+users.py:1:0: R0401: Cyclic import (app -&gt; routes -&gt; stats -&gt; db) (cyclic-import)
+users.py:1:0: R0401: Cyclic import (app -&gt; routes -&gt; users -&gt; db) (cyclic-import)
+
+------------------------------------------------------------------
+Your code has been rated at 5.62/10
+</code></pre></div></div>
+
+<p>Pylint antaa palautteen jokaisesta tiedostosta ja lopuksi arvion koodin laadusta. Tässä tapauksessa Pylint antaa koodille arvion 5.62/10.</p>
+
+<h2 id="raportin-tulkinta">Raportin tulkinta</h2>
+
+<p>Pylintin antama raportti kannattaa lukea huolellisesti ja miettiä, miten koodin laatua voi parantaa sen avulla. Tässä projektissa Pylint huomauttaa mm. seuraavista asioista:</p>
+
+<ul>
+  <li>
+    <p><strong>Missing module docstring (missing-module-docstring)</strong>:
+Moduulin alussa ei ole kommenttia, joka dokumentoi moduulin sisällön.</p>
+  </li>
+  <li>
+    <p><strong>Missing function or method docstring (missing-function-docstring)</strong>:
+Funktion alussa ei ole kommenttia, joka dokumentoi funktion sisällön.</p>
+  </li>
+  <li>
+    <p><strong>Unable to import X (import-error)</strong>:
+Moduulia ei pystytä ottamaan mukaan. Syynä tähän voi olla, että käytössä on virtuaaliympäristö.</p>
+  </li>
+  <li>
+    <p><strong>Standard import “from os import getenv” should be placed before “from app import app” (wrong-import-order)</strong>:
+Standardikirjaston <code class="language-html highlighter-rouge">import</code>-komennot tulisi laittaa ennen muita <code class="language-html highlighter-rouge">import</code>-komentoja.</p>
+  </li>
+  <li>
+    <p><strong>Line too long (X/100) (line-too-long)</strong>:
+Koodissa on liian pitkä rivi. Rivillä saa olla korkeintaan 100 merkkiä.</p>
+  </li>
+  <li><strong>Redefining built-in X (redefined-builtin)</strong>:
+Koodissa on käytetty nimeä, joka korvaa Python-kielessä olevan nimen. Näin on esimerkiksi seuraavassa funktiossa:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/deck/&lt;int:id&gt;"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">deck</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+</code></pre></div>    </div>
+    <p>Tässä parametrin nimi on <code class="language-html highlighter-rouge">id</code>, mutta Python-kielessä on myös sisäinen funktio <code class="language-html highlighter-rouge">id</code>. Tämän seurauksena funktiossa <code class="language-html highlighter-rouge">deck</code> ei ole mahdollista käyttää funktiota <code class="language-html highlighter-rouge">id</code>.</p>
+  </li>
+  <li><strong>Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)</strong>:
+Funktio voi palauttaa arvon, mutta ei välttämättä palauta arvoa. Näin on esimerkiksi seuraavassa funktiossa:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">"GET"</span><span class="p">:</span>
+        <span class="p">...</span>
+        <span class="k">return</span> <span class="p">...</span>
+    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">"POST"</span><span class="p">:</span>
+        <span class="p">...</span>
+        <span class="k">return</span> <span class="p">...</span>
+</code></pre></div>    </div>
+    <p>Funktio palauttaa arvon, jos pyynnön metodi on <code class="language-html highlighter-rouge">GET</code> tai <code class="language-html highlighter-rouge">POST</code>, mutta jos metodi on jotain muuta, funktio ei palauta arvoa.</p>
+  </li>
+  <li><strong>Unnecessary “else” after “return” (no-else-return)</strong>: Tämä huomautus tulee esimerkiksi seuraavasta koodista:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="n">users</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"error.html"</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s">"Väärä tunnus tai salasana"</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <p>Koska ensimmäisessä haarassa on <code class="language-html highlighter-rouge">return</code>, koodin voisi kirjoittaa lyhyemmin näin:</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="n">users</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"error.html"</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s">"Väärä tunnus tai salasana"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Huomaa kuitenkin, että raportin tulkinnassa kannattaa käyttää omaa harkintaa. Vaikka Pylint huomauttaa jostain asiasta, se ei välttämättä vaadi korjaamista. Esimerkiksi tämän kurssin projektissa moduuleja ja funktioita ei tarvitse dokumentoida.</p>
+
+<h2 id="raportin-asetukset">Raportin asetukset</h2>
+
+<p>Pylintin raportissa joka rivin perässä on tunnus, joka ilmaisee palautteen aiheen. Tiedoston <code class="language-html highlighter-rouge">.pylintrc</code> avulla voi määrittää, että tiettyjä asioita ei käsitellä raportissa.</p>
+
+<p>Esimerkiksi tämän kurssin projektissa tiedoston sisältö voisi olla seuraava:</p>
+
+<p class="code-title">.pylintrc</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>[MESSAGES CONTROL]
+
+disable=missing-module-docstring,
+        missing-function-docstring,
+        import-error,
+        cyclic-import
+</code></pre></div></div>
+
+<p>Tämän seurauksena raportti lyhenee selvästi ja siitä näkee paremmin tämän projektin kannalta hyödyllistä palautetta:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>pylint *.py
+************* Module app
+app.py:7:0: C0413: Import "import routes" should be placed at the top of the module (wrong-import-position)
+app.py:7:0: W0611: Unused import routes (unused-import)
+app.py:2:0: C0411: standard import "from os import getenv" should be placed before "from flask import Flask" (wrong-import-order)
+************* Module db
+db.py:3:0: C0411: standard import "from os import getenv" should be placed before "from app import app" (wrong-import-order)
+************* Module decks
+decks.py:72:0: C0301: Line too long (101/100) (line-too-long)
+decks.py:2:0: C0411: standard import "from random import randint" should be placed before "from db import db" (wrong-import-order)
+************* Module routes
+routes.py:56:0: C0301: Line too long (135/100) (line-too-long)
+routes.py:98:0: C0301: Line too long (110/100) (line-too-long)
+routes.py:3:0: C0410: Multiple imports on one line (decks, stats, users) (multiple-imports)
+routes.py:10:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+routes.py:35:8: W0622: Redefining built-in 'list' (redefined-builtin)
+routes.py:42:12: W0621: Redefining name 'deck' from outer scope (line 48) (redefined-outer-name)
+routes.py:31:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+routes.py:48:9: W0622: Redefining built-in 'id' (redefined-builtin)
+routes.py:48:0: C0103: Argument name "id" doesn't conform to snake_case naming style (invalid-name)
+routes.py:80:9: W0622: Redefining built-in 'id' (redefined-builtin)
+routes.py:80:0: C0103: Argument name "id" doesn't conform to snake_case naming style (invalid-name)
+routes.py:109:8: R1705: Unnecessary "else" after "return" (no-else-return)
+routes.py:101:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+routes.py:137:11: R1714: Consider merging these comparisons with "in" to "role not in ('1', '2')" (consider-using-in)
+routes.py:140:8: R1705: Unnecessary "else" after "return" (no-else-return)
+routes.py:120:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+routes.py:120:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+************* Module users
+users.py:10:4: R1705: Unnecessary "else" after "return" (no-else-return)
+users.py:13:8: R1705: Unnecessary "else" after "return" (no-else-return)
+users.py:34:4: W0702: No exception type(s) specified (bare-except)
+users.py:4:0: C0411: standard import "import os" should be placed before "from db import db" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 8.71/10
+</code></pre></div></div>
+
+<p>Nyt koodi saa arvion 8.71/10, mutta koodissa olisi vielä monenlaista parannettavaa.</p>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

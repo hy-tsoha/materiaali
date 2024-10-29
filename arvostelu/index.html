@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Arvostelu - Tietokannat ja web-ohjelmointi
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tietokannat ja web-ohjelmointi</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/aikataulu/">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/arvostelu/">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/kysymykset/">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/taustamateriaali/">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/osa-1/">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/osa-1/#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/osa-1/#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/osa-1/#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/osa-1/#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/osa-2/">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/osa-2/#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/osa-2/#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/osa-2/#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/osa-2/#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/osa-2/#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/osa-3/">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/osa-3/#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/osa-3/#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/osa-3/#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/osa-3/#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/osa-3/#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/osa-4/">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/osa-4/#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/osa-4/#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/osa-4/#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/osa-4/#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+    </ol>
+</nav>
+
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="arvostelu">Arvostelu</h1>
+
+<p>Tälle sivulle on koottu asiat, jotka kurssin ohjaaja käy läpi työsi arvostelussa. Kurssi arvostellaan asteikolla 1–5 sen mukaan, miten hyvin vaatimukset toteutuvat sovelluksessasi.</p>
+
+<p>Tutustu myös <a href="/materiaali/tekninen_tarkastuslista/">tekniseen tarkastuslistaan</a>, johon on koottu yhteen ohjeita versionhallinnasta, ohjelmointityylistä, tietokanta-asioista ja tietoturvasta.</p>
+
+<h3 id="perusvaatimukset">Perusvaatimukset</h3>
+
+<ul>
+  <li>On toteutettu web-sovellus Pythonilla/Flaskilla</li>
+  <li>Sovelluksen aihe on sopiva kurssille (ks. <a href="/materiaali/aiheen_valinta/">aiheen valinta</a>)</li>
+  <li>Sovelluksen koodi on saatavilla versionhallinnassa</li>
+  <li>Sovellus on testattavissa tuotantopalvelimella</li>
+  <li>Sovelluksessa on tietokanta, jossa on noin 5–10 taulua</li>
+  <li>Tietokantaa käsitellään monipuolisesti SQL-komennoilla</li>
+</ul>
+
+<p><mark>HUOM! Vuoden 2023 alusta alkaen sovelluksen ei tarvitse olla testattavissa tuotantopalvelimella. Riittää, että sen saa käynnistettyä paikallisesti.
+Lisätietoja <a href="/materiaali/aikataulu#huomio-flyiosta">täällä</a>.</mark></p>
+
+<h3 id="toimivuus-ja-käytettävyys">Toimivuus ja käytettävyys</h3>
+
+<ul>
+  <li>Sovellus toimii, kun käyttäjä testaa sitä</li>
+  <li>Sovellusta on miellyttävää käyttää</li>
+  <li>Käyttäjälle on selvää, mitä sovelluksen toiminnot tekevät</li>
+  <li>Jos käyttäjä antaa väärää tietoa, tästä tulee selkeä ilmoitus</li>
+  <li>Sovelluksen käyttöliittymä ja ulkoasu ovat viimeisteltyjä</li>
+</ul>
+
+<h3 id="versionhallinta">Versionhallinta</h3>
+
+<ul>
+  <li>Commitit ovat hyviä kokonaisuuksia ja niissä on hyvät viestit</li>
+  <li>Commit-viestit on kirjoitettu englanniksi</li>
+  <li>Versionhallinnassa ei ole sinne kuulumattomia tiedostoja</li>
+  <li>Tiedosto <code class="language-html highlighter-rouge">README.md</code> antaa hyvän kuvan sovelluksesta</li>
+</ul>
+
+<h3 id="ohjelmointityyli">Ohjelmointityyli</h3>
+
+<ul>
+  <li>Koodin muotoilu seuraa Pythonin tyyliohjetta</li>
+  <li>Koodi on kirjoitettu englanniksi</li>
+  <li>Koodi on selkeää, suoraviivaista ja tiivistä</li>
+  <li>Koodi on jaettu järkevästi osiin moduuleiksi ja funktioiksi</li>
+  <li>Koodi on yhdenmukaista sovelluksen eri osissa</li>
+</ul>
+
+<h3 id="tietokanta-asiat">Tietokanta-asiat</h3>
+
+<ul>
+  <li>Tietokanta on suunniteltu järkevästi</li>
+  <li>Taulut ja sarakkeet on nimetty englanniksi</li>
+  <li>Taulut ja sarakkeet on nimetty kuvaavasti ja yhdenmukaisesti</li>
+  <li>Tauluissa on käytetty viiteavaimia ja tarvittaessa muita määreitä</li>
+  <li>Koodissa ei tehdä asioita, jotka voi mielekkäästi tehdä SQL:ssä</li>
+</ul>
+
+<h3 id="tietoturva">Tietoturva</h3>
+
+<ul>
+  <li>Versionhallinnassa ei ole salaista tietoa</li>
+  <li>Salasanat tallennetaan tietokantaan asianmukaisesti</li>
+  <li>Käyttäjän syötteet tarkastetaan ennen tietokantaan tallentamista</li>
+  <li>Käyttäjä ei pääse käsiksi tietoon, johon hänellä ei ole oikeutta</li>
+  <li>Sovelluksessa ei ole SQL-injektiota eikä XSS- ja CSRF-haavoittuvuuksia</li>
+</ul>
+
+<h3 id="palaute">Palaute</h3>
+
+<ul>
+  <li>Opiskelija antoi hyödyllistä vertaispalautetta muille opiskelijalle</li>
+  <li>Opiskelija antoi kurssin lopussa kurssipalautteen</li>
+  <li>Tämä osio ei ole mukana itsenäisen suorituksen arvioinnissa</li>
+</ul>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Ohjaajan ohje - Tietokannat ja web-ohjelmointi
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tietokannat ja web-ohjelmointi</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/aikataulu/">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/arvostelu/">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/kysymykset/">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/taustamateriaali/">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/osa-1/">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/osa-1/#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/osa-1/#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/osa-1/#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/osa-1/#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/osa-2/">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/osa-2/#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/osa-2/#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/osa-2/#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/osa-2/#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/osa-2/#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/osa-3/">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/osa-3/#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/osa-3/#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/osa-3/#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/osa-3/#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/osa-3/#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/osa-4/">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/osa-4/#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/osa-4/#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/osa-4/#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/osa-4/#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+    </ol>
+</nav>
+
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="ohjaajan-ohje">Ohjaajan ohje</h1>
+
+<h2 id="ohjaajan-tehtävät">Ohjaajan tehtävät</h2>
+
+<p>Ohjaajan tehtävät kurssilla ovat:</p>
+
+<ul>
+  <li>palautteen antaminen opiskelijoiden välipalautuksista</li>
+  <li>lopullisten palautusten arviointi</li>
+  <li>opiskelijoiden ohjaaminen (pajassa tai etänä)</li>
+</ul>
+
+<p>Ohjaajan tehtävistä ja työmäärästä sovitaan tarkemmin kurssin vastuuhenkilön kanssa ennen kurssin alkua. Opiskelijoiden määrä vaihtelee melko paljon kurssin toteutuksissa lukuvuoden aikana, ja kurssilla voi olla yksi tai useampi ohjaaja.</p>
+
+<h2 id="palautteen-antaminen">Palautteen antaminen</h2>
+
+<p>Olennaista on antaa opiskelijoille <em>hyödyllistä</em> palautetta, joka parantaa harjoitustyön laatua ja opettaa web-sovelluksen toteuttamiseen liittyviä asioita. Välipalautuksissa deadline on sunnuntaina ja ohjaajan tulee antaa palaute seuraavan viikon alussa, jotta opiskelijat saavat nopeasti palautteen, jonka avulla he pystyvät kehittämään työtä.</p>
+
+<p>Ohjaajan ei tarvitse tietää kaikkea ennestään, ja usein ohjaaja oppii itsekin monenlaista opiskelijan harjoitustyötä ohjatessa.</p>
+
+<h3 id="välipalautus-1">Välipalautus 1</h3>
+
+<p>Tässä vaiheessa selviää, moniko opiskelija aloittaa kurssin. Anna palautetta siitä, onko harjoitustyön aihe sopivan laaja kurssille. Tuo erityisesti esille, jos sovelluksen aihe on kuvauksen perusteella liian suppea.</p>
+
+<h3 id="välipalautus-2">Välipalautus 2</h3>
+
+<p>Anna palautetta erityisesti seuraavista asioista:</p>
+
+<ul>
+  <li>Käyttökokemus: voiko sovelluksen perustoimintoja jo käyttää?</li>
+  <li>Gitin käyttö: onko repossa oikeat tiedostot ja ovatko commit-viestit hyviä?</li>
+  <li>Ohjelmointityyli: onko koodi siistiä ja seuraako se Python-kielen käytäntöjä?</li>
+  <li>Tietokanta-asiat: onko SQL-skeema kunnossa ja käytetäänkö tietokantaa koodissa järkevästi?</li>
+</ul>
+
+<p>Muistuta opiskelijaa tarvittaessa <a href="/materiaali/tekninen_tarkastuslista/">teknisestä tarkastuslistasta</a>.</p>
+
+<h3 id="välipalautus-3">Välipalautus 3</h3>
+
+<p>Anna palautetta erityisesti seuraavista asioista:</p>
+
+<ul>
+  <li>Käyttökokemus: mitä kannattaa parantaa vielä ennen lopullista palautusta?</li>
+  <li>Tietoturva: ovatko tarkastukset kunnossa koodissa, jotta käyttäjä voi käsitellä vain hänelle kuuluvia tietoja?</li>
+  <li>Tietoturva: onko koodissa SQL-injektiota, XSS-aukkoa tai CSRF-aukkoa?</li>
+  <li>Ohjelmointityyli: onko koodi jaettu järkevästi osiin moduuleiksi ja funktioiksi?</li>
+  <li>Tietokanta-asiat: tehdäänkö koodissa tiedon käsittelyä, jota kuuluisi tehdä SQL:ssä?</li>
+</ul>
+
+<p>Muistuta opiskelijaa tarvittaessa <a href="/materiaali/tekninen_tarkastuslista/">teknisestä tarkastuslistasta</a>.</p>
+
+<h3 id="loppupalautus">Loppupalautus</h3>
+
+<p>Käy läpi <a href="/materiaali/arvostelu/">arvostelusivun</a> osiot ja tuo esille arvostelussa, mitkä asiat toteutuvat sovelluksessa ja mitkä asiat eivät. Anna sovelluksesta arvosana, joka ilmaisee sitä, miten arvostelusivun vaatimukset toteutuvat kokonaisuutena sovelluksessa.</p>
+
+<h2 id="ohjaajan-palkka">Ohjaajan palkka</h2>
+
+<p>Ohjaajan tuntipalkka on 17 €. Ohjaajalle maksetaan 3 · 17 € kurssin loppuun asti jatkaneesta opiskelijasta ja 0.5 · 17 € keskeyttäneestä opiskelijasta. Tämä kannattaa ottaa huomioon siinä, paljonko aikaa käyttää palautteen antamiseen ja arviointiin.</p>
+
+<p>Lisäksi pajaohjauksesta maksetaan viikossa</p>
+
+<ul>
+  <li>2 · 17 €, jos kurssilla on alle 30 opiskelijaa,</li>
+  <li>4 · 17 €, jos kurssilla on 30–50 opiskelijaa,</li>
+  <li>6 · 17 €, jos kurssilla on 50–100 opiskelijaa, ja</li>
+  <li>8 · 17 €, jos kurssilla on yli 100 opiskelijaa.</li>
+</ul>
+
+<p>Jos kurssilla on useita ohjaajia, pajaohjauksen tunnit jakautuvat ohjaajien kesken.</p>
+
+<p>Kurssin lopussa ohjaaja toimittaa Reijo Sivenille raportin tunneista ja vastuullaan olleiden opiskelijoiden määristä, minkä perusteella palkka maksetaan.</p>
+
+<h2 id="miten-ohjaajaksi">Miten ohjaajaksi?</h2>
+
+<p>Jos olet kiinnostunut ohjaamisesta, lähetä viesti kurssin vastuuhenkilölle. Ohjaajan tulee olla suorittanut kurssi arvosanalla 5.</p>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

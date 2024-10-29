@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Tekninen tarkastuslista - Tietokannat ja web-ohjelmointi
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tietokannat ja web-ohjelmointi</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/aikataulu/">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/arvostelu/">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/kysymykset/">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/taustamateriaali/">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/osa-1/">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/osa-1/#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/osa-1/#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/osa-1/#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/osa-1/#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/osa-2/">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/osa-2/#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/osa-2/#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/osa-2/#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/osa-2/#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/osa-2/#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/osa-3/">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/osa-3/#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/osa-3/#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/osa-3/#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/osa-3/#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/osa-3/#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/osa-4/">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/osa-4/#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/osa-4/#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/osa-4/#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/osa-4/#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+    </ol>
+</nav>
+
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+    </ul>
+</div>-->
+
+    <h1 id="tekninen-tarkastuslista">Tekninen tarkastuslista</h1>
+
+<p>Tämän sivun avulla voit tarkastaa, että sovelluksesi tekniset asiat ovat kunnossa. Monista tämän sivun aiheista on tarkempaa tietoa kurssimateriaalin muissa osissa.</p>
+
+<h2 id="versionhallinta">Versionhallinta</h2>
+
+<ul>
+  <li>
+    <p>Tee usein commiteja niin, että jokainen commit muuttaa jonkin yksittäisen asian.</p>
+  </li>
+  <li>
+    <p>Kirjoita commit-viestit englanniksi ja yhtenäisellä tyylillä.</p>
+  </li>
+  <li>
+    <p>Kirjoita commit-viestiin selkeästi tehty muutos (esim. mikä ominaisuus lisättiin). Esimerkki hyvästä commit-viestistä on “Show number of users in each group”.</p>
+  </li>
+  <li>
+    <p>Varmista, että versionhallinnassa ei ole sinne kuulumattomia tiedostoja tai hakemistoja (kuten <code class="language-html highlighter-rouge">.env</code>, <code class="language-html highlighter-rouge">__pycache__</code> tai <code class="language-html highlighter-rouge">venv</code>).</p>
+  </li>
+  <li>
+    <p>Laadi hyvä tiedosto <code class="language-html highlighter-rouge">README.md</code>, joka antaa hyödyllistä tietoa henkilölle, joka päätyy sovelluksesi repositorioon.</p>
+  </li>
+</ul>
+
+<h2 id="ohjelmointityyli">Ohjelmointityyli</h2>
+
+<ul>
+  <li>
+    <p><a href="https://www.python.org/dev/peps/pep-0008/">Pythonin tyyliohje</a> (PEP 8) antaa ohjeita Python-koodin kirjoittamiseen. Tutustu tyyliohjeeseen ja pyri noudattamaan sitä omassa koodissasi.</p>
+  </li>
+  <li>
+    <p><a href="/materiaali/pylint/">Pylint</a> on kätevä työkalu, joka antaa palautetta Python-koodin tyylistä. Sen avulla voit löytää automaattisesti monia ongelmia koodista.</p>
+  </li>
+  <li>
+    <p>Pythonissa sisennyksen leveys on <em>neljä välilyöntiä</em>. Paras tapa on säätää editorin asetukset niin, että editori pitää huolta tästä.</p>
+  </li>
+  <li>
+    <p>Kirjoita kaikki koodi englanniksi. Tämä koskee koodin muuttujien, funktioiden yms. nimiä sekä kommentteja.</p>
+  </li>
+  <li>
+    <p>Nimeä muuttujat kuvaavasti mutta älä tarpeettoman pitkästi. Hyvä nimi on esimerkiksi <code class="language-html highlighter-rouge">user_count</code>, huonoja nimiä ovat <code class="language-html highlighter-rouge">x</code> ja <code class="language-html highlighter-rouge">total_number_of_users_in_system</code>. Pythonin käytäntönä on, että nimet kirjoitetaan kokonaan pienillä kirjaimilla ja sanojen väliin laitetaan alaviiva. Huomaa, että esimerkiksi Javassa on toisenlainen käytäntö ja muuttuja <code class="language-html highlighter-rouge">user_count</code> kirjoitettaisiin <code class="language-html highlighter-rouge">userCount</code>.</p>
+  </li>
+  <li>
+    <p>Pythonissa merkkijonon voi merkitä kahdella tavalla: <code class="language-html highlighter-rouge">'esimerkki'</code> ja <code class="language-html highlighter-rouge">"esimerkki"</code>. Valitse toinen tapa ja käytä sitä yhdenmukaisesti kaikkialla koodissa.</p>
+  </li>
+  <li>Muuttujan sijoituksessa <code class="language-html highlighter-rouge">=</code>-merkin ympärille tulee välit mutta funktion kutsussa nimetyssä parametrissa ei tule.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">name</span> <span class="o">=</span> <span class="s">"Maija"</span>
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"Maija"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Pilkun oikealla puolella on välilyönti. Tämä vaikuttaa esimerkiksi listojen ja funktion parametrien muotoiluun.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Maija"</span><span class="p">,</span> <span class="s">"Anna"</span><span class="p">,</span> <span class="s">"Uolevi"</span><span class="p">]</span>  
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Seuraavan tapainen koodi on tarpeettoman pitkä:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div>    </div>
+    <p>Parempi tapa on toteuttaa sama lyhyesti näin:</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">return</span> <span class="n">success</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Jos funktio palauttaa arvon, sillä tulee olla useita mahdollisia palautusarvoja. Esimerkiksi seuraava tyyli ei ole hyvä:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">def</span> <span class="nf">add_message</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">content</span><span class="p">):</span>
+    <span class="p">...</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</code></pre></div>    </div>
+    <p>Tässä funktio palauttaa aina lopuksi <code class="language-html highlighter-rouge">True</code> eikä voi koskaan palauttaa <code class="language-html highlighter-rouge">False</code>. Koska palautusarvo on aina sama, siitä ei ole hyötyä.</p>
+  </li>
+  <li>Pythonissa ei käytetä sulkeita <code class="language-html highlighter-rouge">if</code>- ja <code class="language-html highlighter-rouge">while</code>-rakenteiden ehdoissa. Esimerkiksi älä kirjoita
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+</code></pre></div>    </div>
+    <p>vaan</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Pythonissa <code class="language-html highlighter-rouge">None</code> tulkitaan epätodeksi vertailussa. Tämän ansiosta seuraavat ehdot vastaavat toisiaan:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
+</code></pre></div>    </div>
+    <p>Vastaavasti seuraavat ehdot vastaavat toisiaan:</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+</code></pre></div>    </div>
+    <p>Molemmissa tapauksissa hyvää tyyliä on käyttää viimeistä tapaa, joka on lyhin.</p>
+  </li>
+</ul>
+
+<h2 id="tietokanta-asiat">Tietokanta-asiat</h2>
+
+<ul>
+  <li>Käytä englantia taulujen ja sarakkeiden nimissä.</li>
+  <li>Nimeä taulut ja sarakkeet kuvaavasti ja yhdenmukaisesti.</li>
+  <li>Käytä <code class="language-html highlighter-rouge">REFERENCES</code>-määrettä, kun taulun sarake viittaa toiseen tauluun.</li>
+  <li>Käytä <code class="language-html highlighter-rouge">UNIQUE</code>-määrettä, kun sarakkeessa tulee olla eri arvo joka rivillä.</li>
+  <li>Kysely muotoa <code class="language-html highlighter-rouge">SELECT *</code> ei ole koskaan hyvä. Merkitse aina näkyviin haettavat sarakkeet, vaikka hakisit kaikki tai lähes kaikki sarakkeet.</li>
+  <li>Jaa pitkät SQL-komennot useille riveille. Tässä on kaksi tapaa rivittämiseen:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT u.id, COUNT(*) FROM users u, messages m "</span> \
+      <span class="s">"WHERE u.id = m.user_id AND m.status = 1 GROUP BY u.id"</span>
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">sql</span> <span class="o">=</span> <span class="s">"""SELECT u.id, COUNT(*) FROM users u, messages m
+         WHERE u.id = m.user_id AND m.status = 1 GROUP BY u.id"""</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Hae kaikki tiedot yhdellä SQL-kyselyllä, jos se on mielekkäästi mahdollista. Esimerkiksi seuraavassa on huono tapa hakea joka ryhmästä id, nimi ja käyttäjien määrä:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT id, name FROM groups"</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+<span class="n">groups</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">groups</span><span class="p">:</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT COUNT(*) FROM users WHERE group_id = :id"</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"id"</span><span class="p">:</span><span class="n">group</span><span class="p">[</span><span class="mi">0</span><span class="p">]})</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">data</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">group</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">group</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">count</span><span class="p">))</span>
+</code></pre></div>    </div>
+    <p>Koodi hakee ensin ryhmien nimet ja id:t ja sitten joka ryhmästä erikseen käyttäjien määrän. Parempi tapa on tehdä yksi SQL-kysely, joka hakee suoraan kaiken:</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT g.id, g.name, COUNT(*) FROM groups g, users u "</span> \
+      <span class="s">"WHERE g.id = u.group_id GROUP BY g.id, g.name"</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Älä tee Python-koodissa tiedon käsittelyä, jos sen voi tehdä mielekkäästi tietokannan puolella. Esimerkiksi seuraavassa on huono tapa etsiä paras annettu arvosana:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT grade FROM reviews WHERE book_id = :id"</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"id"</span><span class="p">:</span><span class="n">book_id</span><span class="p">})</span>
+<span class="n">grades</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="n">best</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">grade</span> <span class="ow">in</span> <span class="n">grades</span><span class="p">:</span>
+    <span class="n">best</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">best</span><span class="p">,</span> <span class="n">grade</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div>    </div>
+    <p>Koodi hakee listaan kaikki arvosanat ja etsii parhaan arvosanan <code class="language-html highlighter-rouge">for</code>-silmukan avulla. Kuitenkin parhaan arvosanan voi hakea suoraan SQL:llä:</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">sql</span> <span class="o">=</span> <span class="s">"SELECT MAX(grade) FROM reviews WHERE book_id = :id"</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="p">{</span><span class="s">"id"</span><span class="p">:</span><span class="n">book_id</span><span class="p">})</span>
+<span class="n">best</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Käytä <code class="language-html highlighter-rouge">try</code>/<code class="language-html highlighter-rouge">except</code>-virheenkäsittelyä SQL-komennon ympärillä vain silloin, kun todella aiot tunnistaa jonkin virheen. Hyvä esimerkki on tilanne, jossa sarakkeessa on ehto <code class="language-html highlighter-rouge">UNIQUE</code> ja haluat varmistaa, ettei samaa arvoa lisätä uudestaan.</li>
+</ul>
+
+<h2 id="tietoturva">Tietoturva</h2>
+
+<ul>
+  <li>
+    <p>Älä laita versionhallintaan salaista tietoa, kuten istuntojen salaista avainta tai osoitetta, jonka kautta pääsee käsiksi tuotantotietokantaan.</p>
+  </li>
+  <li>
+    <p>Tallenna salasanat tietokantaan turvallisesti.</p>
+  </li>
+  <li>
+    <p>Tarkasta käyttäjän antama tieto ennen tietokantaan tallentamista (esim. merkkijonon pituudella on sopiva yläraja).</p>
+  </li>
+  <li>
+    <p>Tarkasta jokaisella sivulla käyttäjän oikeudet niin, että käyttäjä voi nähdä sivun sisällön vain, jos se on sallittua. Huomaa, että käyttäjä voi kokeilla vaihtaa sivun osoitetta ja päästä käsiksi toisen käyttäjän tietoon.</p>
+  </li>
+  <li>
+    <p>Tarkasta lomakkeen lähettämisen jälkeen, että käyttäjällä on oikeus lähettää lomake. Huomaa, että käyttäjä voi kokeilla vaihtaa myös lomakkeessa olevia piilokenttiä.</p>
+  </li>
+  <li>
+    <p>Käytä aina parametreja SQL-komennoissa, mikä estää SQL-injektion tekemisen.</p>
+  </li>
+  <li>
+    <p>Käytä aina sivupohjia, mikä estää XSS-haavoittuvuuden.</p>
+  </li>
+  <li>
+    <p>Varmista, että sovelluksessa ei ole CSRF-haavoittuvuutta. Tämä vaatii, että lomakkeissa on istuntokohtainen salainen avain, joka tarkastetaan.</p>
+  </li>
+</ul>
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>

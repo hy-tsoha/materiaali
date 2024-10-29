@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+      
+      Osa 1 - Tietokannat ja web-ohjelmointi
+      
+    </title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          CommonHTML: {
+            scale: 87
+          }
+        });
+        </script>
+    <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/main.css>
+    <link rel='stylesheet' type='text/css' media='screen' href=/materiaali/assets/css/syntax.css>
+
+    <script src=/materiaali/assets/js/main.js></script>
+
+</head>
+
+
+<body id="chapter">
+    
+<nav class="no-nav" id="side-nav" >
+    <button id="hide" onclick="hideSideNav()"> &#x2715;</button>
+    <button id="show" onclick="showSideNav()"> </button>
+    <h2>Tietokannat ja web-ohjelmointi</h2>
+    <ol>
+       
+        <li class="side-nav-obj" id="indexnav"><a href=/materiaali/>Etusivu </a></li>
+
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Aikataulu ja ohjeetnav"><a href="/materiaali/aikataulu/">Aikataulu ja ohjeet</a></li>
+        
+        
+        
+        <li class="side-nav-obj" id="Arvostelunav"><a href="/materiaali/arvostelu/">Arvostelu</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Kysymyksiä ja vastauksianav"><a href="/materiaali/kysymykset/">Kysymyksiä ja vastauksia</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Taustamateriaalinav"><a href="/materiaali/taustamateriaali/">Taustamateriaali</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        
+        
+        <li class="side-nav-obj" id="Osa 1nav"><a href="/materiaali/osa-1/">Osa 1</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Johdatus web-sovelluksiinnav"><a href="/materiaali/osa-1/#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sivupyynnötnav"><a href="/materiaali/osa-1/#sivupyynnöt">Sivupyynnöt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Lomakkeiden käsittelynav"><a href="/materiaali/osa-1/#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen toimintanav"><a href="/materiaali/osa-1/#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 2nav"><a href="/materiaali/osa-2/">Osa 2</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Tietokannan käyttäminennav"><a href="/materiaali/osa-2/#tietokannan-käyttäminen">Tietokannan käyttäminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Kyselytnav"><a href="/materiaali/osa-2/#esimerkki-kyselyt">Esimerkki: Kyselyt</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Istunnot ja kirjautuminennav"><a href="/materiaali/osa-2/#istunnot-ja-kirjautuminen">Istunnot ja kirjautuminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Hakutoimintonav"><a href="/materiaali/osa-2/#hakutoiminto">Hakutoiminto</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tiedon poistaminennav"><a href="/materiaali/osa-2/#tiedon-poistaminen">Tiedon poistaminen</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 3nav"><a href="/materiaali/osa-3/">Osa 3</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Versionhallintanav"><a href="/materiaali/osa-3/#versionhallinta">Versionhallinta</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovellus tuotantoonnav"><a href="/materiaali/osa-3/#sovellus-tuotantoon">Sovellus tuotantoon</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Virheiden etsiminennav"><a href="/materiaali/osa-3/#virheiden-etsiminen">Virheiden etsiminen</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Sovelluksen rakennenav"><a href="/materiaali/osa-3/#sovelluksen-rakenne">Sovelluksen rakenne</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Esimerkki: Keskustelunav"><a href="/materiaali/osa-3/#esimerkki-keskustelu">Esimerkki: Keskustelu</a></li>
+        
+            
+        
+        
+        
+        
+        <li class="side-nav-obj" id="Osa 4nav"><a href="/materiaali/osa-4/">Osa 4</a></li>
+        
+        
+        
+            
+            <li class="side-nav-sub-obj" id="Oikeudet ja syötteetnav"><a href="/materiaali/osa-4/#oikeudet-ja-syötteet">Oikeudet ja syötteet</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Tietoturvanav"><a href="/materiaali/osa-4/#tietoturva">Tietoturva</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Käytettävyysnav"><a href="/materiaali/osa-4/#käytettävyys">Käytettävyys</a></li>
+        
+            
+            <li class="side-nav-sub-obj" id="Ulkoasun toteutusnav"><a href="/materiaali/osa-4/#ulkoasun-toteutus">Ulkoasun toteutus</a></li>
+        
+            
+        
+        
+        
+    </ol>
+</nav>
+
+    <div class="page-content">
+        <div class="content">
+    <!--<div class="table-of-content" id="tof" style="display: none;">
+    <ul>
+        
+        <li><a href="#johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</a></li>
+        
+        <li><a href="#sivupyynnöt">Sivupyynnöt</a></li>
+        
+        <li><a href="#lomakkeiden-käsittely">Lomakkeiden käsittely</a></li>
+        
+        <li><a href="#sovelluksen-toiminta">Sovelluksen toiminta</a></li>
+        
+    </ul>
+</div>-->
+
+    <h1 id="osa-1">Osa 1</h1>
+
+<p>Toteutamme kurssilla web-sovelluksen Python-kielellä <a href="https://flask.palletsprojects.com/">Flask</a>-kirjastolla, johon tutustumme tässä osassa. Flask on suosittu kevyt kirjasto, joka soveltuu sekä web-ohjelmoinnin opetteluun että todellisten sovellusten alustaksi.</p>
+
+<p>Kurssin materiaali olettaa, että osaat perusasiat Python-kielestä. Jos Python on sinulle uusi kieli, ei hätää, koska se on helppo kieli ja voit oppia sen kurssin aikana. Kurssin taustamateriaalissa on <a href="/materiaali/python_opas/">Python-opas</a>, joka antaa yleiskuvan kielestä.</p>
+
+<p>Kurssin materiaali on kirjoitettu Linux-käyttäjän näkökulmasta, mutta voit käyttää muutakin käyttöjärjestelmää materiaalia soveltaen. Jos käytät Windowsia, sinun kannattaa asentaa Windows Subsystem for Linux. Löydät ohjeita asentamiseen <a href="https://tkt-lapio.github.io/">Tietokone työvälineenä -kurssilta</a>.</p>
+
+<h2 id="johdatus-web-sovelluksiin">Johdatus web-sovelluksiin</h2>
+
+<p>Web-sovellusten toiminta perustuu HTTP-protokollaan, jossa selain lähettää palvelimelle pyyntöjä ja palvelin vastaa pyyntöihin. Selain voi pyytää palvelimelta esimerkiksi HTML-tiedoston, joka kuvaa nettisivun sisällön, ja näyttää sivun sitten käyttäjälle.</p>
+
+<p>Esimerkiksi seuraavassa kuvassa selain pyytää HTML-tiedostoa <code class="language-html highlighter-rouge">index.html</code>. Palvelin lähettää tiedoston sisällön HTTP-koodilla 200, mikä tarkoittaa, että pyyntö onnistui.</p>
+
+<p><img src="../assets/osa-1/http.png" /></p>
+
+<p>Perinteinen tapa toteuttaa nettisivusto on luoda HTML-tiedostot käsin ja sijoittaa ne palvelimella olevaan hakemistoon. Tämän rajoituksena on kuitenkin, että palvelimella olevat sivut ovat <em>staattisia</em> eli aina kun käyttäjä lataa tietyn sivun, se näyttää samalta.</p>
+
+<p>Tällä kurssilla opimme toteuttamaan web-sovelluksia, jotka luovat <em>dynaamisia</em> sivuja tietokannan sisällön perusteella ja tallentavat käyttäjien antamaa tietoa tietokantaan. Tämä antaa valtavasti lisää mahdollisuuksia verrattuna staattisiin sivuihin.</p>
+
+<h3 id="ensimmäinen-web-sovellus">Ensimmäinen web-sovellus</h3>
+
+<p>Aloitamme ensimmäisen web-sovelluksen tekemisen luomalla sovellusta varten hakemiston <code class="language-html highlighter-rouge">sovellus</code> ja siirtymällä sinne:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>mkdir sovellus
+<span class="p">$ </span>cd sovellus
+</code></pre></div></div>
+
+<p>Jotta voimme kätevästi hallinnoida sovelluksen tarvitsemia kirjastoja, luomme hakemistoon Pythonin virtuaaliympäristön seuraavalla komennolla:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>python3 -m venv venv
+</code></pre></div></div>
+
+<p>Tämä komento luo hakemiston <code class="language-html highlighter-rouge">venv</code>, jonka sisällä on Pythonin suoritusympäristö sovellusta varten. Saamme virtuaaliympäristön käyntiin suorittamalla aktivointikomennon näin:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">$ </span>source venv/bin/activate
+</code></pre></div></div>
+
+<p>Tämän seurauksena komentorivin alkuun ilmestyy tunnus <code class="language-html highlighter-rouge">(venv)</code> merkkinä siitä, että olemme virtuaaliympäristössä. 
+Kun olemme virtuaaliympäristössä, voimme asentaa Python-kirjastoja paikallisesti niin, että ne ovat käytettävissä vain kyseisessä virtuaaliympäristössä emmekä tarvitse asennukseen pääkäyttäjän oikeuksia. Asennamme ensin <code class="language-html highlighter-rouge">flask</code>-kirjaston:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>pip install flask
+</code></pre></div></div>
+
+<p>Nyt meillä on pystyssä ympäristö, jossa voimme suorittaa web-sovelluksen. Tehdään testiksi yksinkertainen sovellus tiedostoon <code class="language-html highlighter-rouge">app.py</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"Heipparallaa!"</span>
+</code></pre></div></div>
+
+<p>Sovelluksen ideana on, että se näyttää tekstin “Heipparallaa!”, kun käyttäjä menee sovelluksen etusivulle. Saamme sovelluksen käyntiin näin:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>flask run
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+</code></pre></div></div>
+
+<p>Viimeisellä rivillä näkyy osoite, jonka kautta voimme käyttää sovellusta nettiselaimella. Kun menemme sivulle <code class="language-html highlighter-rouge">http://127.0.0.1:5000/</code>, näemme sovelluksen:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/sovellus.png" /></p>
+
+<p>Sovellus sulkeutuu painamalla Control+C komentorivillä, jolloin voimme tehdä jotain muuta komentorivillä tai käynnistää sovelluksen uudestaan.</p>
+
+<p>Komento <code class="language-html highlighter-rouge">deactivate</code> lopettaa virtuaaliympäristön käyttämisen ja palauttaa komentorivin takaisin tavalliseen tilaan:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="p">(venv) $ </span>deactivate
+<span class="p">$ 
+</span></code></pre></div></div>
+
+<p>Huomaa, että sovellusta ei voi käynnistää tavalliselta komentoriviltä, koska Flask-kirjasto on asennettu vain virtuaaliympäristöön. Voimme käynnistää sovelluksen vain virtuaaliympäristössä, minkä tunnistaa siitä, että rivin alussa lukee <code class="language-html highlighter-rouge">(venv)</code>.</p>
+
+<h2 id="sivupyynnöt">Sivupyynnöt</h2>
+
+<p>Flask-kirjaston ideana on, että määrittelemme ohjelmassa funktioita, jotka käsittelevät sivupyyntöjä. Ennen funktion määrittelyä oleva <em>dekoraattori</em> <code class="language-html highlighter-rouge">@app.route</code> ilmaisee, mikä on sivun osoite. Funktio palauttaa merkkijonon, jossa on sivun sisältö.</p>
+
+<p>Esimerkiksi voisimme laajentaa sovellusta niin, että siinä on kolme sivua:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"Heipparallaa!"</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/page1"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">page1</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"Tämä on sivu 1"</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/page2"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">page2</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"Tämä on sivu 2"</span>
+</code></pre></div></div>
+
+<p>Tässä sovelluksessa on etusivu, kuten ennenkin, sekä kaksi muuta sivua, joiden osoitteet ovat <code class="language-html highlighter-rouge">page1</code> ja <code class="language-html highlighter-rouge">page2</code>. Uudet sivut näyttävät tältä:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/page1.png" /></p>
+
+<p><img class="screenshot" src="../assets/osa-1/page2.png" /></p>
+
+<p>Huomaa, että sivun osoite ja funktion nimi ovat kaksi eri asiaa. Sivun osoite annetaan dekoraattorissa, jonka jälkeen tulee sivupyynnön käsittelevä funktio, jolla voi olla muu nimi. Kuitenkin usein toimiva käytäntö on, että sivun osoite ja funktion nimi ovat samat, kuten yllä olevassa koodissa <code class="language-html highlighter-rouge">page1</code> ja <code class="language-html highlighter-rouge">page2</code>.</p>
+
+<p>Koska sivun sisältö luodaan Pythonilla, voimme käyttää sivun luomisessa mitä tahansa ohjelmoinnin keinoja. Esimerkiksi seuraava funktio tuottaa sivun, jossa on luvut 1–100:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/test"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">content</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" "</span>
+    <span class="k">return</span> <span class="n">content</span>
+</code></pre></div></div>
+
+<p>Funktion tuloksena on seuraava sivu:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/test.png" /></p>
+
+<p>Voimme myös määritellä sivun osoitteen niin, että siinä on <em>parametri</em>. Esimerkiksi seuraava funktio käsittelee sivuja, joiden osoitteessa on <code class="language-html highlighter-rouge">int</code>-tyyppinen parametri <code class="language-html highlighter-rouge">id</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/page/&lt;int:id&gt;"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">page</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">"Tämä on sivu "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Sivun osoitteessa annettu parametri välittyy funktiolle, joka voi käyttää sitä haluamallaan tavalla sivun luomisessa. Tässä tapauksessa funktio näyttää sivulla viestin “Tämä on sivu <em>id</em>”, eli esimerkiksi osoitteessa <code class="language-html highlighter-rouge">page/123</code> oleva sivu näyttää tältä:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/page123.png" /></p>
+
+<h3 id="html-ja-sivupohjat">HTML ja sivupohjat</h3>
+
+<p>Tähän mennessä olemme tuottaneet sivuja, joissa on pelkkää tekstiä,
+mutta tarkemmin ottaen voimme käyttää sivuilla HTML-koodia. HTML on kieli, jolla määritellään nettisivun sisältö. Kurssin taustamateriaalissa on <a href="/materiaali/html_opas/">HTML-opas</a>, joka käsittelee HTML:n perusteet.</p>
+
+<p>Esimerkiksi seuraava sivu käyttää HTML-komentoja:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"&lt;b&gt;Tervetuloa&lt;/b&gt; &lt;i&gt;sovellukseen&lt;/i&gt;!"</span>
+</code></pre></div></div>
+
+<p>Tässä tapauksessa sana “Tervetuloa” näkyy lihavoituna ja sana “sovellukseen” näkyy kursivoituna:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/html.png" /></p>
+
+<p>Periaatteessa voisimme luoda sovelluksen sivujen HTML:n suoraan funktioissa, mutta  tämä olisi vaivalloista, kun sivulla on enemmän sisältöä. Parempi tapa on määritellä <em>sivupohjia</em>, joita funktiot käyttävät. Sivupohjat tallennetaan <code class="language-html highlighter-rouge">templates</code>-hakemistoon.</p>
+
+<p>Luodaan testiksi sivupohja <code class="language-html highlighter-rouge">index.html</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;title&gt;</span>Etusivu<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Etusivu<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;b&gt;</span>Tervetuloa<span class="nt">&lt;/b&gt;</span> <span class="nt">&lt;i&gt;</span>sovellukseen<span class="nt">&lt;/i&gt;</span>!
+</code></pre></div></div>
+
+<p>Tämän jälkeen saamme näytettyä sivupohjan sisällön etusivulla näin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Funktio <code class="language-html highlighter-rouge">render_template</code> lukee sivupohjan annetusta tiedostosta ja palauttaa sen sivun sisältönä. Jotta funktiota voi käyttää, se tulee ottaa mukaan <code class="language-html highlighter-rouge">import</code>-rivillä. Flask-kirjastossa on monia muitakin funktioita ja olioita, joihin tutustumme pikkuhiljaa materiaalissa.</p>
+
+<p>Yllä oleva esimerkki tuottaa seuraavan sivun:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/template.png" /></p>
+
+<p>Flask käyttää sivujen luomisessa Jinja-sivupohjia, minkä avulla sivun osaksi voi välittää tietoa Python-koodista. Seuraava esimerkki antaa näytteen asiasta:</p>
+
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;title&gt;</span>Etusivu<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Etusivu<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span><span class="cp">{{</span> <span class="nv">message</span> <span class="cp">}}</span><span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">item</span> <span class="ow">in</span> <span class="nv">items</span> <span class="cp">%}</span>
+<span class="nt">&lt;li&gt;</span> <span class="cp">{{</span> <span class="nv">item</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<p>Tässä sivun osaksi tulee parametrin <code class="language-html highlighter-rouge">message</code> määrittämä viesti sekä listan <code class="language-html highlighter-rouge">items</code> alkiot HTML-listana. Voimme kutsua sivupohjaa vaikkapa näin:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">"apina"</span><span class="p">,</span> <span class="s">"banaani"</span><span class="p">,</span> <span class="s">"cembalo"</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"index.html"</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s">"Tervetuloa!"</span><span class="p">,</span> <span class="n">items</span><span class="o">=</span><span class="n">words</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tämän seurauksena sivu näyttää tältä:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/jinja.png" /></p>
+
+<h3 id="staattiset-tiedostot">Staattiset tiedostot</h3>
+
+<p>Staattiset tiedostot ovat sivuston osana olevia tiedostoja, joita ei luoda ohjelmallisesti. Tavallisia staattisia tiedostoja ovat sivustolla olevat kuvat.</p>
+
+<p>Flaskissa suositeltu paikka sijoittaa staattiset tiedostot on hakemisto <code class="language-html highlighter-rouge">static</code>. Esimerkiksi seuraava HTML-koodi näyttää hakemistossa olevan kuvan <code class="language-html highlighter-rouge">kuva.png</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/static/kuva.png"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>Huomaa, että tiedoston polun alussa on merkki <code class="language-html highlighter-rouge">/</code>, mikä tarkoittaa, että tiedostoon viitataan sovelluksen hakemiston juuresta alkaen. Tämä on hyvä tapa toteuttaa viittaus niin, että se toimii luotettavasti sovelluksen eri sivuilla.</p>
+
+<h2 id="lomakkeiden-käsittely">Lomakkeiden käsittely</h2>
+
+<p><em>Lomake</em> on HTML-sivun osa, jonka kautta käyttäjä pystyy lähettämään tietoa sovellukselle.</p>
+
+<p>Tehdään ensimmäisenä esimerkkinä lomake, joka kysyy käyttäjältä nimeä. Määrittelemme lomakkeen seuraavasti sivupohjassa <code class="language-html highlighter-rouge">form.html</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/result"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+Anna nimesi:
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>Tämä lomake lähettää tietoa sivulle <code class="language-html highlighter-rouge">result</code> metodilla <code class="language-html highlighter-rouge">POST</code>. Lomakkeessa on tekstikenttä, jonka nimi on <code class="language-html highlighter-rouge">name</code>, sekä lähetysnappi.</p>
+
+<p>Tarkoituksena on, että kun käyttäjä lähettää lomakkeen, hän siirtyy toiselle sivulle, joka näyttää viestin nimen perusteella. Tässä on sivupohja <code class="language-html highlighter-rouge">result.html</code> tätä sivua varten:</p>
+
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Moikka, <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span>!
+</code></pre></div></div>
+
+<p>Seuraava sovellus toteuttaa sivupohjien avulla sivut <code class="language-html highlighter-rouge">form</code> ja <code class="language-html highlighter-rouge">result</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/form"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">form</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"form.html"</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/result"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">result</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"result.html"</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"name"</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Sivu <code class="language-html highlighter-rouge">result</code> ottaa vastaan <code class="language-html highlighter-rouge">POST</code>-metodilla lähetetyn lomakkeen, mikä näkyy dekoraattorin parametrissa <code class="language-html highlighter-rouge">methods</code>. Lomakkeen kautta lähetetty tieto on saatavilla olion <code class="language-html highlighter-rouge">request</code> kautta. Koska lomakkeen tekstikentän nimi on <code class="language-html highlighter-rouge">name</code>, siihen viitataan <code class="language-html highlighter-rouge">request.form["name"]</code>.</p>
+
+<p>Lomakkeen käyttäminen voi näyttää tältä:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/form.png" /></p>
+
+<p><img class="screenshot" src="../assets/osa-1/result.png" /></p>
+
+<p>Metodi <code class="language-html highlighter-rouge">POST</code> on yleisin tapa lomakkeen lähettämiseen, ja se soveltuu useimpiin tilanteisiin. Toinen tavallinen metodi on <code class="language-html highlighter-rouge">GET</code>, johon palaamme myöhemmin.</p>
+
+<h3 id="lomakkeen-elementit">Lomakkeen elementit</h3>
+
+<p>Tavallisia lomakkeen elementtejä ovat tekstikentät ja valintaruudut. Jokainen elementti määritellään tietyllä tavalla HTML-koodissa ja sen kautta lähetettyyn tietoon pääsee käsiksi tietyllä tavalla <code class="language-html highlighter-rouge">request</code>-olion kautta.</p>
+
+<p>Tehdään seuraavaksi esimerkki, jossa käyttäjä voi tilata pizzan. Sivupohja <code class="language-html highlighter-rouge">order.html</code> näyttää tilaukseen liittyvät valinnat:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/result"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+Valitse pizza:
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"pizza"</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span> Frutti di Mare
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"pizza"</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span> Margherita
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"pizza"</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span> Quattro Formaggi
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"pizza"</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span> Quattro Stagioni
+<span class="nt">&lt;p&gt;</span>
+Valitse lisät:
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"extra"</span> <span class="na">value=</span><span class="s">"A"</span><span class="nt">&gt;</span> oregano
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"extra"</span> <span class="na">value=</span><span class="s">"B"</span><span class="nt">&gt;</span> valkosipuli
+<span class="nt">&lt;p&gt;</span>
+Erikoistoiveet: <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">rows=</span><span class="s">"3"</span> <span class="na">cols=</span><span class="s">"50"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>Elementtien <code class="language-html highlighter-rouge">radio</code> ja <code class="language-html highlighter-rouge">checkbox</code> erona on, että samannimisistä elementeistä vain yksi <code class="language-html highlighter-rouge">radio</code> voi olla valittuna mutta yksi tai useampi <code class="language-html highlighter-rouge">checkbox</code> voi olla valittuna.</p>
+
+<p>Sivupohja <code class="language-html highlighter-rouge">result.html</code> näyttää tilauksen tiedot lähetyksen jälkeen:</p>
+
+<div class="language-jinja highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Valitsit pizzan <span class="cp">{{</span> <span class="nv">pizza</span> <span class="cp">}}</span>
+<span class="nt">&lt;p&gt;</span>
+Seuraavat lisät:
+<span class="nt">&lt;ul&gt;</span>
+<span class="cp">{%</span> <span class="k">for</span> <span class="nv">extra</span> <span class="ow">in</span> <span class="nv">extras</span> <span class="cp">%}</span>
+<span class="nt">&lt;li&gt;</span> <span class="cp">{{</span> <span class="nv">extra</span> <span class="cp">}}</span>
+<span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="nt">&lt;/ul&gt;</span>
+Erikoistoiveet: <span class="nt">&lt;br&gt;</span>
+<span class="cp">{{</span> <span class="nv">message</span> <span class="cp">}}</span>
+</code></pre></div></div>
+
+<p>Seuraava sovellus käsittelee lomakkeen kautta lähetetyt tiedot:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/order"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">order</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"order.html"</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/result"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">result</span><span class="p">():</span>
+    <span class="n">pizza</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"pizza"</span><span class="p">]</span>
+    <span class="n">extras</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">.</span><span class="n">getlist</span><span class="p">(</span><span class="s">"extra"</span><span class="p">)</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"message"</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">"result.html"</span><span class="p">,</span> <span class="n">pizza</span><span class="o">=</span><span class="n">pizza</span><span class="p">,</span>
+                                          <span class="n">extras</span><span class="o">=</span><span class="n">extras</span><span class="p">,</span>
+                                          <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Koska <code class="language-html highlighter-rouge">extra</code>-nimen alla voi olla useita valintoja, ne haetaan listana <code class="language-html highlighter-rouge">getlist</code>-metodilla.</p>
+
+<p>Lomakkeen käyttäminen voi näyttää tältä:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/pizza1.png" /></p>
+
+<p><img class="screenshot" src="../assets/osa-1/pizza2.png" /></p>
+
+<h2 id="sovelluksen-toiminta">Sovelluksen toiminta</h2>
+
+<h3 id="selain-ja-palvelin">Selain ja palvelin</h3>
+
+<p>Nyt kun meillä on perustiedot web-sovelluksen tekemisestä, on hyvä hetki katsoa vähän tarkemmin, mitä tapahtuu, kun sovellusta käytetään selaimessa. Tarkastellaan ensin yksinkertaista sovellusta, joka näyttää tekstin etusivulla:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"Heipparallaa!"</span>
+</code></pre></div></div>
+
+<p>Selaimissa on kehittäjän työkaluja, joiden avulla voi tarkastella selaimen ja palvelimen välistä liikennettä. Esimerkiksi Chromessa painamalla F12 avautuu kehittäjän näkymä. Välilehti Network näyttää, miten selain viestii palvelimen kanssa:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/chrome1.png" /></p>
+
+<p>Tässä selain lähetti palvelimelle HTTP-pyynnön, jonka osoite on <code class="language-html highlighter-rouge">http://127.0.0.1:5000/</code> ja metodi on <code class="language-html highlighter-rouge">GET</code>. Palvelin vastasi tähän koodilla 200, jonka merkitys on <code class="language-html highlighter-rouge">OK</code> eli pyyntö onnistui. Palvelin lähetti vastauksena 13 tavua tietoa eli tekstin “Heipparallaa!”. Samaan aikaan sovellus tulosti komentoikkunaan rivin tietoa pyynnöstä:</p>
+
+<div class="language-prompt highlighter-rouge"><div class="highlight"><pre class="syntax"><code>127.0.0.1 - - [15/Jul/2020 13:23:13] "GET / HTTP/1.1" 200 -
+</code></pre></div></div>
+
+<p>Tarkastellaan sitten toista tilannetta, jossa lomake lähettää tietoa sivulle <code class="language-html highlighter-rouge">result</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/result"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+Nimi: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Lähetä"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>Nyt sivupyyntö näyttää tältä:</p>
+
+<p><img class="screenshot" src="../assets/osa-1/chrome2.png" /></p>
+
+<p>Tässä tapauksessa metodi on <code class="language-html highlighter-rouge">POST</code> ja käyttäjän lomakkeeseen kirjoittama tieto (tässä kentän <code class="language-html highlighter-rouge">name</code> arvo) kulkee sivupyynnön mukana. Selain ei näytä tätä suoraan käyttäjälle, mutta asian pystyy havaitsemaan kehittäjän näkymästä.</p>
+
+<h3 id="sovelluksen-toiminta-1">Sovelluksen toiminta</h3>
+
+<p>Kun Flask-sovellus käynnistetään komennolla <code class="language-html highlighter-rouge">flask run</code>, sovellus suorittaa ensin alkutoimet ja jää sitten odottamaan käsiteltäviä sivupyyntöjä. Sovellus käsittelee jokaisen sivupyynnön omassa säikeessään erillään muista.</p>
+
+<p>Huomaa, että jotkin asiat sovelluksessa ovat yhteisiä kaikille sivupyynnöille ja jotkin taas ovat sivupyyntökohtaisia. Esimerkiksi seuraavassa koodissa muuttuja <code class="language-html highlighter-rouge">value</code> on globaali, joten muuttuja saa satunnaisen arvon sovelluksen käynnistyessä ja tämän jälkeen sama muuttujan arvo näkyy aina etusivun latautuessa.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="n">value</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"Satunnainen luku: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Seuraavassa koodissa puolestaan muuttuja <code class="language-html highlighter-rouge">value</code> saa arvon paikallisesti sivupyynnön yhteydessä ja etusivun latautuessa näkyy vaihtuva satunnainen luku:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s">"Satunnainen luku: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Jotkin Flaskin sisäiset oliot <em>näyttävät</em> globaaleilta mutta ovat todellisuudessa sivupyyntökohtaisia. Esimerkki tästä on olio <code class="language-html highlighter-rouge">request</code>, joka sisältää sivupyynnön tietoja. Tämän olion kautta voi hakea esimerkiksi lomakkeen kautta lähetetyn kentän sisällön:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/result"</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">"POST"</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">result</span><span class="p">():</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span>
+    <span class="p">...</span>
+</code></pre></div></div>
+
+<p>Vaikka oliota <code class="language-html highlighter-rouge">request</code> voidaan käyttää globaalin muuttujan tavoin, se on kuitenkin sivupyyntökohtainen. Jos näin ei olisi, eri sivupyyntöjen tiedot menisivät sekaisin. Esimerkiksi yllä oleva koodi toimii, koska olion <code class="language-html highlighter-rouge">request</code> kautta saadaan nimenomaan kyseiseen sivupyyntöön liittyvä käyttäjän nimi.</p>
+
+
+</div>
+        <div class="footer">
+<img src=/materiaali/assets/img/site/HY_logo.png>
+</div>
+    </div>
+</body>
+
+</html>
